@@ -1,0 +1,226 @@
+- name: Dynamics 365 Customer Insights
+  href: index.yml
+- name: Productoverzicht
+  href: overview.md
+- name: Toegang tot uw omgeving
+  href: 'https://home.ci.ai.dynamics.com/'
+- name: Doelgroepinzichten
+  items:
+    - name: Help-hub
+      href: audience-insights/index.yml
+    - name: Overzicht van de mogelijkheden
+      href: audience-insights/overview.md
+    - name: Gratis proefversie
+      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
+    - name: Nieuwe en bijgewerkt functies
+      href: audience-insights/whats-new-audience-insights.md
+    - name: Aan de slag
+      items:
+        - name: Een nieuwe omgeving maken
+          href: audience-insights/home.md
+        - name: Gegevens opnemen
+          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+        - name: Een geharmoniseerd klantprofiel maken
+          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+        - name: Werken met de app
+          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+        - name: Gegevens verrijken en voorspellingen
+          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+    - name: Gegevensbronnen
+      items:
+        - name: Overzicht van gegevensbronnen
+          href: audience-insights/data-sources.md
+        - name: Gegevensbronnen toevoegen via Power Query-connectors
+          href: audience-insights/connect-power-query.md
+        - name: Een Common Data Model-map toevoegen als een gegevensbron
+          href: audience-insights/connect-common-data-model.md
+        - name: Door Common Data Service beheerd data lake toevoegen
+          href: audience-insights/connect-common-data-service-lake.md
+        - name: Incrementeel vernieuwen voor gegevensbronnen
+          href: audience-insights/incremental-refresh-data-sources.md
+        - name: Realtime gegevensopname
+          href: audience-insights/real-time-data-ingestion.md
+        - name: Over entiteiten en gegevenssets
+          href: audience-insights/entities.md
+    - name: Gegevensharmonisatie
+      items:
+        - name: Overzicht van harmonisatie
+          href: audience-insights/data-unification.md
+        - name: Entiteiten en attributen toewijzen
+          href: audience-insights/map-entities.md
+        - name: Entiteiten toewijzen
+          href: audience-insights/match-entities.md
+        - name: Entiteiten samenvoegen
+          href: audience-insights/merge-entities.md
+        - name: Geharmoniseerde klantprofielen evalueren
+          href: audience-insights/customer-profiles.md
+        - name: Geharmoniseerde klantprofielen filteren
+          href: audience-insights/search-filter-index.md
+        - name: Relaties en verbonden entiteiten samenstellen
+          href: audience-insights/relationships.md
+        - name: Klantactiviteiten in een lijst vermelden
+          href: audience-insights/activities.md
+    - name: Gegevensverrijking
+      items:
+        - name: Klantprofielen verrijken
+          href: audience-insights/enrichment-hub.md
+        - name: Merk- en interesseaffiniteiten
+          href: audience-insights/enrichment-microsoft-graph.md
+        - name: Verrijken met HERE Technologies
+          href: audience-insights/enrichment-here.md
+        - name: Verrijken met Leadspace
+          href: audience-insights/enrichment-leadspace.md
+        - name: Verrijken met Experian
+          href: audience-insights/enrichment-experian.md
+        - name: Verrijken met aangepaste SFTP-import
+          href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Segmenten en meetcriteria
+      items:
+        - name: Segmenten en klantengroepen maken
+          href: audience-insights/segments.md
+        - name: Inzichten verwerven in segmenten
+          href: audience-insights/segment-insights.md
+        - name: Vergelijkbare klanten zoeken
+          href: audience-insights/find-similar-customer-segments.md
+        - name: Meetcriteria en KPI's definiëren
+          href: audience-insights/measures.md
+    - name: Voorspellingen
+      items:
+        - name: Gegevens voltooien door middel van waardevoorspellingen
+          href: audience-insights/predictions.md
+        - name: Abonnementsverloop voorspellen
+          href: audience-insights/predict-subscription-churn.md
+        - name: Voorbeeldhandleiding abonnementsverloop voorspellen
+          href: audience-insights/sample-guide-predict-subscription-churn.md
+        - name: Transactieverloop voorspellen
+          href: audience-insights/predict-transactional-churn.md
+        - name: Voorbeeldhandleiding transactieverloop voorspellen
+          href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Aangepaste Machine Learning-modellen implementeren
+          href: audience-insights/custom-models.md
+        - name: Experimenten met Azure Machine learning
+          href: audience-insights/azure-machine-learning-experiments.md
+        - name: Experimenten met Azure Machine Learning Studio
+          href: audience-insights/machine-learning-studio-experiments.md
+    - name: Opties voor exporteren
+      items:
+        - name: Exportbestemmingen ontdekken
+          href: audience-insights/export-destinations.md
+        - name: Azure Blob Storage
+          href: audience-insights/export-azure-blob-storage.md
+        - name: DotDigital
+          href: audience-insights/export-dotdigital.md
+        - name: Dynamics 365 Customer Service (invoegtoepassing)
+          href: audience-insights/customer-card-add-in.md
+        - name: Dynamics 365 Marketing
+          href: audience-insights/export-dynamics365-marketing.md
+        - name: Dynamics 365 Sales
+          href: audience-insights/export-dynamics365-sales.md
+        - name: Dynamics 365 Verkoophub (invoegtoepassing)
+          href: audience-insights/customer-card-add-in.md
+        - name: Facebook Ads Manager
+          href: audience-insights/export-facebook.md
+        - name: Google Ads
+          href: audience-insights/export-google-ads.md
+        - name: LiveRamp
+          href: audience-insights/export-liveramp.md
+        - name: Mailchimp
+          href: audience-insights/export-mailchimp.md
+        - name: Microsoft Teams (bot)
+          href: audience-insights/export-teams-bot.md
+        - name: Marketo
+          href: audience-insights/export-marketo.md
+        - name: Power BI
+          href: audience-insights/export-power-bi.md
+        - name: Power Apps
+          href: audience-insights/export-power-apps.md
+        - name: Power Automate
+          href: audience-insights/export-power-automate.md
+        - name: SFTP
+          href: audience-insights/export-sftp.md
+    - name: Beheer
+      items:
+        - name: De systeemconfiguratie instellen
+          href: audience-insights/system.md
+        - name: Gebruikersmachtigingen toewijzen
+          href: audience-insights/permissions.md
+        - name: Meerdere omgevingen beheren
+          href: audience-insights/manage-environments.md
+        - name: Verbinding maken met een ADLS-opslagaccount met een Service Principal
+          href: audience-insights/connect-service-principal.md
+        - name: Ondersteunde talen
+          href: audience-insights/supported-languages.md
+    - name: Uitbreidbaarheid
+      items:
+        - name: De entiteitsschema's controleren in Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Werken met API's
+          href: audience-insights/apis.md
+        - name: API-verwijzingen
+          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Servicelimieten
+      href: audience-insights/service-limits.md
+    - name: Aanvragen betreffende rechten van betrokkenen onder de AVG
+      href: audience-insights/gdpr.md
+- name: Betrokkenheidsinzichten (preview)
+  items:
+    - name: Help-hub
+      href: engagement-insights/index.yml
+    - name: Overzicht van de mogelijkheden
+      href: engagement-insights/overview.md
+    - name: Gratis proefversie
+      href: 'https://pi.dynamics.com/'
+    - name: Aan de slag
+      items:
+        - name: Snelstartgids voor openbare preview
+          href: engagement-insights/quickstart.md
+    - name: Aan de slag
+      items:
+        - name: Aan de slag
+          href: engagement-insights/get-started.md
+        - name: Een werkruimte maken
+          href: engagement-insights/create-workspace.md
+        - name: Uw website van instrumenten voorzien
+          href: engagement-insights/instrument-website.md
+        - name: Concepten en terminologie
+          href: engagement-insights/glossary.md
+    - name: Gebeurtenissen
+      items:
+        - name: Gebeurtenissen maken en wijzigen
+          href: engagement-insights/refined-events.md
+        - name: Gebeurtenissen exporteren
+          href: engagement-insights/export-events.md
+    - name: Rapporten
+      items:
+        - name: Rapporten weergeven
+          href: engagement-insights/view-reports.md
+        - name: Aangepaste rapporten maken
+          href: engagement-insights/custom-reports.md
+        - name: Geharmoniseerde profielrapporten maken
+          href: engagement-insights/profile-reports.md
+    - name: Bronnen voor ontwikkelaars
+      items:
+        - name: Overzicht resources voor ontwikkelaars
+          href: engagement-insights/developer-resources.md
+        - name: Web-SDK zelfstudie
+          href: engagement-insights/advanced-SDK-implementation.md
+        - name: Web-SDK voorbeeld
+          href: engagement-insights/websdk-sample.md
+    - name: Beheer
+      items:
+        - name: Rollen en machtigingen
+          href: engagement-insights/user-roles.md
+        - name: Omgevingen en werkruimten beheren
+          href: engagement-insights/manage-environments-workspaces.md
+        - name: Verbindingen configureren
+          href: engagement-insights/configure-connections.md
+        - name: Cookies en toestemming van gebruikers beheren
+          href: engagement-insights/user-consent-storage.md
+    - name: AVG
+      items:
+        - name: Persoonsgegevens verwijderen en exporteren
+          href: engagement-insights/delete-export-personal-data.md
+    - name: Servicelimieten
+      href: engagement-insights/quotas.md
+- name: Contact opnemen met de ondersteuning
+  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
