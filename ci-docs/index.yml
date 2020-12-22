@@ -1,0 +1,108 @@
+### YamlMime:Landing
+metadata:
+  title: Help-hub voor Dynamics 365 Customer Insights
+  author: m-hartmann
+  description: Vind relevante artikelen om te beginnen met Help-inhoud.
+  ms.author: mhart
+  ms.date: 10/29/2020
+  ms.service: customer-insights
+  ms.topic: landing-page
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4405518"
+title: Dynamics 365 Customer Insights-documentatie
+summary: Vind nuttige bronnen om aan de slag te gaan en lees over de functies en mogelijkheden van Customer Insights.
+landingContent:
+- title: Kennismaken met Customer Insights
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: " Overzicht van Customer Insights"
+      url: overview.md
+    - text: Releaseplannen
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Toegang tot uw omgeving
+      url: https://home.ci.ai.dynamics.com/
+- title: Aan de slag met doelgroepinzichten
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Aanmelden voor een proefversie
+      url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
+    - text: Wat is er nieuw
+      url: audience-insights/whats-new-audience-insights.md
+    - text: Documentatie voor doelgroepinzichten
+      url: audience-insights/index.yml
+- title: Contact opnemen
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Aansluiten bij de Dynamics 365-community
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Uw ideeën delen
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Een probleem melden
+      url: https://go.microsoft.com/fwlink/?linkid=2079641
+- title: Zelfstudie over doelgroepinzichten
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Een nieuwe omgeving maken
+      url: audience-insights/home.md
+    - text: Een geharmoniseerd klantprofiel maken
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Werken met de app
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+- title: Gegevens van doelgroepinzichten exporteren
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Exportbestemmingen instellen
+      url: audience-insights/export-destinations.md
+    - text: Klantenkaarten in Dynamics 365-apps
+      url: audience-insights/customer-card-add-in.md
+    - text: Power BI-connector
+      url: audience-insights/export-power-bi.md
+- title: Doelgroepinzichten beheren
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Het systeem configureren
+      url: audience-insights/system.md
+    - text: Gebruikersmachtigingen definiëren
+      url: audience-insights/permissions.md
+    - text: Meerdere omgevingen beheren
+      url: audience-insights/manage-environments.md
+- title: Over interactie-inzichten (preview)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Overzicht van de mogelijkheden
+      url: engagement-insights/overview.md
+    - text: Termen en concepten
+      url: engagement-insights/glossary.md
+    - text: Aan de slag
+      url: engagement-insights/get-started.md
+- title: Rapporten voor interactie-inzichten (preview)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Rapporten weergeven
+      url: engagement-insights/view-reports.md
+    - text: Aangepaste rapporten maken
+      url: engagement-insights/custom-reports.md
+    - text: Een geharmoniseerd profielrapport weergeven
+      url: engagement-insights/profile-reports.md
+- title: Gebeurtenissen voor interactie-inzichten (preview)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Verfijnde gebeurtenissen maken
+      url: engagement-insights/refined-events.md
+    - text: Gebeurtenissen exporteren
+      url: engagement-insights/export-events.md
+    - text: Persoonsgegevens verwijderen en exporteren
+      url: engagement-insights/delete-export-personal-data.md
