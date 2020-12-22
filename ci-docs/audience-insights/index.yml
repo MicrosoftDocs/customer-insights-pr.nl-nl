@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Mogelijkheden voor doelgroepinzichten in Dynamics 365 Customer Insights
+summary: Neem klantgegevens op, harmoniseer deze en orden ze vanuit meerdere bronnen. Creëer en beheer klantprofielen en realtime segmentatie. Integreer klantgegevens met andere systemen om deze nog actiever te maken.
+metadata:
+  title: Documentatie voor doelgroepinzichten
+  description: Help-hub met belangrijke links voor doelgroepinzichten.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4405501"
+landingContent:
+- title: Over doelgroepinzichten
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Productoverzicht
+      url: overview.md
+    - text: Nieuwe en bijgewerkt functies
+      url: whats-new-audience-insights.md
+    - text: Communitysite
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Gegevensbronnen opnemen
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Gegevensbronnen toevoegen
+      url: data-sources.md
+    - text: Incrementeel vernieuwen
+      url: incremental-refresh-data-sources.md
+    - text: Entiteiten begrijpen
+      url: entities.md
+- title: Gegevens combineren
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Toewijzen
+      url: map-entities.md
+    - text: Bij elkaar zoeken
+      url: match-entities.md
+    - text: Samenvoeging
+      url: merge-entities.md
+- title: Klantprofielen verfijnen
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Relaties configureren
+      url: relationships.md
+    - text: Klantactiviteiten in een lijst vermelden
+      url: activities.md
+    - text: Uw eigen Machine Learning-modellen meebrengen
+      url: custom-models.md
+- title: Klantgegevens exporteren
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Exportbestemmingen instellen
+      url: export-destinations.md
+    - text: Klantenkaarten in Dynamics 365-apps
+      url: customer-card-add-in.md
+    - text: Power BI-connector
+      url: export-power-bi.md
+- title: De app beheren
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Het systeem configureren
+      url: system.md
+    - text: Gebruikersmachtigingen definiëren
+      url: permissions.md
+    - text: Meerdere omgevingen beheren
+      url: manage-environments.md
