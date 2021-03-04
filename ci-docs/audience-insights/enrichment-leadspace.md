@@ -5,16 +5,16 @@ ms.date: 11/24/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1b5c6e46e8e424df83e855d81fc4dd7ecb394e3c
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 12eed91a7ca4ef7fde0d53cca4a1dfd398b4634f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668717"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269416"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Verrijking van bedrijfsprofielen met Leadspace (preview)
 
@@ -38,7 +38,11 @@ Als u Leadspace wilt configureren, moet aan de volgende vereisten worden voldaan
 
 1. Selecteer **Aan de slag** en voer een actief **Leadspace-token** in (permanente sleutel). Bekijk en geef toestemming voor **Gegevensprivacy en naleving** door het selectievakje **Ik ga akkoord** in te schakelen. Bevestig de invoer door **Verbinden met Leadspace** te selecteren.
 
-1. Selecteer **Kaartgegevens** en bepaal welke velden van uw geharmoniseerde profielen moeten worden gebruikt om overeenkomende bedrijfsgegevens van Leadspace te zoeken. Het veld **Naam van bedrijf** is verplicht. Voor een hogere matchnauwkeurigheid kunt u maximaal twee andere velden, **Bedrijfswebsite** en **Bedrijfslocatie** toevoegen.
+1. Selecteer **Gegevens toewijzen** en kies de gegevensset die u wilt verrijken met bedrijfsgegevens van Leadspace. U kunt de entiteit *Klant* selecteren om al uw klantprofielen te verrijken of een segmententiteit selecteren om alleen klantprofielen in dat segment te verrijken.
+
+   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Kies tussen klantprofiel- en segmentverrijking.":::
+
+1. Klik op **Volgende** en bepaal welke velden van uw geharmoniseerde profielen moeten worden gebruikt om overeenkomende bedrijfsgegevens van Leadspace te zoeken. Het veld **Naam van bedrijf** is verplicht. Voor een hogere matchnauwkeurigheid kunt u maximaal twee andere velden, **Bedrijfswebsite** en **Bedrijfslocatie** toevoegen.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Deelvenster Leadspace-veldtoewijzing.":::
    
@@ -62,3 +66,6 @@ Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md), [meting
 
 Wanneer u Dynamics 365 Customer Insights instelt om gegevens naar Leadspace te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens op uw instructie overdragen, maar u bent ervoor verantwoordelijk dat Leadspace voldoet aan uw privacy- of beveiligingsverplichtingen. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
 Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

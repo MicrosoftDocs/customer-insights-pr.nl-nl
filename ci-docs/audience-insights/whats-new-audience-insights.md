@@ -1,7 +1,7 @@
 ---
 title: Nieuwe en komende functies
 description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 11/02/2020
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4649998"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270426"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Wat is er nieuw in de doelgroepinzichten-mogelijkheid van Dynamics 365 Customer Insights
 
@@ -30,6 +30,77 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="january-2021-updates"></a>Updates januari 2021
+
+De updates van januari 2021 omvatten verschillende functies, prestatie-upgrades en bugfixes.
+
+#### <a name="extensibility"></a>Uitbreidbaarheid
+
+- **Uitgebreide functionaliteit en verbeterde prestaties voor SFTP-export** U kunt nu alle uitvoerentiteiten van Customer Insights naar een SFTP-host exporteren. Voorheen was de export beperkt tot segmententiteiten. Bovendien zorgt de prestatie van de SFTP-export voor een hoger gegevensvolume in minder tijd, afhankelijk van de prestaties van uw SFTP-host.    
+  Zie [Connector voor SFTP (preview)](export-sftp.md) voor meer informatie.  
+
+#### <a name="segments"></a>Segmenten
+
+- **Door Machine Learning aangedreven voorgestelde segmenten om de statistieken te verbeteren** Er is een nieuwe manier om segmenten te ontdekken en te maken. Het systeem gebruikt een AI-model om segmenten voor te stellen die kunnen helpen bij de verbetering van een KPI (meting) die u al volgt. We laten de mate van invloed zien van kenmerken die u selecteert op een meting of een ander primair kenmerk. Deze informatie helpt bij het vinden van potentiële segmenten die kansen bieden.    
+  Zie [Voorgestelde segmenten (preview)](suggested-segments.md) voor meer informatie.
+
+#### <a name="data-unification"></a>Gegevensharmonisatie
+
+- **Verbeterde overeenkomstervaring** In het gebied voor gegevensharmonisatie is de overeenkomstervaring bijgewerkt. Hiermee kunt u de overeenkomstregels configureren en bekijken, inclusief gedetailleerde statistieken om verder uit te leggen hoe het matchen werkt. Er zijn opties om een overeenkomstregel uit te schakelen, zodat deze niet meer actief is terwijl de configuratie behouden blijft, overeenkomstregels te slepen en neer te zetten en meer.
+  Zie [Entiteiten matchen](match-entities.md) voor meer informatie.
+
+- **Ontdubbelingsuitvoer van het matchproces is beschikbaar als een entiteit** Uitvoer van het ontdubbelingsproces van het matchingsproces wordt nu in een afzonderlijke entiteit geschreven voor verdere analyse. Deze entiteit bestaat uit de velden die worden gebruikt in het ontdubbelingsproces en de winnende record en de bijbehorende alternatieve records die worden samengevoegd met de winnende record.
+  Zie [Ontdubbelingsuitvoer als een entiteit](match-entities.md#deduplication-output-as-an-entity) voor meer informatie.
+
+#### <a name="system-administration"></a>Systeembeheer
+
+- **Naadloos gegevens delen met Microsoft Dataverse** U kunt nu Customer Insights-uitvoer delen met Microsoft Dataverse-toepassingen met behulp van de Microsoft Dataverse beheerde data lake. Zodra u een Dataverse-omgeving koppelt aan Customer Insights, krijgt u de mogelijkheid om het delen van gegevens in te schakelen.
+  Zie [Omgevingen beheren](manage-environments.md) voor meer informatie.
+
+
+## <a name="december-2020-updates"></a>Updates van december 2020
+
+De updates van december 2020 bevatten verschillende functies, prestatie-upgrades en bugfixes.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Nieuwe en bijgewerkte functies in december 2020
+
+#### <a name="data-enrichment"></a>Gegevensverrijking
+
+- **Verbeterde verrijkingen van affiniteit met merken en interesses**
+  
+  We hebben onze affiniteitsscores vereenvoudigd om ze gemakkelijker te begrijpen en te gebruiken. U kunt nu snel klanten identificeren op basis van hoeveel affiniteit ze hebben voor een bepaald merk of een bepaalde interesse.
+
+  Daarnaast hebben we nieuwe configuratieopties toegevoegd om beter te kunnen bepalen hoe u wilt dat uw klantprofielen worden verrijkt. 
+
+  Zie [Klantprofielen verrijken met merk- en interesseaffiniteiten](enrichment-microsoft-graph.md) voor meer informatie.
+
+- **Bepalen welke profielen u wilt verrijken**
+
+  U kunt nu alleen een subset van uw klantprofielen verrijken met de optie om een segmententiteit te selecteren in plaats van de standaard klantentiteit. Maak een segment met de klantprofielen die u wilt verrijken en selecteer dit in de verrijkingsconfiguratie voor uw klantgegevensset.
+  Deze functie is momenteel alleen beschikbaar voor verrijkingen die worden geleverd door Experian en HERE Technologies. We zullen deze mogelijkheid binnenkort voor meer verrijkingen mogelijk maken.
+
+  Zie voor meer informatie [Klantprofielen verrijken met demografische gegevens van Experian](enrichment-experian.md) of [Verrijking van klantprofielen met HERE Technologies](enrichment-here.md)​.
+
+#### <a name="extensibility"></a>Uitbreidbaarheid
+
+- **Uw segmenten activeren via Autopilot**
+
+  Exporteer segmenten naar Autopilot en gebruik ze voor marketingdoeleinden. Zie [Connector voor Autopilot (preview)](export-autopilot.md) voor meer informatie.
+
+- **Uw segmenten activeren via SendGrid**
+
+  Exporteer segmenten naar SendGrid en gebruik ze voor marketingdoeleinden. Zie [Connector voor SendGrid](export-sendgrid.md) voor meer informatie.
+
+#### <a name="system-administration"></a>Systeembeheer
+
+- **Bijgewerkte ervaring met omgevingsbeheer**
+  
+  U kunt nu omgevingen rechtstreeks vanuit de omgevingskiezer in de app-koptekst maken, bewerken, verwijderen en opnieuw instellen. 
+  
+  Bovendien wordt de omgeving die u gebruikt, boven aan het omgevingspaneel vastgezet, zodat u er niet meer naar hoeft te zoeken.
+
+  Zie [Omgevingen beheren](manage-environments.md) voor meer informatie.
 
 ## <a name="november-2020-updates"></a>Updates van november 2020
 
@@ -165,7 +236,7 @@ Zie voor meer informatie [Klantprofielen verrijken met demografische gegevens va
 In het deelvenster Taakdetails ziet u details over taken die door het systeem worden uitgevoerd. Het is een handige manier om problemen met de configuratie te identificeren en oplossingen te vinden.
 Bekijk de foutmeldingen om te zien hoe u mogelijke problemen aanpakt.
  
-- **Verwerkingsinformatie toegevoegd aan extra pagina's**
+- **Verwerkingsinformatie toegevoegd aan meer pagina's**
 
 Door deze verbetering wordt informatie over de status van uw entiteiten toegevoegd op de pagina **Entiteiten** en **Klanten**.
  
@@ -202,9 +273,9 @@ De updates van augustus 2020 omvatten verschillende functies, prestatie-upgrades
 
 #### <a name="enrichment"></a>Verrijking
 
-- **Verrijking met interesses beschikbaar in meer markten**
+- **Verrijking van interesse-affiniteiten beschikbaar in meer markten**
 
-  We breiden de verrijking met affiniteiten uit naar buiten de Verenigde Staten in vijf extra markten: Canada, Australië, Verenigd Koninkrijk, Frankrijk en Duitsland. Met deze uitbreiding kunt u uw klantgegevens verrijken met aanvullende interesses die op deze markten van toepassing zijn. We verrijken ook uw klantprofielen die zich in deze markten bevinden door lokale bedrijfseigen gegevens van Microsoft Graph te gebruiken.
+  We breiden de beschikbaarheid van de verrijking van interesse-affiniteiten uit buiten de Verenigde Staten naar vijf andere markten: Canada, Australië, Verenigd Koninkrijk, Frankrijk en Duitsland. Met deze uitbreiding kunt u uw klantgegevens verrijken met meer interesses die van toepassing zijn op deze markten. We verrijken ook uw klantprofielen die zich in deze markten bevinden door lokale bedrijfseigen gegevens van Microsoft Graph te gebruiken.
   Zie [Klantprofielen verrijken met merk- en interesseaffiniteiten](enrichment-microsoft-graph.md) voor meer informatie
 
 
@@ -223,9 +294,9 @@ De updates van juli 2020 omvatten verschillende functies, prestatie-upgrades en 
 
 #### <a name="enrichment"></a>Verrijking
 
-- **Verrijking van merkaffiniteiten beschikbaar in extra markten**
+- **Verrijking van merkaffiniteiten beschikbaar in meer markten**
 
-  We breiden de beschikbaarheid van de verrijking van merkaffiniteiten uit buiten de Verenigde Staten naar vijf extra markten: Canada, Australië, Verenigd Koninkrijk, Frankrijk en Duitsland. Met deze extensie kunt u uw klantgegevens verrijken met lokale merken in deze markten. We verrijken ook uw klantprofielen die zich in deze markten bevinden door lokale bedrijfseigen gegevens van Microsoft Graph te gebruiken.
+  We breiden de beschikbaarheid van de verrijking van merkaffiniteiten uit buiten de Verenigde Staten naar vijf andere markten: Canada, Australië, Verenigd Koninkrijk, Frankrijk en Duitsland. Met deze extensie kunt u uw klantgegevens verrijken met lokale merken in deze markten. We verrijken ook uw klantprofielen die zich in deze markten bevinden door lokale bedrijfseigen gegevens van Microsoft Graph te gebruiken.
   Zie [Klantprofielen verrijken met merk- en interesseaffiniteiten](enrichment-microsoft-graph.md) voor meer informatie
 
 ## <a name="june-2020-updates"></a>Updates juni 2020
@@ -238,7 +309,7 @@ De updates van juni 2020 omvatten verschillende functies, prestatie-upgrades en 
 
 - **Verrijking met bedrijfsgegevens uit Leadspace**
   
-  Definieer velden in geharmoniseerde klantprofielen die worden gebruikt om gerelateerde bedrijfsgegevens op te zoeken vanuit Leadspace. Nadat het verrijkingsproces is uitgevoerd, zijn B2B-profielen verrijkt met extra kenmerken, waaronder bedrijfsgrootte, locatie, branche en meer.    
+  Definieer velden in geharmoniseerde klantprofielen die worden gebruikt om gerelateerde bedrijfsgegevens op te zoeken vanuit Leadspace. Nadat het verrijkingsproces is uitgevoerd, worden B2B-profielen verrijkt met meer kenmerken, waaronder bedrijfsgrootte, locatie, branche en meer.    
   Door deze samenwerking kunt u de kwaliteit van uw data verbeteren met input van externe services. Om deze verrijking te gebruiken, hebt u een licentie van Leadspace nodig om toegang te krijgen tot hun B2B-bedrijfsgegevens. Het systeem gebruikt die licentie om uw gegevens continu te verrijken.    
   Zie [Verrijking van bedrijfsprofielen met Leadspace](enrichment-leadspace.md) voor meer informatie.
 
@@ -264,7 +335,7 @@ De updates van juni 2020 omvatten verschillende functies, prestatie-upgrades en 
   Met een nieuw besturingselement in de invoegtoepassing Dynamics 365 Klantenkaart kunt u merk- en interesseverrijkingen weergeven voor uw contactpersonen in apps voor klantbetrokkenheid in Dynamics 365.    
   Zie [Invoegtoepassing Klantenkaart](customer-card-add-in.md) voor meer informatie.
 
-- **Extra Power Automate-triggers**
+- **Meer Power Automate-triggers**
 
   We hebben onze triggers voor Power Automate uitgebreid en de volgende triggers toegevoegd:
   - Ontvang een melding of voer een actie uit wanneer een geautomatiseerde volledige vernieuwing (gegevensbronnen, harmonisering, segmenten, metingen, exporten) is voltooid
@@ -295,12 +366,12 @@ De updates van juni 2020 omvatten verschillende functies, prestatie-upgrades en 
   
   Vind vergelijkbare klanten in uw klantenbestand met behulp van kunstmatige intelligentie. Een Machine Learning-model voor binaire classificatie kent een overeenkomstscore toe aan klanten in het uitgebreide segment. De score is gebaseerd op de overeenkomst met klanten in het bronsegment. Afhankelijk van de overeenkomstscore worden klantprofielen toegevoegd aan een nieuw gemaakt segment.
 
-  Deze techniek, die in digitale marketing soms lookalike-modellering wordt genoemd, maakt gebruik van een AI-model om klanten te helpen vinden die vergelijkbaar zijn met een ander segment van uw klanten door rekening te houden met aanvullende kenmerken. U kunt niet alleen de kenmerken kiezen, maar ook het maximale aantal klanten specificeren dat deel zou moeten uitmaken van dit nieuwe segment. Het AI-model berekent vervolgens de overeenkomstscores voor elke klant op basis van de door u geselecteerde kenmerken en vindt klanten met de hogere gemiddelde overeenkomstscore. Het resulterende segment omvat klanten die lijken op de klant in uw oorspronkelijke segment.    
+  Bij digitale marketing wordt soms naar lookalike-modellering verwezen en wordt een AI-model gebruikt om klanten te vinden die lijken op een ander segment van uw klanten door rekening te houden met meer kenmerken. U kunt niet alleen de kenmerken kiezen, maar ook het maximale aantal klanten specificeren dat deel zou moeten uitmaken van dit nieuwe segment. Het AI-model berekent vervolgens de overeenkomstscores voor elke klant op basis van de door u geselecteerde kenmerken en vindt klanten met de hogere gemiddelde overeenkomstscore. Het resulterende segment omvat klanten die lijken op de klant in uw oorspronkelijke segment.    
   Zie [Vergelijkbare klanten](find-similar-customer-segments.md) voor meer informatie.
 
 - **Segmentoverlapping en onderscheidende factoren**
 
-  Met segmentoverlapping kunt u zien hoeveel en welke klanten gemeenschappelijk zijn voor twee of meer segmenten. Bijvoorbeeld, hoe een segment met veel uitgevers overlapt met een segment met hoge tevredenheid van klanten of hoe een segment met groeiende klanten overlapt met segment met klanten met een lage tevredenheid. Bovendien kunt u analyseren hoe de overlapping verandert op basis van een extra kenmerk naar keuze.
+  Met segmentoverlapping kunt u zien hoeveel en welke klanten gemeenschappelijk zijn voor twee of meer segmenten. Bijvoorbeeld, hoe een segment met veel uitgevers overlapt met een segment met hoge tevredenheid van klanten of hoe een segment met groeiende klanten overlapt met segment met klanten met een lage tevredenheid. Bovendien kunt u analyseren hoe de overlap verandert op basis van een extra kenmerk naar keuze.
 
   Onderscheidende factoren voor segmenten laten zien wat het ene segment onderscheidt van de rest van uw klanten of van een ander segment. Het enige dat u hoeft te doen, is een segment identificeren en het systeem zal profielkenmerken en meetcriteria identificeren die het segment onderscheiden in de vorm van een gerangschikte lijst van onderscheidende factoren, van de sterkste tot de zwakste.    
   Zie [Segmentinzichten (preview)](segment-insights.md) voor meer informatie.
@@ -333,7 +404,7 @@ De updates van mei 2020 omvatten verschillende functies, prestatie-upgrades en b
 
 - **Bijgewerkte tijdlijn en paginering op de invoegtoepassing Klantenkaart**
 
-  De tijdlijn van de invoegtoepassingsoplossing Klantenkaart komt overeen met de activiteitentijdlijn. De paginering van de tijdlijn is verbeterd, en toont nu tot 50 activiteiten tegelijk. Ook kunnen extra activiteiten in de tijdlijn worden geladen.    
+  De tijdlijn van de invoegtoepassingsoplossing Klantenkaart komt overeen met de activiteitentijdlijn. De paginering van de tijdlijn is verbeterd, en toont nu tot 50 activiteiten tegelijk. U kunt ook meer activiteiten in de tijdlijn laden.    
   Zie [Invoegtoepassing Klantenkaart](customer-card-add-in.md) voor meer informatie.
 
 - **Power Automate-trigger voor segmentwijzigingen**
@@ -412,7 +483,7 @@ De updates van april 2020 omvatten verschillende functies, prestatie-upgrades en
 
 - **Exporteren naar LiveRamp**
 
-  Activeer uw gegevens in LiveRamp® om verbinding te maken met meer dan 500 platforms in digitale, sociale en tv-ecosystemen. Maak gebruik van uw gegevens in LiveRamp voor het targeten, onderdrukken en personaliseren van advertentiecampagnes.    
+  Activeer uw gegevens in LiveRamp® om verbinding te maken met meer dan 500 platforms in digitale, sociale en tv-ecosystemen. Gebruik uw gegevens in LiveRamp voor het targeten, verdringen en personaliseren van advertentiecampagnes.    
   Zie [LiveRamp&reg;-connector](export-liveramp.md) voor meer informatie.
 
 - **Teams-invoegtoepassing voor Customer Insights**
@@ -433,7 +504,7 @@ De updates van april 2020 omvatten verschillende functies, prestatie-upgrades en
 
 #### <a name="segments"></a>Segmenten
 
-- **Extra operator**
+- **Nog een operator**
   
   De operator In set maakt segmentatie voor klanten mogelijk via verschillende mogelijke tekenreekswaarden. Voordat deze operator werd toegevoegd, moesten zulke segmenten worden geconstrueerd met meerdere OF-voorwaarden. Met de operator In set kunt u dat doen met één enkele voorwaarde.    
   Zie [Segmenten maken en beheren](segments.md) voor meer informatie.
@@ -444,3 +515,6 @@ De updates van april 2020 omvatten verschillende functies, prestatie-upgrades en
   
   Kopieer uw configuratie van de ene omgeving naar de andere. Tijdens het maken van een nieuwe omgeving kunt u een bestaande omgeving selecteren waaruit u de configuratie wilt kopiëren. We ondersteunen momenteel het kopiëren van gegevensbronnen, gegevensvereniging, relaties, metingen en segmenten. Referenties voor gegevensbronnen en feitelijke gegevens worden niet gekopieerd.    
   Zie [Omgevingen beheren](manage-environments.md) voor meer informatie.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

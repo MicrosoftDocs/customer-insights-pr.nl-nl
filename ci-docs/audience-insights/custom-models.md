@@ -4,16 +4,16 @@ description: Werk met aangepaste modellen van Azure Machine Learning in Dynamics
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668897"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267228"
 ---
 # <a name="custom-machine-learning-models"></a>Aangepaste Machine Learning-modellen
 
@@ -46,15 +46,15 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
 
 1. Kies de Machine Learning Studio-webservice (klassiek) of Azure Machine Learning-pijplijn in de vervolgkeuzelijst **Webservice met uw model**. Selecteer vervolgens **Volgende**.
    - Meer informatie over [een webservice publiceren in Machine Learning Studio (klassiek)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Meer informatie over [een pijplijn publiceren in Azure Machine Learning met de designer](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) of [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Uw pijplijn moet worden gepubliceerd onder een [pijplijn-eindpunt](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Meer informatie over [een pijplijn publiceren in Azure Machine Learning met de designer](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) of [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Uw pijplijn moet worden gepubliceerd onder een [pijplijn-eindpunt](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Voor elke **Invoer voor webservice** selecteert u de overeenkomende **Entiteit** in doelgroepinzichten en tot slot selecteert u **Volgende**.
+   > [!NOTE]
+   > De aangepaste modelwerkstroom past heuristiek toe om de invoervelden van de webservice toe te wijzen aan de entiteitskenmerken op basis van de naam en het gegevenstype van het veld. U ziet een foutmelding als een webserviceveld niet kan worden toegewezen aan een entiteit.
 
    > [!div class="mx-imgBorder"]
    > ![Een werkstroom configureren](media/intelligence-screen2-updated.png "Een werkstroom configureren")
-
+   
 1. Stel in de stap **Modeluitvoerparameters** de volgende eigenschappen in:
    - Machine Learning Studio (klassiek)
       1. Voer de **Entiteitsnaam** van de uitvoer in waarnaar u de uitvoerresultaten van de webservice wilt laten stromen.
@@ -112,3 +112,6 @@ Uw werkstroom wordt ook automatisch uitgevoerd bij elke geplande vernieuwing. Le
 1. Selecteer **Verwijderen** en bevestig de verwijdering.
 
 Uw werkstroom wordt verwijderd. De [entiteit](entities.md) die is gemaakt toen u de werkstroom maakte, blijft bestaan en kan worden bekeken via de pagina **Entiteiten**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

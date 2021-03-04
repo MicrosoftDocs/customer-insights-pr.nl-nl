@@ -1,7 +1,7 @@
 ---
 title: De invoegtoepassing Klantkaart installeren en configureren
 description: Installeer en configureer de invoegtoepassing Klantkaart voor Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644037"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268038"
 ---
 # <a name="customer-card-add-in-preview"></a>Invoegtoepassing Klantkaart (preview)
 
@@ -28,7 +28,7 @@ Krijg een compleet overzicht van uw klanten rechtstreeks in Dynamics 365-apps. B
 - Klantprofielen [opgenomen uit de Dynamics 365-app met Common Data Service](connect-power-query.md).
 - Gebruikers van de invoegtoepassing Klantenkaart moeten [toegevoegd zijn als gebruikers](permissions.md) in doelgroepinzichten.
 - [Geconfigureerde zoek- en filtermogelijkheden](search-filter-index.md).
-- Demografische controle: demografische velden, zoals leeftijd of geslacht, zijn beschikbaar in het geharmoniseerde klantprofiel.
+- Demografische controle: demografische velden, zoals leeftijd of gender, zijn beschikbaar in het geharmoniseerde klantprofiel.
 - Besturingselement voor verrijking: vereist dat actieve [verrijkingen](enrichment-hub.md) worden toegepast op klantprofielen.
 - Informatiecontrole: vereist gegevens die zijn gegenereerd met Azure Machine Learning ([Voorspellingen](predictions.md) of [Aangepaste modellen](custom-models.md))
 - Metingencontrole: vereist [geconfigureerde metingen](measures.md).
@@ -92,10 +92,26 @@ Het kan enige tijd duren voordat de oplossing in uw omgeving is geïnstalleerd.
 
 1. Schakel in het dialoogvenster **Veldeigenschappen** het selectievakje **Label in het formulier weergeven** uit.
 
-1. Selecteer de optie **Web** voor het besturingselement. Selecteer voor het besturingselement voor verrijking welk verrijkingstype u wilt weergeven door het veld **enrichmentType** te configureren. U moet voor elk verrijkingstype een apart besturingselement voor verrijking toevoegen.
+1. Selecteer de optie **Web** voor het besturingselement. Selecteer voor het besturingselement voor verrijking welk verrijkingstype u wilt weergeven door het veld **enrichmentType** te configureren. Voeg een afzonderlijk verrijkingsbesturingselement toe voor elk verrijkingstype.
 
 1. Selecteer **Opslaan** en **Publiceren** om het bijgewerkte contactpersoonformulier te publiceren.
 
 1. Ga naar het gepubliceerde contactpersoonformulier. U ziet nu het nieuw toegevoegde besturingselement. Mogelijk moet u zich aanmelden bij het eerste gebruik.
 
 1. Als u wilt aanpassen wat u wilt weergeven op het aangepaste besturingselement, selecteert u de knop Bewerken in de rechterbovenhoek.
+
+## <a name="upgrade-customer-card-add-in"></a>Invoegtoepassing Klantkaart upgraden
+De invoegtoepassing Klantkaart wordt niet automatisch geüpgraded. Om te upgraden naar de nieuwste versie, volgt u deze procedure in de Dynamics 365-app waarop de invoegtoepassing is geïnstalleerd.
+
+1. Ga in de Dynamics 365-app naar **Instellingen** > **Aanpassing** en selecteer **Oplossingen**.
+
+1. Zoek in de tabel met invoegtoepassingen naar **CustomerInsightsCustomerCard** en selecteer de rij.
+
+1. Selecteer **Oplossingsupgrade toepassen** op de actiebalk.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Upgrade de oplossing in het aanpassingsgebied van Dynamics 365-apps":::
+
+1. Nadat u het upgradeproces hebt gestart, ziet u een laadindicator totdat de upgrade is voltooid. Als er geen nieuwere versie is, geeft de upgrade een foutmelding weer.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

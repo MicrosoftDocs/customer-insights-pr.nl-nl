@@ -1,7 +1,7 @@
 ---
 title: Startpagina in doelgroepinzichten
 description: Verken de app op de startpagina.
-ms.date: 09/30/2020
+ms.date: 01/07/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: bd16966eabb126d9c9945ededc53273df02c3369
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 7cc767f5d80b213a4c1bb5b2e8062bd44c15279b
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405495"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477035"
 ---
 # <a name="create-a-new-environment"></a>Een nieuwe omgeving maken
 
@@ -29,6 +29,8 @@ U kunt zich aanmelden voor een proefversie op de [aanmeldingspagina voor proefve
 
 1. Geef uw werk- of schoole-mailadres op, vertel ons meer over uzelf en selecteer **Volgende**.
 
+   :::image type="content" source="media/trial-signup-dialog.png" alt-text="Dialoogvenster voor registratie voor een proefexemplaar":::
+
 1. Geef een **Naam** op voor uw nieuwe omgeving. 
 
 1. Selecteer het type proefversie.
@@ -41,34 +43,34 @@ U kunt zich aanmelden voor een proefversie op de [aanmeldingspagina voor proefve
 
 Nadat de omgeving is gemaakt, ziet u de **Demo**-omgeving waarin u de app kunt verkennen met fictieve gegevens. U kunt de voorbeeldgegevens aanpassen aan uw branche. Selecteer het pictogram **Instellingen** in de koptekst en vervolgens **Demo-instellingen**. Bovendien kunt u het visuele thema wijzigen. 
 
-U kunt [overschakelen naar de omgeving](#change-between-environments) die u tijdens het aanmeldingsproces hebt gemaakt om met uw eigen gegevens te werken.
+U kunt [overschakelen naar de omgeving](#switch-environments) die u tijdens het aanmeldingsproces hebt gemaakt om met uw eigen gegevens te werken.
 
 ## <a name="create-a-new-production-or-sandbox-environment"></a>Een nieuwe productie- of sandbox-omgeving maken
 
-Selecteer in uw omgeving het pictogram **Instellingen** in de koptekst en vervolgens **Nieuwe omgeving**.
+Selecteer in uw omgeving de kiezer voor **Omgevingen** in de app-koptekst en selecteer **Nieuw**​.
 
-Volg de stappen alsof u [een proefomgeving maakt](#create-a-trial-environment). U ziet een extra optie bij het selecteren van **Geavanceerde instellingen** om uw gegevens op te slaan in uw eigen Azure Data Lake. Geef uw accountnaam en accountsleutel op om een verbinding tot stand te brengen met uw Azure Data Lake. Standaard worden gegevens opgeslagen in het door Customer Insights beheerde data lake
+Volg de stappen alsof u [een proefomgeving maakt](#create-a-trial-environment). Standaard worden gegevens opgeslagen in het door Customer Insights beheerde data lake U ziet een extra optie bij het selecteren van **Geavanceerde instellingen** om uw gegevens op te slaan in uw eigen Azure Data Lake. Geef uw accountnaam en accountsleutel op om een verbinding tot stand te brengen met uw Azure Data Lake. 
 
 > [!IMPORTANT]
 > Door gegevens op te slaan in Azure Data Lake Storage, stemt u ermee in dat gegevens worden overgebracht naar en opgeslagen in de juiste geografische locatie voor dat Azure Storage-account, die kan afwijken van waar gegevens zijn opgeslagen in Dynamics 365 Customer Insights. [Meer informatie op het Microsoft Trust Center.](https://www.microsoft.com/trust-center)
 
 ## <a name="explore-the-home-page"></a>De startpagina verkennen
 
-U kunt [toegang krijgen tot uw Customer Insights-omgeving](https://home.ci.ai.dynamics.com/) op de volgende URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
-De **start** pagina toont een overzicht van uw klantenbestand en de belangrijkste metrische gegevens om de status van uw bedrijf bij te houden.
+U kunt [toegang krijgen tot doelgroepinzichten van Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) via de volgende URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/)​.
+De **Startpagina** bevat een overzicht van segmenten, metingen en verrijkingsgegevens (indien geconfigureerd) nadat de fasen [toewijzen](map-entities.md), [overeenkomen](match-entities.md) en [samenvoegen](merge-entities.md) zijn afgerond.
 
 > [!div class="mx-imgBorder"] 
 > ![Inzichten op startpagina](media/home-page-insights.png "Inzichten op startpagina")
 
-Onder **Recente segmenten** ziet u groepen klanten op basis van demografische, gedrags- of transactiekenmerken die u hebt gedefinieerd. [Segmenten maken](segments.md) helpt u om uw bedrijfsactiviteiten gerichter aan te pakken.
+Onder **Recente segmenten** ziet u groepen klanten op basis van demografische, gedrags- of transactiekenmerken die u hebt gedefinieerd. Met [Segmenten maken](segments.md) kunt u uw klantenbestand groeperen en uw zakelijke activiteiten beter afstemmen.
 
-**Recente metingen** toont tegels met [metingen](measures.md). Metingen zijn key performance indicators (KPI's) die u hebt gedefinieerd. Bijvoorbeeld de gemiddelde kans op klantverloop of gemiddelde online uitgaven per klant.
+**Recente metingen** bevat tegels met [key performance indicators (KPI's)](measures.md) die u hebt gedefinieerd. Bijvoorbeeld de gemiddelde kans op klantverloop of de gemiddelde online uitgaven per klant.
 
-De sectie **Recente verrijkingen** bevat de resultaten van de verrijkingsruns die onlangs zijn voltooid. Verrijkingen voegen informatie toe over uw klantenbestand. Bijvoorbeeld door de interesses en merken waar ze affiniteit mee hebben te begrijpen. Deze informatie kan worden ontgrendeld met de mogelijkheden voor [verrijking](enrichment-microsoft-graph.md), na het voltooien van de fasen voor [toewijzen](map-entities.md), [afstemmen](match-entities.md) en [samenvoegen](merge-entities.md).
+De sectie **Recente verrijkingen** bevat de resultaten van de verrijkingsruns die onlangs zijn voltooid. [Verrijkingen](enrichment-hub.md) voegen informatie toe over uw klantenbestand. Bijvoorbeeld door de interesses en merken waar ze affiniteit mee hebben te begrijpen.
 
-## <a name="change-between-environments"></a>Overschakelen tussen omgevingen
+## <a name="switch-environments"></a>Omgevingen omschakelen
 
-Zodra u [gegevensbronnen](data-sources.md) hebt ingesteld en geconfigureerd, wilt u overschakelen van een demo-omgeving naar een live omgeving. Door gebruik te maken van de productieomgeving kunt u met uw eigen klantgegevens werken. Selecteer het besturingselement **Omgeving** in de rechterbovenhoek van de pagina om van omgeving te veranderen.
+Selecteer het besturingselement **Omgeving** in de rechterbovenhoek van de pagina om van omgeving te veranderen.
 
 > [!div class="mx-imgBorder"] 
 > ![Omgeving omschakelen](media/home-page-environment-switcher.png "Omgeving omschakelen")
@@ -78,3 +80,6 @@ Beheerders kunnen [meerdere omgevingen](manage-environments.md) maken en beheren
 ## <a name="next-step"></a>Volgende stap
 
 Als u uw eigen inzichten op de startpagina wilt bekijken, moet u eerst [gegevensbronnen toevoegen](data-sources.md) en uw gegevens [harmoniseren](data-unification.md) om klantprofielen op te bouwen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

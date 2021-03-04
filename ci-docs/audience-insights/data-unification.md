@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 24321e9e11f9fd4e800526673726e5146ed33674
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 44f97696ec91dc488dd6a7528e186abb99c8288b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405473"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269646"
 ---
-# <a name="data-unification"></a>Gegevensharmonisatie
+# <a name="data-unification-overview"></a>Overzicht van gegevensharmonisatie
 
 Na [het opzetten van de gegevensbronnen](data-sources.md) kunt u de gegevens harmoniseren. Gegevensharmonisatie bestaat uit drie stappen: **Toewijzen**, **Afstemmen** en **Samenvoegen**.
 
@@ -31,3 +31,6 @@ Na het voltooien van de gegevensharmonisatie kunt u naar keuze
 - [relaties tussen entiteiten instellen](relationships.md) om geavanceerde segmenten te maken
 - [uw gegevens verrijken](enrichment-hub.md) om een breder scala aan inzichten over uw klanten te krijgen
 - [activiteiten definiëren](activities.md) van enkele van de opgenomen kenmerken
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

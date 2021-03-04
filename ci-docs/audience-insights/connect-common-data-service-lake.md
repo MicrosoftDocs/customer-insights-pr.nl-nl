@@ -4,17 +4,17 @@ description: Gegevens importeren uit een door Common Data Service beheerd data l
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643392"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267807"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Verbinding maken met gegevens in een beheerd Common Data Service data lake
 
@@ -34,7 +34,10 @@ Gegevens die worden opgeslagen in online services, zoals Azure Data Lake Storage
 
 3. Selecteer **Verbinden met Common Data Service** en selecteer **Volgende**.
 
-4. Voer een **naam** in voor de gegevensbron en selecteer **Volgende**.
+4. Voer een **naam** in voor de gegevensbron en selecteer **Volgende**. Naamrichtlijnen: 
+   - Begin met een letter.
+   - Gebruik alleen letters en cijfers. Speciale tekens en spaties zijn niet toegestaan.
+   - Gebruik minimaal 3 en maximaal 64 tekens.
 
 5. Geef het **Serveradres** op voor uw Common Data Service-organisatie en selecteer **Aanmelden**.
 
@@ -65,3 +68,6 @@ Als u verbinding wilt maken met een andere Common Data Service, [maakt u een nie
 3. Selecteer de optie **Bewerken** in de lijst.
 
 4. Selecteer extra entiteiten in de beschikbare lijst met entiteiten en selecteer vervolgens **Opslaan**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

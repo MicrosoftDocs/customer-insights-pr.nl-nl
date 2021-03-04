@@ -4,17 +4,17 @@ description: Gebruik voorspellingen om onvolledige klantgegevens in te vullen.
 ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: zacook
 manager: shellyha
-ms.openlocfilehash: 66f0b16b5d05741ab98ca5ce2157da8c46b6d9e0
-ms.sourcegitcommit: 5379c2b77d613d071a177f509e6417ebf3c47516
+ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "4648705"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268266"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Uw gedeeltelijke gegevens aanvullen met voorspellingen
 
@@ -160,3 +160,6 @@ Als u het proces voor het bijvoegen van Common Data Service niet kunt voltooien 
     1. Selecteer de gebruiker die u zojuist hebt gemaakt.
     1. Selecteer **Rollen beheren** in de bovenste menubalk.
     1. Selecteer **Systeembeheerder** en selecteer vervolgens **OK**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

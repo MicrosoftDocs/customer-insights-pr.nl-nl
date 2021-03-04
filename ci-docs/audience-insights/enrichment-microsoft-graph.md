@@ -1,20 +1,20 @@
 ---
 title: Klantprofielen verrijken met Microsoft Graph
 description: Gebruik eigen gegevens uit de Microsoft Graph om uw klantgegevens te verrijken met merk- en interesseaffiniteiten.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405477"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269324"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Klantprofielen verrijken met merk- en interesseaffiniteiten (preview)
 
@@ -35,16 +35,21 @@ We gebruiken online zoekgegevens van de Microsoft Graph om affiniteiten te vinde
 
 [Meer informatie over Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Affiniteitsscore en vertrouwen
+## <a name="affinity-level-and-score"></a>Affiniteitsniveau en score
 
-De **affiniteitsscore** wordt berekend op een schaal van 100 punten, waarbij 100 het segment vertegenwoordigt dat de hoogste affiniteit heeft voor een merk of interesse.
+Op elk verrijkt klantprofiel geven we twee gerelateerde waarden: affiniteitsniveau en affiniteitsscore. Deze waarden helpen u te bepalen hoe sterk de affiniteit is voor het demografische segment van dat profiel, voor een merk of interesse, in vergelijking met andere demografische segmenten.
 
-Het **affiniteitsvertrouwen** wordt ook berekend op een 100-puntsschaal. Het geeft het vertrouwen van het systeem aan dat een segment affiniteit heeft met het merk of de interesse. Het betrouwbaarheidsniveau is gebaseerd op de segmentgrootte en de granulariteit van het segment. De segmentgrootte wordt bepaald door de hoeveelheid gegevens die we voor een bepaald segment hebben. Segmentgranulariteit wordt bepaald door het aantal kenmerken (leeftijd, geslacht, locatie) dat beschikbaar is in een profiel.
+*Affiniteitsniveau* bestaat uit vier niveaus en *Affiniteitsscore* wordt berekend op een schaal van 100 punten die overeenkomt met de affiniteitsniveaus.
 
-We normaliseren de scores voor uw gegevensset niet. Bijgevolg ziet u mogelijk niet alle mogelijke waarden voor de affiniteitsscore voor uw gegevensset. Er is bijvoorbeeld mogelijk geen verrijkt klantprofiel met affiniteitsscore 100 in uw gegevens. Dat is mogelijk als er geen klanten bestaan in het demografische segment dat 100 heeft gescoord voor een bepaald merk of interesse.
 
-> [!TIP]
-> Als u [segmenten maakt](segments.md) met behulp van affiniteitsscores, bekijk dan de verdeling van affiniteitsscores voor uw gegevensset voordat u beslist over de juiste scoredrempels. De affiniteitsscore 10 kan bijvoorbeeld als significant worden beschouwd in een gegevensset die een hoogste affiniteitsscore van 25 heeft voor een bepaald merk of interesse.
+|Affiniteitsniveau |Affiniteitsscore  |
+|---------|---------|
+|Zeer hoog     | 85-100       |
+|Hoog     | 70-84        |
+|Gemiddeld     | 35-69        |
+|Laag     | 1-34        |
+
+Afhankelijk van de granulariteit waarmee u de affiniteit wilt meten, kunt u het affiniteitsniveau of de score gebruiken. De affiniteitsscore geeft u een nauwkeurigere controle.
 
 ## <a name="supported-countriesregions"></a>Ondersteunde landen/regio's
 
@@ -54,17 +59,13 @@ Als u een land wilt selecteren, opent u **Verrijking van merken** of **Interesse
 
 ### <a name="implications-related-to-country-selection"></a>Implicaties met betrekking tot landselectie
 
-- Wanneer [u uw eigen merken kiest](#define-your-brands-or-interests), zullen wij suggesties doen op basis van het geselecteerde land of de geselecteerde regio.
+- Wanneer u [uw eigen merken kiest](#define-your-brands-or-interests), geeft het systeem suggesties op basis van het geselecteerde land of de geselecteerde regio.
 
-- Bij [het kiezen van een branche](#define-your-brands-or-interests), zullen we de meest relevante merken of interesses identificeren op basis van het geselecteerde land/regio.
+- Wanneer u [een branche kiest](#define-your-brands-or-interests), krijgt u de meest relevante merken of interesses op basis van het geselecteerde land of de geselecteerde regio.
 
-- Als bij het [toewijzen van uw velden](#map-your-fields) het veld Land/regio niet wordt toegewezen, gebruiken we Microsoft Graph-gegevens over het geselecteerde land of de geselecteerde regio om uw klantprofielen te verrijken. We zullen die selectie ook gebruiken omklantprofielen te verrijken waarvoor geen land-/regiogegevens beschikbaar zijn.
-
-- Bij het [verrijken van profielen](#refresh-enrichment) verrijken we alle klantprofielen waarvoor we Microsoft Graph-gegevens beschikbaar hebben voor de geselecteerde merken en interesses, inclusief profielen die zich niet in het geselecteerde land of de geselecteerde regio bevinden. Als u bijvoorbeeld Duitsland hebt geselecteerd, verrijken we profielen in de Verenigde Staten als we Microsoft Graph-gegevens beschikbaar hebben voor de geselecteerde merken en interesses in de VS.
+- Wanneer u [profielen verrijkt](#refresh-enrichment), verrijken we alle klantprofielen waarvoor we gegevens krijgen voor de geselecteerde merken en interesses. Inclusief profielen die zich niet in het geselecteerde land of de geselecteerde regio bevinden. Als u bijvoorbeeld Duitsland hebt geselecteerd, verrijken we profielen in de Verenigde Staten als we Microsoft Graph-gegevens beschikbaar hebben voor de geselecteerde merken en interesses in de VS.
 
 ## <a name="configure-enrichment"></a>Verrijking configureren
-
-Het configureren van merk- of interesseverrijking bestaat uit twee stappen:
 
 ### <a name="define-your-brands-or-interests"></a>Uw merken of interesses definiëren
 
@@ -75,9 +76,19 @@ Selecteer een van de volgende opties:
 
 Als u een merk of interesse wilt toevoegen, voert u dit in het invoerveld in om suggesties te krijgen op basis van overeenkomende termen. Als we geen merk of interesse vermelden waarnaar u op zoek bent, stuur ons dan feedback via de koppeling **Dit voorstellen**.
 
+### <a name="review-enrichment-preferences"></a>Verrijkingsvoorkeuren beoordelen
+
+Beoordeel uw standaardverrijkingsvoorkeuren en werk deze indien nodig bij.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Schermopname van het venster Verrijkingsvoorkeuren.":::
+
+### <a name="select-entity-to-enrich"></a>Te verrijken entiteit selecteren
+
+Selecteer **Verrijkte entiteit** en kies de gegevensset die u wilt verrijken met bedrijfsgegevens van de Microsoft Graph. U kunt de entiteit Klant selecteren om al uw klantprofielen te verrijken of een segmententiteit selecteren om alleen klantprofielen in dat segment te verrijken.
+
 ### <a name="map-your-fields"></a>Uw velden toewijzen
 
-Wijs velden van uw geharmoniseerde klantentiteit toe aan ten minste twee kenmerken om het demografische segment te definiëren dat u wilt dat we gebruiken om uw klantgegevens te verrijken. Selecteer **Bewerken** om de toewijzing van de velden te definiëren en selecteer **Toepassen** wanneer u klaar bent. Selecteer **Opslaan** om de veldtoewijzing te voltooien.
+Wijs velden van uw geharmoniseerde klantentiteit toe om het demografische segment te definiëren dat u door het systeem wilt laten gebruiken om uw klantgegevens te verrijken. Wijs land/regio toe en ten minste geboortedatum of genderkenmerken. Bovendien moet u ten minste een plaats (en staat/provincie) of postcode toewijzen. Selecteer **Bewerken** om de toewijzing van de velden te definiëren en selecteer **Toepassen** wanneer u klaar bent. Selecteer **Opslaan** om de veldtoewijzing te voltooien.
 
 De volgende indelingen en waarden worden ondersteund. Waarden zijn niet hoofdlettergevoelig:
 
@@ -120,3 +131,6 @@ Merk- en interesse-affiniteiten kunnen ook worden bekeken op individuele klanten
 ## <a name="next-steps"></a>Volgende stappen
 
 Bouw voort op uw verrijkte klantgegevens. U kunt [Segmenten](segments.md) en [Maatregelen](measures.md) maken en [de gegevens zelfs exporteren](export-destinations.md) om uw klanten gepersonaliseerde ervaringen te bieden.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

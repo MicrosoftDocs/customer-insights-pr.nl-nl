@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644397"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268312"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transactieverloop voorspellen (preview)
 
@@ -96,6 +96,8 @@ Met deze functie kunt u voorspellen of een klant uw producten of services binnen
 1. Selecteer eventueel **Gegevens toevoegen** bij **Klantactiviteiten**. Kies de entiteit die de informatie over de klantactiviteit verstrekt, zoals beschreven in de vereisten.
 
 1. Wijs de semantische velden toe aan kenmerken binnen de entiteit Klantactiviteiten en selecteer **Volgende**. Zie de [vereisten](#prerequisites) voor beschrijvingen van de velden.
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Wijs klantvelden toe voor transactiegegevens.":::
 
 1. Selecteer een activiteitstype dat overeenkomt met het type klantactiviteit dat u configureert. Selecteer **Nieuw maken** en kies een beschikbaar activiteitstype of maak een nieuw type aan.
 
@@ -185,3 +187,6 @@ Als u een voorspelling verwijdert, wordt ook de uitvoerentiteit ervan verwijderd
 1. Selecteer de verticale puntjes naast de voorspelling die u wilt verwijderen.
 
 1. Selecteer **Verwijderen**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

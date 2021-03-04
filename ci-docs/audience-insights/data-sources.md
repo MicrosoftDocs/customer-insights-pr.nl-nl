@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643947"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269692"
 ---
-# <a name="overview-about-data-sources"></a>Overzicht van gegevensbronnen
+# <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ U ziet de naam van elke opgenomen gegevensbron, de status en de laatste keer dat
 |Vernieuwen    |De opname van gegevens wordt uitgevoerd. U kunt deze bewerking annuleren door **Stoppen met vernieuwen** te selecteren in de kolom **Acties**. Als u het vernieuwen van een gegevensbron stopt, keert het terug naar de laatste vernieuwingsstatus.       |
 |Mislukt     |Er zijn fouten opgetreden bij de gegevensopname.         |
 
-Selecteer **Status vernieuwen** om meer details over de vernieuwingsstatus te bekijken, inclusief foutdetails en downstream procesupdates.
+Selecteer de waarde in de kolom **Status** van een willekeurige gegevensbron voor meer details. Vouw in het deelvenster **Voortgangsgegevens** de optie **Gegevensbronnen** uit. Selecteer **Details weergeven** voor meer informatie over de vernieuwingsstatus, inclusief foutdetails en downstream procesupdates.
 
 Het laden van gegevens kan enige tijd in beslag nemen. Na een succesvolle vernieuwing kunnen de opgenomen gegevens worden bekeken vanaf de pagina **Entiteiten**. Zie [Entiteiten](entities.md) voor meer informatie.
 
@@ -76,3 +76,6 @@ Volg deze stappen om een gegevensbron op aanvraag te vernieuwen:
 2. Selecteer het verticale weglatingsteken naast de gegevensbron die u wilt verwijderen en selecteer **Verwijderen** uit het vervolgkeuzemenu.
 
 3. Bevestig de verwijdering.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

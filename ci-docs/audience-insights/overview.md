@@ -1,30 +1,26 @@
 ---
-title: Mogelijkheden voor doelgroepinzichten
-description: Overzicht van mogelijkheden voor doelgroepinzichten in Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Overzicht van doelgroepinzichten voor Dynamics 365 Customer Insights
+description: Overzicht van doelgroepinzichten voor Dynamics 365 Customer Insights.
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405499"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476989"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Dynamics 365 Customer Insights-mogelijkheden voor doelgroepinzichten
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Overzicht van doelgroepinzichten voor Dynamics 365 Customer Insights
 
-Klantervaring staat centraal in de digitale transformatieambities van elke organisatie. Om te kunnen concurreren op de huidige markt, moeten organisaties op een persoonlijk niveau betekenisvolle relaties opbouwen met hun klanten. Voor het op grote schaal realiseren van een effectieve en persoonlijke aanpak is een volledig, uniform beeld van klanten nodig.
+Doelgroepinzichten helpt u een dieper inzicht in uw klanten op te bouwen. Verbind gegevens uit verschillende transactie-, gedrags- en observatiebronnen om een 360-graden klantbeeld te creëren. Gebruik deze inzichten om klantgerichte ervaringen en processen te stimuleren. Harmoniseer en begrijp klantgegevens en zet ze in voor intelligente inzichten en acties.
 
-Doelgroepinzichten helpt u een dieper inzicht in uw klanten op te bouwen. Verbind gegevens uit verschillende transactie-, gedrags- en observatiebronnen om een 360-graden klantbeeld te creëren. Gebruik deze inzichten om klantgerichte ervaringen en processen te stimuleren.
-
-**Harmoniseer en begrijp klantgegevens en zet ze in voor intelligente inzichten en acties.**
-
-Met doelgroepinzichten kunnen organisaties:  
+## <a name="main-benefits"></a>Belangrijkste voordelen 
 
 - **Gegevenssilo's elimineren en klantgegevens combineren**
 
@@ -33,15 +29,15 @@ Met doelgroepinzichten kunnen organisaties:
 
 - **Verrijk met doelgroepkennis uit Microsoft Graph**
 
-  - Bouw rijkere klantprofielen op door doelgroepintelligentie te integreren in Microsoft Graph.  
+  - Bouw rijkere klantprofielen op door [doelgroepinformatie te integreren in Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Maak krachtige bedrijfsprocessen en gepersonaliseerde klantervaringen**
 
   - Stimuleer gepersonaliseerde betrokkenheid via kanalen: geef marketing-, verkoop- en serviceprofessionals meer mogelijkheden met kant-en-klare contextuele klantinzichten en op maat gemaakte klantprofielkaarten die zijn ingebracht in de zakelijke toepassingen die ze al dagelijks gebruiken
   - Automatiseer klantgerichte ervaringen en processen op basis van aanpasbare profielen, bedrijfsmaatregelen en segmenten.
-  - Branche-ervaringen die zijn gebouwd op het Microsoft Power Platform mogelijk maken en uitbreiden. Bouw snel toepassingen met ingesloten inzichten met behulp van een krachtige low-code aanpak van PowerApps.  
+  - Activeer en vergroot branche-ervaringen die zijn gebouwd op [Microsoft Power Platform](https://powerplatform.microsoft.com/). Bouw snel toepassingen met ingesloten inzichten met behulp van een krachtige low-code aanpak van PowerApps.  
 
-Doelgroepinzichten bevatten mogelijkheden voor de volgende belangrijke gebruikers:
+## <a name="key-audiences"></a>Belangrijkste doelgroepen
 
 - **Gegevensanalisten/beheerders:**
 
@@ -58,5 +54,8 @@ Doelgroepinzichten bevatten mogelijkheden voor de volgende belangrijke gebruiker
 
 - **Bedrijfsanalisten:**
 
-  - Maak aanpasbare profielen, definieer maatregelen en maak segmenten om een 360-graden beeld van uw klant te krijgen, specifiek voor uw organisatie.  
-  - Gebruik kant-en-klare connectors voor PowerApps of Microsoft Power BI of API's om inzichten in uw zakelijke toepassingen of BI-oplossingen naar boven te halen.  
+  - Maak aanpasbare profielen, definieer maatregelen, maak segmenten en profiteer van predictive analytics om een 360-graden beeld van uw klant te krijgen, specifiek voor uw organisatie.  
+  - Gebruik kant-en-klare connectors voor verschillende toepassingen of API's van Microsoft en derden om de inzichten verder te verwerken.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

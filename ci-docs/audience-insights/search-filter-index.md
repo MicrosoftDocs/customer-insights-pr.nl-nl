@@ -1,7 +1,7 @@
 ---
 title: Klantprofielen zoeken en filteren
 description: Vind snel informatie over geharmoniseerde klantprofielen en filter op opgegeven kenmerken.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405512"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270060"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Klantprofielen: zoek- en filterindex
 
@@ -28,14 +28,6 @@ Het resultaat van het harmoniseren van uw klantgegevens is een entiteit Klantpro
 Als het de eerste keer is dat u doorzoekbare kenmerken definieert als een beheerder, moet u eerst geïndexeerde velden definiëren. We raden u aan alle kenmerken te kiezen waarmee gebruikers klanten kunnen zoeken en filteren op de pagina **Klanten**. U kunt alleen kenmerken opgeven die bestaan in de entiteit Klantprofiel die u tijdens het gegevensharmonisatieproces hebt gemaakt.
 
 1. Open de pagina **Klanten** en selecteer **Zoek- en filterindex**.
-
-> [!NOTE]
-> We maken een standaard zoekindexconfiguratie op de beschikbare kenmerken in de klantentiteit van de volgende semantische typen zoals gedefinieerd op de pagina Toewijzing.
-> - Voornaam, Achternaam, Middelste naam, Volledige naam van persoon
-> - Organisatienaam
-> - E-mailadres
-> - Telefoonnummer
-> - Locatiegegevens
 
 2. Selecteer **+ Toevoegen** om de geïndexeerde velden op te geven.
 
@@ -65,3 +57,10 @@ Het menu **Filteren** op de pagina **Klanten** kan een verschillend aantal kenme
 2. Selecteer **Opslaan** om uw wijzigingen toe te passen.
 
 3. Selecteer **Uitvoeren** zodra u klaar bent om uw instellingen toe te passen.
+
+## <a name="next-steps"></a>Volgende stappen
+
+Ga naar de pagina **Klanten** om naar klantprofielen te zoeken of gebruik de geïndexeerde velden om een subset van alle klantprofielen te zien.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

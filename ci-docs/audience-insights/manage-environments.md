@@ -1,20 +1,20 @@
 ---
 title: Omgevingen maken en beheren
 description: Ontdek hoe u zich aanmeldt voor de service en hoe u omgevingen beheert.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644127"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270106"
 ---
 # <a name="manage-environments"></a>Omgevingen beheren
 
@@ -46,9 +46,9 @@ U kunt op twee manieren een nieuwe omgeving maken. U kunt een geheel nieuwe conf
 
 Een omgeving maken:
 
-1. Selecteer het symbool **instellingen** in de kop van de app.
+1. Selecteer de picker **Omgeving** in de koptekst van de app.
 
-1. Selecteer **Nieuwe omgeving**.
+1. Selecteer **Nieuw**.
 
    > [!div class="mx-imgBorder"]
    > ![Omgevingsinstellingen](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Een omgeving maken:
 
    - Voor de Azure Data Lake Storage Gen2-oplossing kunt u kiezen tussen een resource-optie en een abonnementsoptie voor verificatie. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. De naam van de **Container** kan niet worden gewijzigd en is "customerinsights".
    
-   - Als u [voorspellingen](predictions.md) wilt gebruiken, voert u de URL van het Common Data Service-exemplaar in het veld **Serveradres** in onder **Voorspellingen gebruiken**.
+   - Als u [voorspellingen](predictions.md) wilt gebruiken of gegevensdelen met toepassingen en oplossingen wilt configureren op basis van Microsoft Dataverse, geeft u de Microsoft Dataverse-omgevings-URL op onder **Gegevens delen met Microsoft Dataverse configureren en aanvullende mogelijkheden inschakelen**. Selecteer **Gegevens delen inschakelen** om Customer Insights-uitvoergegevens te delen met een Microsoft Dataverse beheerde data lake.
+
+     > [!NOTE]
+     > - Gegevens delen met Microsoft Dataverse beheerde Data Lake wordt momenteel niet ondersteund wanneer u alle gegevens in uw eigen Azure Data Lake Storage​opslaat.
+     > - [voorspelling van ontbrekende waarden in een entiteit](predictions.md) wordt momenteel niet ondersteund wanneer u gegevens delen met Microsoft Dataverse beheerde data lake inschakelt.
+
+     > [!div class="mx-imgBorder"]
+     > ![Configuratieopties om het delen van gegevens mogelijk te maken met Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Wanneer u processen uitvoert, zoals het opnemen van gegevens of het maken van segmenten, worden overeenkomstige mappen gemaakt in het opslagaccount dat u hierboven hebt opgegeven. Gegevensbestanden en model.json-bestanden worden op basis van het proces dat u uitvoert gemaakt en toegevoegd aan de respectievelijke submappen.
 
@@ -120,11 +127,11 @@ Ga wanneer de gegevensharmonisering is voltooid naar **Meetcriteria** en **Segme
 
 U kunt enkele details van bestaande omgevingen bewerken.
 
-1. Ga naar **Beheer** > **Systeem** > **Info**.
+1.  Selecteer de picker **Omgeving** in de koptekst van de app.
 
-2. Selecteer **Bewerken**.
+2.  Selecteer het pictogram **Bewerken**.
 
-3. U kunt de **weergavenaam** van de omgeving bijwerken, maar u kunt de **regio** of het **type** niet wijzigen.
+3. In het vak **Omgeving bewerken** kunt u de **Weergavenaam** van de omgeving bijwerken, maar u kunt niet de **Regio** of het **Type** bijwerken.
 
 4. Als een omgeving is geconfigureerd om gegevens in op te slaan Azure Data Lake Storage Gen2, kunt u **Accountsleutel** bijwerken. U kunt de **accountnaam** of naam van de **container** echter niet wijzigen.
 
@@ -132,19 +139,27 @@ U kunt enkele details van bestaande omgevingen bewerken.
 
 ## <a name="reset-an-existing-environment"></a>Een bestaande omgeving opnieuw instellen
 
-U kunt een omgeving terugzetten naar een lege staat als u alle configuraties wilt verwijderen en de opgenomen gegevens wilt verwijderen.
+Als beheerder kunt u een omgeving terugzetten naar een lege staat als u alle configuraties wilt verwijderen en de opgenomen gegevens wilt verwijderen.
 
-1.  Ga naar **Beheer** > **Systeem** > **Info**.
+1.  Selecteer de picker **Omgeving** in de koptekst van de app. 
 
-2.  Selecteer **Opnieuw instellen**. 
+2.  Selecteer de omgeving die u opnieuw wilt instellen en selecteer het beletselteken **...** ​. 
 
-3.  Om het verwijderen te bevestigen, voert u de omgevingsnaam in en selecteert u **Opnieuw instellen**.
+3. Kies de optie **Opnieuw instellen**. 
+
+4.  Om het verwijderen te bevestigen, voert u de omgevingsnaam in en selecteert u **Opnieuw instellen**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Een bestaande omgeving verwijderen (alleen beschikbaar voor beheerders)
+
+Als beheerder kunt u een door u beheerde omgeving verwijderen.
+
+1.  Selecteer de picker **Omgeving** in de koptekst van de app.
+
+2.  Selecteer de omgeving die u opnieuw wilt instellen en selecteer het beletselteken **...** ​. 
+
+3. Kies de optie **Verwijderen**. 
+
+4.  Om de verwijdering te bevestigen, voert u de omgevingsnaam in en selecteert u **Verwijderen**.
 
 
-## <a name="delete-an-existing-environment"></a>Een bestaande omgeving verwijderen
-
-1. Ga naar **Beheer** > **Systeem** > **Info**.
-
-1. Selecteer **Verwijderen**.
-
-1. Om de verwijdering te bevestigen, voert u de omgevingsnaam in en selecteert u **Verwijderen**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

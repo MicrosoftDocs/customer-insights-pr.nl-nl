@@ -1,20 +1,20 @@
 ---
 title: Verrijking met de verrijking door derden van Experian
 description: Algemene informatie over de verrijking door derden van Experian.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668802"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269554"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klantprofielen verrijken met demografische gegevens van Experian (preview)
 
@@ -41,7 +41,9 @@ Als u Experian wilt configureren, moet aan de volgende vereisten worden voldaan:
 
 ## <a name="map-your-fields"></a>Uw velden toewijzen
 
-1. Selecteer **Gegevens toevoegen** en kies uw belangrijkste identificatiegegevens bij **Naam en adres**, **E-mail** of **Telefoon** om naar Experian te sturen voor identiteitsherkenning.
+1.  Selecteer **Gegevens toevoegen** en kies de **Klantgegevensset** die u wilt verrijken met demografische gegevens van Experian. U kunt de entiteit **Klant** selecteren om al uw klantprofielen te verrijken of een segmententiteit selecteren om alleen klantprofielen in dat segment te verrijken.
+
+1. Selecteer uw belangrijkste id's uit **Naam en adres**​, **E-mail** of **Telefoon** om naar Experian te sturen voor identiteitsresolutie.
 
    > [!TIP]
    > Als u meer belangrijke id-kenmerken naar Experian verzendt, levert dat waarschijnlijk een hogere overeenkomst op.
@@ -52,8 +54,8 @@ Als u Experian wilt configureren, moet aan de volgende vereisten worden voldaan:
 
 1.  Selecteer **Opslaan** om de veldtoewijzing te voltooien.
 
-   > [!div class="mx-imgBorder"]
-   > ![Experian-veldtoewijzing](media/experian-field-mapping.png "Experian-veldtoewijzing")
+    > [!div class="mx-imgBorder"]
+    > ![Experian-veldtoewijzing](media/experian-field-mapping.png "Experian-veldtoewijzing")
 
 ## <a name="enrichment-results"></a>Verrijkingsresultaten
 
@@ -71,3 +73,6 @@ Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md), [meting
 
 Wanneer u Dynamics 365 Customer Insights instelt om gegevens naar Experian te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens op uw instructie overdragen, maar u bent ervoor verantwoordelijk dat Experian voldoet aan uw privacy- of beveiligingsverplichtingen. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
 Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

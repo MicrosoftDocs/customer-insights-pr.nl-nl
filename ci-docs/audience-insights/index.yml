@@ -6,16 +6,16 @@ metadata:
   description: Help-hub met belangrijke links voor doelgroepinzichten.
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4405501"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745715"
 landingContent:
 - title: Over doelgroepinzichten
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Communitysite
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Gegevensbronnen opnemen
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Gegevensbronnen toevoegen
-      url: data-sources.md
-    - text: Incrementeel vernieuwen
-      url: incremental-refresh-data-sources.md
-    - text: Entiteiten begrijpen
-      url: entities.md
 - title: Gegevens combineren
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Toewijzen
-      url: map-entities.md
-    - text: Bij elkaar zoeken
-      url: match-entities.md
-    - text: Samenvoeging
-      url: merge-entities.md
-- title: Klantprofielen verfijnen
+    - text: Overzicht van gegevensbronnen
+      url: data-sources.md
+    - text: Overzicht van harmonisatie
+      url: data-unification.md
+    - text: Entiteiten begrijpen
+      url: entities.md
+- title: Gegevens verrijken en verfijnen
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Klantprofielen verrijken
+      url: enrichment-hub.md
     - text: Relaties configureren
       url: relationships.md
     - text: Klantactiviteiten in een lijst vermelden
       url: activities.md
-    - text: Uw eigen Machine Learning-modellen meebrengen
-      url: custom-models.md
+- title: Inzichten verwerven
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Segmenten maken
+      url: segments.md
+    - text: Metingen maken
+      url: measures.md
+    - text: Gegevens voltooien met voorspellingen
+      url: predictions.md
 - title: Klantgegevens exporteren
   linkLists:
   - linkListType: how-to-guide

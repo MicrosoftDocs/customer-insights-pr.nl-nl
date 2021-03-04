@@ -1,7 +1,7 @@
 ---
 title: Systeemconfiguratie in doelgroepinzichten
 description: Meer informatie over systeeminstellingen in Dynamics 365 Customer Insights-mogelijkheden voor doelgroepinzichten.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405509"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267334"
 ---
 # <a name="system-configuration"></a>Systeemconfiguratie
 
-De pagina **Systeem** bevat vier tabbladen: **Status**, **Planning**, **Over** en **Algemeen**.
+De pagina **Systeem** bevat de volgende tabbladen:
+- [Status](#status-tab)
+- [Planning](#schedule-tab)
+- [API-gebruik](#api-usage-tab)
+- [Info](#about-tab)
+- [Algemeen](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Systeempagina](media/system-tabs.png "Systeempagina")
 
 ## <a name="status-tab"></a>Tabblad Status
 
-Met het **tabblad Status** kunt u de voortgang volgen van de opname van gegevens, gegevensexports en verschillende belangrijke productprocessen. Bekijk de informatie op dit tabblad om de volledigheid van actieve processen te garanderen.
+Op het tabblad **Status** kunt u de voortgang van gegevensopname, gegevensexport en verschillende andere belangrijke productprocessen volgen. Bekijk de informatie op dit tabblad om de volledigheid van actieve processen te garanderen.
 
-Dit tabblad bevat statustabellen voor **Gegevensbronnen**, **Systeemprocessen** en **Gegevensvoorbereiding**. Elke tabel volgt de **naam** van de taak en de bijbehorende entiteit bij, de **status** van de meest recente uitvoering en het tijdstip in **Laatst bijgewerkt**.
+Dit tabblad bevat tabellen met status- en verwerkingsinformatie voor verschillende processen. Elke tabel volgt de **naam** van de taak en de bijbehorende entiteit bij, de **status** van de meest recente uitvoering en het tijdstip in **Laatst bijgewerkt**.
 
 Bekijk de details van de laatste verschillende uitvoeringen van de taak door de naam te selecteren.
 
@@ -40,7 +45,7 @@ Er zijn zes soorten status voor taken. De volgende statustypen worden ook weerge
 - **Overgeslagen:** taak is overgeslagen. Een of meer van de downstreamprocessen waarvan deze taak afhankelijk is, mislukken of worden overgeslagen.
 - **Mislukt:** verwerking van de taak is mislukt.
 - **Geannuleerd:** de verwerking is geannuleerd door de gebruiker voordat deze is voltooid.
-- **In wachtrij geplaatst:** de verwerking staat in de wachtrij en begint zodra alle downstreamtaken zijn voltooid. Zie [Vernieuwingsbeleid](#refresh-policies) voor meer informatie.
+- **In de wachtrij**: de verwerking wordt in de wachtrij geplaatst en begint zodra alle upstream-taken zijn voltooid. Zie [Vernieuwingsbeleid](#refresh-policies) voor meer informatie.
 
 ### <a name="refresh-policies"></a>Vernieuwingsbeleid
 
@@ -89,4 +94,17 @@ Selecteer **Opslaan** om uw selecties te bevestigen.
 
 ## <a name="api-usage-tab"></a>Tabblad API-gebruik
 
-Vind details over het realtime API-gebruik en bekijk welke gebeurtenissen in een bepaald tijdsbestek hebben plaatsgevonden. Zie [Realtime gegevensopname](real-time-data-ingestion.md) voor meer informatie.
+Vind details over het realtime API-gebruik en kijk welke gebeurtenissen hebben plaatsgevonden in een bepaald tijdsbestek. U kiest het tijdsbestek in het vervolgkeuzemenu **Een tijdsbestek selecteren**. 
+
+**API-gebruik** bevat drie secties: 
+- **API-aanroepen**: een grafiek die het geaggregeerde aantal aanroepen naar de API in het geselecteerde tijdsbestek visualiseert.
+
+- **Gegevensoverdracht**: - een grafiek die de hoeveelheid gegevens toont die via de API zijn overgedragen in het geselecteerde tijdsbestek.
+
+-  **Bewerkingen**: een tabel met rijen voor elke beschikbare API-bewerking en details over het gebruik van de bewerkingen. U kunt een bewerkingsnaam selecteren om naar [de API-verwijzing](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances)​te gaan.
+
+   Bewerkingen die gebruikmaken van [realtime gegevensopname](real-time-data-ingestion.md) bevatten een knop met een verrekijkersymbool om realtime API-gebruik te bekijken. Selecteer de knop om een deelvenster aan de zijkant te openen met gebruiksdetails voor het realtime API-gebruik in de huidige omgeving.   
+   Gebruik het vak **Groeperen op** in het deelvenster **Realtime API-gebruik** om te kiezen hoe u uw realtime interacties het best kunt presenteren. U kunt de gegevens groeperen op API-methode, entiteit gekwalificeerde naam (opgenomen entiteit), gemaakt door (bron van de gebeurtenis), resultaat (succes of mislukking) of foutcodes. De gegevens zijn beschikbaar als geschiedenisdiagram en als tabel.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

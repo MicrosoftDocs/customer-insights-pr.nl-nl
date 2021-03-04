@@ -4,17 +4,17 @@ description: Match entiteiten om geharmoniseerde klantprofielen te maken.
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405506"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267472"
 ---
 # <a name="match-entities"></a>Entiteiten toewijzen
 
@@ -22,7 +22,7 @@ Na het voltooien van de toewijzingsfase bent u klaar om uw entiteiten te gaan af
 
 ## <a name="specify-the-match-order"></a>De afstemmingsvolgorde opgeven
 
-Ga naar **Harmoniseren** > **Afstemmen** en selecteer **Volgorde instellen** om de afstemmingsfase te starten.
+Ga naar **Gegevens** > **Harmoniseren** > **Afstemming** en selecteer **Volgorde instellen** om de afstemmingsfase te starten.
 
 Elke afstemming harmoniseert twee of meer entiteiten tot een enkele , terwijl elke unieke klantrecord wordt behouden. In het volgende voorbeeld hebben we drie entiteiten geselecteerd: **ContactCSV: TestData** als **primaire** entiteit, **WebAccountCSV: TestData** als **Entiteit 2** en **CallRecordSmall: TestData** als **Entiteit 3**. Het diagram boven de selecties illustreert in welke volgorde de afstemming zal plaatsvinden.
 
@@ -136,7 +136,7 @@ Nadat een gededupliceerde record is geïdentificeerd, wordt het gebruikt in het 
 
 1. Door het matchproces uit te voeren, worden de records nu gegroepeerd op basis van de voorwaarden die zijn gedefinieerd in de ontdubbelingsregels. Nadat de records zijn gegroepeerd, wordt het samenvoegingsbeleid toegepast om het winnende record te identificeren.
 
-1. Dit winnende record wordt vervolgens doorgegeven aan de matching in meerdere entiteiten.
+1. Deze winnende record wordt vervolgens doorgegeven aan de overeenkomsten zoeken tussen entiteiten, samen met de niet-winnende records (bijvoorbeeld alternatieve id's) om de kwaliteit van de overeenkomst te verbeteren.
 
 1. Alle aangepaste matchregels die zijn gedefinieerd voor 'matchen altijd' en 'matchen nooit' overschrijven ontdubbelingsregels. Als een ontdubbelingsregel overeenkomende records identificeert, en een aangepaste matchregel is ingesteld om nooit te matchen met die records, dan matchen deze twee records niet.
 
@@ -157,6 +157,17 @@ Het eerste afstemmingsproces resulteert in de aanmaak van een geharmoniseerde ho
 
 > [!TIP]
 > Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
+
+## <a name="deduplication-output-as-an-entity"></a>Uitvoer van ontdubbeling als een entiteit
+Naast de geharmoniseerde hoofdentiteit die als onderdeel van de vergelijking tussen entiteiten wordt gemaakt, genereert het ontdubbelingsproces ook een nieuwe entiteit voor elke entiteit uit de afgestemde volgorde om de ontdubbelde records te identificeren. Deze entiteiten zijn te vinden samen met de **ConflationMatchPairs:CustomerInsights** in de sectie **Systeem** op de pagina **Entiteiten**, met de naam **Deduplication_Datasource_Entity**.
+
+Een entiteit voor ontdubbelingsuitvoer bevat de volgende informatie:
+- Id's/sleutels
+  - Het veld Primaire sleutel en het bijbehorende veld Alternatieve id's. Het veld Alternatieve id's bestaat uit alle alternatieve id's die voor een record zijn geïdentificeerd.
+  - Het veld Deduplication_GroupId toont de groep of cluster die is geïdentificeerd binnen een entiteit die alle vergelijkbare records groepeert op basis van de opgegeven ontdubbelingsvelden. Dit wordt gebruikt voor systeemverwerkingsdoeleinden. Als er geen handmatige ontdubbelingsregels zijn opgegeven en door het systeem gedefinieerde ontdubbelingsregels van toepassing zijn, is het mogelijk dat u dit veld niet in de uitvoerentiteit voor ontdubbeling vindt.
+  - Deduplication_WinnerId: dit veld bevat de winnende id van de geïdentificeerde groepen of clusters. Als de Deduplication_WinnerId hetzelfde is als de primaire sleutelwaarde voor een record, betekent dit dat de record de winnende record is.
+- Velden die worden gebruikt om de ontdubbelingsregels te definiëren.
+- Regel- en scorevelden om aan te geven welke van de ontdubbelingsregels zijn toegepast en welke score is geretourneerd door het matching-algoritme.
 
 ## <a name="review-and-validate-your-matches"></a>Uw afstemmingen controleren en valideren
 
@@ -200,6 +211,11 @@ Verhoog de kwaliteit door enkele van uw afstemmingsparameters opnieuw te configu
   > [!div class="mx-imgBorder"]
   > ![Een regel dupliceren](media/configure-data-duplicate-rule.png "Een regel dupliceren")
 
+- **Een regel deactiveren** om een overeenkomstregel te behouden en deze uit te sluiten van het vergelijkingsproces.
+
+  > [!div class="mx-imgBorder"]
+  > ![Een regel deactiveren](media/configure-data-deactivate-rule.png "Een regel deactiveren")
+
 - **Bewerk uw regels** door het symbool **Bewerken** te selecteren. U kunt de volgende wijzigingen aanbrengen:
 
   - Kenmerken wijzigen voor een voorwaarde: selecteer nieuwe kenmerken in de specifieke voorwaarderij.
@@ -229,10 +245,12 @@ U kunt voorwaarden opgeven die bepaalde records altijd moeten overeenkomen of no
     - Entity2Key: 34567
 
    Hetzelfde sjabloonbestand kan aangepaste afstemmingsrecords van meerdere entiteiten specificeren.
+   
+   Als u aangepaste overeenkomsten voor ontdubbeling op een entiteit wilt opgeven, geeft u dezelfde entiteit op als Entity1 en Entity2 en stelt u de verschillende primaire sleutelwaarden in.
 
 5. Na het toevoegen van alle overschrijvingen die u wilt toepassen, slaat u het sjabloonbestand op.
 
-6.Ga naar **Gegevens** > **Gegevensbronnen** en neem de sjabloonbestanden op als nieuwe entiteiten. Na inname kunt u ze gebruiken om de afstemmingsconfiguratie op te geven.
+6. Ga naar **Gegevens** > **Gegevensbronnen** en neem de sjabloonbestanden op als nieuwe entiteiten. Na inname kunt u ze gebruiken om de afstemmingsconfiguratie op te geven.
 
 7. Na het uploaden zijn de bestanden en entiteiten beschikbaar. Selecteer vervolgens de optie **Aangepaste overeenkomst** opnieuw. U ziet opties om de entiteiten op te geven die u wilt opnemen. Selecteer de vereiste entiteiten uit de vervolgkeuzelijst.
 
@@ -250,3 +268,6 @@ U kunt voorwaarden opgeven die bepaalde records altijd moeten overeenkomen of no
 ## <a name="next-step"></a>Volgende stap
 
 Na het voltooien van het afstemmingsproces voor ten minste één afstemmingspaar, kunt u mogelijke tegenstrijdigheden in uw gegevens oplossen door het onderwerp [**Samenvoegen**](merge-entities.md) door te nemen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

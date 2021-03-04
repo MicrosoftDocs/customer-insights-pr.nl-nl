@@ -4,17 +4,17 @@ description: Werken met Common Data Model-gegevens met Azure Data Lake Storage.
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643452"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267854"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Verbinding maken met een Common Data Model-map via een Azure Data Lake-account
 
@@ -38,17 +38,25 @@ Dit artikel bevat informatie over het opnemen van gegevens uit een Common Data M
 
 1. Selecteer **Gegevensbron toevoegen**.
 
-1. Selecteer **Verbinding maken met een Common Data Model-map**, voer een **Naam** in voor de gegevensbron en selecteer **Volgende**.
+1. Selecteer **Verbinding maken met een Common Data Model-map**, voer een **Naam** in voor de gegevensbron en selecteer **Volgende**. Naamrichtlijnen: 
+   - Begin met een letter.
+   - Gebruik alleen letters en cijfers. Speciale tekens en spaties zijn niet toegestaan.
+   - Gebruik minimaal 3 en maximaal 64 tekens.
 
 1. U kunt kiezen tussen een resource-optie en een abonnementsoptie voor verificatie. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. Voer de informatie van de **Container** in en selecteer **Volgende**.
    > [!div class="mx-imgBorder"]
-   > ![Dialoogvenster om verbindingsdetails voor Azure Data Lake in te voeren](media/enter-new-storage-details.png)
-
-1. Selecteer in het dialoogvenster **Een Common Data Model-map selecteren** het model.json-bestand waaruit u gegevens wilt importeren en selecteer **Volgende**.
+   > ![Dialoogvenster om nieuwe verbindingsdetails in te voeren voor Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Elk model.json-bestand dat aan een andere gegevensbron in de omgeving is gekoppeld, wordt niet in de lijst weergegeven.
+   > U hebt een van de volgende rollen nodig voor de container of het opslagaccount waarnaar hierboven wordt verwezen om verbinding te kunnen maken met een gegevensbron en deze te maken:
+   >  - Opslag-blobgegevens lezer
+   >  - Opslag-blobgegevens eigenaar
+   >  - Inzender van opslag-blobgegevens
 
-1. U krijgt een lijst met beschikbare entiteiten in het geselecteerde model.json-bestand. U kunt entiteiten bekijken en selecteren in de beschikbare lijst met beschikbare entiteiten en vervolgens **Opslaan** selecteren. Alle geselecteerde entiteiten worden uit de nieuwe gegevensbron opgenomen.
+1. Selecteer in het dialoogvenster **Een Common Data Model-map selecteren** het bestand model.json of manifest.json waaruit u gegevens wilt importeren en selecteer **Volgende**.
+   > [!NOTE]
+   > Elk model.json- of manifest.json-bestand dat aan een andere gegevensbron in de omgeving is gekoppeld, wordt niet in de lijst weergegeven.
+
+1. U krijgt een lijst met beschikbare entiteiten in het geselecteerde model.json- of manifest.json-bestand. U kunt entiteiten bekijken en selecteren in de beschikbare lijst met beschikbare entiteiten en vervolgens **Opslaan** selecteren. Alle geselecteerde entiteiten worden uit de nieuwe gegevensbron opgenomen.
    > [!div class="mx-imgBorder"]
    > ![Dialoogvenster met een lijst met entiteiten uit een model.json-bestand](media/review-entities.png)
 
@@ -59,11 +67,11 @@ Dit artikel bevat informatie over het opnemen van gegevens uit een Common Data M
 9. Na het opslaan van uw selecties wordt de pagina **Gegevensbronnen** geopend. U zou nu de Common Data Model-mapverbinding moeten zien als een gegevensbron.
 
 > [!NOTE]
-> Een model.json-bestand kan alleen worden gekoppeld aan één gegevensbron in dezelfde omgeving. Hetzelfde model.json-bestand kan echter worden gebruikt voor gegevensbronnen in meerdere omgevingen.
+> Een model.json- of manifest.json-bestand kan alleen worden gekoppeld aan één gegevensbron in dezelfde omgeving. Hetzelfde model.json- of manifest.json-bestand kan echter worden gebruikt voor gegevensbronnen in meerdere omgevingen.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Een gegevensbron voor een Common Data Model-map bewerken
 
-U kunt de toegangssleutel bijwerken voor het opslagaccount dat de map Common Data Model bevat. U kunt het bestand model.json ook wijzigen. Als u verbinding wilt maken met een andere container dan uw opslagaccount, of de accountnaam wilt wijzigen, moet u [een nieuwe gegevensbronverbinding maken](#connect-to-a-common-data-model-folder).
+U kunt de toegangssleutel bijwerken voor het opslagaccount dat de map Common Data Model bevat. U kunt ook het model.json- of manifest.json-bestand wijzigen. Als u verbinding wilt maken met een andere container dan uw opslagaccount, of de accountnaam wilt wijzigen, moet u [een nieuwe gegevensbronverbinding maken](#connect-to-a-common-data-model-folder).
 
 1. Ga in doelgroepinzichten naar **Gegevens** > **Gegevensbronnen**.
 
@@ -77,13 +85,24 @@ U kunt de toegangssleutel bijwerken voor het opslagaccount dat de map Common Dat
 
 5. Optioneel kunt u bijwerken vanaf een accountsleutelverbinding naar een resource- of een abonnementsverbinding. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. U kunt geen informatie over **Container** wijzigen bij het bijwerken van de verbinding.
    > [!div class="mx-imgBorder"]
-   > ![Dialoogvenster om verbindingsdetails voor Azure Data Lake in te voeren](media/enter-existing-storage-details.png)
 
-6. Kies desgewenst een ander model.json-bestand met een andere set entiteiten uit de container.
+   > ![Dialoogvenster om verbindingsdetails voor Azure Data Lake in te voeren met een bestaand opslagaccount](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > U hebt een van de volgende rollen nodig voor de container of het opslagaccount waarnaar hierboven wordt verwezen om verbinding te kunnen maken met een gegevensbron en deze te maken:
+   >  - Opslag-blobgegevens lezer
+   >  - Opslag-blobgegevens eigenaar
+   >  - Inzender van opslag-blobgegevens
+
+
+6. Kies optioneel een ander model.json- of manifest.json-bestand met een andere set entiteiten uit de container.
 
 7. Optioneel kunt u extra entiteiten selecteren om op te nemen. U kunt ook reeds geselecteerde entiteiten verwijderen als er geen afhankelijkheden zijn.
 
    > [!IMPORTANT]
-   > Als er afhankelijkheden zijn voor het bestaande model.json-bestand en de set entiteiten, ziet u een foutbericht en kunt u geen ander model.json-bestand selecteren. Verwijder die afhankelijkheden voordat u het bestand model.json wijzigt of maak een nieuwe gegevensbron met het bestand model.json dat u wilt gebruiken, om te voorkomen dat de afhankelijkheden worden verwijderd.
+   > Als er afhankelijkheden zijn in het bestaande model.json- of manifest.json-bestand en de set entiteiten, ziet u een foutbericht en kunt u geen ander model.json- of manifest.json-bestand selecteren. Verwijder die afhankelijkheden voordat u het model.json- of manifest.json-bestand wijzigt, of maak een nieuw gegevensbron met model.json of manifest.json dat u wilt gebruiken om te voorkomen dat u de afhankelijkheden verwijdert.
 
 8. Optioneel kunt u extra kenmerken of entiteiten selecteren om gegevensprofilering in te schakelen of reeds geselecteerde uit te schakelen.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

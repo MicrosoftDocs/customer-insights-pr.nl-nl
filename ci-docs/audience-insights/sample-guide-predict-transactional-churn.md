@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643587"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269784"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Voorbeeldhandleiding transactieverloop voorspellen (preview)
 
@@ -49,7 +49,7 @@ Lees vooral de artikelen [over gegevensopname](data-sources.md) en [gegevensbron
    [!div class="mx-imgBorder"]
    ![DoB transformeren naar datum](media/ecommerce-dob-date.PNG "geboortedatum naar datum transformeren")
 
-1. Wijzig in het veld 'Naam' in het rechterdeelvenster uw gegevensbron van **Query** in **eCommerceContacts**.
+1. Wijzig in het veld **Naam** in het rechterdeelvenster uw gegevensbron van **Query** in **eCommerceContacts**.
 
 1. Sla de gegevensbron op.
 
@@ -66,7 +66,7 @@ Lees vooral de artikelen [over gegevensopname](data-sources.md) en [gegevensbron
    - **PurchasedOn**: datum/tijd
    - **TotalPrice**: valuta
    
-1. Wijzig in het veld 'Naam' in het rechterdeelvenster uw gegevensbron van **Query** in **eCommercePurchases**.
+1. Wijzig in het veld **Naam** in het rechterdeelvenster uw gegevensbron van **Query** in **eCommercePurchases**.
 
 1. Sla de gegevensbron op.
 
@@ -84,7 +84,7 @@ Lees vooral de artikelen [over gegevensopname](data-sources.md) en [gegevensbron
    - **RewardsPoints**: geheel getal
    - **CreatedOn**: datum/tijd
 
-1. Wijzig in het veld 'Naam' in het rechterdeelvenster uw gegevensbron van **Query** in **loyCustomers**.
+1. Wijzig in het veld **Naam** in het rechterdeelvenster uw gegevensbron van **Query** in **loyCustomers**.
 
 1. Sla de gegevensbron op.
 
@@ -166,7 +166,7 @@ Met de geharmoniseerde klantprofielen op hun plaats, kunnen we nu het abonnement
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Selecteer de modelhendels Voorspellingsvenster en Definitie van verloop.":::
 
-1. Selecteer **Aankoopgeschiedens (vereist)** en selecteer **Gegevens toevoegen** voor abonnementsgeschiedenis.
+1. Selecteer **Aankoopgeschiedenis (vereist)** en selecteer **Gegevens toevoegen** voor aankoopgeschiedenis.
 
 1. Voeg de entiteit **eCommercePurchases : eCommerce** toe en wijs de velden van eCommerce toe aan de overeenkomstige velden die vereist zijn voor het model.
 
@@ -204,3 +204,6 @@ U kunt een nieuw segment maken op basis van de entiteit die door het model is ge
 U hebt nu een segment dat dynamisch wordt bijgewerkt en dat klanten met een hoog verlooprisico identificeert voor dit abonnementsbedrijf.
 
 Zie [Segmenten maken en beheren](segments.md) voor meer informatie.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

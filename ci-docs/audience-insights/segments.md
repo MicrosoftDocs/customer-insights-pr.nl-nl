@@ -4,17 +4,17 @@ description: Maak segmenten van klanten om deze te groeperen op basis van versch
 ms.date: 10/15/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: jimsonc
 manager: shellyha
-ms.openlocfilehash: 6931110c2ae93cd2792d319aa5a34f0df3088552
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405517"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270350"
 ---
 # <a name="create-and-manage-segments"></a>Segmenten maken en beheren
 
@@ -222,3 +222,6 @@ Voor de volgende scenario's adviseren wij het gebruik van de segmentbouwer in pl
 ## <a name="next-steps"></a>Volgende stappen
 
 [Exporteer een segment](export-destinations.md) en verken de [klantenkaart](customer-card-add-in.md) en [connectors](export-power-bi.md) om inzichten op klantniveau te verkrijgen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

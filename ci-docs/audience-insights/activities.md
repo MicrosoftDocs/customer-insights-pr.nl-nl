@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667223"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267426"
 ---
 # <a name="customer-activities"></a>Klantactiviteiten
 
@@ -44,13 +44,13 @@ Uw gegevensbronnen omvatten entiteiten met transactie- en activiteitsgegevens ui
 
 1. Configureer in de sectie **Relatie instellen** de details om uw activiteitsgegevens te koppelen aan de corresponderende klant.
 
-   > [!div class="mx-imgBorder"]
-   > ![De entiteitsrelatie definiëren](media/activities-entities-define.png "De entiteitsrelatie definiëren")
-
     - **Activiteitsentiteitsveld**: selecteer het veld in uw activiteitsentiteit dat zal worden gebruikt om een relatie met een andere entiteit tot stand te brengen.
     - **Klantentiteit**: selecteer de corresponderende bronklantentiteit waarmee uw activiteitsentiteit een relatie zal hebben. U kunt alleen relaties tot stand brengen met bronklantenentiteiten die worden gebruikt in het proces van gegevensharmonisering.
     - **Veld Klantentiteit**: dit veld toont de primaire sleutel van de bronklantentiteit zoals geselecteerd in het kaartproces. Dit primaire sleutelveld in de bronklantentiteit wordt gebruikt om een relatie tot stand te brengen met de activiteitsentiteit.
     - **Naam**: als er al een relatie bestaat tussen deze activiteitsentiteit en de geselecteerde bronklantentiteit, staat de relatienaam in de alleen-lezenmodus. Als een dergelijke relatie niet bestaat, wordt er een nieuwe relatie gemaakt met de hier opgegeven naam.
+   
+   > [!div class="mx-imgBorder"]
+   > ![De entiteitsrelatie definiëren](media/activities-entities-define.png "De entiteitsrelatie definiëren")
 
 1. Selecteer **Opslaan** om uw wijzigingen toe te passen.
 
@@ -82,3 +82,6 @@ Uw gegevensbronnen omvatten entiteiten met transactie- en activiteitsgegevens ui
 3. Selecteer het pictogram **Verwijderen**.
 
 4. Bevestig de verwijdering.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

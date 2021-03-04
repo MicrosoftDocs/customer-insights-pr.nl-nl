@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: jimsonc
 manager: shellyha
-ms.openlocfilehash: 8cdec4edd599b0249fcf144b5e5c0124504e1e14
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: b9b2e7fa862b595c6a364a7208e42295b4f9df83
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405497"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268864"
 ---
 # <a name="similar-customers-preview"></a>Vergelijkbare klanten (preview)
 
@@ -79,3 +79,6 @@ Het Machine Learning-model voor binaire classificatie kent een score toe aan kla
 - Klanten met overeenkomstscores tussen 0,85 en 1 zijn klanten die door het systeem als *zeer vergelijkbaar* worden geclassificeerd
 
 Klanten met een overeenkomstscore onder de 0,4 worden niet opgenomen in de modeluitvoer. Het systeem beschouwt ze niet als vergelijkbaar genoeg met het bronsegment.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

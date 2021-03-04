@@ -1,20 +1,20 @@
 ---
 title: Power Apps-connector
 description: Maak verbinding met Power Apps en Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405467"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268910"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps-connector (preview)
 
@@ -31,7 +31,7 @@ Raadpleeg de Power Apps-documentatie om te leren hoe [hoe u een gegevensverbindi
 Na het toevoegen van Customer Insights als een gegevensverbinding, kunt u de volgende entiteiten kiezen in Power Apps:
 
 - Klant: om gegevens uit het [geharmoniseerde klantprofiel](customer-profiles.md) te gebruiken.
-- Geharmoniseerde klantactiviteit: om de [geharmoniseerde tijdlijn](activities.md) in de app weer te geven.
+- Geharmoniseerde activiteit: om de [activiteitentijdlijn weer te geven](activities.md) in de app.
 
 ## <a name="limitations"></a>Beperkingen
 
@@ -72,3 +72,6 @@ U voegt bijvoorbeeld klantprofielen toe aan een [galeriebesturingselement](https
 1. Als u de geharmoniseerde tijdlijn voor een klant wilt weergeven, voegt u een galerie-element toe en voegt u de eigenschap Items toe: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
 
     Voorbeeld: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

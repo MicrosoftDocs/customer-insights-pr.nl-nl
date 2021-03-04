@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405470"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477082"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector voor Power BI (preview)
 
@@ -31,7 +31,7 @@ Maak visualisaties voor uw gegevens met de Power BI Desktop. Genereer aanvullend
 
 1. Selecteer **Meer weergeven** en zoek naar **Dynamics 365 Customer Insights**
 
-1. Selecteer het resultaat en selecteer **Verbinden**.
+1. Selecteer **Verbinding maken**.
 
 1. **Meld u aan** met hetzelfde organisatieaccount dat u gebruikt voor Customer Insights en selecteer **Verbinden**.
    > [!NOTE]
@@ -52,3 +52,22 @@ De Customer Insights-connector voor Power BI is ontworpen om te werken voor gege
 ### <a name="work-with-a-subset-of-data"></a>Werken met een subset van gegevens
 
 Overweeg om met een subset van uw gegevens te werken. U kunt bijvoorbeeld [segmenten](segments.md) maken in plaats van alle klantrecords te exporteren naar Power BI.
+
+## <a name="troubleshooting"></a>Probleemoplossing
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Customer Insights-omgeving wordt niet weergegeven Power BI
+
+Omgevingen waarvoor meer dan één [relatie](relationships.md) is gedefinieerd tussen twee identieke entiteiten in doelgroepinzichten zijn niet beschikbaar zijn in de Power BI-connector.
+
+U kunt de gedupliceerde relaties identificeren en verwijderen.
+
+1. Ga in doelgroepinzichten naar **Gegevens** > **Relaties** in de omgeving die ontbreekt in Power BI​.
+2. Identificeer gedupliceerde relaties:
+   - Controleer of er meer dan één relatie is gedefinieerd tussen dezelfde twee entiteiten.
+   - Controleer of er een relatie tot stand is gebracht tussen twee entiteiten die beide zijn opgenomen in het harmonisatieproces. Er is een impliciete relatie gedefinieerd tussen alle entiteiten die in het harmonisatieproces zijn opgenomen.
+3. Verwijder eventuele dubbele relaties die u hebt gevonden.
+
+Na verwijdering van de gedupliceerde relaties, probeert u de Power BI-connector opnieuw te configureren. De omgeving zou nu beschikbaar moeten zijn.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

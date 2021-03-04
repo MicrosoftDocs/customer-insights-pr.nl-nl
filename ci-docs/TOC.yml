@@ -14,10 +14,10 @@
       href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Nieuwe en bijgewerkt functies
       href: audience-insights/whats-new-audience-insights.md
-    - name: Aan de slag
+    - name: Een nieuwe omgeving maken
+      href: audience-insights/home.md
+    - name: Leermodules
       items:
-        - name: Een nieuwe omgeving maken
-          href: audience-insights/home.md
         - name: Gegevens opnemen
           href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
         - name: Een geharmoniseerd klantprofiel maken
@@ -44,7 +44,7 @@
           href: audience-insights/entities.md
     - name: Gegevensharmonisatie
       items:
-        - name: Overzicht van harmonisatie
+        - name: Overzicht van gegevensharmonisatie
           href: audience-insights/data-unification.md
         - name: Entiteiten en attributen toewijzen
           href: audience-insights/map-entities.md
@@ -80,6 +80,8 @@
           href: audience-insights/segments.md
         - name: Inzichten verwerven in segmenten
           href: audience-insights/segment-insights.md
+        - name: Zie voorgestelde segmenten
+          href: audience-insights/suggested-segments.md
         - name: Vergelijkbare klanten zoeken
           href: audience-insights/find-similar-customer-segments.md
         - name: Meetcriteria en KPI's definiëren
@@ -96,6 +98,12 @@
           href: audience-insights/predict-transactional-churn.md
         - name: Voorbeeldhandleiding transactieverloop voorspellen
           href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Levensduurwaarde van klant voorspellen
+          href: audience-insights/predict-customer-lifetime-value.md
+        - name: Productaanbevelingen voorspellen
+          href: audience-insights/predict-product-recommendation.md
+        - name: Voorbeeldgids voor voorspelling van productaanbevelingen
+          href: audience-insights/sample-guide-predict-product-recommendation.md
         - name: Aangepaste Machine Learning-modellen implementeren
           href: audience-insights/custom-models.md
         - name: Experimenten met Azure Machine learning
@@ -104,10 +112,14 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: Opties voor exporteren
       items:
-        - name: Exportbestemmingen ontdekken
+        - name: Overzicht exportbestemmingen
           href: audience-insights/export-destinations.md
+        - name: Autopilot
+          href: audience-insights/export-autopilot.md
         - name: Azure Blob Storage
           href: audience-insights/export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: audience-insights/export-azure-data-lake-storage-gen2.md
         - name: DotDigital
           href: audience-insights/export-dotdigital.md
         - name: Dynamics 365 Customer Service (invoegtoepassing)
@@ -136,6 +148,8 @@
           href: audience-insights/export-power-apps.md
         - name: Power Automate
           href: audience-insights/export-power-automate.md
+        - name: SendGrid
+          href: audience-insights/export-sendgrid.md
         - name: SFTP
           href: audience-insights/export-sftp.md
     - name: Beheer
@@ -152,6 +166,8 @@
           href: audience-insights/supported-languages.md
     - name: Uitbreidbaarheid
       items:
+        - name: Webgegevens integreren van betrokkenheidsinzichten
+          href: audience-insights/integrate-engagement-insights.md
         - name: De entiteitsschema's controleren in Common Data Model
           href: audience-insights/entity-schemas.md
         - name: Werken met API's
@@ -170,10 +186,6 @@
       href: engagement-insights/overview.md
     - name: Gratis proefversie
       href: 'https://pi.dynamics.com/'
-    - name: Aan de slag
-      items:
-        - name: Snelstartgids voor openbare preview
-          href: engagement-insights/quickstart.md
     - name: Aan de slag
       items:
         - name: Aan de slag
@@ -223,4 +235,4 @@
     - name: Servicelimieten
       href: engagement-insights/quotas.md
 - name: Contact opnemen met de ondersteuning
-  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
+  href: 'https://admin.powerplatform.microsoft.com/support'

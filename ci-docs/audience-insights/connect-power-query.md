@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405489"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267762"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinden met een Power Query-gegevensbron
 
@@ -28,7 +28,10 @@ Power Query biedt een brede set connectors om gegevens op te nemen. De meeste va
 
 1. Kies de methode **Gegevens importeren** en selecteer **Volgende**.
 
-1. Geef een **Naam** op voor de gegevensbron en selecteer **Volgende** om de gegevensbron te maken.
+1. Geef een **Naam** op voor de gegevensbron en selecteer **Volgende** om de gegevensbron te maken. Naamrichtlijnen: 
+   - Begin met een letter.
+   - Gebruik alleen letters en cijfers. Speciale tekens en spaties zijn niet toegestaan.
+   - Gebruik minimaal 3 en maximaal 64 tekens.
 
 1. Kies een van de [beschikbare connectors](#available-power-query-data-sources). Voor dit voorbeeld selecteren we de connector **Tekst/CSV**.
 
@@ -77,3 +80,6 @@ Connectors met een vinkje in de kolom **Customer Insights (gegevensstromen)** zi
 3. Pas uw wijzigingen en transformaties toe in het dialoogvenster **Power Query - Query's bewerken** zoals beschreven in de sectie [Een nieuwe gegevensbron maken](#create-a-new-data-source).
 
 4. Selecteer **Opslaan** in Power Query na het voltooien van uw bewerkingen om uw wijzigingen op te slaan.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

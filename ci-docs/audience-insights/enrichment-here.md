@@ -1,20 +1,20 @@
 ---
 title: Verrijking van de verrijking door derden van HERE Technologies
 description: Algemene informatie over de verrijking door derden van HERE Technologies.
-ms.date: 10/27/2020
+ms.date: 12/10/2020
 ms.reviewer: jodahl
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7082fcfec099c3c9436b233c193be23625f6691a
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 258e37de9d9685d9ebc30b3c6b8d238d583431b4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668672"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269508"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Verrijking van klantprofielen met HERE Technologies (preview)
 
@@ -43,7 +43,11 @@ Om HERE Technologies-verrijkingen te configureren, moet aan de volgende voorwaar
 
 1. Bevestig de invoer door **Verbinden met HERE** te selecteren.
 
-1. Selecteer **Gegevens toevoegen** en kies of u velden aan het primaire en/of secundaire adres wilt toewijzen. U kunt voor beide adressen een veldtoewijzing specificeren (bijvoorbeeld een privé- en een werkadres) en de profielen voor beide adressen afzonderlijk verrijken. Selecteer **Volgende**.
+1.  Selecteer **Gegevens toevoegen** en kies de **Klantgegevensset** die u wilt verrijken met locatiegegevens van HERE Technologies. U kunt de entiteit **Klant** selecteren om al uw klantprofielen te verrijken of een segmententiteit selecteren om alleen klantprofielen in dat segment te verrijken.
+
+    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Schermopname bij het kiezen van de klantgegevensset.":::
+
+1. Kies of u velden aan het primaire en/of secundaire adres wilt toewijzen. U kunt voor beide adressen een veldtoewijzing specificeren (bijvoorbeeld een privé- en een werkadres) en de profielen voor beide adressen afzonderlijk verrijken. Selecteer **Volgende**.
 
 1. Definieer welke velden van uw geharmoniseerde profielen moeten worden gebruikt om te zoeken naar overeenkomende locatiegegevens van HERE Technologies. De velden **Straat 1** en **Postcode** zijn vereist voor het geselecteerde primaire en/of secundaire adres. Voor een hogere matchnauwkeurigheid kunnen meer velden worden toegevoegd.
 
@@ -68,3 +72,6 @@ Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md), [meting
 
 Wanneer u Dynamics 365 Customer Insights instelt om gegevens naar HERE Technologies te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens op uw instructie overdragen, maar u bent ervoor verantwoordelijk dat HERE Technologies voldoet aan uw privacy- of beveiligingsverplichtingen. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
 Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

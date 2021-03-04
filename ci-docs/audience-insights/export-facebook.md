@@ -5,16 +5,16 @@ ms.date: 06/05/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643677"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269968"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>Connector voor Facebook Ads Manager (preview)
 
@@ -62,7 +62,16 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Facebook Ads Manager
 
 U kunt [gegevens op aanvraag exporteren](export-destinations.md). De export wordt ook uitgevoerd bij elke [geplande vernieuwing](system.md#schedule-tab).
 
+## <a name="known-limitations"></a>Bekende beperkingen
+
+- Maximaal 10 miljoen klantprofielen per export naar Facebook Ads Manager 
+- Exporteren naar Facebook Ads Manager is beperkt tot segmenten
+- Segmenten met in totaal 10 miljoen profielen exporteren kan tot 90 minuten duren
+
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 
 Wanneer u Dynamics 365 Customer Insights instelt om gegevens naar Facebook Ads Manager te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens op uw instructie overdragen, maar u bent ervoor verantwoordelijk dat Facebook Ads voldoet aan uw privacy- of beveiligingsverplichtingen. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
 Uw Dynamics 365 Customer Insights-beheerder kan deze exportbestemming op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

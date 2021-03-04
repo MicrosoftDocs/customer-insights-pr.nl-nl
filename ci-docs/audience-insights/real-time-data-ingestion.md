@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689169"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270274"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Realtime gegevensopname (preview)
 
@@ -83,6 +83,7 @@ Details van deze API, inclusief parameters en reacties, zijn te vinden in de sec
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Inzicht in uw realtime gebruik krijgen met telemetrie
 
-Krijg een overzicht van het aantal aanvragen aan bij realtime API en informatie over problemen die het systeem kan tegenkomen. U kunt [toegang krijgen tot de realtime telemetrie](system.md#api-usage-tab) door naar **Beheerder** > **Systeem** > **API-gebruik** te gaan. In de tabel **Activiteiten** bevatten rijen voor API-bewerkingen die de realtime methoden gebruiken, een knop om realtime API-gebruik te bekijken. De knop wordt weergegeven met een verrekijkersymbool. Selecteer de knop om een deelvenster aan de zijkant te openen met gebruiksdetails voor het realtime API-gebruik in de huidige omgeving.
+Krijg een overzicht van het aantal aanvragen aan bij realtime API en informatie over problemen die het systeem kan tegenkomen. U kunt [toegang krijgen tot de realtime telemetrie](system.md#api-usage-tab). 
 
-Gebruik de selectie **Groeperen op** om te kiezen hoe u uw realtime interacties het beste kunt presenteren op een tijdlijn die varieert van de afgelopen 24 uur tot de afgelopen 30 dagen. U kunt de gegevens groeperen op API-methode, entiteit gekwalificeerde naam (opgenomen entiteit), gemaakt door (bron van de gebeurtenis), resultaat (succes of mislukking) of foutcodes. De gegevens zijn beschikbaar als geschiedenisdiagram en als tabel.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

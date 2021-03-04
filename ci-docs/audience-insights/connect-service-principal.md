@@ -1,20 +1,20 @@
 ---
 title: Verbinding maken met een Azure Data Lake Storage Gen2-account met een Service Principal
-description: Gebruik een Azure Service Principal voor doelgroepinzichten om verbinding te maken met uw eigen data lake wanneer u deze koppelt aan doelgroepinzichten.
-ms.date: 11/24/2020
+description: Gebruik een Azure Service-principal voor doelgroepinzichten om verbinding te maken met uw eigen data lake wanneer u deze koppelt aan doelgroepinzichten.
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644082"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267716"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Verbinding maken met een Azure Data Lake Storage Gen2-account met een Azure Service Principal voor doelgroepinzichten
 
@@ -22,7 +22,9 @@ Geautomatiseerde hulpmiddelen die Azure-services gebruiken, moeten altijd beperk
 
 U kunt de Service Principal gebruiken om veilig [een Common Data Model-map toe te voegen of te bewerken als een gegevensbron](connect-common-data-model.md) of [een nieuwe omgeving te maken of een bestaande te bewerken](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-U hebt beheerdersmachtigingen nodig om uw Azure-abonnement de Service Principal te laten maken.
+> [!IMPORTANT]
+> - Voor het Azure Data Lake Gen2-opslagaccount dat de service-principal wil gebruiken, moet [Hierarchical Name Space (HNS) ingeschakeld zijn](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace)​.
+> - U hebt beheerdersmachtigingen nodig om uw Azure-abonnement de Service Principal te laten maken.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Een Azure Service Principal voor doelgroepinzichten maken
 
@@ -83,7 +85,7 @@ Koppel een Azure Data Lake-opslagaccount in doelgroepinzichten aan [opslaguitvoe
 
 Volg de onderstaande stappen om de vereiste informatie over de geselecteerde benadering te verstrekken.
 
-### <a name="resounce-based-storage-account-connection"></a>Verbinding voor resource-opslagaccount
+### <a name="resource-based-storage-account-connection"></a>Verbinding voor resource-opslagaccount
 
 1. Ga naar de [Azure-beheerportal](https://portal.azure.com), meld u aan bij uw abonnement en open het opslagaccount.
 
@@ -108,7 +110,8 @@ Volg de onderstaande stappen om de vereiste informatie over de geselecteerde ben
 1. Controleer of bij **Abonnement**, **Resourcegroep** en **Naam** van het opslagaccount de juiste waarden zijn geselecteerd in doelgroepinzichten.
 
 1. Kies in doelgroepinzichten de waarden of de overeenkomstige velden wanneer u het opslagaccount koppelt.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Voer de informatie voor de resource-id van het opslagaccount in.":::
    
 1. Ga door met de resterende stappen in doelgroepinzichten om het opslagaccount te koppelen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

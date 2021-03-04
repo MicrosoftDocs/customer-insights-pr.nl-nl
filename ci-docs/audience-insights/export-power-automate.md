@@ -1,20 +1,20 @@
 ---
 title: Power Automate-connector | Microsoft Docs
 description: Maak stromen in Microsoft Power Automate vanuit Dynamics 365 Customer Insights.
-ms.date: 08/03/2020
+ms.date: 01/20/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405465"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268818"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate-connector (preview)
 
@@ -22,7 +22,7 @@ Activeer specifieke gebeurtenissen die automatisch moeten plaatsvinden wanneer u
 
 ## <a name="power-automate-triggers"></a>Triggers voor Power Automate
 
-U kunt verschillende triggers gebruiken waarmee u stromen kunt maken om herhaalde taken, zoals meldingen, of meer geavanceerde acties te automatiseren. 
+Gebruik triggers om cloudstromen te maken en routineuze taken te automatiseren, zoals meldingen of meer geavanceerde acties. 
 
 - Trigger wanneer de vernieuwing van een gegevensbron mislukt. 
 - Trigger wanneer de vernieuwing van een gegevensbron slaagt.
@@ -36,14 +36,20 @@ U kunt verschillende triggers gebruiken waarmee u stromen kunt maken om herhaald
 ## <a name="power-automate-actions"></a>Acties in Power Automate
 De Power Automate-connector biedt andere acties dan de beschikbare triggers. Zie voor meer informatie de [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>Een Power Automate-stroom in doelgroepinzichten maken
+## <a name="create-a-power-automate-flow"></a>Een Power Automate-stroom maken
 
-1. Ga in doelgroepinzichten naar **Beheer** > **Systeem**.
+1. Ga in doelgroepinzichten naar **Beheer** > **Exportbestemmingen**.
 
-1. Selecteer op de pagina **Systeem** het tabblad **Status**.
+1. Selecteer op de tegel **Power Automate** de optie **Instellen**.
 
-1. Selecteer in de sectie **Gegevensbronnen** de optie **Stromen** en selecteer **Een stroom maken** in de vervolgkeuzelijst.
-   > [!div class="mx-imgBorder"]
-   > ![Power Automate-connector met actie Een stroom maken](media/power-automate-connector-create-flow.png "Power Automate-connector met actie Een stroom maken")
+1. De Customer Insights-connector (preview) in Power Automate wordt geopend. **Meld u aan** bij Power Automate.
 
-1. Selecteer in Power Automate een van de beschikbare triggers om uw favoriete stroom te maken. Als u uw eerste stroom maakt, moet u zich eerst verifiëren met de Power Automate-connector.
+1. Kies een van de beschikbare triggers en voeg meer stappen toe aan uw nieuwe stroom. Zie [Een cloudstroom maken in Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow)​voor meer informatie.
+
+Voorbeelden van het gebruik van stromen: 
+- Plaats een bericht op een Microsoft Teams-kanaal als een gegevensbron niet kan worden vernieuwd. 
+- Stuur een e-mail naar de data-eigenaren wanneer een drempel op een segment wordt overschreden.
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

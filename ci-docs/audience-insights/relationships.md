@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405511"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269866"
 ---
 # <a name="relationships-between-entities"></a>Relaties tussen entiteiten
 
@@ -28,8 +28,8 @@ Tijdens de afstemmings- en samenvoegingsprocessen worden achter de schermen syst
 > ![Het maken van relaties](media/relationships-entities-merge.png "Het maken van relaties")
 
 - **De relatie *CustomerToContact*** is gemaakt tussen de entiteit Klant en de entiteit Contactpersoon. De entiteit Klant krijgt het sleutelveld **Contact_contactId** om een relatie tot stand te brengen met het sleutelveld **contactId** van de entiteit Contactpersoon.
-- **De relatie _CustomerToAccount_** is gemaakt tussen de entiteit Klant en de entiteit Account. De entiteit Klant krijgt het sleutelveld **Account_accountId** om een relatie tot stand te brengen met het sleutelveld **accountId** van de entiteit Account.
-- **De relatie _CustomerToWebAccount_** is gemaakt tussen de entiteit Klant en de entiteit WebAccount. De entiteit Klant krijgt het sleutelveld **WebAccount_webaccountId** om een relatie tot stand te brengen met het sleutelveld **webaccountId** van de entiteit WebAccount.
+- **De relatie *CustomerToAccount*** is gemaakt tussen de entiteit Klant en de entiteit Account. De entiteit Klant krijgt het sleutelveld **Account_accountId** om een relatie tot stand te brengen met het sleutelveld **accountId** van de entiteit Account.
+- **De relatie *CustomerToWebAccount*** is gemaakt tussen de entiteit Klant en de entiteit WebAccount. De entiteit Klant krijgt het sleutelveld **WebAccount_webaccountId** om een relatie tot stand te brengen met het sleutelveld **webaccountId** van de entiteit WebAccount.
 
 ## <a name="create-a-relationship"></a>Een relatie maken
 
@@ -69,3 +69,6 @@ Definieer aangepaste relaties op de pagina **Relaties**. Elke relatie bestaat ui
 ## <a name="next-step"></a>Volgende stap
 
 Systeem- en aangepaste relaties worden gebruikt om segmenten te maken op basis van meerdere gegevensbronnen die niet langer geïsoleerd zijn. Zie [Segmenten](segments.md) voor meer informatie.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

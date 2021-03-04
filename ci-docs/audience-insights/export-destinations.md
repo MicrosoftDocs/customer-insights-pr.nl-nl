@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643857"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477127"
 ---
-# <a name="export-destinations-preview"></a>Exportbestemmingen (voorbeeld)
+# <a name="export-destinations-preview-overview"></a>Overzicht exportbestemmingen (preview)
 
 De pagina **Exportbestemmingen** bevat alle locaties die u hebt ingesteld om gegevens naar te exporteren. U kunt ook nieuwe bestemmingen toevoegen voor export. Hierin worden verder de momenteel beschikbare exportopties weergegeven. Krijg een snel overzicht, een beschrijving en ontdek wat u kunt doen met elke uitbreidingsoptie. Exporteer uniforme profielen, meetwaarden en segmenten naar ondersteunde apps die relevant zijn voor uw bedrijf.
 
@@ -27,10 +27,13 @@ Ga naar **Beheer** > **Exportbestemmingen** om de volgende uitbreidingsopties te
 - [Power Automate-connector](export-power-automate.md)
 - [Power Apps-connector](export-power-apps.md)
 - [Power BI-connector](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
 - [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Azure Blob-opslag](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [LiveRamp&reg;-connector](export-liveramp.md)
 - [Bot voor Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Als u een exportbestemming wilt verwijderen, begint u op de pagina **Exportbeste
 2. Selecteer **Verwijderen** in het vervolgkeuzemenu.
 
 3. Bevestig de verwijdering door **Verwijderen** te selecteren op het bevestigingsscherm.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

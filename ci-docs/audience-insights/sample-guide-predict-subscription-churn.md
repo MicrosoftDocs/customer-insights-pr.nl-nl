@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653974"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269830"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Voorbeeldhandleiding abonnementsverloop voorspellen (preview)
 
@@ -46,10 +46,9 @@ Lees vooral de artikelen [over gegevensopname](data-sources.md) en [gegevensbron
    - **DateOfBirth**: datum
    - **CreatedOn**: datum/tijd/zone
 
-   [!div class="mx-imgBorder"]
-   ![DoB transformeren naar datum](media/ecommerce-dob-date.PNG "geboortedatum naar datum transformeren")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformeer geboortedatum naar datum.":::
 
-1. Wijzig in het veld 'Naam' in het rechterdeelvenster uw gegevensbron van **Query** in **eCommerceContacts**.
+1. Wijzig in het veld **Naam** in het rechterdeelvenster uw gegevensbron van **Query** in **eCommerceContacts**.
 
 1. Sla de gegevensbron op.
 
@@ -67,7 +66,7 @@ Lees vooral de artikelen [over gegevensopname](data-sources.md) en [gegevensbron
    - **RewardsPoints**: geheel getal
    - **CreatedOn**: datum/tijd
 
-1. Wijzig in het veld 'Naam' in het rechterdeelvenster uw gegevensbron van **Query** in **loyCustomers**.
+1. Wijzig in het veld **Naam** in het rechterdeelvenster uw gegevensbron van **Query** in **loyCustomers**.
 
 1. Sla de gegevensbron op.
 
@@ -90,7 +89,7 @@ Lees vooral de artikelen [over gegevensopname](data-sources.md) en [gegevensbron
    - **Is_auto_renew**: waar/onwaar
    - **RecurringFrequencyInMonths**: geheel getal
 
-1. Wijzig in het veld 'Naam' in het rechterdeelvenster uw gegevensbron van **Query** in **Abonnementsgeschiedenis**.
+1. Wijzig in het veld **Naam** in het rechterdeelvenster uw gegevensbron van **Query** in **SubscriptionHistory**.
 
 1. Sla de gegevensbron op.
 
@@ -230,3 +229,6 @@ U kunt een nieuw segment maken op basis van de entiteit die door het model is ge
 U hebt nu een segment dat dynamisch wordt bijgewerkt en dat klanten met een hoog verlooprisico identificeert voor dit abonnementsbedrijf.
 
 Zie [Segmenten maken en beheren](segments.md) voor meer informatie.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
