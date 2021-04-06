@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269922"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654726"
 ---
 # <a name="define-and-manage-measures"></a>Meetcriteria definiëren en beheren
 
@@ -72,8 +72,8 @@ In deze sectie wordt uitgelegd hoe u een geheel nieuwe meting maakt. U kunt een 
    1. Selecteer **Dimensies bewerken** om gegevenskenmerken toe te voegen waarop u de meetwaarden wilt groeperen. Bijvoorbeeld plaats of gender. Standaard is de dimensie *CustomerID* geselecteerd om *metingen op klantniveau* te maken. U kunt de standaarddimensie verwijderen als u *metingen op bedrijfsniveau*​wilt maken.
    1. Selecteer **Gereed** om de dimensies aan de meting toe te voegen.
 
-1. Als er meerdere paden zijn tussen de gegevensentiteit die u hebt toegewezen en de entiteit Klant, moet u een van de geïdentificeerde [entiteitsrelatiepaden](relationships.md)​kiezen. Meetresultaten kunnen variëren, afhankelijk van het geselecteerde pad.
-   1. Selecteer **Gegevensvoorkeuren** en kies het entiteitspad dat moet worden gebruikt om uw meting te identificeren.
+1. Als er meerdere paden zijn tussen de gegevensentiteit die u hebt toegewezen en de entiteit *Klant*, moet u een van de geïdentificeerde [entiteitsrelatiepaden​](relationships.md) kiezen. Meetresultaten kunnen variëren, afhankelijk van het geselecteerde pad. 
+   1. Selecteer **Gegevensvoorkeuren** en kies het entiteitspad dat moet worden gebruikt om uw meting te identificeren. Als er maar één pad is naar de entiteit *Klant*, wordt dit besturingselement niet weergegeven.
    1. Selecteer **Gereed** om uw selectie toe te passen. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Selecteer het entiteitspad voor de meting.":::

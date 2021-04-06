@@ -2,19 +2,19 @@
 title: Power Apps-connector
 description: Maak verbinding met Power Apps en Power Automate.
 ms.date: 01/19/2021
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268910"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598149"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps-connector (preview)
 
@@ -22,9 +22,9 @@ Breng geharmoniseerde klantprofielen naar uw gepersonaliseerde apps met Power Ap
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Verbinden met Power Apps en Dynamics 365 Customer Insights
 
-Customer Insights is een van de vele [beschikbare bronnen voor gegevens in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights is een van de vele [beschikbare bronnen voor gegevens in Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Raadpleeg de Power Apps-documentatie om te leren hoe [hoe u een gegevensverbinding kunt toevoegen aan een app](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). We raden u aan om ook te bekijken [hoe Power Apps delegeren gebruikt om grote gegevenssets in Canvas-apps te verwerken](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Raadpleeg de Power Apps-documentatie om te leren hoe [hoe u een gegevensverbinding kunt toevoegen aan een app](/powerapps/maker/canvas-apps/add-data-connection). We raden u aan om ook te bekijken [hoe Power Apps delegeren gebruikt om grote gegevenssets in Canvas-apps te verwerken](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Beschikbare entiteiten
 
@@ -47,11 +47,11 @@ Delegatie werkt voor de entiteit Klant en de entiteit UnifiedActivity.
 
 - Delegatie voor **UnifiedActivity**: delegatie voor deze entiteit werkt alleen voor de velden **ActivityId** en **CustomerId**.  
 
-- Zie [Delegeerbare functies en bewerkingen in Power Apps](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps) voor meer informatie over delegeren . 
+- Zie [Delegeerbare functies en bewerkingen in Power Apps](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps) voor meer informatie over delegeren . 
 
 ## <a name="example-gallery-control"></a>Voorbeeld galeriebesturingselement
 
-U voegt bijvoorbeeld klantprofielen toe aan een [galeriebesturingselement](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+U voegt bijvoorbeeld klantprofielen toe aan een [galeriebesturingselement](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Voeg een besturingselement **Galerie** toe aan een app die u aan het bouwen bent.
 

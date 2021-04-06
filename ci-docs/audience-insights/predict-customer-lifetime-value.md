@@ -2,19 +2,19 @@
 title: Voorspelling van de levensduurwaarde van klanten
 description: Voorspel het inkomstenpotentieel voor actieve klanten in de toekomst.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268588"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595797"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Voorspelling van de levensduurwaarde van klant (preview)
 
@@ -194,11 +194,11 @@ Er zijn drie primaire gegevenssecties op de resultatenpagina.
   
   - **Succespercentage bij het voorspellen van klanten met een hoge waarde**
 
-  Zie het verschil in het voorspellen van hoogwaardige klanten met behulp van het AI-model in vergelijking met het basismodel. Het slagingspercentage van 84% betekent bijvoorbeeld dat van alle hoogwaardige klanten in de trainingsgegevens het AI-model 84% nauwkeurig kon vastleggen. We vergelijken dit slagingspercentage vervolgens met het slagingspercentage van het basismodel om de relatieve verandering te rapporteren. Deze waarde wordt gebruikt om een cijfer aan het model toe te kennen.
+    Zie het verschil in het voorspellen van hoogwaardige klanten met behulp van het AI-model in vergelijking met het basismodel. Het slagingspercentage van 84% betekent bijvoorbeeld dat van alle hoogwaardige klanten in de trainingsgegevens het AI-model 84% nauwkeurig kon vastleggen. We vergelijken dit slagingspercentage vervolgens met het slagingspercentage van het basismodel om de relatieve verandering te rapporteren. Deze waarde wordt gebruikt om een cijfer aan het model toe te kennen.
 
   - **Foutstatistieken**
     
-  Met een andere statistiek kunt u de algehele prestaties van het model beoordelen in termen van fouten bij het voorspellen van toekomstige waarden. We gebruiken de algemene statistiek kwadratisch gemiddelde fout om deze fout te beoordelen. Kwadratisch gemiddelde fout is een standaardmanier om de fout van een model te meten bij het voorspellen van kwantitatieve gegevens. De kwadratisch gemiddelde fout van het AI-model wordt vergeleken met de kwadratisch gemiddelde fout van het basismodel en het relatieve verschil wordt gerapporteerd.
+    Met een andere statistiek kunt u de algehele prestaties van het model beoordelen in termen van fouten bij het voorspellen van toekomstige waarden. We gebruiken de algemene statistiek kwadratisch gemiddelde fout om deze fout te beoordelen. Kwadratisch gemiddelde fout is een standaardmanier om de fout van een model te meten bij het voorspellen van kwantitatieve gegevens. De kwadratisch gemiddelde fout van het AI-model wordt vergeleken met de kwadratisch gemiddelde fout van het basismodel en het relatieve verschil wordt gerapporteerd.
 
   Het AI-model geeft prioriteit aan de nauwkeurige rangschikking van klanten op basis van de waarde die ze voor uw bedrijf opleveren. Dus alleen het slagingspercentage van het voorspellen van hoogwaardige klanten wordt gebruikt om het uiteindelijke modelcijfer af te leiden. De kwadratisch gemiddelde fout-statistiek is gevoelig voor uitschieters. In scenario's waarin u een klein percentage klanten hebt met buitengewoon hoge aankoopwaarden, geeft de algehele kwadratisch gemiddelde fout-statistiek mogelijk niet het volledige beeld van de modelprestaties.   
 

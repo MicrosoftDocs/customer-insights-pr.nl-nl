@@ -1,7 +1,7 @@
 ---
 title: Nieuwe en komende functies
 description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270426"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598425"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Wat is er nieuw in de doelgroepinzichten-mogelijkheid van Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-We kondigen vol trots onze meest recente updates aan. Dit artikel geeft een overzicht van openbare preview-functies, verbeteringen in de algemene beschikbaarheid en functie-updates. Als u de langetermijnplannen voor functies wilt zien, bekijkt u de [releaseplannen voor Dynamics 365 en Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+We kondigen vol trots onze meest recente updates aan. Dit artikel geeft een overzicht van openbare preview-functies, verbeteringen in de algemene beschikbaarheid en functie-updates. Als u de langetermijnplannen voor functies wilt zien, bekijkt u de [releaseplannen voor Dynamics 365 en Power Platform](/dynamics365/release-plans/).
 
 U kunt ook de volgende video bekijken om meer te weten te komen over de mogelijkheden die de afgelopen zes maanden zijn gepland.
 
@@ -30,6 +30,40 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Updates van februari 2021
+
+De updates van februari 2021 omvatten verschillende functies, prestatie-upgrades en bugfixes.
+
+#### <a name="extensibility"></a>Uitbreidbaarheid
+
+- **Segmenten exporteren naar AdRoll**
+
+  We hebben onze exportbestemmingen uitgebreid met AdRoll. U kunt nu segmenten van Customer Insights naar AdRoll-doelgroepen exporteren en deze als basis voor uw advertenties gebruiken. Zie [Connector voor AdRoll](export-adroll.md) voor meer informatie.
+
+#### <a name="segments"></a>Segmenten
+ 
+- **Een segment dupliceren**
+  
+  Om een nieuw segment te maken op basis van een bestaand segment, kunt u nu een segment dupliceren en het gedupliceerde segment bewerken om het verder te verfijnen. 
+
+- **Extra kenmerken toevoegen aan een segment**
+
+  U kunt nu kenmerken in uw segmentuitvoer opnemen, zelfs als deze kenmerken geen deel uitmaken van het klantprofiel. Neem bijvoorbeeld abonnement-id's op in een segment, ook al is het onderdeel van de abonnementsentiteit die een M:1-relatie heeft met de klantentiteit. Zolang het kenmerk toebehoort aan een entiteit die gerelateerd is aan de klantentiteit, kunt u deze kenmerken nu opnemen.  
+
+#### <a name="predictions"></a>Voorspellingen
+
+- **Voorspellende productaanbevelingen maken**
+
+  Begrijpen waar klanten in geïnteresseerd zijn, is een van de eerste stappen die nodig zijn om de bedrijfsomzet te verbeteren en klantloyaliteit op te bouwen door middel van personalisatie en betrokkenheid. Aanbevelingen doen voor producten die niet zijn afgestemd op de interesses van uw klant, kan tot een gevoel van onthechting tussen de klant en uw bedrijf leiden en uiteindelijk de algehele potentiële inkomsten en ervaring voor een klant beperken. 
+
+  Met uw eigen gegevens kunt u nu voorspellingen maken ten aanzien van de producten die uw klanten waarschijnlijk in de toekomst willen kopen. Zie [Productaanbevelingen voorspellen](predict-product-recommendation.md) voor meer informatie.​
+
+#### <a name="system-administration"></a>Systeembeheer
+
+- **De kopieeromgeving ondersteunt meer soorten gegevensbronnen**
+
+  Beheerders kunnen omgevingsconfiguraties kopiëren naar een nieuwe omgeving in dezelfde organisatie. Met deze functie wordt de kopieeromgevingfunctionaliteit uit voor gevallen waarin gegevensbronnen op basis van een Common Data Service-data lake of een Common Data Model-map worden gebruikt.
 
 ## <a name="january-2021-updates"></a>Updates januari 2021
 

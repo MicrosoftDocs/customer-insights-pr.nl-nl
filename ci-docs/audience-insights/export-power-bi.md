@@ -2,19 +2,19 @@
 title: Power BI-connector
 description: De Dynamics 365 Customer Insights-connector leren gebruiken in Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477082"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596033"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector voor Power BI (preview)
 
@@ -23,7 +23,7 @@ Maak visualisaties voor uw gegevens met de Power BI Desktop. Genereer aanvullend
 ## <a name="prerequisites"></a>Vereisten
 
 - U hebt geharmoniseerde klantprofielen.
-- De meest recente versie van [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) is op uw computer geïnstalleerd. [Meer informatie over Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- De nieuwste versie van [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) is op uw computer geïnstalleerd. [Meer informatie over Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>De connector voor Power BI configureren
 
@@ -47,7 +47,7 @@ Maak visualisaties voor uw gegevens met de Power BI Desktop. Genereer aanvullend
 
 ## <a name="large-data-sets"></a>Grote gegevenssets
 
-De Customer Insights-connector voor Power BI is ontworpen om te werken voor gegevenssets die tot 1 miljoen klantprofielen bevatten. Het importeren van grotere gegevenssets kan werken, maar het duurt lang. Bovendien kan bij het proces een time-out optreden vanwege Power BI-beperkingen. Zie [Power BI: aanbevelingen voor grote gegevenssets](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets) voor meer informatie. 
+De Customer Insights-connector voor Power BI is ontworpen om te werken voor gegevenssets die tot 1 miljoen klantprofielen bevatten. Het importeren van grotere gegevenssets kan werken, maar het duurt lang. Bovendien kan bij het proces een time-out optreden vanwege Power BI-beperkingen. Zie [Power BI: aanbevelingen voor grote gegevenssets](/power-bi/admin/service-premium-what-is#large-datasets) voor meer informatie. 
 
 ### <a name="work-with-a-subset-of-data"></a>Werken met een subset van gegevens
 
@@ -70,4 +70,3 @@ U kunt de gedupliceerde relaties identificeren en verwijderen.
 Na verwijdering van de gedupliceerde relaties, probeert u de Power BI-connector opnieuw te configureren. De omgeving zou nu beschikbaar moeten zijn.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

@@ -5,16 +5,16 @@ ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-ms.reviewer: nimagen
-author: m-hartmann
-ms.author: mhart
+ms.reviewer: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270106"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598287"
 ---
 # <a name="manage-environments"></a>Omgevingen beheren
 
@@ -67,7 +67,7 @@ Een omgeving maken:
    - **Alle gegevens opslaan naar**: geeft aan waar u de uitvoergegevens wilt opslaan die zijn gegenereerd vanuit Customer Insights. U hebt twee opties: **Opslag Customer Insights** (een Azure Data Lake beheerd door het Customer Insights-team) en **Azure Data Lake Storage Gen2** (uw eigen Azure Data Lake Storage). Standaard is de opslagoptie Customer Insights geselecteerd.
 
    > [!NOTE]
-   > Door gegevens op te slaan in Azure Data Lake Storage stemt u ermee in dat gegevens worden overgebracht naar en opgeslagen in de juiste geografische locatie voor dat Azure Storage-account, die kan afwijken van waar gegevens zijn opgeslagen in Dynamics 365 Customer Insights. Meer informatie vindt u in het Dynamics 365 Customer Insights. [Meer informatie op het Microsoft Trust Center.](https://www.microsoft.com/trust-center)
+   > Door gegevens op te slaan in Azure Data Lake Storage stemt u ermee in dat gegevens worden overgebracht naar en opgeslagen in de juiste geografische locatie voor dat Azure Storage-account, die kan afwijken van waar gegevens zijn opgeslagen in Dynamics 365 Customer Insights. [Meer informatie op het Microsoft Trust Center.](https://www.microsoft.com/trust-center)
    >
    > Momenteel worden opgenomen entiteiten altijd opgeslagen in het beheerde data lake van Customer Insights.
    > We ondersteunen alleen Azure Data Lake Gen2-opslagaccounts uit dezelfde Azure-regio die u hebt geselecteerd bij het maken van de omgeving.

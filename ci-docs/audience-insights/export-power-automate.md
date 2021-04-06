@@ -2,19 +2,19 @@
 title: Power Automate-connector | Microsoft Docs
 description: Maak stromen in Microsoft Power Automate vanuit Dynamics 365 Customer Insights.
 ms.date: 01/20/2021
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268818"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597919"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate-connector (preview)
 
@@ -34,7 +34,7 @@ Gebruik triggers om cloudstromen te maken en routineuze taken te automatiseren, 
 [Configureer uw triggers in Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>Acties in Power Automate
-De Power Automate-connector biedt andere acties dan de beschikbare triggers. Zie voor meer informatie de [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
+De Power Automate-connector biedt andere acties dan de beschikbare triggers. Zie voor meer informatie de [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Een Power Automate-stroom maken
 
@@ -44,7 +44,7 @@ De Power Automate-connector biedt andere acties dan de beschikbare triggers. Zie
 
 1. De Customer Insights-connector (preview) in Power Automate wordt geopend. **Meld u aan** bij Power Automate.
 
-1. Kies een van de beschikbare triggers en voeg meer stappen toe aan uw nieuwe stroom. Zie [Een cloudstroom maken in Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow)​voor meer informatie.
+1. Kies een van de beschikbare triggers en voeg meer stappen toe aan uw nieuwe stroom. Zie [Een cloudstroom maken in Power Automate](/power-automate/get-started-logic-flow)​voor meer informatie.
 
 Voorbeelden van het gebruik van stromen: 
 - Plaats een bericht op een Microsoft Teams-kanaal als een gegevensbron niet kan worden vernieuwd. 

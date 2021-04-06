@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270198"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598333"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Modellen op basis van Azure Machine Learning Studio (klassiek) gebruiken
 
@@ -37,7 +37,7 @@ In een eerste stap moeten we een werkruimte maken voor en Machine Learning Studi
 
 1. Zoek **Machine Learning Studio-werkruimte** en selecteer **Maken**.
 
-1. Voer de vereiste gegevens in voor het [maken van de werkruimte](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Kies het **Prijsniveau voor webservice-abonnement** op basis van de hoeveelheid gegevens die u wilt importeren. Selecteer voor de beste prestaties de **locatie** die geografisch het dichtst in de buurt is.
+1. Voer de vereiste gegevens in voor het [maken van de werkruimte](/azure/machine-learning/studio/create-workspace). Kies het **Prijsniveau voor webservice-abonnement** op basis van de hoeveelheid gegevens die u wilt importeren. Selecteer voor de beste prestaties de **locatie** die geografisch het dichtst in de buurt is.
 
 1. Nadat u de resource hebt gemaakt, wordt het dashboard voor de Machine Learning Studio-werkruimte weergegeven. Selecteer **Machine Learning Studio starten**.
 
@@ -65,7 +65,7 @@ U kunt nu een nieuw experiment maken of een bestaande experimentsjabloon importe
 
    ![Een voorspellende webservice instellen](media/predictive-webservice-control.png)
 
-1. Zodra het experiment met de voorspellende webservice is geslaagd, kunt u het implementeren voor automatische planning. Als u de webservice wilt laten werken met Customer Insights selecteert u **Webservice implementeren** > **Webservice implementeren [Nieuw] Preview**. [Meer informatie over het implementeren van een webservice](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
+1. Zodra het experiment met de voorspellende webservice is geslaagd, kunt u het implementeren voor automatische planning. Als u de webservice wilt laten werken met Customer Insights selecteert u **Webservice implementeren** > **Webservice implementeren [Nieuw] Preview**. [Meer informatie over het implementeren van een webservice](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
 
    ![Een voorspellende webservice implementeren](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ De volgende afbeelding toont de pipeline voor training en evaluatie van het mode
 
 ![Verloopmodel in Azure Machine Learning Studio](media/azure-machine-learning-model.png)
 
-We passen ook een techniek toe genaamd **Permutation Feature Importance**, een belangrijk aspect van modeloptimalisatie. Ingebouwde modellen hebben weinig tot geen inzicht in de impact van een specifieke functie op de uiteindelijke voorspelling. De calculator voor functiebelang gebruikt een aangepast algoritme om de invloed van individuele functies op de uitkomst voor een specifiek model te berekenen. Het functiebelang wordt genormaliseerd tussen +1 en -1. Een negatieve invloed betekent dat de overeenkomstige functie een contra-intuïtieve invloed heeft op de uitkomst en uit het model moet worden verwijderd. Een positieve invloed geeft aan dat de functie een grote bijdrage levert aan de voorspelling. Deze waarden zijn geen correlatiecoëfficiënten, aangezien het verschillende metrische gegevens zijn. Zie [Permutation Feature Importance](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance) voor meer informatie.
+We passen ook een techniek toe genaamd **Permutation Feature Importance**, een belangrijk aspect van modeloptimalisatie. Ingebouwde modellen hebben weinig tot geen inzicht in de impact van een specifieke functie op de uiteindelijke voorspelling. De calculator voor functiebelang gebruikt een aangepast algoritme om de invloed van individuele functies op de uitkomst voor een specifiek model te berekenen. Het functiebelang wordt genormaliseerd tussen +1 en -1. Een negatieve invloed betekent dat de overeenkomstige functie een contra-intuïtieve invloed heeft op de uitkomst en uit het model moet worden verwijderd. Een positieve invloed geeft aan dat de functie een grote bijdrage levert aan de voorspelling. Deze waarden zijn geen correlatiecoëfficiënten, aangezien het verschillende metrische gegevens zijn. Zie [Permutation Feature Importance](/azure/machine-learning/studio-module-reference/permutation-feature-importance) voor meer informatie.
 
 Het hele [verloopexperiment is beschikbaar in de Azure AI-galerie](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Het hele [productaanbevelingsexperiment is toegankelijk in Azure AI Gallery.](ht
 
 ## <a name="integrate-custom-models"></a>Aangepaste modellen integreren
 
-Om deze voorspellingen te gebruiken in Customer Insights, moet u de voorspellingen **exporteren** samen met de klant-id's. [Exporteer ze naar dezelfde Azure Blob-opslaglocatie](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) waarnaar u de brongegevens exporteert. De voorspellende webservice kan zodanig worden gepland dat deze regelmatig wordt uitgevoerd en dat de scores worden bijgewerkt.
+Om deze voorspellingen te gebruiken in Customer Insights, moet u de voorspellingen **exporteren** samen met de klant-id's. [Exporteer ze naar dezelfde Azure Blob-opslaglocatie](/azure/storage/common/storage-import-export-data-from-blobs) waarnaar u de brongegevens exporteert. De voorspellende webservice kan zodanig worden gepland dat deze regelmatig wordt uitgevoerd en dat de scores worden bijgewerkt.
 
 Gegevens die door het aangepaste model worden gegenereerd, kunnen worden gebruikt om uw klantgegevens verder te verrijken. Zie [Aangepaste Machine Learning-modellen](custom-models.md) voor meer informatie.
 

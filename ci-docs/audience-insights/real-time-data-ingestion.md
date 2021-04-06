@@ -2,19 +2,19 @@
 title: Realtime gegevensopname en beperkingen
 description: Algemene informatie over realtime mogelijkheden in doelgroepinzichten.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270274"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598563"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Realtime gegevensopname (preview)
 
@@ -54,7 +54,7 @@ Met de realtime API kunt u een nieuwe activiteit van uw bronsysteem (een individ
 
 Er zijn twee manieren om verbinding te maken met de realtime API:
 
-- [indirect](#connect-via-the-dynamics-365-customer-insights-connector), door gebruik te maken van de [Dynamics 365 Customer Insights-connector](https://docs.microsoft.com/connectors/customerinsights/)
+- [indirect](#connect-via-the-dynamics-365-customer-insights-connector), door gebruik te maken van de [Dynamics 365 Customer Insights-connector](/connectors/customerinsights/)
 - [direct](#connect-directly-to-the-real-time-api), met code
 
 Voor beide manieren gelden de volgende vereisten:
@@ -66,13 +66,13 @@ Voor beide manieren gelden de volgende vereisten:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Verbinding maken via de Dynamics 365 Customer Insights-connector
 
-De realtime API kan gegevens opnemen van een specifieke Power Platform-connector, de [Dynamics 365 Customer Insights-connector](https://docs.microsoft.com/connectors/customerinsights/), zonder dat u code hoeft te schrijven en te implementeren.    
-De connector kan dezelfde realtime acties uitvoeren als de API. Voor premium connectors hebt u een geldige licentie nodig. Zie [Veelgestelde vragen over Power Apps- en Power Automate-licenties](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq) voor meer informatie.
+De realtime API kan gegevens opnemen van een specifieke Power Platform-connector, de [Dynamics 365 Customer Insights-connector](/connectors/customerinsights/), zonder dat u code hoeft te schrijven en te implementeren.    
+De connector kan dezelfde realtime acties uitvoeren als de API. Voor premium connectors hebt u een geldige licentie nodig. Zie [Veelgestelde vragen over Power Apps- en Power Automate-licenties](/power-platform/admin/powerapps-flow-licensing-faq) voor meer informatie.
 
-- Power Platform [Power Apps en/of Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps en/of Power Automate](/connectors/)
+- Azure [Logic Apps](/azure/connectors/apis-list)
 
-Zie de [Power Automate-documentatie](https://docs.microsoft.com/power-automate/) voor meer informatie over het maken van stromen.
+Zie de [Power Automate-documentatie](/power-automate/) voor meer informatie over het maken van stromen.
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Rechtstreeks verbinding maken met de realtime API
 

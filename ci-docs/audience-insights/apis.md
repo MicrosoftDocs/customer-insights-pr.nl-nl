@@ -1,20 +1,20 @@
 ---
 title: Werken met API's
 description: API's gebruiken en beperkingen begrijpen.
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267518"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710454"
 ---
 # <a name="work-with-customer-insights-apis"></a>Werken met Customer Insights-API's
 
@@ -36,7 +36,7 @@ In dit artikel leest u hoe u toegang krijgt tot de Customer Insights-API's, een 
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insights-API's inschakelen":::
 
-1. Selecteer **Onze API's verkennen** om de API's uit te proberen.
+1. Selecteer **Onze API's verkennen** om de [API's uit te proberen](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
 1. Kies een API-bewerking en selecteer **Probeer het uit**.
 
@@ -47,6 +47,9 @@ In dit artikel leest u hoe u toegang krijgt tot de Customer Insights-API's, een 
 1. Scrol naar de onderkant van het deelvenster aan de zijkant en selecteer **Verzenden**.
 
 De HTTP-respons wordt snel hieronder weergegeven.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="GIF-animatie die laat zien hoe u de API's kunt testen.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Een nieuwe app-registratie in Azure Portal maken
 
@@ -61,6 +64,8 @@ Met deze stappen kunt u aan de slag met de Customer Insights-API's in een Azure-
 
 1. Ga bij uw nieuwe app-registratie naar **API-machtigingen**.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="GIF-animatie om API-toestemming in te stellen bij app-registratie.":::
+
 1. Selecteer **Een machtiging toevoegen** en selecteer **Customer Insights** in het deelvenster aan de zijkant.
 
 1. Selecteer voor **Machtigingstype** de optie **Gedelegeerde machtigingen** en selecteer de machtiging **gebruikersimitatie**.
@@ -71,9 +76,11 @@ Met deze stappen kunt u aan de slag met de Customer Insights-API's in een Azure-
 
 U kunt de toepassings-/client-id voor deze app-registratie gebruiken bij de Microsoft Authentication Library (MSAL) om een bearer-token te verkrijgen om met uw verzoek naar de API te verzenden.
 
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="GIF-animatie om toestemming van de beheerder te verlenen.":::
+
 Zie voor meer informatie over MSAL [Overzicht van Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
 
-Zie voor meer informatie over app-registratie in Azure [De nieuwe registratie-ervaring van de Azure Portal-app](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Zie voor meer informatie over app-registratie in Azure [De nieuwe registratie-ervaring van de Azure Portal-app](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 Zie voor informatie over het gebruik van de API's van onze clientbibliotheken [Customer Insights-clientbibliotheken](#customer-insights-client-libraries).
 
@@ -101,6 +108,8 @@ In de [sectie app-registratie](#create-a-new-app-registration-in-the-azure-porta
 
 1. Selecteer **Beheerders toestemming verlenen voor...** om de app-registratie te voltooien.
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="GIF-animatie om toestemming van de beheerder te verlenen.":::
+
 1. Tot slot moeten we de naam van de app-registratie als gebruiker toevoegen in Customer Insights.    
    Open Customer Insights, ga naar **Beheerder** > **Rechten** en selecteer **Gebruiker toevoegen**.
 
@@ -108,7 +117,7 @@ In de [sectie app-registratie](#create-a-new-app-registration-in-the-azure-porta
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insights-clientbibliotheken
 
-Deze sectie helpt u aan de slag te gaan met het gebruik van de clientbibliotheken die beschikbaar zijn voor de Customer Insights-API's.
+Deze sectie helpt u aan de slag te gaan met het gebruik van de clientbibliotheken die beschikbaar zijn voor de Customer Insights-API's. Alle broncode en voorbeeldtoepassingen van de bibliotheek zijn te vinden op de [GitHub-pagina voor Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries)​. 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,7 +136,7 @@ Leer hoe u aan de slag gaat met de C#-clientbibliotheken van NuGet.org. Voor mee
 
 #### <a name="use-the-c-client-library"></a>De C#-clientbibliotheek gebruiken
 
-1. Gebruik de [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) om een `AccessToken` op te halen met uw bestaande [Azure app-registratie](#create-a-new-app-registration-in-the-azure-portal).
+1. Gebruik de [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) om een `AccessToken` op te halen met uw bestaande [Azure app-registratie](#create-a-new-app-registration-in-the-azure-portal).
 
 1. Na het succesvol verifiëren en verkrijgen van een token, bouwt u een nieuwe of gebruikt u een bestaande `HttpClient` met de extra **DefaultRequestHeaders "Autorisatie"** ingesteld op **Bearer <access token>** en **Ocp-Apim-abonnementssleutel** ingesteld op de [**abonnementssleutel** van uw Customer Insights-omgeving](#get-started-trying-the-customer-insights-apis).    
    Reset de **Autorisatie**-koptekst indien van toepassing. Bijvoorbeeld wanneer het token is verlopen.
@@ -141,5 +150,12 @@ Leer hoe u aan de slag gaat met de C#-clientbibliotheken van NuGet.org. Voor mee
 1. De respons is waarschijnlijk het type `object` omdat de methode meerdere typen kan retourneren (bijvoorbeeld `IList<InstanceInfo>` en `ApiErrorResult`). Om het retourtype te controleren, kunt u de objecten veilig casten in de responstypen die zijn opgegeven op de [API-detailpagina](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) voor die bewerking.    
    Als er meer informatie over de aanvraag nodig is, gebruik dan de **http-berichtmethoden** om toegang te krijgen tot het onbewerkte responsobject.
 
+### <a name="nodejs-package"></a>NodeJS-pakket
+
+Gebruik de NodeJS-clientbibliotheken die beschikbaar zijn via NPM: https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Python-pakket
+
+Gebruik de Python-clientbibliotheken die beschikbaar zijn via PyPi: https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -2,23 +2,23 @@
 title: Gegevens opnemen via een Power Query-connector
 description: Connectors voor databronnen op basis van Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267762"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596907"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinden met een Power Query-gegevensbron
 
-Power Query biedt een brede set connectors om gegevens op te nemen. De meeste van deze connectors worden ondersteund door Dynamics 365 Customer Insights. Bij het toevoegen van gegevensbronnen op basis van Power Query-connectors worden gewoonlijk de stappen gevolgd die in de volgende sectie worden beschreven. Afhankelijk van de connector die u gebruikt, kan echter andere informatie vereist zijn. Zie voor meer informatie de documentatie over afzonderlijke connectors in [Referentie voor Power Query-connectors](https://docs.microsoft.com/power-query/connectors/).
+Power Query biedt een brede set connectors om gegevens op te nemen. De meeste van deze connectors worden ondersteund door Dynamics 365 Customer Insights. Bij het toevoegen van gegevensbronnen op basis van Power Query-connectors worden gewoonlijk de stappen gevolgd die in de volgende sectie worden beschreven. Afhankelijk van de connector die u gebruikt, kan echter andere informatie vereist zijn. Zie voor meer informatie de documentatie over afzonderlijke connectors in [Referentie voor Power Query-connectors](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Een nieuwe gegevensbron maken
 
@@ -44,7 +44,7 @@ Power Query biedt een brede set connectors om gegevens op te nemen. De meeste va
    > [!div class="mx-imgBorder"]
    > ![Dialoogvenster Query's bewerken](media/data-manager-configure-edit-queries.png "Dialoogvenster Query's bewerken")
 
-1. U kunt uw gegevens ook transformeren. Selecteer een entiteit om te bewerken of transformeren. Gebruik de opties in het venster Power Query om transformaties toe te passen. Elke transformatie wordt vermeld onder **Toegepaste stappen**. Power Query biedt tal van vooraf gebouwde transformatie-opties. Zie [Power Query-transformaties](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations) voor meer informatie.
+1. U kunt uw gegevens ook transformeren. Selecteer een entiteit om te bewerken of transformeren. Gebruik de opties in het venster Power Query om transformaties toe te passen. Elke transformatie wordt vermeld onder **Toegepaste stappen**. Power Query biedt tal van vooraf gebouwde transformatie-opties. Zie [Power Query-transformaties](/power-query/power-query-what-is-power-query#transformations) voor meer informatie.
 
 1. U kunt extra entiteiten toevoegen aan uw gegevensbron door **Gegevens ophalen** te selecteren in het dialoogvenster **Query's bewerken**.
 
@@ -59,7 +59,7 @@ Power Query biedt een brede set connectors om gegevens op te nemen. De meeste va
 
 ## <a name="available-power-query-data-sources"></a>Beschikbare Power Query-gegevensbronnen
 
-Zie [Referentie voor Power Query-connectors](https://docs.microsoft.com/power-query/connectors/) voor een up-to-date lijst met connectors die u kunt selecteren om gegevens te importeren in Customer Insights. 
+Zie [Referentie voor Power Query-connectors](/power-query/connectors/) voor een up-to-date lijst met connectors die u kunt selecteren om gegevens te importeren in Customer Insights. 
 
 Connectors met een vinkje in de kolom **Customer Insights (gegevensstromen)** zijn beschikbaar om nieuwe gegevensbronnen te maken op basis van Power Query. Bekijk de documentatie van een specifieke connector voor meer informatie over de vereisten, beperkingen en andere details.
 

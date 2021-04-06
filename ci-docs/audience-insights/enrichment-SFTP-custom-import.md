@@ -2,19 +2,19 @@
 title: Verrijking met aangepaste SFTP-import
 description: Algemene informatie over de aangepaste SFTP-importverrijking.
 ms.date: 11/18/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jdahl
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269600"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595849"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Klantprofielen verrijken met aangepaste gegevens (preview)
 
@@ -50,7 +50,7 @@ Om aangepaste SFTP-import te configureren, moet aan de volgende voorwaarden word
 
 ## <a name="defining-field-mappings"></a>Veldtoewijzingen definiëren 
 
-De directory die het bestand bevat dat op de SFTP-server moet worden geïmporteerd, moet ook een *model.json*-bestand bevatten. Dit bestand definieert het schema dat moet worden gebruikt voor het importeren van de gegevens. Het schema moet [het Common Data Model](https://docs.microsoft.com/common-data-model/) gebruiken om de veldtoewijzing op te geven. Een eenvoudig voorbeeld van een model.json-bestand ziet er als volgt uit:
+De directory die het bestand bevat dat op de SFTP-server moet worden geïmporteerd, moet ook een *model.json*-bestand bevatten. Dit bestand definieert het schema dat moet worden gebruikt voor het importeren van de gegevens. Het schema moet [het Common Data Model](/common-data-model/) gebruiken om de veldtoewijzing op te geven. Een eenvoudig voorbeeld van een model.json-bestand ziet er als volgt uit:
 
 ```
 {

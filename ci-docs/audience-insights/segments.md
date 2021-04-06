@@ -1,20 +1,20 @@
 ---
 title: Segmenten maken en beheren
 description: Maak segmenten van klanten om deze te groeperen op basis van verschillende kenmerken.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270350"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597045"
 ---
 # <a name="create-and-manage-segments"></a>Segmenten maken en beheren
 
@@ -35,19 +35,19 @@ Segmenten worden beheerd op de pagina **Segmenten**.
 
 1. Ga in doelgroepinzichten naar de pagina **Segmenten**.
 
-2. Selecteer **Nieuw** > **Leeg segment**.
+1. Selecteer **Nieuw** > **Leeg segment**.
 
-3. Kies in het deelvenster **Nieuw segment** een segmenttype en geef een **Naam** op.
+1. Kies in het deelvenster **Nieuw segment** een segmenttype en geef een **Naam** op.
 
    Geef optioneel een weergavenaam op en een beschrijving die helpt bij het identificeren van het segment.
 
-4. Selecteer **Volgende** om naar de pagina **Segmentbouwer** te gaan waar u een groep definieert. Een groep is een set klanten.
+1. Selecteer **Volgende** om naar de pagina **Segmentbouwer** te gaan waar u een groep definieert. Een groep is een set klanten.
 
-5. Kies de entiteit die het kenmerk bevat waarop u wilt segmenteren.
+1. Kies de entiteit die het kenmerk bevat waarop u wilt segmenteren.
 
-6. Kies het kenmerk waarop u wilt segmenteren. Dit kenmerk kan een van de volgende vier waardetypen hebben: numeriek, tekenreeks, datum of booleaans.
+1. Kies het kenmerk waarop u wilt segmenteren. Dit kenmerk kan een van de volgende vier waardetypen hebben: numeriek, tekenreeks, datum of booleaans.
 
-7. Kies een operator en een waarde voor het geselecteerde kenmerk.
+1. Kies een operator en een waarde voor het geselecteerde kenmerk.
 
    > [!div class="mx-imgBorder"]
    > ![Aangepast groepsfilter](media/customer-group-numbers.png "Klantgroepsfilter")
@@ -64,9 +64,14 @@ Segmenten worden beheerd op de pagina **Segmenten**.
    > [!div class="mx-imgBorder"]
    > ![Relatiepad tijdens het maken van segmenten](media/segments-multiple-relationships.png "Relatiepad tijdens het maken van segmenten")
 
-9. Selecteer **Opslaan** om uw segment op te slaan. Uw segment wordt opgeslagen en verwerkt als alle vereisten zijn gevalideerd. Anders wordt het opgeslagen als concept.
+1. Segmenten genereren standaard een uitvoerentiteit die alle kenmerken van klantprofielen bevat die overeenkomen met de gedefinieerde filters. Als een segment is gebaseerd op andere entiteiten dan de entiteit *Klant*, kunt u meer attributen van deze entiteiten aan de uitvoerentiteit toevoegen. Selecteer **Projectkernmerken** om de kenmerken te kiezen die aan de uitvoerentiteit worden toegevoegd.  
 
-10. Selecteer **Terug naar segmenten** om terug te gaan naar de pagina **Segmenten**.
+   
+   Voorbeeld: een segment is gebaseerd op een entiteit die gegevens over klantactiviteit bevat die gerelateerd zijn aan de entiteit *Klant*. Het segment zoekt naar alle klanten die de helpdesk de afgelopen 60 dagen hebben gebeld. U kunt ervoor kiezen om de gespreksduur en het aantal gesprekken toe te voegen aan alle overeenkomende klantrecords in de uitvoerentiteit. Deze gegevens kunnen handig zijn om een e-mail met handige koppelingen naar Help-artikelen en FAQ's te sturen naar klanten die vaak hebben gebeld.
+
+1. Selecteer **Opslaan** om uw segment op te slaan. Uw segment wordt opgeslagen en verwerkt als alle vereisten zijn gevalideerd. Anders wordt het opgeslagen als concept.
+
+1. Selecteer **Terug naar segmenten** om terug te gaan naar de pagina **Segmenten**.
 
 ## <a name="manage-existing-segments"></a>Bestaande segmenten beheren
 
@@ -85,6 +90,7 @@ De volgende actie is beschikbaar wanneer u een segment selecteert:
 
 - **Bekijk** de segmentdetails, inclusief trend van ledentelling en voorbeeld van segmentleden.
 - **Bewerk** het segment om de eigenschappen te wijzigen.
+- **Maak een duplicaat** van een segment. U kunt ervoor kiezen om de eigenschappen meteen te bewerken of gewoon het duplicaat op te slaan.
 - **Vernieuw** het segment om de nieuwste gegevens op te nemen.
 - **Activeer** of **Deactiveer** het segment. Segmenten hebben twee mogelijke statussen: actief of inactief. Deze statussen zijn handig bij het bewerken van een segment. Voor inactieve segmenten bestaat de segmentdefinitie, maar bevat deze nog geen klanten. Wanneer u een segment activeert, verandert de status van 'inactief' in 'actief' en wordt gezocht naar klanten die voldoen aan de segmentdefinitie. Als een [geplande vernieuwing](system.md#schedule-tab) is geconfigureerd, hebben inactieve segmenten de **Status** **Overgeslagen**, wat aangeeft dat er niet eens is geprobeerd te vernieuwen. Wanneer een inactief segment wordt geactiveerd, wordt het vernieuwd en opgenomen in geplande vernieuwingen.
   U kunt ook de functionaliteit **Later plannen** in de vervolgkeuzelisjt **Activeren/Deactiveren** gebruiken om een toekomstige datum en tijd op te geven voor activering en deactivering van een bepaald segment.

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267716"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596493"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Verbinding maken met een Azure Data Lake Storage Gen2-account met een Azure Service Principal voor doelgroepinzichten
 
@@ -23,7 +23,7 @@ Geautomatiseerde hulpmiddelen die Azure-services gebruiken, moeten altijd beperk
 U kunt de Service Principal gebruiken om veilig [een Common Data Model-map toe te voegen of te bewerken als een gegevensbron](connect-common-data-model.md) of [een nieuwe omgeving te maken of een bestaande te bewerken](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - Voor het Azure Data Lake Gen2-opslagaccount dat de service-principal wil gebruiken, moet [Hierarchical Name Space (HNS) ingeschakeld zijn](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace)​.
+> - Voor het Azure Data Lake Gen2-opslagaccount dat de service-principal wil gebruiken, moet [Hierarchical Name Space (HNS) ingeschakeld zijn](/azure/storage/blobs/data-lake-storage-namespace)​.
 > - U hebt beheerdersmachtigingen nodig om uw Azure-abonnement de Service Principal te laten maken.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Een Azure Service Principal voor doelgroepinzichten maken
@@ -48,7 +48,7 @@ Voordat u een nieuwe Service Principal voor doelgroepinzichten maakt, controleer
 
 ### <a name="create-a-new-service-principal"></a>Een nieuwe service principal maken
 
-1. Installeer de nieuwste versie van **Azure Active Directory PowerShell voor Graph**. Zie [Microsoft Azure Active Directory PowerShell voor Graph installeren](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2) voor meer informatie.
+1. Installeer de nieuwste versie van **Azure Active Directory PowerShell voor Graph**. Zie [Microsoft Azure Active Directory PowerShell voor Graph installeren](/powershell/azure/active-directory/install-adv2) voor meer informatie.
    - Selecteer op uw pc de Windows-toets op het toetsenbord en zoek **Windows PowerShell** en **Uitvoeren als beheerder**.
    
    - Voer `Install-Module AzureAD` in het PowerShell-venster dat wordt geopend in.
