@@ -1,7 +1,7 @@
 ---
-title: Exportbestemmingen
-description: Gegevens exporteren en exportbestemmingen beheren.
-ms.date: 07/21/2020
+title: Gegevens exporteren vanuit Customer Insights
+description: Beheer exports om gegevens te delen.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596079"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896137"
 ---
-# <a name="export-destinations-preview-overview"></a><span data-ttu-id="3ed6c-103">Overzicht exportbestemmingen (preview)</span><span class="sxs-lookup"><span data-stu-id="3ed6c-103">Export destinations (preview) overview</span></span>
+# <a name="exports-preview-overview"></a><span data-ttu-id="34804-103">Overzicht van Exports (preview)</span><span class="sxs-lookup"><span data-stu-id="34804-103">Exports (preview) overview</span></span>
 
-<span data-ttu-id="3ed6c-104">De pagina **Exportbestemmingen** bevat alle locaties die u hebt ingesteld om gegevens naar te exporteren.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-104">The **Export destinations** page shows you all locations you've set up to export data to.</span></span> <span data-ttu-id="3ed6c-105">U kunt ook nieuwe bestemmingen toevoegen voor export.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-105">You can also add new destinations for export.</span></span> <span data-ttu-id="3ed6c-106">Hierin worden verder de momenteel beschikbare exportopties weergegeven.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-106">Additionally, it shows export currently available options.</span></span> <span data-ttu-id="3ed6c-107">Krijg een snel overzicht, een beschrijving en ontdek wat u kunt doen met elke uitbreidingsoptie.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-107">Get a quick overview, description, and find out what you can do with each extensibility option.</span></span> <span data-ttu-id="3ed6c-108">Exporteer uniforme profielen, meetwaarden en segmenten naar ondersteunde apps die relevant zijn voor uw bedrijf.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-108">Export unified profiles, measures, and segments to supported apps relevant for your business.</span></span>
+<span data-ttu-id="34804-104">De pagina **Exports** toont u alle geconfigureerde exports.</span><span class="sxs-lookup"><span data-stu-id="34804-104">The **Exports** page shows you all configured exports.</span></span> <span data-ttu-id="34804-105">Exports delen specifieke gegevens met verschillende toepassingen.</span><span class="sxs-lookup"><span data-stu-id="34804-105">Exports share specific data with various applications.</span></span> <span data-ttu-id="34804-106">Ze kunnen klantprofielen of entiteiten, schema's en toewijzingsdetails bevatten.</span><span class="sxs-lookup"><span data-stu-id="34804-106">They can include customer profiles or entities, schemas, and mapping details.</span></span> <span data-ttu-id="34804-107">Elke export vereist een [verbinding, opgezet door een beheerder, om de verificatie en toegang te beheren](connections.md).</span><span class="sxs-lookup"><span data-stu-id="34804-107">Each export requires a [connection, set up by an administrator, to manage authentication and access](connections.md).</span></span>
 
-<span data-ttu-id="3ed6c-109">Ga naar **Beheer** > **Exportbestemmingen** om de volgende uitbreidingsopties te vinden:</span><span class="sxs-lookup"><span data-stu-id="3ed6c-109">Go to **Admin** > **Export destinations** to find the following extensibility options:</span></span>
+> [!NOTE]
+> <span data-ttu-id="34804-108">Tot maart 2021 creëerden exports automatisch een verbinding met de bijbehorende service.</span><span class="sxs-lookup"><span data-stu-id="34804-108">Until March 2021, exports created a connection to the corresponding service automatically.</span></span> <span data-ttu-id="34804-109">Exports vereisen nu een [verbinding die is gemaakt en gedeeld door een beheerder](connections.md) voordat u ze kunt maken.</span><span class="sxs-lookup"><span data-stu-id="34804-109">Exports now require a [connection, created and shared by an administrator](connections.md) before you can create them.</span></span>
 
-- [<span data-ttu-id="3ed6c-110">Adobe Campaign Standard</span><span class="sxs-lookup"><span data-stu-id="3ed6c-110">Adobe Campaign Standard</span></span>](export-adobe-campaign-standard.md)
-- [<span data-ttu-id="3ed6c-111">Adobe Experience Platform</span><span class="sxs-lookup"><span data-stu-id="3ed6c-111">Adobe Experience Platform</span></span>](export-adobe-experience-platform.md)
-- [<span data-ttu-id="3ed6c-112">AdRoll</span><span class="sxs-lookup"><span data-stu-id="3ed6c-112">AdRoll</span></span>](export-adroll.md)
-- [<span data-ttu-id="3ed6c-113">Autopilot</span><span class="sxs-lookup"><span data-stu-id="3ed6c-113">Autopilot</span></span>](export-autopilot.md)
-- [<span data-ttu-id="3ed6c-114">Azure Blob-opslag</span><span class="sxs-lookup"><span data-stu-id="3ed6c-114">Azure Blob Storage</span></span>](export-azure-blob-storage.md)
-- [<span data-ttu-id="3ed6c-115">Azure Data Lake Storage Gen2</span><span class="sxs-lookup"><span data-stu-id="3ed6c-115">Azure Data Lake Storage Gen2</span></span>](export-azure-data-lake-storage-gen2.md)
-- [<span data-ttu-id="3ed6c-116">Bot voor Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="3ed6c-116">Bot for Microsoft Teams</span></span>](export-teams-bot.md)
-- [<span data-ttu-id="3ed6c-117">Customer Insights-API</span><span class="sxs-lookup"><span data-stu-id="3ed6c-117">Customer Insights API</span></span>](apis.md)
-- [<span data-ttu-id="3ed6c-118">DotDigital</span><span class="sxs-lookup"><span data-stu-id="3ed6c-118">DotDigital</span></span>](export-dotdigital.md)
-- [<span data-ttu-id="3ed6c-119">Dynamics 365 Customer Service (invoegtoepassing Klantkaart)</span><span class="sxs-lookup"><span data-stu-id="3ed6c-119">Dynamics 365 Customer Service (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="3ed6c-120">Dynamics 365 Marketing</span><span class="sxs-lookup"><span data-stu-id="3ed6c-120">Dynamics 365 Marketing</span></span>](export-dynamics365-marketing.md)
-- [<span data-ttu-id="3ed6c-121">Dynamics 365 Sales</span><span class="sxs-lookup"><span data-stu-id="3ed6c-121">Dynamics 365 Sales</span></span>](export-dynamics365-sales.md)
-- [<span data-ttu-id="3ed6c-122">Dynamics 365 Verkoophub (invoegtoepassing Klantkaart)</span><span class="sxs-lookup"><span data-stu-id="3ed6c-122">Dynamics 365 Sales Hub (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="3ed6c-123">Facebook Ads Manager</span><span class="sxs-lookup"><span data-stu-id="3ed6c-123">Facebook Ads Manager</span></span>](export-facebook.md)
-- [<span data-ttu-id="3ed6c-124">Google Ads</span><span class="sxs-lookup"><span data-stu-id="3ed6c-124">Google Ads</span></span>](export-google-ads.md)
-- [<span data-ttu-id="3ed6c-125">LiveRamp&reg;</span><span class="sxs-lookup"><span data-stu-id="3ed6c-125">LiveRamp&reg;</span></span>](export-liveramp.md)
-- [<span data-ttu-id="3ed6c-126">Mailchimp</span><span class="sxs-lookup"><span data-stu-id="3ed6c-126">Mailchimp</span></span>](export-mailchimp.md)
-- [<span data-ttu-id="3ed6c-127">Marketo</span><span class="sxs-lookup"><span data-stu-id="3ed6c-127">Marketo</span></span>](export-marketo.md)
-- [<span data-ttu-id="3ed6c-128">Power Automate</span><span class="sxs-lookup"><span data-stu-id="3ed6c-128">Power Automate</span></span>](export-power-automate.md)
-- [<span data-ttu-id="3ed6c-129">Power Apps</span><span class="sxs-lookup"><span data-stu-id="3ed6c-129">Power Apps</span></span>](export-power-apps.md)
-- [<span data-ttu-id="3ed6c-130">Power BI</span><span class="sxs-lookup"><span data-stu-id="3ed6c-130">Power BI</span></span>](export-power-bi.md)
-- [<span data-ttu-id="3ed6c-131">SendGrid</span><span class="sxs-lookup"><span data-stu-id="3ed6c-131">SendGrid</span></span>](export-sendgrid.md)
-- [<span data-ttu-id="3ed6c-132">SFTP</span><span class="sxs-lookup"><span data-stu-id="3ed6c-132">SFTP</span></span>](export-sftp.md)
+<span data-ttu-id="34804-110">Ga naar **Gegevens** > **Exports** om de pagina met exports te bekijken.</span><span class="sxs-lookup"><span data-stu-id="34804-110">Go to **Data** > **Exports** to view the exports page.</span></span> <span data-ttu-id="34804-111">Alle gebruikersrollen hebben toegang om geconfigureerde exports te bekijken.</span><span class="sxs-lookup"><span data-stu-id="34804-111">All user roles have access to view configured exports.</span></span> <span data-ttu-id="34804-112">Gebruik van het zoekveld in de opdrachtbalk om exports te zoeken op naam, verbindingsnaam of verbindingstype.</span><span class="sxs-lookup"><span data-stu-id="34804-112">Use of the search field in the command bar to find exports by their name, connection name, or connection type.</span></span>
 
-## <a name="add-a-new-export-destination"></a><span data-ttu-id="3ed6c-133">Een nieuwe exportbestemming toevoegen</span><span class="sxs-lookup"><span data-stu-id="3ed6c-133">Add a new export destination</span></span>
+## <a name="set-up-a-new-export"></a><span data-ttu-id="34804-113">Een nieuwe export instellen</span><span class="sxs-lookup"><span data-stu-id="34804-113">Set up a new export</span></span>
 
-<span data-ttu-id="3ed6c-134">Om exportbestemmingen toe te voegen, hebt u [Beheerdersmachtigingen](permissions.md) nodig.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-134">To add export destinations, you have [administrator permissions](permissions.md).</span></span> <span data-ttu-id="3ed6c-135">Als u exporteert naar Microsoft-services, gaan we ervan uit dat beide services zich in dezelfde organisatie bevinden.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-135">If you export to Microsoft services, we assume both services are in the same organization.</span></span>
+<span data-ttu-id="34804-114">Als u een export wilt instellen of bewerken, moet u over verbindingen beschikken.</span><span class="sxs-lookup"><span data-stu-id="34804-114">To set up or edit an export, you need to have connections available to you.</span></span> <span data-ttu-id="34804-115">Verbindingen zijn afhankelijk van uw [gebruikersrol](permissions.md):</span><span class="sxs-lookup"><span data-stu-id="34804-115">Connections depend on your [user role](permissions.md):</span></span>
+- <span data-ttu-id="34804-116">Beheerders hebben toegang tot alle verbindingen.</span><span class="sxs-lookup"><span data-stu-id="34804-116">Administrators have access to all connections.</span></span> <span data-ttu-id="34804-117">Ze kunnen ook nieuwe verbindingen maken bij het opzetten van een export.</span><span class="sxs-lookup"><span data-stu-id="34804-117">They can also create new connections when setting up an export.</span></span>
+- <span data-ttu-id="34804-118">Inzenders kunnen toegang hebben tot specifieke verbindingen.</span><span class="sxs-lookup"><span data-stu-id="34804-118">Contributors can have access to specific connections.</span></span> <span data-ttu-id="34804-119">Zij zijn afhankelijk van beheerders om verbindingen te configureren en te delen.</span><span class="sxs-lookup"><span data-stu-id="34804-119">They depend on administrators to configure and share connections.</span></span> <span data-ttu-id="34804-120">Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.</span><span class="sxs-lookup"><span data-stu-id="34804-120">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
+- <span data-ttu-id="34804-121">Kijkers kunnen alleen bestaande exports bekijken, maar deze niet maken.</span><span class="sxs-lookup"><span data-stu-id="34804-121">Viewers can only view existing exports but not create them.</span></span>
 
-1. <span data-ttu-id="3ed6c-136">Ga naar **Beheer** > **Exportbestemmingen**.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-136">Go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="34804-122">Ga naar **Gegevens** > **Exports**.</span><span class="sxs-lookup"><span data-stu-id="34804-122">Go to **Data** > **Exports**.</span></span>
 
-1. <span data-ttu-id="3ed6c-137">Schakel over naar het tabblad **Mijn exportbestemmingen**.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-137">Switch to the **My export destinations** tab.</span></span>
+1. <span data-ttu-id="34804-123">Selecteer **Export toevoegen** om een nieuwe exportbestemming te maken.</span><span class="sxs-lookup"><span data-stu-id="34804-123">Select **Add export** to create a new export destination.</span></span>
 
-1. <span data-ttu-id="3ed6c-138">Selecteer **Bestemming toevoegen** om een nieuwe exportbestemming te maken.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-138">Select **Add destination** to create a new export destination.</span></span>
+1. <span data-ttu-id="34804-124">Selecteer in het deelvenster **Export instellen** welke verbinding u wilt gebruiken.</span><span class="sxs-lookup"><span data-stu-id="34804-124">In the **Set up export** pane, select which connection to use.</span></span> <span data-ttu-id="34804-125">[Verbindingen](connections.md) worden beheerd door beheerders.</span><span class="sxs-lookup"><span data-stu-id="34804-125">[Connections](connections.md) are managed by administrators.</span></span> 
 
-1. <span data-ttu-id="3ed6c-139">Selecteer in het deelvenster **Bestemming toevoegen** het **Type** exportbestemming in de vervolgkeuzelijst.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-139">In the **Add destination** pane, select the **Type** of export destination in the drop-down.</span></span>
+1. <span data-ttu-id="34804-126">Geef de vereiste details op en selecteer **Opslaan** om de export te maken.</span><span class="sxs-lookup"><span data-stu-id="34804-126">Provide the required details and select **Save** to create the export.</span></span>
 
-1. <span data-ttu-id="3ed6c-140">Geef de vereiste details op en selecteer **Volgende** om de exportbestemming te maken.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-140">Provide the required details and select **Next** to create the export destination.</span></span>
+### <a name="edit-an-export"></a><span data-ttu-id="34804-127">Een export bewerken</span><span class="sxs-lookup"><span data-stu-id="34804-127">Edit an export</span></span>
 
-<span data-ttu-id="3ed6c-141">U kunt ook **Instellen** selecteren op een tegel op het tabblad **Ontdekken**.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-141">You can also select **Set up** on a tile on the **Discover** tab.</span></span>
+1. <span data-ttu-id="34804-128">Selecteer het verticale weglatingsteken voor de exportbestemming die u wilt bewerken.</span><span class="sxs-lookup"><span data-stu-id="34804-128">Select the vertical ellipsis for the export destination you want to edit.</span></span>
 
-## <a name="view-export-destinations"></a><span data-ttu-id="3ed6c-142">Exportbestemmingen weergeven</span><span class="sxs-lookup"><span data-stu-id="3ed6c-142">View Export destinations</span></span>
+1. <span data-ttu-id="34804-129">Selecteer **Bewerken** in het vervolgkeuzemenu.</span><span class="sxs-lookup"><span data-stu-id="34804-129">Select **Edit** from the drop-down menu.</span></span>
 
-<span data-ttu-id="3ed6c-143">Nadat u exportbestemmingen hebt gemaakt, vindt u deze in een tabel op het tabblad **Mijn exportbestemmingen**. Deze tabel heeft drie kolommen:</span><span class="sxs-lookup"><span data-stu-id="3ed6c-143">After creating export destinations, you'll find them in a table on the **My export destinations** tab. This table has three columns:</span></span>
+1. <span data-ttu-id="34804-130">Wijzig de waarden die u wilt bijwerken en selecteer **Opslaan**.</span><span class="sxs-lookup"><span data-stu-id="34804-130">Change the values you want to update and select **Save**.</span></span>
 
-- <span data-ttu-id="3ed6c-144">**Weergavenaam**: de naam die u hebt ingevoerd bij het maken van de bestemming.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-144">**Display name**: The name you entered when creating the destination.</span></span>
-- <span data-ttu-id="3ed6c-145">**Type**: het type exportbestemming dat u hebt ingesteld bij het maken van de bestemming.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-145">**Type**: The export destination type you set when creating the destination.</span></span>
-- <span data-ttu-id="3ed6c-146">**Gemaakt**: de datum waarop de bestemming is gemaakt.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-146">**Created**: The date you created the destination.</span></span>
+## <a name="view-exports-and-export-details"></a><span data-ttu-id="34804-131">Exports en exportdetails weergeven</span><span class="sxs-lookup"><span data-stu-id="34804-131">View Exports and export details</span></span>
 
-## <a name="edit-an-export-destination"></a><span data-ttu-id="3ed6c-147">Een exportbestemming bewerken</span><span class="sxs-lookup"><span data-stu-id="3ed6c-147">Edit an export destination</span></span>
+<span data-ttu-id="34804-132">Nadat u exportbestemmingen hebt gemaakt, worden deze vermeld bij **Gegevens** > **Exports**.</span><span class="sxs-lookup"><span data-stu-id="34804-132">After creating export destinations, they are listed on **Data** > **Exports**.</span></span> <span data-ttu-id="34804-133">Alle gebruikers kunnen zien welke gegevens worden gedeeld en wat de meest recente status is.</span><span class="sxs-lookup"><span data-stu-id="34804-133">All users can see which data is shared and its latest status.</span></span>
 
-1. <span data-ttu-id="3ed6c-148">Selecteer het verticale weglatingsteken voor de exportbestemming die u wilt bewerken.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-148">Select the vertical ellipsis for the Export destination you want to edit.</span></span>
+1. <span data-ttu-id="34804-134">Ga naar **Gegevens** > **Exports**.</span><span class="sxs-lookup"><span data-stu-id="34804-134">Go to **Data** > **Exports**.</span></span>
 
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="3ed6c-149">![Verticaal weglatingsteken](media/export-destinations-page-ellipsis.png "Verticaal weglatingsteken")</span><span class="sxs-lookup"><span data-stu-id="3ed6c-149">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+1. <span data-ttu-id="34804-135">Gebruikers zonder machtigingen voor bewerken selecteren **Weergeven** in plaats van **Bewerken** om de exportdetails te bekijken.</span><span class="sxs-lookup"><span data-stu-id="34804-135">Users without edit permissions select **View** instead of **Edit** see the export details.</span></span>
 
-1. <span data-ttu-id="3ed6c-150">Selecteer **Bewerken** in de vervolgkeuzelijst.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-150">Select **Edit** from the dropdown menu.</span></span>
+1. <span data-ttu-id="34804-136">Dit zijpaneel toont de instellingen van deze export.</span><span class="sxs-lookup"><span data-stu-id="34804-136">This side pane shows the set up of this export.</span></span> <span data-ttu-id="34804-137">Zonder bewerkingsrechten kunt u geen waarden wijzigen.</span><span class="sxs-lookup"><span data-stu-id="34804-137">Without edit permissions, you can't change values.</span></span> <span data-ttu-id="34804-138">Selecteer **Sluiten** om terug te keren naar de pagina met exports.</span><span class="sxs-lookup"><span data-stu-id="34804-138">Select **Close** to return to the exports page.</span></span>
 
-1. <span data-ttu-id="3ed6c-151">Wijzig de waarden die moeten worden bijgewerkt en selecteer **Opslaan**.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-151">Change the values that require update and select **Save**.</span></span>
+## <a name="run-exports-on-demand"></a><span data-ttu-id="34804-139">Exports op aanvraag uitvoeren</span><span class="sxs-lookup"><span data-stu-id="34804-139">Run exports on demand</span></span>
 
-## <a name="export-data-on-demand"></a><span data-ttu-id="3ed6c-152">Gegevens op aanvraag exporteren</span><span class="sxs-lookup"><span data-stu-id="3ed6c-152">Export data on demand</span></span>
+<span data-ttu-id="34804-140">Na het configureren van een export, wordt deze uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab) zolang er een werkende verbinding is.</span><span class="sxs-lookup"><span data-stu-id="34804-140">After configuring an export, it will run with every [scheduled refresh](system.md#schedule-tab) as long as it has a working connection.</span></span>
 
-<span data-ttu-id="3ed6c-153">Na het configureren van een connector voor een exportbestemming, worden exports uitgevoerd bij elke [geplande vernieuwing](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="3ed6c-153">After configuring a connector for an export destination, exports will run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+<span data-ttu-id="34804-141">Als u gegevens wilt exporteren zonder te wachten op een geplande vernieuwing, gaat u naar **Gegevens** > **Exports**.</span><span class="sxs-lookup"><span data-stu-id="34804-141">To export data without waiting for a scheduled refresh, go to **Data** > **Exports**.</span></span> <span data-ttu-id="34804-142">U hebt twee opties:</span><span class="sxs-lookup"><span data-stu-id="34804-142">You have two options:</span></span>
 
-<span data-ttu-id="3ed6c-154">Als u gegevens wilt exporteren zonder te wachten op een geplande vernieuwing, gaat u naar het tabblad **Mijn exportbestemmingen** onder **Beheer** > **Exportbestemmingen**.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-154">To export data without waiting for a scheduled refresh, go the **My export destinations** tab on **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="34804-143">Als u alle exports wilt uitvoeren, selecteert u **Alles uitvoeren** op de opdrachtbalk.</span><span class="sxs-lookup"><span data-stu-id="34804-143">To run all exports, select **Run all** in the command bar.</span></span> 
+- <span data-ttu-id="34804-144">Als u een enkele export wilt uitvoeren, selecteert u het beletselteken (...) in een lijstitem en kiest u vervolgens **Uitvoeren**.</span><span class="sxs-lookup"><span data-stu-id="34804-144">To run a single export, select the ellipsis (...) on a list item and then choose **Run**.</span></span>
 
-> [!div class="mx-imgBorder"]
-> <span data-ttu-id="3ed6c-155">![Verticaal weglatingsteken](media/export-destinations-page-ellipsis.png "Verticaal weglatingsteken")</span><span class="sxs-lookup"><span data-stu-id="3ed6c-155">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+## <a name="remove-an-export"></a><span data-ttu-id="34804-145">Een export verwijderen</span><span class="sxs-lookup"><span data-stu-id="34804-145">Remove an Export</span></span>
 
-- <span data-ttu-id="3ed6c-156">Selecteer **Exporteren** boven de lijst om de export uit te voeren naar alle exportbestemmingen tegelijk.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-156">Select **Export** above the list to run the export to all export destinations simultaneously.</span></span>
-- <span data-ttu-id="3ed6c-157">Selecteer het beletselteken (...) na een lijstitem en kies vervolgens de optie **Exporteren** om de export uit te voeren voor een enkele exportbestemming.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-157">Select the ellipsis (...) after a list item and then choose the **Export** option to run the export for a single export destination.</span></span>
+1. <span data-ttu-id="34804-146">Ga naar **Gegevens** > **Exports**.</span><span class="sxs-lookup"><span data-stu-id="34804-146">Go to **Data** > **Exports**.</span></span>
 
-## <a name="remove-an-export-destination"></a><span data-ttu-id="3ed6c-158">Exportbestemming verwijderen</span><span class="sxs-lookup"><span data-stu-id="3ed6c-158">Remove an Export destination</span></span>
+1. <span data-ttu-id="34804-147">Selecteer het verticale weglatingsteken voor de export die u wilt verwijderen.</span><span class="sxs-lookup"><span data-stu-id="34804-147">Select the vertical ellipsis for the Export you want to remove.</span></span>
 
-<span data-ttu-id="3ed6c-159">Als u een exportbestemming wilt verwijderen, begint u op de pagina **Exportbestemmingen**.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-159">To remove an Export destination, start from the main **Export destinations** page.</span></span>
+1. <span data-ttu-id="34804-148">Selecteer **Verwijderen** in het vervolgkeuzemenu.</span><span class="sxs-lookup"><span data-stu-id="34804-148">Select **Remove** from the dropdown menu.</span></span>
 
-1. <span data-ttu-id="3ed6c-160">Selecteer het verticale weglatingsteken voor de exportbestemming die u wilt verwijderen.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-160">Select the vertical ellipsis for the Export destination you want to remove.</span></span>
-
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="3ed6c-161">![Verticaal weglatingsteken](media/export-destinations-page-ellipsis.png "Verticaal weglatingsteken")</span><span class="sxs-lookup"><span data-stu-id="3ed6c-161">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
-
-2. <span data-ttu-id="3ed6c-162">Selecteer **Verwijderen** in het vervolgkeuzemenu.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-162">Select **Remove** from the dropdown menu.</span></span>
-
-3. <span data-ttu-id="3ed6c-163">Bevestig de verwijdering door **Verwijderen** te selecteren op het bevestigingsscherm.</span><span class="sxs-lookup"><span data-stu-id="3ed6c-163">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
+1. <span data-ttu-id="34804-149">Bevestig de verwijdering door **Verwijderen** te selecteren op het bevestigingsscherm.</span><span class="sxs-lookup"><span data-stu-id="34804-149">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
