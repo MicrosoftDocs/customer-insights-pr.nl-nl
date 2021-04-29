@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598624"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896459"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Overzicht van doelgroepinzichten voor Dynamics 365 Customer Insights
 
@@ -27,9 +27,9 @@ Doelgroepinzichten helpt u een dieper inzicht in uw klanten op te bouwen. Verbin
   - Verbind en combineer uw gegevens met gemak: verzamel transactie-, waarnemings- en gedragsgegevens van populaire [gegevensbronnen door gebruik te maken van vooraf gebouwde connectors](data-sources.md).
   - Transformeer klantgegevens op intelligente wijze: bouw uniforme klantprofielen die voldoen aan het [Common Data Model](/common-data-model/). Herken klantidentiteiten met op AI/ML-gebaseerde aanbevelingen.
 
-- **Verrijk met doelgroepkennis uit Microsoft Graph**
+- **Verrijken met doelgroepkennis**
 
-  - Bouw rijkere klantprofielen op door [doelgroepinformatie te integreren in Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Bouw rijkere klantprofielen op door [verrijkte data op te nemen](enrichment-hub.md).  
 
 - **Maak krachtige bedrijfsprocessen en gepersonaliseerde klantervaringen**
 
@@ -43,7 +43,7 @@ Doelgroepinzichten helpt u een dieper inzicht in uw klanten op te bouwen. Verbin
 
   - Toegang tot een rijke verzameling van connectors om al uw klantgegevens op te nemen.
   - Mogelijkheid om klantgegevens te verenigen en om te zetten in het [Common Data Model](/common-data-model/)-formaat.
-  - Verrijk klantgegevens met inzichten van doelgroepintelligentie in Microsoft Graph, zoals merkaffiniteit en interesses.
+  - Verrijk klantgegevens met inzichten van doelgroepkennis, zoals merkaffiniteit en interesses.
   - 'Clicks-not-code'-configuratie en foutopsporingservaring om doelgroepinzichten eenvoudig te configureren en potentiële problemen te identificeren.
   - Schoon klantgegevens op en standaardiseer ze in verschillende bronnen met aanbevelingen op basis van AI.  
 

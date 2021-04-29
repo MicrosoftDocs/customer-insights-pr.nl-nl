@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens naar Adobe Campaign Standard exporteren
 description: Ontdek hoe u segmenten voor doelgroepinzichten gebruikt in Adobe Campaign Standard.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596309"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760275"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Customer Insights-segmenten gebruiken in Adobe Campaign Standard (preview)
 
@@ -48,15 +48,21 @@ De aanbiedings-e-mail die u wilt verzenden, bevat de voornaam, achternaam en ein
 
 ## <a name="export-your-target-audience"></a>Uw doelgroep exporteren
 
+### <a name="configure-a-connection"></a>Een verbinding configureren
+
 Nu onze doelgroep is geïdentificeerd, kunnen we de export van doelgroepinzichten naar een Azure Blob Storage-account configureren.
 
-1. Ga in doelgroepinzichten naar **Beheer** > **Exportbestemmingen**.
+1. Ga in doelgroepinzichten naar **Beheerder** > **Verbindingen**.
 
-1. Selecteer **Instellen** in de tegel **Adobe Campaign**​.
+1. Selecteer **Verbinding toevoegen** en kies **Adobe Campaign** om de verbinding te configureren of selecteer **Instellen** op de **Adobe Campaign**-tegel
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Configuratietegel voor Adobe Campaign Standard.":::
 
-1. Geef een **weergavenaam** voor deze nieuwe exportbestemming op en voer vervolgens de **accountnaam**, **accountsleutel** en **container** in van de Azure Blob Storage-account waarnaar u het segment wilt exporteren.  
+1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
+
+1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+
+1. Voer een waarde in de velden **Gebruikersnaam**, **Accountsleutel** en **Container** in van het Azure Blob Storage-account waarnaar u het segment wilt exporteren.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Schermopname van de opslagaccountconfiguratie. "::: 
 
@@ -64,7 +70,17 @@ Nu onze doelgroep is geïdentificeerd, kunnen we de export van doelgroepinzichte
 
    - Zie voor meer informatie over het maken van een container [Een container maken](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Selecteer **Volgende**.
+1. Selecteer **Opslaan** om de verbinding te voltooien.
+
+### <a name="configure-an-export"></a>Een export configureren
+
+U kunt deze export configureren als u toegang hebt tot een verbinding van dit type. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+
+1. Ga naar **Gegevens** > **Exports**.
+
+1. Selecteer **Export toevoegen** om een nieuwe export te maken.
+
+1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Adobe Campaign. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
 
 1. Sluit het segment dat u u wilt exporteren. In dit voorbeeld is het **ChurnProneCustomers**​.
 
@@ -83,11 +99,9 @@ Nu onze doelgroep is geïdentificeerd, kunnen we de export van doelgroepinzichte
 
 1. Selecteer **Opslaan**.
 
-Nadat u de exportbestemming hebt opgeslagen, vindt u deze op **Beheer** > **Exports** > **Mijn exportbestemmingen**.
+Nadat u de exportbestemming hebt opgeslagen, vindt u deze onder **Gegevens** > **Exports**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Schermopname met een lijst met exports en gemarkeerd voorbeeldsegment.":::
-
-U kunt [het segment nu op aanvraag exporteren](export-destinations.md#export-data-on-demand)​. De export wordt ook uitgevoerd bij elke [geplande vernieuwing](system.md).
+U kunt [het segment nu op aanvraag exporteren](export-destinations.md#run-exports-on-demand)​. De export wordt ook uitgevoerd bij elke [geplande vernieuwing](system.md).
 
 > [!NOTE]
 > Zorg ervoor dat het aantal records in het geëxporteerde segment binnen de toegestane limiet van uw Adobe Campaign Standard-licentie valt.

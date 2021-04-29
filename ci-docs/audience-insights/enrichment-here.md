@@ -1,7 +1,7 @@
 ---
 title: Verrijking van de verrijking door derden van HERE Technologies
 description: Algemene informatie over de verrijking door derden van HERE Technologies.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 8e8d6bfea4e0df54682501f60759c24c893444af
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597735"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896045"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Verrijking van klantprofielen met HERE Technologies (preview)
 
@@ -26,35 +26,54 @@ Om HERE Technologies-verrijkingen te configureren, moet aan de volgende voorwaar
 
 - U moet een actief abonnement hebben voor HERE Technologies. Om een abonnement te nemen, kunt u [hier registreren](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) of rechtstreeks [contact opnemen met HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Meer informatie over locatieverrijking door HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- U hebt de HERE Technologies API-sleutel.
+- Er is een HERE-[verbinding](connections.md) beschikbaar *of* u hebt [beheerdersmachtigingen](permissions.md#administrator) en de API-sleutel van HERE Technologies.
 
-- U hebt [Beheerders](permissions.md#administrator)machtigingen.
+## <a name="configure-the-enrichment"></a>De verrijking configureren
 
-## <a name="configuration"></a>Configuratie
+1. Ga naar **Gegevens** > **Verrijking**. 
 
-1. Ga naar **Gegevens** > **Verrijking**.
-
-1. Selecteer **Mijn gegevens verrijken** op de HERE Technologies-tegel.
+1. Selecteer **Mijn gegevens verrijken** op de tegel van HERE Technologies en selecteer vervolgens **Aan de slag**.
 
    > [!div class="mx-imgBorder"]
    > ![HERE Technologies-tegel](media/HERE-tile.png "HERE Technologies-tegel")
 
-1. Voer een actieve **HERE Technologies API-sleutel** in. Bekijk en geef toestemming voor **Gegevensprivacy en naleving** door het selectievakje **Ik ga akkoord** in te schakelen. 
+1. Selecteer een [verbinding](connections.md) in de vervolgkeuzelijst. Neem contact op met een beheerder als er geen verbinding beschikbaar is. Als u een beheerder bent, kunt u een verbinding maken door **Verbinding toevoegen** te selecteren. Kies **HERE Technologies** uit de vervolgkeuzelijst. 
 
-1. Bevestig de invoer door **Verbinden met HERE** te selecteren.
+1. Selecteer **Verbinding maken met HERE Technologies** om de selectie te bevestigen.
 
-1.  Selecteer **Gegevens toevoegen** en kies de **Klantgegevensset** die u wilt verrijken met locatiegegevens van HERE Technologies. U kunt de entiteit **Klant** selecteren om al uw klantprofielen te verrijken of een segmententiteit selecteren om alleen klantprofielen in dat segment te verrijken.
+1.  Selecteer **Volgende** en kies de **klantgegevensset** die u wilt verrijken met locatie gegevens van HERE Technologies. U kunt de entiteit **Klant** selecteren om al uw klantprofielen te verrijken of een segmententiteit selecteren om alleen klantprofielen in dat segment te verrijken.
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Schermopname bij het kiezen van de klantgegevensset.":::
 
-1. Kies of u velden aan het primaire en/of secundaire adres wilt toewijzen. U kunt voor beide adressen een veldtoewijzing specificeren (bijvoorbeeld een privé- en een werkadres) en de profielen voor beide adressen afzonderlijk verrijken. Selecteer **Volgende**.
+1. Kies of u velden aan het primaire en/of secundaire adres wilt toewijzen. U kunt voor beide adressen een veldtoewijzing specificeren en de profielen voor beide adressen afzonderlijk verrijken. Als er bijvoorbeeld een huisadres en een zakelijk adres is. Selecteer **Volgende**.
 
 1. Definieer welke velden van uw geharmoniseerde profielen moeten worden gebruikt om te zoeken naar overeenkomende locatiegegevens van HERE Technologies. De velden **Straat 1** en **Postcode** zijn vereist voor het geselecteerde primaire en/of secundaire adres. Voor een hogere matchnauwkeurigheid kunnen meer velden worden toegevoegd.
 
    > [!div class="mx-imgBorder"]
    > ![Configuratiepagina voor verrijking van HERE Technologies](media/enrichment-HERE-configuration.png "Configuratiepagina voor verrijking van HERE Technologies")
 
-1. Selecteer **Toepassen** om de veldtoewijzing te voltooien.
+1. Selecteer **Volgende** om de veldtoewijzing te voltooien.
+
+1. Geef een naam op voor de verrijking. 
+
+1. Selecteer **Verrijking opslaan** na het bekijken van uw keuzes.
+
+## <a name="configure-the-connection-for-here-technologies"></a>De verbinding configureren voor HERE technologies 
+
+U moet een beheerder zijn om verbindingen te kunnen configureren. Selecteer **Verbinding toevoegen** bij het configureren van een verrijking *of* ga naar **Beheerder** > **Verbindingen** en selecteer **Instellen** op de HERE technologies-tegel.
+
+1. Voer een naam in voor de verbinding in het vak **Weergavenaam**.
+
+1. Geef een geldige API-sleutel van HERE Technologies op.
+
+1. **Gegevensprivacy en naleving** bekijken en toestemming geven door het selectievakje **Ik ga akkoord** in te schakelen
+
+1. Selecteer **Verifiëren** om de configuratie te valideren.
+
+1. Voltooi de verificatie en selecteer **Opslaan**.
+
+> [!div class="mx-imgBorder"]
+   > ![Configuratiepagina voor HERE technologies-verbinding](media/enrichment-HERE-connection.png "Configuratiepagina voor HERE technologies-verbinding")
 
 ## <a name="enrichment-results"></a>Verrijkingsresultaten
 

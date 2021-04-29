@@ -1,7 +1,7 @@
 ---
-title: Exportbestemmingen
-description: Gegevens exporteren en exportbestemmingen beheren.
-ms.date: 07/21/2020
+title: Gegevens exporteren vanuit Customer Insights
+description: Beheer exports om gegevens te delen.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596079"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896137"
 ---
-# <a name="export-destinations-preview-overview"></a>Overzicht exportbestemmingen (preview)
+# <a name="exports-preview-overview"></a>Overzicht van Exports (preview)
 
-De pagina **Exportbestemmingen** bevat alle locaties die u hebt ingesteld om gegevens naar te exporteren. U kunt ook nieuwe bestemmingen toevoegen voor export. Hierin worden verder de momenteel beschikbare exportopties weergegeven. Krijg een snel overzicht, een beschrijving en ontdek wat u kunt doen met elke uitbreidingsoptie. Exporteer uniforme profielen, meetwaarden en segmenten naar ondersteunde apps die relevant zijn voor uw bedrijf.
+De pagina **Exports** toont u alle geconfigureerde exports. Exports delen specifieke gegevens met verschillende toepassingen. Ze kunnen klantprofielen of entiteiten, schema's en toewijzingsdetails bevatten. Elke export vereist een [verbinding, opgezet door een beheerder, om de verificatie en toegang te beheren](connections.md).
 
-Ga naar **Beheer** > **Exportbestemmingen** om de volgende uitbreidingsopties te vinden:
+> [!NOTE]
+> Tot maart 2021 creëerden exports automatisch een verbinding met de bijbehorende service. Exports vereisen nu een [verbinding die is gemaakt en gedeeld door een beheerder](connections.md) voordat u ze kunt maken.
 
-- [Adobe Campaign Standard](export-adobe-campaign-standard.md)
-- [Adobe Experience Platform](export-adobe-experience-platform.md)
-- [AdRoll](export-adroll.md)
-- [Autopilot](export-autopilot.md)
-- [Azure Blob-opslag](export-azure-blob-storage.md)
-- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
-- [Bot voor Microsoft Teams](export-teams-bot.md)
-- [Customer Insights-API](apis.md)
-- [DotDigital](export-dotdigital.md)
-- [Dynamics 365 Customer Service (invoegtoepassing Klantkaart)](customer-card-add-in.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [Dynamics 365 Verkoophub (invoegtoepassing Klantkaart)](customer-card-add-in.md)
-- [Facebook Ads Manager](export-facebook.md)
-- [Google Ads](export-google-ads.md)
-- [LiveRamp&reg;](export-liveramp.md)
-- [Mailchimp](export-mailchimp.md)
-- [Marketo](export-marketo.md)
-- [Power Automate](export-power-automate.md)
-- [Power Apps](export-power-apps.md)
-- [Power BI](export-power-bi.md)
-- [SendGrid](export-sendgrid.md)
-- [SFTP](export-sftp.md)
+Ga naar **Gegevens** > **Exports** om de pagina met exports te bekijken. Alle gebruikersrollen hebben toegang om geconfigureerde exports te bekijken. Gebruik van het zoekveld in de opdrachtbalk om exports te zoeken op naam, verbindingsnaam of verbindingstype.
 
-## <a name="add-a-new-export-destination"></a>Een nieuwe exportbestemming toevoegen
+## <a name="set-up-a-new-export"></a>Een nieuwe export instellen
 
-Om exportbestemmingen toe te voegen, hebt u [Beheerdersmachtigingen](permissions.md) nodig. Als u exporteert naar Microsoft-services, gaan we ervan uit dat beide services zich in dezelfde organisatie bevinden.
+Als u een export wilt instellen of bewerken, moet u over verbindingen beschikken. Verbindingen zijn afhankelijk van uw [gebruikersrol](permissions.md):
+- Beheerders hebben toegang tot alle verbindingen. Ze kunnen ook nieuwe verbindingen maken bij het opzetten van een export.
+- Inzenders kunnen toegang hebben tot specifieke verbindingen. Zij zijn afhankelijk van beheerders om verbindingen te configureren en te delen. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
+- Kijkers kunnen alleen bestaande exports bekijken, maar deze niet maken.
 
-1. Ga naar **Beheer** > **Exportbestemmingen**.
+1. Ga naar **Gegevens** > **Exports**.
 
-1. Schakel over naar het tabblad **Mijn exportbestemmingen**.
+1. Selecteer **Export toevoegen** om een nieuwe exportbestemming te maken.
 
-1. Selecteer **Bestemming toevoegen** om een nieuwe exportbestemming te maken.
+1. Selecteer in het deelvenster **Export instellen** welke verbinding u wilt gebruiken. [Verbindingen](connections.md) worden beheerd door beheerders. 
 
-1. Selecteer in het deelvenster **Bestemming toevoegen** het **Type** exportbestemming in de vervolgkeuzelijst.
+1. Geef de vereiste details op en selecteer **Opslaan** om de export te maken.
 
-1. Geef de vereiste details op en selecteer **Volgende** om de exportbestemming te maken.
-
-U kunt ook **Instellen** selecteren op een tegel op het tabblad **Ontdekken**.
-
-## <a name="view-export-destinations"></a>Exportbestemmingen weergeven
-
-Nadat u exportbestemmingen hebt gemaakt, vindt u deze in een tabel op het tabblad **Mijn exportbestemmingen**. Deze tabel heeft drie kolommen:
-
-- **Weergavenaam**: de naam die u hebt ingevoerd bij het maken van de bestemming.
-- **Type**: het type exportbestemming dat u hebt ingesteld bij het maken van de bestemming.
-- **Gemaakt**: de datum waarop de bestemming is gemaakt.
-
-## <a name="edit-an-export-destination"></a>Een exportbestemming bewerken
+### <a name="edit-an-export"></a>Een export bewerken
 
 1. Selecteer het verticale weglatingsteken voor de exportbestemming die u wilt bewerken.
 
-   > [!div class="mx-imgBorder"]
-   > ![Verticaal weglatingsteken](media/export-destinations-page-ellipsis.png "Verticaal weglatingsteken")
+1. Selecteer **Bewerken** in het vervolgkeuzemenu.
 
-1. Selecteer **Bewerken** in de vervolgkeuzelijst.
+1. Wijzig de waarden die u wilt bijwerken en selecteer **Opslaan**.
 
-1. Wijzig de waarden die moeten worden bijgewerkt en selecteer **Opslaan**.
+## <a name="view-exports-and-export-details"></a>Exports en exportdetails weergeven
 
-## <a name="export-data-on-demand"></a>Gegevens op aanvraag exporteren
+Nadat u exportbestemmingen hebt gemaakt, worden deze vermeld bij **Gegevens** > **Exports**. Alle gebruikers kunnen zien welke gegevens worden gedeeld en wat de meest recente status is.
 
-Na het configureren van een connector voor een exportbestemming, worden exports uitgevoerd bij elke [geplande vernieuwing](system.md#schedule-tab).
+1. Ga naar **Gegevens** > **Exports**.
 
-Als u gegevens wilt exporteren zonder te wachten op een geplande vernieuwing, gaat u naar het tabblad **Mijn exportbestemmingen** onder **Beheer** > **Exportbestemmingen**.
+1. Gebruikers zonder machtigingen voor bewerken selecteren **Weergeven** in plaats van **Bewerken** om de exportdetails te bekijken.
 
-> [!div class="mx-imgBorder"]
-> ![Verticaal weglatingsteken](media/export-destinations-page-ellipsis.png "Verticaal weglatingsteken")
+1. Dit zijpaneel toont de instellingen van deze export. Zonder bewerkingsrechten kunt u geen waarden wijzigen. Selecteer **Sluiten** om terug te keren naar de pagina met exports.
 
-- Selecteer **Exporteren** boven de lijst om de export uit te voeren naar alle exportbestemmingen tegelijk.
-- Selecteer het beletselteken (...) na een lijstitem en kies vervolgens de optie **Exporteren** om de export uit te voeren voor een enkele exportbestemming.
+## <a name="run-exports-on-demand"></a>Exports op aanvraag uitvoeren
 
-## <a name="remove-an-export-destination"></a>Exportbestemming verwijderen
+Na het configureren van een export, wordt deze uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab) zolang er een werkende verbinding is.
 
-Als u een exportbestemming wilt verwijderen, begint u op de pagina **Exportbestemmingen**.
+Als u gegevens wilt exporteren zonder te wachten op een geplande vernieuwing, gaat u naar **Gegevens** > **Exports**. U hebt twee opties:
 
-1. Selecteer het verticale weglatingsteken voor de exportbestemming die u wilt verwijderen.
+- Als u alle exports wilt uitvoeren, selecteert u **Alles uitvoeren** op de opdrachtbalk. 
+- Als u een enkele export wilt uitvoeren, selecteert u het beletselteken (...) in een lijstitem en kiest u vervolgens **Uitvoeren**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Verticaal weglatingsteken](media/export-destinations-page-ellipsis.png "Verticaal weglatingsteken")
+## <a name="remove-an-export"></a>Een export verwijderen
 
-2. Selecteer **Verwijderen** in het vervolgkeuzemenu.
+1. Ga naar **Gegevens** > **Exports**.
 
-3. Bevestig de verwijdering door **Verwijderen** te selecteren op het bevestigingsscherm.
+1. Selecteer het verticale weglatingsteken voor de export die u wilt verwijderen.
+
+1. Selecteer **Verwijderen** in het vervolgkeuzemenu.
+
+1. Bevestig de verwijdering door **Verwijderen** te selecteren op het bevestigingsscherm.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

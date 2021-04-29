@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597183"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906850"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transactieverloop voorspellen (preview)
 
@@ -46,6 +46,14 @@ Met deze functie kunt u voorspellen of een klant uw producten of services binnen
         - **Tijdstempel:** de datum en tijd van de gebeurtenis die wordt geïdentificeerd door de primaire sleutel.
         - **Gebeurtenis:** de naam van de gebeurtenis die u wilt gebruiken. Een veld met de naam 'UserAction' in een supermarkt kan bijvoorbeeld een kortingsbon zijn die door de klant wordt gebruikt.
         - **Details:** gedetailleerde informatie over de gebeurtenis. Een veld met de naam 'CouponValue' in een supermarkt kan bijvoorbeeld de valutawaarde van de kortingsbon zijn.
+- Voorgestelde gegevenskenmerken:
+    - Voldoende historische gegevens: transactiegegevens voor minimaal het dubbele van het geselecteerde tijdvenster. Bij voorkeur twee tot drie jaar abonnementsgegevens. 
+    - Meerdere aankopen per klant: idealiter ten minste twee transacties per klant.
+    - Aantal klanten: minimaal 10 klantprofielen, bij voorkeur meer dan 1.000 unieke klanten. Het model zal mislukken met minder dan 10 klanten en onvoldoende historische gegevens.
+    - Compleetheid van gegevens: minder dan 20% ontbrekende waarden in het gegevensveld van de opgegeven entiteit.
+
+> [!NOTE]
+> Voor een bedrijf met een hoge aankoopfrequentie van klanten (om de paar weken) wordt het aanbevolen om een korter voorspellingsvenster en verloopdefinitie te selecteren. Kies voor een lage aankoopfrequentie (om de paar maanden of eenmaal per jaar) een langer voorspellingsvenster en verloopdefinitie.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Een voorspelling voor transactieverloop maken
 
@@ -129,7 +137,9 @@ Met deze functie kunt u voorspellen of een klant uw producten of services binnen
 1. Selecteer de voorspelling die u wilt beoordelen.
    - **Naam voorspelling:** naam van de voorspelling die bij het maken is opgegeven.
    - **Type voorspelling:** type model dat is gebruikt voor de voorspelling
-   - **Uitvoerentiteit:** naam van de entiteit om de uitvoer van de voorspelling op te slaan. U kunt een entiteit met deze naam vinden onder **Gegevens** > **Entiteiten**.
+   - **Uitvoerentiteit:** naam van de entiteit om de uitvoer van de voorspelling op te slaan. U kunt een entiteit met deze naam vinden onder **Gegevens** > **Entiteiten**.    
+     In de uitvoerentiteit is *ChurnScore* de voorspelde waarschijnlijkheid van verloop en *IsChurn* een binair label gebaseerd op *ChurnScore* met een drempel van 0,5. De standaarddrempel werkt mogelijk niet voor uw scenario. [Maak een nieuw segment](segments.md#create-a-new-segment) met uw gewenste drempel.
+     Niet alle klanten hoeven actieve klanten te zijn. Sommigen van hen hebben misschien al een lange tijd geen activiteit gehad en worden al als verlopen beschouwd, op basis van uw verloopdefinitie. Het voorspellen van het verlooprisico voor klanten die al zijn verlopen is niet nuttig omdat ze niet de beoogde doelgroep zijn.
    - **Veld Voorspeld:** dit veld wordt alleen ingevuld voor bepaalde soorten voorspellingen en wordt niet gebruikt bij verloopvoorspelling.
    - **Status:** de status of the voorspellingsuitvoering.
         - **In de wachtrij:** voorspelling wacht tot andere processen worden uitgevoerd.

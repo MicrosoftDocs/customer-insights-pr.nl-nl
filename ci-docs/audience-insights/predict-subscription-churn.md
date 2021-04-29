@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595650"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906896"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Voorspelling voor abonnementsverloop (preview)
 
@@ -49,6 +49,12 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
         - **Tijdstempel:** de datum en tijd van de gebeurtenis die wordt geïdentificeerd door de primaire sleutel.
         - **Gebeurtenis:** de naam van de gebeurtenis die u wilt gebruiken. Een veld met de naam 'UserAction' in een streaming-videoservice kan bijvoorbeeld de waarde 'Bekeken' hebben.
         - **Details:** gedetailleerde informatie over de gebeurtenis. Een veld met de naam 'ShowTitle' in een streaming-videoservice kan bijvoorbeeld de waarde hebben van een video die door de klant is bekeken.
+- Voorgestelde gegevenskenmerken:
+    - Voldoende historische gegevens: abonnementsgegevens voor minimaal het dubbele van het geselecteerde tijdvenster. Bij voorkeur twee tot drie jaar abonnementsgegevens.
+    - Abonnementsstatus: gegevens omvatten actieve en inactieve abonnementen voor elke klant, dus er zijn meerdere vermeldingen per klant-id.
+    - Aantal klanten: minimaal 10 klantprofielen, bij voorkeur meer dan 1.000 unieke klanten. Het model zal mislukken met minder dan 10 klanten en onvoldoende historische gegevens.
+    - Compleetheid van gegevens: minder dan 20% ontbrekende waarden in het gegevensveld van de opgegeven entiteit.
+   
    > [!NOTE]
    > U hebt minimaal twee activiteitsrecords nodig voor 50% van de klanten waarvoor u het verloop wilt berekenen.
 
@@ -67,7 +73,7 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
 ### <a name="define-customer-churn"></a>Klantverloop definiëren
 
 1. Voer het aantal **Dagen sinds het abonnement is beëindigd** in waarna het bedrijf het abonnement van een klant als verlopen beschouwt. Deze periode is meestal gekoppeld aan zakelijke activiteiten zoals aanbiedingen of andere marketinginspanningen om te voorkomen dat de klant verloren gaat.
-1. Voer het aantal **Dagen om de toekomst te kijken om verloop te voorspellen** in om een venster in te stellen voor het voorspellen van verloop. Bijoorbeeld om het risico van klantverloop voor uw klanten in de komende 90 dagen te voorspellen voor afstemming van uw marketinginspanningen tot behoud. Het voorspellen van het verlooprisico voor langere of kortere perioden kan het moeilijker maken om de factoren in uw verlooprisicoprofiel aan te pakken, maar dit is sterk afhankelijk van uw specifieke zakelijke vereisten. Selecteer **Volgende** om door te gaan
+1. Voer het aantal **Dagen om de toekomst te kijken om verloop te voorspellen** in om een venster in te stellen voor het voorspellen van verloop. Bijoorbeeld om het risico van klantverloop voor uw klanten in de komende 90 dagen te voorspellen voor afstemming van uw marketinginspanningen tot behoud. Het voorspellen van het verlooprisico voor langere of kortere perioden kan het moeilijker maken om de factoren in uw verlooprisicoprofiel aan te pakken, afhankelijk van uw specifieke zakelijke vereisten. Selecteer **Volgende** om door te gaan
    >[!TIP]
    > U kunt op elk gewenst moment **Opslaan en sluiten** selecteren om de voorspelling als concept op te slaan. U vindt de conceptvoorspelling op het tabblad **Mijn voorspellingen** om door te gaan.
 
@@ -113,7 +119,8 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
 1. Selecteer de voorspelling die u wilt beoordelen.
    - **Voorspellingsnaam:** de naam van de voorspelling die is opgegeven bij het maken ervan.
    - **Voorspellingstype:** het type model dat voor de voorspelling is gebruikt
-   - **Uitvoerentiteit:** naam van de entiteit om de uitvoer van de voorspelling op te slaan. U kunt een entiteit met deze naam vinden onder **Gegevens** > **Entiteiten**.
+   - **Uitvoerentiteit:** naam van de entiteit om de uitvoer van de voorspelling op te slaan. U kunt een entiteit met deze naam vinden onder **Gegevens** > **Entiteiten**.    
+     In de uitvoerentiteit is *ChurnScore* de voorspelde waarschijnlijkheid van verloop en *IsChurn* een binair label gebaseerd op *ChurnScore* met een drempel van 0,5. De standaarddrempel werkt mogelijk niet voor uw scenario. [Maak een nieuw segment](segments.md#create-a-new-segment) met uw gewenste drempel.
    - **Voorspeld veld:** dit veld wordt alleen ingevuld voor sommige typen voorspellingen en wordt niet gebruikt in de voorspelling voor abonnementsverloop.
    - **Status:** de huidige status van de uitvoering van de voorspelling.
         - **In wachtrij:** de voorspelling wacht momenteel op het uitvoeren van andere processen.

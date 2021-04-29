@@ -1,7 +1,7 @@
 ---
 title: Geharmoniseerde klantprofielen verrijken
 description: Gebruik mogelijkheden om uw klantgegevens te verrijken.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597689"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895999"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Verrijking voor klantprofielen (preview)
 
@@ -27,8 +27,8 @@ U hebt de machtigingen Inzender of Beheerder nodig om verrijkingen te kunnen mak
 
 Op het tabblad **Ontdekken** vindt u de volgende verrijkingen:
 
-- [Merken](enrichment-microsoft-graph.md) die worden verstrekt door Microsoft Graph
-- [Interesses](enrichment-microsoft-graph.md) die worden verstrekt door Microsoft Graph
+- [Merken](enrichment-microsoft.md) die worden geleverd door Microsoft
+- [Interesses](enrichment-microsoft.md) die worden geleverd door Microsoft
 - [Bedrijfsgegevens](enrichment-leadspace.md) worden verstrekt door Leadspace
 - [Demografische gegevens](enrichment-experian.md) die worden geleverd door Experian
 - [Locatiegegevens](enrichment-here.md) worden geleverd door HERE Technologies
@@ -40,7 +40,7 @@ Op het tabblad **Mijn verrijkingen** kunt u de verrijkingen zien die u hebt geco
 
 Ga naar **Mijn verrijkingen** om alle geconfigureerde verrijkingen te zien. Elke verrijking wordt weergegeven als een rij met aanvullende informatie over de verrijking.
 
-Selecteer een verrijking om de beschikbare opties te zien. U kunt ook het beletselteken (...) op een lijstitem selecteren om de opties te zien.
+Selecteer een verrijking om de beschikbare opties te zien. U kunt ook het beletselteken (...) in een lijstitem selecteren om de opties te zien.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opties om verrijkingen in de lijst met verrijkingen te beheren":::
 
@@ -52,5 +52,12 @@ Selecteer een verrijking om de beschikbare opties te zien. U kunt ook het belets
 
 U kunt meerdere verrijkingen tegelijk uitvoeren of deactiveren door ze in de lijst te selecteren. Opties voor bekijken en bewerken zijn niet beschikbaar als bulkactie en werken slechts voor één verrijking tegelijk.
 
+## <a name="enrichments-and-connections"></a>Verrijkingen en verbindingen
+
+Verrijkingen van derden worden geconfigureerd met [verbindingen](connections.md), die een beheerder instelt met referenties en die toestemming verlenen voor gegevensoverdracht. De verbinding kan door beheerders en inzenders worden gebruikt voor het configureren van verrijkingen.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Meerdere verrijkingen van hetzelfde type
+
+De entiteit die moet worden verrijkt, wordt gespecificeerd tijdens de verrijkingsconfiguratie, waardoor u de mogelijkheid hebt om slechts een subset van uw profielen te verrijken. Verrijk bijvoorbeeld alleen gegevens voor een specifiek segment. U kunt meerdere verrijkingen van hetzelfde type configureren en dezelfde verbinding opnieuw gebruiken. Sommige verrijkingen hebben limieten voor het aantal verrijkingen van hetzelfde type dat kan worden gemaakt. De limieten en het huidige gebruik zijn te zien op de pagina **Verrijking**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

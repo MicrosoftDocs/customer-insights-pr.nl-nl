@@ -1,7 +1,7 @@
 ---
 title: Gegevensbronnen gebruiken om gegevens op te nemen
 description: Meer informatie over hoe u gegevens uit verschillende bronnen kunt importeren.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595941"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887888"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
@@ -32,8 +32,15 @@ U kunt een gegevensbron op drie manieren toevoegen:
 - [Via een Common Data Model-map](connect-common-data-model.md)
 - [Via uw eigen Common Data Service-lake](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> U kunt nog geen gegevens toevoegen uit on-premises gegevensbronnen.
+## <a name="add-data-from-on-premises-data-sources"></a>Gegevens toevoegen vanuit on-premises gegevensbronnen
+
+Het opnemen van gegevens uit on-premises gegevensbronnen in Doelgroepinzichten wordt ondersteund op basis van Power Platform-gegevensstromen. Gegevensstromen kunnen worden ingeschakeld in Customer Insights door [het verstrekken van de URL van de Microsoft Dataverse-omgeving](manage-environments.md#create-an-environment-in-an-existing-organization) bij het opzetten van de omgeving.
+
+Gegevensbronnen die worden gemaakt na het koppelen van een Dataverse-omgeving met Customer Insights maken standaard gebruik van [Power Platform-gegevensstromen](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Gegevensstromen ondersteunen on-premises connectiviteit met behulp van de gegevensgateways. Verwijder gegevensbronnen die al bestonden vóór een Dataverse-omgeving werd gekoppeld en maak deze opnieuw om de on-premises gegevensgateways te gebruiken.
+
+Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving worden zichtbaar en u kunt deze opnieuw gebruiken in Customer Insights. De pagina met gegevensbronnen toont koppelingen om naar de Power Platform-omgeving te gaan waar u on-premises gegevensgateways kunt bekijken en configureren.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Schermopname van de pagina met gegevensbronnen die koppelingen bevat die naar de Power Platform-omgeving wijzen.":::
 
 ## <a name="review-ingested-data"></a>Opgenomen gegevens bekijken
 
@@ -65,7 +72,7 @@ Volg deze stappen om een gegevensbron op aanvraag te vernieuwen:
 
 2. Selecteer het verticale beletselteken naast de gegevensbron die u wilt vernieuwen en selecteer **Vernieuwen** in de vervolgkeuzelijst.
 
-3. De gegevensbron wordt nu geactiveerd voor een handmatige vernieuwing. Als u een gegevensbron vernieuwt, worden zowel de entiteitsplanning als de gegevens bijgewerkt voor alle entiteiten die zijn gespecificeerd in de gegevensbron.
+3. De gegevensbron wordt nu geactiveerd voor een handmatige vernieuwing. Als u een gegevensbron vernieuwt, worden zowel het entiteitsschema als de gegevens bijgewerkt voor alle entiteiten die zijn opgegeven in de gegevensbron.
 
 4. Selecteer **Vernieuwen stoppen** als u een bestaande vernieuwing wilt annuleren, waarna de gegevensbron terugkeert naar de laatste vernieuwingsstatus.
 

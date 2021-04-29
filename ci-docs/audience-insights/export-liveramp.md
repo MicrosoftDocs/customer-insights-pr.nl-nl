@@ -1,7 +1,7 @@
 ---
 title: LiveRamp-connector
-description: Ontdek hoe u gegevens kunt exporteren naar LiveRamp.
-ms.date: 12/02/2020
+description: Leer hoe u de verbinding configureert en exporteert naar LiveRamp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,31 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6ef4388b0e8ba8bc5866807765d8a872d41c9c14
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597551"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760321"
 ---
-# <a name="liverampreg-connector-preview"></a>LiveRamp&reg;-connector (preview)
+# <a name="export-segments-to-liverampreg-preview"></a>Segmenten exporteren naar LiveRamp&reg; (preview)
 
-Activeer uw gegevens in LiveRamp om verbinding te maken met meer dan 500 platforms in digitale, sociale en tv-ecosystemen. Werk met uw gegevens in LiveRamp om advertentiecampagnes te targeten, onderdrukken en personaliseren.
+Activeer uw gegevens in LiveRamp om verbinding te maken met meer dan 500 platforms op digitaal, sociaal en tv. Werk met uw gegevens in LiveRamp om advertentiecampagnes te targeten, onderdrukken en personaliseren.
 
-## <a name="prerequisites"></a>Vereisten
+## <a name="prerequisites-for-a-connection"></a>Vereisten voor een verbinding
 
 - U hebt een LiveRamp-abonnement nodig om deze connector te kunnen gebruiken.
 - U kunt een abonnement nemen door rechtstreeks [contact op te nemen met LiveRamp](https://liveramp.com/contact/). [Meer informatie over LiveRamp Onboarding](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>Verbinding maken met LiveRamp
+## <a name="set-up-connection-to-liveramp"></a>Verbinding instellen met LiveRamp
 
-1. Ga in doelgroepinzichten naar **Beheer** > **Exportbestemmingen**.
+1. Ga naar **Beheerder** > **Verbindingen**.
 
-1. Selecteer op de tegel **LiveRamp** de optie **Instellen**.
+1. Selecteer **Verbinding toevoegen** en kies **LiveRamp** om de verbinding te configureren.
 
-1. Geef uw bestemming een herkenbare naam in het veld **Weergavenaam**.
+1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
+
+1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
 1. Verschaf een **gebruikersnaam** en **wachtwoord** voor uw LiveRamp Secure FTP-account (SFTP).
 Deze referenties kunnen verschillen van uw LiveRamp Onboarding-referenties.
@@ -40,15 +42,25 @@ Deze referenties kunnen verschillen van uw LiveRamp Onboarding-referenties.
 
 1. Geef na succesvolle verificatie uw toestemming voor **Gegevensprivacy en naleving** door het selectievakje **Ik ga akkoord** in te schakelen.
 
-1. Selecteer **Volgende** om de LiveRamp-connector in te stellen.
+1. Selecteer **Opslaan** om de verbinding te voltooien.
 
-## <a name="configure-the-connector"></a>De connector configureren
+## <a name="configure-an-export"></a>Een export configureren
+
+U kunt deze export configureren als u toegang hebt tot een verbinding van dit type. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+
+1. Ga naar **Gegevens** > **Exports**.
+
+1. Selecteer **Bestemming toevoegen** om een nieuwe export te maken.
+
+1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie LiveRamp. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
 
 1. Selecteer in het veld **Uw sleutelidentificatie kiezen** de optie **E-mail**, **Naam en adres** of **Telefoon** om naar LiveRamp te sturen voor identiteitsresolutie.
+   > [!div class="mx-imgBorder"]
+   > ![LiveRamp-connector met kenmerktoewijzing](media/export-liveramp-segments.png "LiveRamp-connector met kenmerktoewijzing")
 
 1. Wijs de corresponderende kenmerken van uw geharmoniseerde klantentiteit toe aan de geselecteerde sleutel-id.
 
-1. Selecteer **Kenmerk toevoegen** om extra kenmerken toe te wijzen voor verzending naar LiveRamp.
+1. Selecteer **Kenmerk toevoegen** om meer kenmerken toe te wijzen om naar LiveRamp te verzenden.
 
    > [!TIP]
    > Als u meer kenmerken voor sleutel-id's naar LiveRamp verzendt, krijgt u waarschijnlijk een hoger overeenkomstpercentage.
@@ -57,13 +69,10 @@ Deze referenties kunnen verschillen van uw LiveRamp Onboarding-referenties.
 
 1. Selecteer **Opslaan**.
 
-> [!div class="mx-imgBorder"]
-> ![LiveRamp-connector met kenmerktoewijzing](media/export-liveramp-segments.png "LiveRamp-connector met kenmerktoewijzing")
+Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 
-## <a name="export-the-data"></a>De gegevens exporteren
+De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
 
-De export begint spoedig als aan alle voorwaarden voor export is voldaan. De export wordt ook uitgevoerd bij elke [geplande vernieuwing](system.md#schedule-tab).
-Zodra de export is voltooid, kunt u zich aanmelden bij LiveRamp Onboarding om uw gegevens te activeren en te distribueren.
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 

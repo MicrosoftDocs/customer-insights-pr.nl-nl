@@ -1,7 +1,7 @@
 ---
 title: Nieuwe en komende functies
 description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598425"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896229"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Wat is er nieuw in de doelgroepinzichten-mogelijkheid van Dynamics 365 Customer Insights
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598425"
 
 We kondigen vol trots onze meest recente updates aan. Dit artikel geeft een overzicht van openbare preview-functies, verbeteringen in de algemene beschikbaarheid en functie-updates. Als u de langetermijnplannen voor functies wilt zien, bekijkt u de [releaseplannen voor Dynamics 365 en Power Platform](/dynamics365/release-plans/).
 
-U kunt ook de volgende video bekijken om meer te weten te komen over de mogelijkheden die de afgelopen zes maanden zijn gepland.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 We implementeren updates per regio. In sommige regio's komen functies dus mogelijk eerder beschikbaar dan in andere. Tenzij anders gespecificeerd, hoeft u geen actie te ondernemen en updaten we de app automatisch zonder downtime.
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Updates van maart 2021
+
+De updates in maart 2021 bevatten verschillende functies, prestatie-upgrades en bugfixes.
+
+### <a name="activities"></a>Activiteiten
+
+- **Activiteitswizard en semantische typen** We hebben onze ervaring met het toewijzen van activiteiten verbeterd en bijgewerkt om het uitvoeren van activiteittoewijzing te begeleiden en te vereenvoudigen. In deze nieuwe ervaring krijgen gebruikers een begeleide ervaring als hulpmiddel bij het voltooien van elke stap van het proces. Bij de stap van het toewijzen van activiteiten kan de gebruiker niet alleen kiezen uit vele typen activiteiten, maar ook semantisch gegevens toewijzen aan *Subscription* en/of *SalesOrderLine* volgens industriestandaard schema's, die kunnen worden gebruikt voor verbruik stroomafwaarts.    
+  Zie [Klantactiviteiten](activities.md) voor meer informatie.
+
+### <a name="data-ingestion"></a>Gegevensopname
+
+- **Verbinding maken met on-premises gegevensbronnen via Power Platform-gegevensstromen en -gateways** We zijn verheugd de preview aan te kondigen van Power Platform-gegevensstromen en on-premises-connectiviteit met behulp van gateways in Customer Insights met een bijbehorende Power Platform- of Dataverse-omgeving. Alle nieuwe gegevensbronnen die zijn gemaakt in een Customer Insights-omgeving met een gekoppelde Dataverse-omgeving worden standaard ingesteld op Power Platform-gegevensstromen die de on-premises gegevensconnectiviteit en een uitgebreide set connectors en transformatiemogelijkheden bieden.
+
+### <a name="extensibility"></a>Uitbreidbaarheid
+
+- **Exports georganiseerd in verbindingen en exports** We hebben de naam van de pagina **Exportbestemmingen** gewijzigd in **Verbindingen** en een aparte pagina toegevoegd voor **Exports**. Als onderdeel van deze update zetten we bestaande exports om in paren van een verbinding en een export met die verbinding. Beheerders hebben nu meer duidelijkheid over uitgaande gegevens op de pagina **Verbindingen**. Alle gebruikersrollen hebben toegang tot de pagina **Exports**, maar alleen beheerders kunnen ervoor kiezen om bijdragers toe te staan specifieke exports met gedeelde verbindingen te bewerken.     
+  Zie [Overzicht van verbindingen](connections.md) en [Overzicht van exports](export-destinations.md) voor meer informatie.
+
+- **Segmenten exporteren naar Campaign Monitor** We hebben onze exportbestemmingen uitgebreid met Campaign Monitor. U kunt nu segmenten exporteren van Customer Insights naar Campaign Monitor-lijsten en deze gebruiken als basis voor uw marketingcampagnes.    
+   Zie [Exporteren naar Campaign Monitor](export-campaign-monitor.md) voor meer informatie.
+
+- **Segmenten exporteren naar Constant Contact** We hebben onze exportbestemmingen uitgebreid met Constant Contact. U kunt nu segmenten exporteren van Customer Insights naar Constant Contact-lijsten en deze gebruiken als basis voor uw marketingcampagnes.   
+   Zie [Exporteren naar Constant Contact](export-constant-contact.md) voor meer informatie.
+
+- **Segmenten exporteren naar RollWorks** We hebben onze exportbestemmingen uitgebreid met RollWorks. U kunt nu segmenten exporteren van Customer Insights naar RollWorks-doelgroepen en deze gebruiken als basis voor uw B2B-reclame.    
+   Zie [Exporteren naar RollWorks](export-rollworks.md) voor meer informatie.
+
+- **Segmenten exporteren naar Snapchat** We hebben onze exportbestemmingen uitgebreid met Snapchat. U kunt nu segmenten exporteren van Customer Insights naar Snapchat-doelgroepen en deze gebruiken als basis voor uw reclame.     
+   Zie [Exporteren naar Snapchat](export-snapchat.md) voor meer informatie.
+
+### <a name="predictions"></a>Voorspellingen
+
+- **Productfilters gebruiken in voorspellende productaanbevelingen** We hebben de mogelijkheid toegevoegd om productfilters te gebruiken in ons productaanbevelingsmodel. U kunt nu een voorspelling maken die alleen een subset van uw producten gebruikt.    
+   Zie [Productfilters configureren](predict-product-recommendation.md#configure-product-filters) voor meer informatie.
+
+- **Segmenten op basis van modelvoorspellingen** We hebben een snelle manier toegevoegd om segmenten te maken met behulp van de resultaten van een voorspellingsmodel. Vanaf de modelresultatenpagina kunt u eenvoudig een nieuw segment maken door de nieuwe optie **Segment maken** te selecteren.    
+  Zie [Een segment maken op basis van een voorspellingsmodel](prediction-based-segment.md) voor meer informatie.
+
+- **Uitleg voor productaanbevelingen** We hebben informatie toegevoegd waarin de belangrijkste factoren worden uitgelegd die door het AI-model zijn geleerd om productaanbevelingen te genereren en de mate waarin die factoren bijdragen aan de productaanbevelingen. Deze informatie wordt toegevoegd aan het scherm met modelresultaten.    
+   Zie [Een voorspellingsstatus en resultaten beoordelen](predict-product-recommendation.md#review-a-prediction-status-and-results) voor meer informatie.
 
 ## <a name="february-2021-updates"></a>Updates van februari 2021
 
@@ -57,7 +94,7 @@ De updates van februari 2021 omvatten verschillende functies, prestatie-upgrades
 
   Begrijpen waar klanten in geïnteresseerd zijn, is een van de eerste stappen die nodig zijn om de bedrijfsomzet te verbeteren en klantloyaliteit op te bouwen door middel van personalisatie en betrokkenheid. Aanbevelingen doen voor producten die niet zijn afgestemd op de interesses van uw klant, kan tot een gevoel van onthechting tussen de klant en uw bedrijf leiden en uiteindelijk de algehele potentiële inkomsten en ervaring voor een klant beperken. 
 
-  Met uw eigen gegevens kunt u nu voorspellingen maken ten aanzien van de producten die uw klanten waarschijnlijk in de toekomst willen kopen. Zie [Productaanbevelingen voorspellen](predict-product-recommendation.md) voor meer informatie.​
+  Met uw eigen gegevens kunt u nu voorspellingen maken ten aanzien van de producten die uw klanten waarschijnlijk in de toekomst willen kopen. Zie [Productaanbevelingen voorspellen](predict-product-recommendation.md) voor meer informatie.
 
 #### <a name="system-administration"></a>Systeembeheer
 
@@ -107,7 +144,7 @@ De updates van december 2020 bevatten verschillende functies, prestatie-upgrades
 
   Daarnaast hebben we nieuwe configuratieopties toegevoegd om beter te kunnen bepalen hoe u wilt dat uw klantprofielen worden verrijkt. 
 
-  Zie [Klantprofielen verrijken met merk- en interesseaffiniteiten](enrichment-microsoft-graph.md) voor meer informatie.
+  Zie [Klantprofielen verrijken met merk- en interesseaffiniteiten](enrichment-microsoft.md) voor meer informatie.
 
 - **Bepalen welke profielen u wilt verrijken**
 
@@ -309,8 +346,8 @@ De updates van augustus 2020 omvatten verschillende functies, prestatie-upgrades
 
 - **Verrijking van interesse-affiniteiten beschikbaar in meer markten**
 
-  We breiden de beschikbaarheid van de verrijking van interesse-affiniteiten uit buiten de Verenigde Staten naar vijf andere markten: Canada, Australië, Verenigd Koninkrijk, Frankrijk en Duitsland. Met deze uitbreiding kunt u uw klantgegevens verrijken met meer interesses die van toepassing zijn op deze markten. We verrijken ook uw klantprofielen die zich in deze markten bevinden door lokale bedrijfseigen gegevens van Microsoft Graph te gebruiken.
-  Zie [Klantprofielen verrijken met merk- en interesseaffiniteiten](enrichment-microsoft-graph.md) voor meer informatie
+  We breiden de beschikbaarheid van de verrijking van interesse-affiniteiten uit buiten de Verenigde Staten naar vijf andere markten: Canada, Australië, Verenigd Koninkrijk, Frankrijk en Duitsland. Met deze uitbreiding kunt u uw klantgegevens verrijken met meer interesses die van toepassing zijn op deze markten. We verrijken ook uw klantprofielen die zich in deze markten bevinden door gebruik te maken van lokale bedrijfseigen gegevens van Microsoft.
+  Zie [Klantprofielen verrijken met merk- en interesseaffiniteiten](enrichment-microsoft.md) voor meer informatie
 
 
 ## <a name="july-2020-updates"></a>Updates juli 2020
@@ -330,8 +367,8 @@ De updates van juli 2020 omvatten verschillende functies, prestatie-upgrades en 
 
 - **Verrijking van merkaffiniteiten beschikbaar in meer markten**
 
-  We breiden de beschikbaarheid van de verrijking van merkaffiniteiten uit buiten de Verenigde Staten naar vijf andere markten: Canada, Australië, Verenigd Koninkrijk, Frankrijk en Duitsland. Met deze extensie kunt u uw klantgegevens verrijken met lokale merken in deze markten. We verrijken ook uw klantprofielen die zich in deze markten bevinden door lokale bedrijfseigen gegevens van Microsoft Graph te gebruiken.
-  Zie [Klantprofielen verrijken met merk- en interesseaffiniteiten](enrichment-microsoft-graph.md) voor meer informatie
+  We breiden de beschikbaarheid van de verrijking van merkaffiniteiten uit buiten de Verenigde Staten naar vijf andere markten: Canada, Australië, Verenigd Koninkrijk, Frankrijk en Duitsland. Met deze extensie kunt u uw klantgegevens verrijken met lokale merken in deze markten. We verrijken ook uw klantprofielen die zich in deze markten bevinden door gebruik te maken van lokale bedrijfseigen gegevens van Microsoft.
+  Zie [Klantprofielen verrijken met merk- en interesseaffiniteiten](enrichment-microsoft.md) voor meer informatie
 
 ## <a name="june-2020-updates"></a>Updates juni 2020
 
@@ -355,7 +392,7 @@ De updates van juni 2020 omvatten verschillende functies, prestatie-upgrades en 
 - **Aparte verrijking van merk- en interesseaffiniteit**
 
   De affiniteiten met merken en interesses zijn nu beschikbaar als twee onafhankelijke verrijkingen. Aparte verrijkingen geven u de flexibiliteit om ze elk afzonderlijk te configureren en te beheren, afhankelijk van uw zakelijke vereisten of behoeften.    
-  Zie [Klantprofielen verrijken met merk- en interesseaffiniteiten](enrichment-microsoft-graph.md) voor meer informatie.
+  Zie [Klantprofielen verrijken met merk- en interesseaffiniteiten](enrichment-microsoft.md) voor meer informatie.
 
 #### <a name="extensibility"></a>Uitbreidbaarheid
 

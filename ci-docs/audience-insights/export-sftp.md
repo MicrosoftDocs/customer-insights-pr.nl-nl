@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar SFTP-hosts
-description: Meer informatie over het configureren van de verbinding met een SFTP-host.
-ms.date: 01/27/2021
+description: Leer hoe u de verbinding configureert en exporteert naar een SFTP-locatie.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,61 +9,70 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9ec14fafa8f99e34b95349371298082e166535d0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96c6026aded315008439740646827ca910cead90
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598379"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760413"
 ---
-# <a name="connector-for-sftp-preview"></a>Connector voor SFTP (preview)
+# <a name="export-segment-lists-and-other-data-to-sftp-preview"></a>Segmentlijsten en andere gegevens exporteren naar SFTP (preview)
 
-Gebruik uw klantgegevens in toepassingen van derden door deze te exporteren naar een SFTP-host (Secure File Transfer Protocol).
+Gebruik uw klantgegevens in toepassIngen van derden door ze te exporteren naar een SFTP-locatie (Secure File Transfer Protocol).
 
-## <a name="prerequisites"></a>Vereisten
+## <a name="prerequisites-for-connection"></a>Vereisten voor verbinding
 
 - Beschikbaarheid van een SFTP-host en bijbehorende inloggegevens.
-
-## <a name="connect-to-sftp"></a>Verbinding maken met SFTP
-
-1. Ga naar **Beheer** > **Exportbestemmingen**.
-
-1. Selecteer onder **SFTP** de optie **Instellen**.
-
-1. Geef uw bestemming een herkenbare naam in het veld **Weergavenaam**.
-
-1. Geef **Gebruikersnaam**, **Wachtwoord**, **Hostnaam** en **Exportmap** voor uw SFTP-account op.
-
-1. Selecteer **Verifiëren** om de verbinding te testen.
-
-1. Kies na succesvolle verificatie of u uw gegevens **Gzipped** of **Uitgepakt** wilt exporteren en selecteer het **veldscheidingsteken** voor de geëxporteerde bestanden.
-
-1. Selecteer **Ik ga akkoord** om **Gegevensprivacy en naleving** te bevestigen.
-
-1. Selecteer **Volgende** om te beginnen met het configureren van de export.
-
-## <a name="configure-the-export"></a>De export configureren
-
-1. Selecteer de entiteiten, bijvoorbeeld segmenten, die u wilt exporteren.
-
-   > [!NOTE]
-   > Elke geselecteerde entiteit bevat bij het exporteren maximaal vijf uitvoerbestanden. 
-
-1. Selecteer **Opslaan**.
-
-## <a name="export-the-data"></a>De gegevens exporteren
-
-U kunt [gegevens op aanvraag exporteren](export-destinations.md). De export wordt ook uitgevoerd bij elke [geplande vernieuwing](system.md#schedule-tab).
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
 - Hoe lang een export duurt, is afhankelijk van uw systeemprestaties. We raden twee CPU-cores en 1 Gb geheugen aan als minimale configuratie van uw server. 
 - Het exporteren van entiteiten met maximaal 100 miljoen klantprofielen kan 90 minuten duren bij gebruik van de aanbevolen minimale configuratie van twee CPU-cores en 1 Gb geheugen. 
 
+## <a name="set-up-connection-to-sftp"></a>Verbinding instellen MET SFTP
+
+1. Ga naar **Beheerder** > **Verbindingen**.
+
+1. Selecteer **Verbinding toevoegen** en kies **SFTP** om de verbinding te configureren.
+
+1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
+
+1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
+
+1. Geef **Gebruikersnaam**, **Wachtwoord**, **Hostnaam** en **Exportmap** voor uw SFTP-account op.
+
+1. Selecteer **Verifiëren** om de verbinding te testen.
+
+1. Kies of u uw gegevens **Gzipped** of **Uitgepakt** wilt exporteren en geef het **veldscheidingsteken** voor de geëxporteerde bestanden op.
+
+1. Selecteer **Ik ga akkoord** om **Gegevensprivacy en naleving** te bevestigen.
+
+1. Selecteer **Opslaan** om de verbinding te voltooien.
+
+## <a name="configure-an-export"></a>Een export configureren
+
+U kunt deze export configureren als u toegang hebt tot een verbinding van dit type. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+
+1. Ga naar **Gegevens** > **Exports**.
+
+1. Selecteer **Bestemming toevoegen** om een nieuwe export te maken.
+
+1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie SFTP. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
+
+1. Selecteer de entiteiten, bijvoorbeeld segmenten, die u wilt exporteren.
+
+   > [!NOTE]
+   > Elke geselecteerde entiteit wordt bij het exporteren opgesplitst in maximaal vijf uitvoerbestanden. 
+
+1. Selecteer **Opslaan**.
+
+Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
+
+De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
+
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 
 Wanneer u Dynamics 365 Customer Insights instelt om gegevens via SFTP te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens op uw instructie overdragen, maar u bent ervoor verantwoordelijk dat de exportbestemming voldoet aan uw privacy- of beveiligingsverplichtingen. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
 Uw Dynamics 365 Customer Insights-beheerder kan deze exportbestemming op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

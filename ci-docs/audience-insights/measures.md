@@ -1,7 +1,7 @@
 ---
 title: Metingen maken en beheren
 description: Definieer maatregelen om de prestaties van uw bedrijf te analyseren en weer te geven.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654726"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887934"
 ---
 # <a name="define-and-manage-measures"></a>Meetcriteria definiëren en beheren
 
-Metingen helpen u het klantgedrag en de bedrijfsprestaties beter te begrijpen door relevante waarden te halen uit [geharmoniseerde profielen](data-unification.md)​. Een bedrijf wil bijvoorbeeld de *totale uitgaven per klant* zien om inzicht te krijgen in de aankoopgeschiedenis van individuele klanten. Of meet *totale verkoop van het bedrijf* om inzicht te krijgen in de totale inkomsten van het hele bedrijf.  
+Meetcriteria helpen u het klantgedrag en de bedrijfsprestaties beter te begrijpen. Ze kijken naar relevante waarden uit [geharmoniseerde profielen](data-unification.md). Een bedrijf wil bijvoorbeeld de *totale uitgaven per klant* bekijken om de aankoopgeschiedenis van individuele klanten te begrijpen of de *totale verkoop van het bedrijf* meten om inzicht te krijgen in de totale inkomsten van het hele bedrijf.  
 
 Metingen worden gemaakt met behulp van de metingenbouwer, een gegevensqueryplatform met verschillende operators en eenvoudige toewijzingsopties. Hiermee kunt u de gegevens filteren, resultaten groeperen, [entiteitsrelatiepaden](relationships.md) detecteren en een voorbeeld van de uitvoer bekijken.
 
 Gebruik de metingenbouwer om bedrijfsactiviteiten te plannen door klantgegevens op te vragen en inzichten te verkrijgen. Als u bijvoorbeeld een meting maakt van *totale uitgaven per klant* en *totaal rendement per klant*, helpt dit u een groep klanten met hoge uitgaven en toch een hoog rendement te identificeren. U kunt [een segment maken](segments.md) om de volgende beste acties aan te sturen. 
 
-## <a name="create-a-measure"></a>Een meetcriterium maken
+## <a name="build-your-own-measure-from-scratch"></a>Uw eigen meetcriterium bouwen
 
 In deze sectie wordt uitgelegd hoe u een geheel nieuwe meting maakt. U kunt een meting bouwen met gegevenskenmerken van gegevensentiteiten waarvoor een relatie is ingesteld om verbinding te maken met de entiteit Klant. 
 
 1. Ga in doelgroepinzichten naar **Metingen**.
 
-1. Selecteer **Nieuw**.
+1. Selecteer **Nieuw** en kies **Bouw uw eigen**.
 
 1. Selecteer **Naam bewerken** en geef een **Naam** op voor de meting. 
    > [!NOTE]
@@ -72,6 +72,8 @@ In deze sectie wordt uitgelegd hoe u een geheel nieuwe meting maakt. U kunt een 
    1. Selecteer **Dimensies bewerken** om gegevenskenmerken toe te voegen waarop u de meetwaarden wilt groeperen. Bijvoorbeeld plaats of gender. Standaard is de dimensie *CustomerID* geselecteerd om *metingen op klantniveau* te maken. U kunt de standaarddimensie verwijderen als u *metingen op bedrijfsniveau*​wilt maken.
    1. Selecteer **Gereed** om de dimensies aan de meting toe te voegen.
 
+1. Als er waarden in uw gegevens staan die u moet vervangen door een geheel getal, vervangt u bijvoorbeeld *null* door *0* en selecteert u **Regels**. Configureer de regel en zorg ervoor dat u alleen hele getallen kiest als vervanging.
+
 1. Als er meerdere paden zijn tussen de gegevensentiteit die u hebt toegewezen en de entiteit *Klant*, moet u een van de geïdentificeerde [entiteitsrelatiepaden​](relationships.md) kiezen. Meetresultaten kunnen variëren, afhankelijk van het geselecteerde pad. 
    1. Selecteer **Gegevensvoorkeuren** en kies het entiteitspad dat moet worden gebruikt om uw meting te identificeren. Als er maar één pad is naar de entiteit *Klant*, wordt dit besturingselement niet weergegeven.
    1. Selecteer **Gereed** om uw selectie toe te passen. 
@@ -88,9 +90,57 @@ In deze sectie wordt uitgelegd hoe u een geheel nieuwe meting maakt. U kunt een 
 
 1. Ga naar **Metingen** om de nieuw gemaakte meting in de lijst te zien.
 
+## <a name="use-a-template-to-build-a-measure"></a>Een sjabloon gebruiken om een meetcriterium op te stellen
+
+U kunt vooraf gedefinieerde sjablonen van veelgebruikte meetcriteria gebruiken om deze te maken. Gedetailleerde beschrijvingen van de sjablonen en een begeleide ervaring helpen u bij het efficiënt maken van meetcriteria. Sjablonen bouwen voort op toegewezen gegevens uit de entiteit *Unified Activity*. Zorg er dus voor dat u [klantactiviteiten](activities.md) hebt geconfigureerd voordat u een meetcriterium maakt op basis van een sjabloon.
+
+Beschikbare sjablonen voor meetcriteria: 
+- Gemiddelde transactiewaarde (ATV)
+- Totale transactiewaarde
+- Gemiddelde dagelijkse omzet
+- Gemiddelde jaaromzet
+- Aantal transacties
+- Verdiende loyaliteitspunten
+- Verzilverde loyaliteitspunten
+- Saldo loyaliteitspunten
+- Actieve levensduur van klant
+- Lidmaatschapsduur van loyaliteitsprogramma
+- Tijd sinds laatste aankoop
+
+De volgende procedure beschrijft de stappen om een nieuw meetcriterium op te stellen met behulp van een sjabloon.
+
+1. Ga in doelgroepinzichten naar **Metingen**.
+
+1. Selecteer **Nieuw** en selecteer **Een sjabloon kiezen**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Schermopname van het vervolgkeuzemenu bij het maken van een nieuw meetcriterium met markering op sjabloon.":::
+
+1. Zoek de sjabloon die bij uw behoeften past en selecteer **Sjabloon kiezen**.
+
+1. Bekijk de vereiste gegevens en selecteer **Aan de slag** als u over alle gegevens beschikt.
+
+1. Stel in het deelvenster **Naam bewerken** de naam in voor uw meetcriterium en de uitvoerentiteit. 
+
+1. Selecteer **Gereed**.
+
+1. Definieer in de sectie **Tijdsperiode instellen** het tijdsbestek van de te gebruiken gegevens. Kies of u wilt dat het nieuwe meetcriterium de volledige gegevensset bestrijkt door **Vanaf begin** te selecteren. Of als u wilt dat het meetcriterium zich concentreert op een **specifieke tijdsperiode**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Schermopname die de tijdsperiode laat zien bij het configureren van een meetcriterium vanuit een sjabloon.":::
+
+1. Selecteer in de volgende sectie de optie **Gegevens toevoegen** om de activiteiten te kiezen en de bijbehorende gegevens toe te wijzen vanuit uw entiteit *Unified Activity*.
+
+    1. Stap 1 van 2: kies onder **Type activiteit** het type entiteit dat u wilt gebruiken. Selecteer voor **Activiteiten** de entiteiten die u wilt toewijzen.
+    1. Stap 2 van 2: kies het kenmerk van de entiteit *Unified Activity* voor het onderdeel dat is vereist door de formule. Voor Gemiddelde transactiewaarde is dit bijvoorbeeld het kenmerk dat de transactiewaarde vertegenwoordigt. Kies voor **Tijdstempel van activiteit** het kenmerk van de entiteit Unified Activity dat de datum en tijd van de activiteit vertegenwoordigt.
+   
+1. Zodra de gegevenstoewijzing is geslaagd, ziet u de status als **Voltooid** en de naam van de toegewezen activiteiten en kenmerken.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Schermopname van een voltooide configuratie van een meetsjabloon.":::
+
+1. U kunt nu **Uitvoeren** selecteren om de resultaten van het meetcriterium te berekenen. Selecteer **Concept opslaan** om het later te verfijnen.
+
 ## <a name="manage-your-measures"></a>Uw meetcriteria beheren
 
-Nadat u [een meting hebt gemaakt](#create-a-measure), ziet u een lijst met metingen op de pagina **Metingen**.
+U vindt de lijst met meetcriteria op de pagina **Meetcriteria**.
 
 U vindt informatie over het type meting, de maker, de datum waarop de meting is gemaakt en de status. Wanneer u een meting uit de lijst selecteert, kunt u een voorbeeld van de uitvoer bekijken en een .CSV-bestand downloaden.
 

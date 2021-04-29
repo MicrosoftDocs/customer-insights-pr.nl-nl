@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar Marketo
-description: Ontdek hoe u de verbinding met Marketo configureert.
-ms.date: 11/12/2020
+description: Leer hoe u de verbinding configureert en exporteert naar Marketo.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,59 +9,23 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 74d19a0448123904210c26f7b8760d00296c9cfd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597965"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759815"
 ---
-# <a name="connector-for-marketo-preview"></a>Connector voor Marketo (preview)
+# <a name="export-segments-to-marketo-preview"></a>Segmenten exporteren naar Marketo (preview)
 
 Exporteer segmenten van geharmoniseerde klantprofielen om campagnes te genereren, e-mailmarketing te bieden en specifieke groepen klanten te gebruiken met Marketo.
 
-## <a name="prerequisites"></a>Vereisten
+## <a name="prerequisites-for-connection"></a>Vereisten voor verbinding
 
 -   U hebt een [Marketo-account](https://login.marketo.com/) en bijbehorende beheerdersreferenties nodig.
 -   Er zijn bestaande lijsten met bijbehorende id's in Marketo. Zie [Marketo-lijsten](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) voor meer informatie.
 -   U hebt [geconfigureerde segmenten](segments.md).
 -   Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten een veld voor e-mailadres.
-
-## <a name="connect-to-marketo"></a>Verbinden met Marketo
-
-1. Ga naar **Beheer** > **Exportbestemmingen**.
-
-1. Selecteer onder **Marketo** de optie **Instellen**.
-
-1. Geef uw exportbestemming een herkenbare naam in het veld **Weergavenaam**.
-
-1. Voer uw **[Marketo-client-id, clientgeheim en REST-eindpunt hostnaam](https://developers.marketo.com/rest-api/authentication/)** in.
-
-1. Voer uw **[Marketo-lijst-id](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** in 
-
-1. Selecteer **Ik ga akkoord** om de **Gegevensprivacy en naleving** te bevestigen en selecteer **Verbinden** om de verbinding met Marketo te initialiseren.
-
-1. Selecteer **Uzelf toevoegen als exportgebruiker** en geef uw Customer Insights-referenties op.
-
-   :::image type="content" source="media/export-connect-marketo.png" alt-text="Schermopname voor Marketo-verbinding exporteren":::
-
-1. Selecteer **Volgende** om de export te configureren.
-
-## <a name="configure-the-connector"></a>De connector configureren
-
-1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. 
-
-1. Optioneel kunt u **Voornaam**, **Achternaam**, **Woonplaats**, **Staat** en **Land/regio** exporteren als extra velden om meer gepersonaliseerde e-mails te maken. Selecteer **Kenmerk toevoegen** om deze velden toe te wijzen.
-
-1. Selecteer de segmenten die u wilt exporteren. U kunt in totaal tot 1 miljoen klantprofielen exporteren naar Marketo.
-
-   :::image type="content" source="media/export-segment-marketo.png" alt-text="Velden en segmenten selecteren om naar Marketo te exporteren":::
-
-1. Selecteer **Opslaan**.
-
-## <a name="export-the-data"></a>De gegevens exporteren
-
-U kunt [gegevens op aanvraag exporteren](export-destinations.md). De export wordt ook uitgevoerd bij elke [geplande vernieuwing](system.md#schedule-tab). In Marketo vindt u nu uw segmenten onder [Marketo-lijsten](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
@@ -69,6 +33,49 @@ U kunt [gegevens op aanvraag exporteren](export-destinations.md). De export word
 - Exporteren naar Marketo is beperkt tot segmenten.
 - Segmenten met in totaal 1 miljoen profielen exporteren kan tot 3 uur duren. 
 - Het aantal profielen dat u naar Marketo kunt exporteren, is afhankelijk van uw contract met Marketo.
+
+## <a name="set-up-connection-to-marketo"></a>Verbinding met Marketo instellen
+
+1. Ga naar **Beheerder** > **Verbindingen**.
+
+1. Selecteer **Verbinding toevoegen** en kies **Marketo** om de verbinding te configureren.
+
+1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
+
+1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
+
+1. Voer uw **[Marketo-client-id, clientgeheim en REST-eindpunt hostnaam](https://developers.marketo.com/rest-api/authentication/)** in.
+
+1. Selecteer **Ik ga akkoord** om de **Gegevensprivacy en naleving** te bevestigen en selecteer **Verbinden** om de verbinding met Marketo te initialiseren.
+
+1. Selecteer **Uzelf toevoegen als exportgebruiker** en geef uw Customer Insights-referenties op.
+
+1. Selecteer **Opslaan** om de verbinding te voltooien.
+
+## <a name="configure-an-export"></a>Een export configureren
+
+U kunt deze export configureren als u toegang hebt tot een verbinding van dit type. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+
+1. Ga naar **Gegevens** > **Exports**.
+
+1. Selecteer **Bestemming toevoegen** om een nieuwe export te maken.
+
+1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Marketo. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
+
+1. Voer uw **[Marketo-lijst-id](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** in 
+
+1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. 
+
+1. Optioneel kunt u **Voornaam**, **Achternaam**, **Plaats**, **Staat** en **Land/regio** exporteren om meer gepersonaliseerde e-mails te maken. Selecteer **Kenmerk toevoegen** om deze velden toe te wijzen.
+
+1. Selecteer de segmenten die u wilt exporteren. U kunt in totaal tot 1 miljoen klantprofielen exporteren naar Marketo.
+
+1. Selecteer **Opslaan**.
+
+Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
+
+De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). In Marketo vindt u nu uw segmenten onder [Marketo-lijsten](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 
