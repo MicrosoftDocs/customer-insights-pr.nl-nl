@@ -6,22 +6,19 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896137"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016608"
 ---
 # <a name="exports-preview-overview"></a>Overzicht van Exports (preview)
 
 De pagina **Exports** toont u alle geconfigureerde exports. Exports delen specifieke gegevens met verschillende toepassingen. Ze kunnen klantprofielen of entiteiten, schema's en toewijzingsdetails bevatten. Elke export vereist een [verbinding, opgezet door een beheerder, om de verificatie en toegang te beheren](connections.md).
-
-> [!NOTE]
-> Tot maart 2021 creëerden exports automatisch een verbinding met de bijbehorende service. Exports vereisen nu een [verbinding die is gemaakt en gedeeld door een beheerder](connections.md) voordat u ze kunt maken.
 
 Ga naar **Gegevens** > **Exports** om de pagina met exports te bekijken. Alle gebruikersrollen hebben toegang om geconfigureerde exports te bekijken. Gebruik van het zoekveld in de opdrachtbalk om exports te zoeken op naam, verbindingsnaam of verbindingstype.
 

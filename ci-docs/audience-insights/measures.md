@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887934"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049244"
 ---
 # <a name="define-and-manage-measures"></a>Meetcriteria definiëren en beheren
 
@@ -34,7 +34,7 @@ In deze sectie wordt uitgelegd hoe u een geheel nieuwe meting maakt. U kunt een 
 
 1. Selecteer **Naam bewerken** en geef een **Naam** op voor de meting. 
    > [!NOTE]
-   > Als uw nieuwe meetconfiguratie slechts twee velden heeft, bijvoorbeeld CustomerID en één berekening, wordt de uitvoer als een nieuwe kolom toegevoegd aan de door het systeem gegenereerde entiteit met de naam Customer_Measure. En u kunt de waarde van de meting zien in het geharmoniseerde klantprofiel. Andere metingen zullen hun eigen entiteiten genereren.
+   > Als uw nieuwe metingconfiguratie slechts twee velden heeft, bijvoorbeeld CustomerID en één berekening, wordt de uitvoer als een nieuwe kolom toegevoegd aan de door het systeem gegenereerde entiteit Customer_Measure. En u kunt de waarde van de meting zien in het geharmoniseerde klantprofiel. Andere metingen zullen hun eigen entiteiten genereren.
 
 1. Kies in het configuratiegebied de aggregatiefunctie in het vervolgkeuzemenu **Functie selecteren**. Aggregatiefuncties omvatten: 
    - **Sum**

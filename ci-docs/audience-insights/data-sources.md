@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887888"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085524"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
@@ -36,11 +36,9 @@ U kunt een gegevensbron op drie manieren toevoegen:
 
 Het opnemen van gegevens uit on-premises gegevensbronnen in Doelgroepinzichten wordt ondersteund op basis van Power Platform-gegevensstromen. Gegevensstromen kunnen worden ingeschakeld in Customer Insights door [het verstrekken van de URL van de Microsoft Dataverse-omgeving](manage-environments.md#create-an-environment-in-an-existing-organization) bij het opzetten van de omgeving.
 
-Gegevensbronnen die worden gemaakt na het koppelen van een Dataverse-omgeving met Customer Insights maken standaard gebruik van [Power Platform-gegevensstromen](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Gegevensstromen ondersteunen on-premises connectiviteit met behulp van de gegevensgateways. Verwijder gegevensbronnen die al bestonden vóór een Dataverse-omgeving werd gekoppeld en maak deze opnieuw om de on-premises gegevensgateways te gebruiken.
+Gegevensbronnen die worden gemaakt na het koppelen van een Dataverse-omgeving met Customer Insights maken standaard gebruik van [Power Platform-gegevensstromen](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Gegevensstromen ondersteunen on-premises connectiviteit met behulp van de gegevensgateway. Verwijder gegevensbronnen die al bestonden vóór een Dataverse-omgeving werd gekoppeld en maak deze opnieuw om [de on-premises gegevensgateways te gebruiken](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving worden zichtbaar en u kunt deze opnieuw gebruiken in Customer Insights. De pagina met gegevensbronnen toont koppelingen om naar de Power Platform-omgeving te gaan waar u on-premises gegevensgateways kunt bekijken en configureren.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Schermopname van de pagina met gegevensbronnen die koppelingen bevat die naar de Power Platform-omgeving wijzen.":::
 
 ## <a name="review-ingested-data"></a>Opgenomen gegevens bekijken
 

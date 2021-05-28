@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595797"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954573"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Voorspelling van de levensduurwaarde van klant (preview)
 
@@ -38,11 +38,11 @@ De volgende gegevens zijn vereist en worden, indien gemarkeerd als optioneel, aa
 - Klant-id: unieke identificatie om transacties aan een individuele klant te koppelen
 
 - Transactiegeschiedenis: historisch transactielogboek met onderstaand semantisch gegevensschema
-    - Transactie-id: unieke id van elke transactie
-    - Transactiedatum: datum, bij voorkeur een tijdstempel van elke transactie
-    - Transactiebedrag: geldwaarde (bijvoorbeeld omzet of winstmarge) van elke transactie
-    - Label toegewezen aan retouren (optioneel): Booleaanse waarde die aangeeft of de transactie een retour is 
-    - Product-id (optioneel): product-id van het product dat bij de transactie is betrokken
+    - **Transactie-id**: unieke id van elke transactie
+    - **Transactiedatum**: datum, bij voorkeur een tijdstempel van elke transactie
+    - **Transactiebedrag**: geldwaarde (bijvoorbeeld omzet of winstmarge) van elke transactie
+    - **Label toegewezen aan retouren** (optioneel): Booleaanse waarde die aangeeft of de transactie een retour is 
+    - **Product-id** (optioneel): product-id van het product dat bij de transactie is betrokken
 
 - Aanvullende gegevens (optioneel), bijvoorbeeld
     - Webactiviteiten: geschiedenis van websitebezoek, e-mailgeschiedenis
@@ -53,10 +53,20 @@ De volgende gegevens zijn vereist en worden, indien gemarkeerd als optioneel, aa
     - Klant-id's om activiteiten te koppelen aan uw klanten
     - Activiteitsinformatie met de naam en datum van de activiteit
     - Het semantische gegevensschema voor activiteiten omvat: 
-        - Primaire sleutel: een unieke id voor een activiteit
-        - Tijdstempel: de datum en tijd van de gebeurtenis die wordt geïdentificeerd door de primaire sleutel
-        - Gebeurtenis (activiteitnaam): de naam van de gebeurtenis die u wilt gebruiken
-        - Details (bedrag of waarde): details over de klantactiviteit
+        - **Primaire sleutel:** een unieke id voor een activiteit.
+        - **Tijdstempel:** de datum en tijd van de gebeurtenis die wordt geïdentificeerd door de primaire sleutel.
+        - **Gebeurtenis (activiteitnaam)**: de naam van de gebeurtenis die u wilt gebruiken
+        - **Details (bedrag of waarde)**: details over de klantactiviteit
+
+- Voorgestelde gegevenskenmerken:
+    - Voldoende historische gegevens: transactiegegevens van minimaal één jaar. Bij voorkeur twee tot drie jaar transactiegegevens om CLV voor één jaar te voorspellen.
+    - Meerdere aankopen per klant: idealiter ten minste twee tot drie transacties per klant-id, bij voorkeur op meerdere datums.
+    - Aantal klanten: minimaal 100 unieke klanten, bij voorkeur meer dan 10.000 klanten. Het model mislukt bij minder dan 100 klanten en onvoldoende historische gegevens
+    - Compleetheid van gegevens: minder dan 20% ontbrekende waarden in verplichte velden in de invoergegevens   
+
+> [!NOTE]
+> - Het model vereist de transactiegeschiedenis van uw klanten. Er kan momenteel slechts één transactiehistorie-entiteit worden geconfigureerd. Als er meerdere aankoop-/transactie-entiteiten zijn, kunt u deze samenvoegen in Power Query voordat de gegevens worden opgenomen.
+> - Voor aanvullende klantactiviteitsgegevens (optioneel) kunt u echter zoveel klantactiviteitsentiteiten toevoegen als u wilt om in aanmerking te komen voor het model.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Een voorspelling over de levensduurwaarde van een klant maken
 
@@ -76,7 +86,7 @@ De volgende gegevens zijn vereist en worden, indien gemarkeerd als optioneel, aa
    Standaard is de eenheid ingesteld op maanden. U kunt het wijzigen in jaren om verder in de toekomst te kijken.
 
    > [!TIP]
-   > Om de levensduurwaarde van een klant nauwkeurig te voorspellen voor de tijdsperiode die u instelt, hebt u een vergelijkbare periode met historische gegevens nodig. Als u bijvoorbeeld wilt voorspellen voor de komende 12 maanden, is het raadzaam ten minste 18-24 maanden aan historische gegevens te hebben.
+   > Om de levensduurwaarde van een klant nauwkeurig te voorspellen voor de tijdsperiode die u instelt, hebt u een vergelijkbare periode met historische gegevens nodig. Als u bijvoorbeeld CLV wilt voorspellen voor de komende 12 maanden, is het raadzaam ten minste 18-24 maanden aan historische gegevens te hebben.
 
 1. Geef op wat **Actieve klanten** betekenen voor uw bedrijf. Stel het tijdsbestek in waarin een klant ten minste één transactie moet hebben gedaan om als actief te worden beschouwd. Het model voorspelt alleen levensduurwaarde voor actieve klanten. 
    - **Het aankoopinterval laten berekenen door het model (aanbevolen)**: het model analyseert uw gegevens en bepaalt een tijdsperiode op basis van historische aankopen.
@@ -181,14 +191,14 @@ Er zijn drie primaire gegevenssecties op de resultatenpagina.
   Aan de hand van de definitie van hoogwaardige klanten die bij het configureren van de voorspelling is verstrekt, beoordeelt het systeem hoe het AI-model presteert bij het voorspellen van de hoogwaardige klanten in vergelijking met een basismodel.    
 
   Cijfers worden bepaald op basis van de volgende regels:
-  - A wanneer het model ten minste 5% meer hoogwaardige klanten nauwkeurig voorspelde in vergelijking met het basismodel.
-  - B wanneer het model 0-5% meer hoogwaardige klanten nauwkeurig voorspelde in vergelijking met het basismodel.
-  - C wanneer het model minder hoogwaardige klanten nauwkeurig voorspelde in vergelijking met het basismodel.
+  - **A** wanneer het model ten minste 5% meer hoogwaardige klanten nauwkeurig voorspelde in vergelijking met het basismodel.
+  - **B** wanneer het model 0-5% meer hoogwaardige klanten nauwkeurig voorspelde in vergelijking met het basismodel.
+  - **C** wanneer het model minder hoogwaardige klanten nauwkeurig voorspelde in vergelijking met het basismodel.
 
   In het deelvenster **Modelbeoordeling** worden meer details weergegeven over de prestaties van het AI-model en het basismodel. Het basismodel maakt gebruik van een niet op AI gebaseerde benadering om de levensduurwaarde van de klant te berekenen, voornamelijk op basis van historische aankopen door klanten.     
   De standaardformule die wordt gebruikt om de levensduurwaarden van klanten te berekenen door het basismodel:    
 
-  *Levensduurwaarde voor elke klant = gemiddelde maandelijkse aankoop door de klant in het actieve klantenvenster * Aantal maanden in de voorspellingsperiode voor levensduurwaarde van klanten * Algeheel behoudpercentage van alle klanten*
+  _**Levensduurwaarde voor elke klant** = gemiddelde maandelijkse aankoop door de klant in het actieve klantenvenster * Aantal maanden in de voorspellingsperiode voor levensduurwaarde van klanten * Algeheel behoudpercentage van alle klanten*_
 
   Het AI-model wordt vergeleken met het basismodel op basis van twee modelprestatiestatistieken.
   

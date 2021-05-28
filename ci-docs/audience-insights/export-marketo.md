@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759815"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059310"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmenten exporteren naar Marketo (preview)
 
@@ -44,7 +44,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen om campagnes te genereren
 
 1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
-1. Voer uw **[Marketo-client-id, clientgeheim en REST-eindpunt hostnaam](https://developers.marketo.com/rest-api/authentication/)** in.
+1. Voer uw **[Marketo-client-id, clientgeheim en REST-eindpunt hostnaam](https://developers.marketo.com/rest-api/authentication/)** in. De hostnaam van het REST-eindpunt is alleen de hostnaam zonder `https://`. Voorbeeld: `xyz-abc-123.mktorest.com`. 
 
 1. Selecteer **Ik ga akkoord** om de **Gegevensprivacy en naleving** te bevestigen en selecteer **Verbinden** om de verbinding met Marketo te initialiseren.
 
@@ -62,7 +62,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Marketo. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
 
-1. Voer uw **[Marketo-lijst-id](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** in 
+1. Voer uw **[Lijst-id van Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** in. De lijst-ID is een puur numerieke waarde. Als uw lijst-id van Marketo bijvoorbeeld ST12345A7 is, verwijdert u het teken voor en na de cijfers en voert u `12345` in. 
 
 1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. 
 
@@ -74,7 +74,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 
-De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). In Marketo vindt u nu uw segmenten onder [Marketo-lijsten](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). In Marketo vindt u nu uw segmenten onder [Marketo-lijsten](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving

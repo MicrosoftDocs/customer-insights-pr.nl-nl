@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595558"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085616"
 ---
 # <a name="match-entities"></a>Entiteiten toewijzen
 
@@ -103,6 +103,18 @@ Overeenkomstregels staan voor voorwaardensets. Voeg meer regels toe om entiteite
 
 > [!NOTE]
 > De volgorde van regels is belangrijk. Het vergelijkingsalgoritme probeert te matchen op basis van uw eerste regel en gaat alleen verder naar de tweede regel als er geen overeenkomsten zijn geïdentificeerd met de eerste regel.
+
+### <a name="change-the-entity-order-in-match-rules"></a>De entiteitsvolgorde in matchregels wijzigen
+
+U kunt entiteiten voor matchregels opnieuw rangschikken om de volgorde te wijzigen waarin ze worden verwerkt. Regels die conflicteren vanwege een gewijzigde volgorde, worden verwijderd. U moet verwijderde regels opnieuw maken met een bijgewerkte configuratie.
+
+1. Ga naar **Gegevens** > **Harmoniseren** > **Afstemming** en selecteer **Bewerken**.
+
+1. Selecteer in het deelvenster **Regel bewerken** het besturingselement **Omhoog/omlaag** of gebruik slepen en neerzetten voor entiteiten om de volgorde te wijzigen.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Opties om te wijzigen in welke volgorde entiteiten worden verwerkt in de matchfase.":::
+
+1. Selecteer **Gereed** om de regel op te slaan.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Ontdubbeling definiëren op een match-entiteit
 

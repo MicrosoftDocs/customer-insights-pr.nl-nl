@@ -1,7 +1,7 @@
 ---
-title: De invoegtoepassing Klantkaart installeren en configureren
-description: Installeer en configureer de invoegtoepassing Klantkaart voor Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Invoegtoepassing Klantkaart voor Dynamics 365-apps
+description: Geef gegevens van doelgroepinzichten weer in Dynamics 365-apps met deze invoegtoepassing.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597321"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059582"
 ---
 # <a name="customer-card-add-in-preview"></a>Invoegtoepassing Klantkaart (preview)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Krijg een compleet overzicht van uw klanten rechtstreeks in Dynamics 365-apps. Bekijk demografische gegevens, inzichten en tijdlijnen van activiteiten met de invoegtoepassing Klantkaart.
+Krijg een compleet overzicht van uw klanten rechtstreeks in Dynamics 365-apps. Met de invoegtoepassing Klantkaart geïnstalleerd in een ondersteunde Dynamics 365-app kunt u ervoor kiezen om demografische gegevens, inzichten en activiteitstijdlijnen weer te geven. Met de invoegtoepassing worden gegevens opgehaald uit Customer Insights zonder dat dit invloed heeft op de gegevens in de verbonden Dynamics 365-app. 
 
 ## <a name="prerequisites"></a>Vereisten
 
-- Dynamics 365-app (zoals Verkoophub of Klantenservicehub), versie 9.0 en hoger met Unified Interface ingeschakeld.
-- Klantprofielen [opgenomen uit de Dynamics 365-app met Common Data Service](connect-power-query.md).
-- Gebruikers van de invoegtoepassing Klantenkaart moeten [toegevoegd zijn als gebruikers](permissions.md) in doelgroepinzichten.
-- [Geconfigureerde zoek- en filtermogelijkheden](search-filter-index.md).
-- Demografische controle: demografische velden, zoals leeftijd of gender, zijn beschikbaar in het geharmoniseerde klantprofiel.
-- Besturingselement voor verrijking: vereist dat actieve [verrijkingen](enrichment-hub.md) worden toegepast op klantprofielen.
-- Informatiecontrole: vereist gegevens die zijn gegenereerd met Azure Machine Learning ([Voorspellingen](predictions.md) of [Aangepaste modellen](custom-models.md))
-- Metingencontrole: vereist [geconfigureerde metingen](measures.md).
-- Tijdlijncontrole: vereist [geconfigureerde activiteiten](activities.md).
+- De invoegtoepassing werkt alleen met modelgestuurde Dynamics 365-apps, zoals Sales of Customer Service, versie 9.0 en hoger.
+- Voor toewijzing van uw Dynamics 365-gegevens aan de klantprofielen van doelgroepinzichten moeten ze [worden opgenomen vanuit de Dynamics 365-app met behulp van de Common Data Service-connector](connect-power-query.md).
+- Alle Dynamics 365-gebruikers van de invoegtoepassing Klantkaart moeten worden [toegevoegd als gebruikers](permissions.md) in doelgroepinzichten om de gegevens te zien.
+- [Geconfigureerde zoek- en filtermogelijkheden](search-filter-index.md) in doelgroepinzichten zijn vereist voor het opzoeken van gegevens.
+- Elk besturingselement van de invoegtoepassing is afhankelijk van specifieke gegevens in doelgroepinzichten:
+  - Metingencontrole: vereist [geconfigureerde metingen](measures.md).
+  - Informatiebeheer: vereist gegevens die zijn gegenereerd met [voorspellingen](predictions.md) of [aangepaste modellen](custom-models.md).
+  - Demografische controle: demografische velden, zoals leeftijd of gender, zijn beschikbaar in het geharmoniseerde klantprofiel.
+  - Besturingselement voor verrijking: vereist dat actieve [verrijkingen](enrichment-hub.md) worden toegepast op klantprofielen.
+  - Tijdlijncontrole: vereist [geconfigureerde activiteiten](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>De invoegtoepassing Klantkaart installeren
 
@@ -56,9 +57,9 @@ Het kan enige tijd duren voordat de oplossing in uw omgeving is geïnstalleerd.
    > [!NOTE]
    > Controleer of de pop-upblokkering van de browser het verificatievenster niet blokkeert wanneer u de knop **Aanmelden** selecteert.
 
-1. Selecteer de omgeving waaruit u gegevens wilt ophalen.
+1. Selecteer de Customer Insights-omgeving waaruit u gegevens wilt ophalen.
 
-1. Definieer welke velden worden toegewezen aan records in de Dynamics 365-app.
+1. Definieer de veldtoewijzing aan records in de Dynamics 365-app. Afhankelijk van uw gegevens in Customer Insights kunt u ervoor kiezen om de volgende opties toe te wijzen:
    - Om toe te wijzen aan een contactpersoon, selecteert u het veld in de entiteit Klant die overeenkomt met de id van uw contactpersoon.
    - Om toe te wijzen aan een account, selecteert u het veld in de entiteit Klant die overeenkomt met de id van uw account-entiteit.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f19033236190547f68d2b91ec6b32074bf7912a
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
+ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896596"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "6064885"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Klantprofielen verrijken met merk- en interesseaffiniteiten (preview)
 
@@ -31,7 +31,7 @@ Ga naar het tabblad **Ontdekken** en selecteer **Mijn gegevens verrijken** op de
 
 ## <a name="how-we-determine-affinities"></a>Hoe we affiniteiten bepalen
 
-We gebruiken de online zoekgegevens van Microsoft om affiniteiten te vinden voor merken en interesses in verschillende demografische segmenten (gedefinieerd door leeftijd, geslacht of locatie). Het online zoekvolume voor een merk of interesse bepaalt hoeveel affiniteit een demografisch segment heeft, vergeleken met andere segmenten, voor dat merk of die interesse. merk of interesse.
+We gebruiken de online zoekgegevens van Microsoft om affiniteiten te vinden voor merken en interesses in verschillende demografische segmenten (gedefinieerd door leeftijd, geslacht of locatie). Het online zoekvolume voor een merk of interesse bepaalt hoeveel affiniteit een demografisch segment heeft, vergeleken met andere segmenten, voor dat merk of die interesse.
 
 ## <a name="affinity-level-and-score"></a>Affiniteitsniveau en score
 

@@ -1,7 +1,7 @@
 ---
 title: Werken met API's
 description: API's gebruiken en beperkingen begrijpen.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873656"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016586"
 ---
 # <a name="work-with-customer-insights-apis"></a>Werken met Customer Insights-API's
 
@@ -90,19 +90,13 @@ In de [sectie app-registratie](#create-a-new-app-registration-in-the-azure-porta
 
 1. Ga bij uw app-registratie in de Azure-portal naar **API-machtigingen**.
 
-1. Selecteer **Een machtiging toevoegen** en selecteer **Customer Insights** in het deelvenster aan de zijkant.
+1. Selecteer **Een machtiging toevoegen**. 
+
+1. Selecteer het tabblad **API's die mijn organisatie gebruikt** en kies **Dynamics 365 AI voor Customer Insights** in de lijst. 
 
 1. Selecteer voor **Machtigingstype** de optie **Toepassingsmachtigingen** en selecteer de machtiging **CustomerInsights.Api.All**.
 
 1. Selecteer **Machtigingen toevoegen**.
-
-1. Om beheerderstoestemming te geven voor deze toepassing, moet u een Service Principal toevoegen.
-
-   1. Installeer de Azure Active Directory (AD) PowerShell-module: `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Maak verbinding met uw AD-account: `Connect-AzureAD -TenantId <your tenant id>`. U vindt uw tenant-id op **Overzicht** > **Azure Active Directory**.
-   1. Voer de volgende opdracht uit om een Azure AD Service Principal toe te voegen: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` De parameter AppId heeft betrekking op de Customer Insights API-app.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Voorbeeld van Service Principal":::
 
 1. Ga terug naar **API-machtigingen** voor uw app-registratie.
 

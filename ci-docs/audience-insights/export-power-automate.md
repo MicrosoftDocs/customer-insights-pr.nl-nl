@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597919"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5976082"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate-connector (preview)
 
@@ -27,7 +27,7 @@ Gebruik triggers om cloudstromen te maken en routineuze taken te automatiseren, 
 - Trigger wanneer de vernieuwing van een gegevensbron mislukt. 
 - Trigger wanneer de vernieuwing van een gegevensbron slaagt.
 - Trigger wanneer een drempel voor een segment wordt overschreden. De trigger is beperkt tot het overschrijden van de drempel.
-- Trigger wanneer een drempel voor een zakelijk meetcriterium wordt overschreden. De trigger is beperkt tot het overschrijden van de drempel.
+- Trigger wanneer een drempel voor een zakelijk meetcriterium wordt overschreden. Alleen zakelijke meetcriteria zonder een dimensie worden ondersteund. De trigger is beperkt tot het overschrijden van de drempel.
 - Activeren wanneer een volledige vernieuwing (van gegevensbronnen, segmenten, metingen,...) is voltooid.
 - Trigger wanneer een vernieuwing van het harmoniseringsproces (toewijzen, afstemmen, samenvoegen) is voltooid.
 
