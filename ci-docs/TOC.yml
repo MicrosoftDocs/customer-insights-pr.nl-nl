@@ -96,30 +96,40 @@
           href: audience-insights/measures.md
     - name: Voorspellingen
       items:
-        - name: Gegevens voltooien door middel van waardevoorspellingen
-          href: audience-insights/predictions.md
-        - name: Abonnementsverloop voorspellen
-          href: audience-insights/predict-subscription-churn.md
-        - name: Voorbeeldhandleiding abonnementsverloop voorspellen
-          href: audience-insights/sample-guide-predict-subscription-churn.md
-        - name: Transactieverloop voorspellen
-          href: audience-insights/predict-transactional-churn.md
-        - name: Voorbeeldhandleiding transactieverloop voorspellen
-          href: audience-insights/sample-guide-predict-transactional-churn.md
-        - name: Levensduurwaarde van klant voorspellen
-          href: audience-insights/predict-customer-lifetime-value.md
-        - name: Productaanbevelingen voorspellen
-          href: audience-insights/predict-product-recommendation.md
-        - name: Voorbeeldgids voor voorspelling van productaanbevelingen
-          href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Gegevens voorspellen met behulp van AI
+          items:
+            - name: Overzicht van voorspellingsmodellen
+              href: audience-insights/predictions-overview.md
+            - name: Levensduurwaarde van klant voorspellen
+              href: audience-insights/predict-customer-lifetime-value.md
+            - name: Productaanbevelingen voorspellen
+              href: audience-insights/predict-product-recommendation.md
+            - name: Abonnementsverloop voorspellen
+              href: audience-insights/predict-subscription-churn.md
+            - name: Transactieverloop voorspellen
+              href: audience-insights/predict-transactional-churn.md
+            - name: Aangepaste modellen uit Azure Machine Learning gebruiken
+              href: audience-insights/custom-models.md
+            - name: Gedeeltelijk ontbrekende gegevens invullen
+              href: audience-insights/predictions.md
+        - name: Voorbeeldgidsen
+          items:
+            - name: Voorbeeldgids voor CLV-voorspelling
+              href: audience-insights/sample-guide-predict-clv.md
+            - name: Voorbeeldhandleiding abonnementsverloop voorspellen
+              href: audience-insights/sample-guide-predict-subscription-churn.md
+            - name: Voorbeeldhandleiding transactieverloop voorspellen
+              href: audience-insights/sample-guide-predict-transactional-churn.md
+            - name: Voorbeeldgids voor voorspelling van productaanbevelingen
+              href: audience-insights/sample-guide-predict-product-recommendation.md
+            - name: Experimenten met Azure Machine learning
+              href: audience-insights/azure-machine-learning-experiments.md
+            - name: Experimenten met Azure Machine Learning Studio
+              href: audience-insights/machine-learning-studio-experiments.md
+        - name: Voorspellingen beheren
+          href: audience-insights/manage-predictions.md
         - name: Segmenten maken op basis van voorspellingen
           href: audience-insights/prediction-based-segment.md
-        - name: Aangepaste Machine Learning-modellen implementeren
-          href: audience-insights/custom-models.md
-        - name: Experimenten met Azure Machine learning
-          href: audience-insights/azure-machine-learning-experiments.md
-        - name: Experimenten met Azure Machine Learning Studio
-          href: audience-insights/machine-learning-studio-experiments.md
     - name: Opties voor exporteren
       items:
         - name: Exports
@@ -154,12 +164,18 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: LinkedIn Ads
+              href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
               href: audience-insights/export-liveramp.md
             - name: Mailchimp
               href: audience-insights/export-mailchimp.md
             - name: Marketo
               href: audience-insights/export-marketo.md
+            - name: Microsoft Advertising
+              href: audience-insights/export-microsoft-advertising.md
+            - name: Omnisend
+              href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
             - name: SendGrid
@@ -200,6 +216,8 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: De entiteitsschema's controleren in Common Data Model
           href: audience-insights/entity-schemas.md
+        - name: Customer Insights-gegevens in Dataverse
+          href: audience-insights/customer-insights-dataverse.md
         - name: Werken met API's
           href: audience-insights/apis.md
         - name: API-verwijzingen
@@ -240,6 +258,12 @@
           href: engagement-insights/custom-reports.md
         - name: Geharmoniseerde profielrapporten maken
           href: engagement-insights/profile-reports.md
+        - name: Dimensies weergeven en maken
+          href: engagement-insights/dimensions.md
+        - name: Metrische gegevens weergeven en maken
+          href: engagement-insights/metrics.md
+        - name: Segmenten weergeven en maken
+          href: engagement-insights/segments.md
     - name: Trajectanalyse
       items:
         - name: Trechterrapporten maken en beheren

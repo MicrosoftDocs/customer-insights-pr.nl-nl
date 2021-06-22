@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906896"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095642"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Voorspelling voor abonnementsverloop (preview)
 
@@ -147,30 +147,9 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
        > [!div class="mx-imgBorder"]
        > ![Lijst met invloedrijke factoren en hun belang bij het voorspellen van het verloopresultaat](media/subscription-churn-influentialfactors.PNG "Lijst met invloedrijke factoren en hun belang bij het voorspellen van het verloopresultaat")
 
-## <a name="fix-a-failed-prediction"></a>Een mislukte voorspelling corrigeren
+## <a name="manage-predictions"></a>Voorspellingen beheren
 
-1. Ga naar het tabblad **Mijn voorspellingen** in **Informatie** > **Voorspellingen**.
-1. Selecteer de voorspelling waarvoor u foutlogboeken wilt bekijken en selecteer **Logboeken**.
-   > [!div class="mx-imgBorder"]
-   > ![Weergave van de menubalk van de resultaten, inclusief knoppen voor sluiten, model bewerken en logboeken](media/subscription-churn-logsbutton.PNG "Weergave van de menubalk van de resultaten, inclusief knoppen voor sluiten, model bewerken en logboeken")
-1. Bekijk alle fouten. Er zijn verschillende typen fouten die kunnen optreden en deze beschrijven welke toestand de fout heeft veroorzaakt. Bijvoorbeeld een fout die niet voldoende gegevens bevat om nauwkeurig te voorspellen, wordt meestal opgelost door aanvullende gegevens te laden.
-
-## <a name="refresh-a-prediction"></a>Een voorspelling vernieuwen
-
-Voorspellingen worden automatisch vernieuwd volgens hetzelfde [schema van gegevensvernieuwingen](system.md#schedule-tab) zoals geconfigureerd in de instellingen.
-
-1. Ga naar het tabblad **Mijn voorspellingen** in **Informatie** > **Voorspellingen**.
-1. Selecteer de verticale puntjes naast de voorspelling die u wilt vernieuwen.
-1. Selecteer **Vernieuwen**.
-
-## <a name="delete-a-prediction"></a>Een voorspelling verwijderen
-
-1. Ga naar het tabblad **Mijn voorspellingen** in **Informatie** > **Voorspellingen**.
-1. Selecteer de verticale puntjes naast de voorspelling die u wilt verwijderen.
-1. Selecteer **Verwijderen**.
-
-> [!NOTE]
-> Als u een voorspelling verwijdert, wordt de bijbehorende uitvoerentiteit verwijderd.
+Het is mogelijk om voorspellingen te optimaliseren, problemen op te lossen, voorspellingen te vernieuwen of deze te verwijderen. Bekijk een bruikbaarheidsrapport voor invoergegevens om erachter te komen hoe u een voorspelling sneller en betrouwbaarder kunt maken. Zie [Voorspellingen beheren](manage-predictions.md) voor meer informatie.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

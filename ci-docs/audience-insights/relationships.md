@@ -1,74 +1,110 @@
 ---
 title: Relaties tussen entiteiten en entiteitspaden
 description: Maak en beheer relaties tussen entiteiten uit meerdere gegevensbronnen.
-ms.date: 04/14/2020
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: mukeshpo
-ms.author: mukeshpo
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: c25bfcb8e2a8223498dd1a5e8cfb3712a40ab85e
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595206"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171158"
 ---
 # <a name="relationships-between-entities"></a>Relaties tussen entiteiten
 
-Relaties helpen u bij het verbinden van entiteiten en het genereren van een grafiek van uw gegevens wanneer entiteiten een gemeenschappelijke identificatie (externe sleutel) delen waarnaar van de ene entiteit naar de andere kan worden verwezen. Met verbonden entiteiten kunt u segmenten en meetcriteria definiëren op basis van meerdere gegevensbronnen.
+Relaties verbinden entiteiten en definiëren een grafiek van uw gegevens wanneer entiteiten een gemeenschappelijke id, een refererende sleutel, delen. Er kan vanuit de ene entiteit naar de andere worden verwezen met deze refererende sleutel. Verbonden entiteiten maken het definiëren van segmenten en meetcriteria mogelijk op basis van meerdere gegevensbronnen.
 
-Er zijn twee typen relaties. Niet-bewerkbaar systeemrelaties, die automatisch worden gemaakt, en aangepaste relaties, die worden gemaakt en geconfigureerd door gebruikers.
+Er zijn drie typen relaties: 
+- Niet-bewerkbaar systeemrelaties, die door het systeem worden gemaakt als onderdeel van het gegevensharmonisatieproces
+- Niet-bewerkbare overgenomen relaties, die automatisch worden gemaakt op basis van het opnemen van gegevensbronnen 
+- Bewerkbare aangepaste relaties, die worden gemaakt en geconfigureerd door gebruikers
 
-Tijdens de afstemmings- en samenvoegingsprocessen worden achter de schermen systeemrelaties gemaakt op basis van intelligente afstemming. Deze relaties helpen de klantprofielrecords te relateren aan de records van andere overeenkomstige entiteiten. Het volgende diagram illustreert het maken van drie systeemrelaties wanneer de klantentiteit wordt afgestemd met extra entiteiten om de uiteindelijke entiteit Klantprofiel te produceren.
+## <a name="non-editable-system-relationships"></a>Niet-bewerkbare systeemrelaties
 
-> [!div class="mx-imgBorder"]
-> ![Het maken van relaties](media/relationships-entities-merge.png "Het maken van relaties")
+Tijdens de gegevensharmonisatie worden systeemrelaties automatisch gemaakt op basis van intelligente afstemming. Deze relaties helpen de klantprofielrecords te relateren aan overeenkomstige records. In het volgende diagram wordt het maken van drie systeemgebaseerde relaties geïllustreerd. De klantentiteit wordt gematcht met andere entiteiten om de geharmoniseerde entiteit *Klant* te maken.
 
-- **De relatie *CustomerToContact*** is gemaakt tussen de entiteit Klant en de entiteit Contactpersoon. De entiteit Klant krijgt het sleutelveld **Contact_contactId** om een relatie tot stand te brengen met het sleutelveld **contactId** van de entiteit Contactpersoon.
-- **De relatie *CustomerToAccount*** is gemaakt tussen de entiteit Klant en de entiteit Account. De entiteit Klant krijgt het sleutelveld **Account_accountId** om een relatie tot stand te brengen met het sleutelveld **accountId** van de entiteit Account.
-- **De relatie *CustomerToWebAccount*** is gemaakt tussen de entiteit Klant en de entiteit WebAccount. De entiteit Klant krijgt het sleutelveld **WebAccount_webaccountId** om een relatie tot stand te brengen met het sleutelveld **webaccountId** van de entiteit WebAccount.
+:::image type="content" source="media/relationships-entities-merge.png" alt-text="Diagram met relatiepaden voor de klantentiteit met drie 1-n-relaties.":::
 
-## <a name="create-a-relationship"></a>Een relatie maken
+- De **relatie *CustomerToContact*** is gemaakt tussen de entiteit *Klant* en de entiteit *Contactpersoon*. De entiteit *Klant* krijgt het sleutelveld **Contact_contactID** om een relatie tot stand te brengen met het sleutelveld **contactID** van de entiteit *Contactpersoon*.
+- De **relatie *CustomerToAccount*** is gemaakt tussen de entiteit *Klant* en de entiteit *Account*. De entiteit *Klant* krijgt het sleutelveld **Account_accountID** om een relatie tot stand te brengen met het sleutelveld **accountID** van de entiteit *Account*.
+- De **relatie *CustomerToWebAccount*** is gemaakt tussen de entiteit *Klant* en de entiteit *WebAccount*. De entiteit *Klant* krijgt het sleutelveld **WebAccount_webaccountID** om een relatie tot stand te brengen met het sleutelveld **webaccountID** van de entiteit *WebAccount*.
 
-Definieer aangepaste relaties op de pagina **Relaties**. Elke relatie bestaat uit een bronentiteit (de entiteit die de externe sleutel bevat) en een doelentiteit (de entiteit waarnaar de externe sleutel van de bronentiteit verwijst).
+## <a name="non-editable-inherited-relationships"></a>Niet-bewerkbare overgenomen relaties
+
+Tijdens het gegevensopnameproces controleert het systeem gegevensbronnen op bestaande relaties. Als er geen relatie bestaat, maakt het systeem deze automatisch aan. Deze relaties worden ook gebruikt in downstreamprocessen.
+
+## <a name="create-a-custom-relationship"></a>Een aangepaste relatie maken
+
+Relatie bestaat uit een *bronentiteit* met de refererende sleutel en een *doelentiteit* waarnaar de refererende sleutel van de bronentiteit verwijst. 
 
 1. Ga in doelgroepinzichten naar **Gegevens** > **Relaties**.
 
 2. Selecteer **Nieuwe relatie**.
 
-3. Geef in het deelvenster **Relatie toevoegen** de volgende informatie op:
+3. Geef in het deelvenster **Nieuwe relatie** de volgende informatie op:
 
-   > [!div class="mx-imgBorder"]
-   > ![Relatiedetails invoeren](media/relationships-add.png "Relatiedetails invoeren")
+   :::image type="content" source="media/relationship-add.png" alt-text="Zijvenster Nieuwe relatie met lege invoervelden.":::
 
-   - **Relatienaam**: naam die het doel van de relatie weergeeft (bijvoorbeeld **AccountWebLogs**).
+   - **Relatienaam**: naam die het doel van de relatie weergeeft. Voorbeeld: CustomerToSupportCase.
    - **Beschrijving**: de beschrijving van de relatie.
-   - **Bronentiteit**: selecteer de entiteit die wordt gebruikt als bron in de relatie (bijvoorbeeld WebLog).
-   - **Kardinaliteit**: selecteer de kardinaliteit van de bronentiteitsrecords. "Veel" betekent bijvoorbeeld dat meerdere Weblog-records gerelateerd zijn aan één WebAccount.
-   - **Bronsleutelveld**: dit vertegenwoordigt het veld met de externe sleutel in de bronentiteit. WebLog heeft bijvoorbeeld het veld met de externe sleutel **accountId**.
-   - **Doelentiteit**: selecteer de entiteit die wordt gebruikt als doel in de relatie (bijvoorbeeld WebAccount).
-   - **Doelkardinaliteit**: selecteer de kardinaliteit van de doelentiteitsrecords. "Een" betekent bijvoorbeeld dat meerdere Weblog-records zijn gerelateerd aan één WebAccount.
-   - **Doelsleutelveld**: dit veld vertegenwoordigt het sleutelveld van de doelentiteit. WebAccount heeft bijvoorbeeld het sleutelveld **accountId**.
+   - **Bronentiteit**: entiteit die wordt gebruikt als bron in de relatie. Voorbeeld: SupportCase.
+   - **Doelentiteit**: entiteit die wordt gebruikt als doel in de relatie. Voorbeeld: Customer.
+   - **Bronkardinaliteit**: geef de kardinaliteit van de bronentiteit op. Kardinaliteit beschrijft het aantal mogelijke elementen in een set. Het heeft altijd betrekking op de doelkardinaliteit. U kunt kiezen tussen **Een** en **Veel**. Alleen veel-op-één- en één-op-één-relaties worden ondersteund.  
+     - Veel-op-één: meerdere bronrecords kunnen betrekking hebben op één doelrecord. Voorbeeld: meerdere ondersteuningsaanvragen van een enkele klant.
+     - Eén-op-één: een enkele bronrecord heeft betrekking op één doelrecord. Voorbeeld: één loyaliteits-id voor een enkele klant.
 
-> [!NOTE]
-> Alleen veel-op-één- en één-op-één-relaties worden ondersteund. Veel-op-veel-relaties kunnen worden gemaakt met behulp van twee veel-op-één-relaties en een koppelingsentiteit (een entiteit die wordt gebruikt om de bronentiteit en de doelentiteit met elkaar te verbinden).
+     > [!NOTE]
+     > Veel-op-veel-relaties kunnen worden gemaakt met behulp van twee veel-op-één-relaties en een koppelingsentiteit, die de bronentiteit en de doelentiteit verbindt.
 
-## <a name="delete-a-relationship"></a>Een relatie verwijderen
+   - **Doelkardinaliteit**: selecteer de kardinaliteit van de doelentiteitsrecords. 
+   - **Bronsleutelveld**: het veld voor de refererende sleutel in de bronentiteit. Voorbeeld: SupportCase kan CaseID gebruiken als veld voor refererende sleutel.
+   - **Doelsleutelveld**: het sleutelveld van de doelentiteit. Voorbeeld: Customer zou het sleutelveld **CustomerID** kunnen gebruiken.
 
-1. Ga in doelgroepinzichten naar **Gegevens** > **Relaties**.
+4. Selecteer **Opslaan** om de aangepaste relatie te maken.
 
-2. Schakel selectievakjes in voor de relaties die u wilt verwijderen.
+## <a name="view-relationships"></a>Relaties weergeven
 
-3. Selecteer **Verwijderen** boven aan de tabel **Relaties**.
+Op de pagina Relaties worden alle relaties vermeld die zijn gemaakt. Elke rij vertegenwoordigt een relatie, die ook details bevat over de bronentiteit, de doelentiteit en de kardinaliteit. 
 
-4. Bevestig de verwijdering.
+:::image type="content" source="media/relationships-list.png" alt-text="Lijst met relaties en opties in de actiebalk van de pagina Relaties.":::
+
+Deze pagina biedt een reeks opties voor bestaande en nieuwe relaties: 
+- **Nieuwe relatie:** [maak een aangepaste relatie](#create-a-custom-relationship).
+- **Visualizer**: [verken de relatievisualizer](#explore-the-relationship-visualizer) om een netwerkdiagram te zien van de bestaande relaties en hun kardinaliteit.
+- **Filteren op**: kies het type relaties om in de lijst weer te geven.
+- **Relaties zoeken**: gebruik een op tekst gebaseerde zoekopdracht op eigenschappen van de relaties.
+
+### <a name="explore-the-relationship-visualizer"></a>De relatievisualizer verkennen
+
+De relatievisualizer geeft een netwerkdiagram van de bestaande relaties tussen verbonden entiteiten en hun kardinaliteit weer.
+
+Om de weergave aan te passen, kunt u de positie van de vakken wijzigen door ze op het canvas te slepen.
+
+:::image type="content" source="media/relationship-visualizer.png" alt-text="Schermopname van het netwerkdiagram van de relatievisualizer met verbindingen tussen gerelateerde entiteiten.":::
+
+Beschikbare opties: 
+- **Exporteren als afbeelding**: sla de huidige weergave op als een afbeeldingsbestand.
+- **Wijzigen naar horizontale/verticale indeling**: wijzig de uitlijning van de entiteiten en relaties.
+- **Bewerken**: werk eigenschappen van aangepaste relaties bij in het bewerkingsvenster en sla de wijzigingen op.
+
+## <a name="manage-existing-relationships"></a>Bestaande relaties beheren 
+
+Op de pagina Relaties wordt elke relatie weergegeven door een rij. 
+
+Selecteer een relatie en kies een van de volgende opties: 
+ 
+- **Bewerken**: werk eigenschappen van aangepaste relaties bij in het bewerkingsvenster en sla de wijzigingen op.
+- **Verwijderen**: aangepaste relaties verwijderen.
+- **Weergeven**: door het systeem gemaakte en overgenomen relaties bekijken. 
 
 ## <a name="next-step"></a>Volgende stap
 
-Systeem- en aangepaste relaties worden gebruikt om segmenten te maken op basis van meerdere gegevensbronnen die niet langer geïsoleerd zijn. Zie [Segmenten](segments.md) voor meer informatie.
-
+Systeem- en aangepaste relaties worden gebruikt om [segmenten te maken](segments.md) op basis van meerdere gegevensbronnen die niet langer geïsoleerd zijn.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

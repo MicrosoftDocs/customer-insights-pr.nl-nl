@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595267"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129893"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Voorbeeldgids voor voorspelling van productaanbevelingen (preview)
 
@@ -22,7 +22,7 @@ We laten u een compleet voorbeeld van productaanbevelingsvoorspelling zien aan d
 
 ## <a name="scenario"></a>Scenario
 
-Contoso is een bedrijf dat koffie- en koffiemachines van hoge kwaliteit produceert, die ze verkopen via hun Contoso Coffee-website. Het doel is om te begrijpen welke producten ze moeten aanbevelen aan hun terugkerende klanten. Weten wat klanten **eerder zullen kopen**, kan hen helpen marketinginspanningen te besparen door zich op specifieke artikelen te richten.
+Contoso is een bedrijf dat koffie en koffiemachines van hoge kwaliteit produceert, die ze verkopen via hun Contoso Coffee-website. Het doel is om te begrijpen welke producten ze moeten aanbevelen aan hun terugkerende klanten. Weten wat klanten **eerder zullen kopen**, kan hen helpen marketinginspanningen te besparen door zich op specifieke artikelen te richten.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -65,7 +65,7 @@ Lees vooral de artikelen [over gegevensopname](data-sources.md) en [gegevensbron
 
 1. Wijzig in het veld **Naam** in het deelvenster aan de zijkant uw gegevensbron van **Query** in **eCommercePurchases**.
 
-1. Sla de gegevensbron op.
+1. De gegevensbron **Opslaan**.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Klantgegevens opnemen uit het loyaliteitsschema
@@ -83,11 +83,11 @@ Lees vooral de artikelen [over gegevensopname](data-sources.md) en [gegevensbron
 
 1. Wijzig in het veld **Naam** in het rechterdeelvenster uw gegevensbron van **Query** in **loyCustomers**.
 
-1. Sla de gegevensbron op.
+1. De gegevensbron **Opslaan**.
 
 ## <a name="task-2---data-unification"></a>Taak 2 - Gegevensharmonisatie
 
-Na het opnemen van de gegevens beginnen we nu met het proces **Toewijzen, Matchen, Samenvoegen** om een geharmoniseerd klantprofiel te maken. Zie [Gegevensharmonisatie](data-unification.md) voor meer informatie.
+Nadat we de gegevens hebben opgenomen, beginnen we nu met het proces voor gegevensharmonisatie om een geharmoniseerd klantprofiel te maken. Zie [Gegevensharmonisatie](data-unification.md) voor meer informatie.
 
 ### <a name="map"></a>Toewijzen
 
@@ -156,7 +156,7 @@ Met de geharmoniseerde klantprofielen op hun plaats, kunnen we nu het abonnement
 
    - **Aantal producten**: stel deze waarde in op **5**​. Deze instelling bepaalt hoeveel producten u uw klanten wilt aanbevelen.
 
-   - **Producten voorstellen die klanten onlangs hebben gekocht?**: selecteer **Ja** om aan te geven dat u producten wilt opnemen in de aanbeveling die uw klanten eerder hebben gekocht.
+   - **Verwachte herhaalde aankopen**: selecteer **Ja** om aan te geven dat u producten wilt opnemen in de aanbeveling die uw klanten eerder hebben gekocht.
 
    - **Terugkijkvenster**: selecteer minimaal **365 dagen**​. Deze instelling bepaalt hoe ver het model terugkijkt naar de activiteit van de klant om deze te gebruiken als invoer voor de aanbevelingen.
    

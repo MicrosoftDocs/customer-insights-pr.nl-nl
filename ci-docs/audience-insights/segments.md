@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034006"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111381"
 ---
 # <a name="segments-overview"></a>Overzicht van segmenten
 
@@ -32,22 +32,13 @@ Er zijn meerdere manieren om een nieuw segment te maken:
 - Via AI mogelijk gemaakte suggesties op basis van meetcriteria of kenmerken: [Voorgestelde segmenten om meetcriteria te verbeteren](suggested-segments.md)
 - Suggesties op basis van activiteiten: [Voorgestelde segmenten op basis van klantactiviteit](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Inzichten in bestaande segmenten verkrijgen
-
-Vind aanvullende informatie over uw bestaande segmenten met [Segmentinzichten](segment-insights.md). Ontdek wat twee segmenten van elkaar onderscheidt en wat ze gemeen hebben.
-
-## <a name="find-similar-customers"></a>Vergelijkbare klanten zoeken
-
-Vind klanten die vergelijkbaar zijn met de leden van een geselecteerd segment met behulp van kunstmatige intelligentie. Zie [Vergelijkbare klanten](find-similar-customer-segments.md) voor meer informatie.
-
 ## <a name="manage-existing-segments"></a>Bestaande segmenten beheren
 
 Ga naar de pagina **Segmenten** om al uw opgeslagen segmenten te bekijken en te beheren.
 
 Elk segment wordt weergegeven door een rij met aanvullende informatie over het segment.
 
-> [!div class="mx-imgBorder"]
-> ![Opties voor het beheren van een bestaand segment](media/segments-selected-segment.png "Opties voor het beheren van een bestaand segment")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Geselecteerd segment met vervolgkeuzelijst met opties en beschikbare opties.":::
 
 De volgende actie is beschikbaar wanneer u een segment selecteert:
 
@@ -59,7 +50,7 @@ De volgende actie is beschikbaar wanneer u een segment selecteert:
   U kunt ook de functionaliteit **Later plannen** in de vervolgkeuzelisjt **Activeren/Deactiveren** gebruiken om een toekomstige datum en tijd op te geven voor activering en deactivering van een bepaald segment.
 - **Wijzig de naam** van het segment.
 - **Download** de lijst van leden als .CSV-bestand.
-- **Toevoegen aan** verzendt de lijst met klant-id's in het segment voor verwerking in een andere applicatie.
+- **Exports beheren** om exportgerelateerde segmenten te bekijken en te beheren. [Meer informatie over exports.](export-destinations.md)
 - **Verwijder** het segment.
 
 ## <a name="refresh-segments"></a>Segmenten vernieuwen
@@ -68,6 +59,24 @@ U kunt alle segmenten tegelijk vernieuwen door **Alles vernieuwen** te selectere
 
 > [!TIP]
 > Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
+
+## <a name="export-segments"></a>Segmenten exporteren
+
+U kunt een segment exporteren vanaf de pagina met segmenten of de [pagina met exports](export-destinations.md). 
+
+1. Ga naar de pagina **Segmenten**.
+
+1. Selecteer **Meer weergeven [...]** voor het segment dat u wilt exporteren.
+
+1. Selecteer **Exports beheren** van de vervolgkeuzelijst met acties.
+
+1. De pagina **Exports (preview) voor segment** wordt geopend. U kunt alle geconfigureerde exports zien gegroepeerd op exports die het huidige segment wel of niet bevatten.
+
+   1. Als u het geselecteerde segment aan een export wilt toevoegen, selecteert u de export in de lijst en selecteert u **Segment toevoegen**.
+
+   1. Als u een nieuwe export wilt maken met het geselecteerde segment, selecteert u **Export toevoegen**. Zie [Een nieuwe export instellen](export-destinations.md#set-up-a-new-export) voor meer informatie over het maken van exports..
+
+1. Selecteer **Vorige** om terug te gaan naar de hoofdpagina voor segmenten.
 
 ## <a name="view-processing-history-and-segment-members"></a>Verwerkingsgeschiedenis en segmentleden weergeven
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954573"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095504"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Voorspelling van de levensduurwaarde van klant (preview)
 
@@ -149,7 +149,6 @@ Gegevens die belangrijke klantinteracties weerspiegelen (zoals web, klantenservi
 
 1. Selecteer **Volgende**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>De modelconfiguratie controleren en uitvoeren
 
 1. In de stap **Uw modelgegevens controleren** valideert u de configuratie van de voorspelling. U kunt teruggaan naar elk willekeurig deel van de voorspellingsconfiguratie door **Bewerken** te selecteren onder de weergegeven waarde. U kunt ook een configuratiestap selecteren via de voortgangsindicator.
@@ -170,11 +169,10 @@ Gegevens die belangrijke klantinteracties weerspiegelen (zoals web, klantenservi
 - **Status**: de status of the voorspellingsuitvoering.
     - **In de wachtrij**: voorspelling wacht tot andere processen voltooid zijn.
     - **Vernieuwen**: de voorspelling wordt momenteel uitgevoerd om resultaten te produceren die naar de uitvoerentiteit zullen stromen.
-    - **Mislukt**: voorspellingsuitvoering is mislukt. [Controleer de logbestanden](#troubleshoot-a-failed-prediction) voor meer informatie.
+    - **Mislukt**: voorspellingsuitvoering is mislukt. [Controleer de logbestanden](manage-predictions.md#troubleshoot-a-failed-prediction) voor meer informatie.
     - **Geslaagd**: de voorspelling is geslaagd. Selecteer **Weergeven** onder de verticale ellipsen om de resultaten van de voorspelling te bekijken.
 - **Bewerkt**: de datum waarop de configuratie voor de voorspelling is gewijzigd.
 - **Laatst vernieuwd**: de datum waarop de voorspelling is vernieuwd resulteert in de uitvoerentiteit.
-
 
 ### <a name="review-prediction-results"></a>Resultaten van de voorspelling controleren
 
@@ -216,28 +214,8 @@ Er zijn drie primaire gegevenssecties op de resultatenpagina.
 
 - **Meest invloedrijke factoren**: er worden verschillende factoren in overweging genomen bij het maken van uw voorspelling voor de levensduurwaarde van klanten op basis van de invoergegevens die aan het AI-model worden verstrekt. Voor elk van de factoren wordt het belang berekend bij de geaggregeerde voorspellingen die een model opstelt. U kunt deze factoren gebruiken om uw voorspellingsresultaten te valideren. Deze factoren geven ook meer inzicht in de meest invloedrijke factoren die hebben bijgedragen aan het voorspellen van de levensduurwaarde voor al uw klanten.
 
-## <a name="refresh-a-prediction"></a>Een voorspelling vernieuwen
+## <a name="manage-predictions"></a>Voorspellingen beheren
 
-Voorspellingen worden automatisch volgens dezelfde [planning vernieuwd als uw gegevens](system.md#schedule-tab), zoals geconfigureerd in instellingen. U kunt ze ook handmatig vernieuwen.
-
-1. Ga naar **Intelligence** > **Voorspellingen** en selecteer het tabblad **Mijn voorspellingen**.
-2. Selecteer de verticale puntjes naast de voorspelling die u wilt vernieuwen.
-3. Selecteer **Vernieuwen**.
-
-## <a name="delete-a-prediction"></a>Een voorspelling verwijderen
-
-Als u een voorspelling verwijdert, wordt ook de uitvoerentiteit ervan verwijderd.
-
-1. Ga naar **Intelligence** > **Voorspellingen** en selecteer het tabblad **Mijn voorspellingen**.
-2. Selecteer de verticale puntjes naast de voorspelling die u wilt verwijderen.
-3. Selecteer **Verwijderen**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Probleem van een mislukte voorspelling oplossen
-
-1. Ga naar **Intelligence** > **Voorspellingen** en selecteer het tabblad **Mijn voorspellingen**.
-2. Selecteer het verticale beletselteken naast de voorspelling waarvoor u foutenlogbestanden wilt bekijken.
-3. Selecteer **Logbestanden**.
-4. Bekijk alle fouten. Er zijn verschillende typen fouten die kunnen optreden en deze beschrijven welke toestand de fout heeft veroorzaakt. Bijvoorbeeld een fout die niet voldoende gegevens bevat om nauwkeurig te voorspellen, wordt meestal opgelost door meer gegevens te laden in doelgroepinzichten.
-
+Het is mogelijk om voorspellingen te optimaliseren, problemen op te lossen, voorspellingen te vernieuwen of deze te verwijderen. Bekijk een bruikbaarheidsrapport voor invoergegevens om erachter te komen hoe u een voorspelling sneller en betrouwbaarder kunt maken. Zie [Voorspellingen beheren](manage-predictions.md) voor meer informatie.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

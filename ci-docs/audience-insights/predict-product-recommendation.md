@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906758"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095550"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Productaanbevelingen voorspellen (preview)
 
@@ -205,33 +205,9 @@ Soms zijn alleen bepaalde producten gunstig of geschikt voor het type voorspelli
        > [!div class="mx-imgBorder"]
        > ![Lijst met zeer betrouwbare suggesties voor een selecte groep individuele klanten](media/product-recommendation-highconfidence.PNG "Lijst met zeer betrouwbare suggesties voor een selecte groep individuele klanten")
 
-## <a name="fix-a-failed-prediction"></a>Een mislukte voorspelling corrigeren
+## <a name="manage-predictions"></a>Voorspellingen beheren
 
-1. Ga naar het tabblad **Mijn voorspellingen** in **Informatie** > **Voorspellingen**.
-
-1. Selecteer de voorspelling waarvoor u foutlogboeken wilt bekijken en selecteer **Logboeken**.
-
-1. Bekijk alle fouten. Er zijn verschillende typen fouten die kunnen optreden en deze beschrijven welke toestand de fout heeft veroorzaakt. Een fout waarvan er bijvoorbeeld niet genoeg gegevens zijn om nauwkeurig te voorspellen, wordt meestal opgelost door meer gegevens in Customer Insights te laden.
-
-## <a name="refresh-a-prediction"></a>Een voorspelling vernieuwen
-
-Voorspellingen worden automatisch volgens dezelfde [planning vernieuwd als uw gegevens](system.md#schedule-tab), zoals geconfigureerd in instellingen.
-
-1. Ga naar het tabblad **Mijn voorspellingen** in **Informatie** > **Voorspellingen**.
-
-1. Selecteer de verticale puntjes naast de voorspelling die u wilt vernieuwen.
-
-1. Selecteer **Vernieuwen**.
-
-## <a name="delete-a-prediction"></a>Een voorspelling verwijderen
-
-Als u een voorspelling verwijdert, wordt ook de uitvoerentiteit ervan verwijderd.
-
-1. Ga naar het tabblad **Mijn voorspellingen** in **Informatie** > **Voorspellingen**.
-
-1. Selecteer de verticale puntjes naast de voorspelling die u wilt verwijderen.
-
-1. Selecteer **Verwijderen**.
+Het is mogelijk om voorspellingen te optimaliseren, problemen op te lossen, voorspellingen te vernieuwen of deze te verwijderen. Bekijk een bruikbaarheidsrapport voor invoergegevens om erachter te komen hoe u een voorspelling sneller en betrouwbaarder kunt maken. Zie [Voorspellingen beheren](manage-predictions.md) voor meer informatie.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

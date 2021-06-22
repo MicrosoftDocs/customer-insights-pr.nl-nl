@@ -1,7 +1,7 @@
 ---
 title: Gegevens exporteren vanuit Customer Insights
 description: Beheer exports om gegevens te delen.
-ms.date: 03/25/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,39 +9,53 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
+ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016608"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6253034"
 ---
 # <a name="exports-preview-overview"></a>Overzicht van Exports (preview)
 
 De pagina **Exports** toont u alle geconfigureerde exports. Exports delen specifieke gegevens met verschillende toepassingen. Ze kunnen klantprofielen of entiteiten, schema's en toewijzingsdetails bevatten. Elke export vereist een [verbinding, opgezet door een beheerder, om de verificatie en toegang te beheren](connections.md).
 
-Ga naar **Gegevens** > **Exports** om de pagina met exports te bekijken. Alle gebruikersrollen hebben toegang om geconfigureerde exports te bekijken. Gebruik van het zoekveld in de opdrachtbalk om exports te zoeken op naam, verbindingsnaam of verbindingstype.
+Ga naar **Gegevens** > **Exports** om de pagina met exports te bekijken. Alle gebruikersrollen hebben toegang om geconfigureerde exports te bekijken. Gebruik van het zoekveld op de opdrachtbalk om exports te zoeken op naam, verbindingsnaam of verbindingstype.
 
 ## <a name="set-up-a-new-export"></a>Een nieuwe export instellen
 
 Als u een export wilt instellen of bewerken, moet u over verbindingen beschikken. Verbindingen zijn afhankelijk van uw [gebruikersrol](permissions.md):
 - Beheerders hebben toegang tot alle verbindingen. Ze kunnen ook nieuwe verbindingen maken bij het opzetten van een export.
-- Inzenders kunnen toegang hebben tot specifieke verbindingen. Zij zijn afhankelijk van beheerders om verbindingen te configureren en te delen. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
+- Inzenders kunnen toegang hebben tot specifieke verbindingen. Zij zijn afhankelijk van beheerders om verbindingen te configureren en te delen. De exportlijst laat zien of inzenders een export kunnen bewerken of alleen bekijken in de kolom **Uw machtigingen**. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 - Kijkers kunnen alleen bestaande exports bekijken, maar deze niet maken.
+
+### <a name="define-a-new-export"></a>Een nieuwe export definiëren
 
 1. Ga naar **Gegevens** > **Exports**.
 
-1. Selecteer **Export toevoegen** om een nieuwe exportbestemming te maken.
+1. Selecteer **Export toevoegen** om een nieuwe export te maken.
 
 1. Selecteer in het deelvenster **Export instellen** welke verbinding u wilt gebruiken. [Verbindingen](connections.md) worden beheerd door beheerders. 
 
 1. Geef de vereiste details op en selecteer **Opslaan** om de export te maken.
 
+### <a name="define-a-new-export-based-on-an-existing-export"></a>Een nieuwe export definiëren op basis van een bestaande export
+
+1. Ga naar **Gegevens** > **Exports**.
+
+1. Selecteer in de lijst met exports de export die u wilt dupliceren.
+
+1. Selecteer **Duplicaat maken** op de opdrachtbalk om het deelvenster **Export instellen** te openen met de details van de geselecteerde export.
+
+1. Bekijk en pas de export aan en selecteer **Opslaan** om een nieuwe export te maken.
+
 ### <a name="edit-an-export"></a>Een export bewerken
 
-1. Selecteer het verticale weglatingsteken voor de exportbestemming die u wilt bewerken.
+1. Ga naar **Gegevens** > **Exports**.
 
-1. Selecteer **Bewerken** in het vervolgkeuzemenu.
+1. Selecteer in de lijst met exports de export die u wilt bewerken.
+
+1. Selecteer **Bewerken** op de opdrachtbalk.
 
 1. Wijzig de waarden die u wilt bijwerken en selecteer **Opslaan**.
 
@@ -53,24 +67,48 @@ Nadat u exportbestemmingen hebt gemaakt, worden deze vermeld bij **Gegevens** > 
 
 1. Gebruikers zonder machtigingen voor bewerken selecteren **Weergeven** in plaats van **Bewerken** om de exportdetails te bekijken.
 
-1. Dit zijpaneel toont de instellingen van deze export. Zonder bewerkingsrechten kunt u geen waarden wijzigen. Selecteer **Sluiten** om terug te keren naar de pagina met exports.
+1. Het zijvenster toont de configuratie van een export. Zonder bewerkingsrechten kunt u geen waarden wijzigen. Selecteer **Sluiten** om terug te keren naar de pagina met exports.
 
-## <a name="run-exports-on-demand"></a>Exports op aanvraag uitvoeren
+## <a name="schedule-and-run-exports"></a>Exports plannen en uitvoeren
 
-Na het configureren van een export, wordt deze uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab) zolang er een werkende verbinding is.
+Elke export die u configureert, heeft een vernieuwingsschema. Tijdens een vernieuwing zoekt het systeem naar nieuwe of bijgewerkte gegevens om in een export op te nemen. Standaard worden exports uitgevoerd als onderdeel van elke [geplande systeemvernieuwing](system.md#schedule-tab). U kunt het vernieuwingsschema aanpassen of uitschakelen om exports handmatig uit te voeren.
 
-Als u gegevens wilt exporteren zonder te wachten op een geplande vernieuwing, gaat u naar **Gegevens** > **Exports**. U hebt twee opties:
+Exportschema's zijn afhankelijk van de status van uw omgeving. Als er updates van [afhankelijkheden](system.md#refresh-policies) bezig zijn wanneer een geplande export moet starten, voltooit het systeem eerst de afhankelijkheden en voert het vervolgens de export uit. U kunt zien wanneer een export voor het laatst is vernieuwd in de kolom **Vernieuwd**.
 
-- Als u alle exports wilt uitvoeren, selecteert u **Alles uitvoeren** op de opdrachtbalk. 
-- Als u een enkele export wilt uitvoeren, selecteert u het beletselteken (...) in een lijstitem en kiest u vervolgens **Uitvoeren**.
+### <a name="schedule-exports"></a>Exports plannen
+
+U kunt aangepaste vernieuwingsschema's definiëren voor afzonderlijke exports of meerdere exports tegelijk. Het momenteel gedefinieerde schema wordt weergegeven in de kolom **Schema** van de exportlijst. De toestemming om het schema te wijzigen is hetzelfde als voor [het bewerken en definiëren van exports](export-destinations.md#set-up-a-new-export). 
+
+1. Ga naar **Gegevens** > **Exports**.
+
+1. Selecteer de export die u wilt plannen.
+
+1. Selecteer **Plannen** op de opdrachtbalk.
+
+1. Stel in het deelvenster **Export plannen** de optie **Uitvoering plannen** in op **Aan** om de export automatisch uit te voeren. Stel de optie in op **Uit** om handmatig te vernieuwen.
+
+1. Kies voor automatisch vernieuwde exports een waarde voor **Terugkeerpatroon** en geef de details hiervoor op. De gedefinieerde tijd is van toepassing op alle exemplaren van een terugkeerpatroon. Het is het tijdstip waarop een export moet worden vernieuwd.
+
+1. Pas uw wijzigingen toe en activeer ze door **Opslaan** te selecteren.
+
+Bij het bewerken van de planning voor meerdere exports, dient u een selectie te maken onder **Planningen behouden of overschrijven**:
+- **Afzonderlijke planningen behouden**: houd het eerder gedefinieerde schema voor de geselecteerde exports aan en schakel ze alleen in of uit.
+- **Nieuwe planning voor alle geselecteerde exporten opgeven**: overschrijf de bestaande planningen van de geselecteerde exports.
+
+### <a name="run-exports-on-demand"></a>Exports op aanvraag uitvoeren
+
+Als u gegevens wilt exporteren zonder te wachten op een geplande vernieuwing, gaat u naar **Gegevens** > **Exports**.
+
+- Als u alle exports wilt uitvoeren, selecteert u **Alles uitvoeren** op de opdrachtbalk. Met deze actie worden alleen exports uitgevoerd met een actieve planning.
+- U kunt een enkele export uitvoeren door deze te selecteren in de lijst en vervolgens **Uitvoeren** te selecteren op de opdrachtbalk. Zo voert exports uit zonder actieve planning. 
 
 ## <a name="remove-an-export"></a>Een export verwijderen
 
 1. Ga naar **Gegevens** > **Exports**.
 
-1. Selecteer het verticale weglatingsteken voor de export die u wilt verwijderen.
+1. Selecteer de export die u wilt verwijderen.
 
-1. Selecteer **Verwijderen** in het vervolgkeuzemenu.
+1. Selecteer **Verwijderen** op de opdrachtbalk.
 
 1. Bevestig de verwijdering door **Verwijderen** te selecteren op het bevestigingsscherm.
 

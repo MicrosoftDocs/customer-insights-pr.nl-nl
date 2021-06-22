@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906850"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095596"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transactieverloop voorspellen (preview)
 
@@ -144,7 +144,7 @@ Met deze functie kunt u voorspellen of een klant uw producten of services binnen
    - **Status:** de status of the voorspellingsuitvoering.
         - **In de wachtrij:** voorspelling wacht tot andere processen worden uitgevoerd.
         - **Vernieuwen:** de voorspelling wordt momenteel uitgevoerd en zal resultaten produceren die naar de uitvoerentiteit zullen stromen.
-        - **Mislukt:** voorspellingsuitvoering is mislukt. [Controleer de logbestanden](#troubleshoot-a-failed-prediction) voor meer informatie.
+        - **Mislukt:** voorspellingsuitvoering is mislukt. [Controleer de logbestanden](manage-predictions.md#troubleshoot-a-failed-prediction) voor meer informatie.
         - **Geslaagd:** de voorspelling is geslaagd. Selecteer **Weergave** onder de verticale puntjes om de voorspelling te beoordelen
    - **Bewerkt:** de datum waarop de configuratie voor de voorspelling is gewijzigd.
    - **Laatst vernieuwd:** de datum waarop de voorspelling is vernieuwd resulteert in de uitvoerentiteit.
@@ -168,35 +168,9 @@ Met deze functie kunt u voorspellen of een klant uw producten of services binnen
        
     1. **Meest invloedrijke factoren:** er zijn veel factoren waarmee rekening wordt gehouden bij het maken van uw voorspelling. Voor elke factor wordt het belang berekend van de gecombineerde voorspellingen die een model maakt. U kunt deze factoren gebruiken om uw voorspellingsresultaten te valideren. Of u kunt deze informatie later gebruiken om [segmenten te maken](segments.md) die het klantverlooprisico kunnen helpen beïnvloeden.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Probleem van een mislukte voorspelling oplossen
+## <a name="manage-predictions"></a>Voorspellingen beheren
 
-1. Ga naar **Intelligence** > **Voorspellingen** en selecteer het tabblad **Mijn voorspellingen**.
-
-1. Selecteer het verticale beletselteken naast de voorspelling waarvoor u foutenlogbestanden wilt bekijken.
-
-1. Selecteer **Logbestanden**.
-
-1. Bekijk alle fouten. Er zijn verschillende typen fouten die kunnen optreden en deze beschrijven welke toestand de fout heeft veroorzaakt. Een fout waarbij er niet genoeg gegevens beschikbaar zijn om een nauwkeurige voorspelling te maken wordt bijvoorbeeld doorgaans hersteld door extra gegevens in Customer Insights te laden.
-
-## <a name="refresh-a-prediction"></a>Een voorspelling vernieuwen
-
-Voorspellingen worden automatisch vernieuwd volgens hetzelfde [schema van gegevensvernieuwingen](system.md#schedule-tab) zoals geconfigureerd in de instellingen. U kunt ze ook handmatig vernieuwen.
-
-1. Ga naar **Intelligence** > **Voorspellingen** en selecteer het tabblad **Mijn voorspellingen**.
-
-1. Selecteer de verticale puntjes naast de voorspelling die u wilt vernieuwen.
-
-1. Selecteer **Vernieuwen**.
-
-## <a name="delete-a-prediction"></a>Een voorspelling verwijderen
-
-Als u een voorspelling verwijdert, wordt ook de uitvoerentiteit ervan verwijderd.
-
-1. Ga naar **Intelligence** > **Voorspellingen** en selecteer het tabblad **Mijn voorspellingen**.
-
-1. Selecteer de verticale puntjes naast de voorspelling die u wilt verwijderen.
-
-1. Selecteer **Verwijderen**.
+Het is mogelijk om voorspellingen te optimaliseren, problemen op te lossen, voorspellingen te vernieuwen of deze te verwijderen. Bekijk een bruikbaarheidsrapport voor invoergegevens om erachter te komen hoe u een voorspelling sneller en betrouwbaarder kunt maken. Zie [Voorspellingen beheren](manage-predictions.md) voor meer informatie.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Nieuwe en komende functies
 description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988914"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263245"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Wat is er nieuw in de doelgroepinzichten-mogelijkheid van Dynamics 365 Customer Insights
 
@@ -26,6 +26,37 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>Updates voor mei 2021
+
+De updates in mei 2021 bevatten verschillende functies, prestatie-upgrades en bugfixes.
+
+### <a name="data-ingestion"></a>Gegevensopname
+
+- **Bekijk of wijzig metagegevens of entiteitsdefinitie bij het bijvoegen van gegevens vanuit uw Azure Data Lake Storage** U kunt nu metagegevens of entiteitsdefinities bekijken en bewerken in doelgroepinzichten wanneer u gegevens vanuit een Common Data Model-map opneemt in uw Azure Data Lake Storage. Deze mogelijkheid biedt realtime feedback, modelvalidatie en foutcontrole. Hiermee kunt u zowel model.json als manifest.json naadloos bewerken.
+
+### <a name="extensibility"></a>Uitbreidbaarheid
+
+- **Verbeterde segmentexport, aangepast schema en duplicering** U kunt nu [alle exports voor een specifiek segment bekijken](export-destinations.md#view-exports-and-export-details) in een lijst. Deze nieuwe weergave helpt om te beheren hoe een specifiek segment wordt gebruikt en om bestaande exports aan te passen of nieuwe te maken.    
+  U kunt [aangepaste vernieuwingsschema'ss](export-destinations.md#schedule-and-run-exports) definiëren voor afzonderlijke exports of meerdere exports tegelijk. Tot nu toe werden alle exports uitgevoerd bij elke systeemvernieuwing.    
+  In plaats van helemaal opnieuw een nieuwe export te maken, kunt u beginnen op basis van een bestaande export om wat tijd te besparen.
+
+- **Segmenten exporteren naar Microsoft Advertising** We hebben onze exportbestemmingen uitgebreid met Microsoft Advertising. Maak doelgroepen met overeenkomende klanten in Microsoft Advertising met uw geharmoniseerde klantprofielgegevens en gebruik deze doelgroepen voor uw advertentiecampagnes. Zie [Segmenten exporteren naar Microsoft Advertising](export-microsoft-advertising.md) voor meer informatie.
+
+- **Segmenten exporteren naar LinkedIn Ads** We hebben onze exportbestemmingen uitgebreid met LinkedIn Ads en stellen u in staat om targeting van contactpersonen en targeting van bedrijven via LinkedIn te ontgrendelen door uw geharmoniseerde klantprofielgegevens te exporteren. Zie [Segmenten exporteren naar LinkedIn Ads](export-linkedin-ads.md) voor meer informatie.
+
+
+- **Segmenten exporteren naar Omnisend** We hebben onze exportbestemmingen uitgebreid met Omnisend. Gebruik de segmenten die zijn gemaakt in doelgroepinzichten om campagnes te genereren, e-mailmarketing te bieden en specifieke groepen met klanten te gebruiken met Omnisend. Zie [Segmenten exporteren naar Omnisend](export-omnisend.md) voor meer informatie
+
+### <a name="predictions"></a>Voorspellingen
+
+- **Rapport over bruikbaarheid van invoergegevens** Het bruikbaarheidsrapport voor invoergegevens biedt een geconsolideerd overzicht van de fouten en waarschuwingen die uw kant-en-klare voorspellingen mogelijk genereren. Het geeft ook aanbevelingen om de prestaties van het model te verbeteren.    
+  Het rapport is beschikbaar nadat een model zijn trainingsproces heeft voltooid. Het wordt voor elk model afzonderlijk gemaakt, ongeacht of dit met succes is voltooid of niet.
+  Momenteel is deze functie alleen beschikbaar voor het model voor transactieverloop. Zie [Bruikbaarheidsrapport voor gegevensinvoer](manage-predictions.md#input-data-usability-report) voor meer informatie.
+
+### <a name="relationships"></a>Relaties
+
+- **Relatievisualizer** Met de weergave van de relatievisualisatie kunt u alle bestaande relaties tussen entiteiten en hun kardinaliteit bekijken. Relaties zijn nu georganiseerd in groepen: door gebruiker gemaakte relaties, systeemrelaties en overgenomen relaties. U kunt een weergave ook als afbeelding exporteren. Zie [Relatie weergeven](relationships.md#view-relationships) voor meer informatie. 
 
 ## <a name="april-2021-updates"></a>Updates van april 2021
 

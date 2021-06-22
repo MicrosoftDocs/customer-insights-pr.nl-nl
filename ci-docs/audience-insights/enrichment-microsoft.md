@@ -1,7 +1,7 @@
 ---
 title: Klantprofielen verrijken met gegevens van Microsoft
 description: Gebruik bedrijfseigen gegevens van Microsoft om uw klantgegevens te verrijken met merk- en interesseaffiniteiten.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064885"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245701"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Klantprofielen verrijken met merk- en interesseaffiniteiten (preview)
 
@@ -69,12 +69,10 @@ Een begeleide ervaring helpt u bij het configureren van de verrijkingen.
 
 ### <a name="define-your-brands-or-interests"></a>Uw merken of interesses definiëren
 
-Selecteer een van de volgende opties:
+Kies maximaal vijf merken of interesses met behulp van een of beide van deze opties:
 
-- **Branche**: het systeem identificeert de topmerken of interesses die relevant zijn voor uw branche en verrijkt uw klantgegevens hiermee.
-- **Uw eigen keuze maken**: selecteer maximaal vijf items uit de lijst met merken of interesses die het meest relevant zijn voor uw organisatie.
-
-Als u een merk of interesse wilt toevoegen, voert u dit in het invoerveld in om suggesties te krijgen op basis van overeenkomende termen. Als we geen merk of interesse vermelden waarnaar u op zoek bent, stuur ons dan feedback via de koppeling **Dit voorstellen**.
+- **Branche**: selecteer uw branche in de vervolgkeuzelijst en kies vervolgens uit de topmerken of interesses voor die branche.
+- **Uw eigen keuze maken**: voer een merk of interesse in die relevant is voor uw organisatie en kies vervolgens uit de bijpassende suggesties. Als we geen merk of interesse vermelden waarnaar u op zoek bent, stuur ons dan feedback via de koppeling **Dit voorstellen**.
 
 ### <a name="review-enrichment-preferences"></a>Verrijkingsvoorkeuren beoordelen
 

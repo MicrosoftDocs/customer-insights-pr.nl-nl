@@ -1,7 +1,7 @@
 ---
 title: Omgevingen maken en beheren
 description: Ontdek hoe u zich aanmeldt voor de service en hoe u omgevingen beheert.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887980"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259093"
 ---
 # <a name="manage-environments"></a>Omgevingen beheren
 
@@ -76,9 +76,9 @@ Een omgeving maken:
    > We ondersteunen alleen Azure Data Lake Gen2-opslagaccounts uit dezelfde Azure-regio die u hebt geselecteerd bij het maken van de omgeving.
    > We ondersteunen alleen opslagaccounts waarvoor Azure Data Lake Gen2 Hierarchical Name Space (HNS) is ingeschakeld.
 
-   - Voor de Azure Data Lake Storage Gen2-oplossing kunt u kiezen tussen een resource-optie en een abonnementsoptie voor verificatie. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. De naam van de **Container** kan niet worden gewijzigd en is "customerinsights".
+   - Voor de Azure Data Lake Storage Gen2-oplossing kunt u kiezen tussen een resource-optie en een abonnementsoptie voor verificatie. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. De naam van **Container** kan niet worden gewijzigd en luidt `customerinsights`.
    
-   - Als u [voorspellingen](predictions.md) wilt gebruiken, configureert u het delen van gegevens met toepassingen en oplossingen op basis van Microsoft Dataverse of schakelt u gegevensopname uit on-premises-gegevensbronnen in, geeft u de URL voor de Microsoft Dataverse-omgeving op onder **Het delen van gegevens met Microsoft Dataverse configureren en extra mogelijkheden inschakelen**. Selecteer **Gegevens delen inschakelen** om Customer Insights-uitvoergegevens te delen met een Microsoft Dataverse beheerde data lake.
+   - Als u [voorspellingen](predictions.md) wilt gebruiken, configureert u het delen van gegevens met Microsoft Dataverse of schakelt u gegevensopname uit on-premises-gegevensbronnen in en geeft u de URL voor de Microsoft Dataverse-omgeving op onder **Gegevens delen met Microsoft Dataverse configureren en aanvullende functionaliteit inschakelen**. Selecteer **Gegevens delen inschakelen** om Customer Insights-uitvoergegevens te delen met een Microsoft Dataverse beheerde data lake.
 
      > [!NOTE]
      > - Gegevens delen met Microsoft Dataverse beheerde Data Lake wordt momenteel niet ondersteund wanneer u alle gegevens in uw eigen Azure Data Lake Storage​opslaat.
@@ -87,7 +87,7 @@ Een omgeving maken:
      > [!div class="mx-imgBorder"]
      > ![Configuratieopties om het delen van gegevens mogelijk te maken met Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Wanneer u processen uitvoert, zoals het opnemen van gegevens of het maken van segmenten, worden overeenkomstige mappen gemaakt in het opslagaccount dat u hierboven hebt opgegeven. Gegevensbestanden en model.json-bestanden worden op basis van het proces dat u uitvoert gemaakt en toegevoegd aan de respectievelijke submappen.
+   Wanneer u processen uitvoert, zoals het opnemen van gegevens of het maken van segmenten, worden overeenkomstige mappen gemaakt in het opslagaccount dat u hierboven hebt opgegeven. Er worden gegevensbestanden en bestanden model.json gemaakt en toegevoegd aan mappen op basis van de procesnaam.
 
    Als u meerdere omgevingen van Customer Insights maakt en ervoor kiest de uitvoerentiteiten van die omgevingen op te slaan in uw opslagaccount, worden voor elke omgeving aparte mappen gemaakt met ci_<environmentid> in de container.
 
@@ -146,7 +146,7 @@ U kunt enkele details van bestaande omgevingen bewerken.
    > - Gegevens delen met Microsoft Dataverse beheerde data lake wordt momenteel niet ondersteund wanneer u alle gegevens in uw eigen Azure Data Lake Storage opslaat.
    > - [Voorspelling van ontbrekende waarden in een entiteit](predictions.md) wordt momenteel niet ondersteund wanneer u gegevens delen met een Microsoft Dataverse beheerde data lake inschakelt.
 
-   Nadat u het delen van gegevens met Microsoft Dataverse hebt ingeschakeld, wordt een volledige vernieuwing van uw gegevensbronnen en andere processen geactiveerd. Als er momenteel processen actief zijn en in de wachtrij staan, ziet u de optie om het delen van gegevens met Microsoft Dataverse in te schakelen niet. U kunt wachten tot die processen zijn voltooid of u kunt ze annuleren om het delen van gegevens in te schakelen. 
+   Nadat u het delen van gegevens met Microsoft Dataverse hebt ingeschakeld, wordt een volledige vernieuwing van uw gegevensbronnen en andere processen gestart. Als er momenteel processen actief zijn, ziet u de optie om het delen van gegevens met Microsoft Dataverse in te schakelen niet. Wacht tot die processen zijn voltooid of annuleer ze om het delen van gegevens in te schakelen. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Configuratieopties om het delen van gegevens met Microsoft Dataverse mogelijk te maken.":::
    
