@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129939"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306343"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Voorbeeldgids voor voorspelling van de levensduurwaarde van klanten (CLV)
 
@@ -123,7 +123,7 @@ Nadat we de gegevens hebben opgenomen, beginnen we nu met het proces voor gegeve
 
 1. Ga naar het tabblad **Matchen** en selecteer **Volgorde instellen**.
 
-1. Kies in de vervolgkeuzelijst **Primair** de optie **eCommerceContacts: eCommerce** als primaire bron en neem alle records op.
+1. Kies in de vervolgkeuzelijst **Primair** de optie **eCommerceContacts : eCommerce** als primaire bron en neem alle records op.
 
 1. Kies in de vervolgkeuzelijst **Entiteit 2** de optie **loyCustomers: LoyaltyScheme** en neem alle records op.
 
@@ -133,16 +133,16 @@ Nadat we de gegevens hebben opgenomen, beginnen we nu met het proces voor gegeve
 
 1. Voeg uw eerste voorwaarde toe met FullName.
 
-   - Selecteer voor eCommerceContacts **FullName** in de vervolgkeuzelijst.
-   - Selecteer voor loyCustomers **FullName** in de vervolgkeuzelijst.
-   - Selecteer de vervolgkeuzelijst **Normaliseren** en kies **Type (telefoon, naam, adres, ...)**.
+   - Selecteer voor eCommerceContacts de optie **FullName** in de vervolgkeuzelijst.
+   - Selecteer voor loyCustomers de optie **FullName** in de vervolgkeuzelijst.
+   - Selecteer de vervolgkeuzelijst **Normaliseren** en kies **Type (telefoon, naam, adres, organisatie)**.
    - Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
 
 1. Voer de naam **FullName, Email** in voor de nieuwe regel.
 
    - Voeg een tweede voorwaarde voor het e-mailadres toe door **Voorwaarde toevoegen** te selecteren
-   - Kies voor entiteit eCommerceContacts **EMail** in de vervolgkeuzelijst.
-   - Kies voor entiteit loyCustomers **EMail** in de vervolgkeuzelijst.
+   - Kies voor entiteit eCommerceContacts de optie **E-mail** in de vervolgkeuzelijst.
+   - Kies voor entiteit loyCustomers de optie **E-mail** in de vervolgkeuzelijst.
    - Laat Normaliseren leeg.
    - Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
 

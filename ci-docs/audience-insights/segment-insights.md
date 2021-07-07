@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595328"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306068"
 ---
 # <a name="segment-insights-preview"></a>Segmentinzichten (preview)
 
@@ -50,7 +50,7 @@ Selecteer een inzicht om de analyseresultaten te bekijken:
 
 - Het aantal leden dat segmenten overlapt die zijn geselecteerd voor analyse.
 - Het aantal leden dat is opgenomen in een van de segmenten, maar niet in de rest van de segmenten.
-- Als u velden hebt geselecteerd tijdens het configureren van de overlappingsanalyse, vindt u deze op de bijbehorende tabbladen. U kunt de vervolgkeuzelijst met filters gebruiken om een willekeurig kenmerkniveau waarin u bent geïnteresseerd te selecteren en de tabel onderaan toont de bijbehorende gegevens.
+- Als u velden hebt geselecteerd tijdens het configureren van de overlappingsanalyse, vindt u deze op de bijbehorende tabbladen. U kunt de vervolgkeuzelijst voor filteren gebruiken om elk kenmerkniveau van belang te selecteren en de tabel onderaan toont de bijbehorende gegevens.
 
 ## <a name="segment-differentiators"></a>Segmentdifferentiators
 

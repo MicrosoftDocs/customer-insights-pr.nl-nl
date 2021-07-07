@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111381"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306251"
 ---
 # <a name="segments-overview"></a>Overzicht van segmenten
 
@@ -68,7 +68,7 @@ U kunt een segment exporteren vanaf de pagina met segmenten of de [pagina met ex
 
 1. Selecteer **Meer weergeven [...]** voor het segment dat u wilt exporteren.
 
-1. Selecteer **Exports beheren** van de vervolgkeuzelijst met acties.
+1. Selecteer **Exports beheren** uit de vervolgkeuzelijst met acties.
 
 1. De pagina **Exports (preview) voor segment** wordt geopend. U kunt alle geconfigureerde exports zien gegroepeerd op exports die het huidige segment wel of niet bevatten.
 

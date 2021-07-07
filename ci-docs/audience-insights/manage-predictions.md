@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095700"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315872"
 ---
 # <a name="manage-predictions"></a>Voorspellingen beheren
 
@@ -35,9 +35,6 @@ In dit artikel worden enkele taken besproken die de meeste voorspellingsscenario
 Het bruikbaarheidsrapport voor invoergegevens biedt een geconsolideerd overzicht van de fouten en waarschuwingen die uw kant-en-klare voorspellingen mogelijk genereren. Het geeft ook aanbevelingen om de prestaties van het model te verbeteren.
 
 Het rapport is beschikbaar nadat een model zijn trainingsproces heeft voltooid. Het wordt voor elk model afzonderlijk gemaakt, ongeacht of dit met succes is voltooid of niet.
-
-> [!NOTE]
-> Momenteel werkt deze functie alleen voor het model voor transactieverloop.
 
 ### <a name="view-the-input-data-usability-report"></a>Het bruikbaarheidsrapport voor gegevensinvoer bekijken
 

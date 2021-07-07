@@ -9,16 +9,16 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
-ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6245701"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305150"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Klantprofielen verrijken met merk- en interesseaffiniteiten (preview)
 
-Gebruik bedrijfseigen gegevens van Microsoft om uw klantgegevens te verrijken met merk- en interesseaffiniteiten. Deze affiniteiten worden bepaald op basis van gegevens van mensen met vergelijkbare demografische gegevens als uw klanten. Deze informatie helpt u om uw klanten beter te begrijpen en te segmenteren op basis van hun affiniteit met specifieke merken en interesses.
+Gebruik bedrijfseigen gegevens van Microsoft om uw klantgegevens te verrijken met merk- en interesseaffiniteiten. Deze affiniteiten zijn gebaseerd op gegevens van personen in een vergelijkbare demografische groep als uw klanten. Deze informatie helpt u om uw klanten beter te begrijpen en te segmenteren op basis van hun affiniteit met specifieke merken en interesses.
 
 Ga in doelgroepinzichten naar **Gegevens** > **Verrijking** om [verrijkingen te configureren en weer te geven](enrichment-hub.md).
 
@@ -27,7 +27,7 @@ Ga naar het tabblad **Ontdekken** en selecteer **Mijn gegevens verrijken** op de
 Ga naar het tabblad **Ontdekken** en selecteer **Mijn gegevens verrijken** op de tegel **Interesses** om de verrijking van interesseaffiniteiten te configureren.
 
    > [!div class="mx-imgBorder"]
-   > ![Tegels voor merken en interesses](media/BrandsInterest-tile-Hub.png "Tegels voor merken en interesses")
+   > ![Tegels Merken en Interesses](media/BrandsInterest-tile-Hub.png "Tegels Merken en Interesses")
 
 ## <a name="how-we-determine-affinities"></a>Hoe we affiniteiten bepalen
 
@@ -53,7 +53,7 @@ Afhankelijk van de granulariteit waarmee u de affiniteit wilt meten, kunt u het 
 
 We ondersteunen momenteel de volgende opties voor landen/regio's: Australië, Canada (Engels), Frankrijk, Duitsland, Verenigd Koninkrijk of Verenigde Staten (Engels).
 
-Als u een land wilt selecteren, opent u **Verrijking van merken** of **Interesseverrijking** en selecteert u **WIjzigen** naast **Land/regio**. Kies in het deelvenster **Land-/regio-instellingen** een optie en selecteer **Toepassen**.
+Als u een land of regio wilt selecteren, opent u **Verrijking met merken** of **Verrijking met interesses** en selecteert u **Wijzigen** naast **Land/Regio**. Kies in het deelvenster **Land-/regio-instellingen** een optie en selecteer **Toepassen**.
 
 ### <a name="implications-related-to-country-selection"></a>Implicaties met betrekking tot landselectie
 
@@ -61,7 +61,7 @@ Als u een land wilt selecteren, opent u **Verrijking van merken** of **Interesse
 
 - Wanneer u [een branche kiest](#define-your-brands-or-interests), krijgt u de meest relevante merken of interesses op basis van het geselecteerde land of de geselecteerde regio.
 
-- Wanneer u [profielen verrijkt](#refresh-enrichment), verrijken we alle klantprofielen waarvoor we gegevens krijgen voor de geselecteerde merken en interesses. Inclusief profielen die zich niet in het geselecteerde land of de geselecteerde regio bevinden. Als u bijvoorbeeld Duitsland hebt geselecteerd, verrijken we profielen in de Verenigde Staten als we gegevens beschikbaar hebben voor de geselecteerde merken en interesses in de Verenigde Staten.
+- Bij het [verrijken van profielen](#refresh-enrichment), verrijken we alle klantprofielen waarvoor we gegevens krijgen voor de geselecteerde merken en interesses, inclusief profielen die zich niet in het geselecteerde land of de geselecteerde regio bevinden. Als u bijvoorbeeld Duitsland hebt geselecteerd, verrijken we profielen in de Verenigde Staten als we gegevens beschikbaar hebben voor de geselecteerde merken en interesses in de Verenigde Staten.
 
 ## <a name="configure-enrichment"></a>Verrijking configureren
 
@@ -88,12 +88,12 @@ Selecteer **Verrijkte entiteit** en kies de gegevensset die u wilt verrijken met
 
 Wijs velden van uw geharmoniseerde klantentiteit toe om het demografische segment te definiëren dat u door het systeem wilt laten gebruiken om uw klantgegevens te verrijken. Wijs land/regio toe en ten minste geboortedatum of genderkenmerken. Bovendien moet u ten minste een plaats (en staat/provincie) of postcode toewijzen. Selecteer **Bewerken** om de toewijzing van de velden te definiëren en selecteer **Toepassen** wanneer u klaar bent. Selecteer **Opslaan** om de veldtoewijzing te voltooien.
 
-De volgende indelingen en waarden worden ondersteund. Waarden zijn niet hoofdlettergevoelig:
+De volgende indelingen en waarden worden ondersteund (waarden zijn niet hoofdlettergevoelig):
 
-- **Geboortedatum**: we raden aan om de geboortedatum te converteren naar het type DateTime tijdens het opnemen van gegevens. Als alternatief kan het een tekenreeks zijn in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)-indeling 'jjjj-MM-dd' of 'jjjj-MM-dd THH: mm: ssZ'.
-- **Geslacht**: Man, Vrouw, Onbekend
-- **Postcode**: vijfcijferige postcodes voor de VS, standaard postcode overal elders
-- **Plaats**: plaatsnaam in het Engels
+- **Geboortedatum**: we raden aan om de geboortedatum te converteren naar het type DateTime tijdens het opnemen van gegevens. Als alternatief kan het een tekenreeks zijn in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)-indeling 'jjjj-MM-dd' of 'jjjj-MM-ddTHH:mm:ss'.
+- **Geslacht**: Man, Vrouw, Onbekend.
+- **Postcode**: vijfcijferige postcodes voor Verenigde Staten, standaard postcode overal elders.
+- **Plaats**: plaatsnaam in het Engels.
 - **Staat/provincie**: afkorting van twee letters voor de VS en Canada. Afkorting van twee of drie letters voor Australië. Niet van toepassing op Frankrijk, Duitsland of het VK.
 - **Land/regio**:
 
@@ -113,10 +113,11 @@ Tot slot gaat u de informatie bekijken en een naam voor de verrijking opgeven.
 ## <a name="refresh-enrichment"></a>Verrijking vernieuwen
 
 Voer de verrijking uit na het configureren van merken, interesses en de veldtoewijzing voor demografische gegevens. Start het proces door **Uitvoeren** te selecteren op de configuratiepagina voor merken of interesses. Bovendien kunt u het systeem de verrijking automatisch laten uitvoeren als onderdeel van een geplande vernieuwing.
+
 Afhankelijk van de omvang van uw klantgegevens kan het enkele minuten duren voordat een verrijking is voltooid.
 
 > [!TIP]
-> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
+> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Zie details** voor een van de taken van de functie vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
 
 ## <a name="enrichment-results"></a>Verrijkingsresultaten
 
@@ -134,7 +135,7 @@ Merk- en interesse-affiniteiten kunnen ook worden bekeken op individuele klanten
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Bouw voort op uw verrijkte klantgegevens. U kunt [Segmenten](segments.md) en [Maatregelen](measures.md) maken en [de gegevens zelfs exporteren](export-destinations.md) om uw klanten gepersonaliseerde ervaringen te bieden.
+Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md) en [metingen](measures.md), en [exporteer de gegevens](export-destinations.md) zelfs om gepersonaliseerde ervaringen aan uw klanten te leveren.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895907"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305196"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Verrijking van bedrijfsprofielen met Leadspace (preview)
 
@@ -57,13 +57,13 @@ Als u Leadspace wilt configureren, moet aan de volgende vereisten worden voldaan
 
 U moet een beheerder zijn om verbindingen te kunnen configureren. Selecteer **Verbinding toevoegen** bij het configureren van een verrijking *of* ga naar **Beheerder** > **Verbindingen** en selecteer **Instellen** op de Leadspace-tegel.
 
-1. Selecteer **Aan de slag** 
+1. Selecteer **Aan de slag**. 
 
 1. Voer een naam in voor de verbinding in het vak **Weergavenaam**.
 
 1. Geef een geldig Leadspace-token op.
 
-1. **Gegevensprivacy en naleving** bekijken en toestemming geven door het selectievakje **Ik ga akkoord** in te schakelen
+1. Bekijk en geef uw toestemming voor **Gegevensprivacy en naleving** door **Ik ga akkoord** te selecteren.
 
 1. Selecteer **Verifiëren** om de configuratie te valideren.
 
@@ -81,7 +81,7 @@ Zie [De API's van Leadspace](https://support.leadspace.com/hc/en-us/sections/201
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md), [metingen](measures.md) en [exporteer de gegevens](export-destinations.md) om uw klanten gepersonaliseerde ervaringen te bieden.
+Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md) en [metingen](measures.md), en [exporteer de gegevens](export-destinations.md) zelfs om gepersonaliseerde ervaringen aan uw klanten te leveren.
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 

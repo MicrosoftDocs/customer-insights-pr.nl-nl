@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595420"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306114"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Voorbeeldhandleiding transactieverloop voorspellen (preview)
 
-We laten u een compleet voorbeeld van transactieverloop-voorspelling in Customer Insights zien aan de hand van de onderstaande voorbeeldgegevens. Alle gegevens die in deze handleiding worden gebruikt, zijn geen echte klantgegevens en maken deel uit van de Contoso gegevensset in de *Demo*-omgeving binnen uw Customer Insights-abonnement.
+We laten u een compleet voorbeeld van transactieverloop-voorspelling in Customer Insights zien aan de hand van de onderstaande voorbeeldgegevens. Alle gegevens die in deze handleiding worden gebruikt, zijn geen echte klantgegevens en maken deel uit van de Contoso-gegevensset die te vinden is in de omgeving *Demo* binnen uw Customer Insights-abonnement.
 
 ## <a name="scenario"></a>Scenario
 
-Contoso is een bedrijf dat koffie- en koffiemachines van hoge kwaliteit produceert, die ze verkopen via hun Contoso Coffee-website. Hun doel is te weten te komen welke klanten die hun producten normaal gesproken regelmatig kopen, in de komende 60 dagen geen actieve klant meer zijn. Weten welke van hun klanten **waarschijnlijk zal verlopen**, kan hen helpen zich marketinginspanningen te besparen door zich te concentreren op het behouden van hun klanten.
+Contoso is een bedrijf dat koffie en koffiemachines van hoge kwaliteit produceert, die ze verkopen via hun Contoso Coffee-website. Hun doel is te weten te komen welke klanten die hun producten normaal gesproken regelmatig kopen, in de komende 60 dagen geen actieve klant meer zijn. Weten welke van hun klanten **waarschijnlijk zal verlopen**, kan hen helpen zich marketinginspanningen te besparen door zich te concentreren op het behouden van hun klanten.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -109,7 +109,7 @@ Na het opnemen van de gegevens beginnen we nu met het proces **Toewijzen, Matche
 
 1. Ga naar het tabblad **Matchen** en selecteer **Volgorde instellen**.
 
-1. Kies in de vervolgkeuzelijst **Primair** de optie **eCommerceContacts: eCommerce** als primaire bron en neem alle records op.
+1. Kies in de vervolgkeuzelijst **Primair** de optie **eCommerceContacts : eCommerce** als primaire bron en neem alle records op.
 
 1. Kies in de vervolgkeuzelijst **Entiteit 2** de optie **loyCustomers: LoyaltyScheme** en neem alle records op.
 
@@ -119,16 +119,16 @@ Na het opnemen van de gegevens beginnen we nu met het proces **Toewijzen, Matche
 
 1. Voeg uw eerste voorwaarde toe met FullName.
 
-   * Selecteer voor eCommerceContacts **FullName** in de vervolgkeuzelijst.
-   * Selecteer voor loyCustomers **FullName** in de vervolgkeuzelijst.
+   * Selecteer voor eCommerceContacts de optie **FullName** in de vervolgkeuzelijst.
+   * Selecteer voor loyCustomers de optie **FullName** in de vervolgkeuzelijst.
    * Selecteer de vervolgkeuzelijst **Normaliseren** en kies **Type (telefoon, naam, adres, ...)**.
    * Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
 
 1. Voer de naam **FullName, Email** in voor de nieuwe regel.
 
    * Voeg een tweede voorwaarde voor het e-mailadres toe door **Voorwaarde toevoegen** te selecteren
-   * Kies voor entiteit eCommerceContacts **EMail** in de vervolgkeuzelijst.
-   * Kies voor entiteit loyCustomers **EMail** in de vervolgkeuzelijst. 
+   * Kies voor entiteit eCommerceContacts de optie **E-mail** in de vervolgkeuzelijst.
+   * Kies voor entiteit loyCustomers de optie **E-mail** in de vervolgkeuzelijst. 
    * Laat Normaliseren leeg. 
    * Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965572"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305426"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Verrijking van klantprofielen met uitgebreide adressen
 
@@ -22,11 +22,11 @@ Adressen in uw gegevens kunnen ongestructureerd, onvolledig of onjuist zijn. Geb
 
 ## <a name="how-we-enhance-addresses"></a>Adressen uitbreiden
 
-Ons model doorloopt een proces in twee stappen om een adres uit te breiden. Eerst wordt het adres geparseerd om de onderdelen ervan te identificeren en worden deze onderdelen in een gestructureerde indeling geplaatst. Vervolgens gebruiken we kunstmatige intelligentie om de waarden in het adres te corrigeren, aan te vullen en te standaardiseren.
+Ons model doorloopt een proces in twee stappen om een adres uit te breiden. Eerst wordt het adres geparseerd om de onderdelen ervan te identificeren en worden deze onderdelen in een gestructureerde indeling geplaatst. Vervolgens gebruiken we AI om de waarden in het adres te corrigeren, aan te vullen en te standaardiseren.
 
 ### <a name="example"></a>Voorbeeld
 
-Adresgegevens hebben mogelijk een afwijkende indeling en kunnen spelfouten bevatten. Met het model kunnen deze problemen worden opgelost en kunnen consistente adressen in uniforme klantprofielen worden gemaakt.
+Adresgegevens kunnen een afwijkende notatie hebben en spelfouten bevatten. Met het model kunnen deze problemen worden opgelost en kunnen consistente adressen in uniforme klantprofielen worden gemaakt.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Uitgebreide adressen werken alleen met de waarden die al bestaan in uw opgenomen
 2. Controleren of de waarden, zoals postcodes of straatnamen, geldig zijn.
 3. Waarden wijzigen die niet worden herkend.
 
-Het model maakt gebruik van op machine learning gebaseerde methoden om adressen uit te breiden. Hoewel we een hoge betrouwbaarheidsdrempel toepassen voor gevallen waarin met het model een invoerwaarde wordt gewijzigd, zoals bij elk op ML gebaseerd model, is 100% nauwkeurigheid niet gegarandeerd.
+Het model maakt gebruik van op machine learning gebaseerde methoden om adressen uit te breiden. Hoewel we een hoge betrouwbaarheidsdrempel toepassen voor wanneer het model een invoerwaarde wijzigt, is 100 procent nauwkeurigheid niet gegarandeerd, zoals bij elk model dat is gebaseerd op machine learning.
 
 ## <a name="supported-countries-or-regions"></a>Ondersteunde landen of regio's
 
@@ -76,7 +76,7 @@ Adressen moeten een waarde voor land/regio bevatten. Adressen voor landen of reg
 1. Selecteer hoe adressen worden opgemaakt in uw gegevensset. Kies **Adres met één kenmerk** als adressen in uw gegevens één veld gebruiken. Kies **Adres met meerdere kenmerken** als adressen in uw gegevens meerdere gegevensvelden gebruiken.
 
    > [!NOTE]
-   > Land/regio is verplicht in zowel adressen met één kenmerk als in adressen met meerdere kenmerken. Adressen die geen geldige of ondersteunde waarden voor land/regio bevatten, worden niet verrijkt
+   > Land/regio is verplicht in zowel adressen met enkelvoudige kenmerken als adressen met meervoudige kenmerken. Adressen die geen geldige of ondersteunde waarden voor land/regio bevatten, worden niet verrijkt.
 
 1.  Wijs de adresvelden vanuit uw uniforme klantentiteit toe.
 
@@ -98,6 +98,6 @@ U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrij
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md), [metingen](measures.md) en [exporteer de gegevens](export-destinations.md) om uw klanten gepersonaliseerde ervaringen te bieden.
+Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md) en [metingen](measures.md), en [exporteer de gegevens](export-destinations.md) zelfs om gepersonaliseerde ervaringen aan uw klanten te leveren.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

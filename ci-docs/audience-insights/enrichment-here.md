@@ -1,5 +1,5 @@
 ---
-title: Verrijking van de verrijking door derden van HERE Technologies
+title: Verrijking met de verrijking van derden van HERE Technologies
 description: Algemene informatie over de verrijking door derden van HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896045"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305288"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Verrijking van klantprofielen met HERE Technologies (preview)
 
@@ -24,9 +24,9 @@ HERE Technologies is een locatieplatformbedrijf dat locatiegerichte gegevens en 
 
 Om HERE Technologies-verrijkingen te configureren, moet aan de volgende voorwaarden worden voldaan:
 
-- U moet een actief abonnement hebben voor HERE Technologies. Om een abonnement te nemen, kunt u [hier registreren](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) of rechtstreeks [contact opnemen met HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Meer informatie over locatieverrijking door HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
+- U moet een actief abonnement hebben voor HERE Technologies. U kunt een abonnement nemen door zich [hier te registreren](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) of rechtstreeks [contact op te nemen met HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Meer informatie over locatieverrijking door HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Er is een HERE-[verbinding](connections.md) beschikbaar *of* u hebt [beheerdersmachtigingen](permissions.md#administrator) en de API-sleutel van HERE Technologies.
+- Er is een HERE-[verbinding](connections.md) beschikbaar *of* u hebt [beheerdersmachtigingen](permissions.md#administrator) en de HERE Technologies API-sleutel.
 
 ## <a name="configure-the-enrichment"></a>De verrijking configureren
 
@@ -58,7 +58,7 @@ Om HERE Technologies-verrijkingen te configureren, moet aan de volgende voorwaar
 
 1. Selecteer **Verrijking opslaan** na het bekijken van uw keuzes.
 
-## <a name="configure-the-connection-for-here-technologies"></a>De verbinding configureren voor HERE technologies 
+## <a name="configure-the-connection-for-here-technologies"></a>De verbinding configureren voor HERE Technologies 
 
 U moet een beheerder zijn om verbindingen te kunnen configureren. Selecteer **Verbinding toevoegen** bij het configureren van een verrijking *of* ga naar **Beheerder** > **Verbindingen** en selecteer **Instellen** op de HERE technologies-tegel.
 
@@ -66,13 +66,13 @@ U moet een beheerder zijn om verbindingen te kunnen configureren. Selecteer **Ve
 
 1. Geef een geldige API-sleutel van HERE Technologies op.
 
-1. **Gegevensprivacy en naleving** bekijken en toestemming geven door het selectievakje **Ik ga akkoord** in te schakelen
+1. Bekijk en geef uw toestemming voor **Gegevensprivacy en naleving** door **Ik ga akkoord** te selecteren.
 
 1. Selecteer **Verifiëren** om de configuratie te valideren.
 
 1. Voltooi de verificatie en selecteer **Opslaan**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Configuratiepagina voor HERE technologies-verbinding](media/enrichment-HERE-connection.png "Configuratiepagina voor HERE technologies-verbinding")
 
 ## <a name="enrichment-results"></a>Verrijkingsresultaten
@@ -85,7 +85,7 @@ U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrij
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md), [metingen](measures.md) en [exporteer de gegevens](export-destinations.md) om uw klanten gepersonaliseerde ervaringen te bieden.
+Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md) en [metingen](measures.md), en [exporteer de gegevens](export-destinations.md) zelfs om gepersonaliseerde ervaringen aan uw klanten te leveren.
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 

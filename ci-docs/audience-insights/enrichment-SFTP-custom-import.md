@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896275"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304644"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Klantprofielen verrijken met aangepaste gegevens (preview)
 
-Dankzij de aangepaste import van Secure File Transfer Protocol (SFTP) kunt u gegevens importeren die het proces van gegevensharmonisatie niet hoeven te doorlopen. Het is een flexibele, veilige en gemakkelijke manier om uw gegevens binnen te halen. Aangepaste SFTP-import kan worden gebruikt in combinatie met [SFTP-export](export-sftp.md), waarmee u de klantprofielgegevens kunt exporteren die nodig zijn voor verrijking. De gegevens kunnen vervolgens worden verwerkt, verrijkt en aangepaste SFTP-import kan worden gebruikt om de verrijkte gegevens terug te brengen naar de doelgroepinzichten van Dynamics 365 Customer Insights.
+Dankzij de aangepaste import van Secure File Transfer Protocol (SFTP) kunt u gegevens importeren die niet door het proces van gegevensharmonisatie hoeven te gaan. Het is een flexibele, veilige en gemakkelijke manier om uw gegevens binnen te halen. Aangepaste SFTP-import kan worden gebruikt in combinatie met [SFTP-export](export-sftp.md), waarmee u de klantprofielgegevens kunt exporteren die nodig zijn voor verrijking. De gegevens kunnen vervolgens worden verwerkt en verrijkt, en aangepaste SFTP-import kan worden gebruikt om de verrijkte gegevens terug te brengen naar de doelgroepinzichten van Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -41,7 +41,7 @@ Om aangepaste SFTP-import te configureren, moet aan de volgende voorwaarden word
 
 1. Selecteer **Verbinding maken met aangepaste import** om de geselecteerde verbinding te bevestigen.
 
-1.  Selecteer **Volgende** en voer de **bestandsnaam** en het **pad** in voor het gegevensbestand dat u wilt importeren.
+1.  Selecteer **Volgende** en voer het **Pad** en de **Bestandsnaam** in van het gegevensbestand dat u wilt importeren.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Schermopname bij invoeren van gegevenslocatie.":::
 
@@ -55,21 +55,21 @@ U moet een beheerder zijn om verbindingen te kunnen configureren. Selecteer **Ve
 
 1. Voer een naam in voor de verbinding in het vak **Weergavenaam**.
 
-1. Voer een geldige waarde voor gebruikersnaam, wachtwoord en host-URL in voor de STFP-server waarop de te importeren gegevens zich bevinden.
+1. Voer een geldige gebruikersnaam, wachtwoord en host-URL in voor de SFTP-server waarop de te importeren gegevens zich bevinden.
 
 1. Bekijk en geef toestemming voor **Gegevensprivacy en naleving** door het selectievakje **Ik ga akkoord** in te schakelen.
 
 1. Selecteer **Verifiëren** om de configuratie te valideren.
 
-1. Zodra de verificatie is voltooid, kan de verbinding worden opgeslagen door op **Opslaan** te klikken.
+1. Nadat de verificatie is voltooid, kan de verbinding worden opgeslagen door **Opslaan** te selecteren.
 
-> [!div class="mx-imgBorder"]
-   > ![Configuratiepagina voor Experian-verbinding](media/enrichment-SFTP-connection.png "Configuratiepagina voor Experian-verbinding")
+   > [!div class="mx-imgBorder"]
+   > ![Experian-verbindingsconfiguratiepagina](media/enrichment-SFTP-connection.png "Experian-verbindingsconfiguratiepagina")
 
 
 ## <a name="defining-field-mappings"></a>Veldtoewijzingen definiëren 
 
-De directory die het bestand bevat dat op de SFTP-server moet worden geïmporteerd, moet ook een *model.json*-bestand bevatten. Dit bestand definieert het schema dat moet worden gebruikt voor het importeren van de gegevens. Het schema moet [het Common Data Model](/common-data-model/) gebruiken om de veldtoewijzing op te geven. Een eenvoudig voorbeeld van een model.json-bestand ziet er als volgt uit:
+De directory die het bestand bevat dat op de SFTP-server moet worden geïmporteerd, moet ook een *model.json*-bestand bevatten. Dit bestand definieert het schema dat moet worden gebruikt voor het importeren van de gegevens. Het schema moet [Common Data Model](/common-data-model/) gebruiken om de veldtoewijzing te specificeren. Een eenvoudig voorbeeld van een model.json-bestand ziet er als volgt uit:
 
 ```
 {
@@ -123,6 +123,6 @@ U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrij
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md), [metingen](measures.md) en [exporteer de gegevens](export-destinations.md) om uw klanten gepersonaliseerde ervaringen te bieden.
+Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md) en [meetcriteria](measures.md), en [exporteer de gegevens](export-destinations.md) om gepersonaliseerde ervaringen aan uw klanten te leveren.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

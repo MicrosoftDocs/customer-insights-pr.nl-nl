@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085616"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306022"
 ---
 # <a name="match-entities"></a>Entiteiten toewijzen
 
@@ -209,7 +209,7 @@ Probeer verschillende precisiedrempels voor voorwaarden om de optimale waarde te
 
 U kunt de meeste vergelijkingsparameters opnieuw configureren en verfijnen.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Schermopname van het vervolgkeuzemenu met opties voor overeenkomstregels.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Schermopname van het vervolgkeuzemenu met opties voor afstemmingsregels.":::
 
 - **Wijzig de volgorde van uw regels** als u meerdere regels hebt gedefinieerd. U kunt de wedstrijdregels opnieuw rangschikken door **Omhoog** en **Omlaag** te selecteren of door te slepen en neer te zetten.
 
@@ -247,7 +247,7 @@ U kunt voorwaarden opgeven die bepaalde records altijd moeten overeenkomen of no
 
 1. Ga naar **Gegevens** > **Gegevensbronnen** en neem de sjabloonbestanden op als nieuwe entiteiten. Na inname kunt u ze gebruiken om de afstemmingsconfiguratie op te geven.
 
-1. Na het uploaden zijn de bestanden en entiteiten beschikbaar. Selecteer vervolgens de optie **Aangepaste overeenkomst** opnieuw. U ziet opties om de entiteiten op te geven die u wilt opnemen. Selecteer de vereiste entiteiten uit de vervolgkeuzelijst.
+1. Na het uploaden zijn de bestanden en entiteiten beschikbaar. Selecteer vervolgens de optie **Aangepaste overeenkomst** opnieuw. U ziet opties om de entiteiten op te geven die u wilt opnemen. Selecteer de vereiste entiteiten in het vervolgkeuzemenu.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Schermopname van het dialoogvenster om overschrijvingen te kiezen voor een aangepast afstemmingsscenario.":::
 

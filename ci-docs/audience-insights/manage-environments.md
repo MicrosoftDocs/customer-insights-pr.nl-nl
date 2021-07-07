@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259093"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304874"
 ---
 # <a name="manage-environments"></a>Omgevingen beheren
 
@@ -54,29 +54,32 @@ Een omgeving maken:
 1. Selecteer **Nieuw**.
 
    > [!div class="mx-imgBorder"]
-   > ![Omgevingsinstellingen](media/environment-settings-dialog.png)
+   > ![Omgevingsinstellingen.](media/environment-settings-dialog.png)
 
-1. Selecteer **Nieuwe omgeving** in het dialoogvenster **Nieuwe omgeving maken**.
+1. Selecteer in het dialoogvenster **Een omgeving maken** de optie **Nieuwe omgeving**.
 
    Als u [gegevens wilt kopiëren uit de huidige omgeving](#considerations-for-copy-configuration-preview), selecteert u **Kopiëren uit bestaande omgeving**. U ziet een lijst met alle beschikbare omgevingen in uw organisatie waaruit u gegevens kunt kopiëren.
 
 1. Geef de volgende details op:
    - **Naam**: de naam voor deze omgeving. Dit veld is al ingevuld als u hebt gekopieerd vanuit een bestaande omgeving, maar u kunt dit wijzigen.
-   - **Regio**: de regio waarin de service wordt geïmplementeerd en gehost.
    - **Type**: selecteer of u een productie- of sandbox-omgeving wilt maken.
-
+   - **Regio**: de regio waarin de service wordt geïmplementeerd en gehost.
+   
 1. U kunt desgewenst het **Geavanceerde instellingen** inschakelen:
 
-   - **Alle gegevens opslaan naar**: geeft aan waar u de uitvoergegevens wilt opslaan die zijn gegenereerd vanuit Customer Insights. U hebt twee opties: **Opslag Customer Insights** (een Azure Data Lake beheerd door het Customer Insights-team) en **Azure Data Lake Storage Gen2** (uw eigen Azure Data Lake Storage). Standaard is de opslagoptie Customer Insights geselecteerd.
+   - **Alle gegevens opslaan naar**: geeft aan waar u de uitvoergegevens wilt opslaan die zijn gegenereerd vanuit Customer Insights. U hebt twee opties: **Customer Insights-opslag** (een Azure Data Lake beheerd door het Customer Insights-team) en **Azure Data Lake Storage** (uw eigen Azure Data Lake Storage). Standaard is de opslagoptie Customer Insights geselecteerd.
 
-   > [!NOTE]
-   > Door gegevens op te slaan in Azure Data Lake Storage stemt u ermee in dat gegevens worden overgebracht naar en opgeslagen in de juiste geografische locatie voor dat Azure Storage-account, die kan afwijken van waar gegevens zijn opgeslagen in Dynamics 365 Customer Insights. [Meer informatie op het Microsoft Trust Center.](https://www.microsoft.com/trust-center)
-   >
-   > Momenteel worden opgenomen entiteiten altijd opgeslagen in het beheerde data lake van Customer Insights.
-   > We ondersteunen alleen Azure Data Lake Gen2-opslagaccounts uit dezelfde Azure-regio die u hebt geselecteerd bij het maken van de omgeving.
-   > We ondersteunen alleen opslagaccounts waarvoor Azure Data Lake Gen2 Hierarchical Name Space (HNS) is ingeschakeld.
+     > [!NOTE]
+     > Door gegevens op te slaan in Azure Data Lake Storage stemt u ermee in dat gegevens worden overgebracht naar en opgeslagen in de juiste geografische locatie voor dat Azure Storage-account, die kan afwijken van waar gegevens zijn opgeslagen in Dynamics 365 Customer Insights. [Meer informatie op het Microsoft Trust Center.](https://www.microsoft.com/trust-center)
+     >
+     > Momenteel worden opgenomen entiteiten altijd opgeslagen in het beheerde Data Lake van Customer Insights. 
+     > 
+     > Wij ondersteunen alleen Azure Data Lake Storage-accounts uit dezelfde Azure-regio die u hebt geselecteerd bij het maken van de omgeving. 
+     > 
+     > Wij ondersteunen alleen Azure Data Lake Storage-accounts waarvoor hiërarchische naamruimte is ingeschakeld.
 
-   - Voor de Azure Data Lake Storage Gen2-oplossing kunt u kiezen tussen een resource-optie en een abonnementsoptie voor verificatie. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. De naam van **Container** kan niet worden gewijzigd en luidt `customerinsights`.
+
+   - Voor de optie Azure Data Lake Storage kunt u kiezen tussen een op resources gebaseerde optie en een op abonnementen gebaseerde optie voor verificatie. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. De naam van **Container** kan niet worden gewijzigd en luidt `customerinsights`.
    
    - Als u [voorspellingen](predictions.md) wilt gebruiken, configureert u het delen van gegevens met Microsoft Dataverse of schakelt u gegevensopname uit on-premises-gegevensbronnen in en geeft u de URL voor de Microsoft Dataverse-omgeving op onder **Gegevens delen met Microsoft Dataverse configureren en aanvullende functionaliteit inschakelen**. Selecteer **Gegevens delen inschakelen** om Customer Insights-uitvoergegevens te delen met een Microsoft Dataverse beheerde data lake.
 
@@ -85,7 +88,7 @@ Een omgeving maken:
      > - [voorspelling van ontbrekende waarden in een entiteit](predictions.md) wordt momenteel niet ondersteund wanneer u gegevens delen met Microsoft Dataverse beheerde data lake inschakelt.
 
      > [!div class="mx-imgBorder"]
-     > ![Configuratieopties om het delen van gegevens mogelijk te maken met Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Configuratieopties om het delen van gegevens met Microsoft Dataverse mogelijk te maken.](media/datasharing-with-DataverseMDL.png)
 
    Wanneer u processen uitvoert, zoals het opnemen van gegevens of het maken van segmenten, worden overeenkomstige mappen gemaakt in het opslagaccount dat u hierboven hebt opgegeven. Er worden gegevensbestanden en bestanden model.json gemaakt en toegevoegd aan mappen op basis van de procesnaam.
 
@@ -113,14 +116,14 @@ De volgende instellingen worden *niet* gekopieerd:
 
 - Klantprofielen.
 - Referenties voor gegevensbron. U moet de referenties voor elke gegevensbron opgeven en de gegevensbronnen handmatig vernieuwen.
-- Gegevensbronnen uit Common Data Model-map en beheerd lake voor Common Data Service. U moet die gegevensbronnen handmatig maken met dezelfde naam als in de bronomgeving.
+- Gegevensbronnen uit map Common Data Model en door Dataverse beheerde Data Lake. U moet die gegevensbronnen handmatig maken met dezelfde naam als in de bronomgeving.
 
 Wanneer u een omgeving kopieert, ziet u een bevestigingsbericht dat de nieuwe omgeving is gemaakt. Selecteer **Ga naar gegevensbronnen** om de lijst met gegevensbronnen te zien.
 
 Alle gegevensbronnen hebben de status **Referenties vereist**. Bewerk de gegevensbronnen en voer de referenties in om ze te vernieuwen.
 
 > [!div class="mx-imgBorder"]
-> ![Gekopieerde gegevensbronnen](media/data-sources-copied.png)
+> ![Gegevensbronnen gekopieerd.](media/data-sources-copied.png)
 
 Ga na het vernieuwen van de gegevensbronnen naar **Gegevens** > **Harmoniseren**. Hier vindt u instellingen uit de bronomgeving. Bewerk deze indien nodig of selecteer **Uitvoeren** om het proces voor gegevensharmonisering te starten en de geharmoniseerde klantentiteit te maken.
 
@@ -136,7 +139,7 @@ U kunt enkele details van bestaande omgevingen bewerken.
 
 3. In het vak **Omgeving bewerken** kunt u de **Weergavenaam** van de omgeving bijwerken, maar u kunt niet de **Regio** of het **Type** bijwerken.
 
-4. Als een omgeving is geconfigureerd om gegevens in op te slaan Azure Data Lake Storage Gen2, kunt u **Accountsleutel** bijwerken. U kunt de **accountnaam** of naam van de **container** echter niet wijzigen.
+4. Als een omgeving is geconfigureerd om gegevens op te slaan in Azure Data Lake Storage, kunt u de **accountsleutel** bijwerken. U kunt de **accountnaam** of naam van de **container** echter niet wijzigen.
 
 5. Optioneel kunt u bijwerken vanaf een accountsleutelverbinding naar een resource- of een abonnementsverbinding. Na het upgraden kunt u na de update geen accountsleutel meer gebruiken. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. U kunt geen informatie over **Container** wijzigen bij het bijwerken van de verbinding.
 
@@ -158,19 +161,19 @@ Als beheerder kunt u een omgeving terugzetten naar een lege staat als u alle con
 
 1.  Selecteer de picker **Omgeving** in de koptekst van de app. 
 
-2.  Selecteer de omgeving die u opnieuw wilt instellen en selecteer het beletselteken **...** ​. 
+2.  Selecteer de omgeving die u opnieuw wilt instellen en selecteer het beletselteken (**...**). 
 
 3. Kies de optie **Opnieuw instellen**. 
 
 4.  Om het verwijderen te bevestigen, voert u de omgevingsnaam in en selecteert u **Opnieuw instellen**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Een bestaande omgeving verwijderen (alleen beschikbaar voor beheerders)
+## <a name="delete-an-existing-environment"></a>Een bestaande omgeving verwijderen
 
 Als beheerder kunt u een door u beheerde omgeving verwijderen.
 
 1.  Selecteer de picker **Omgeving** in de koptekst van de app.
 
-2.  Selecteer de omgeving die u opnieuw wilt instellen en selecteer het beletselteken **...** ​. 
+2.  Selecteer de omgeving die u opnieuw wilt instellen en selecteer het beletselteken (**...**). 
 
 3. Kies de optie **Verwijderen**. 
 

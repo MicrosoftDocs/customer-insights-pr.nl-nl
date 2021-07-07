@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760275"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305380"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Customer Insights-segmenten gebruiken in Adobe Campaign Standard (preview)
 
-Als gebruiker van doelgroepinzichten voor Dynamics 365 Customer Insights hebt u mogelijk segmenten gemaakt om uw marketingcampagnes efficiënter te maken door u op relevante doelgroepen te richten. Als u een segment uit doelgroepinzichten in Adobe Experience Platform en toepassingen zoals Adobe Campaign Standard wilt gebruiken, moet u een paar stappen volgen die in dit artikel worden beschreven.
+Als gebruiker van doelgroepinzichten in Dynamics 365 Customer Insights, hebt u mogelijk segmenten gemaakt om uw marketingcampagnes efficiënter te laten verlopen door relevante doelgroepen te targeten. Als u een segment uit doelgroepinzichten in Adobe Experience Platform en toepassingen zoals Adobe Campaign Standard wilt gebruiken, moet u een paar stappen volgen die in dit artikel worden beschreven.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Procesdiagram van de stappen die in dit artikel worden beschreven.":::
 
@@ -54,7 +54,7 @@ Nu onze doelgroep is geïdentificeerd, kunnen we de export van doelgroepinzichte
 
 1. Ga in doelgroepinzichten naar **Beheerder** > **Verbindingen**.
 
-1. Selecteer **Verbinding toevoegen** en kies **Adobe Campaign** om de verbinding te configureren of selecteer **Instellen** op de **Adobe Campaign**-tegel
+1. Selecteer **Verbinding toevoegen** en kies **Adobe Campaign** om de verbinding te configureren of selecteer **Instellen** op de tegel **Adobe Campaign**.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Configuratietegel voor Adobe Campaign Standard.":::
 
@@ -62,11 +62,11 @@ Nu onze doelgroep is geïdentificeerd, kunnen we de export van doelgroepinzichte
 
 1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
 
-1. Voer een waarde in de velden **Gebruikersnaam**, **Accountsleutel** en **Container** in van het Azure Blob Storage-account waarnaar u het segment wilt exporteren.  
+1. Voer een waarde in de velden **Accountnaam**, **Accountsleutel** en **Container** in van het Azure Blob Storage-account waarnaar u het segment wilt exporteren.  
       
-   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Schermopname van de opslagaccountconfiguratie. "::: 
+   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Schermopname van de opslagaccountconfiguratie."::: 
 
-   - Zie voor meer informatie over het vinden van de naam en de accountsleutel van uw Azure-blobopslagaccount [Opslagaccountinstellingen beheren in de Azure-portal](/azure/storage/common/storage-account-manage).
+   - Zie [Opslagaccountinstellingen beheren in de Azure-portal](/azure/storage/common/storage-account-manage) voor meer informatie over het vinden van de Azure Blob Storage-accountnaam en -accountsleutel.
 
    - Zie voor meer informatie over het maken van een container [Een container maken](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
@@ -106,7 +106,7 @@ U kunt [het segment nu op aanvraag exporteren](export-destinations.md#run-export
 > [!NOTE]
 > Zorg ervoor dat het aantal records in het geëxporteerde segment binnen de toegestane limiet van uw Adobe Campaign Standard-licentie valt.
 
-Geëxporteerde gegevens worden opgeslagen in de Azure Blob-opslagcontainer die u eerder hebt geconfigureerd. Het volgende mappad wordt automatisch gemaakt in uw container:
+Geëxporteerde gegevens worden opgeslagen in de Azure Blob Storage-container die u eerder hebt geconfigureerd. Het volgende mappad wordt automatisch gemaakt in uw container:
 
 *%ContainerName%/CustomerInsights_%instanceID%/% exportdestination-name%_%segmentname%_%timestamp%.csv*
 
@@ -128,7 +128,7 @@ Als er geen andere records in Adobe Campaign Standard zijn, behalve de records d
 
 Nu aan alle voorwaarden is voldaan, moeten we de voorbereide doelgroepgegevens van doelgroepinzichten importeren in Adobe Campaign Standard om profielen te maken. Lees [hoe u profielen importeert in Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) met behulp van een werkstroom.
 
-De importwerkstroom in de onderstaande afbeelding is geconfigureerd om elke acht uur te worden uitgevoerd en zoekt naar geëxporteerde segmenten voor doelgroepinzichten (CSV-bestand in Azure Blob Storage). De werkstroom extraheert de inhoud van het CSV-bestand in een opgegeven kolomvolgorde. Deze werkstroom is ontwikkeld om elementaire foutafhandeling uit te voeren en ervoor te zorgen dat elke record een e-mailadres heeft voordat de gegevens in Adobe Campaign Standard worden gehydrateerd. De werkstroom extraheert ook de segmentnaam uit de bestandsnaam voordat deze wordt omgezet in ACS-profielgegevens.
+De importwerkstroom in de onderstaande afbeelding is geconfigureerd om elke acht uur te worden uitgevoerd en te zoeken naar geëxporteerde segmenten met doelgroepinzichten (.CSV-bestand in Azure Blob Storage). De werkstroom extraheert de inhoud van het CSV-bestand in een opgegeven kolomvolgorde. Deze werkstroom is ontwikkeld om elementaire foutafhandeling uit te voeren en ervoor te zorgen dat elke record een e-mailadres heeft voordat de gegevens in Adobe Campaign Standard worden gehydrateerd. De werkstroom extraheert ook de segmentnaam uit de bestandsnaam voordat deze wordt toegevoegd aan Adobe Campaign Standard-profielgegevens.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Schermopname van een importwerkstroom in de Adobe Campaign Standard-gebruikersinterface.":::
 

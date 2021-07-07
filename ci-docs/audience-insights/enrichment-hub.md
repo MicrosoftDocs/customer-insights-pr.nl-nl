@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954481"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305242"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Verrijking voor klantprofielen (preview)
 
@@ -22,7 +22,8 @@ Gebruik gegevens vanuit bronnen zoals Microsoft en andere partners om uw klantge
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Pagina van verrijkingshub":::
 
-Ga in doelgroepinzichten naar **Gegevens** > **Verrijking** om te werken met verrijkingsopties.    
+Ga in doelgroepinzichten naar **Gegevens** > **Verrijking** om te werken met verrijkingsopties.  
+
 U hebt de machtigingen Inzender of Beheerder nodig om verrijkingen te kunnen maken of bewerken. Zie [Machtigingen](permissions.md) voor meer informatie.
 
 Op het tabblad **Ontdekken** vindt u de volgende verrijkingen:
@@ -31,7 +32,7 @@ Op het tabblad **Ontdekken** vindt u de volgende verrijkingen:
 - [Interesses](enrichment-microsoft.md) die worden geleverd door Microsoft
 - [Uitgebreide adressen](enrichment-enhanced-addresses.md) geleverd door Microsoft
 - [Bedrijfsgegevens](enrichment-leadspace.md) worden verstrekt door Leadspace
-- [Demografische gegevens](enrichment-experian.md) die worden geleverd door Experian
+- [Demografische gegevens](enrichment-experian.md) geleverd door Experian
 - [Locatiegegevens](enrichment-here.md) worden geleverd door HERE Technologies
 - [Aangepaste gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP)
 
@@ -39,7 +40,7 @@ Op het tabblad **Mijn verrijkingen** kunt u de verrijkingen zien die u hebt geco
 
 ## <a name="manage-existing-enrichments"></a>Bestaande verrijkingen beheren
 
-Ga naar **Mijn verrijkingen** om alle geconfigureerde verrijkingen te zien. Elke verrijking wordt weergegeven als een rij met aanvullende informatie over de verrijking.
+Ga naar het tabblad **Mijn verrijkingen** om alle geconfigureerde verrijkingen te zien. Elke verrijking wordt weergegeven als een rij met aanvullende informatie over de verrijking.
 
 Selecteer een verrijking om de beschikbare opties te zien. U kunt ook het beletselteken (...) in een lijstitem selecteren om de opties te zien.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e20c7b7fd3989d7621cb7765f38b85c8ab4adfcb
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976036"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305104"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Segmentenlijst exporteren naar Facebook Ads Manager (preview)
 
@@ -22,12 +22,12 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Facebook Ads Manager
 
 ## <a name="prerequisites-for-connection"></a>Vereisten voor verbinding
 
-- U hebt een [**Facebook Ad-account**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) nodig dat een [**zakelijk Facebook-account**](https://business.facebook.com/) bevat.
-- U moet een beheerder zijn van het [**Facebook Ad-account**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- U hebt een [**Facebook Ad-account**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) nodig dat een [zakelijk **Facebook-account**](https://business.facebook.com/) bevat.
+- U moet een beheerder zijn voor het [**Facebook Ads-account**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Maximaal 10 miljoen klantprofielen per export naar Facebook Ads Manager.
+- Tot 10 miljoen klantprofielen per export naar Facebook Ads Manager.
 - Exporteren naar Facebook Ads Manager is beperkt tot segmenten.
 - Maak of update in Facebook alleen aangepaste doelgroepen van het type *klantenlijst*.
 - Segmenten met in totaal 10 miljoen profielen exporteren kan tot 90 minuten duren.
@@ -42,17 +42,17 @@ Voordat gebruikers een export kunnen maken, moet een beheerder de verbinding met
 
 1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
 
-1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt **Beheerders** gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
+1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
 1. Verifiëren met Facebook Ads: 
 
-   1. Selecteer **Doorgaan met Facebook** om zich aan te melden bij uw Facebook Ad-account.
+   1. Selecteer **Doorgaan met Facebook** om u aan te melden bij uw Facebook Ads-account.
 
    1. Geef **ads_management** een machtiging na verificatie met Facebook.
 
    1. Selecteer het **Facebook Ads-account** waarmee u wilt werken.
 
-   1. Selecteer een **Bestaande aangepaste doelgroep** in de vervolgkeuzelijst of maak een **Nieuwe aangepaste doelgroep**. Zie [**Doelgroepen in Facebook Ads Manager**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) voor meer informatie.
+   1. Selecteer een **Bestaande aangepaste doelgroep** uit de vervolgkeuzelijst of maak een **Nieuwe aangepaste doelgroep**. Zie [**Doelgroepen in Facebook Ads Manager**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) voor meer informatie.
       > [!NOTE]
       > U kunt op Facebook alleen aangepaste doelgroepen maken of bijwerken van het type *klantenlijst* met deze export. In sommige gevallen ziet u aangepaste doelgroepen van verschillende typen in de vervolgkeuzelijst. Als een ander type dan *klantenlijst* wordt geselecteerd, resulteert dit in een mislukte export. 
 
@@ -75,7 +75,8 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**.
 
 1. Wijs de corresponderende kenmerken van uw geharmoniseerde klantentiteit toe aan de geselecteerde sleutel-id.
-   > [TIP] U hebt de beste kans op een overeenkomst als u **E-mail** als sleutel-id selecteert. De matching kan verbeteren door toevoeging van extra id's.
+   > [!TIP]
+   > U hebt de beste kans op een overeenkomst als u **E-mail** als sleutel-id selecteert. De matching kan verbeteren door toevoeging van extra id's.
 
 1. Selecteer **Kenmerk toevoegen** om meer kenmerken toe te wijzen om naar Facebook Ads Manager te verzenden. Kenmerken van Facebook Ads Manager komen overeen met de volgende gebruikersvriendelijke namen: **FN** = **Voornaam**, **LN** = **Achternaam**, **FI** = **Eerste initiaal**, **PHONE** = **Telefoon**, **GEN** = **Geslacht**, **DOB** = **Geboortedatum**, **ST** = **Staat**, **CT** = **Plaats**, **ZIP** = **Postcode**, **COUNTRY** = **Land/regio**
 
@@ -85,7 +86,9 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 
-De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
+De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). 
+
+U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896091"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304966"
 ---
 # <a name="connections-preview-overview"></a>Overzicht van Verbindingen (preview)
 
@@ -74,7 +74,9 @@ Bij het opzetten of bewerken van een exportverbinding, kiest u welke gebruikers 
 
 ## <a name="remove-a-connection"></a>Een verbinding verwijderen
 
-Als de verbinding die u verwijdert, wordt gebruikt door verrijkingen of exports, moet u deze eerst loskoppelen of verwijderen. Het dialoogvenster voor verwijdering leidt u naar de relevante verrijkingen of exports. Losgekoppelde verrijkingen en exports worden inactief. U activeert deze opnieuw door er een andere verbinding aan toe te voegen op de pagina [Verrijkingen](enrichment-hub.md) of [Exports](export-destinations.md).
+Als de verbinding die u verwijdert, wordt gebruikt door verrijkingen of exports, moet u deze eerst loskoppelen of verwijderen. Het dialoogvenster voor verwijdering leidt u naar de relevante verrijkingen of exports. 
+
+Losgekoppelde verrijkingen en exports worden inactief. U activeert deze opnieuw door er een andere verbinding aan toe te voegen op de pagina [Verrijkingen](enrichment-hub.md) of [Exports](export-destinations.md).
 
 1. Ga naar **Beheerder** > **Verbindingen (preview)**.
 
@@ -89,5 +91,5 @@ Als de verbinding die u verwijdert, wordt gebruikt door verrijkingen of exports,
       - **Verrijkingen:** u kunt ervoor kiezen om de verrijkingen te verwijderen of te deactiveren om de verbinding te kunnen verwijderen. 
    1. Zodra de verbinding geen afhankelijkheden meer heeft, gaat u terug naar **Beheerder** > **Verbindingen** en probeert u de verbinding opnieuw te verwijderen.
 
-1. Selecteer **Verwijderen** om het verwijderen te bevestigen.
+1. Selecteer **Verwijderen** om de verwijdering te bevestigen.
 

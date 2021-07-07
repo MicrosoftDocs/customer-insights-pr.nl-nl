@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253034"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305472"
 ---
 # <a name="exports-preview-overview"></a>Overzicht van Exports (preview)
 
 De pagina **Exports** toont u alle geconfigureerde exports. Exports delen specifieke gegevens met verschillende toepassingen. Ze kunnen klantprofielen of entiteiten, schema's en toewijzingsdetails bevatten. Elke export vereist een [verbinding, opgezet door een beheerder, om de verificatie en toegang te beheren](connections.md).
 
-Ga naar **Gegevens** > **Exports** om de pagina met exports te bekijken. Alle gebruikersrollen hebben toegang om geconfigureerde exports te bekijken. Gebruik van het zoekveld op de opdrachtbalk om exports te zoeken op naam, verbindingsnaam of verbindingstype.
+Ga naar **Gegevens** > **Exports** om de pagina met exports te bekijken. Alle gebruikersrollen kunnen geconfigureerde exports bekijken. Gebruik het zoekveld in de opdrachtbalk om exports te zoeken op naam, verbindingsnaam of verbindingstype.
 
 ## <a name="set-up-a-new-export"></a>Een nieuwe export instellen
 
@@ -65,7 +65,7 @@ Nadat u exportbestemmingen hebt gemaakt, worden deze vermeld bij **Gegevens** > 
 
 1. Ga naar **Gegevens** > **Exports**.
 
-1. Gebruikers zonder machtigingen voor bewerken selecteren **Weergeven** in plaats van **Bewerken** om de exportdetails te bekijken.
+1. Gebruikers zonder bewerkingsrechten selecteren **Weergeven** in plaats van **Bewerken** om de exportdetails te zien.
 
 1. Het zijvenster toont de configuratie van een export. Zonder bewerkingsrechten kunt u geen waarden wijzigen. Selecteer **Sluiten** om terug te keren naar de pagina met exports.
 
@@ -73,7 +73,7 @@ Nadat u exportbestemmingen hebt gemaakt, worden deze vermeld bij **Gegevens** > 
 
 Elke export die u configureert, heeft een vernieuwingsschema. Tijdens een vernieuwing zoekt het systeem naar nieuwe of bijgewerkte gegevens om in een export op te nemen. Standaard worden exports uitgevoerd als onderdeel van elke [geplande systeemvernieuwing](system.md#schedule-tab). U kunt het vernieuwingsschema aanpassen of uitschakelen om exports handmatig uit te voeren.
 
-Exportschema's zijn afhankelijk van de status van uw omgeving. Als er updates van [afhankelijkheden](system.md#refresh-policies) bezig zijn wanneer een geplande export moet starten, voltooit het systeem eerst de afhankelijkheden en voert het vervolgens de export uit. U kunt zien wanneer een export voor het laatst is vernieuwd in de kolom **Vernieuwd**.
+Exportschema's zijn afhankelijk van de status van uw omgeving. Als er updates worden uitgevoerd op [afhankelijkheden](system.md#refresh-policies), voltooit het systeem bij het starten van een geplande eerst de updates en voert vervolgens de export uit. U kunt zien wanneer een export voor het laatst is vernieuwd in de kolom **Vernieuwd**.
 
 ### <a name="schedule-exports"></a>Exports plannen
 

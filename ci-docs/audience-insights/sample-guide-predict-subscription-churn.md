@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595512"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306297"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Voorbeeldhandleiding abonnementsverloop voorspellen (preview)
 
@@ -22,7 +22,7 @@ We laten u een compleet voorbeeld van abonnementsverloop-voorspelling zien aan d
 
 ## <a name="scenario"></a>Scenario
 
-Contoso is een bedrijf dat koffie- en koffiemachines van hoge kwaliteit produceert, die ze verkopen via hun Contoso Coffee-website. Onlangs zijn ze begonnen met een abonnementsbedrijf voor hun klanten om regelmatig koffie te halen. Hun doel is om te begrijpen welke geabonneerde klanten hun abonnement in de komende maanden kunnen opzeggen. Weten welke van hun klanten **waarschijnlijk zal verlopen**, kan hen helpen zich marketinginspanningen te besparen door zich te concentreren op het behouden van hun klanten.
+Contoso is een bedrijf dat koffie en koffiemachines van hoge kwaliteit produceert, die ze verkopen via hun Contoso Coffee-website. Onlangs zijn ze begonnen met een abonnementsbedrijf voor hun klanten om regelmatig koffie te halen. Hun doel is om te begrijpen welke geabonneerde klanten hun abonnement in de komende maanden kunnen opzeggen. Weten welke van hun klanten **waarschijnlijk zal verlopen**, kan hen helpen zich marketinginspanningen te besparen door zich te concentreren op het behouden van hun klanten.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -128,7 +128,7 @@ Na het opnemen van de gegevens beginnen we nu met het proces **Toewijzen, Matche
 
 1. Ga naar het tabblad **Matchen** en selecteer **Volgorde instellen**.
 
-1. Kies in de vervolgkeuzelijst **Primair** de optie **eCommerceContacts: eCommerce** als primaire bron en neem alle records op.
+1. Kies in de vervolgkeuzelijst **Primair** de optie **eCommerceContacts : eCommerce** als primaire bron en neem alle records op.
 
 1. Kies in de vervolgkeuzelijst **Entiteit 2** de optie **loyCustomers: LoyaltyScheme** en neem alle records op.
 
@@ -138,16 +138,16 @@ Na het opnemen van de gegevens beginnen we nu met het proces **Toewijzen, Matche
 
 1. Voeg uw eerste voorwaarde toe met FullName.
 
-   * Selecteer voor eCommerceContacts **FullName** in de vervolgkeuzelijst.
-   * Selecteer voor loyCustomers **FullName** in de vervolgkeuzelijst.
+   * Selecteer voor eCommerceContacts de optie **FullName** in de vervolgkeuzelijst.
+   * Selecteer voor loyCustomers de optie **FullName** in de vervolgkeuzelijst.
    * Selecteer de vervolgkeuzelijst **Normaliseren** en kies **Type (telefoon, naam, adres, ...)**.
    * Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
 
 1. Voer de naam **FullName, Email** in voor de nieuwe regel.
 
    * Voeg een tweede voorwaarde voor het e-mailadres toe door **Voorwaarde toevoegen** te selecteren
-   * Kies voor entiteit eCommerceContacts **EMail** in de vervolgkeuzelijst.
-   * Kies voor entiteit loyCustomers **EMail** in de vervolgkeuzelijst. 
+   * Kies voor entiteit eCommerceContacts de optie **E-mail** in de vervolgkeuzelijst.
+   * Kies voor entiteit loyCustomers de optie **E-mail** in de vervolgkeuzelijst. 
    * Laat Normaliseren leeg. 
    * Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
 

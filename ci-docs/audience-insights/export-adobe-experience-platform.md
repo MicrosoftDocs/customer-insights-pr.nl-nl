@@ -1,6 +1,6 @@
 ---
 title: Customer Insights-gegevens naar Adobe Experience Platform exporteren
-description: Ontdek hoe u segmenten voor doelgroepinzichten gebruikt in Adobe Experience Platform.
+description: Leer hoe u segmenten met doelgroepinzichten gebruikt in Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760095"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305518"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Customer Insights-segmenten gebruiken in Adobe Experience Platform (preview)
 
-Als gebruiker van doelgroepinzichten voor Dynamics 365 Customer Insights hebt u mogelijk segmenten gemaakt om uw marketingcampagnes efficiënter te maken door u op relevante doelgroepen te richten. Als u een segment uit doelgroepinzichten in Adobe Experience Platform en toepassingen zoals Adobe Campaign Standard wilt gebruiken, moet u een paar stappen volgen die in dit artikel worden beschreven.
+Als gebruiker van doelgroepinzichten in Dynamics 365 Customer Insights, hebt u mogelijk segmenten gemaakt om uw marketingcampagnes efficiënter te laten verlopen door relevante doelgroepen te targeten. Als u een segment uit doelgroepinzichten in Adobe Experience Platform en toepassingen zoals Adobe Campaign Standard wilt gebruiken, moet u een paar stappen volgen die in dit artikel worden beschreven.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Procesdiagram van de stappen die in dit artikel worden beschreven.":::
 
@@ -55,19 +55,19 @@ Nu onze doelgroep is geïdentificeerd, kunnen we de export van doelgroepinzichte
 
 1. Ga naar **Beheerder** > **Verbindingen**.
 
-1. Selecteer **Verbinding toevoegen** en kies **Azure Blob Storage** of selecteer **Instellen** in de **Azure Blob Storage**-tegel:
+1. Selecteer **Verbinding toevoegen** en kies **Azure Blob Storage** of selecteer **Instellen** op de tegel **Azure Blob Storage** om de verbinding te configureren.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Configuratietegel voor Azure Blob Storage."::: om de verbinding te configureren.
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Configuratietegel voor Azure Blob Storage."::: 
 
 1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
 
 1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
-1. Voer een waarde in de velden **Gebruikersnaam**, **Accountsleutel** en **Container** in voor uw Blob-opslagaccount waarnaar u het segment wilt exporteren.  
+1. Voer een waarde in de velden **Accountnaam**, **Accountsleutel** en **Container** in voor uw Blob Storage-account waarnaar u het segment wilt exporteren.  
       
-   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Schermopname van de opslagaccountconfiguratie. "::: 
+   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Schermopname van de opslagaccountconfiguratie."::: 
    
-    - Zie [De instellingen van het opslagaccount in de Azure Portal beheren](/azure/storage/common/storage-account-manage) voor meer informatie over het vinden van de Blob-opslagaccountnaam en -accountsleutel.
+    - Zie [De instellingen van het opslagaccount in de Azure Portal beheren](/azure/storage/common/storage-account-manage) voor meer informatie over het vinden van de Blob Storage-accountnaam en -accountsleutel.
     - Zie voor meer informatie over het maken van een container [Een container maken](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Selecteer **Opslaan** om de verbinding te voltooien. 
@@ -95,7 +95,7 @@ U kunt [het segment nu op aanvraag exporteren](export-destinations.md#run-export
 > [!NOTE]
 > Zorg ervoor dat het aantal records in het geëxporteerde segment binnen de toegestane limiet van uw Adobe Campaign Standard-licentie valt.
 
-Geëxporteerde gegevens worden opgeslagen in de Azure Blob-opslagcontainer die u eerder hebt geconfigureerd. Het volgende mappad wordt automatisch gemaakt in uw container:
+Geëxporteerde gegevens worden opgeslagen in de Azure Blob Storage-container die u eerder hebt geconfigureerd. Het volgende mappad wordt automatisch gemaakt in uw container:
 
 *%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv*
 
@@ -121,9 +121,10 @@ Na het definiëren van de bronverbinding [configureert u een gegevensstroom](htt
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Een doelgroep maken in Adobe Campaign Standard
 
-We gebruiken Adobe Campaign Standard om de e-mail voor deze campagne te verzenden. Nadat we de gegevens in Adobe Experience Platform hebben geïmporteerd, moeten we [een doelgroep maken](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) in Adobe Campaign Standard met de gegevens in Adobe Experience Platform.
+Voor het verzenden van de e-mail voor deze campagne gebruiken we Adobe Campaign Standard. Nadat we de gegevens in Adobe Experience Platform hebben geïmporteerd, moeten we [een doelgroep maken](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) in Adobe Campaign Standard met de gegevens in Adobe Experience Platform.
 
-Leer hoe u de [functie voor het maken van segmenten gebruikt](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment) in Adobe Campaign Standard om een doelgroep te definiëren op basis van de gegevens in Adobe Experience Platform.
+
+Leer hoe u de [functie voor het maken van segmenten gebruikt](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) in Adobe Campaign Standard om een doelgroep te definiëren op basis van de gegevens in Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>De e-mail maken en verzenden met Adobe Campaign Standard
 

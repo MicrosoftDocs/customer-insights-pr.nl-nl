@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700662"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305620"
 ---
 # <a name="custom-machine-learning-models"></a>Aangepaste Machine Learning-modellen
 
@@ -72,7 +72,7 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
       > [!div class="mx-imgBorder"]
       > ![Deelvenster Parameter voor modeluitvoer](media/intelligence-screen3-outputparameters.png "Deelvenster Parameter voor modeluitvoer")
 
-1. Selecteer het overeenkomende kenmerk in de vervolgkeuzelijst **Klant-id in resultaten** die klanten identificeert en selecteer **Opslaan**.
+1. Selecteer het overeenkomende kenmerk uit de vervolgkeuzelijst **Klant-id in resultaten** die klanten identificeert en selecteer **Opslaan**.
 
    > [!div class="mx-imgBorder"]
    > ![Resultaten relateren aan het deelvenster Klantgegevens](media/intelligence-screen4-relatetocustomer.png "Resultaten relateren aan het deelvenster Klantgegevens")
@@ -100,7 +100,7 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
       1. Selecteer de **Parameternaam voor uitvoergegevensopslag** voor uw testpijplijn.
       1. Selecteer de **Parameternaam voor uitvoerpad** voor uw testpijplijn.
 
-1. Selecteer het overeenkomende kenmerk in de vervolgkeuzelijst **Klant-id in resultaten** die klanten identificeert en selecteer **Opslaan**.
+1. Selecteer het overeenkomende kenmerk uit de vervolgkeuzelijst **Klant-id in resultaten** die klanten identificeert en selecteer **Opslaan**.
    Kies een kenmerk uit de inferentie-uitvoer met waarden die vergelijkbaar zijn met de kolom Klant-id van de entiteit Klant. Als u deze kolom in uw gegevensset hebt, kiest u een kenmerk dat de rij uniek identificeert.
 
 ## <a name="run-a-workflow"></a>Een werkstroom uitvoeren

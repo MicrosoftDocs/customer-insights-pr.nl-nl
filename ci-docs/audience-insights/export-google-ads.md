@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976312"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305334"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmenten exporteren naar Google Ads (preview)
 
-Exporteer segmenten van geharmoniseerde klantprofielen naar de Google Ads-doelgroeplijst en gebruik ze om te adverteren op Google Zoeken, Gmail, YouTube en Google Display Netwerk. 
+Exporteer segmenten van geharmoniseerde klantprofielen naar een Google Ads-doelgroepenlijst en gebruik ze om te adverteren op Google Search, Gmail, YouTube en Google Display Network. 
 
 ## <a name="prerequisites-for-connection"></a>Vereisten voor verbinding
 
 -   U hebt een [Google Ads-account](https://ads.google.com/) en bijbehorende beheerdersreferenties nodig.
--   U hebt een [goedgekeurd Google Ads-ontwikkelaarstoken](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   U voldoet aan de eisen van het [beleid inzake klantafstemming](https://support.google.com/adspolicy/answer/6299717)
--   U voldoet aan de eisen van de [hermarketinglijstformaten](https://support.google.com/google-ads/answer/7558048) 
-
+-   U hebt een [goedgekeurd Google Ads-ontwikkelaarstoken](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   U voldoet aan de eisen van het [beleid inzake klantafstemming](https://support.google.com/adspolicy/answer/6299717).
+-   U voldoet aan de eisen van de [hermarketinglijstformaten](https://support.google.com/google-ads/answer/7558048).
 -   Er zijn bestaande doelgroepen met bijbehorende id's in Google Ads. Zie [Google Ads-doelgroepen](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.) voor meer informatie.
--   U hebt [geconfigureerde segmenten](segments.md)
--   Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten velden voor e-mailadres, voornaam en achternaam
+-   U hebt [geconfigureerde segmenten](segments.md).
+-   Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten velden voor e-mailadres, voornaam en achternaam.
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
@@ -78,7 +77,9 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 
-De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
+De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). 
+
+U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 

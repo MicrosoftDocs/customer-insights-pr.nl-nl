@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129893"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306160"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Voorbeeldgids voor voorspelling van productaanbevelingen (preview)
 
@@ -105,7 +105,7 @@ Nadat we de gegevens hebben opgenomen, beginnen we nu met het proces voor gegeve
 
 1. Ga naar het tabblad **Matchen** en selecteer **Volgorde instellen**.
 
-2. Kies in de vervolgkeuzelijst **Primair** de optie **eCommerceContacts: eCommerce** als primaire bron en neem alle records op.
+2. Kies in de vervolgkeuzelijst **Primair** de optie **eCommerceContacts : eCommerce** als primaire bron en neem alle records op.
 
 3. Kies in de vervolgkeuzelijst **Entiteit 2** de optie **loyCustomers: LoyaltyScheme** en neem alle records op.
 
@@ -115,16 +115,16 @@ Nadat we de gegevens hebben opgenomen, beginnen we nu met het proces voor gegeve
 
 5. Voeg uw eerste voorwaarde toe met FullName.
 
-   - Selecteer voor eCommerceContacts **FullName** in de vervolgkeuzelijst.
-   - Selecteer voor loyCustomers **FullName** in de vervolgkeuzelijst.
+   - Selecteer voor eCommerceContacts de optie **FullName** in de vervolgkeuzelijst.
+   - Selecteer voor loyCustomers de optie **FullName** in de vervolgkeuzelijst.
    - Selecteer de vervolgkeuzelijst **Normaliseren** en kies **Type (telefoon, naam, adres, ...)**.
    - Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
 
 6. Voer de naam **FullName, Email** in voor de nieuwe regel.
 
    - Voeg een tweede voorwaarde voor het e-mailadres toe door **Voorwaarde toevoegen** te selecteren
-   - Kies voor entiteit eCommerceContacts **EMail** in de vervolgkeuzelijst.
-   - Kies voor entiteit loyCustomers **EMail** in de vervolgkeuzelijst.
+   - Kies voor entiteit eCommerceContacts de optie **E-mail** in de vervolgkeuzelijst.
+   - Kies voor entiteit loyCustomers de optie **E-mail** in de vervolgkeuzelijst.
    - Laat Normaliseren leeg.
    - Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085524"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304690"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
@@ -30,15 +30,15 @@ U kunt een gegevensbron op drie manieren toevoegen:
 
 - [Via tientallen Power Query-connectors](connect-power-query.md)
 - [Via een Common Data Model-map](connect-common-data-model.md)
-- [Via uw eigen Common Data Service-lake](connect-common-data-service-lake.md)
+- [Via uw eigen Microsoft Dataverse-lake](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Gegevens toevoegen vanuit on-premises gegevensbronnen
 
-Het opnemen van gegevens uit on-premises gegevensbronnen in Doelgroepinzichten wordt ondersteund op basis van Power Platform-gegevensstromen. Gegevensstromen kunnen worden ingeschakeld in Customer Insights door [het verstrekken van de URL van de Microsoft Dataverse-omgeving](manage-environments.md#create-an-environment-in-an-existing-organization) bij het opzetten van de omgeving.
+Het opnemen van gegevens uit on-premises gegevensbronnen in doelgroepinzichten wordt ondersteund op basis van Microsoft Power Platform-gegevensstromen. Gegevensstromen kunnen worden ingeschakeld in Customer Insights door [het verstrekken van de URL van de Microsoft Dataverse-omgeving](manage-environments.md#create-an-environment-in-an-existing-organization) bij het opzetten van de omgeving.
 
-Gegevensbronnen die worden gemaakt na het koppelen van een Dataverse-omgeving met Customer Insights maken standaard gebruik van [Power Platform-gegevensstromen](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Gegevensstromen ondersteunen on-premises connectiviteit met behulp van de gegevensgateway. Verwijder gegevensbronnen die al bestonden vóór een Dataverse-omgeving werd gekoppeld en maak deze opnieuw om [de on-premises gegevensgateways te gebruiken](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
+Gegevensbronnen die worden gemaakt na het koppelen van een Dataverse-omgeving met Customer Insights maken standaard gebruik van [Power Platform-gegevensstromen](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Gegevensstromen ondersteunen on-premises connectiviteit met behulp van de gegevensgateway. Verwijder gegevensbronnen die al bestonden vóór een Dataverse-omgeving werd gekoppeld en maak deze opnieuw om [de on-premises gegevensgateways te gebruiken](/data-integration/gateway/service-gateway-app.md).
 
-Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving worden zichtbaar en u kunt deze opnieuw gebruiken in Customer Insights. De pagina met gegevensbronnen toont koppelingen om naar de Power Platform-omgeving te gaan waar u on-premises gegevensgateways kunt bekijken en configureren.
+Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving worden zichtbaar en u kunt deze opnieuw gebruiken in Customer Insights. De pagina met gegevensbronnen toont koppelingen om naar de Microsoft Power Platform-omgeving te gaan waar u on-premises gegevensgateways kunt bekijken en configureren.
 
 ## <a name="review-ingested-data"></a>Opgenomen gegevens bekijken
 
@@ -56,7 +56,7 @@ U ziet de naam van elke opgenomen gegevensbron, de status en de laatste keer dat
 
 Selecteer de waarde in de kolom **Status** van een willekeurige gegevensbron voor meer details. Vouw in het deelvenster **Voortgangsgegevens** de optie **Gegevensbronnen** uit. Selecteer **Details weergeven** voor meer informatie over de vernieuwingsstatus, inclusief foutdetails en downstream procesupdates.
 
-Het laden van gegevens kan enige tijd in beslag nemen. Na een succesvolle vernieuwing kunnen de opgenomen gegevens worden bekeken vanaf de pagina **Entiteiten**. Zie [Entiteiten](entities.md) voor meer informatie.
+Het laden van gegevens kan enige tijd vergen. Na een succesvolle vernieuwing kunnen de opgenomen gegevens worden bekeken vanaf de pagina **Entiteiten**. Zie [Entiteiten](entities.md) voor meer informatie.
 
 ## <a name="refresh-a-data-source"></a>Een gegevensbron vernieuwen
 
@@ -66,9 +66,9 @@ Ga naar **Beheer** > **Systeem** > [**Planning**](system.md#schedule-tab) om gep
 
 Volg deze stappen om een gegevensbron op aanvraag te vernieuwen:
 
-1. Ga in doelgroepinzichten naar **Gegevens** > **Gegevensbronnen**
+1. Ga in doelgroepinzichten naar **Gegevens** > **Gegevensbronnen**.
 
-2. Selecteer het verticale beletselteken naast de gegevensbron die u wilt vernieuwen en selecteer **Vernieuwen** in de vervolgkeuzelijst.
+2. Selecteer het verticale weglatingsteken naast de gegevensbron die u wilt vernieuwen en selecteer **Vernieuwen** uit de vervolgkeuzelijst.
 
 3. De gegevensbron wordt nu geactiveerd voor een handmatige vernieuwing. Als u een gegevensbron vernieuwt, worden zowel het entiteitsschema als de gegevens bijgewerkt voor alle entiteiten die zijn opgegeven in de gegevensbron.
 
