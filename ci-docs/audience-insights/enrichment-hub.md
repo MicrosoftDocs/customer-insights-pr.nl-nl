@@ -1,7 +1,7 @@
 ---
 title: Geharmoniseerde klantprofielen verrijken
 description: Gebruik mogelijkheden om uw klantgegevens te verrijken.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305242"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555255"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Verrijking voor klantprofielen (preview)
 
 Gebruik gegevens vanuit bronnen zoals Microsoft en andere partners om uw klantgegevens te verrijken.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Pagina van verrijkingshub":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Pagina van verrijkingshub.":::
 
 Ga in doelgroepinzichten naar **Gegevens** > **Verrijking** om te werken met verrijkingsopties.  
 
@@ -42,17 +43,17 @@ Op het tabblad **Mijn verrijkingen** kunt u de verrijkingen zien die u hebt geco
 
 Ga naar het tabblad **Mijn verrijkingen** om alle geconfigureerde verrijkingen te zien. Elke verrijking wordt weergegeven als een rij met aanvullende informatie over de verrijking.
 
-Selecteer een verrijking om de beschikbare opties te zien. U kunt ook het beletselteken (...) in een lijstitem selecteren om de opties te zien.
+Selecteer de verrijking om de beschikbare opties te zien. U kunt ook het beletselteken (...) in een lijstitem selecteren om de opties te zien. Als u verschillende verrijkingen hebt geconfigureerd, kunt u het zoekvak gebruiken om ze snel te vinden.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opties om verrijkingen in de lijst met verrijkingen te beheren":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opties om verrijkingen in de lijst met verrijkingen te beheren.":::
 
 - **Bekijk** verrijkingsdetails met het aantal verrijkte klantprofielen.
 - **Bewerk** de verrijkingsconfiguratie.
 - **Voer** de verrijking uit om klantprofielen bij te werken met de laatste gegevens.
 - **Deactiveer** een bestaande verrijking om te voorkomen dat deze automatisch wordt vernieuwd bij elke geplande vernieuwing. Gegevens van de laatste geslaagde vernieuwing blijven beschikbaar. **Activeer** een inactieve verrijking om automatisch vernieuwen opnieuw te starten bij elke geplande vernieuwing.
-- Een verrijking **Verwijderen**.
+- De verrijking **Verwijderen**.
 
-U kunt meerdere verrijkingen tegelijk uitvoeren of deactiveren door ze in de lijst te selecteren. Opties voor bekijken en bewerken zijn niet beschikbaar als bulkactie en werken slechts voor één verrijking tegelijk.
+Voer meerdere verrijkingen tegelijk uit of deactiveer ze door ze in de lijst te selecteren. Opties voor weergeven en bewerken zijn niet beschikbaar als bulkactie. Ze werken maar voor één verrijking tegelijk.
 
 ## <a name="enrichments-and-connections"></a>Verrijkingen en verbindingen
 

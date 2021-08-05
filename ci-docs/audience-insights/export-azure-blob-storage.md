@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens naar een Azure Blob Storage exporteren
 description: Leer hoe u de verbinding configureert en exporteert naar Blob-opslag.
-ms.date: 03/03/2021
+ms.date: 06/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c19dc6d4956a33a5bd3cea706f8a154198d487f
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e38fc06a948178fcbc62c08a4cf4816e1d030e79
+ms.sourcegitcommit: 656b1a6cdff37ba4f808311fd0327ab38e02ed13
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976128"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6318293"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmentlijst en andere gegevens exporteren naar Azure Blob Storage (preview)
 
 Sla uw Customer Insights-gegevens op in een Blob-opslag of gebruik deze om uw gegevens over te brengen naar andere toepassingen.
 
-## <a name="set-up-the-connection-to-blob-storage"></a>De verbinding instellen met Blob-opslag
+## <a name="set-up-the-connection-to-blob-storage"></a>De verbinding met Blob Storage instellen
 
 1. Ga naar **Beheerder** > **Verbindingen**.
 
@@ -31,7 +31,7 @@ Sla uw Customer Insights-gegevens op in een Blob-opslag of gebruik deze om uw ge
 1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
 1. Voer **Gebruikersnaam**, **Accountsleutel** en **Container** in voor uw Blob-opslagaccount.
-    - Zie [De instellingen van het opslagaccount in de Azure Portal beheren](/azure/storage/common/storage-account-manage) voor meer informatie over het vinden van de Blob-opslagaccountnaam en -accountsleutel.
+    - Zie [De instellingen van het opslagaccount in de Azure Portal beheren](/azure/storage/common/storage-account-manage) voor meer informatie over het vinden van de Blob Storage-accountnaam en -accountsleutel.
     - Zie voor meer informatie over het maken van een container [Een container maken](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Selecteer **Opslaan** om de verbinding te voltooien. 
@@ -39,6 +39,9 @@ Sla uw Customer Insights-gegevens op in een Blob-opslag of gebruik deze om uw ge
 ## <a name="configure-an-export"></a>Een export configureren
 
 U kunt deze export configureren als u toegang hebt tot een verbinding van dit type. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+
+> [!IMPORTANT]
+> Als u de instelling voor voorlopig verwijderen in het Azure Blob-opslagaccount hebt ingeschakeld, mislukt het exporteren. Schakel voorlopig verwijderen uit om gegevens naar blobs te exporteren. Zie [Voorlopig verwijderen voor blobs inschakelen](/azure/storage/blobs/soft-delete-blob-enable.md) voor meer informatie
 
 1. Ga naar **Gegevens** > **Exports**.
 
@@ -53,13 +56,16 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 
 De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab).     
+
 U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
 
-Geëxporteerde gegevens worden opgeslagen in de Blob-opslagcontainer die u hebt geconfigureerd. De volgende mappaden worden automatisch in uw container gemaakt:
+Geëxporteerde gegevens worden opgeslagen in de Blob Storage-container die u hebt geconfigureerd. De volgende mappaden worden automatisch in uw container gemaakt:
 
-- Voor bronentiteiten en entiteiten die door het systeem zijn gegenereerd: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
+- Voor bronentiteiten en entiteiten die door het systeem zijn gegenereerd:   
+  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Voorbeeld: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- Het model.json voor de geëxporteerde entiteiten bevindt zich op het %ExportDestinationName%-niveau
+ 
+- Het model.json voor de geëxporteerde entiteiten bevindt zich op het %ExportDestinationName%-niveau.  
   - Voorbeeld: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

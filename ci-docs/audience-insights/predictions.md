@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595895"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692521"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Uw gedeeltelijke gegevens aanvullen met voorspellingen
 
@@ -31,11 +31,11 @@ Met Voorspellingen kunt u eenvoudig voorspelde waarden maken die uw begrip van e
 
 Voordat uw organisatie de voorspellingsfunctie kan gebruiken, moet u ervoor zorgen dat aan de volgende voorwaarden is voldaan:
 
-1. Uw organisatie heeft een exemplaar [ingesteld in de Common Data Service](/ai-builder/build-model#prerequisites) en deze zit in dezelfde organisatie als Customer Insights.
+1. Uw organisatie heeft een exemplaar [ingesteld in Microsoft Dataverse](/ai-builder/build-model#prerequisites) en het bevindt zich in dezelfde organisatie als Customer Insights.
 
-2. Uw omgeving is gekoppeld aan uw Common Data Service-exemplaar.
+2. Uw doelgroepinzichtomgeving is gekoppeld aan uw Dataverse-exemplaar.
 
-Als u [een nieuwe omgeving maakt](manage-environments.md), configureert u deze in het dialoogvenster **Een omgeving maken** en selecteert u **Geavanceerd**. Als u al een omgeving hebt gemaakt, gaat u naar de instellingen en selecteert u **Geavanceerd**. Hoe dan ook, in de sectie **Voorspellingen gebruiken** voert u de URL van het Common Data Service-exemplaar in waaraan u uw omgeving wilt koppelen.
+Als u [een nieuwe omgeving maakt](get-started-paid.md), configureert u deze in het dialoogvenster **Een omgeving maken** en selecteert u **Geavanceerd**. Als u al een omgeving hebt gemaakt, gaat u naar de instellingen en selecteert u **Geavanceerd**. Hoe dan ook, in de sectie **Voorspellingen gebruiken** voert u de URL van het Dataverse-exemplaar in waaraan u uw omgeving wilt koppelen.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Een voorspelling maken in de entiteit Klant
 
@@ -47,17 +47,17 @@ Als u [een nieuwe omgeving maakt](manage-environments.md), configureert u deze i
 
 4. Zoek de kenmerknaam waarvoor u waarden wilt voorspellen en selecteer vervolgens het pictogram **Overzicht** in de kolom **Samenvatting**.
    > [!div class="mx-imgBorder"]
-   > ![Overzichtspictogram](media/intelligence-overviewicon.png "Overzichtspictogram")
+   > ![Overzichtspictogram.](media/intelligence-overviewicon.png "Overzichtspictogram")
 
 5. Als er veel waarden ontbreken voor uw kenmerk, selecteert u **Ontbrekende waarden voorspellen** om door te gaan met uw voorspelling.
    > [!div class="mx-imgBorder"]
-   > ![Overzichtsstatus met knop Ontbrekende waarden voorspellen weergegeven](media/intelligence-overviewpredictmissingvalues.png "Overzichtsstatus met knop Ontbrekende waarden voorspellen weergegeven")
+   > ![Overzichtsstatus met knop Ontbrekende waarden voorspellen weergegeven.](media/intelligence-overviewpredictmissingvalues.png "Overzichtsstatus met knop Ontbrekende waarden voorspellen weergegeven")
 
 6. Geef een **weergavenaam** en een **naam van de uitvoerentiteit** op voor de resultaten van de voorspelling.
 
 7. Een vooraf ingevulde lijst met opties laat zien waar u de waarden kunt toewijzen aan een voorspelde categorie. In dit geval zullen uw enige categorieopties 0 of 1 zijn, omdat deze verwijzen naar de waar/onwaar of binaire aard van de voorspelling. Wijs in de kolom Categorie de veldwaarden die u als '0' wilt classificeren in de uiteindelijke voorspelling toe aan "0" in de kolom Categorie en de items die u als "1" wilt classificeren in de uiteindelijke voorspelling aan "1".
    > [!div class="mx-imgBorder"]
-   > ![Voorbeeld van toegewezen veldwaarden aan categorieën](media/intelligence-categorymapping.png "Voorbeeld van toegewezen veldwaarden aan categorieën")
+   > ![Voorbeeld van toegewezen veldwaarden aan categorieën.](media/intelligence-categorymapping.png "Voorbeeld van toegewezen veldwaarden aan categorieën")
 
 8. Selecteer **Gereed**. De voorspelling wordt nu verwerkt. De verwerking duurt enige tijd, afhankelijk van de grootte en complexiteit van gegevens. De resultaten zijn beschikbaar in een nieuwe entiteit op basis van de **naam van de uitvoerentiteit** van de voorspelling die u hebt gemaakt.
 
@@ -77,7 +77,7 @@ Als onderdeel van deze stroom kiest u een specifiek kenmerk om uw segment op te 
 
 5. Als het gemaakte segment onvolledige gegevens in het bronveld bevat, kunt u ervoor kiezen om de ontbrekende waarden te voorspellen.
    > [!div class="mx-imgBorder"]
-   > ![Voorspellingsknop](media/segments-predictoption.png "Voorspellingsknop")
+   > ![Voorspellingsknop.](media/segments-predictoption.png "Voorspellingsknop")
 
 6. Geef een **weergavenaam** en een **naam van de uitvoerentiteit** op voor de resultaten van de voorspelling.
 
@@ -93,7 +93,7 @@ Als onderdeel van deze stroom kiest u een specifiek kenmerk om uw segment op te 
 
 4. U ziet een aantal gegevenspunten in de weergave van uw voorspelling.
    > [!div class="mx-imgBorder"]
-   > ![Voorspellingspagina](media/intelligence-predictionsviewpage.png "Voorspellingspagina")
+   > ![Voorspellingspagina.](media/intelligence-predictionsviewpage.png "Voorspellingspagina")
 
    - **Voorspelde waarden** toont de toewijzing die u tijdens de fase Toewijzing van veldwaarde aan categorie hebt gemaakt. Dit zijn de waarden in uw gegevensset weergegeven die zijn toegewezen aan een specifieke categorie.
    -**Meest populaire beïnvloeders** zijn de factoren in uw gegevensset die waarschijnlijk van invloed zijn op het vertrouwen van de voorspelling van uw veldwaarde die wordt toegewezen aan een specifieke categorie.
@@ -139,7 +139,7 @@ Bij de volgende uitvoering van uw voorspelling wordt het bijgewerkte model gebru
 
 ## <a name="troubleshooting"></a>Problemen oplossen
 
-Als u het proces voor het bijvoegen van Common Data Service niet kunt voltooien als gevolg van een fout, kunt u proberen het proces handmatig te voltooien. Er zijn twee bekende problemen die kunnen optreden tijdens het bijvoegen:
+Als u het proces voor het bijvoegen van Dataverse niet kunt voltooien als gevolg van een fout, kunt u proberen het proces handmatig te voltooien. Er zijn twee bekende problemen die kunnen optreden tijdens het bijvoegen:
 
 - De invoegtoepassingoplossing Klantenkaart is niet geïnstalleerd.
     1. Voer de instructies uit voor [het installeren en configureren van de oplossing](customer-card-add-in.md).

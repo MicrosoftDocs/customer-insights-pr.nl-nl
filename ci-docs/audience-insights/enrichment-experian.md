@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309814"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555347"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klantprofielen verrijken met demografische gegevens van Experian (preview)
 
@@ -39,7 +39,7 @@ We ondersteunen momenteel alleen het verrijken van klantprofielen in de Verenigd
 1. Selecteer **Mijn gegevens verrijken** op de Experian-tegel.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian gaan](media/experian-tile.png "Experian tile")
+   > ![Experian-tegel.](media/experian-tile.png "Experian tile")
    > 
 
 1. Selecteer een [verbinding](connections.md) in de vervolgkeuzelijst. Neem contact op met een beheerder als er geen verbinding beschikbaar is. Als u een beheerder bent, kunt u een verbinding maken door **Verbinding toevoegen** te selecteren en Experian te kiezen in de vervolgkeuzelijst. 

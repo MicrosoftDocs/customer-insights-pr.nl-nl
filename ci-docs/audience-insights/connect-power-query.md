@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305885"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554677"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinden met een Power Query-gegevensbron
 
@@ -42,7 +42,7 @@ Power Query biedt een brede set connectors om gegevens op te nemen. De meeste va
 1. In het dialoogvenster **Power Query - Query's bewerken** kunt u de gegevens bekijken en verfijnen. De entiteiten die de systemen in uw geselecteerde gegevensbron hebben geïdentificeerd, verschijnen in het linkerdeelvenster.
 
    > [!div class="mx-imgBorder"]
-   > ![Dialoogvenster Query's bewerken](media/data-manager-configure-edit-queries.png "Dialoogvenster Query's bewerken")
+   > ![Dialoogvenster Query's bewerken.](media/data-manager-configure-edit-queries.png "Dialoogvenster Query's bewerken")
 
 1. U kunt uw gegevens ook transformeren. Selecteer een entiteit om te bewerken of transformeren. Gebruik de opties in het venster Power Query om transformaties toe te passen. Elke transformatie wordt vermeld onder **Toegepaste stappen**. Power Query biedt tal van vooraf gebouwde transformatie-opties. Zie [Power Query-transformaties](/power-query/power-query-what-is-power-query#transformations) voor meer informatie.
 
@@ -75,7 +75,7 @@ Connectors met een vinkje in de kolom **Customer Insights (gegevensstromen)** zi
 2. Selecteer het verticale weglatingsteken naast de gegevensbron die u wilt wijzigen en selecteer **Bewerken** uit het vervolgkeuzemenu.
 
    > [!div class="mx-imgBorder"]
-   > ![Optie bewerken](media/edit-option-data-sources.png "Optie bewerken")
+   > ![Optie bewerken.](media/edit-option-data-sources.png "Optie bewerken")
 
 3. Pas uw wijzigingen en transformaties toe in het dialoogvenster **Power Query - Query's bewerken** zoals beschreven in de sectie [Een nieuwe gegevensbron maken](#create-a-new-data-source).
 

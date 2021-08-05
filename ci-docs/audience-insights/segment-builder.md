@@ -1,7 +1,7 @@
 ---
 title: Segmenten maken en beheren
 description: Maak segmenten van klanten om deze te groeperen op basis van verschillende kenmerken.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064931"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685456"
 ---
 # <a name="create-and-manage-segments"></a>Segmenten maken en beheren
+
+> [!IMPORTANT]
+> Er worden in september 2021 verschillende veranderingen doorgevoerd in de ervaring met het maken van segmenten: 
+> - De opbouwfunctie voor segmenten ziet er anders uit met opnieuw vormgegeven elementen en een verbeterde gebruikersstroom.
+> - Nieuwe datum-/tijdoperators en een verbeterde datumkiezen zijn ingeschakeld in de opbouwfunctie voor segmenten.
+> - U kunt voorwaarden en regels toevoegen of verwijderen uit segmenten. 
+> - Geneste regels die beginnen met een OR-voorwaarde worden beschikbaar. U hebt geen AND-voorwaarde meer nodig bij de bovenste laag.
+> - Er is continue een zijpaneel beschikbaar om kenmerken te selecteren.
+> - Een optie om entiteitsrelatiepaden te selecteren.
+> Als u de nieuwe segmenten-bouwer wilt uitproberen, stuurt u een e-mail met als onderwerp "Verzoek om de nieuwe segmenten-bouwer in te schakelen" naar cihelp [at] microsoft.com. Vermeld de naam van uw organisatie en de id van uw sandbox-omgeving.
 
 Definieer complexe filters rond de uniforme klantentiteit en de bijhorende gerelateerde entiteiten. Elk segment maakt na verwerking een set klantrecords die u kunt exporteren en waarop u actie kunt ondernemen. Segmenten worden beheerd op de pagina **Segmenten**. 
 
@@ -50,13 +60,13 @@ Terwijl u een segment maakt, kunt u een concept opslaan. Het wordt opgeslagen al
 1. Kies een operator en een waarde voor het geselecteerde kenmerk.
 
    > [!div class="mx-imgBorder"]
-   > ![Aangepast groepsfilter](media/customer-group-numbers.png "Klantgroepsfilter")
+   > ![Aangepast groepsfilter.](media/customer-group-numbers.png "Klantgroepsfilter")
 
    |Aantal |Definitie  |
    |---------|---------|
    |0     |Entity          |
    |2     |Kenmerk          |
-   |3    |Operator         |
+   |5    |Operator         |
    |4    |Weergegeven als         |
 
    1. Als u meer voorwaarden aan een groep wilt toevoegen, kunt u twee logische operators gebruiken:
@@ -66,7 +76,7 @@ Terwijl u een segment maakt, kunt u een concept opslaan. Het wordt opgeslagen al
       - **OF**-operator: er moet aan een van beide voorwaarden worden voldaan als onderdeel van het segmentatieproces. Deze optie is vooral handig wanneer u meerdere voorwaarden definieert voor dezelfde entiteit.
 
       > [!div class="mx-imgBorder"]
-      > ![OF-operator waarbij aan een van beide voorwaarden moet worden voldaan](media/segmentation-either-condition.png "OF-operator waarbij aan een van beide voorwaarden moet worden voldaan")
+      > ![OF-operator waarbij aan een van beide voorwaarden moet worden voldaan.](media/segmentation-either-condition.png "OF-operator waarbij aan een van beide voorwaarden moet worden voldaan")
 
       Het is momenteel mogelijk om een **OF**-operator te nesten onder een **EN**-operator, maar niet andersom.
 
@@ -74,12 +84,12 @@ Terwijl u een segment maakt, kunt u een concept opslaan. Het wordt opgeslagen al
    Selecteer **Groep toevoegen**.
 
       > [!div class="mx-imgBorder"]
-      > ![Klantengroep - Groep toevoegen](media/customer-group-add-group.png "Klantengroep - Groep toevoegen")
+      > ![Klantengroep - Groep toevoegen.](media/customer-group-add-group.png "Klantengroep - Groep toevoegen")
 
    1. Selecteer een van de set-operators: **Samenvoegen**, **Doorsnede** of **Uitsluiten**.
 
    > [!div class="mx-imgBorder"]
-   > ![Klantengroep - Verbinding toevoegen](media/customer-group-union.png "Klantengroep - Verbinding toevoegen")
+   > ![Klantengroep - Verbinding toevoegen.](media/customer-group-union.png "Klantengroep - Verbinding toevoegen")
 
    - **Verbinding** verbindt de twee groepen.
 
@@ -90,7 +100,7 @@ Terwijl u een segment maakt, kunt u een concept opslaan. Het wordt opgeslagen al
 1. Als de entiteit via [relaties](relationships.md) met de geharmoniseerde klantentiteit is verbonden, moet u het relatiepad definiëren om een geldig segment te maken. Voeg de entiteiten uit het relatiepad toe totdat u de entiteit **Klant : CustomerInsights** in de vervolgkeuzelijst kunt selecteren. Kies dan **Alle records** voor elke stap.
 
    > [!div class="mx-imgBorder"]
-   > ![Relatiepad tijdens het maken van segmenten](media/segments-multiple-relationships.png "Relatiepad tijdens het maken van segmenten")
+   > ![Relatiepad tijdens het maken van segmenten.](media/segments-multiple-relationships.png "Relatiepad tijdens het maken van segmenten")
 
 1. Segmenten genereren standaard een uitvoerentiteit die alle kenmerken van klantprofielen bevat die overeenkomen met de gedefinieerde filters. Als een segment is gebaseerd op andere entiteiten dan de entiteit *Klant*, kunt u meer attributen van deze entiteiten aan de uitvoerentiteit toevoegen. Selecteer **Projectkernmerken** om de kenmerken te kiezen die aan de uitvoerentiteit worden toegevoegd.  
   
@@ -127,7 +137,7 @@ Met snelle segmenten kunt u snel eenvoudige segmenten bouwen met één operator 
 4. Het systeem zal u van een **Geschatte segmentgrootte** voorzien. U kunt kiezen of u het door u gedefinieerde segment wilt genereren of het eerst opnieuw wilt bezoeken om een andere segmentgrootte te krijgen.
 
     > [!div class="mx-imgBorder"]
-    > ![Naam en schatting voor een snel segment](media/quick-segment-name.png "Naam en schatting voor een snel segment")
+    > ![Naam en schatting voor een snel segment.](media/quick-segment-name.png "Naam en schatting voor een snel segment")
 
 5. Geef een **Naam** op voor uw segment. Voer desgewenst een **Weergavenaam** in.
 

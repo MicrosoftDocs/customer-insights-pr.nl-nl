@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059582"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692199"
 ---
 # <a name="customer-card-add-in-preview"></a>Invoegtoepassing Klantkaart (preview)
 
@@ -25,7 +25,7 @@ Krijg een compleet overzicht van uw klanten rechtstreeks in Dynamics 365-apps. M
 ## <a name="prerequisites"></a>Vereisten
 
 - De invoegtoepassing werkt alleen met modelgestuurde Dynamics 365-apps, zoals Sales of Customer Service, versie 9.0 en hoger.
-- Voor toewijzing van uw Dynamics 365-gegevens aan de klantprofielen van doelgroepinzichten moeten ze [worden opgenomen vanuit de Dynamics 365-app met behulp van de Common Data Service-connector](connect-power-query.md).
+- Voor toewijzing van uw Dynamics 365-gegevens aan de klantprofielen van doelgroepinzichten moeten ze [worden opgenomen vanuit de Dynamics 365-app met behulp van de Microsoft Dataverse-connector](connect-power-query.md).
 - Alle Dynamics 365-gebruikers van de invoegtoepassing Klantkaart moeten worden [toegevoegd als gebruikers](permissions.md) in doelgroepinzichten om de gegevens te zien.
 - [Geconfigureerde zoek- en filtermogelijkheden](search-filter-index.md) in doelgroepinzichten zijn vereist voor het opzoeken van gegevens.
 - Elk besturingselement van de invoegtoepassing is afhankelijk van specifieke gegevens in doelgroepinzichten:
@@ -50,7 +50,7 @@ Het kan enige tijd duren voordat de oplossing in uw omgeving is geïnstalleerd.
 1. Selecteer de koppeling **Weergavenaam** voor de oplossing **Dynamics 365 Customer Insights-invoegtoepassing KIantkaart (preview)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Weergavenaam selecteren](media/select-display-name.png "Weergavenaam selecteren")
+   > ![Weergavenaam selecteren.](media/select-display-name.png "Weergavenaam selecteren")
 
 1. Selecteer **Aanmelden** en voer de referenties in voor het beheerdersaccount dat u gebruikt om Customer Insights te configureren.
 
@@ -64,7 +64,7 @@ Het kan enige tijd duren voordat de oplossing in uw omgeving is geïnstalleerd.
    - Om toe te wijzen aan een account, selecteert u het veld in de entiteit Klant die overeenkomt met de id van uw account-entiteit.
 
    > [!div class="mx-imgBorder"]
-   > ![Veld Contactpersoon-id](media/contact-id-field.png "Veld Contactpersoon-id")
+   > ![Veld Contactpersoon-id.](media/contact-id-field.png "Veld Contactpersoon-id")
 
 1. Selecteer **Configuratie opslaan** om de instellingen op te slaan.
 
@@ -83,7 +83,7 @@ Het kan enige tijd duren voordat de oplossing in uw omgeving is geïnstalleerd.
 1. Selecteer het contactpersoonformulier waaraan u de besturingselementen voor Klantkaart wilt toevoegen.
 
     > [!div class="mx-imgBorder"]
-    > ![Contactpersoonformulier selecteren](media/contact-active-forms.png "Contactpersoonformulier selecteren")
+    > ![Contactpersoonformulier selecteren.](media/contact-active-forms.png "Contactpersoonformulier selecteren")
 
 1. Als u het demografische besturingselement wilt toevoegen, sleept u in de formuliereneditor een willekeurig veld vanuit de **Veldverkenner** naar de locatie waar u het demografische besturingselement wilt weergeven.
 
@@ -110,7 +110,7 @@ De invoegtoepassing Klantkaart wordt niet automatisch geüpgraded. Om te upgrade
 
 1. Selecteer **Oplossingsupgrade toepassen** op de actiebalk.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Upgrade de oplossing in het aanpassingsgebied van Dynamics 365-apps":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Upgrade de oplossing in het aanpassingsgebied van Dynamics 365-apps.":::
 
 1. Nadat u het upgradeproces hebt gestart, ziet u een laadindicator totdat de upgrade is voltooid. Als er geen nieuwere versie is, geeft de upgrade een foutmelding weer.
 

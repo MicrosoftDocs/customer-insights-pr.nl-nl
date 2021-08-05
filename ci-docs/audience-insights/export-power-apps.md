@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598149"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554107"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps-connector (preview)
 
@@ -56,12 +56,12 @@ U voegt bijvoorbeeld klantprofielen toe aan een [galeriebesturingselement](/powe
 1. Voeg een besturingselement **Galerie** toe aan een app die u aan het bouwen bent.
 
 > [!div class="mx-imgBorder"]
-> ![Een galerie-element toevoegen](media/connector-powerapps9.png "Een galerie-element toevoegen")
+> ![Een galerie-element toevoegen.](media/connector-powerapps9.png "Een galerie-element toevoegen")
 
 1. Selecteer **Klant** als gegevensbron voor items.
 
     > [!div class="mx-imgBorder"]
-    > ![Een gegevensbron selecteren](media/choose-datasource-powerapps.png "Een gegevensbron selecteren")
+    > ![Een gegevensbron selecteren.](media/choose-datasource-powerapps.png "Een gegevensbron selecteren")
 
 1. U kunt het gegevenspaneel aan de rechterkant wijzigen om te selecteren welk veld voor de entiteit Klant moet worden weergegeven in de galerie.
 

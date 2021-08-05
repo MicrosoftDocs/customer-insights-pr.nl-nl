@@ -1,7 +1,7 @@
 ---
 title: Nieuwe en komende functies
 description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263245"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692383"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Wat is er nieuw in de doelgroepinzichten-mogelijkheid van Dynamics 365 Customer Insights
 
@@ -26,6 +26,28 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Updates juni 2021
+
+De updates van juni 2021 omvatten verschillende functies, prestatie-upgrades en bugfixes.
+
+### <a name="data-ingestion"></a>Gegevensopname
+
+- **Verbeterde voortgangsupdates voor gegevensharmonisatie** U kunt nu gedetailleerdere, verbeterde dynamische statusupdates bekijken in de stappen voor het [gegevensharmonisatieproces](data-unification.md). Met deze functie kunt u de gedetailleerde voortgang bijhouden om de processtroom te begrijpen en actie te ondernemen als een stap aandacht behoeft.
+
+### <a name="extensibility"></a>Uitbreidbaarheid
+
+- **Segmenten en andere gegevens exporteren naar Salesforce Marketing Cloud** We hebben onze exportbestemmingen uitgebreid met [Salesforce Marketing Cloud](export-salesforce.md). U kunt nu segmenten en andere typen gegevens exporteren naar Salesforce Marketing Cloud via een branded SFTP-export. Gegevensimport kan volledig worden geautomatiseerd in Salesforce en worden gebruikt om effectievere marketingcampagnes te ontwikkelen.  
+ 
+- **Segmenten exporteren naar ActiveCampaign** We hebben onze exportbestemmingen uitgebreid met [Active Campaign](export-active-campaign.md). U kunt nu segmenten exporteren om campagnes te genereren, e-mailmarketing uit te voeren en te werken met specifieke groepen klanten in ActiveCampaign.
+ 
+- **Segmenten exporteren naar Sendinblue** We hebben onze exportbestemmingen uitgebreid met [Sendinblue](export-sendinblue.md). U kunt nu segmenten exporteren om campagnes te genereren, e-mailmarketing uit te voeren en te werken met specifieke groepen klanten met Sendinblue.
+ 
+### <a name="ux-updates"></a>UX-updates 
+
+- **Nieuwe en verbeterde klantenpagina en pagina met profieldetails** We hebben de pagina Klanten en de profieldetailpagina's opnieuw ontworpen voor een verbeterde gebruikerservaring en betere prestaties. Met deze wijzigingen kunt u klanten bekijken, sorteren, zoeken en filteren. Filters worden nu weergegeven in de URL om de zoekresultaten naadloos met andere gebruikers te delen. Zoekresultaten kunnen ook als segment worden opgeslagen.    
+  De detailpagina voor klantprofielen groepeert nu gegevens in verschillende subsecties, zoals demografische gegevens, id's en andere profielkenmerken voor een betere leesbaarheid. Andere secties op de pagina met profieldetails zijn nu interactiever. In het activiteitengedeelte kunt u nu bijvoorbeeld filteren en sorteren.
+
 
 ## <a name="may-2021-updates"></a>Updates voor mei 2021
 
@@ -170,7 +192,7 @@ De updates van februari 2021 omvatten verschillende functies, prestatie-upgrades
 
 - **De kopieeromgeving ondersteunt meer soorten gegevensbronnen**
 
-  Beheerders kunnen omgevingsconfiguraties kopiëren naar een nieuwe omgeving in dezelfde organisatie. Met deze functie wordt de kopieeromgevingfunctionaliteit uit voor gevallen waarin gegevensbronnen op basis van een Common Data Service-data lake of een Common Data Model-map worden gebruikt.
+  Beheerders kunnen omgevingsconfiguraties kopiëren naar een nieuwe omgeving in dezelfde organisatie. Deze functie breidt de functionaliteit voor het kopiëren van omgevingen uit voor gevallen waarin gegevensbronnen op basis van een door Microsoft Dataverse beheerde data lake of een Common Data Model-map worden gebruikt.
 
 ## <a name="january-2021-updates"></a>Updates januari 2021
 

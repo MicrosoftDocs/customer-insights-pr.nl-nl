@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596493"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692107"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Verbinding maken met een Azure Data Lake Storage Gen2-account met een Azure Service Principal voor doelgroepinzichten
 
 Geautomatiseerde hulpmiddelen die Azure-services gebruiken, moeten altijd beperkte machtigingen hebben. In plaats van toepassingen zich te laten aanmelden als een gebruiker met volledige rechten, biedt Azure Service Principals. Lees verder om te zien hoe u doelgroepinzichten kunt verbinden met een Azure Data Lake Storage Gen2-account met behulp van een Azure Service Principal in plaats van opslagaccountsleutels. 
 
-U kunt de Service Principal gebruiken om veilig [een Common Data Model-map toe te voegen of te bewerken als een gegevensbron](connect-common-data-model.md) of [een nieuwe omgeving te maken of een bestaande te bewerken](manage-environments.md#create-an-environment-in-an-existing-organization).
+U kunt de Service Principal gebruiken om veilig [een Common Data Model-map toe te voegen of te bewerken als een gegevensbron](connect-common-data-model.md) of [een nieuwe omgeving te maken of een bestaande te bewerken](get-started-paid.md).
 
 > [!IMPORTANT]
 > - Voor het Azure Data Lake Gen2-opslagaccount dat de service-principal wil gebruiken, moet [Hierarchical Name Space (HNS) ingeschakeld zijn](/azure/storage/blobs/data-lake-storage-namespace)​.
@@ -81,7 +81,7 @@ Het kan tot 15 minuten duren om de wijzigingen door te geven.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Voer de Azure-resource-id of de Azure-abonnementsgegevens in de opslagaccountbijlage bij doelgroepinzichten in.
 
-Koppel een Azure Data Lake-opslagaccount in doelgroepinzichten aan [opslaguitvoergegevens](manage-environments.md) of [gebruik het als een gegevensbron](connect-common-data-service-lake.md). Als u de optie Azure Data Lake kiest, kunt u kiezen tussen de resource- of de abonnementenbenadering.
+Koppel een Azure Data Lake-opslagaccount in doelgroepinzichten aan [opslaguitvoergegevens](manage-environments.md) of [gebruik het als een gegevensbron](connect-dataverse-managed-lake.md). Als u de optie Azure Data Lake kiest, kunt u kiezen tussen de resource- of de abonnementenbenadering.
 
 Volg de onderstaande stappen om de vereiste informatie over de geselecteerde benadering te verstrekken.
 

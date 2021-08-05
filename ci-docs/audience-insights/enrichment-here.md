@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305288"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555301"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Verrijking van klantprofielen met HERE Technologies (preview)
 
@@ -35,7 +35,7 @@ Om HERE Technologies-verrijkingen te configureren, moet aan de volgende voorwaar
 1. Selecteer **Mijn gegevens verrijken** op de tegel van HERE Technologies en selecteer vervolgens **Aan de slag**.
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologies-tegel](media/HERE-tile.png "HERE Technologies-tegel")
+   > ![HERE Technologies-tegel.](media/HERE-tile.png "HERE Technologies-tegel")
 
 1. Selecteer een [verbinding](connections.md) in de vervolgkeuzelijst. Neem contact op met een beheerder als er geen verbinding beschikbaar is. Als u een beheerder bent, kunt u een verbinding maken door **Verbinding toevoegen** te selecteren. Kies **HERE Technologies** uit de vervolgkeuzelijst. 
 
@@ -50,7 +50,7 @@ Om HERE Technologies-verrijkingen te configureren, moet aan de volgende voorwaar
 1. Definieer welke velden van uw geharmoniseerde profielen moeten worden gebruikt om te zoeken naar overeenkomende locatiegegevens van HERE Technologies. De velden **Straat 1** en **Postcode** zijn vereist voor het geselecteerde primaire en/of secundaire adres. Voor een hogere matchnauwkeurigheid kunnen meer velden worden toegevoegd.
 
    > [!div class="mx-imgBorder"]
-   > ![Configuratiepagina voor verrijking van HERE Technologies](media/enrichment-HERE-configuration.png "Configuratiepagina voor verrijking van HERE Technologies")
+   > ![Configuratiepagina voor verrijking van HERE Technologies.](media/enrichment-HERE-configuration.png "Configuratiepagina voor verrijking van HERE Technologies")
 
 1. Selecteer **Volgende** om de veldtoewijzing te voltooien.
 
@@ -73,7 +73,7 @@ U moet een beheerder zijn om verbindingen te kunnen configureren. Selecteer **Ve
 1. Voltooi de verificatie en selecteer **Opslaan**.
 
    > [!div class="mx-imgBorder"]
-   > ![Configuratiepagina voor HERE technologies-verbinding](media/enrichment-HERE-connection.png "Configuratiepagina voor HERE technologies-verbinding")
+   > ![Configuratiepagina voor HERE technologies-verbinding.](media/enrichment-HERE-connection.png "Configuratiepagina voor HERE technologies-verbinding")
 
 ## <a name="enrichment-results"></a>Verrijkingsresultaten
 

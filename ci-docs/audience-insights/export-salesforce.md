@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar Salesforce Marketing Cloud
 description: Leer hoe u de verbinding configureert en exporteert naar Salesforce Marketing Cloud.
-ms.date: 06/24/2021
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 123f8b2dbb6140785dec6c1b4164d2f513f66a53
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.openlocfilehash: 8ce243918c2388e931a98df3bbe576ddf692f707
+ms.sourcegitcommit: 4823684a1399fd66ffecfce21735f2bc90a1733c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314597"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6660261"
 ---
 # <a name="export-segments-and-other-data-to-salesforce-marketing-cloud-preview"></a>Segmenten en andere gegevens exporteren naar Salesforce Marketing Cloud (preview)
 
@@ -23,11 +23,6 @@ Gebruik uw klantgegevens in Salesforce Marketing Cloud door ze te exporteren via
 ## <a name="prerequisites-for-connection"></a>Vereisten voor verbinding
 
 - Beschikbaarheid van een SFTP-host en bijbehorende beheerdersreferenties. [Procedure voor het instellen van SFTP-locaties voor Salesforce Marketing Cloud](https://help.salesforce.com/articleView?id=sf.mc_es_configure_enhanced_ftp.htm&type=5) 
-
-## <a name="known-limitations"></a>Bekende beperkingen
-
-- Hoe lang een export duurt, is afhankelijk van uw systeemprestaties. We raden twee CPU-cores en 1 Gb geheugen aan als minimale configuratie van uw server. 
-- Het exporteren van entiteiten met maximaal 100 miljoen klantprofielen kan 90 minuten duren bij gebruik van de aanbevolen minimale configuratie. 
 
 ## <a name="set-up-the-connection-to-salesforce-marketing-cloud"></a>De verbinding met Salesforce Marketing Cloud instellen
 

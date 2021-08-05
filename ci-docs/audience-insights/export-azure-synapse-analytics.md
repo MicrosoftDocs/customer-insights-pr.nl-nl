@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977371"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327358"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Gegevens exporteren naar Azure Synapse Analytics (preview)
 
@@ -74,8 +74,10 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 1. Zorg voor een herkenbare **weergavenaam** voor uw export en een **databasenaam**.
 
 1. Geef aan welke entiteiten u wilt exporteren naar Azure Synapse Analytics.
+   > [!NOTE]
+   > Gegevensbronnen die zijn gebaseerd op een [Common Data Model-map](connect-common-data-model.md), worden niet ondersteund.
 
-1. Selecteer **Opslaan**.
+2. Selecteer **Opslaan**.
 
 Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760321"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555439"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Segmenten exporteren naar LiveRamp&reg; (preview)
 
@@ -56,7 +56,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Selecteer in het veld **Uw sleutelidentificatie kiezen** de optie **E-mail**, **Naam en adres** of **Telefoon** om naar LiveRamp te sturen voor identiteitsresolutie.
    > [!div class="mx-imgBorder"]
-   > ![LiveRamp-connector met kenmerktoewijzing](media/export-liveramp-segments.png "LiveRamp-connector met kenmerktoewijzing")
+   > ![LiveRamp-connector met kenmerktoewijzing.](media/export-liveramp-segments.png "LiveRamp-connector met kenmerktoewijzing")
 
 1. Wijs de corresponderende kenmerken van uw geharmoniseerde klantentiteit toe aan de geselecteerde sleutel-id.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095642"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556301"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Voorspelling voor abonnementsverloop (preview)
 
@@ -63,7 +63,7 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
 1. Ga in doelgroepinzichten naar **Intelligence** > **Voorspellingen**.
 1. Selecteer de tegel **Abonnementsverloopmodel (preview)** en selecteer **Dit model gebruiken**.
    > [!div class="mx-imgBorder"]
-   > ![Tegel Abonnementverloopmodel met knop Dit model gebruiken](media/subscription-churn-usethismodel.PNG "Tegel Abonnementverloopmodel met knop Dit model gebruiken")
+   > ![Tegel Abonnementverloopmodel met knop Dit model gebruiken.](media/subscription-churn-usethismodel.PNG "Tegel Abonnementverloopmodel met knop Dit model gebruiken")
 
 ### <a name="name-model"></a>Model een naam geven
 
@@ -86,11 +86,11 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
     1. Selecteer de **entiteit Klant** die overeenkomt met uw primaire klantentiteit.
     1. Voer een naam in waarmee de relatie wordt omschreven.
        > [!div class="mx-imgBorder"]
-       > ![Pagina Abonnementsgeschiedenis waarop het maken van een relatie met de klant wordt getoond](media/subscription-churn-subscriptionhistoryrelationship.PNG "Pagina Abonnementsgeschiedenis waarop het maken van een relatie met de klant wordt getoond")
+       > ![Pagina Abonnementsgeschiedenis waarop het maken van een relatie met de klant wordt getoond.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Pagina Abonnementsgeschiedenis waarop het maken van een relatie met de klant wordt getoond")
 1. Selecteer **Volgende**.
 1. Wijs de semantische velden toe aan kenmerken binnen uw entiteit Abonnementsgeschiedenis en selecteer **Opslaan**. Zie de [vereisten](#prerequisites) voor beschrijvingen van de velden.
    > [!div class="mx-imgBorder"]
-   > ![Pagina Abonnementsgeschiedenis met semantische kenmerken die zijn toegewezen aan velden in de geselecteerde entiteit voor abonnementsgeschiedenis](media/subscription-churn-subscriptionhistorymapping.PNG "Pagina Abonnementsgeschiedenis met semantische kenmerken die zijn toegewezen aan velden in de geselecteerde entiteit voor abonnementsgeschiedenis")
+   > ![Pagina Abonnementsgeschiedenis met semantische kenmerken die zijn toegewezen aan velden in de geselecteerde entiteit voor abonnementsgeschiedenis.](media/subscription-churn-subscriptionhistorymapping.PNG "Pagina Abonnementsgeschiedenis met semantische kenmerken die zijn toegewezen aan velden in de geselecteerde entiteit voor abonnementsgeschiedenis")
 1. Selecteer **Gegevens toevoegen** voor **Klantactiviteiten** en kies de entiteit die de informatie over de klantactiviteiten levert zoals beschreven in de vereisten.
 1. Selecteer een activiteitstype dat overeenkomt met het type klantactiviteit dat u configureert.  Selecteer **Nieuwe maken** en geef een naam op als u geen optie ziet die overeenkomt met het activiteitstype dat u nodig hebt.
 1. U moet de relatie tussen uw entiteit voor klantactiviteit en de entiteit Klant configureren.
@@ -101,7 +101,7 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
 1. Wijs de semantische velden toe aan kenmerken binnen uw entiteit Klantactiviteit en selecteer **Opslaan**. Zie de [vereisten](#prerequisites) voor beschrijvingen van de velden.
 1. (Optioneel) Herhaal de bovenstaande stappen als u nog andere klantactiviteiten hebt die u wilt opnemen.
    > [!div class="mx-imgBorder"]
-   > ![De entiteitsrelatie definiëren](media/subscription-churn-customeractivitiesmapping.PNG "Pagina Klantactiviteiten met semantische kenmerken die zijn toegewezen aan velden in de geselecteerde entiteit voor klantactiviteit")
+   > ![Definieer de entiteitsrelatie.](media/subscription-churn-customeractivitiesmapping.PNG "Pagina Klantactiviteiten met semantische kenmerken die zijn toegewezen aan velden in de geselecteerde entiteit voor klantactiviteit")
 1. Selecteer **Volgende**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Schema instellen en configuratie bekijken
@@ -115,7 +115,7 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
 
 1. Ga naar het tabblad **Mijn voorspellingen** in **Informatie** > **Voorspellingen**.
    > [!div class="mx-imgBorder"]
-   > ![Weergave van de pagina Mijn voorspellingen](media/subscription-churn-mypredictions.PNG "Weergave van de pagina Mijn voorspellingen")
+   > ![Weergave van de pagina Mijn voorspellingen.](media/subscription-churn-mypredictions.PNG "Weergave van de pagina Mijn voorspellingen")
 1. Selecteer de voorspelling die u wilt beoordelen.
    - **Voorspellingsnaam:** de naam van de voorspelling die is opgegeven bij het maken ervan.
    - **Voorspellingstype:** het type model dat voor de voorspelling is gebruikt
@@ -131,7 +131,7 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
    - **Laatst vernieuwd:** de datum waarop de voorspelling is vernieuwd resulteert in de uitvoerentiteit.
 1. Selecteer de verticale puntjes naast de voorspelling waarvoor u de resultaten wilt beoordelen en selecteer **Weergave**.
    > [!div class="mx-imgBorder"]
-   > ![Weergave van opties in het menu met verticale puntjes voor een voorspelling, waaronder bewerken, vernieuwen, weergeven, logboeken en verwijderen](media/subscription-churn-verticalellipses.PNG "Weergave van opties in het menu met verticale puntjes voor een voorspelling, waaronder bewerken, vernieuwen, weergeven, logboeken en verwijderen")
+   > ![Weergave van opties in het menu met verticale puntjes voor een voorspelling, waaronder bewerken, vernieuwen, weergeven, logboeken en verwijderen.](media/subscription-churn-verticalellipses.PNG "Weergave van opties in het menu met verticale puntjes voor een voorspelling, waaronder bewerken, vernieuwen, weergeven, logboeken en verwijderen")
 1. Er zijn drie primaire gegevenssecties op de resultatenpagina:
     1. **Prestaties trainingsmodel:** mogelijke scores zijn A, B of C. Deze score geeft de prestatie van de voorspelling aan en kan u helpen de beslissing te nemen om gebruik te maken van de resultaten die in de uitvoerentiteit zijn opgeslagen.
         - Scores worden bepaald op basis van de volgende regels:
@@ -139,13 +139,13 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
             - **B** wanneer het model bij ten minste 50% van de totale voorspellingen nauwkeurig is geweest wanneer het percentage nauwkeurige voorspellingen voor klanten die verloren zijn gegaan tot 10% van het historische gemiddelde verlooppercentage groter is dan het historische gemiddelde verlooppercentage.
             - **C** wanneer het model bij minder dan 50% van de totale voorspellingen nauwkeurig is geweest of wanneer het percentage nauwkeurige voorspellingen voor klanten die verloren gaan lager is dan het historisch gemiddelde verlooppercentage.
                > [!div class="mx-imgBorder"]
-               > ![Weergave van het modelprestatieresultaat](media/subscription-churn-modelperformance.PNG "Weergave van het modelprestatieresultaat")
+               > ![Weergave van het modelprestatieresultaat.](media/subscription-churn-modelperformance.PNG "Weergave van het modelprestatieresultaat")
     1. **Waarschijnlijkheid van verloop (aantal klanten):** groepen klanten op basis van hun voorspelde verlooprisico. Deze gegevens kunnen u later helpen als u een klantensegment wilt maken met een hoog verlooprisico. Dergelijke segmenten helpen u te begrijpen waar uw grens voor segmentlidmaatschap moet liggen.
        > [!div class="mx-imgBorder"]
-       > ![Grafiek die de verdeling van de verloopresultaten toont, onderverdeeld in bereiken van 0-100%](media/subscription-churn-resultdistribution.PNG "Grafiek die de verdeling van de verloopresultaten toont, onderverdeeld in bereiken van 0-100%")
+       > ![Grafiek die de verdeling van de verloopresultaten toont, onderverdeeld in bereiken van 0-100%.](media/subscription-churn-resultdistribution.PNG "Grafiek die de verdeling van de verloopresultaten toont, onderverdeeld in bereiken van 0-100%")
     1. **Meest invloedrijke factoren:** er zijn veel factoren waarmee rekening wordt gehouden bij het maken van uw voorspelling. Voor elk van de factoren wordt het belang berekend bij de geaggregeerde voorspellingen die een model opstelt. U kunt deze factoren gebruiken om uw voorspellingsresultaten te valideren. Of u kunt deze informatie later gebruiken om [segmenten te maken](segments.md) die het klantverlooprisico kunnen helpen beïnvloeden.
        > [!div class="mx-imgBorder"]
-       > ![Lijst met invloedrijke factoren en hun belang bij het voorspellen van het verloopresultaat](media/subscription-churn-influentialfactors.PNG "Lijst met invloedrijke factoren en hun belang bij het voorspellen van het verloopresultaat")
+       > ![Lijst met invloedrijke factoren en hun belang bij het voorspellen van het verloopresultaat.](media/subscription-churn-influentialfactors.PNG "Lijst met invloedrijke factoren en hun belang bij het voorspellen van het verloopresultaat")
 
 ## <a name="manage-predictions"></a>Voorspellingen beheren
 

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305620"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554842"
 ---
 # <a name="custom-machine-learning-models"></a>Aangepaste Machine Learning-modellen
 
@@ -42,7 +42,7 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
 1. Geef uw aangepaste model een herkenbare naam in het veld **Naam**.
 
    > [!div class="mx-imgBorder"]
-   > ![Schermafbeelding van het deelvenster Nieuwe werkstroom](media/new-workflowv2.png "Schermafbeelding van het deelvenster Nieuwe werkstroom")
+   > ![Schermafbeelding van het deelvenster Nieuwe werkstroom.](media/new-workflowv2.png "Schermafbeelding van het deelvenster Nieuwe werkstroom")
 
 1. Selecteer de organisatie die de webservice bevat in **Tenant die uw webservice bevat**.
 
@@ -59,7 +59,7 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
    > De aangepaste modelwerkstroom past heuristiek toe om de invoervelden van de webservice toe te wijzen aan de entiteitskenmerken op basis van de naam en het gegevenstype van het veld. U ziet een foutmelding als een webserviceveld niet kan worden toegewezen aan een entiteit.
 
    > [!div class="mx-imgBorder"]
-   > ![Een werkstroom configureren](media/intelligence-screen2-updated.png "Een werkstroom configureren")
+   > ![Een werkstroom configureren.](media/intelligence-screen2-updated.png "Een werkstroom configureren")
 
 1. Stel in de stap **Modeluitvoerparameters** de volgende eigenschappen in:
    - Machine Learning Studio (klassiek)
@@ -70,12 +70,12 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
       1. Selecteer in de vervolgkeuzelijst de **Parameternaam van het uitvoerpad** van uw batchpijplijn.
 
       > [!div class="mx-imgBorder"]
-      > ![Deelvenster Parameter voor modeluitvoer](media/intelligence-screen3-outputparameters.png "Deelvenster Parameter voor modeluitvoer")
+      > ![Deelvenster Parameter voor modeluitvoer.](media/intelligence-screen3-outputparameters.png "Deelvenster Parameter voor modeluitvoer")
 
 1. Selecteer het overeenkomende kenmerk uit de vervolgkeuzelijst **Klant-id in resultaten** die klanten identificeert en selecteer **Opslaan**.
 
    > [!div class="mx-imgBorder"]
-   > ![Resultaten relateren aan het deelvenster Klantgegevens](media/intelligence-screen4-relatetocustomer.png "Resultaten relateren aan het deelvenster Klantgegevens")
+   > ![Resultaten relateren aan het deelvenster Klantgegevens.](media/intelligence-screen4-relatetocustomer.png "Resultaten relateren aan het deelvenster Klantgegevens")
 
 1. U krijgt het scherm **Werkstroom opgeslagen** te zien met details over de werkstroom.    
    Als u een werkstroom hebt geconfigureerd voor een Azure Machine Learning-pijplijn, worden doelgroepinzichten gekoppeld aan de werkruimte die de pijplijn bevat. Doelgroepinzichten krijgen een rol als **inzender** in de Azure-werkruimte.

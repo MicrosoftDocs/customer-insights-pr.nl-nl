@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596539"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554888"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Verbinding maken met een Common Data Model-map via een Azure Data Lake-account
 
@@ -45,7 +45,7 @@ Dit artikel bevat informatie over het opnemen van gegevens uit een Common Data M
 
 1. U kunt kiezen tussen een resource-optie en een abonnementsoptie voor verificatie. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. Voer de informatie van de **Container** in en selecteer **Volgende**.
    > [!div class="mx-imgBorder"]
-   > ![Dialoogvenster om nieuwe verbindingsdetails in te voeren voor Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Dialoogvenster om nieuwe verbindingsdetails in te voeren voor Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > U hebt een van de volgende rollen nodig voor de container of het opslagaccount waarnaar hierboven wordt verwezen om verbinding te kunnen maken met een gegevensbron en deze te maken:
    >  - Opslag-blobgegevens lezer
@@ -58,11 +58,11 @@ Dit artikel bevat informatie over het opnemen van gegevens uit een Common Data M
 
 1. U krijgt een lijst met beschikbare entiteiten in het geselecteerde model.json- of manifest.json-bestand. U kunt entiteiten bekijken en selecteren in de beschikbare lijst met beschikbare entiteiten en vervolgens **Opslaan** selecteren. Alle geselecteerde entiteiten worden uit de nieuwe gegevensbron opgenomen.
    > [!div class="mx-imgBorder"]
-   > ![Dialoogvenster met een lijst met entiteiten uit een model.json-bestand](media/review-entities.png)
+   > ![Dialoogvenster met een lijst met entiteiten uit een model.json-bestand.](media/review-entities.png)
 
 8. Geef aan voor welke gegevensentiteiten u profilering wilt inschakelen en selecteer **Opslaan**. Met gegevensprofilering kunnen analyses en andere functies worden gebruikt. U kunt de hele entiteit selecteren, die alle kenmerken uit de entiteit selecteert, of bepaalde kenmerken selecteren. Standaard is geen entiteit ingeschakeld voor gegevensprofilering.
    > [!div class="mx-imgBorder"]
-   > ![Dialoogvenster met gegevensprofilering](media/dataprofiling-entities.png)
+   > ![Dialoogvenster met gegevensprofilering.](media/dataprofiling-entities.png)
 
 9. Na het opslaan van uw selecties wordt de pagina **Gegevensbronnen** geopend. U zou nu de Common Data Model-mapverbinding moeten zien als een gegevensbron.
 
@@ -81,12 +81,12 @@ U kunt de toegangssleutel bijwerken voor het opslagaccount dat de map Common Dat
 
 4. Werk desgewenst de **Toegangssleutel** bij en selecteer **Volgende**.
 
-   ![Dialoogvenster om een toegangssleutel voor een bestaande gegevensbron te wijzigen en bij te werken](media/edit-access-key.png)
+   ![Dialoogvenster om een toegangssleutel voor een bestaande gegevensbron te wijzigen en bij te werken.](media/edit-access-key.png)
 
 5. Optioneel kunt u bijwerken vanaf een accountsleutelverbinding naar een resource- of een abonnementsverbinding. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. U kunt geen informatie over **Container** wijzigen bij het bijwerken van de verbinding.
    > [!div class="mx-imgBorder"]
 
-   > ![Dialoogvenster om verbindingsdetails voor Azure Data Lake in te voeren met een bestaand opslagaccount](media/enter-existing-storage-details.png)
+   > ![Dialoogvenster om verbindingsdetails voor Azure Data Lake in te voeren met een bestaand opslagaccount.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > U hebt een van de volgende rollen nodig voor de container of het opslagaccount waarnaar hierboven wordt verwezen om verbinding te kunnen maken met een gegevensbron en deze te maken:

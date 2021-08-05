@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596355"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692299"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Entiteitsschema's in Common Data Model
 
@@ -24,7 +24,7 @@ ms.locfileid: "5596355"
 
 Met dit gedeelde gegevensmodel kunnen toepassingen en gegevensintegrators eenvoudiger samenwerken door een uniforme definitie van gegevens te bieden. Common Data Model bevat een uitgebreid metadatasysteem met standaardentiteiten, relaties, hiërarchieën, eigenschappen en meer. Het is afkomstig van Dynamics 365-apps en is open source op GitHub met meer dan 260 standaardentiteiten. Een groot systeem van interne en externe partners draagt branchespecifieke concepten bij aan Common Data Model.
 
-Meerdere systemen en platforms implementeren vandaag Common Data Model, waaronder Power BI-gegevensstromen en Azure Data Services. Het wordt al ondersteund in Common Data Service, Dynamics 365, Power Apps, Power BI, en aankomende Azure-gegevensservices, die direct waarde opleveren voor het [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+Meerdere systemen en platforms implementeren nu het Common Data Model, inclusief Power BI-gegevensstromen en Azure Data Services. Het wordt al ondersteund in Microsoft Dataverse, Dynamics 365, Power Apps, Power BI en aankomende Azure-dataservices, die direct waarde genereren voor het [Open Data-initiatief](https://www.microsoft.com/open-data-initiative).
 
 ## <a name="customer-insights-entity-schemas"></a>Schema's van Customer Insights-entiteiten
 
@@ -44,7 +44,7 @@ Zie de documentatie voor meer informatie over de [entiteitsschema's van Customer
 
 U kunt entiteiten bekijken in de [Common Data Model Entity Navigator](https://microsoft.github.io/CDM/). Selecteer de knop **Laden uit GitHub!** en navigeer naar **foundationCommon** > **crmCommon** > **oplossingen** > **customerInsights** waar u de lijst met Customer Insights-entiteiten en hun definities vindt.
 > [!div class="mx-imgBorder"]
-> ![CDM Entity Navigator met entiteit CustomerActivity](media/CDM-entity-navigator.png "CDM Entity Navigator met entiteit CustomerActivity")
+> ![CDM Entity Navigator met entiteit CustomerActivity.](media/CDM-entity-navigator.png "CDM Entity Navigator met entiteit CustomerActivity")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

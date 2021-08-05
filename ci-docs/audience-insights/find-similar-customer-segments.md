@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596769"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554199"
 ---
 # <a name="similar-customers-preview"></a>Vergelijkbare klanten (preview)
 
@@ -50,7 +50,7 @@ Met deze functie kunt u vergelijkbare klanten in uw klantenbestand zoeken met be
 Na het verwerken van het vergelijkbare segment, vindt u het nieuwe segment vermeld op de pagina **Segmenten**.
 
 > [!div class="mx-imgBorder"]
-> ![Segment van vergelijkbare klanten](media/expanded-segment.png "Segment van vergelijkbare klanten")
+> ![Segment van vergelijkbare klanten.](media/expanded-segment.png "Segment van vergelijkbare klanten")
 
 Selecteer **Weergeven** op de actiebalk om het segmentdetail te openen. Deze weergave bevat informatie over de resultaatverdeling tussen [overeenkomstscores](#about-similarity-scores). U vindt de waarden voor de overeenkomstscore ook in **Voorbeeld van segmentleden**.
 

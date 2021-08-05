@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595987"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555117"
 ---
 # <a name="map-entities-and-attributes"></a>Entiteiten en attributen toewijzen
 
@@ -35,14 +35,14 @@ Zie [Harmoniseren](data-unification.md) voor meer informatie over de algemene st
 3. Selecteer de entiteiten en kenmerken die u wilt gebruiken in de fasen voor *afstemmen* en *samenvoegen*. U kunt de vereiste kenmerken van een entiteit afzonderlijk selecteren of alle kenmerken van een entiteit opnemen door het selectievakje **Alle velden opnemen** in te schakelen op entiteitsniveau. We raden u aan ten minste twee entiteiten te selecteren om te profiteren van het proces voor gegevensharmonisatie.
 
    > [!div class="mx-imgBorder"]
-   > ![Voorbeeld van toevoegen van entiteiten](media/data-manager-configure-map-add-entities-example.png "Voorbeeld van toevoegen van entiteiten")
+   > ![Voorbeeld van toevoegen van entiteiten.](media/data-manager-configure-map-add-entities-example.png "Voorbeeld van toevoegen van entiteiten")
 
    In dit voorbeeld voegen we de entiteiten **eCommerceContacten** en **loyCustomers** toe. Door deze entiteiten te kiezen, kunt u inzicht krijgen in welke van de online zakelijke klanten leden van het loyaliteitsprogramma zijn.
    
    U kunt zoeken op trefwoorden in alle kenmerken en entiteiten om de vereiste kenmerken te selecteren die u wilt toewijzen.
    
      > [!div class="mx-imgBorder"]
-   > ![Voorbeeld van zoekvelden](media/data-manager-configure-map-search-fields-example.png "Voorbeeld van zoekvelden")
+   > ![Voorbeeld van zoekvelden.](media/data-manager-configure-map-search-fields-example.png "Voorbeeld van zoekvelden")
 
 4. Selecteer **Toepassen** om uw selecties te bevestigen.
 
@@ -55,7 +55,7 @@ Nadat u uw entiteiten hebt geselecteerd, bevat de pagina **Toewijzen** de gesele
 - **Semantische type van kenmerk**: categorieën van uw kenmerken, zoals e-mailadres of naam. Als u AI-modellen wilt gebruiken voor slimme voorspelling van semantiek, tijdsbesparing en verbeterde nauwkeurigheid, zet u **Intelligente toewijzing** op **AAN**. Met Intelligente toewijzing markeert u op AI gebaseerde semantische aanbevelingen in het veld **Type**. Als u dit instelt op **UIT**, ziet u onze normale aanbevelingen voor toewijzingen. U kunt elk semantisch type uit de beschikbare lijst met opties selecteren en de voorgestelde selectie negeren.
 
 > [!div class="mx-imgBorder"]
-> ![Kenmerktype en semantische voorspelling](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Kenmerktype en semantische voorspelling")
+> ![Kenmerktype en semantische voorspelling.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Kenmerktype en semantische voorspelling")
 
 Het toevoegen van een aangepast semantisch type is eveneens mogelijk. Selecteer het type veld voor een kenmerk en typ de aangepaste naam van het semantische type. Zo kunt u ook de kenmerktypen wijzigen die door het systeem zijn geïdentificeerd.
 
@@ -64,7 +64,7 @@ Alle kenmerken waarvoor een semantisch type automatisch wordt geïdentificeerd, 
 Kenmerken die niet automatisch worden toegewezen aan een semantisch type, worden gegroepeerd in de sectie **De gegevens in de niet-toegewezen velden definiëren**. Selecteer het semantische typeveld voor de niet-toegewezen kenmerken of voer uw aangepaste naam voor het kenmerktype in.
 
 > [!div class="mx-imgBorder"]
-> ![Primaire sleutel en kenmerktype](media/data-manager-configure-map-add-attributes.png "Primaire sleutel en kenmerktype")
+> ![Primaire sleutel en kenmerktype.](media/data-manager-configure-map-add-attributes.png "Primaire sleutel en kenmerktype")
 
 > [!NOTE]
 > Eén veld moet worden toegewezen aan het semantische type Person.FullName om de klantnaam in de klantenkaart te vullen. Anders verschijnen de klantenkaarten zonder naam. 
@@ -76,7 +76,7 @@ Kenmerken die niet automatisch worden toegewezen aan een semantisch type, worden
 2. Voeg in het deelvenster **Velden bewerken** kenmerken en entiteiten toe of verwijder deze. Gebruik de zoekopdracht of schuif om de kenmerken en entiteiten waarin u bent interessante te zoeken en te selecteren. U kunt een kenmerk of entiteit niet verwijderen als deze al zijn afgestemd.
 
    > [!div class="mx-imgBorder"]
-   > ![Kenmerken toevoegen of verwijderen](media/configure-data-map-edit.png "Kenmerken toevoegen of verwijderen")
+   > ![Kenmerken toevoegen of verwijderen.](media/configure-data-map-edit.png "Kenmerken toevoegen of verwijderen")
 
 3. Selecteer **Toepassen**.
 

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306068"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554979"
 ---
 # <a name="segment-insights-preview"></a>Segmentinzichten (preview)
 
@@ -44,7 +44,7 @@ U kunt ook analyseren hoe de overlapping verandert voor specifieke kenmerken.
 Zoek na het voltooien van de analyse naar details over dit inzicht in **Segmenten** > **Inzichten (preview)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Inzichtdetails voor overlapping van segmenten":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Inzichtdetails voor overlapping van segmenten.":::
 
 Selecteer een inzicht om de analyseresultaten te bekijken:
 
@@ -77,7 +77,7 @@ Segmentonderscheiders helpen u te achterhalen wat een segment onderscheidt van d
 Zoek na het voltooien van de analyse naar details over dit inzicht in **Segmenten** > **Inzichten (preview)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Inzichtdetails voor het onderscheiden van segmenten":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Inzichtdetails voor het onderscheiden van segmenten.":::
 
 Selecteer een inzicht om de analyseresultaten te bekijken. Een onderscheidingsanalyse bevat twee tabbladen. Het tabblad **Kenmerken** geeft profielkenmerken weer die als onderscheidende factoren worden beschouwd. Het tabblad **Metingen** geeft onderscheidende factoren aan. Elk tabblad bevat de volgende details:
 

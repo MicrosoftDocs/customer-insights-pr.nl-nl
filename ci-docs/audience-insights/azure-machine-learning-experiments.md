@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597413"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554429"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Azure Machine Learning-modellen gebruiken
 
@@ -52,7 +52,7 @@ U moet gegevenssets maken om entiteitsgegevens uit Customer Insights te gebruike
      Open in de ontwerper **Kolommen in gegevensset selecteren** en selecteer **Instellen als pijplijnparameter**, waar u een naam opgeeft voor de parameter.
 
      > [!div class="mx-imgBorder"]
-     > ![Gegevenssetparameters in Designer](media/intelligence-designer-dataset-parameters.png "Gegevenssetparameters in Designer")
+     > ![Gegevenssetparameters in Designer.](media/intelligence-designer-dataset-parameters.png "Gegevenssetparameters in Designer")
    
 * Gegevenssetparameter in SDK (Python)
    
@@ -78,7 +78,7 @@ U moet gegevenssets maken om entiteitsgegevens uit Customer Insights te gebruike
 
 * De designer levert de [module Gegevens exporteren](/azure/machine-learning/algorithm-module-reference/export-data) waarmee de uitvoer van een pijplijn kan worden geëxporteerd naar Azure Storage. Momenteel moet de module het gegevensopslagtype **Azure Blob Storage** gebruiken en de **Gegevensopslag** en het relatieve **Pad** parametriseren. Customer Insights overschrijft beide parameters tijdens de uitvoering van een pijplijn met een gegevensopslag en pad dat toegankelijk is voor het product.
    > [!div class="mx-imgBorder"]
-   > ![Configuratie van de module Gegevens exporteren](media/intelligence-designer-importdata.png "Configuratie van de module Gegevens exporteren")
+   > ![Configuratie van de module Gegevens exporteren.](media/intelligence-designer-importdata.png "Configuratie van de module Gegevens exporteren")
    
 * Wanneer u de inferentie-uitvoer schrijft met behulp van code, kunt u de uitvoer uploaden naar een pad binnen een *geregistreerde gegevensopslag* in de werkruimte. Als het pad en de gegevensopslag in de pijplijn zijn geparametriseerd, kan Customer Insights de inferentie-uitvoer lezen en importeren. Momenteel wordt één uitvoer in tabelvorm in csv-indeling ondersteund. Het pad moet de map en de bestandsnaam bevatten.
 

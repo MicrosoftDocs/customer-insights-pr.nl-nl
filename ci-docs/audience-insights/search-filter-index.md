@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597137"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554015"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Klantprofielen: zoek- en filterindex
 
 Het resultaat van het harmoniseren van uw klantgegevens is een entiteit Klantprofiel die een geharmoniseerde weergave biedt van uw totale klantenbestand. Als u snel [informatie wilt vinden over een specifieke klant of groep klanten](customer-profiles.md), kunt u de mogelijkheden **Zoeken** en **Filteren** configureren op de pagina **Klanten**. Lees verder om te zien hoe beheerders de kenmerken op de pagina **Index voor zoeken en filteren** kunnen bewerken, die beschikbaar zijn voor gebruikers om te zoeken en te filteren.
 
 > [!div class="mx-imgBorder"]
-> ![Zoekfilter](media/search-filter.png "Zoekfilter")
+> ![Zoekfilter.](media/search-filter.png "Zoekfilter")
 
 ## <a name="add-fields-and-specify-attributes"></a>Velden toevoegen en kenmerken opgeven
 

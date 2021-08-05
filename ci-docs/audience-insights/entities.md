@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049388"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553969"
 ---
 # <a name="entities-in-audience-insights"></a>Entiteiten in doelgroepinzichten
 
@@ -30,19 +30,19 @@ Op de pagina **Entiteiten** worden entiteiten vermeld. Deze worden weergegeven i
 - **Laatst bijgewerkt**: datum en tijd van de laatste update van de entiteit
 - **Laatste vernieuwing**: datum en tijd van de laatste gegevensvernieuwing
 
-## <a name="exploring-a-specific-entitys-data"></a>De gegevens van een specifieke entiteit verkennen
+## <a name="explore-a-specific-entitys-data"></a>De gegevens van een specifieke entiteit verkennen
 
 Selecteer een entiteit om de verschillende velden en records in die entiteit te verkennen.
 
 > [!div class="mx-imgBorder"]
-> ![Selecteer een entiteit](media/data-manager-entities-data.png "Een entiteit selecteren")
+> ![Selecteer een entiteit.](media/data-manager-entities-data.png "Selecteer een entiteit")
 
 - Op het tabblad **Gegevens** wordt een tabel weergegeven met details over individuele records van de entiteit.
 
 > [!div class="mx-imgBorder"]
-> ![Veldentabel](media/data-manager-entities-fields.PNG "Veldentabel")
+> ![Veldentabel.](media/data-manager-entities-fields.PNG "Veldentabel")
 
-- Het tabblad **Kenmerken** is standaard geselecteerd en bevat een tabel om details voor de geselecteerde entiteit te controleren, zoals veldnamen, gegevenstypen en typen. In de kolom **Type** worden aan het Common Data Model gekoppelde typen weergegeven, die automatisch worden geïdentificeerd door het systeem of [handmatig worden toegewezen](map-entities.md) door gebruikers. Dit zijn semantische typen die kunnen verschillen van de gegevenstypen van de kenmerken. Zo heeft bijvoorbeeld het veld *E-mail* een gegevenstype *Tekst*, maar is het (semantische) Common Data Model-type mogelijk *E-mail* of *E-mailadres*.
+- Het tabblad **Kenmerken** is standaard geselecteerd en bevat een tabel om details voor de geselecteerde entiteit te controleren, zoals veldnamen, gegevenstypen en typen. In de kolom **Type** worden aan het Common Data Model gekoppelde typen weergegeven, die automatisch worden geïdentificeerd door het systeem of [handmatig worden toegewezen](map-entities.md) door gebruikers. Deze typen zijn semantische typen die kunnen verschillen van de gegevenstypen van de kenmerken. Het veld *E-mail* hieronder heeft bijvoorbeeld het gegevenstype *Tekst*, maar het (semantische) Common Data Model-type zou *E-mail* of *E-mailadres* kunnen zijn.
 
 > [!NOTE]
 > In beide tabellen wordt slechts een voorbeeld van de gegevens van uw entiteit weergegeven. Als u de volledige gegevensset wilt bekijken, gaat u naar de pagina **Gegevensbronnen**, selecteert u **Bewerken** en bekijkt u de gegevens van deze entiteit met de Power Query-editor, zoals uitgelegd in [Gegevensbronnen](data-sources.md).
@@ -52,11 +52,28 @@ Voor meer informatie over de gegevens die zijn opgenomen in de entiteit biedt de
 Selecteer het grafiekpictogram om het overzicht van de gegevens weer te geven.
 
 > [!div class="mx-imgBorder"]
-> ![Overzichtssymbool](media/data-manager-entities-summary.png "Aanvraagoverzichtstabel")
+> ![Overzichtssymbool.](media/data-manager-entities-summary.png "Aanvraagoverzichtstabel")
 
-### <a name="next-step"></a>Volgende stap
+## <a name="entity-specific-information"></a>Entiteitsspecifieke informatie
 
-Bekijk het onderwerp [Harmoniseren](data-unification.md) om meer te weten te komen over het *toewijzen*, *afstemmen* en *samenvoegen* van de opgenomen gegevens.
+De volgende sectie bevat informatie over enkele door het systeem gemaakte entiteiten.
+
+### <a name="corrupted-data-sources"></a>Beschadigde gegevensbronnen
+
+Velden van een opgenomen gegevensbron kunnen beschadigde gegevens bevatten. Records met beschadigde velden worden weergegeven in door het systeem gemaakte entiteiten. Als u weet dat er beschadigde records zijn, kunt u bepalen welke gegevens u op het bronsysteem moet bekijken en bijwerken. Na de volgende vernieuwing van de gegevensbron worden de gecorrigeerde records opgenomen in Customer Insights en doorgegeven aan downstream processen. 
+
+In een kolom 'verjaardag' bijvoorbeeld is het gegevenstype ingesteld op 'datum'. Voor een klantrecord is de verjaardag ingevoerd als '01/01/19777'. Het systeem markeert dit record als beschadigd. Iemand kan nu in het bronsysteem de geboortedatum wijzigen in '1977'. Na een automatische vernieuwing van gegevensbronnen heeft het veld nu een geldige indeling en wordt het record verwijderd uit de beschadigde entiteit. 
+
+Ga naar **Gegevens** > **Entiteiten** en zoek naar de beschadigde entiteiten in de sectie **Systeem**. Naamgevingsschema van beschadigde entiteiten: 'DataSourceName_EntityName_corrupt'.
+
+Customer Insights verwerkt nog steeds beschadigde records. Zij kunnen echter problemen veroorzaken wanneer met de uniforme gegevens wordt gewerkt.
+
+De volgende controles worden uitgevoerd op de opgenomen gegevens om beschadigde records te onthullen: 
+
+- De waarde van een veld komt niet overeen met het gegevenstype van de kolom.
+- Velden bevatten tekens waardoor de kolommen niet overeenkomen met het verwachte schema. Bijvoorbeeld: onjuist opgemaakte aanhalingstekens, aanhalingstekens zonder escape of tekens voor nieuwe regels.
+- Indien er datetime/datetime/datetimeoffset kolommen zijn, moet de indeling daarvan in het model worden gespecificeerd indien dit niet de standaard ISO-indeling volgt.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

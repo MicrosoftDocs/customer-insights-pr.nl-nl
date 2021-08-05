@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304690"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692429"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
@@ -30,13 +31,13 @@ U kunt een gegevensbron op drie manieren toevoegen:
 
 - [Via tientallen Power Query-connectors](connect-power-query.md)
 - [Via een Common Data Model-map](connect-common-data-model.md)
-- [Via uw eigen Microsoft Dataverse-lake](connect-common-data-service-lake.md)
+- [Via uw eigen Microsoft Dataverse-lake](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Gegevens toevoegen vanuit on-premises gegevensbronnen
 
-Het opnemen van gegevens uit on-premises gegevensbronnen in doelgroepinzichten wordt ondersteund op basis van Microsoft Power Platform-gegevensstromen. Gegevensstromen kunnen worden ingeschakeld in Customer Insights door [het verstrekken van de URL van de Microsoft Dataverse-omgeving](manage-environments.md#create-an-environment-in-an-existing-organization) bij het opzetten van de omgeving.
+Het opnemen van gegevens uit on-premises gegevensbronnen in doelgroepinzichten wordt ondersteund op basis van Microsoft Power Platform-gegevensstromen. Gegevensstromen kunnen worden ingeschakeld in Customer Insights door [het verstrekken van de URL van de Microsoft Dataverse-omgeving](get-started-paid.md) bij het opzetten van de omgeving.
 
-Gegevensbronnen die worden gemaakt na het koppelen van een Dataverse-omgeving met Customer Insights maken standaard gebruik van [Power Platform-gegevensstromen](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Gegevensstromen ondersteunen on-premises connectiviteit met behulp van de gegevensgateway. Verwijder gegevensbronnen die al bestonden vóór een Dataverse-omgeving werd gekoppeld en maak deze opnieuw om [de on-premises gegevensgateways te gebruiken](/data-integration/gateway/service-gateway-app.md).
+Gegevensbronnen die worden gemaakt na het koppelen van een Dataverse-omgeving met Customer Insights maken standaard gebruik van [Power Platform-gegevensstromen](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Gegevensstromen ondersteunen on-premises connectiviteit met behulp van de gegevensgateway. Verwijder gegevensbronnen die al bestonden vóór een Dataverse-omgeving werd gekoppeld en maak deze opnieuw om [de on-premises gegevensgateways te gebruiken](/data-integration/gateway/service-gateway-app).
 
 Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving worden zichtbaar en u kunt deze opnieuw gebruiken in Customer Insights. De pagina met gegevensbronnen toont koppelingen om naar de Microsoft Power Platform-omgeving te gaan waar u on-premises gegevensgateways kunt bekijken en configureren.
 
@@ -45,11 +46,11 @@ Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving worden zicht
 U ziet de naam van elke opgenomen gegevensbron, de status en de laatste keer dat de gegevens voor die bron zijn vernieuwd. U kunt de lijst met gegevensbronnen op elke kolom sorteren.
 
 > [!div class="mx-imgBorder"]
-> ![Gegevensbron toegevoegd](media/configure-data-datasource-added.png "Gegevensbron toegevoegd")
+> ![Gegevensbron toegevoegd.](media/configure-data-datasource-added.png "Gegevensbron toegevoegd")
 
-|Status  |Beschrijving  |
+|-Status  |Beschrijving  |
 |---------|---------|
-|Voltooid   |Gegevensbron is opgenomen als een tijd wordt vermeld in de kolom **Vernieuwd**.
+|Geslaagd   |Gegevensbron is opgenomen als een tijd wordt vermeld in de kolom **Vernieuwd**.
 |Niet gestart   |De gegevensbron heeft nog geen gegevens opgenomen of bevindt zich nog in de conceptmodus.         |
 |Vernieuwen    |De opname van gegevens wordt uitgevoerd. U kunt deze bewerking annuleren door **Stoppen met vernieuwen** te selecteren in de kolom **Acties**. Als u het vernieuwen van een gegevensbron stopt, keert het terug naar de laatste vernieuwingsstatus.       |
 |Mislukt     |Er zijn fouten opgetreden bij de gegevensopname.         |

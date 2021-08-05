@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124221"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362503"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmenten exporteren naar Mailchimp (preview)
 
@@ -38,7 +38,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Mailchimp om nieuwsb
 
 1. Ga naar **Beheerder** > **Verbindingen**.
 
-1. Selecteer **Verbinding toevoegen** en kies **Autopilot** om de verbinding te configureren.
+1. Selecteer **Verbinding toevoegen** en kies **Mailchimp** om de verbinding te configureren.
 
 1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
 

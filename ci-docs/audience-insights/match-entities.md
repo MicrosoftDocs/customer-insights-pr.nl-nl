@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306022"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650312"
 ---
 # <a name="match-entities"></a>Entiteiten toewijzen
 
@@ -138,7 +138,7 @@ Het specificeren van ontdubbelingsregels is niet verplicht. Als dergelijke regel
    - **Minst recent**: identificeert het winnende record op basis van minst recent zijn. Vereist een datum of een numeriek veld om de recentheid te definiëren.
  
    > [!div class="mx-imgBorder"]
-   > ![Ontdubbelingsregels stap 1](media/match-selfconflation.png "Ontdubbelingsregels stap 1")
+   > ![Ontdubbelingsregels stap 1.](media/match-selfconflation.png "Ontdubbelingsregels stap 1")
  
 1. Zodra de entiteiten zijn geselecteerd en de voorkeur voor samenvoegen is ingesteld, selecteert u **Regel toevoegen** om de ontdubbelingsregels op entiteitsniveau te definiëren.
    - Met **Veld selecteren** worden alle beschikbare velden uit die entiteit weergegeven. Kies het veld dat u op duplicaten wilt controleren. Kies velden die waarschijnlijk uniek zijn voor elke afzonderlijke klant, bijvoorbeeld een e-mailadres of de combinatie van naam, plaats en telefoonnummer.
@@ -146,7 +146,7 @@ Het specificeren van ontdubbelingsregels is niet verplicht. Als dergelijke regel
    - Geef meer voorwaarden op door **Voorwaarde toevoegen** te selecteren.
  
    > [!div class="mx-imgBorder"]
-   > ![Ontdubbelingsregels stap 2](media/match-selfconflation-rules.png "Ontdubbelingsregels stap 2")
+   > ![Ontdubbelingsregels stap 2.](media/match-selfconflation-rules.png "Ontdubbelingsregels stap 2")
 
   U kunt meerdere ontdubbelingsregels voor een entiteit maken. 
 
@@ -179,7 +179,9 @@ Ga naar **Gegevens** > **Verenigen** > **Afstemmen** en selecteer **Uitvoeren** 
 U vindt het resultaat van een geslaagde uitvoering, de geharmoniseerde klantprofielentiteit, op de pagina **Entiteiten**. Uw geharmoniseerde klantentiteit heeft de naam **Klanten** in de sectie **Profielen**. Bij de eerste geslaagde vergelijkingsuitvoering wordt de geharmoniseerde entiteit *Klant* gemaakt. Bij elke volgende vergelijking wordt die entiteit uitgebreid.
 
 > [!TIP]
-> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
+> Nadat u het vergelijkingsproces hebt uitgevoerd, selecteert u de processtatus om het deelvenster **Taakdetails** te openen. Het geeft een overzicht van de verwerkingstijd, de laatste verwerkingsdatum, en alle fouten en waarschuwingen in verband met de taak. Selecteer **Details bekijken** om te zien welke entiteiten hebben deelgenomen aan het vergelijkingsproces, welke regels erop zijn toegepast en of de updates met succes zijn gepubliceerd.  
+> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Inzoompad om naar procesdetails te gaan vanuit de taakstatuskoppeling.":::
 
 ## <a name="review-and-validate-your-matches"></a>Uw afstemmingen controleren en valideren
 

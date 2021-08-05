@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598333"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555163"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Modellen op basis van Azure Machine Learning Studio (klassiek) gebruiken
 
@@ -41,7 +41,7 @@ In een eerste stap moeten we een werkruimte maken voor en Machine Learning Studi
 
 1. Nadat u de resource hebt gemaakt, wordt het dashboard voor de Machine Learning Studio-werkruimte weergegeven. Selecteer **Machine Learning Studio starten**.
 
-   ![Gebruikersinterface van Azure Machine Learning Studio](media/azure-machine-learning-studio.png)
+   ![Gebruikersinterface van Azure Machine Learning Studio.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Werken met Azure Machine Learning Studio
 
@@ -55,7 +55,7 @@ U kunt nu een nieuw experiment maken of een bestaande experimentsjabloon importe
 
 1. Als u een nieuw experiment maakt of een experimentsjabloon uit de galerie gebruikt, moet u de eigenschappen voor **Gegevens importeren** configureren. Gebruik de geleide ervaring of geef rechtstreeks details op om toegang te krijgen tot de Azure Blob Storage die uw gegevens bevat.  
 
-   ![Experiment in Azure Machine Learning Studio](media/azure-machine-learning-studio-experiment.png)
+   ![Experiment in Azure Machine Learning Studio.](media/azure-machine-learning-studio-experiment.png)
 
 1. Nu kunt u een aangepaste verwerkingspipeline bouwen om de gegevens op te schonen en voor te verwerken, functies te extraheren en een geschikt model te trainen.
 
@@ -63,15 +63,15 @@ U kunt nu een nieuw experiment maken of een bestaande experimentsjabloon importe
 
 1. Selecteer, als u tevreden bent met de kwaliteit van een model, de optie **Webservice instellen** > **Voorspellende webservice**. Deze optie importeert het getrainde model en de pipeline voor featurisatie vanuit het trainingsexperiment naar een voorspellende service. De voorspellende service kan een andere set invoergegevens gebruiken met het schema dat in het trainingsexperiment wordt gebruikt om voorspellingen te doen.
 
-   ![Een voorspellende webservice instellen](media/predictive-webservice-control.png)
+   ![Een voorspellende webservice instellen.](media/predictive-webservice-control.png)
 
 1. Zodra het experiment met de voorspellende webservice is geslaagd, kunt u het implementeren voor automatische planning. Als u de webservice wilt laten werken met Customer Insights selecteert u **Webservice implementeren** > **Webservice implementeren [Nieuw] Preview**. [Meer informatie over het implementeren van een webservice](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
 
-   ![Een voorspellende webservice implementeren](media/predictive-webservice-deploy.png)
+   ![Een voorspellende webservice implementeren.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Voorbeeldmodellen uit de galerie
 
-We gebruiken een fictief scenario van Contoso Hotel voor de modellen in dit artikel. Contoso Hotel verzamelt de volgende gegevens:
+Voor de modellen in dit artikel gebruiken we een fictief scenario van Contoso Hotel. Contoso Hotel verzamelt de volgende gegevens:
 
 - CRM-gegevens bestaande uit hotelverblijfsactiviteiten. De gegevensset bevat informatie over de verblijfsdatum voor elke geregistreerde klant. Het bevat ook informatie over de boeking, kamertypen, details van uitgaven enzovoort. De gegevens beslaan vier jaar, van januari 2014 tot januari 2018.
 - Klantprofielen van hotelgasten. Deze profielen bevatten informatie over elke klant, inclusief hun naam, geboortedatum, postadres, geslacht en telefoonnummer.
@@ -87,13 +87,13 @@ De definitie van verloop kan per scenario verschillen. In dit voorbeeld moet van
 
 De experimentsjabloon kan vanuit de galerie worden geïmporteerd. Zorg er eerst voor dat u de gegevens importeert voor **Hotelverblijfsactiviteit**, **Klantgegevens** en **Servicegebruiksgegevens** vanuit Azure Blob-opslag.
 
-   ![Gegevens importeren voor verloopmodel](media/import-data-azure-blob-storage.png)
+   ![Gegevens importeren voor verloopmodel.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Featurisatie
 
 Op basis van de definitie van verloop identificeren we eerst de onbewerkte functies die het label zullen beïnvloeden. Vervolgens verwerken we deze onbewerkte functies tot numerieke functies die kunnen worden gebruikt met Machine Learning-modellen. Gegevensintegratie vindt plaats in Customer Insights, zodat we deze tabellen kunnen samenvoegen met behulp van de *Klant-id*.
 
-   ![Geïmporteerde gegevens samenvoegen](media/join-imported-data.png)
+   ![Geïmporteerde gegevens samenvoegen.](media/join-imported-data.png)
 
 Het maken van functies voor het bouwen van het model voor verloopanalyse kan een beetje lastig zijn. De gegevens zijn een functie van de tijd waarbij dagelijks nieuwe hotelactiviteit wordt geregistreerd. Tijdens de featurisatie willen we statische functies genereren vanuit de dynamische gegevens. In dit geval genereren we meerdere functies van hotelactiviteit met een schuivend venster van één jaar. We breiden ook de categorische functies zoals kamertype of boekingstype uit naar afzonderlijke functies met behulp van one-hot-codering.  
 
@@ -114,7 +114,7 @@ Nu moeten we het optimale algoritme kiezen om te gebruiken. In dit geval zijn de
 
 De volgende afbeelding toont de pipeline voor training en evaluatie van het model in Azure Machine Learning Studio:
 
-![Verloopmodel in Azure Machine Learning Studio](media/azure-machine-learning-model.png)
+![Verloopmodel in Azure Machine Learning Studio.](media/azure-machine-learning-model.png)
 
 We passen ook een techniek toe genaamd **Permutation Feature Importance**, een belangrijk aspect van modeloptimalisatie. Ingebouwde modellen hebben weinig tot geen inzicht in de impact van een specifieke functie op de uiteindelijke voorspelling. De calculator voor functiebelang gebruikt een aangepast algoritme om de invloed van individuele functies op de uitkomst voor een specifiek model te berekenen. Het functiebelang wordt genormaliseerd tussen +1 en -1. Een negatieve invloed betekent dat de overeenkomstige functie een contra-intuïtieve invloed heeft op de uitkomst en uit het model moet worden verwijderd. Een positieve invloed geeft aan dat de functie een grote bijdrage levert aan de voorspelling. Deze waarden zijn geen correlatiecoëfficiënten, aangezien het verschillende metrische gegevens zijn. Zie [Permutation Feature Importance](/azure/machine-learning/studio-module-reference/permutation-feature-importance) voor meer informatie.
 
@@ -148,7 +148,7 @@ We definiëren het doel als het maximaliseren van het bedrag aan servicegebruik 
 
 Net als bij het verloopmodel voegen we de ServiceCustomerID voor het hotel toe aan CustomerID om consistente aanbevelingen per CustomerID op te bouwen.
 
-![Featurisatie voor het aanbevelingsmodel](media/azure-machine-learning-model-featurization.png)
+![Featurisatie voor het aanbevelingsmodel.](media/azure-machine-learning-model-featurization.png)
 
 De gegevens zijn afkomstig van drie verschillende entiteiten en er worden functies van afgeleid. De featurisatie voor het probleem van aanbeveling is anders in vergelijking met verloop- of CLTV-scenario's. Het aanbevelingsmodel heeft invoergegevens nodig in de vorm van drie reeksen functies.
 
@@ -156,13 +156,13 @@ De gegevens zijn afkomstig van drie verschillende entiteiten en er worden functi
 
 We voorspellen producten of services met behulp van het algoritme genaamd **Train Matchbox Recommender** om het aanbevelingsmodel te trainen.
 
-![Algoritme voor productaanbevelingen](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algoritme voor productaanbevelingen.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 De drie invoerpoorten voor het model **Train Matchbox Recommender** neemt de gebruiksgegevens van de trainingsservice, de klantbeschrijving (optioneel) en de servicebeschrijving op. Er zijn drie verschillende manieren om het model te scoren. Een daarvan is voor modelevaluatie waarbij een NDCG-score (Normalized Discounted Cumulative Gain) wordt berekend om de beoordeelde items te rangschikken. In dit experiment hebben we de NDCG-score vastgesteld op 0,97. De andere twee opties zijn het scoren van het model op de gehele aanbevolen servicecatalogus of alleen op items die gebruikers niet eerder hebben gebruikt.
 
 Als we verder kijken naar de verdelingen van de aanbevelingen over de hele servicecatalogus, zien we dat telefoon, wifi en koerier de topservices zijn die moeten worden aanbevolen. Dit komt overeen met wat we hebben gevonden in de distributies van de serviceverbruiksgegevens:
 
-![Uitvoer van aanbevelingsmodel](media/azure-machine-learning-model-output.png)
+![Uitvoer van aanbevelingsmodel.](media/azure-machine-learning-model-output.png)
 
 Het hele [productaanbevelingsexperiment is toegankelijk in Azure AI Gallery.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

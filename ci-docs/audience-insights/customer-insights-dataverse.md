@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259185"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650036"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Werken met Customer Insights-gegevens in Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Customer Insights biedt de mogelijkheid om uitvoerentiteiten beschikbaar te make
 
 **Organisaties met bestaande Dataverse-omgevingen**
 
-Organisaties die al gebruikmaken van Dataverse kunnen [een van hun bestaande Dataverse-omgevingen gebruiken](manage-environments.md#create-an-environment-in-an-existing-organization) wanneer een beheerder doelgroepinzichten instelt. Door de URL voor de Dataverse-omgeving te verstrekken, wordt deze gekoppeld aan hun nieuwe omgeving voor doelgroepinzichten. Om de best mogelijke prestaties te garanderen, moeten Customer Insights en Dataverse-omgevingen in dezelfde regio worden gehost.
+Organisaties die al gebruikmaken van Dataverse kunnen [een van hun bestaande Dataverse-omgevingen gebruiken](get-started-paid.md) wanneer een beheerder doelgroepinzichten instelt. Door de URL voor de Dataverse-omgeving te verstrekken, wordt deze gekoppeld aan hun nieuwe omgeving voor doelgroepinzichten. Om de best mogelijke prestaties te garanderen, moeten Customer Insights en Dataverse-omgevingen in dezelfde regio worden gehost.
 
 U kunt een Dataverse-omgeving toevoegen door **Geavanceerde instellingen** uit te breiden bij het maken van de omgeving voor doelgroepinzichten. Geef de **URL van de Microsoft Dataverse-omgeving** op en schakel het selectievakje **Gegevens delen inschakelen** in.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Nieuwe organisatie**
 

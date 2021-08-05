@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095596"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559399"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Transactieverloop voorspellen (preview)
 
@@ -47,7 +47,7 @@ Met deze functie kunt u voorspellen of een klant uw producten of services binnen
         - **Gebeurtenis:** de naam van de gebeurtenis die u wilt gebruiken. Een veld met de naam 'UserAction' in een supermarkt kan bijvoorbeeld een kortingsbon zijn die door de klant wordt gebruikt.
         - **Details:** gedetailleerde informatie over de gebeurtenis. Een veld met de naam 'CouponValue' in een supermarkt kan bijvoorbeeld de valutawaarde van de kortingsbon zijn.
 - Voorgestelde gegevenskenmerken:
-    - Voldoende historische gegevens: transactiegegevens voor minimaal het dubbele van het geselecteerde tijdvenster. Bij voorkeur twee tot drie jaar abonnementsgegevens. 
+    - Voldoende historische gegevens: transactiegegevens voor minimaal het dubbele van het geselecteerde tijdvenster. Bij voorkeur twee tot drie jaar transactiegeschiedenis. 
     - Meerdere aankopen per klant: idealiter ten minste twee transacties per klant.
     - Aantal klanten: minimaal 10 klantprofielen, bij voorkeur meer dan 1.000 unieke klanten. Het model zal mislukken met minder dan 10 klanten en onvoldoende historische gegevens.
     - Compleetheid van gegevens: minder dan 20% ontbrekende waarden in het gegevensveld van de opgegeven entiteit.

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305150"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555485"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Klantprofielen verrijken met merk- en interesseaffiniteiten (preview)
 
@@ -27,7 +27,7 @@ Ga naar het tabblad **Ontdekken** en selecteer **Mijn gegevens verrijken** op de
 Ga naar het tabblad **Ontdekken** en selecteer **Mijn gegevens verrijken** op de tegel **Interesses** om de verrijking van interesseaffiniteiten te configureren.
 
    > [!div class="mx-imgBorder"]
-   > ![Tegels Merken en Interesses](media/BrandsInterest-tile-Hub.png "Tegels Merken en Interesses")
+   > ![Tegels Merken en Interesses.](media/BrandsInterest-tile-Hub.png "Tegels Merken en Interesses")
 
 ## <a name="how-we-determine-affinities"></a>Hoe we affiniteiten bepalen
 
@@ -123,7 +123,7 @@ Afhankelijk van de omvang van uw klantgegevens kan het enkele minuten duren voor
 
 Na het uitvoeren van het verrijkingsproces gaat u naar **Mijn verrijkingen** om het totale aantal verrijkte klanten en een uitsplitsing van merken of interesses in de verrijkte klantprofielen te bekijken.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Voorbeeldweergave van resultaten na het uitvoeren van het verrijkingsproces":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Voorbeeldweergave van resultaten na het uitvoeren van het verrijkingsproces.":::
 
 Bekijk de verrijkte gegevens door **Verrijkte gegevens weergeven** te selecteren in de grafiek. Verrijkte gegevens voor merken gaan naar de entiteit **BrandAffinityFromMicrosoft**. Gegevens voor interesses bevinden zich in de entiteit **InterestAffinityFromMicrosoft**. U vindt deze entiteiten ook in de groep **Verrijking** in **Gegevens** > **Entiteiten**.
 
@@ -131,7 +131,7 @@ Bekijk de verrijkte gegevens door **Verrijkte gegevens weergeven** te selecteren
 
 Merk- en interesse-affiniteiten kunnen ook worden bekeken op individuele klantenkaarten. Ga naar **Klanten** en selecteer een klantprofiel. Op de klantkaart vindt u grafieken voor de merken of interesses waarvoor mensen in het demografische profiel van die klant affiniteit hebben.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Klantenkaart met verrijkte gegevens":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Klantenkaart met verrijkte gegevens.":::
 
 ## <a name="next-steps"></a>Volgende stappen
 

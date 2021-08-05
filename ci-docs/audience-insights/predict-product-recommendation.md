@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095550"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556118"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Productaanbevelingen voorspellen (preview)
 
@@ -64,7 +64,7 @@ Als je deze functie wilt proberen, maar geen gegevens hebt om aan de onderstaand
 
 1. Selecteer de tegel **Model voor productaanbevelingen (preview)** en selecteer **Dit model gebruiken**.
    > [!div class="mx-imgBorder"]
-   > ![Tegel Productaanbevelingsmodel met knop Dit model gebruiken](media/product-recommendation-usethismodel.PNG "Tegel Productaanbevelingsmodel met knop Dit model gebruiken")
+   > ![Tegel Productaanbevelingsmodel met knop Dit model gebruiken.](media/product-recommendation-usethismodel.PNG "Tegel Productaanbevelingsmodel met knop Dit model gebruiken")
 
 1. Bekijk de informatie over de modelvereisten. Als u over de vereiste gegevens beschikt, selecteert u **Aan de slag**.
 
@@ -93,7 +93,7 @@ Als je deze functie wilt proberen, maar geen gegevens hebt om aan de onderstaand
 
 1. Wijs de semantische velden toe aan kenmerken binnen uw aankoopgeschiedenis-entiteit en selecteer **Volgende**. Zie de [vereisten](#prerequisites) voor beschrijvingen van de velden.
    > [!div class="mx-imgBorder"]
-   > ![De entiteitsrelatie definiëren](media/product-recommendation-purchasehistorymapping.PNG "Aankoopgeschiedenispagina met semantische kenmerken die zijn toegewezen aan velden in de geselecteerde aankoopgeschiedenisentiteit")
+   > ![Definieer de entiteitsrelatie.](media/product-recommendation-purchasehistorymapping.PNG "Aankoopgeschiedenispagina met semantische kenmerken die zijn toegewezen aan velden in de geselecteerde aankoopgeschiedenisentiteit")
 
 1. Als de onderstaande velden niet zijn ingevuld, configureert u de relatie tussen de entiteit Aankoopgeschiedenis en de entiteit *Klant*.
     1. Selecteer de **entiteit Aankoopgeschiedenis**.
@@ -101,7 +101,7 @@ Als je deze functie wilt proberen, maar geen gegevens hebt om aan de onderstaand
     1. Selecteer de **entiteit Klant** die overeenkomt met uw primaire klantentiteit.
     1. Voer een naam in waarmee de relatie wordt omschreven.
        > [!div class="mx-imgBorder"]
-       > ![De pagina Aankoopgeschiedenis waarop het maken van een relatie met klant te zien is](media/model-purchase-join.png "De pagina Aankoopgeschiedenis waarop het maken van een relatie met klant te zien is")
+       > ![De pagina Aankoopgeschiedenis waarop het maken van een relatie met klant te zien is.](media/model-purchase-join.png "De pagina Aankoopgeschiedenis waarop het maken van een relatie met klant te zien is")
 
 1. Selecteer **Opslaan**.
 
@@ -145,7 +145,7 @@ Soms zijn alleen bepaalde producten gunstig of geschikt voor het type voorspelli
 
 1. Ga naar het tabblad **Mijn voorspellingen** in **Informatie** > **Voorspellingen**.
    > [!div class="mx-imgBorder"]
-   > ![Weergave van de pagina Mijn voorspellingen](media/product-recommendation-mypredictions.PNG "Weergave van de pagina Mijn voorspellingen")
+   > ![Weergave van de pagina Mijn voorspellingen.](media/product-recommendation-mypredictions.PNG "Weergave van de pagina Mijn voorspellingen")
 
 1. Selecteer de voorspelling die u wilt beoordelen.
    - **Voorspellingsnaam:** de naam van de voorspelling die is opgegeven bij het maken ervan.
@@ -163,7 +163,7 @@ Soms zijn alleen bepaalde producten gunstig of geschikt voor het type voorspelli
 
 1. Selecteer de verticale puntjes naast de voorspelling waarvoor u de resultaten wilt beoordelen en selecteer **Weergave**.
    > [!div class="mx-imgBorder"]
-   > ![Weergave van opties in het menu met verticale puntjes voor een voorspelling, waaronder bewerken, vernieuwen, weergeven, logboeken en verwijderen](media/product-recommendation-verticalellipses.PNG "Weergave van opties in het menu met verticale puntjes voor een voorspelling, waaronder bewerken, vernieuwen, weergeven, logboeken en verwijderen")
+   > ![Weergave van opties in het menu met verticale puntjes voor een voorspelling, waaronder bewerken, vernieuwen, weergeven, logboeken en verwijderen.](media/product-recommendation-verticalellipses.PNG "Weergave van opties in het menu met verticale puntjes voor een voorspelling, waaronder bewerken, vernieuwen, weergeven, logboeken en verwijderen")
 
 1. Er zijn vijf primaire gegevenssecties op de resultatenpagina:
     1. **Prestaties trainingsmodel:** mogelijke scores zijn A, B of C. Deze score geeft de prestatie van de voorspelling aan en kan u helpen de beslissing te nemen om gebruik te maken van de resultaten die in de uitvoerentiteit zijn opgeslagen.
@@ -173,13 +173,13 @@ Soms zijn alleen bepaalde producten gunstig of geschikt voor het type voorspelli
             - **C** Het model wordt beschouwd als een model van kwaliteit **C** als de metriek "Succes bij K" minder dan de basislijn is.
                
                > [!div class="mx-imgBorder"]
-               > ![Weergave van het modelprestatieresultaat](media/product-recommendation-modelperformance.PNG "Weergave van het modelprestatieresultaat")
+               > ![Weergave van het modelprestatieresultaat.](media/product-recommendation-modelperformance.PNG "Weergave van het modelprestatieresultaat")
             - **Basislijn**: het model neemt de beste aanbevolen producten op basis van het aantal aankopen voor alle klanten, en gebruikt geleerde regels die door het model zijn geïdentificeerd om een reeks aanbevelingen voor de klanten te maken. De voorspellingen worden vervolgens vergeleken met de beste producten, zoals berekend door het aantal klanten dat het product heeft gekocht. Als een klant ten minste één product in zijn aanbevolen producten heeft dat ook te zien was in de best gekochte producten, worden ze beschouwd als een onderdeel van de basislijn. Als er 10 van deze klanten waren die een aanbevolen product hadden gekocht op een totaal van 100 klanten, zou de basislijn 10% zijn.
             - **Succes bij K**: door gebruik te maken van een validatieset van transacties, worden aanbevelingen gemaakt voor alle klanten en vergeleken met de validatieset van transacties. In een periode van 12 maanden kan bijvoorbeeld maand 12 worden gereserveerd als een validatieset van gegevens. Als het model ten minste één ding voorspelt dat u in maand 12 zou kopen op basis van wat het van de afgelopen 11 maanden heeft geleerd, zou de klant de metriek "Succesbij K" verhogen.
     
     1. **Meest voorgestelde producten (met aantal):** de top vijf producten die zijn voorspeld voor uw klanten.
        > [!div class="mx-imgBorder"]
-       > ![Grafiek met de top 5 van meest aanbevolen producten](media/product-recommendation-topproducts.PNG "Grafiek met de top 5 van meest aanbevolen producten")
+       > ![Grafiek met de top 5 van meest aanbevolen producten.](media/product-recommendation-topproducts.PNG "Grafiek met de top 5 van meest aanbevolen producten")
     
     1. **Belangrijkste aanbevelingsfactoren:** het model gebruikt de transactiegeschiedenis van de klant om productaanbevelingen te doen. Het leert patronen op basis van eerdere aankopen en vindt overeenkomsten tussen klanten en producten. Deze overeenkomsten worden vervolgens gebruikt om productaanbevelingen te genereren.
     Hieronder volgen de factoren die van invloed kunnen zijn op een productaanbeveling die door het model wordt gegenereerd. 
@@ -190,20 +190,20 @@ Soms zijn alleen bepaalde producten gunstig of geschikt voor het type voorspelli
         Elke productaanbeveling wordt beïnvloed door een of meer van deze factoren. Het percentage aanbevelingen waarbij elke beïnvloedende factor een rol speelde, wordt weergegeven in een grafiek. In het volgende voorbeeld werd 100% van de aanbevelingen beïnvloed door eerdere transacties, 60% door klantovereenkomst en 22% door productovereenkomst. Beweeg over de balken in de grafiek om het exacte percentage te zien waaraan de beïnvloedende factoren hebben bijgedragen.
 
         > [!div class="mx-imgBorder"]
-        > ![Belangrijke aanbevelingsfactoren](media/product-recommendation-keyrecommendationfactors.png "Belangrijkste aanbevelingsfactoren die door het model zijn geleerd om productaanbevelingen te genereren")
+        > ![Belangrijke aanbevelingsfactoren.](media/product-recommendation-keyrecommendationfactors.png "Belangrijkste aanbevelingsfactoren die door het model zijn geleerd om productaanbevelingen te genereren")
        
      
    1. **Gegevensstatistieken**: biedt een overzicht van het aantal transacties, klanten en producten dat het model in overweging heeft genomen. Het is gebaseerd op de invoergegevens die zijn gebruikt om patronen te leren en productaanbevelingen te genereren.
 
       > [!div class="mx-imgBorder"]
-      > ![Gegevensstatistieken](media/product-recommendation-datastatistics.png "Gegevensstatistieken rond inout-gegevens die door het model worden gebruikt om patronen te leren")
+      > ![Gegevensstatistieken.](media/product-recommendation-datastatistics.png "Gegevensstatistieken rond inout-gegevens die door het model worden gebruikt om patronen te leren")
 
       In dit gedeelte worden statistieken weergegeven rond de gegevenspunten die door het model zijn gebruikt om patronen te leren en productaanbevelingen te genereren. Filteren, zoals geconfigureerd in de modelconfiguratie, is van toepassing op de uitvoer die door het model wordt gegenereerd. Het model gebruikt echter alle beschikbare gegevens om patronen te leren. Als u productfiltering gebruikt in de modelconfiguratie, zal deze sectie daarom het totale aantal producten tonen dat het model heeft geanalyseerd om patronen te leren. Dit kan verschillen van het aantal producten dat voldoet aan de gedefinieerde filtercriteria.
 
    1. **Zeer betrouwbare productaanbevelingen**: een voorbeeld van aanbevelingen aan uw klanten waarvan het model denkt dat ze waarschijnlijk door de klant zullen worden gekocht.    
       Als een productcatalogus wordt toegevoegd, worden de product-id's vervangen door productnamen. Productnamen bieden meer bruikbare en intuïtieve informatie over de voorspellingen.
        > [!div class="mx-imgBorder"]
-       > ![Lijst met zeer betrouwbare suggesties voor een selecte groep individuele klanten](media/product-recommendation-highconfidence.PNG "Lijst met zeer betrouwbare suggesties voor een selecte groep individuele klanten")
+       > ![Lijst met zeer betrouwbare suggesties voor een selecte groep individuele klanten.](media/product-recommendation-highconfidence.PNG "Lijst met zeer betrouwbare suggesties voor een selecte groep individuele klanten")
 
 ## <a name="manage-predictions"></a>Voorspellingen beheren
 

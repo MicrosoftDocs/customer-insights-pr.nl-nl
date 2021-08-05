@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305625"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650128"
 ---
 # <a name="merge-entities"></a>Entiteiten samenvoegen
 
@@ -109,7 +109,7 @@ Sommige entiteiten bevatten meer details dan andere. Als een entiteit de nieuwst
 Of u kenmerken handmatig samenvoegt of deze laat samenvoegen door het systeem, u kunt altijd uw samenvoeging uitvoeren. Selecteer **Uitvoeren** op de pagina **Samenvoegen** om het proces te starten.
 
 > [!div class="mx-imgBorder"]
-> ![Samenvoegen van gegevens opslaan en uitvoeren](media/configure-data-merge-save-run.png "Samenvoegen van gegevens opslaan en uitvoeren")
+> ![Samenvoegen van gegevens opslaan en uitvoeren.](media/configure-data-merge-save-run.png "Samenvoegen van gegevens opslaan en uitvoeren")
 
 Kies **Alleen samenvoegen uitvoeren** als u alleen de uitvoer weerspiegeld wilt zien in de uniforme klantentiteit. Downstreamprocessen worden vernieuwd zoals dat is [gedefinieerd in de vernieuwingsplanning](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Kies **Samenvoegen en downstreamprocessen uitvoeren** om het systeem te vernieuw
 Als u meer wijzigingen wilt aanbrengen en de stap opnieuw wilt uitvoeren, kunt u een samenvoeging in uitvoering annuleren. Selecteer **Vernieuwen...** en selecteer **Taak annuleren** in het zijvenster dat wordt weergegeven.
 
 > [!TIP]
-> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
+> Nadat u het samenvoegingsproces hebt uitgevoerd, selecteert u de processtatus om het deelvenster **Taakdetails** te openen. Het geeft een overzicht van de verwerkingstijd, de laatste verwerkingsdatum, en alle fouten en waarschuwingen in verband met de taak. Selecteer **Details bekijken** om te zien welke entiteiten hebben deelgenomen aan het vergelijkingsproces, of het conflict is opgelost en of de updates met succes zijn gepubliceerd.  
+> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Inzoompad om naar procesdetails te gaan vanuit de taakstatuskoppeling.":::
 
 ## <a name="next-step"></a>Volgende stap
 

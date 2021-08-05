@@ -1,7 +1,7 @@
 ---
 title: Power BI-connector
 description: De Dynamics 365 Customer Insights-connector leren gebruiken in Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596033"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661096"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connector voor Power BI (preview)
 
@@ -39,7 +39,7 @@ Maak visualisaties voor uw gegevens met de Power BI Desktop. Genereer aanvullend
 
 1. In het dialoogvenster **Navigator**. ziet u de lijst met alle omgevingen waartoe u toegang hebt. Vouw een omgeving uit en open een van de mappen (entiteiten, metingen, segmenten, verrijkingen). Open bijvoorbeeld de map **Entiteiten** om alle entiteiten te bekijken die u kunt importeren.
 
-   ![Navigator voor Power BI-connector](media/power-bi-navigator.png "Navigator voor Power BI-connector")
+   ![Navigator voor Power BI-connector.](media/power-bi-navigator.png "Navigator voor Power BI-connector")
 
 1. Schakel de selectievakjes in naast de entiteiten die u wilt opnemen en selecteer **Laden**. U kunt meerdere entiteiten selecteren uit meerdere omgevingen.
 
@@ -68,5 +68,11 @@ U kunt de gedupliceerde relaties identificeren en verwijderen.
 3. Verwijder eventuele dubbele relaties die u hebt gevonden.
 
 Na verwijdering van de gedupliceerde relaties, probeert u de Power BI-connector opnieuw te configureren. De omgeving zou nu beschikbaar moeten zijn.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Fouten op datumvelden bij het laden van entiteiten in Power BI Desktop
+
+Bij het laden van entiteiten die velden bevatten met een datumnotatie als MM/DD/YYYY, kunt u fouten tegenkomen als gevolg van niet-overeenkomende landinstellingen. Deze discrepantie ontstaat wanneer uw Power BI Desktop-bestand is ingesteld op een andere taal dan Engels (Verenigde Staten), omdat datumvelden in doelgroepinzichten worden opgeslagen in Amerikaanse indeling.
+
+Het Power BI Desktop-bestand heeft een enkele landinstelling, die wordt toegepast bij het ophalen van gegevens. Om deze datumvelden correct te interpreteren, stelt u de landinstelling van het .BPI-bestand in op Engels (Verenigde Staten). [Ontdek hoe u de landinstelling van een Power BI Desktop-bestand kunt wijzigen](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

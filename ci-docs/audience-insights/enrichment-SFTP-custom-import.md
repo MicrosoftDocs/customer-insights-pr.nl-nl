@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 9331cf8057850e2fbe03622831f388e73056d938
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304644"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555393"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Klantprofielen verrijken met aangepaste gegevens (preview)
 
@@ -64,7 +64,7 @@ U moet een beheerder zijn om verbindingen te kunnen configureren. Selecteer **Ve
 1. Nadat de verificatie is voltooid, kan de verbinding worden opgeslagen door **Opslaan** te selecteren.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian-verbindingsconfiguratiepagina](media/enrichment-SFTP-connection.png "Experian-verbindingsconfiguratiepagina")
+   > ![Experian-verbindingsconfiguratiepagina.](media/enrichment-SFTP-connection.png "Experian-verbindingsconfiguratiepagina")
 
 
 ## <a name="defining-field-mappings"></a>Veldtoewijzingen definiëren 
