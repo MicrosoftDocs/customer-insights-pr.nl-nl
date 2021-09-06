@@ -1,6 +1,6 @@
 ---
-title: Customer Insights-gegevens naar Adobe Campaign Standard exporteren
-description: Ontdek hoe u segmenten voor doelgroepinzichten gebruikt in Adobe Campaign Standard.
+title: Gegevens uit Customer Insights exporteren naar Adobe Campaign Standard
+description: Leer hoe u segmenten van doelgroepinzichten gebruikt in Adobe Campaign Standard.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,32 +9,32 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: d301b4f0cb875303fb3d373b77177acd1c1f5219cd6f23c2a1d29ce67a222eab
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305380"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032157"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Customer Insights-segmenten gebruiken in Adobe Campaign Standard (preview)
 
-Als gebruiker van doelgroepinzichten in Dynamics 365 Customer Insights, hebt u mogelijk segmenten gemaakt om uw marketingcampagnes efficiënter te laten verlopen door relevante doelgroepen te targeten. Als u een segment uit doelgroepinzichten in Adobe Experience Platform en toepassingen zoals Adobe Campaign Standard wilt gebruiken, moet u een paar stappen volgen die in dit artikel worden beschreven.
+Als gebruiker van doelgroepinzichten in Dynamics 365 Customer Insights, hebt u mogelijk segmenten gemaakt om uw marketingcampagnes efficiënter te laten verlopen door relevante doelgroepen te targeten. Als u een segment uit doelgroepinzichten wilt gebruiken in Adobe Experience Platform en toepassingen zoals Adobe Campaign Standard, moet u een paar stappen volgen die in dit artikel worden beschreven.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Procesdiagram van de stappen die in dit artikel worden beschreven.":::
 
 ## <a name="prerequisites"></a>Vereisten
 
 -   Dynamics 365 Customer Insights-licentie
--   Adobe Campaign Standard-licentie
+-   Licentie voor Adobe Campaign Standard
 -   Azure Blob Storage-account
 
 ## <a name="campaign-overview"></a>Campagne-overzicht
 
-Laten we eens kijken naar een fictieve voorbeeldcampagne om beter te begrijpen hoe u segmenten uit doelgroepinzichten in Adobe Experience Platform kunt gebruiken.
+Om een beter inzicht te krijgen in hoe u segmenten van doelgroepinzichten kunt gebruiken in Adobe Experience Platform, gaan we naar een fictieve voorbeeldcampagne kijken.
 
-Laten we aannemen dat uw bedrijf een maandelijkse, op abonnementen gebaseerde service biedt aan uw klanten in de Verenigde Staten. U wilt klanten identificeren waarvan het abonnement binnen acht dagen moet worden verlengd, maar die hun abonnement nog niet hebben verlengd. Om deze klanten te behouden, wilt u ze een promotieaanbieding sturen via e-mail, met Adobe Campaign Standard.
+Laten we aannemen dat uw bedrijf een maandelijkse, op abonnementen gebaseerde service biedt aan uw klanten in de Verenigde Staten. U wilt klanten identificeren waarvan het abonnement binnen acht dagen moet worden verlengd, maar die hun abonnement nog niet hebben verlengd. Om deze klanten te behouden, wilt u ze een promotieaanbieding sturen via e-mail, met behulp van Adobe Campaign Standard.
 
-In dit voorbeeld willen we de promotionele e-mailcampagne één keer uitvoeren. In dit artikel wordt niet het gebruiksscenario behandeld waarin de campagne meerdere keer wordt uitgevoerd. Doelgroepinzichten en Adobe Campaign Standard kunnen echter ook worden geconfigureerd om te werken voor een scenario met terugkerend campagnes.
+In dit voorbeeld willen we de promotionele e-mailcampagne één keer uitvoeren. In dit artikel wordt niet het gebruiksscenario behandeld waarin de campagne meerdere keer wordt uitgevoerd. Doelgroepinzichten en Adobe Campaign Standard kunnen echter ook worden geconfigureerd om te werken voor een terugkerend campagnescenario.
 
 ## <a name="identify-your-target-audience"></a>Uw doelgroep identificeren
 
@@ -88,11 +88,11 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Selecteer **Volgende**.
 
-1. Nu wijzen we de velden **Bron** van het segment voor doelgroepinzichten toe aan de veldnamen **Doel** in het Adobe Campaign Standard-profielschema.
+1. Nu wijzen we de velden **Bron** uit het segment voor doelgroepinzichten toe aan de veldnamen **Doel** in het profielschema van Adobe Campaign Standard.
 
    :::image type="content" source="media/ACS-field-mapping.png" alt-text="Veldtoewijzing voor de Adobe Campaign Standard-connector.":::
 
-   Als u meer kenmerken wilt toevoegen, selecteert u **Kenmerk toevoegen**​. De doelnaam kan afwijken van de naam van het bronveld, zodat u nog steeds segmentuitvoer van doelgroepinzichten aan Adobe Campaign Standard kan toewijzen als de velden niet dezelfde naam hebben in de twee systemen.
+   Als u meer kenmerken wilt toevoegen, selecteert u **Kenmerk toevoegen**​. De doelnaam kan verschillen van de naam van het bronveld, zodat u nog steeds segmentuitvoer van doelgroepinzichten kunt toewijzen aan Adobe Campaign Standard als de velden niet dezelfde naam hebben in de twee systemen.
 
    > [!NOTE]
    > E-mailadres wordt gebruikt als identiteitsveld, maar u kunt elke andere id uit uw klantprofiel voor doelgroepinzichten gebruiken om gegevens toe te wijzen aan Adobe Campaign Standard.
@@ -104,7 +104,7 @@ Nadat u de exportbestemming hebt opgeslagen, vindt u deze onder **Gegevens** > *
 U kunt [het segment nu op aanvraag exporteren](export-destinations.md#run-exports-on-demand)​. De export wordt ook uitgevoerd bij elke [geplande vernieuwing](system.md).
 
 > [!NOTE]
-> Zorg ervoor dat het aantal records in het geëxporteerde segment binnen de toegestane limiet van uw Adobe Campaign Standard-licentie valt.
+> Zorg ervoor dat het aantal records in het geëxporteerde segment binnen de toegestane limiet van uw Adobe Campaign Standard-licentie.
 
 Geëxporteerde gegevens worden opgeslagen in de Azure Blob Storage-container die u eerder hebt geconfigureerd. Het volgende mappad wordt automatisch gemaakt in uw container:
 
@@ -114,30 +114,30 @@ Voorbeeld: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-
 
 ## <a name="configure-adobe-campaign-standard"></a>Adobe Campaign Standard configureren
 
-Wanneer een segment uit doelgroepinzichten wordt geëxporteerd, bevat het de kolommen die u hebt geselecteerd tijdens het definiëren van de exportbestemming in de vorige stap. Deze gegevens kunnen worden gebruikt om [profielen te maken in Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles)​.
+Wanneer een segment uit doelgroepinzichten wordt geëxporteerd, bevat het de kolommen die u hebt geselecteerd tijdens het definiëren van de exportbestemming in de vorige stap. Deze gegevens kunnen worden gebruikt om [profielen in Adobe Campaign Standard te maken](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
 
-Om het segment in Adobe Campaign Standard te gebruiken, moeten we het profielschema in Adobe Campaign Standard uitbreiden met twee extra velden. Lees hoe u de [profielresource uitbreidt](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) met nieuwe velden in Adobe Campaign Standard.
+Als u het segment in Adobe Campaign Standard wilt gebruiken, moeten we het profielschema uitbreiden in Adobe Campaign Standard om twee extra velden op te nemen. Leer hoe u [de profielbron kunt uitbreiden](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) met nieuwe velden in Adobe Campaign Standard.
 
 In ons voorbeeld zijn dit de velden *Segmentnaam en Segmentdatum (optioneel)*.
 
-We gebruiken deze velden om de profielen in Adobe Campaign Standard te identificeren waarop we ons voor deze campagne willen richten.
+We zullen deze velden gebruiken om de profielen in Adobe Campaign Standard te identificeren waarop we ons willen richten voor deze campagne.
 
-Als er geen andere records in Adobe Campaign Standard zijn, behalve de records die u gaat importeren, kunt u deze stap overslaan.
+Als er geen andere records zijn in Adobe Campaign Standard, behalve wat u gaat importeren, kunt u deze stap overslaan.
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Gegevens importeren in Adobe Campaign Standard
 
-Nu aan alle voorwaarden is voldaan, moeten we de voorbereide doelgroepgegevens van doelgroepinzichten importeren in Adobe Campaign Standard om profielen te maken. Lees [hoe u profielen importeert in Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) met behulp van een werkstroom.
+Nu alles op zijn plaats is, moeten we de voorbereide doelgroepgegevens van doelgroepinzichten importeren in Adobe Campaign Standard om profielen te maken. Leer [profielen importeren in Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) met behulp van een werkstroom.
 
-De importwerkstroom in de onderstaande afbeelding is geconfigureerd om elke acht uur te worden uitgevoerd en te zoeken naar geëxporteerde segmenten met doelgroepinzichten (.CSV-bestand in Azure Blob Storage). De werkstroom extraheert de inhoud van het CSV-bestand in een opgegeven kolomvolgorde. Deze werkstroom is ontwikkeld om elementaire foutafhandeling uit te voeren en ervoor te zorgen dat elke record een e-mailadres heeft voordat de gegevens in Adobe Campaign Standard worden gehydrateerd. De werkstroom extraheert ook de segmentnaam uit de bestandsnaam voordat deze wordt toegevoegd aan Adobe Campaign Standard-profielgegevens.
+De importwerkstroom in de onderstaande afbeelding is geconfigureerd om elke acht uur te worden uitgevoerd en te zoeken naar geëxporteerde segmenten met doelgroepinzichten (.CSV-bestand in Azure Blob Storage). De werkstroom extraheert de inhoud van het CSV-bestand in een opgegeven kolomvolgorde. Deze werkstroom is gebouwd om elementaire foutafhandeling uit te voeren en ervoor te zorgen dat elke record een e-mailadres heeft voordat de gegevens worden overgebracht naar Adobe Campaign Standard. De werkstroom extraheert ook de segmentnaam uit de bestandsnaam voordat deze wordt toegevoegd aan Adobe Campaign Standard-profielgegevens.
 
-:::image type="content" source="media/ACS-import-workflow.png" alt-text="Schermopname van een importwerkstroom in de Adobe Campaign Standard-gebruikersinterface.":::
+:::image type="content" source="media/ACS-import-workflow.png" alt-text="Schermopname van een importwerkstroom in de gebruikersinterface van Adobe Campaign Standard.":::
 
 ## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>De doelgroep ophalen in Adobe Campaign Standard
 
-Zodra de gegevens zijn geïmporteerd in Adobe Campaign Standard, kunt u [een werkstroom maken](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) en [query's](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) op de klanten uitvoeren op basis van de *segmentnaam* en *segmentdatum* om profielen te selecteren die zijn geïdentificeerd voor onze voorbeeldcampagne.
+Zodra de gegevens zijn geïmporteerd in Adobe Campaign Standard, kunt u [een werkstroom maken](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) en [query's uitvoeren](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) voor de klanten op basis van *Segmentnaam* en *Segmentdatum* om profielen te selecteren die zijn geïdentificeerd voor onze voorbeeldcampagne.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>De e-mail maken en verzenden met Adobe Campaign Standard
 
 Maak de e-mailinhoud en [test en verzend](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) vervolgens uw e-mail.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Voorbeeld van e-mail met verlengingsaanbieding van Adobe Campaign Standard.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Voorbeelde-mail met verlengingsaanbieding van Adobe Campaign Standard.":::
