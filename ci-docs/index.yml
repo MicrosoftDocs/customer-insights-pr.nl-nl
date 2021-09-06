@@ -4,17 +4,17 @@ metadata:
   author: m-hartmann
   description: Vind relevante artikelen om te beginnen met Help-inhoud.
   ms.author: mhart
-  ms.date: 10/29/2020
+  ms.date: 07/30/2021
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
-  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+  ms.openlocfilehash: 1446a2bcb24739187a37b2024c9a6070ab008989d722ebf84ef5259ec2ee4d5c
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
   ms.translationtype: HT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 03/15/2021
-  ms.locfileid: "5598452"
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036551"
 title: Dynamics 365 Customer Insights-documentatie
-summary: Vind nuttige bronnen om aan de slag te gaan en lees over de functies en mogelijkheden van Customer Insights.
+summary: Vind nuttige hulpbronnen om aan de slag te gaan en meer te weten te komen over de functies en mogelijkheden van Customer Insights.
 landingContent:
 - title: Kennismaken met Customer Insights
   linkLists:
@@ -23,16 +23,16 @@ landingContent:
     - text: " Overzicht van Customer Insights"
       url: overview.md
     - text: Releaseplannen
-      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
-    - text: Toegang tot uw omgeving
-      url: https://home.ci.ai.dynamics.com/
+      url: /dynamics365-release-plan/
+    - text: De CDP ontdekken
+      url: https://dynamics.microsoft.com/ai/customer-insights/
 - title: Aan de slag met doelgroepinzichten
   linkLists:
   - linkListType: get-started
     links:
     - text: Aanmelden voor een proefversie
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Wat is er nieuw
+    - text: Nieuwe functies
       url: audience-insights/whats-new-audience-insights.md
     - text: Documentatie voor doelgroepinzichten
       url: audience-insights/index.yml

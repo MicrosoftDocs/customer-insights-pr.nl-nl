@@ -1,7 +1,7 @@
 ---
 title: Overzicht van doelgroepinzichten voor Dynamics 365 Customer Insights
 description: Overzicht van doelgroepinzichten voor Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539109"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034354"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Overzicht van doelgroepinzichten voor Dynamics 365 Customer Insights
 
-Doelgroepinzichten helpt u een dieper inzicht in uw klanten op te bouwen. Verbind gegevens uit verschillende transactie-, gedrags- en observatiebronnen om een 360-graden klantbeeld te creëren. Gebruik deze inzichten om klantgerichte ervaringen en processen te stimuleren. Harmoniseer en begrijp klantgegevens en zet ze in voor intelligente inzichten en acties.
+[Doelgroepinzichten, een mogelijkheid van Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) helpt u een dieper begrip van uw klanten op te bouwen. Verbind gegevens uit verschillende transactie-, gedrags- en observatiebronnen om een 360-graden klantbeeld te creëren. Gebruik deze inzichten om klantgerichte ervaringen en processen te stimuleren. Harmoniseer en begrijp klantgegevens en zet ze in voor intelligente inzichten en acties.
 
 ## <a name="main-benefits"></a>Belangrijkste voordelen 
 
@@ -34,9 +34,9 @@ Doelgroepinzichten helpt u een dieper inzicht in uw klanten op te bouwen. Verbin
 
 - **Maak krachtige bedrijfsprocessen en gepersonaliseerde klantervaringen**
 
-  - Stimuleer gepersonaliseerde betrokkenheid via kanalen: geef marketing-, verkoop- en serviceprofessionals meer mogelijkheden met kant-en-klare contextuele klantinzichten en op maat gemaakte klantprofielkaarten die zijn ingebracht in de zakelijke toepassingen die ze al dagelijks gebruiken
-  - Automatiseer klantgerichte ervaringen en processen op basis van aanpasbare profielen, bedrijfsmaatregelen en segmenten.
-  - Activeer en vergroot branche-ervaringen die zijn gebouwd op [Microsoft Power Platform](https://powerplatform.microsoft.com/). Bouw snel toepassingen met ingesloten inzichten met behulp van een krachtige low-code aanpak van PowerApps.  
+  - Stimuleer gepersonaliseerde betrokkenheid via verschillende kanalen: geef marketing-, verkoop- en serviceprofessionals meer mogelijkheden. Gebruik kant-en-klare inzichten en op maat gemaakte klantprofielkaarten die kunnen worden geïntegreerd met bedrijfstoepassingen die ze al gebruiken.
+  - Automatiseer ervaringen en processen op basis van aanpasbare profielen, bedrijfsmaatregelen en segmenten.
+  - Activeer en vergroot branche-ervaringen die zijn gebouwd op [Microsoft Power Platform](https://powerplatform.microsoft.com/). Bouw snel toepassingen met ingesloten inzichten met behulp van een krachtige low-code aanpak van Power Apps.  
 
 ## <a name="key-audiences"></a>Belangrijkste doelgroepen
 
@@ -50,13 +50,18 @@ Doelgroepinzichten helpt u een dieper inzicht in uw klanten op te bouwen. Verbin
 
 - **Zakelijke gebruikers:**
 
-  - Inzichten in 360-graden klantprofielen en complete weergaven van de klantreis.
+  - Inzichten in 360-graden klantprofielen en klantreizen.
   - Bekijk 360-graden klantgegevens binnen Dynamics 365-bedrijfsprocessen met vooraf samengestelde pakketten.
 
 - **Bedrijfsanalisten:**
 
   - Maak aanpasbare profielen, definieer maatregelen, maak segmenten en profiteer van predictive analytics om een 360-graden beeld van uw klant te krijgen, specifiek voor uw organisatie.  
-  - Gebruik kant-en-klare connectors voor verschillende toepassingen of API's van Microsoft en derden om de inzichten verder te verwerken.
+  - Gebruik kant-en-klare connectors voor verschillende toepassingen of API's van Microsoft en derden om de inzichten te verwerken.
 
+## <a name="pricing-and-licensing"></a>Prijzen en licenties
+
+Customer Insights wordt gelicentieerd per tenant en bevat meerdere mogelijkheden. De rechthebbende capaciteiten omvatten een set profielen, dagelijkse systeemvernieuwingen, Power Platform-aanvragen en twee omgevingen. U kunt extra capaciteit en licenties aanschaffen om het standaardquotum te verhogen. 
+- Gedetailleerde capaciteit en rechten: [Dynamics 365-licentiegids](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Prijsoverzicht: [Dynamics 365-prijzen](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

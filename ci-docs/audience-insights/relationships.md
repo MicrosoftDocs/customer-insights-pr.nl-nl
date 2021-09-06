@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171158"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035225"
 ---
 # <a name="relationships-between-entities"></a>Relaties tussen entiteiten
 
@@ -82,7 +82,7 @@ Deze pagina biedt een reeks opties voor bestaande en nieuwe relaties:
 
 ### <a name="explore-the-relationship-visualizer"></a>De relatievisualizer verkennen
 
-De relatievisualizer geeft een netwerkdiagram van de bestaande relaties tussen verbonden entiteiten en hun kardinaliteit weer.
+De relatievisualizer geeft een netwerkdiagram van de bestaande relaties tussen verbonden entiteiten en hun kardinaliteit weer. Het visualiseert ook het relatiepad.
 
 Om de weergave aan te passen, kunt u de positie van de vakken wijzigen door ze op het canvas te slepen.
 
@@ -92,6 +92,20 @@ Beschikbare opties:
 - **Exporteren als afbeelding**: sla de huidige weergave op als een afbeeldingsbestand.
 - **Wijzigen naar horizontale/verticale indeling**: wijzig de uitlijning van de entiteiten en relaties.
 - **Bewerken**: werk eigenschappen van aangepaste relaties bij in het bewerkingsvenster en sla de wijzigingen op.
+
+### <a name="relationship-path"></a>Relatiepad
+
+Het relatiepad beschrijft de entiteiten die zijn verbonden met relaties tussen een bronentiteit en een doelentiteit. Het wordt gebruikt bij het maken van een segment of een meting die andere entiteiten dan de geharmoniseerde profielentiteit omvat en er zijn meerdere opties om de geharmoniseerde profielentiteit te bereiken.
+
+Het relatiepad informeert het systeem via welke relaties toegang moet worden verkregen tot de geharmoniseerde profielentiteit. Verschillende relatiepaden kunnen verschillende resultaten opleveren.
+
+Zo heeft de entiteit *eCommerce_eCommercePurchases* bijvoorbeeld de volgende relaties met de geharmoniseerde profielentiteit *Klant*:
+
+- eCommerce_eCommercePurchases > Klant
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klant
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klant 
+
+Het relatiepad bepaalt welke entiteiten u kunt gebruiken bij het maken van regels voor metingen of segmenten. Het kiezen van de optie met het langste relatiepad zal waarschijnlijk minder resultaten opleveren omdat de overeenkomende records deel moeten uitmaken van alle entiteiten. In dit voorbeeld moet een klant goederen hebben gekocht via e-commerce (eCommerce_eCommercePurchases), bij een verkooppunt (POS_posPurchases) en deelnemen aan ons loyaliteitsprogramma (loyaltyScheme_loyCustomers). Als u de eerste optie kiest, krijgt u waarschijnlijk meer resultaten omdat klanten maar in één extra entiteit hoeven te bestaan.
 
 ## <a name="manage-existing-relationships"></a>Bestaande relaties beheren 
 
@@ -105,6 +119,6 @@ Selecteer een relatie en kies een van de volgende opties:
 
 ## <a name="next-step"></a>Volgende stap
 
-Systeem- en aangepaste relaties worden gebruikt om [segmenten te maken](segments.md) op basis van meerdere gegevensbronnen die niet langer geïsoleerd zijn.
+Systeem- en aangepaste relaties worden gebruikt om [segmenten](segments.md) en [metingen](measures.md) te maken gebaseerd op meerdere gegevensbronnen die zich niet langer in silo's bevinden.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Schema's voor Customer Insights-entiteiten in Common Data Model
 description: Werken met entiteiten in Common Data Model.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692299"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7380737"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Entiteitsschema's in Common Data Model
 
@@ -42,7 +42,7 @@ Zie de documentatie voor meer informatie over de [entiteitsschema's van Customer
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Bekijk entiteiten met de Common Data Model Entity Navigator
 
-U kunt entiteiten bekijken in de [Common Data Model Entity Navigator](https://microsoft.github.io/CDM/). Selecteer de knop **Laden uit GitHub!** en navigeer naar **foundationCommon** > **crmCommon** > **oplossingen** > **customerInsights** waar u de lijst met Customer Insights-entiteiten en hun definities vindt.
+U kunt entiteiten bekijken in de [Common Data Model Entity Navigator](https://microsoft.github.io/CDM/). Selecteer een entiteit in de sectie Inzichtstoepassing om de lijst met Customer Insights-entiteiten en hun definities op te halen.
 > [!div class="mx-imgBorder"]
 > ![CDM Entity Navigator met entiteit CustomerActivity.](media/CDM-entity-navigator.png "CDM Entity Navigator met entiteit CustomerActivity")
 

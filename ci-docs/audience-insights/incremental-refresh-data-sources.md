@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554153"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377828"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Incrementeel vernieuwen voor op Power Query gebaseerde gegevensbronnen
 
@@ -44,8 +44,7 @@ Doelgroepinzichten maakt incrementele vernieuwing mogelijk voor gegevensbronnen 
 
 1. In **Instellingen voor incrementeel vernieuwen** configureert u de incrementele vernieuwing voor alle entiteiten die u hebt geselecteerd bij het maken van de gegevensbron.
 
-   > [!div class="mx-imgBorder"]
-   > ![Entiteiten configureren in een gegevensbron voor incrementeel vernieuwen.](media/incremental-refresh-settings.png "Entiteiten configureren in een gegevensbron voor incrementeel vernieuwen")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Entiteiten configureren in een gegevensbron voor incrementeel vernieuwen.":::
 
 1. Selecteer een entiteit en geef de volgende details op:
 

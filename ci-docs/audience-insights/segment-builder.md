@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685456"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377782"
 ---
 # <a name="create-and-manage-segments"></a>Segmenten maken en beheren
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685456"
 > - Er is continue een zijpaneel beschikbaar om kenmerken te selecteren.
 > - Een optie om entiteitsrelatiepaden te selecteren.
 > Als u de nieuwe segmenten-bouwer wilt uitproberen, stuurt u een e-mail met als onderwerp "Verzoek om de nieuwe segmenten-bouwer in te schakelen" naar cihelp [at] microsoft.com. Vermeld de naam van uw organisatie en de id van uw sandbox-omgeving.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elementen van de segmentbouwer." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Organiseer uw segment met regels en subregels. Elke regel of subregel bestaat uit voorwaarden. Combineer de voorwaarden met logische operators
+>
+> 2 - Kies het [relatiepad](relationships.md) tussen entiteiten die van toepassing zijn op een regel. Het relatiepad bepaalt welke kenmerken in een voorwaarde kunnen worden gebruikt.
+>
+> 3 - Beheer regels en subregels. Wijzig de positie van een regel of verwijder deze.
+>
+> 4 - Voeg voorwaarden toe en bouw het juiste niveau van nesting met behulp van subregels.
+>
+> 5 - Pas setbewerkingen toe op verbonden regels.
+>
+> 6 - Gebruik het kenmerkdeelvenster om beschikbare entiteitskenmerken toe te voegen of om voorwaarden te creëren op basis van kenmerken. Het deelvenster toont de lijst met entiteiten en kenmerken, gebaseerd op het geselecteerde relatiepad, die beschikbaar zijn voor de geselecteerde regel.
+>
+> 7 - Voeg voorwaarden toe aan bestaande regels en subregels op basis van kenmerken of voeg deze toe aan een nieuwe regel.
+>
+> 8 - Maak wijzigingen ongedaan en voer ze opnieuw uit tijdens het bouwen van het segment.
 
 Definieer complexe filters rond de uniforme klantentiteit en de bijhorende gerelateerde entiteiten. Elk segment maakt na verwerking een set klantrecords die u kunt exporteren en waarop u actie kunt ondernemen. Segmenten worden beheerd op de pagina **Segmenten**. 
 
@@ -64,9 +81,9 @@ Terwijl u een segment maakt, kunt u een concept opslaan. Het wordt opgeslagen al
 
    |Aantal |Definitie  |
    |---------|---------|
-   |0     |Entity          |
+   |1     |Entity          |
    |2     |Kenmerk          |
-   |5    |Operator         |
+   |3    |Operator         |
    |4    |Weergegeven als         |
 
    1. Als u meer voorwaarden aan een groep wilt toevoegen, kunt u twee logische operators gebruiken:
@@ -147,6 +164,6 @@ Met snelle segmenten kunt u snel eenvoudige segmenten bouwen met één operator 
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[Exporteer een segment](export-destinations.md) en verken de [klantenkaart](customer-card-add-in.md) en [connectors](export-power-bi.md) om inzichten op klantniveau te verkrijgen.
+[Exporteer een segment](export-destinations.md) en verken de [Klantenkaartintegratie](customer-card-add-in.md) om segmenten in andere toepassingen te gebruiken.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
