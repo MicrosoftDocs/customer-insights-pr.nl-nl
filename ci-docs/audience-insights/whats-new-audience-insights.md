@@ -1,7 +1,7 @@
 ---
 title: Nieuwe en komende functies
 description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 07/19/2021
+ms.date: 08/31/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
+ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035957"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "7465199"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Wat is er nieuw in de doelgroepinzichten-mogelijkheid van Dynamics 365 Customer Insights
 
@@ -26,6 +26,15 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2021-updates"></a>Updates augustus 2021
+
+De updates in juli en augustus 2021 bevatten een nieuwe functie, prestatie-upgrades en oplossingen van fouten.
+
+### <a name="extensibility"></a>Uitbreidbaarheid
+
+- **Segmenten exporteren naar Klaviyo** We hebben onze [exportbestemmingen uitgebreid met Klaviyo](export-klaviyo.md). U kunt nu segmenten exporteren om campagnes te maken, e-mailmarketing uit te voeren en te werken met specifieke groepen klanten met Klaviyo. 
+
 
 ## <a name="june-2021-updates"></a>Updates juni 2021
 

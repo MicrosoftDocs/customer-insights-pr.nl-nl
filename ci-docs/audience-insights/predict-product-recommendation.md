@@ -1,20 +1,20 @@
 ---
 title: Productaanbevelingen voorspellen
 description: Voorspel de producten die een klant waarschijnlijk zal kopen of gebruiken.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034950"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494533"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Productaanbevelingen voorspellen (preview)
 
@@ -89,23 +89,24 @@ Als je deze functie wilt proberen, maar geen gegevens hebt om aan de onderstaand
 
 ### <a name="add-required-data"></a>Vereiste gegevens toevoegen
 
-1. Selecteer **Gegevens toevoegen** voor **Transactiegeschiedenis van klant** en kies de entiteit die de transactie-/ aankoopgeschiedenisinformatie verstrekt, zoals beschreven in de [vereisten](#prerequisites).
+1. Selecteer **Gegevens toevoegen** en kies in het zijvenster het type activiteit met de vereiste gegevens van de transactie- of aankoopgeschiedenis.
 
-1. Wijs de semantische velden toe aan kenmerken binnen uw aankoopgeschiedenis-entiteit en selecteer **Volgende**. Zie de [vereisten](#prerequisites) voor beschrijvingen van de velden.
-   > [!div class="mx-imgBorder"]
-   > ![Definieer de entiteitsrelatie.](media/product-recommendation-purchasehistorymapping.PNG "Aankoopgeschiedenispagina met semantische kenmerken die zijn toegewezen aan velden in de geselecteerde aankoopgeschiedenisentiteit")
+1. Kies onder **De activiteiten kiezen** de specifieke activiteiten van de geselecteerde activiteit waarop de berekening moet worden gericht.
 
-1. Als de onderstaande velden niet zijn ingevuld, configureert u de relatie tussen de entiteit Aankoopgeschiedenis en de entiteit *Klant*.
-    1. Selecteer de **entiteit Aankoopgeschiedenis**.
-    1. Selecteer het **Veld** dat de klant identificeert in de entiteit Aankoopgeschiedenis. Het moet betrekking hebben op de primaire klant-id van uw entiteit *Klant*.
-    1. Selecteer de **entiteit Klant** die overeenkomt met uw primaire klantentiteit.
-    1. Voer een naam in waarmee de relatie wordt omschreven.
-       > [!div class="mx-imgBorder"]
-       > ![De pagina Aankoopgeschiedenis waarop het maken van een relatie met klant te zien is.](media/model-purchase-join.png "De pagina Aankoopgeschiedenis waarop het maken van een relatie met klant te zien is")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Zijvenster met het kiezen van specifieke activiteiten onder het semantische type.":::
+
+1. Als u de activiteit nog niet hebt toegewezen aan een semantisch type, selecteert u **Bewerken** om dat te doen. De begeleide ervaring voor het toewijzen van semantische activiteiten wordt geopend. Wijs uw gegevens toe aan de overeenkomende velden in het geselecteerde type activiteit.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Activiteitstype pagina-instelling.":::
+
+1. Selecteer na het toewijzen van de activiteit aan het corresponderende semantische type de optie **Volgende** om door te gaan 
+ 
+1. Wijs de semantische kenmerken toe aan de velden die nodig zijn om het model uit te voeren.
 
 1. Selecteer **Opslaan**.
 
 1. Selecteer **Volgende**.
+
 
 ### <a name="configure-product-filters"></a>Productfilters configureren
 

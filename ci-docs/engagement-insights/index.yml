@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Verklarende woordenlijst voor de functionaliteit voor betrokkenheidsinzichten (preview) in Dynamics 365 Customer Insights
+title: Betrokkenheidsinzichten in Dynamics 365 Customer Insights (preview)
 summary: Verzamel gegevens voor uw websites. Krijg interactief inzicht in de interacties en het gebruik van klanten op al uw sites. Gebruik de diepe integratie tussen betrokkenheidsinzichten en doelgroepinzichten om uw realtime gedragsanalyses te verrijken met klantprofielrapporten. Verrijk klantprofielen met webactiviteiten om naast relevante klantgegevens ook realtime gedragsgegevens te krijgen. Transformeer uw bedrijf om onmiddellijke waarde uit uw klantgegevens te halen.
 metadata:
   title: Documentatie voor betrokkenheidsinzichten (preview)
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036232"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494178"
 landingContent:
 - title: Info
   linkLists:
   - linkListType: overview
     links:
-    - text: Overzicht van de mogelijkheden
+    - text: Voordelen van de mogelijkheden
       url: overview.md
-    - text: Termen en concepten
+    - text: Woordenlijst
       url: glossary.md
-    - text: Betrokkenheidsinzichten ontdekken
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Nieuwe en bijgewerkt functies
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Onboarding
   linkLists:
   - linkListType: how-to-guide
@@ -38,33 +38,35 @@ landingContent:
       url: create-workspace.md
     - text: Uw website van instrumenten voorzien
       url: instrument-website.md
-- title: Rapporten
+- title: Rapporten weergeven en filteren
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Rapporten weergeven
       url: view-reports.md
-    - text: Aangepaste rapporten maken
-      url: custom-reports.md
     - text: Een geharmoniseerd profielrapport weergeven
       url: profile-reports.md
-    - text: Trechterrapporten maken
-      url: funnel-reports.md
-- title: Gebeurtenissen
+    - text: Doelgroepsegmenten gebruiken om rapporten te filteren
+      url: integrate-audience-insights-segments.md
+- title: Analyseren
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Trechterrapporten maken
+      url: funnel-reports.md
+    - text: Gedragsgegevens analyseren
+      url: curate-dimensions.md
+    - text: Aangepaste rapporten maken
+      url: custom-reports.md
     - text: Verfijnde gebeurtenissen maken
       url: refined-events.md
     - text: Gebeurtenissen exporteren
       url: export-events.md
-    - text: Persoonsgegevens verwijderen en exporteren
-      url: delete-export-personal-data.md
-- title: Resources voor ontwikkelaars
+- title: Bronnen voor ontwikkelaars
   linkLists:
   - linkListType: reference
     links:
-    - text: Resources voor ontwikkelaars
+    - text: Bronnen voor ontwikkelaars
       url: developer-resources.md
     - text: WebSDK-voorbeeld
       url: websdk-sample.md
@@ -81,6 +83,10 @@ landingContent:
     - text: Omgevingen en werkruimten beheren
       url: manage-environments-workspaces.md
     - text: Verbinding maken met doelgroepinzichten
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Cookies en toestemming van gebruikers beheren
       url: user-consent-storage.md
+    - text: Persoonsgegevens verwijderen en exporteren
+      url: delete-export-personal-data.md
+    - text: Servicelimieten
+      url: ../service-limits.md

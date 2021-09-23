@@ -4,17 +4,17 @@ description: Werkruimten en omgevingen maken, hernoemen en verwijderen.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034036"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486029"
 ---
 # <a name="manage-environments-and-workspaces"></a>Omgevingen en werkruimten beheren
 
@@ -85,13 +85,11 @@ Als u een werkruimte verwijdert, worden alle inhoud, gegevens, instellingen en m
 
 1. Selecteer **Leden toevoegen** om toegang te geven en [rollen toe te wijzen](user-roles.md). Op dit moment is alleen **Werkruimtebeheer** beschikbaar.
 
-1. Als u een [verbinding met doelgroepinzichten](configure-connections.md) instelt, kunt u **Toegang tot profielgegevens toestaan** selecteren om het lid toe te staan rapporten te zien op basis van [gebruikersprofielen](profile-reports.md).
-
 1. Selecteer **Leden toevoegen** om deze toe te voegen aan uw werkruimte.
 
 ## <a name="manage-an-environment"></a>Een omgeving beheren
 
-Als omgevingsbeheerder hebt u toegang tot een omgeving via het linkernavigatiedeelvenster. U kunt omgevingsinstellingen, andere omgevingsbeheerders, werkruimten en [verbindingen met doelgroepinzichten](configure-connections.md) configureren. Selecteer tabbladen om tussen verschillende gebieden in het beheercentrum te wisselen.
+Als omgevingsbeheerder hebt u toegang tot een omgeving via het linkernavigatiedeelvenster. U kunt omgevingsinstellingen, andere omgevingsbeheerders en werkruimten configureren. Selecteer tabbladen om tussen verschillende gebieden in het beheercentrum te wisselen.
 
 :::image type="content" source="media/New-environment.png" alt-text="Omgevingsbeheercentrum.":::
 
@@ -123,8 +121,6 @@ Als omgevingsbeheerder hebt u toegang tot een omgeving via het linkernavigatiede
 
 1. Selecteer **Leden toevoegen** om leden bij te werken en [rollen toe te wijzen](user-roles.md). Op dit moment is alleen **Omgevingsbeheer** beschikbaar.
 
-1. Als u een [verbinding met doelgroepinzichten](configure-connections.md) instelt, kunt u **Toegang tot profielgegevens toestaan** selecteren om het lid toe te staan rapporten te zien op basis van [gebruikersprofielen](profile-reports.md).
-
 1. Selecteer **Leden toevoegen** om deze toe te voegen aan uw omgeving.
 
 ### <a name="delete-an-environment"></a>Een omgeving verwijderen
@@ -143,7 +139,7 @@ Omgevingsbeheerders kunnen omgevingen verwijderen. Voordat u een omgeving kunt v
 
 Door verbindingen tot stand te brengen met doelgroepinzichten, kunt u rapporten in betrokkenheidsinzichten bekijken op basis van geharmoniseerde klantprofielen. 
 
-Zie [Verbindingen configureren](configure-connections.md) voor meer informatie.
+Zie [Een koppeling tot stand brengen tussen doelgroepinzichten en betrokkenheidsinzichten](integrate-audience-insights-engagement-insights.md) voor meer informatie.
 
 ## <a name="manage-personal-data"></a>Persoonlijke gegevens beheren
 

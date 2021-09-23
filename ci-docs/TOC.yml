@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Nieuwe en bijgewerkt functies
       href: audience-insights/whats-new-audience-insights.md
-    - name: Een nieuwe omgeving maken
-      href: audience-insights/get-started-paid.md
+    - name: Aan de slag
+      items:
+        - name: Snelstartgids
+          href: audience-insights/get-started.md
+        - name: Een nieuwe omgeving maken
+          href: audience-insights/get-started-paid.md
+        - name: Doelgroepinzichten verkennen
+          href: audience-insights/home.md
     - name: Leermodules
       items:
         - name: Gegevens opnemen
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Uitgebreide adressen
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Verrijken met Azure Maps
+          href: audience-insights/enrichment-azure-maps.md
         - name: Verrijken met HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Verrijken met Leadspace
@@ -194,7 +202,7 @@
               href: audience-insights/export-sftp.md
         - name: Andere toepassingen
           items:
-            - name: Invoegtoepassing Klantkaart voor Dynamics 365
+            - name: Invoegtoepassing Klantenkaart voor Dynamics 365
               href: audience-insights/customer-card-add-in.md
             - name: Microsoft Teams (bot)
               href: audience-insights/export-teams-bot.md
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: API-verwijzingen
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Servicelimieten
-      href: audience-insights/service-limits.md
-    - name: Aanvragen betreffende rechten van betrokkenen onder de AVG
-      href: audience-insights/gdpr.md
 - name: Betrokkenheidsinzichten (preview)
   items:
     - name: Help-hub
       href: engagement-insights/index.yml
     - name: Overzicht van de mogelijkheden
       href: engagement-insights/overview.md
-    - name: Gratis proefversie
-      href: 'https://pi.dynamics.com/'
     - name: Aan de slag
       items:
-        - name: Aan de slag
+        - name: Snelstartgids
           href: engagement-insights/get-started.md
         - name: Een werkruimte maken
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Omgevingen en werkruimten beheren
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Verbindingen configureren
-          href: engagement-insights/configure-connections.md
         - name: Cookies en toestemming van gebruikers beheren
           href: engagement-insights/user-consent-storage.md
-    - name: AVG
-      items:
-        - name: Persoonsgegevens verwijderen en exporteren
-          href: engagement-insights/delete-export-personal-data.md
     - name: Regionale beschikbaarheid
       href: engagement-insights/regional-availability.md
-    - name: Servicelimieten
-      href: engagement-insights/quotas.md
 - name: Doelgroep- en betrokkenheidsinzichten integreren
   items:
     - name: Doelgroepinzichten en betrokkenheidsinzichten koppelen
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Demografische dimensies gebruiken voor het opsplitsen van gedragsgegevens
       href: engagement-insights/curate-dimensions.md
+- name: Servicelimieten
+  href: service-limits.md
+- name: DSR-rechten en -aanvragen
+  href: dsr-rights-requests.md
 - name: Ondersteuning vinden
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

@@ -4,17 +4,17 @@ description: Trechterrapporten gebruiken om te begrijpen hoe de doelgroep beslis
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032249"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498636"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Trechterrapporten maken en beheren
 
@@ -158,4 +158,21 @@ U kunt de naam van een trechterrapport wijzigen, verwijderen of de stappen in he
 1. Selecteer een naam om het rapport te openen.
 
 1. Selecteer de stap die u wilt verwijderen en selecteer **Verwijderen**.
+
+## <a name="funnel-insights"></a>Trechterinzichten 
+
+Betrokkenheidsinzichten bieden nu trechterinzichten voor klanten. Gebruik trechterinzichten om meer inzicht te krijgen in het gedrag van klanten over de stappen in uw trechterrapport. Wanneer u een nieuw trechterrapport maakt en opslaat, worden automatisch trechterinzichten gegenereerd voor uw rapport. 
+
+U kunt trechterinzichten uit de volgende categorieën bekijken, zowel op hoofd- als op stapniveau: 
+
+ - Conversiepercentage 
+ - Overgangstijd 
+ - Voltooiingstijd 
+
+Gebruik deze inzichten om het gedrag van klanten nog beter te leren kennen en meer inzicht te krijgen in afleverpunten en conversies voor uw trechterrapport. 
+
+Trechterinzichten worden elke 24 uur opnieuw berekend, of wanneer u **Opslaan** kiest in uw trechterrapport. 
+
+> [!NOTE]
+> Als u inzichten voor uw trechter wilt bekijken, moet u uw rapport elke keer dat u wijzigingen aanbrengt, opslaan. 
 

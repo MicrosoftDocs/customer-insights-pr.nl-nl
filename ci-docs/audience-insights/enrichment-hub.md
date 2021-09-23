@@ -1,7 +1,7 @@
 ---
 title: Geharmoniseerde klantprofielen verrijken
 description: Gebruik mogelijkheden om uw klantgegevens te verrijken.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032522"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469958"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Verrijking voor klantprofielen (preview)
 
@@ -29,6 +29,7 @@ U hebt de machtigingen Inzender of Beheerder nodig om verrijkingen te kunnen mak
 
 Op het tabblad **Ontdekken** vindt u de volgende verrijkingen:
 
+- [Azure Maps](enrichment-azure-maps.md) geleverd door Microsoft
 - [Merken](enrichment-microsoft.md) die worden geleverd door Microsoft
 - [Interesses](enrichment-microsoft.md) die worden geleverd door Microsoft
 - [Uitgebreide adressen](enrichment-enhanced-addresses.md) geleverd door Microsoft
@@ -62,5 +63,17 @@ Verrijkingen van derden worden geconfigureerd met [verbindingen](connections.md)
 ## <a name="multiple-enrichments-of-the-same-type"></a>Meerdere verrijkingen van hetzelfde type
 
 De entiteit die moet worden verrijkt, wordt gespecificeerd tijdens de verrijkingsconfiguratie, waardoor u de mogelijkheid hebt om slechts een subset van uw profielen te verrijken. Verrijk bijvoorbeeld alleen gegevens voor een specifiek segment. U kunt meerdere verrijkingen van hetzelfde type configureren en dezelfde verbinding opnieuw gebruiken. Sommige verrijkingen hebben limieten voor het aantal verrijkingen van hetzelfde type dat kan worden gemaakt. De limieten en het huidige gebruik zijn te zien op de pagina **Verrijking**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>De voortgang van het verrijkingsproces bekijken
+
+U kunt details over de verwerking van een verrijking vinden, inclusief de bijbehorende status en mogelijke problemen, tijdens het vernieuwen of nadat een vernieuwing is voltooid. Krijg inzicht in de processen die betrokken zijn om een verrijking te vernieuwen en hoe lang het duurde om de processen uit te voeren. De verrijkingsstatus wordt ondersteund voor Experian, Leadspace, HERE Technologies, SFTP Import en Azure Maps.
+
+De status van een verrijking weergeven
+
+1. Ga naar **Gegevens** > **Verrijking**. 
+1. Selecteer op het tabblad **Mijn verrijkingen** de status van een verrijking om een zijvenster te openen. 
+1. Vouw in het deelvenster **Voortgangsdetails** de sectie **Verrijkingen** uit. 
+1. Selecteer onder de verrijking waarvan u de voortgang wilt bekijken de optie **Details weergeven**. 
+1. Selecteer in het deelvenster **Taakdetails** de optie **Details weergeven** om de processen te bekijken die betrokken zijn bij het bijwerken van de verrijking en hun status. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

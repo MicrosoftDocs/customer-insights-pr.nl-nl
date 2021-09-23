@@ -1,19 +1,19 @@
 ---
 title: Een koppeling tot stand brengen tussen doelgroepinzichten en betrokkenheidsinzichten
 description: Maak een actieve koppeling tussen doelgroepinzichten en betrokkenheidsinzichten om het delen van gegevens in twee richtingen mogelijk te maken.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461007"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487101"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Een koppeling tot stand brengen tussen doelgroepinzichten en betrokkenheidsinzichten
 
@@ -26,14 +26,14 @@ Gebruik uniforme profielen en segmenten uit doelgroepinzichten voor meer analyse
 ## <a name="prerequisites"></a>Vereisten
 
 - Profielen voor doelgroepinzichten moeten worden opgeslagen in een Azure Data Lake Storage-account waarvan u de eigenaar bent, of in een beheerd [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md) data lake. 
-
+- De omgeving van uw doelgroepinzichten moet een gekoppelde Dataverse-omgeving hebben. Als in die omgeving ook Dataverse wordt gebruikt voor gegevensopslag, moet u de optie **Gegevens delen inschakelen** in doelgroepinzichten selecteren. Zie [Een betaalde omgeving in doelgroepinzichten maken en configureren](../audience-insights/get-started-paid.md) voor meer informatie.
 - U hebt beheerdersmachtigingen nodig voor zowel de omgeving voor betrokkenheidsinzichten als de omgeving voor doelgroepinzichten.
-
 - Gekoppelde omgevingen moeten zich in dezelfde geografische regio bevinden.
 
 > [!NOTE]
-> - Als uw abonnement op doelgroepinzichten een proefversie is die gebruikmaakt van een intern beheerde data lake voor doelgroepinzichten, neemt u contact op met [pirequest@microsoft.com](mailto:pirequest@microsoft.com) voor assistentie. 
-> - Als uw omgeving voor doelgroepinzichten uw eigen Azure Data Lake Storage gebruikt om gegevens op te slaan, moet u een Azure-serviceprincipal voor betrokkenheidsinzichten toevoegen aan uw opslagaccount. Ga naar [Verbinding met een Azure Data Lake Storage-account maken met een Azure-serviceprincipal voor doelgroepinzichten](../audience-insights/connect-service-principal.md) voor meer informatie. Ook moet uw doelgroepomgeving een bijbehorende [Dataverse-omgeving](../audience-insights/get-started-paid.md) hebben. 
+> - Als uw abonnement op doelgroepinzichten een proefversie is die gebruikmaakt van een intern beheerd data lake voor doelgroepinzichten, neemt u contact op met [pirequest@microsoft.com](mailto:pirequest@microsoft.com) voor assistentie. 
+> - Als uw omgeving voor doelgroepinzichten uw eigen Azure Data Lake Storage gebruikt om gegevens op te slaan, moet u een Azure-serviceprincipal voor betrokkenheidsinzichten toevoegen aan uw opslagaccount. Ga naar [Verbinding met een Azure Data Lake Storage-account maken met een Azure-serviceprincipal voor doelgroepinzichten](../audience-insights/connect-service-principal.md) voor meer informatie. 
+
 
 ## <a name="create-an-environment-link"></a>Een omgevingskoppeling maken
 
@@ -75,6 +75,7 @@ Nadat u omgevingen hebt gekoppeld, kunt u optionele functies selecteren voor de 
 
    > [!IMPORTANT]
    > Als u in deze stap niet expliciet gebruikers toevoegt, worden de gegevens verborgen voor gebruikers in betrokkenheidsinzichten.
+   > Als u segmenten van doelgroepinzichten in betrokkenheidsinzichten wilt laten verschijnen, moet u eerst [samenvoeg- en downstreamprocessen uitvoeren](../audience-insights/merge-entities.md). Downstreamprocessen zijn belangrijk omdat ze een unieke tabel genereren die segmenten van doelgroepinzichten voorbereidt om te worden gedeeld met betrokkenheidsinzichten. (Als een systeemvernieuwing is gepland, omvat deze automatisch downstreamprocessen.)
 
 1. Controleer uw selectie en selecteer vervolgens **Voltooien**.
 

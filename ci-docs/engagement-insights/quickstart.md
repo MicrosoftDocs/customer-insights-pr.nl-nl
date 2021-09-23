@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: eebe51d343f6afbed52a66c52ab6a60eb5cd410367fb2e4409eb8679f357c91e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 95caaa1f67a7740328b67face00acaea65452eb0
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033901"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494451"
 ---
 # <a name="first-run-experience"></a>Ervaring bij eerste uitvoering
 
@@ -26,7 +26,7 @@ Met betrokkenheidsinzichten, functionaliteit van Dynamics 365 Customer Insights,
 
 U moet een actieve Microsoft Azure Active Directory-gebruikersaccount hebben. 
 
-1. Open de website voor [betrokkenheidsinzichten](https://pi.dynamics.com/). 
+1. Open de website voor [betrokkenheidsinzichten](https://home.ci.ai.dynamics.com/app/engagement-insights). 
 
 1. Meld u aan met uw school- of werkaccount.
 

@@ -1,7 +1,7 @@
 ---
 title: Entiteiten samenvoegen in gegevensharmonisatie
 description: Voeg entiteiten samen om geharmoniseerde klantprofielen te maken.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034996"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494313"
 ---
 # <a name="merge-entities"></a>Entiteiten samenvoegen
 
-De samenvoegingsfase is de laatste fase in het proces voor gegevensharmonisatie. Het doel is het afstemmen van conflicterende gegevens. Voorbeelden van conflicterende gegevens kunnen een klantnaam zijn die in twee van uw gegevenssets is gevonden, maar in elk een beetje anders verschijnt ("Grant Marshall" versus "Grant Marshal"), of een telefoonnummer met een andere indeling(617-803-091X versus 617803091X). Het samenvoegen van die conflicterende gegevenspunten gebeurt op een kenmerk-per-kenmerkbasis.
+De samenvoegingsfase is de laatste fase in het proces van gegevensharmonisatie. Het doel is het afstemmen van conflicterende gegevens. Voorbeelden van conflicterende gegevens kunnen een klantnaam zijn die in twee van uw gegevenssets is gevonden, maar in elk een beetje anders verschijnt ("Grant Marshall" versus "Grant Marshal"), of een telefoonnummer met een andere indeling(617-803-091X versus 617803091X). Het samenvoegen van die conflicterende gegevenspunten gebeurt op een kenmerk-per-kenmerkbasis.
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Samenvoegpagina in het gegevensharmonisatieproces waarop een tabel wordt weergegeven met samengevoegde velden die het uniforme klantprofiel definiëren.":::
 
@@ -66,7 +66,7 @@ Wijzig de weergavenaam van samengevoegde kenmerken. U kunt de naam van de uitvoe
 
 Sluit een kenmerk uit van het uniforme klantprofiel. Als het veld in andere processen wordt gebruikt, bijvoorbeeld in een segment, verwijder het dan uit deze processen voordat u het uitsluit van het klantprofiel. 
 
-1. Selecteer het samengevoegde veld.
+1. Selecteer een samengevoegd veld.
   
 1. Selecteer **Meer weergeven** en kies **Uitsluiten**.
 
@@ -76,17 +76,40 @@ Sluit een kenmerk uit van het uniforme klantprofiel. Als het veld in andere proc
 
 Selecteer op de pagina **Samenvoegen** **Uitgesloten velden** om de lijst met alle uitgesloten velden te zien. In dit deelvenster kunt u uitgesloten velden weer toevoegen.
 
+## <a name="edit-a-merged-field"></a>Een samengevoegd veld bewerken
+
+1.  Selecteer een samengevoegd veld.
+
+1.  Selecteer **Meer weergeven** en kies **Bewerken**.
+
+1.  Geef op hoe u de velden wilt combineren of samenvoegen door een van de drie opties te kiezen:
+    - **Belang**: geeft de winnende waarde aan op basis van de mate van belang die voor de deelnemende velden is opgegeven. Dit is de standaard samenvoegingsoptie. Selecteer **Omhoog/omlaag verplaatsen** om de rangorde van belang in te stellen.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="De optie Belang in het dialoogvenster voor het samenvoegen van velden."::: 
+    - **Meest recente** : geeft de winnende waarde aan op basis van de meest recente. Vereist een datum of een numeriek veld voor elke deelnemende entiteit in het bereik van samenvoegvelden om de recentheid te definiëren.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="De optie Recentheid in het dialoogvenster voor het samenvoegen van velden.":::
+    - **Minst recente** : geeft de winnende waarde aan op basis van de minst recente. Vereist een datum of een numeriek veld voor elke deelnemende entiteit in het bereik van samenvoegvelden om de recentheid te definiëren.
+
+1.  U kunt extra velden toevoegen die deelnemen aan het samenvoegproces.
+
+1.  U kunt de naam van het samenvoegveld wijzigen.
+
+1. Selecteer **Gereed** om uw wijzigingen toe te passen.
+
+1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken. 
+
 ## <a name="manually-combine-fields"></a>Velden handmatig combineren
 
 Geef handmatig een samengevoegd kenmerk op. 
 
 1. Selecteer op de pagina **Samenvoegen** **Velden combineren**.
 
-1. Geef informatie op voor **Naam** en **Naam van uitvoerveld**.
+1. Geef het beleid voor de winnende samenvoeging op via het vervolgkeuzemenu **Velden combineren op**.
 
 1. Kies een veld dat u wilt toevoegen. Selecteer **Velden toevoegen** om meer velden te combineren.
 
-1. Bevestig de uitsluiting.
+1. Geef informatie op voor **Naam** en **Naam van uitvoerveld**.
+
+1. Selecteer **Gereed** om de wijzigingen toe te passen.
 
 1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken. 
 
@@ -103,6 +126,27 @@ Sommige entiteiten bevatten meer details dan andere. Als een entiteit de nieuwst
 1. Bevestig de wijziging.
 
 1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken.
+
+## <a name="configure-customer-id-generation"></a>Het genereren van een unieke klant-id configureren 
+
+Na het configureren van samenvoegvelden, kunt u definiëren hoe u CustomerId-waarden, de unieke klantprofiel-id's, genereert. In de samenvoegstap in het proces van gegevensharmonisatie wordt de unieke klantprofiel-id gegenereerd. De id is de CustomerId in de entiteit *Klant* die het resultaat is van het proces van gegevensharmonisatie. 
+
+De CustomerId in de entiteit Klant is gebaseerd op een hash van de eerste waarde van de niet-null winnende primaire sleutels. Deze sleutels zijn afkomstig van de entiteiten die worden gebruikt in de overeenkomst- en samenvoegfase en worden beïnvloed door de overeenkomstvolgorde.De gegenereerde CustomerID kan dus veranderen wanneer een primaire sleutelwaarde verandert in de primaire entiteit van de matchorder. De waarde van de primaire sleutel vertegenwoordigt daarom mogelijk niet altijd dezelfde klant.
+
+Door een stabiele klant-id te configureren, kunt u dat gedrag vermijden.
+
+**Een unieke klant-id configureren**
+
+1. Ga naar **Unify** > **Samenvoegen**.
+
+1. Selecteer op de pagina **Samenvoegen** het tabblad **Sleutels**. 
+
+1. Houd de muisaanwijzer op de rij **CustomerId** en selecteer de optie **Configureren**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Controle om het genereren van de id aan te passen.":::
+
+1. Selecteer maximaal vijf velden die een unieke klant-id vormen en stabieler zijn. Records die niet overeenkomen met uw configuratie, gebruiken in plaats daarvan een door het systeem geconfigureerde id.  
+
+1. Selecteer **Gereed** en voer het samenvoegproces uit om uw wijzigingen toe te passen.
 
 ## <a name="run-your-merge"></a>Uw samenvoeging uitvoeren
 

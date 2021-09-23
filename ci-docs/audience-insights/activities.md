@@ -1,20 +1,20 @@
 ---
 title: Klantactiviteiten
-description: Definieer klantactiviteiten en bekijk ze op de tijdlijn van de klant.
-ms.date: 04/07/2021
+description: Definieer klantactiviteiten en geef ze weer in een tijdlijn in klantprofielen.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033625"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494405"
 ---
 # <a name="customer-activities"></a>Klantactiviteiten
 
@@ -44,7 +44,7 @@ Uw gegevensbronnen kunnen entiteiten met transactie- en activiteitsgegevens uit 
 1. Configureer in de stap **Relatie** de details om uw activiteitsgegevens te verbinden met de bijbehorende klant. Deze stap visualiseert de verbinding tussen entiteiten.  
 
    - **Eerste**: vreemd veld in uw activiteitsentiteit dat zal worden gebruikt om een relatie met een andere entiteit tot stand te brengen.
-   - **Tweede**: corresponderende bronklantentiteit waarmee uw activiteitsentiteit een relatie heeft. U kunt alleen relaties tot stand brengen met bronklantentiteiten die worden gebruikt in het proces voor gegevensharmonisatie.
+   - **Tweede**: corresponderende bronklantentiteit waarmee uw activiteitsentiteit een relatie heeft. U kunt alleen relaties tot stand brengen met bronklantentiteiten die worden gebruikt in het proces van gegevensharmonisatie.
    - **Derde**: als er al een relatie bestaat tussen deze activiteitsentiteit en de geselecteerde bronklantentiteit, is de relatienaam alleen-lezen. Als een dergelijke relatie niet bestaat, wordt er een nieuwe relatie gemaakt met de naam die u in dit vak opgeeft.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definieer de entiteitsrelatie.":::
@@ -60,12 +60,15 @@ Uw gegevensbronnen kunnen entiteiten met transactie- en activiteitsgegevens uit 
       - **Aanvullende details**: veld met relevante informatie voor deze activiteit.
       - **Pictogram**: pictogram dat dit type activiteit het beste weergeeft.
       - **webadres**: veld dat een URL bevat met informatie over deze activiteit. Bijvoorbeeld het transactiesysteem dat de bron van deze activiteit vormt. Deze URL kan elk veld zijn uit de gegevensbron, of het kan worden geconstrueerd als een nieuw veld via een Power Query-transformatie. De URL-gegevens worden opgeslagen in de entiteit *Unified Activity*, die stroomafwaarts kan worden gebruikt met [API's](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Geef de klantactiviteitsgegevens op in een Unified Activity-entiteit.":::
+
+   - **Weergeven in tijdlijn**
+      - Kies of u deze activiteit wilt weergeven in de tijdlijnweergave in uw klantprofielen. Selecteer **Ja** als u de activiteit in de tijdlijn wilt weergeven of **Nee** als u de activiteit wilt verbergen.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Geef de klantactiviteitsgegevens op in een Unified Activity-entiteit.":::
 
 1. Selecteer **Volgende** om naar de volgende stap te gaan. U kunt **Voltooien en controleren** selecteren om de activiteit nu op te slaan met het activiteitstype ingesteld op **Overige**. 
 
-1. Kies in de stap **Type activiteit** het activiteitstype en selecteer optioneel of u enkele van de activiteitstypen semantisch wilt toewijzen voor gebruik in andere gebieden van Customer Insights. Momenteel kunnen de activiteitstypen *Subscription* en *SalesOrderLine* semantisch in kaart worden gebracht nadat u akkoord bent gegaan met het toewijzen van de velden. Als een activiteitstype niet relevant is voor de nieuwe activiteit, kunt u *Overige* of *Nieuwe maken* kiezen voor een aangepast activiteitstype.
+1. Kies in de stap **Type activiteit** het activiteitstype en selecteer optioneel of u enkele van de activiteitstypen semantisch wilt toewijzen voor gebruik in andere gebieden van Customer Insights. Momenteel kunnen de activiteitstypen *Feedback*, *Loyaliteit*, *SalesOrder*, *SalesOrderLine* en *Abonnement* semantisch worden toegewezen nadat u akkoord bent gegaan met het toewijzen van de velden. Als een activiteitstype niet relevant is voor de nieuwe activiteit, kunt u *Overige* of *Nieuwe maken* kiezen voor een aangepast activiteitstype.
 
 1. Selecteer **Volgende** om naar de volgende stap te gaan. 
 
