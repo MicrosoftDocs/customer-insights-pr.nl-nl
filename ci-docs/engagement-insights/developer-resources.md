@@ -4,27 +4,27 @@ description: Informatie over SDK's en hoe u ze gebruikt.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2e2df207802f8de501661d247bd80d6cc792636f
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036277"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558740"
 ---
 # <a name="developer-resources-overview"></a>Overzicht resources voor ontwikkelaars
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Dit artikel bevat alle beschikbare codefragmenten en voorbeelden voor snelle naslag. Haal de code voor een gebeurteniszender voor uw platform op en volg de zelfstudies. 
+Dit artikel vermeldt alle beschikbare codefragmenten en voorbeelden van de Software Development Toolkit (SDK) waarmee ontwikkelaars gegevens kunnen delen met Dynamics 365 Customer Insights. U kunt de code voor gebeurtenissen die specifiek voor uw platform zijn bestemd, verkrijgen door de zelfstudies te volgen.
 
 ## <a name="capture-events-from-websites"></a>Gebeurtenissen vastleggen van websites
 
-- [Procedure om het codefragment op een website toe te voegen](instrument-website.md)
+- [Een website inrichten](instrument-website.md)
 - [Web-SDK voorbeeld](websdk-sample.md)
 - [Geavanceerde web-SDK-instrumentatie](advanced-SDK-implementation.md)
 

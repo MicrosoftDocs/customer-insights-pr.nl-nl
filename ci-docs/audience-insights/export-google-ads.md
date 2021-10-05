@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar Google Ads
 description: Leer hoe u de verbinding configureert en exporteert naar Google Ads.
-ms.date: 03/03/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,19 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5977b3de9fbb0d97c0912e2ada6a313b0ab92498adf9cdbed48191c0e5143567
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031651"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558949"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmenten exporteren naar Google Ads (preview)
 
 Exporteer segmenten van geharmoniseerde klantprofielen naar een Google Ads-doelgroepenlijst en gebruik ze om te adverteren op Google Search, Gmail, YouTube en Google Display Network. 
+
+> [!IMPORTANT]
+> Momenteel kunt u alleen een nieuwe verbinding maken en gegevens exporteren naar Google Ads als u al een goedgekeurde Google Ads Developer-token heeft. Vanwege beleidswijzigingen gaan we de Google Ads-export binnenkort bijwerken en een exportoptie bieden waarvoor geen ontwikkelaarstoken nodig is om de continuïteit van uw ervaring te garanderen en de export naar Google Ads te vereenvoudigen. We raden aan om niet meer verbindingen met Google Ads in te stellen om een gemakkelijkere overstap naar de nieuwe exportoptie te faciliteren.
 
 ## <a name="prerequisites-for-connection"></a>Vereisten voor verbinding
 

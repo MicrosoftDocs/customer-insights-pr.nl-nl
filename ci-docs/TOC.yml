@@ -242,7 +242,7 @@
   items:
     - name: Help-hub
       href: engagement-insights/index.yml
-    - name: Overzicht van de mogelijkheden
+    - name: Over betrokkenheidsinzichten
       href: engagement-insights/overview.md
     - name: Aan de slag
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Regionale beschikbaarheid
       href: engagement-insights/regional-availability.md
-- name: Doelgroep- en betrokkenheidsinzichten integreren
+- name: Gegevens delen tussen mogelijkheden
   items:
     - name: Doelgroepinzichten en betrokkenheidsinzichten koppelen
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: DSR-rechten en -aanvragen
   href: dsr-rights-requests.md
-- name: Ondersteuning vinden
-  href: 'https://dynamics.microsoft.com/support/'
