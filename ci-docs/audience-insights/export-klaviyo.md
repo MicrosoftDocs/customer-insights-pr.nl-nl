@@ -1,7 +1,7 @@
 ---
 title: Gegevens uit Customer Insights exporteren naar Klaviyo
 description: Leer hoe u de verbinding configureert en exporteert naar Klaviyo.
-ms.date: 08/13/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
+ms.openlocfilehash: 5f7c91afed8eeb1f767f1efc58dceb7782c37bb4
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7385782"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619067"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Segmentlijsten exporteren naar Klaviyo (preview)
 
@@ -28,10 +28,10 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Klaviyo en gebruik z
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- U kunt tot 100.000 profielen per export exporteren naar Klaviyo.
+- U kunt tot 100.000 klantprofielen per export exporteren naar Klaviyo.
 - Het exporteren naar Klaviyo is beperkt tot segmenten.
-- Het exporteren van maximaal 1 miljoen profielen naar Klaviyo kan tot 20 minuten duren. 
-- Het aantal profielen dat u kunt exporteren naar Klaviyo is afhankelijk en beperkt van uw contract met Klaviyo.
+- Het exporteren van tot 1 miljoen klantprofielen naar Klaviyo kan tot 20 minuten duren. 
+- Het aantal klantprofielen dat u kunt exporteren naar Klaviyo, is afhankelijk van en wordt beperkt door uw contract met Klaviyo.
 
 ## <a name="set-up-connection-to-klaviyo"></a>De verbinding met Klaviyo instellen
 
@@ -67,7 +67,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Voer uw [**Klaviyo-lijst-id**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID) in.     
 
-3. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. Dit is vereist voor het exporteren van segmenten naar Klaviyo.
+3. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Dit is vereist voor het exporteren van segmenten naar Klaviyo.
 
 1. Selecteer **Opslaan**.
 

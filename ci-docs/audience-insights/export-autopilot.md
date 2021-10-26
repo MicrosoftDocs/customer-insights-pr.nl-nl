@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar Autopilot
 description: Leer hoe u de verbinding configureert en exporteert naar Autopilot.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9ada8a6f4e4546990a1360567b400033050119c4c4c9a3df1af8fcaab75e157
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4cceb64484e8e257a90b8cbaedff4419659bb399
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032019"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618423"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Segmenten exporteren naar Autopilot (preview)
 
@@ -28,10 +28,10 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Autopilot en gebruik
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- U kunt in totaal tot 100.000 klantprofielen exporteren naar Autopilot.
+- U kunt in totaal tot 100.000 klantprofielen per export exporteren naar Autopilot.
 - Exporteren naar Autopilot is beperkt tot segmenten.
-- Het exporteren van maximaal 100.000 profielen naar Autopilot kan enkele uren duren. 
-- Het aantal profielen dat u naar Autopilot kunt exporteren, is afhankelijk van uw contract met Autopilot.
+- Het exporteren van tot 100.000 klantprofielen naar Autopilot kan tot een paar uur duren. 
+- Het aantal klantprofielen dat u kunt exporteren naar Autopilot, is afhankelijk van en wordt beperkt door uw contract met Autopilot.
 
 ## <a name="set-up-connection-to-autopilot"></a>Verbinding instellen met Autopilot
 
@@ -43,7 +43,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Autopilot en gebruik
 
 1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
-3. Voer uw [API-sleutel voor Autopilot](https://autopilot.docs.apiary.io/#) in.
+1. Voer uw [API-sleutel voor Autopilot](https://autopilot.docs.apiary.io/#) in.
 
 1. Selecteer **Ik ga akkoord** om **Gegevensprivacy en naleving** te bevestigen.
 
@@ -63,7 +63,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Autopilot. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
 
-3. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. Herhaal dezelfde stappen voor andere optionele velden, zoals **Voornaam**, **Achternaam**.
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Herhaal dezelfde stappen voor andere optionele velden, zoals **Voornaam**, **Achternaam**.
 
 1. Selecteer de segmenten die u wilt exporteren. Wij **raden u sterk aan niet meer dan 100.000 klantprofielen in totaal te exporteren** naar Autopilot. 
 

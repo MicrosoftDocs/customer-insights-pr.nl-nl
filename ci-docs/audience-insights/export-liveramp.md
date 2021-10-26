@@ -1,7 +1,7 @@
 ---
 title: LiveRamp-connector
 description: Leer hoe u de verbinding configureert en exporteert naar LiveRamp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7940db3efacad62ba16099849b3e3ca00d2a5cc1ed31e15a34209c0797e6ae13
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035639"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618929"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Segmenten exporteren naar LiveRamp&reg; (preview)
 
@@ -58,7 +58,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
    > [!div class="mx-imgBorder"]
    > ![LiveRamp-connector met kenmerktoewijzing.](media/export-liveramp-segments.png "LiveRamp-connector met kenmerktoewijzing")
 
-1. Wijs de corresponderende kenmerken van uw geharmoniseerde klantentiteit toe aan de geselecteerde sleutel-id.
+1. Wijs de bijbehorende kenmerken toe van uw entiteit *Klant* voor de geselecteerde sleutel-id.
 
 1. Selecteer **Kenmerk toevoegen** om meer kenmerken toe te wijzen om naar LiveRamp te verzenden.
 

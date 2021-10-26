@@ -1,32 +1,32 @@
 ---
 title: Verrijking van bedrijfsprofielen met de verrijking door derden van Leadspace
 description: Algemene informatie over de verrijking door derden van Leadspace.
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031697"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617345"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Verrijking van bedrijfsprofielen met Leadspace (preview)
 
-Leadspace is een data science-bedrijf dat een B2B-platform voor klantgegevens biedt. Het stelt klanten met geharmoniseerde klantprofielen voor bedrijven in staat hun gegevens te verrijken. Verrijkingen voegen meer kenmerken toe zoals bedrijfsgrootte, locatie, branche en meer.
+Leadspace is een data science-bedrijf dat een B2B-platform voor klantgegevens biedt. Het stelt omgevingen met geharmoniseerde klantprofielen op basis van accounts in staat om hun gegevens te verrijken. Verrijk *Klantprofielen* met kenmerken zoals bedrijfsgrootte, locatie of branche. Verrijk *Contactprofielen* met kenmerken zoals functie, persona of e-mailverificatie.
 
 ## <a name="prerequisites"></a>Vereisten
 
 Als u Leadspace wilt configureren, moet aan de volgende vereisten worden voldaan:
 
 - U hebt een actieve Leadspace-licentie.
-- U hebt [geharmoniseerde klantprofielen](customer-profiles.md) voor bedrijven.
-- Een Leadspace-verbinding is al geconfigureerd door een beheerder of u hebt [beheerdersmachtigingen](permissions.md#administrator) en de "eeuwigdurende sleutel" (waarnaar wordt verwezen als **Leadspace-token**). Neem rechtstreeks contact op met [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) voor details over hun product.
+- U hebt [geharmoniseerde klantprofielen](customer-profiles.md) op basis van accounts.
+- Een Leadspace-verbinding is al geconfigureerd door een beheerder of u hebt [beheerdersmachtigingen](permissions.md#administrator) en de "eeuwigdurende sleutel" (waarnaar wordt verwezen als **Leadspace-token**). Neem rechtstreeks contact op met [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) voor details over hun product.
 
 ## <a name="configure-the-enrichment"></a>De verrijking configureren
 
@@ -50,6 +50,10 @@ Als u Leadspace wilt configureren, moet aan de volgende vereisten worden voldaan
 
 1. Selecteer **Volgende** om de veldtoewijzing te voltooien.
 
+1. Vink het selectievakje aan als u *Contactprofielen* hebt die u zou willen verrijken. Doelgroepinzichten koppelt automatisch de vereiste velden.
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Verrijking van Leadspace-contactpersoonrecords.":::
+ 
 1. Geef een naam op voor de verrijking en selecteer **Verrijking opslaan** na het bekijken van uw keuzes.
 
 
@@ -81,7 +85,8 @@ Zie [De API's van Leadspace](https://support.leadspace.com/hc/en-us/sections/201
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md) en [metingen](measures.md), en [exporteer de gegevens](export-destinations.md) zelfs om gepersonaliseerde ervaringen aan uw klanten te leveren.
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 

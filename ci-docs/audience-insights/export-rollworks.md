@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar RollWorks
 description: Leer hoe u de verbinding configureert en exporteert naar RollWorks.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d8ce4d867835dcb7cf56c6fffff4e25d1f5c109af0e401fc0eb8b3a7427c1de4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f8f6a79db9cb4bb109c03a464d9f8c7f3b862ad5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034584"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617438"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Segmenten exporteren naar RollWorks (preview)
 
@@ -28,11 +28,11 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar RollWorks en gebruik
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- U kunt maximaal 250.000 profielen per export exporteren naar RollWorks.
-- U kunt geen segmenten met minder dan 100 profielen exporteren naar RollWorks. 
+- U kunt tot 250.000 klantprofielen per export exporteren naar RollWorks.
+- U kunt geen segmenten met minder dan 100 klantprofielen exporteren naar RollWorks. 
 - Exporteren naar RollWorks is beperkt tot segmenten.
-- Het exporteren van maximaal 250.000 profielen naar RollWorks kan tot 10 minuten duren. 
-- Het aantal profielen dat u naar RollWorks kunt exporteren, is afhankelijk van en wordt beperkt door uw contract met RollWorks.
+- Het exporteren van tot 250.000 klantprofielen naar RollWorks kan tot 10 minuten duren. 
+- Het aantal klantprofielen dat u kunt exporteren naar RollWorks, is afhankelijk van en wordt beperkt door uw contract met RollWorks.
 
 ## <a name="set-up-connection-to-rollworks"></a>Verbinding instellen met RollWorks
 
@@ -66,7 +66,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Voer uw **Id van RollWorks-adverteerder** [RollWorks-adverteerder](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles) in.
 
-3. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. Deze is vereist voor het exporteren van segmenten naar RollWorks.
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Deze is vereist voor het exporteren van segmenten naar RollWorks.
 
 1. Selecteer de segmenten die u wilt exporteren. Selecteer een segment met minimaal 100 leden. U kunt geen kleinere segmenten exporteren. Bovendien is de maximale grootte van een te exporteren segment 250.000 leden per export. 
 

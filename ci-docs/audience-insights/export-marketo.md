@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar Marketo
 description: Leer hoe u de verbinding configureert en exporteert naar Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033487"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619159"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmenten exporteren naar Marketo (preview)
 
@@ -29,10 +29,10 @@ Exporteer segmenten van geharmoniseerde klantprofielen om campagnes te genereren
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Maximaal 1 miljoen profielen per export naar Marketo.
+- Tot 1 miljoen klantprofielen per export naar Marketo.
 - Exporteren naar Marketo is beperkt tot segmenten.
-- Segmenten met in totaal 1 miljoen profielen exporteren kan tot 3 uur duren. 
-- Het aantal profielen dat u naar Marketo kunt exporteren, is afhankelijk van uw contract met Marketo.
+- Het exporteren van segmenten met in totaal 1 miljoen klantprofielen kan tot drie uur duren. 
+- Het aantal klantprofielen dat u kunt exporteren naar Marketo, is afhankelijk van en wordt beperkt door uw contract met Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Verbinding met Marketo instellen
 
@@ -64,7 +64,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Voer uw **[Lijst-id van Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** in. De lijst-ID is een puur numerieke waarde. Als uw lijst-id van Marketo bijvoorbeeld ST12345A7 is, verwijdert u het teken voor en na de cijfers en voert u `12345` in. 
 
-1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. 
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. 
 
 1. Optioneel kunt u **Voornaam**, **Achternaam**, **Plaats**, **Staat** en **Land/regio** exporteren om meer gepersonaliseerde e-mails te maken. Selecteer **Kenmerk toevoegen** om deze velden toe te wijzen.
 

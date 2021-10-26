@@ -1,7 +1,7 @@
 ---
 title: Geharmoniseerde klantprofielen verrijken
 description: Gebruik mogelijkheden om uw klantgegevens te verrijken.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469958"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617549"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Verrijking voor klantprofielen (preview)
 
@@ -27,16 +27,26 @@ Ga in doelgroepinzichten naar **Gegevens** > **Verrijking** om te werken met ver
 
 U hebt de machtigingen Inzender of Beheerder nodig om verrijkingen te kunnen maken of bewerken. Zie [Machtigingen](permissions.md) voor meer informatie.
 
-Op het tabblad **Ontdekken** vindt u de volgende verrijkingen:
+Op het tabblad **Ontdekken** vindt u alle ondersteunde verrijkingsopties.
 
-- [Azure Maps](enrichment-azure-maps.md) geleverd door Microsoft
+# <a name="individual-customers-b2c"></a>[Individuele klanten (B2C)](#tab/b2c)
+
 - [Merken](enrichment-microsoft.md) die worden geleverd door Microsoft
 - [Interesses](enrichment-microsoft.md) die worden geleverd door Microsoft
-- [Uitgebreide adressen](enrichment-enhanced-addresses.md) geleverd door Microsoft
-- [Bedrijfsgegevens](enrichment-leadspace.md) worden verstrekt door Leadspace
+- [Uitgebreide adressen](enrichment-enhanced-addresses.md) geleverd door Microsoft 
 - [Demografische gegevens](enrichment-experian.md) geleverd door Experian
-- [Locatiegegevens](enrichment-here.md) worden geleverd door HERE Technologies
-- [Aangepaste gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP)
+- [Aangepaste gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) geleverd door Microsoft
+
+# <a name="business-accounts-b2b"></a>[Zakelijke accounts (B2B)](#tab/b2b)
+
+- [Bedrijfsgegevens](enrichment-leadspace.md) worden verstrekt door Leadspace
+- [Uitgebreide adressen](enrichment-enhanced-addresses.md) geleverd door Microsoft 
+- [Locatiegegevens](enrichment-here.md) worden geleverd door HERE Technologies 
+- [Aangepaste gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) geleverd door Microsoft
+
+---
 
 Op het tabblad **Mijn verrijkingen** kunt u de verrijkingen zien die u hebt geconfigureerd en hun eigenschappen bewerken.
 
@@ -58,7 +68,7 @@ Voer meerdere verrijkingen tegelijk uit of deactiveer ze door ze in de lijst te 
 
 ## <a name="enrichments-and-connections"></a>Verrijkingen en verbindingen
 
-Verrijkingen van derden worden geconfigureerd met [verbindingen](connections.md), die een beheerder instelt met referenties en die toestemming verlenen voor gegevensoverdracht. De verbinding kan door beheerders en inzenders worden gebruikt voor het configureren van verrijkingen.  
+Verrijkingen van derden worden geconfigureerd met [verbindingen](connections.md), die een beheerder instelt met referenties en die toestemming verlenen voor gegevensoverdracht. Deze verbindingen kunnen worden gebruikt door beheerders en inzenders om verrijkingen te configureren.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Meerdere verrijkingen van hetzelfde type
 

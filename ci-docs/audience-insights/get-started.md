@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466571"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645258"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Aan de slag met de doelgroepinzichten in Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ Met doelgroepinzichten hebt u meer inzicht in uw klanten. Verbind gegevens uit v
 
 ## <a name="step-1-create-an-environment"></a>Stap 1: Een omgeving maken
 
-U moet eerst een omgeving maken waarin u kunt werken. Als uw organisatie al een licentie heeft gekocht, raadpleegt u [Aan de slag met een betaald abonnement](get-started-paid.md). Als u met een proefversie van doelgroepinzichten wilt beginnen, raadpleegt u [Een proefomgeving instellen](get-started-trial.md). 
+U moet eerst een omgeving maken waarin u kunt werken. Als uw organisatie al een licentie heeft aangeschaft, zie [Een omgeving maken](create-environment.md). Als u met een proefversie van doelgroepinzichten wilt beginnen, raadpleegt u [Een proefomgeving instellen](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Stap 2: Doelgroepinzichten verkennen
 

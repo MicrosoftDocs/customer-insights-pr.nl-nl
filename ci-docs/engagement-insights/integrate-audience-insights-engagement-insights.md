@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7559012"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645576"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Een koppeling tot stand brengen tussen doelgroepinzichten en betrokkenheidsinzichten
 
@@ -26,7 +26,7 @@ Gebruik uniforme profielen en segmenten uit doelgroepinzichten voor meer analyse
 ## <a name="prerequisites"></a>Vereisten
 
 - Profielen voor doelgroepinzichten moeten worden opgeslagen in een Azure Data Lake Storage-account waarvan u de eigenaar bent, of in een beheerd [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md) data lake. 
-- De omgeving van uw doelgroepinzichten moet een gekoppelde Dataverse-omgeving hebben. Als in die omgeving ook Dataverse wordt gebruikt voor gegevensopslag, moet u de optie **Gegevens delen inschakelen** in doelgroepinzichten selecteren. Zie [Een betaalde omgeving in doelgroepinzichten maken en configureren](../audience-insights/get-started-paid.md) voor meer informatie.
+- De omgeving van uw doelgroepinzichten moet een gekoppelde Dataverse-omgeving hebben. Als in die omgeving ook Dataverse wordt gebruikt voor gegevensopslag, moet u de optie **Gegevens delen inschakelen** in doelgroepinzichten selecteren. Zie voor meer informatie [Een omgeving in doelgroepeninzichten maken en configureren](../audience-insights/create-environment.md).
 - U hebt beheerdersmachtigingen nodig voor zowel de omgeving voor betrokkenheidsinzichten als de omgeving voor doelgroepinzichten.
 - Gekoppelde omgevingen moeten zich in dezelfde geografische regio bevinden.
 

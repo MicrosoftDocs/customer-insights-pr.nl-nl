@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033212"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605943"
 ---
 # <a name="connections-preview-overview"></a>Overzicht van Verbindingen (preview)
 
@@ -47,6 +47,7 @@ Als u verbindingen wilt toevoegen, moet u over [beheerdersmachtigingen](permissi
 1. Geef in het deelvenster **Verbindingen instellen** de vereiste details op. 
    1. De **weergavenaam** en het type verbinding beschrijven een verbinding. We raden u aan een naam te kiezen die het doel en het doel van deze verbinding uitlegt.
    1. De exacte velden zijn afhankelijk van de service waarmee u verbinding maakt. U kunt meer te weten komen over de details van een specifiek verbindingstype in het artikel over de doelservice.
+   1. Als u uw [eigen Key Vault gebruikt](use-azure-key-vault.md) om geheimen op te slaan, activeert u **Key Vault gebruiken** en kiest u het geheim uit de lijst.
 
 1. Selecteer **Opslaan** om de verbinding te maken.
 
@@ -93,3 +94,6 @@ Losgekoppelde verrijkingen en exports worden inactief. U activeert deze opnieuw 
 
 1. Selecteer **Verwijderen** om de verwijdering te bevestigen.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Verbindingen instellen met geheimen die worden beheerd door uw eigen Key Vault
+
+Sommige verbindingen hebben geheimen nodig, zoals API-sleutels of wachtwoorden. Sommige verbindingen ondersteunen geheimen die zijn opgeslagen in uw eigen Key Vault. Meer informatie over ondersteunde verbindingen en hoe u uw [eigen Key Vault kunt instellen voor doelgroepinzichten](use-azure-key-vault.md).

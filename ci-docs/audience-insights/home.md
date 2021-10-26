@@ -1,7 +1,7 @@
 ---
 title: Startpagina in doelgroepinzichten
 description: Verken de app op de startpagina.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469957"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617688"
 ---
 # <a name="explore-audience-insights"></a>Doelgroepinzichten verkennen
 
@@ -23,7 +23,7 @@ De **Startpagina** bevat een overzicht van segmenten, metingen en verrijkingsgeg
 
 :::image type="content" source="media/home-page.png" alt-text="Schermafbeelding van het startscherm met voorbeeldinzichten.":::
 
-1 - Schakelen tussen mogelijkheden van Customer Insights 2 Het linkerdeelvenster gebruiken om tussen verschillende gebieden te navigeren 3 - Nagaan in welke omgeving u werkt en omgevingen als beheerder beheren 4 - Persoonlijke instellingen opgeven voor Customer Insights
+1 - Schakel tussen mogelijkheden van Customer Insights 2 - Gebruik het linkerdeelvenster om tussen verschillende gebieden te navigeren en de primaire doelgroep te kiezen 3 - Ontdek in welke omgeving u werkt en beheer omgevingen als beheerder 4 - Specificeer persoonlijke instellingen voor Customer Insights
 
 Onder **Recente segmenten** ziet u groepen klanten op basis van demografische, gedrags- of transactiekenmerken die u hebt gedefinieerd. Met [Segmenten maken](segments.md) kunt u uw klantenbestand groeperen en uw zakelijke activiteiten beter afstemmen.
 

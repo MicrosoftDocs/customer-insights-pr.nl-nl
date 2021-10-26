@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar LinkedIn Ads
 description: Procedure voor het configureren van de verbinding en voor het exporteren naar LinkedIn Ads.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034217"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618285"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmenten exporteren naar LinkedIn Ads (preview)
 
@@ -28,9 +28,9 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar LinkedIn Ads om matc
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- U kunt maximaal 100.000 profielen per export exporteren naar LinkedIn Ads.
+- U kunt tot 100.000 klantprofielen per export exporteren naar LinkedIn Ads.
 - Exporteren naar LinkedIn Ads is beperkt tot segmenten.
-- Het exporteren van maximaal 100.000 profielen naar LinkedIn Ads kan tot 10 minuten duren. 
+- Het exporteren van tot 100.000 klantprofielen naar LinkedIn Ads kan tot 10 minuten duren. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>De verbinding instellen met LinkedIn Ads
 
@@ -66,7 +66,7 @@ U kunt een export configureren als u toegang hebt tot een verbinding van dit typ
 
 1. Kies of u gegevens wilt exporteren om [targeting van contactpersonen](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) of [targeting van bedrijve](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) uit te voeren op LinkedIn. 
 
-1. Selecteer in de sectie **Gegevensvergelijking** het veld in uw geharmoniseerde klantprofiel dat het e-mailadres van een klant vertegenwoordigt. Dit is vereist voor het exporteren van segmenten naar LinkedIn Ads.
+1. In de sectie **Gegevensvergelijking** selecteert u voor targeting van contactpersonen ten minste één veld met het e-mailadres, de Apple Ad ID, de Google Ad ID, de Google-gebruikers-id of voor- en achternaam van de klant. Als u kiest voor bedrijfstargeting, selecteert u ten minste één veld met een bedrijfsnaam, e-maildomein, LinkedIn-pagina-URL, Ticker-symbool of website. Extra velden kunnen worden geselecteerd om uw export verder te definiëren. 
 
 1. Selecteer de segmenten die u wilt exporteren. De matched audiences in LinkedIn Campaign Manager worden automatisch gemaakt met de naam van de segmenten die u hebt geselecteerd om te exporteren. Elk segment resulteert in een aparte matched audience. 
 

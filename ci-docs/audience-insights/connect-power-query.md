@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 3be417845a41c8f25c71bfc0823f42571157759b224e46d5e114037ee3df8329
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033258"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643488"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinden met een Power Query-gegevensbron
 
 Power Query biedt een brede set connectors om gegevens op te nemen. De meeste van deze connectors worden ondersteund door Dynamics 365 Customer Insights. Bij het toevoegen van gegevensbronnen op basis van Power Query-connectors worden gewoonlijk de stappen gevolgd die in de volgende sectie worden beschreven. Afhankelijk van de connector die u gebruikt, kan echter andere informatie vereist zijn. Zie voor meer informatie de documentatie over afzonderlijke connectors in [Referentie voor Power Query-connectors](/power-query/connectors/).
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
 ## <a name="create-a-new-data-source"></a>Een nieuwe gegevensbron maken
 

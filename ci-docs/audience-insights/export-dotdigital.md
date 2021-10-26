@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar DotDigital
 description: Leer hoe u de verbinding configureert en exporteert naar DotDigital.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f09be0dfa599c1ef7cf0055b7ce1df8784cf447ada64b56bc7543c214f9a5b99
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3e3a79603f9f5746ee176d3d4299a30510c7459e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034630"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618377"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Segmenten exporteren naar DotDigital (preview)
 
@@ -22,17 +22,17 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar DotDigital-adresboek
 
 ## <a name="prerequisites-for-a-connection"></a>Vereisten voor een verbinding
 
--   U hebt een [DotDigital-account](https://dotdigital.com/) en bijbehorende beheerdersreferenties nodig.
+-   U hebt een [DotDigital-account](https://dotdigital.com/) en hebt een [API-gebruiker](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user) gemaakt. U hebt de API-gebruikersreferenties nodig om een verbinding te maken
 -   Er zijn bestaande adresboeken met bijbehorende id's in DotDigital. De id is te vinden in de URL wanneer u een adresboek selecteert en opent. Zie [DotDigital-adresboeken](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book) voor meer informatie.
 -   U hebt [geconfigureerde segmenten](segments.md) in doelgroepinzichten.
 -   Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten een veld voor e-mailadres.
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Maximaal 1 miljoen profielen per export naar DotDigital.
+- Tot 1 miljoen klantprofielen per export naar DotDigital.
 - Exporteren naar DotDigital is beperkt tot segmenten.
-- Segmenten exporteren met in totaal 1 miljoen profielen kan tot 3 uur duren vanwege beperkingen aan de providerzijde. 
-- Het aantal profielen dat u naar DotDigital kunt exporteren, is afhankelijk van uw contract met DotDigital.
+- Het exporteren van segmenten met in totaal 1 miljoen klantprofielen kan tot 3 uur duren vanwege beperkingen aan de kant van de provider. 
+- Het aantal klantprofielen dat u kunt exporteren naar DotDigital, is afhankelijk van en wordt beperkt door uw contract met DotDigital.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Verbinding met DotDigital instellen
 
@@ -44,7 +44,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar DotDigital-adresboek
 
 1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
-1. Voer uw **DotDigital-gebruikersnaam en wachtwoord** in.
+1. Voer uw **DotDigital API-gebruikersnaam en wachtwoord** in. 
 
 1. Voer uw **[DotDigital adresboek-id](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)** in.
 
@@ -67,7 +67,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie DotDigital. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
 
 
-1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. Herhaal dezelfde stappen voor andere optionele velden, zoals **Voornaam**, **Achternaam**, **Voor- en achternaam**, **Geslacht** en **Postcode**.
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Herhaal dezelfde stappen voor andere optionele velden, zoals **Voornaam**, **Achternaam**, **Voor- en achternaam**, **Geslacht** en **Postcode**.
 
 1. Selecteer de segmenten die u wilt exporteren. U kunt in totaal tot 1 miljoen klantprofielen exporteren naar DotDigital.
 

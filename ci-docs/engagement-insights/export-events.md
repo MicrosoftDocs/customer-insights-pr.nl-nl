@@ -4,23 +4,23 @@ description: Procedure om verfijnde gebeurtenissen en basisgebeurtenissen te exp
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 04/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7881f8f63134170a7f76e3c75dcfc5fa8930754b
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032379"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606197"
 ---
 # <a name="export-events"></a>Gebeurtenissen exporteren
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Een gebeurtenis staat voor gebruikersgedrag. Deze registreert wanneer een gebruiker een pagina weergeeft (weergavegebeurtenis) of interactie heeft met inhoud (actiegebeurtenis). Wanneer u kunt beslissen welke eigenschappen van de gegevens u in een rapport wilt weergeven, wordt deze virtuele weergave van de gegevens een *verfijnde gebeurtenis* genoemd. 
+Een gebeurtenis staat voor gebruikersgedrag. Deze registreert wanneer een gebruiker een pagina weergeeft (weergavegebeurtenis) of interactie heeft met inhoud (actiegebeurtenis). Wanneer u kunt beslissen welke eigenschappen van de gegevens u in een rapport wilt weergeven, wordt deze virtuele weergave van de gegevens een *verfijnde gebeurtenis* genoemd. Zie voor meer informatie [Gebeurtenissen maken en wijzigen](refined-events.md).
 
 - U kunt gebeurtenissen en verfijnde gebeurtenissen exporteren naar externe opslag. 
 - De export is een voorwaartse datastroom. U kunt de stroom niet bijvullen. 
@@ -45,26 +45,28 @@ Voordat u een export instelt, moet u toegang hebben tot en een actief abonnement
 
 ## <a name="export-events"></a>Gebeurtenissen exporteren
 
-U kunt gebeurtenissen op twee manieren exporteren: 
+Er zijn twee manieren om het dialoogvenster **Gebeurtenissen exporteren** te openen: 
 - Ga naar **Gegevens** > **Exports** en selecteer **Nieuwe export**.
 - Ga naar **Gegevens** > **Gebeurtenissen**, selecteer **Meer [...]** naast de gebeurtenis die je wilt exporteren en selecteer **Exporteren** uit het vervolgkeuzemenu. 
 
+:::image type="content" source="media/new-export.png" alt-text="Een nieuwe export maken.":::
+
 U wordt door de stappen geleid om een export te maken:
 
-1. Geef een **Exportnaam** op.
+1. Geef een **Exportnaam** op en selecteer vervolgens **Volgende**.
 
 1. Kies in de vervolgkeuzelijst **Gebeurtenissenselectie** de basisgebeurtenissen en verfijnde gebeurtenissen die u in de export wilt opnemen. 
 
-1. Selecteer onder **Bestandsstructuur** de cadans om nieuwe bestanden in de doelopslag te maken. Gebeurtenissen worden continu geëxporteerd zodra ze binnenkomen.
+1. In de sectie **Bestandsstructuur**, selecteer de cadans (per uur of dagelijks) voor het maken van nieuwe bestanden in de doelopslag en selecteer vervolgens **Volgende**. Gebeurtenissen worden continu geëxporteerd zodra ze binnenkomen.
 
-1. Selecteer de indeling van uw export. U kunt kiezen uit **Common Data Model**, **CSV** en **JSON**. Om de export met andere Dynamics 365-toepassingen te gebruiken, raden we aan de Common Data Model-indeling te gebruiken.
+1. Selecteer in het dialoogvenster **Indeling kiezen** de indeling voor uw export. U hebt de keuze uit de indelingen **Common Data Model**, **CSV** en **JSON**. Als u de export wilt gebruiken met andere Dynamics 365-applicaties, raden we de indeling **Common Data Model** aan.
 
-1. In de stap **Bestemming kiezen** geeft u de Azure Data Lake Storage Gen 2-locatie op.
+1. Geef in het dialoogvenster **Bestemming kiezen** de Azure Data Lake Storage Gen 2-locatie op.
     1. **ADLS Gen 2-accountnaam** is de naam van het opslagaccount waar u de export wilt opslaan. 
     1. **Mappad** definieert waar de export moet worden opgeslagen in het bestandssysteem en de directorystructuur van het opslagaccount.
     1. **Gedeelde sleutel** is beschikbaar via de Azure-portal voor het opslagaccount.
 
-1. Controleer en bevestig uw selecties.
+1. Controleer en bevestig uw selecties om te voltooien.
 
 ## <a name="view-and-manage-exports"></a>Exports weergeven en beheren
 

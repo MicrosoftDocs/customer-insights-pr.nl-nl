@@ -1,7 +1,7 @@
 ---
 title: Gegevens uit Customer Insights exporteren naar Sendinblue
 description: Leer hoe u de verbinding configureert en exporteert naar Sendinblue.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036049"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617779"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Segmenten exporteren naar Sendinblue (preview)
 
@@ -29,10 +29,10 @@ Exporteer de segmenten van geharmoniseerde klantprofielen om campagnes te genere
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Tot 1 miljoen profielen per export naar Sendinblue.
+- Tot 1 miljoen klantprofielen per export naar Sendinblue.
 - Het exporteren naar Sendinblue is beperkt tot segmenten.
-- Het exporteren van segmenten met in totaal 1 miljoen profielen kan tot 90 minuten duren. 
-- Het aantal profielen dat u kunt exporteren naar Sendinblue is afhankelijk en beperkt van uw contract met Sendinblue.
+- Het exporteren van segmenten met in totaal 1 miljoen klantprofielen kan tot 90 minuten duren. 
+- Het aantal klantprofielen dat u kunt exporteren naar Sendinblue, is afhankelijk van en wordt beperkt door uw contract met Sendinblue.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Verbinding instellen met Sendinblue
 
@@ -64,7 +64,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Voer uw **Sendinblue-lijst-id** in 
 
-1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. 
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. 
 
 1. Optioneel kunt u **Voornaam**, **Achternaam** en **Telefoon** exporteren om meer gepersonaliseerde e-mails te maken. Selecteer **Kenmerk toevoegen** om deze velden toe te wijzen.
 

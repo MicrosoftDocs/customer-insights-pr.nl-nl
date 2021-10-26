@@ -1,7 +1,7 @@
 ---
 title: Segmenten in doelgroepinzichten
 description: Overzicht van segmenten en hoe u segmenten kunt maken en beheren.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036367"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617369"
 ---
 # <a name="segments-overview"></a>Overzicht van segmenten
 
@@ -26,11 +26,19 @@ Klantprofielen die overeenkomen met de filters van een segmentdefinitie worden a
 
 Er zijn meerdere manieren om een nieuw segment te maken: 
 
-- Complex segment met segmentbouwer: [Leeg segment](segment-builder.md#create-a-new-segment)
-- Eenvoudige segmenten met één operator: [Snel segment](segment-builder.md#quick-segments)
-- Via AI mogelijk gemaakte manier om vergelijkbare klanten te vinden: [Vergelijkbare klanten](find-similar-customer-segments.md)
-- Via AI mogelijk gemaakte suggesties op basis van meetcriteria of kenmerken: [Voorgestelde segmenten om meetcriteria te verbeteren](suggested-segments.md)
-- Suggesties op basis van activiteiten: [Voorgestelde segmenten op basis van klantactiviteit](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Individuele klanten (B2C)](#tab/b2c)
+
+- Complex segment met segmentbouwer: [Bouw onze eigen](segment-builder.md#create-a-new-segment) 
+- Eenvoudige segmenten met één operator: [Snel segment](segment-builder.md#quick-segments) 
+- Via AI mogelijk gemaakte manier om vergelijkbare klanten te vinden: [Vergelijkbare klanten](find-similar-customer-segments.md) 
+- Via AI mogelijk gemaakte suggesties op basis van meetcriteria of kenmerken: [Voorgestelde segmenten om meetcriteria te verbeteren](suggested-segments.md) 
+- Suggesties op basis van activiteiten: [Voorgestelde segmenten op basis van klantactiviteit](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Zakelijke accounts (B2B)](#tab/b2b)
+
+- Complex segment met segmentbouwer: [Bouw onze eigen](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Bestaande segmenten beheren
 
@@ -70,9 +78,9 @@ U kunt een segment exporteren vanaf de pagina met segmenten of de [pagina met ex
 
 1. Selecteer **Exports beheren** uit de vervolgkeuzelijst met acties.
 
-1. De pagina **Exports (preview) voor segment** wordt geopend. U kunt alle geconfigureerde exports zien gegroepeerd op exports die het huidige segment wel of niet bevatten.
+1. De pagina **Exports (preview) voor segment** wordt geopend. U kunt alle geconfigureerde exports bekijken gegroepeerd op of ze het huidige segment bevatten of niet.
 
-   1. Als u het geselecteerde segment aan een export wilt toevoegen, selecteert u de export in de lijst en selecteert u **Segment toevoegen**.
+   1. Om het geselecteerde segment aan een export toe te voegen, selecteert u **Bewerken** en selecteert u het corresponderende segment. Sla vervolgens op. In omgevingen voor individuele klanten kunt u in plaats daarvan de export in de lijst selecteren en selecteert u **Segment toevoegen** om hetzelfde resultaat te bereiken.
 
    1. Als u een nieuwe export wilt maken met het geselecteerde segment, selecteert u **Export toevoegen**. Zie [Een nieuwe export instellen](export-destinations.md#set-up-a-new-export) voor meer informatie over het maken van exports..
 

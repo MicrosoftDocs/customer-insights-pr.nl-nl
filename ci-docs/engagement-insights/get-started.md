@@ -4,18 +4,18 @@ description: Een overzicht van hulpbronnen om snel aan de slag te gaan.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 08/31/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494588"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623671"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Aan de slag met de Dynamics 365 Customer Insights functionaliteit voor betrokkenheidsinzichten (openbare preview)
 
@@ -43,7 +43,7 @@ Als u zich voor de eerste keer aanmeldt bij doelgroepinzichten, kunt u instellin
 
 1. Verken het product met behulp van een set voorbeeldgegevens.
 
-##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>Stap 3: Een werkruimte instellen en code aan uw website toevoegen
+##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>Stap 3: Een werkruimte instellen en rapporten maken
 
 In een werkruimte kunt u gebruikersactiviteiten in realtime bekijken en rapporten opslaan en beheren. Voeg code toe aan uw website om te beginnen met het verzamelen van *gebeurtenissen*, de activiteitsgegevens die binnenkomen van gebruikers.
 
@@ -52,20 +52,34 @@ In een werkruimte kunt u gebruikersactiviteiten in realtime bekijken en rapporte
 1. [Voeg code toe aan uw website](instrument-website.md) of [mobiele app](developer-resources.md#capture-events-from-mobile-apps) om gebruikersactiviteit in uw werkruimte te zien aankomen.
 
 1. Bekijk een [realtime rapport](view-reports.md) met actieve gebruikers per browser, apparaat, besturingssysteem, locatie en taal. U kunt ook [aangepaste rapporten](custom-reports.md) maken om uw eigen visualisaties te maken.
+
+1. Maak [dimensies](dimensions.md) om bezoekers te sorteren op nieuwe en terugkerende gebruikers, [metrische gegevens](metrics.md) om gebruikersgedrag beter te begrijpen, en [segmenten](segments.md) om subsets van bezoekers te identificeren op basis van kenmerken of interacties op de website.
     
 ## <a name="step-4-export-data-to-other-channels"></a>Stap 4: Gegevens exporteren naar andere kanalen
 
-U kunt *verfijnde gebeurtenissen* maken (een virtuele weergave) van uw webanalysegegevens. Filter en exporteer de gegevens vervolgens naar Azure Data Lake Storage. U kunt de geëxporteerde gegevens opnemen als een gegevensbron. Zie [Een koppeling tot stand brengen tussen doelgroepinzichten en betrokkenheidsinzichten](integrate-audience-insights-engagement-insights.md) voor meer informatie.
+U kunt *verfijnde gebeurtenissen* maken (een virtuele weergave) van uw webanalysegegevens. Filter en exporteer de gegevens vervolgens naar Azure Data Lake Storage. U kunt de geëxporteerde gegevens opnemen als een gegevensbron.
 
 1. [Maak verfijnde gebeurtenissen](refined-events.md) voor export.
 
-1. [Exporteer de gegevens](export-events.md) naar Data Lake Storage.
+1. [Exporteer de gegevens](export-events.md) naar Azure Data Lake Storage.
 
 1. [Maak een koppeling tussen doelgroepinzichten en betrokkenheidsinzichten](integrate-audience-insights-engagement-insights.md) om gegevens tussen de twee mogelijkheden te delen.
 
+1. [Herken webgebeurtenissen van eerder geverifieerde gebruikers](unknown-to-known.md) met de functie **onbekend tot bekend**.
+
 1. Ontdek hoe u [gebeurtenisgegevens met persoonlijke informatie verwijdert en exporteert](delete-export-personal-data.md).
+
+## <a name="step-5-create-and-manage-funnel-reports"></a>Stap 5: Trechterrapporten maken en beheren
+
+Een trechterrapport verzamelt informatie over de stappen die plaatsvinden tijdens een klantreis via uw website of mobiele app. Naast het maken van kant-en-klare profielrapporten en aangepaste rapporten kunt u een trechterrapport maken om de paden te identificeren die uw klanten volgen voordat ze een aankoop doen. 
+
+1. [Een trechterrapport maken](funnel-reports.md) om geïnformeerde beslissingen te nemen en om gebieden voor optimalisatie en procesverbeteringen te identificeren.
+
+1. Maak trechterrapporten voor meerdere kanalen, zodra u uw mobiele app heeft voorzien van de [Android SDK](get-started-android.md) of [iOS-SDK](get-started-ios.md) voor inzichten in betrokkenheid.
+
+1. Gebruik [trechterinzichten](funnel-reports.md#funnel-insights) om meer inzicht te krijgen in het gedrag van klanten over de stappen in uw trechterrapport.
  
-## <a name="step-5-stay-connected"></a>Stap 5: Verbonden blijven
+## <a name="step-6-stay-connected"></a>Stap 6: Verbonden blijven
 
 We stellen uw actieve deelname op prijs en nemen alle relevante feedback in overweging bij het ontwikkelen van toekomstige releases. Deel uw feedback en meld problemen via een van deze kanalen:
 - [Community](https://go.microsoft.com/fwlink/?linkid=2141648)

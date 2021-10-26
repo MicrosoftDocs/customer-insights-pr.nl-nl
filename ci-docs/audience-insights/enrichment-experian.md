@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c54f6a00cb28b0ab11716c02aa8761dfa382f07e3360183b5d38b9720e890c21
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fabc3cc9faf4e11f46c396782b561ef61cd0f6d5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032614"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618515"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klantprofielen verrijken met demografische gegevens van Experian (preview)
 
@@ -91,7 +91,7 @@ U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrij
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md) en [metingen](measures.md), en [exporteer de gegevens](export-destinations.md) zelfs om gepersonaliseerde ervaringen aan uw klanten te leveren.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 

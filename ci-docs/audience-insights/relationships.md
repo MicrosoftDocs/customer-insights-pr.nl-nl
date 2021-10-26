@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557346"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622994"
 ---
 # <a name="relationships-between-entities"></a>Relaties tussen entiteiten
 
@@ -68,6 +68,20 @@ Relatie bestaat uit een *bronentiteit* met de refererende sleutel en een *doelen
 
 4. Selecteer **Opslaan** om de aangepaste relatie te maken.
 
+## <a name="set-up-account-hierarchies"></a>Accounthiërarchieën instellen
+
+Omgevingen die zijn geconfigureerd om zakelijke accounts als primaire doelgroep te gebruiken, kunnen accounthiërarchieën configureren voor gerelateerde zakelijke accounts. Bijvoorbeeld een bedrijf met aparte business units. 
+
+Organisaties maken accounthiërarchieën om accounts en hun relaties beter met elkaar te kunnen beheren. De mogelijkheid doelgroepinzichten ondersteunt hiërarchieën van bovenliggende en onderliggende accounts die al bestaan in opgenomen klantgegevens. Bijvoorbeeld accounts uit Dynamics 365 Sales. Deze hiërarchieën kunnen worden geconfigureerd op de pagina **Relaties** in doelgroepinzichten, op het tabblad accounthiërarchie.
+
+1. Ga naar **Gegevens** > **Relaties**.
+1. Selecteer het tabblad **Accounthiërarchie**.
+1. Selecteer **Nieuwe accounthiërarchie**. 
+1. Geef in het deelvenster **Accounthiërarchie** een naam op voor de hiërarchie. Het systeem maakt een naam voor de uitvoerentiteit. U kunt de naam van de uitvoerentiteit wijzigen.
+1. Selecteer de entiteit die uw accounthiërarchie bevat. Het bevindt zich meestal in dezelfde entiteit die de accounts bevat.
+1. Selecteer de **Account-id** en **Bovenliggende account-id** van de geselecteerde entiteit 
+1. Selecteer **Opslaan** om de instellingen toe te passen en de accounthiërarchie te voltooien.
+
 ## <a name="view-relationships"></a>Relaties weergeven
 
 Op de pagina Relaties worden alle relaties vermeld die zijn gemaakt. Elke rij vertegenwoordigt een relatie, die ook details bevat over de bronentiteit, de doelentiteit en de kardinaliteit. 
@@ -105,7 +119,7 @@ Zo heeft de entiteit *eCommerce_eCommercePurchases* bijvoorbeeld de volgende rel
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klant
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klant 
 
-Een relatiepad bepaalt welke entiteiten u kunt gebruiken bij het maken van regels voor metingen of segmenten. Het kiezen van de optie met het langste relatiepad zal waarschijnlijk minder resultaten opleveren omdat de overeenkomende records deel moeten uitmaken van alle entiteiten. In dit voorbeeld moet een klant goederen hebben gekocht via e-commerce (eCommerce_eCommercePurchases), bij een verkooppunt (POS_posPurchases) en deelnemen aan ons loyaliteitsprogramma (loyaltyScheme_loyCustomers). Als u de eerste optie kiest, krijgt u waarschijnlijk meer resultaten omdat klanten maar in één extra entiteit hoeven te bestaan.
+Een relatiepad bepaalt welke entiteiten u kunt gebruiken bij het maken van regels voor metingen of segmenten. Het kiezen van de optie met het langste relatiepad zal waarschijnlijk minder resultaten opleveren omdat de overeenkomende records deel moeten uitmaken van alle entiteiten. In dit voorbeeld moet een klant goederen hebben gekocht via e-commerce (eCommerce_eCommercePurchases) bij een verkooppunt (POS_posPurchases) en deelnemen aan ons loyaliteitsprogramma (loyaltyScheme_loyCustomers). Als u de eerste optie kiest, krijgt u waarschijnlijk meer resultaten omdat klanten maar in één extra entiteit hoeven te bestaan.
 
 ### <a name="direct-relationship"></a>Directe relatie
 

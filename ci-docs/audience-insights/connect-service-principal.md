@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483519"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645166"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Verbinding met een Azure Data Lake Storage-account maken met behulp van een Azure-service-principal
 
 Geautomatiseerde hulpmiddelen die Azure-services gebruiken, moeten altijd beperkte machtigingen hebben. In plaats van toepassingen zich te laten aanmelden als een gebruiker met volledige rechten, biedt Azure Service Principals. Lees verder om te leren hoe u Dynamics 365 Customer Insights kunt verbinden met een Azure Data Lake Storage-account met behulp van een Azure-service-principal in plaats van opslagaccountsleutels. 
 
-U kunt de service-principal gebruiken om veilig [een Common Data Model-map toe te voegen of te bewerken als een gegevensbron](connect-common-data-model.md) of om [een omgeving te maken of bij te werken](get-started-paid.md).
+U kunt de service-principal gebruiken om veilig [een Common Data Model-map toe te voegen of te bewerken als een gegevensbron](connect-common-data-model.md) of om [een omgeving te maken of bij te werken](create-environment.md).
 
 > [!IMPORTANT]
 > - Voor het Data Lake Storage-account dat de service-principal gaat gebruiken, moet [hiërarchische naamruimte zijn ingeschakeld](/azure/storage/blobs/data-lake-storage-namespace).

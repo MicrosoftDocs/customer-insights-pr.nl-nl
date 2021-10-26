@@ -2,8 +2,14 @@
   href: index.yml
 - name: Productoverzicht
   href: overview.md
-- name: Een proefversie maken
-  href: audience-insights/get-started-trial.md
+- name: Gratis proefversie
+  items:
+    - name: Registreren voor een gratis proefversie
+      href: trial-signup.md
+    - name: Veelgestelde vragen over proefabonnement
+      href: trial-FAQ.md
+- name: Beginnen met een betaalde licentie
+  href: paid-license.md
 - name: Toegang tot uw omgeving
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Doelgroepinzichten
@@ -19,9 +25,11 @@
         - name: Snelstartgids
           href: audience-insights/get-started.md
         - name: Een nieuwe omgeving maken
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Doelgroepinzichten verkennen
           href: audience-insights/home.md
+    - name: Werken met zakelijke accounts
+      href: audience-insights/work-with-business-accounts.md
     - name: Leermodules
       items:
         - name: Gegevens opnemen
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Klantactiviteiten in een lijst vermelden
           href: audience-insights/activities.md
+        - name: Semantische toewijzingen definiëren
+          href: audience-insights/semantic-mappings.md
     - name: Gegevensverrijking
       items:
         - name: Klantprofielen verrijken
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Voorbeeldhandleiding abonnementsverloop voorspellen
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Voorbeeldhandleiding transactieverloop voorspellen
+            - name: Voorbeeldgids voor voorspelling van transactieverloop
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Voorbeeldgids voor voorspelling van productaanbevelingen
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Meerdere omgevingen beheren
           href: audience-insights/manage-environments.md
-        - name: Verbinding maken met een ADLS-opslagaccount met een Service Principal
-          href: audience-insights/connect-service-principal.md
         - name: Ondersteunde talen
           href: audience-insights/supported-languages.md
+        - name: Beveiliging
+          items:
+            - name: Bring your own Key Vault
+              href: audience-insights/use-azure-key-vault.md
+            - name: Verbinding maken met een ADLS-opslagaccount met een Service Principal
+              href: audience-insights/connect-service-principal.md
     - name: Uitbreidbaarheid
       items:
         - name: Webgegevens integreren van betrokkenheidsinzichten
@@ -248,6 +262,8 @@
       items:
         - name: Snelstartgids
           href: engagement-insights/get-started.md
+        - name: Een omgeving maken
+          href: engagement-insights/create-new-environment.md
         - name: Een werkruimte maken
           href: engagement-insights/create-workspace.md
         - name: Gebeurtenissen vastleggen van websites en mobiele apps

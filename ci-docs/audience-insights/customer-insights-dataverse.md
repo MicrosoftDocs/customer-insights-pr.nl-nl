@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens in Microsoft Dataverse
 description: Gebruik Customer Insights-entiteiten als tabellen in Microsoft Dataverse.
-ms.date: 06/15/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032890"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645212"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Werken met Customer Insights-gegevens in Microsoft Dataverse
 
@@ -24,11 +24,7 @@ Customer Insights biedt de mogelijkheid om uitvoerentiteiten beschikbaar te make
 
 **Organisaties met bestaande Dataverse-omgevingen**
 
-Organisaties die al gebruikmaken van Dataverse kunnen [een van hun bestaande Dataverse-omgevingen gebruiken](get-started-paid.md) wanneer een beheerder doelgroepinzichten instelt. Door de URL voor de Dataverse-omgeving te verstrekken, wordt deze gekoppeld aan hun nieuwe omgeving voor doelgroepinzichten. Om de best mogelijke prestaties te garanderen, moeten Customer Insights en Dataverse-omgevingen in dezelfde regio worden gehost.
-
-U kunt een Dataverse-omgeving toevoegen door **Geavanceerde instellingen** uit te breiden bij het maken van de omgeving voor doelgroepinzichten. Geef de **URL van de Microsoft Dataverse-omgeving** op en schakel het selectievakje **Gegevens delen inschakelen** in.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
+Organisaties die al gebruikmaken van Dataverse kunnen [een van hun bestaande Dataverse-omgevingen gebruiken](create-environment.md) wanneer een beheerder doelgroepinzichten instelt. Door de URL voor de Dataverse-omgeving te verstrekken, wordt deze gekoppeld aan hun nieuwe omgeving voor doelgroepinzichten. Om de best mogelijke prestaties te garanderen, moeten Customer Insights en Dataverse-omgevingen in dezelfde regio worden gehost.
 
 **Nieuwe organisatie**
 

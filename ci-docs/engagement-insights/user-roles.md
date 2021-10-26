@@ -4,27 +4,33 @@ description: Overzicht van beschikbare rollen en machtigingen voor werkruimteled
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036687"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645531"
 ---
 # <a name="roles-and-permissions"></a>Rollen en machtigingen
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Een werkruimte is de manier waarop u gebeurtenissen en rapporten opslaat en beheert. Een lid is een gebruiker die toegang heeft tot een werkruimte. U kunt leden aan uw werkruimte toewijzen en hun rollen en machtigingen definiëren. Beheerdersrollen beheren werkruimten en omgevingen en configureren betrokkenheidsinzichten voor andere gebruikers. De inzenderrollen zijn gericht op analisten die geen betrokkenheidsinzichten hoeven te configureren, maar hun eigen rapporten, trechters of segmenten willen maken.
+Een werkruimte is waar u gebeurtenissen en rapporten opslaat en beheert. Zie voor meer informatie [Een werkruimte maken en leden toevoegen](create-workspace.md). 
+
+Een werkruimte kan de volgende rollen en machtigingen bevatten:
+
+- Gebruikers met de rol *Lid* hebben toegang tot een werkruimte. U kunt leden aan uw werkruimte toewijzen en hun rollen en machtigingen definiëren. 
+- *Beheerdersrollen* beheren werkruimten en omgevingen en configureren betrokkenheidsinzichten voor andere gebruikers. 
+- De rol *Inzender* is voor analisten die geen betrokkenheidsinzichten hoeven te configureren, maar wel hun eigen rapporten, trechters of segmenten willen maken.
 
 ## <a name="permissions"></a>Bevoegdheden
   
-In het volgende diagram worden de machtigingen voor elke rol aangegeven. 
+In de volgende tabel worden de machtigingen voor elke rol aangegeven. 
 
 | Machtiging | Omgevingsbeheerder | Werkruimtebeheerder | Medewerker van omgeving | Medewerker van werkruimte | 
 |--|--|--|--|--|

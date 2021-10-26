@@ -1,7 +1,7 @@
 ---
 title: Omgevingen maken en beheren
 description: Ontdek hoe u zich aanmeldt voor de service en hoe u omgevingen beheert.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034171"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645120"
 ---
 # <a name="manage-environments"></a>Omgevingen beheren
 
@@ -26,7 +26,7 @@ Selecteer het besturingselement **Omgeving** in de rechterbovenhoek van de pagin
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Schermafbeelding van het besturingselement om van omgeving te wisselen.":::
 
-Beheerders kunnen omgevingen [maken](get-started-paid.md) en beheren.
+Beheerders kunnen omgevingen [maken](create-environment.md) en beheren.
 
 ## <a name="edit-an-existing-environment"></a>Een bestaande omgeving bewerken
 
@@ -36,23 +36,9 @@ U kunt enkele details van bestaande omgevingen bewerken.
 
 2.  Selecteer het pictogram **Bewerken**.
 
-3. In het vak **Omgeving bewerken** kunt u de **Weergavenaam** van de omgeving bijwerken, maar u kunt niet de **Regio** of het **Type** bijwerken.
+3. In het vak **Omgeving bewerken** kunt u de omgevingsinstellingen bijwerken.
 
-4. Als een omgeving is geconfigureerd om gegevens op te slaan in Azure Data Lake Storage, kunt u de **accountsleutel** bijwerken. U kunt de **accountnaam** of naam van de **container** echter niet wijzigen.
-
-5. Optioneel kunt u bijwerken vanaf een accountsleutelverbinding naar een resource- of een abonnementsverbinding. Na het upgraden kunt u na de update geen accountsleutel meer gebruiken. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. U kunt geen informatie over **Container** wijzigen bij het bijwerken van de verbinding.
-
-6. Optioneel kunt u een URL voor een Microsoft Dataverse-omgeving opgeven onder **Het delen van gegevens met Microsoft Dataverse configureren en extra mogelijkheden inschakelen**. Deze mogelijkheden omvatten het delen van gegevens met toepassingen en oplossingen op basis van Microsoft Dataverse, gegevensopname uit on-premises-gegevensbronnen of het gebruik van [voorspellingen](predictions.md). Selecteer **Gegevens delen inschakelen** om Customer Insights-uitvoergegevens te delen met een Microsoft Dataverse beheerde data lake.
-
-   > [!NOTE]
-   > - Gegevens delen met Microsoft Dataverse beheerde data lake wordt momenteel niet ondersteund wanneer u alle gegevens in uw eigen Azure Data Lake Storage opslaat.
-   > - [Voorspelling van ontbrekende waarden in een entiteit](predictions.md) en PowerBI Embedded-rapporten in doelgroepinzichten (indien ingeschakeld in uw omgeving) worden momenteel niet ondersteund wanneer u gegevens delen met een door Microsoft Dataverse beheerd data lake inschakelt.
-
-   Nadat u het delen van gegevens met Microsoft Dataverse hebt ingeschakeld, wordt een volledige vernieuwing van uw gegevensbronnen en andere processen gestart. Als er momenteel processen actief zijn, ziet u de optie om het delen van gegevens met Microsoft Dataverse in te schakelen niet. Wacht tot die processen zijn voltooid of annuleer ze om het delen van gegevens in te schakelen. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Configuratieopties om het delen van gegevens met Microsoft Dataverse mogelijk te maken.":::
-   
-   Wanneer u processen uitvoert, zoals het opnemen van gegevens of het maken van segmenten, worden overeenkomstige mappen gemaakt in het opslagaccount dat u hierboven hebt opgegeven. Er worden gegevensbestanden en bestanden model.json gemaakt en toegevoegd aan de respectievelijke submappen, afhankelijk van het proces dat u uitvoert.
+Zie voor meer informatie over omgevingsinstellingen [Een nieuwe omgeving maken](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>De configuratie van de omgeving kopiëren
 

@@ -1,7 +1,7 @@
 ---
 title: Entiteiten samenvoegen in gegevensharmonisatie
 description: Voeg entiteiten samen om geharmoniseerde klantprofielen te maken.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494313"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648248"
 ---
 # <a name="merge-entities"></a>Entiteiten samenvoegen
 
@@ -89,7 +91,7 @@ Selecteer op de pagina **Samenvoegen** **Uitgesloten velden** om de lijst met al
     :::image type="content" source="media/recency-merge-option.png" alt-text="De optie Recentheid in het dialoogvenster voor het samenvoegen van velden.":::
     - **Minst recente** : geeft de winnende waarde aan op basis van de minst recente. Vereist een datum of een numeriek veld voor elke deelnemende entiteit in het bereik van samenvoegvelden om de recentheid te definiëren.
 
-1.  U kunt extra velden toevoegen die deelnemen aan het samenvoegproces.
+1.  U kunt meer velden toevoegen om deel te nemen aan het samenvoegproces.
 
 1.  U kunt de naam van het samenvoegveld wijzigen.
 
@@ -131,7 +133,7 @@ Sommige entiteiten bevatten meer details dan andere. Als een entiteit de nieuwst
 
 Na het configureren van samenvoegvelden, kunt u definiëren hoe u CustomerId-waarden, de unieke klantprofiel-id's, genereert. In de samenvoegstap in het proces van gegevensharmonisatie wordt de unieke klantprofiel-id gegenereerd. De id is de CustomerId in de entiteit *Klant* die het resultaat is van het proces van gegevensharmonisatie. 
 
-De CustomerId in de entiteit Klant is gebaseerd op een hash van de eerste waarde van de niet-null winnende primaire sleutels. Deze sleutels zijn afkomstig van de entiteiten die worden gebruikt in de overeenkomst- en samenvoegfase en worden beïnvloed door de overeenkomstvolgorde.De gegenereerde CustomerID kan dus veranderen wanneer een primaire sleutelwaarde verandert in de primaire entiteit van de matchorder. De waarde van de primaire sleutel vertegenwoordigt daarom mogelijk niet altijd dezelfde klant.
+De CustomerId in de entiteit Klant is gebaseerd op een hash van de eerste waarde van de niet-null winnende primaire sleutels. Deze sleutels zijn afkomstig van de entiteiten die worden gebruikt in de overeenkomst- en samenvoegfase en worden beïnvloed door de overeenkomstvolgorde.De gegenereerde CustomerID kan dus veranderen wanneer een primaire sleutelwaarde verandert in de primaire entiteit van de matchorder. De waarde van de primaire sleutel vertegenwoordigt dus mogelijk niet altijd dezelfde klant.
 
 Door een stabiele klant-id te configureren, kunt u dat gedrag vermijden.
 
@@ -139,7 +141,7 @@ Door een stabiele klant-id te configureren, kunt u dat gedrag vermijden.
 
 1. Ga naar **Unify** > **Samenvoegen**.
 
-1. Selecteer op de pagina **Samenvoegen** het tabblad **Sleutels**. 
+1. Ga naar het tabblad **Sleutels**. 
 
 1. Houd de muisaanwijzer op de rij **CustomerId** en selecteer de optie **Configureren**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Controle om het genereren van de id aan te passen.":::
@@ -147,6 +149,30 @@ Door een stabiele klant-id te configureren, kunt u dat gedrag vermijden.
 1. Selecteer maximaal vijf velden die een unieke klant-id vormen en stabieler zijn. Records die niet overeenkomen met uw configuratie, gebruiken in plaats daarvan een door het systeem geconfigureerde id.  
 
 1. Selecteer **Gereed** en voer het samenvoegproces uit om uw wijzigingen toe te passen.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Groepeer profielen in huishoudens of clusters
+
+Als onderdeel van het configuratieproces voor het genereren van klantprofielen kunt u regels definiëren om gerelateerde profielen in een cluster te groeperen. Er zijn momenteel twee soorten clusters beschikbaar: huishoudelijke en aangepaste clusters. Het systeem kiest automatisch een huishouden met vooraf gedefinieerde regels als de entiteit *Klant* de semantische velden *Person.LastName* en *Location.Address* bevat. U kunt ook een cluster maken met uw eigen regels en voorwaarden, vergelijkbaar met [afstemmingsregels](match-entities.md#define-rules-for-match-pairs).
+
+**Een huishouden of cluster definiëren**
+
+1. Ga naar **Unify** > **Samenvoegen**.
+
+1. Op het tabblad **Samenvoegen** selecteer **Geavanceerd** > **Cluster maken**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Besturingselement om een nieuwe cluster te maken.":::
+
+1. Kies tussen een cluster van het type **Huishouden** of **Aangepast**. Als de semantische velden *Person.LastName* en *Location.Address* bestaan in de entiteit *Klant*, wordt automatisch huishouden geselecteerd.
+
+1. Geef een naam op voor het cluster en selecteer **Gereed**.
+
+1. Selecteer het tabblad **Clusters** om het cluster te vinden dat u hebt gemaakt.
+
+1. Geef de regels en voorwaarden op om uw cluster te definiëren.
+
+1. Selecteer **Uitvoeren** om het samenvoegproces uit te voeren en het cluster te maken.
+
+Nadat het samenvoegproces is uitgevoerd, worden de cluster-id's als nieuwe velden toegevoegd aan de entiteit *Klant*.
 
 ## <a name="run-your-merge"></a>Uw samenvoeging uitvoeren
 

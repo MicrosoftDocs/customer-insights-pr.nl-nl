@@ -8,18 +8,18 @@ ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
-ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
+ms.openlocfilehash: 82591919b44eaac8a251d7fdb148253d5cac23c3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "7564588"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645395"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Regionale beschikbaarheid voor Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-In Betrokkenheidsinzichten, een functie van Dynamics 365 Customer Insights, worden geleidelijk meer regio's geïntroduceerd die klanten kunnen kiezen om hun gegevens op te slaan. Beheerders kunnen een regio kiezen wanneer ze [een nieuwe omgeving maken](manage-environments-workspaces.md#create-an-environment). 
+In Betrokkenheidsinzichten, een functie van Dynamics 365 Customer Insights, worden geleidelijk meer regio's geïntroduceerd die klanten kunnen kiezen om hun gegevens op te slaan. Beheerders kunnen een regio kiezen wanneer ze [een nieuwe omgeving maken](create-new-environment.md). 
 
 Als u voor de eerste keer betrokkenheidsinzichten instelt, kunt u de regio kiezen wanneer u de [begeleide ervaring bij de eerste uitvoering](quickstart.md) doorloopt. U kunt later in elke nieuwe omgeving de regio kiezen waarin gegevens worden opgeslagen.
 

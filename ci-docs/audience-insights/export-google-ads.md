@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558949"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617912"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmenten exporteren naar Google Ads (preview)
 
@@ -35,9 +35,9 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar een Google Ads-doelg
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Maximaal 1 miljoen profielen per export naar Google Ads.
+- Tot 1 miljoen klantprofielen per export naar Google Ads.
 - Exporteren naar Google Ads is beperkt tot segmenten.
-- Segmenten exporteren met in totaal 1 miljoen profielen kan tot 5 minuten duren vanwege beperkingen aan de providerzijde. 
+- Het exporteren van segmenten met in totaal 1 miljoen klantprofielen kan tot 5 minuten duren vanwege beperkingen aan de kant van de provider. 
 - Het matchen in Google Ads kan tot 48 uur duren.
 
 ## <a name="set-up-connection-to-google-ads"></a>Verbinding met Google Ads instellen
@@ -74,7 +74,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Voer uw **[Google Ads-doelgroep-id](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** in en selecteer **Verbinden** om de verbinding met Google Ads te initialiseren.
 
-1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant.
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt.
 
 1. Selecteer de segmenten die u wilt exporteren. U kunt in totaal tot 1 miljoen klantprofielen exporteren naar Google Ads.
 

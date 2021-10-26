@@ -4,17 +4,17 @@ description: Werkruimten en omgevingen maken, hernoemen en verwijderen.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486029"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645440"
 ---
 # <a name="manage-environments-and-workspaces"></a>Omgevingen en werkruimten beheren
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486029"
 
 ## <a name="overview"></a>Overzicht
 
-Een werkruimte is een ruimte om gebeurtenissen en rapporten op te slaan en te beheren. Hier kunt u de gebruikersactiviteit in realtime bekijken. Wanneer u een werkruimte maakt, selecteert u het type gegevens dat u naar de werkruimte wilt verzenden. Momenteel worden webgegevens en mobiele apps ondersteund.
+Dit onderwerp bespreekt hoe werkruimten en omgevingen kunnen worden beheerd nadat ze zijn gemaakt. 
 
-Een omgeving is een ruimte waarin u uw werkruimten en verbindingen beheert. Hoe u omgevingen gebruikt, is afhankelijk van uw organisatie en uw gebruiksscenario. U kunt bijvoorbeeld het volgende maken:
+- Een *werkruimte* is een ruimte om gebeurtenissen en rapporten op te slaan en te beheren. Hier kunt u de gebruikersactiviteit in realtime bekijken. Wanneer u een werkruimte maakt, selecteert u het type gegevens dat u naar de werkruimte wilt verzenden. Momenteel worden webgegevens en mobiele apps ondersteund. Zie voor meer informatie [Een werkruimte maken en leden toevoegen](create-workspace.md).
 
--   Een enkele omgeving.
--   Afzonderlijke omgevingen voor test- en productieomgevingen.
--   Afzonderlijke omgevingen voor specifieke teams of afdelingen in uw organisatie die relevante evenementen bevatten voor elke doelgroep.
--   Afzonderlijke omgevingen voor verschillende internationale vestigingen van uw bedrijf.
--   Verbindingsmogelijkheden met Customer Insights doelgroepinzichten.
+- Een *omgeving* is een ruimte waarin u uw werkruimten en verbindingen beheert. Zie [Een nieuwe omgeving maken](create-new-environment.md) voor meer informatie.
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Een omgeving kiezen en een werkruimte maken 
-
-Elke werkruimte moet zich in een omgeving bevinden. U kunt een reeds bestaande omgeving selecteren of een nieuwe maken wanneer u een werkruimte maakt. Vervolgens kunt u ervoor kiezen werkruimteleden toe te voegen en beginnen gegevens te verzamelen.
-
-**Uw eerste werkruimte maken**
-
-1. Selecteer in betrokkenheidsinzichten **Nieuw** vanuit de werkruimteschakelaar. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Werkruimtekiezer voor Customer Insights-pagina.":::
-
-1. Kies een omgeving in de lijst of selecteer **Nieuwe omgeving maken**.
-
-1. Voer een naam in bij **Naam werkruimte**. 
-
-1. Selecteer het type omgeving dat u wilt maken, afhankelijk van of u wilt meten wat er op een website of in een mobiele app gebeurt. 
-
-1. U kunt leden toevoegen en hun machtigingsniveau toewijzen vanuit de lijst **Rol**. Selecteer **Voltooien** om de werkruimte te maken of **Volgende** om code te installeren. 
-
-1. Installeer het codefragment om gegevens te ontvangen en selecteer **Gereed**. 
-
-## <a name="manage-a-workspace"></a>Een werkruimte beheren
+## <a name="manage-an-existing-workspace"></a>Een bestaande werkruimte beheren
 
 U kunt meerdere werkruimten tegelijkertijd in een omgeving onderhouden. Uw [rol](user-roles.md) bepaalt hoe u erin kunt werken. 
 
  - U moet een omgevingsbeheerder of een werkruimtebeheerder zijn om de werkruimte te kunnen beheren.
  - Als werkruimtebeheerder kunt u bestaande werkruimten een andere naam geven of verwijderen. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Beheercentrum voor werkruimtes.":::
 
 ### <a name="edit-a-workspace-name"></a>De naam van een werkruimte bewerken
 
@@ -75,7 +53,7 @@ Als u een werkruimte verwijdert, worden alle inhoud, gegevens, instellingen en m
 
 1. Selecteer **Werkruimte verwijderen**. 
 
-1. Voer in het dialoogvenster **Werkruimte verwijderen** **VERWIJDEREN BEVESTIGEN** in. 
+1. Voer in het dialoogvenster **Werkruimte verwijderen** in hoofdletters **VERWIJDEREN BEVESTIGEN** in. 
 
 1. Selecteer **Verwijderen** om de werkruimte permanent te verwijderen.
 
@@ -87,27 +65,11 @@ Als u een werkruimte verwijdert, worden alle inhoud, gegevens, instellingen en m
 
 1. Selecteer **Leden toevoegen** om deze toe te voegen aan uw werkruimte.
 
-## <a name="manage-an-environment"></a>Een omgeving beheren
+## <a name="manage-an-existing-environment"></a>Een bestaande omgeving beheren
 
 Als omgevingsbeheerder hebt u toegang tot een omgeving via het linkernavigatiedeelvenster. U kunt omgevingsinstellingen, andere omgevingsbeheerders en werkruimten configureren. Selecteer tabbladen om tussen verschillende gebieden in het beheercentrum te wisselen.
 
-:::image type="content" source="media/New-environment.png" alt-text="Omgevingsbeheercentrum.":::
-
-### <a name="create-an-environment"></a>Een omgeving maken
-
-1. Selecteer **+Nieuw** in de werkruimtekiezer.
-
-1. Open het vervolgkeuzemenu **Omgeving** in de begeleide ervaring en selecteer **Nieuwe omgeving maken**. 
-
-1. Geef een **Omgevingsnaam** op.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Stap in de begeleide ervaring om de omgevingsdetails op te geven.":::
-
-1. Kies de **Regio** en selecteer **Volgende**. 
-
-1. Geef een werkruimtenaam op en kies welk type werkruimte u wilt maken. 
-
-1.  Voeg desgewenst leden toe en kopieer het codefragment om het maken te voltooien.
+:::image type="content" source="media/environment-edit.png" alt-text="Omgevingsbeheercentrum.":::
 
 ### <a name="rename-an-environment"></a>De naam van een omgeving wijzigen
 
@@ -131,7 +93,7 @@ Omgevingsbeheerders kunnen omgevingen verwijderen. Voordat u een omgeving kunt v
 
 1. Selecteer **Omgeving verwijderen**. 
 
-1. Voer in het dialoogvenster **Werkruimte verwijderen** **VERWIJDEREN BEVESTIGEN** in. 
+1. Voer in het dialoogvenster **Werkruimte verwijderen** in hoofdletters **VERWIJDEREN BEVESTIGEN** in. 
 
 1. Selecteer **Verwijderen** om de omgeving permanent te verwijderen.
 

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar Mailchimp
 description: Leer hoe u de verbinding configureert en exporteert naar Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033533"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618607"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmenten exporteren naar Mailchimp (preview)
 
@@ -29,10 +29,10 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Mailchimp om nieuwsb
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Maximaal 1 miljoen profielen per export naar Mailchimp.
+- Tot 1 miljoen klantprofielen per export naar Mailchimp.
 - Exporteren naar Mailchimp is beperkt tot segmenten.
-- Het exporteren van segmenten met 1 miljoen profielen kan tot drie uur duren. 
-- Het aantal profielen dat u naar Mailchimp kunt exporteren, is afhankelijk van uw contract met Mailchimp.
+- Het exporteren van segmenten met 1 miljoen klantprofielen kan tot drie uur duren. 
+- Het aantal klantprofielen dat u kunt exporteren naar Mailchimp, is afhankelijk van en wordt beperkt door uw contract met Mailchimp.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Verbinding instellen met Mailchimp
 
@@ -66,7 +66,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Voer uw **[Mailchimp-doelgroep-id](https://mailchimp.com/help/find-audience-id/)** in
 
-3. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. 
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. 
 
 1. Optioneel kunt u **Voornaam** en **Achternaam** exporteren om meer gepersonaliseerde e-mails te maken. Selecteer **Kenmerk toevoegen** om deze velden toe te wijzen.
 

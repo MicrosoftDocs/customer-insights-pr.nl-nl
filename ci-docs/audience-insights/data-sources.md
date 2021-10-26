@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 75d597158233f75f0eb5f94389f9dba199d81719f2bbe4e5cc58d2a3afc7dcf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032844"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645349"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
@@ -35,7 +35,7 @@ U kunt een gegevensbron op drie manieren toevoegen:
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Gegevens toevoegen vanuit on-premises gegevensbronnen
 
-Het opnemen van gegevens uit on-premises gegevensbronnen in doelgroepinzichten wordt ondersteund op basis van Microsoft Power Platform-gegevensstromen. Gegevensstromen kunnen worden ingeschakeld in Customer Insights door [het verstrekken van de URL van de Microsoft Dataverse-omgeving](get-started-paid.md) bij het opzetten van de omgeving.
+Het opnemen van gegevens uit on-premises gegevensbronnen in doelgroepinzichten wordt ondersteund op basis van Microsoft Power Platform-gegevensstromen. Gegevensstromen kunnen worden ingeschakeld in Customer Insights door [het verstrekken van de URL van de Microsoft Dataverse-omgeving](create-environment.md) bij het opzetten van de omgeving.
 
 Gegevensbronnen die worden gemaakt na het koppelen van een Dataverse-omgeving met Customer Insights maken standaard gebruik van [Power Platform-gegevensstromen](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Gegevensstromen ondersteunen on-premises connectiviteit met behulp van de gegevensgateway. Verwijder gegevensbronnen die al bestonden vóór een Dataverse-omgeving werd gekoppeld en maak deze opnieuw om [de on-premises gegevensgateways te gebruiken](/data-integration/gateway/service-gateway-app).
 

@@ -1,72 +1,97 @@
 ---
-title: Verfijnde gebeurtenissen maken en wijzigen
-description: Procedure om verfijnde gebeurtenissen te maken en te wijzigen.
+title: Gebeurtenissen maken en wijzigen
+description: Gebeurtenissen maken en wijzigen.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 04/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 0344bac5f4d43df853309f43c94d95f962937f77c936ed7305c5de4a08835f04
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 935dc4cd41218842e8406b747daef47de04e337a
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034768"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606196"
 ---
-# <a name="create-and-modify-refined-events"></a>Verfijnde gebeurtenissen maken en wijzigen
+# <a name="create-and-modify-events"></a>Gebeurtenissen maken en wijzigen
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
-
 
 Een gebeurtenis bestaat uit gegevens die het gebruikersgedrag weergeven, zoals activiteit op een website.
 
 - Een *basis* gebeurtenis registreert wanneer een gebruiker een pagina bekijkt (weergavegebeurtenis) of interactie heeft met inhoud (actiegebeurtenis).
 - Een *verfijnde* gebeurtenis is een virtuele weergave van een basisgebeurtenis. U definieert verfijnde gebeurtenissen door eigenschappen te verwijderen en toe te voegen of door gebeurtenissen te filteren op basis van eigenschapwaarden.
 
-Gebruik verfijnde gebeurtenissen om de reikwijdte van een basisgebeurtenis voor [exporteren](export-events.md) te verkleinen of om eigenschappen te verwijderen die niet nodig zijn voor blootstelling.
+## <a name="prerequisites"></a>Vereisten
+
+Als u gebeurtenissen wilt bekijken, moeten de websitegegevens eerst worden verbonden met betrokkenheidsinzichten met een codefragment. Voor meer informatie, zie [Installeer de web-SDK op een website](instrument-website.md).
+
+ :::image type="content" source="media/new-events-connect-data.png" alt-text="Verbind eerst uw gegevens.":::
 
 ## <a name="create-refined-events"></a>Verfijnde gebeurtenissen maken
 
-Er zijn drie manieren om een verfijnde gebeurtenis te maken op basis van een basisgebeurtenis. 
+Gebruik verfijnde gebeurtenissen om de reikwijdte van een basisgebeurtenis voor [exporteren](export-events.md) te verkleinen of om eigenschappen te verwijderen die niet nodig zijn voor blootstelling.
 
-1. Ga naar **Gegevens**> **Gebeurtenissen** en kies een van de volgende opties:
-    - Selecteer **Nieuwe gebeurtenissen** en selecteer **Verfijnde gebeurtenissen maken**.
-    - Selecteer een basisgebeurtenis om een gedetailleerde weergave te openen en selecteer **Verfijnde gebeurtenissen maken** in het bovenste menu.
-    - Selecteer **Meer [...]** om het snelmenu voor een basisgebeurtenis te openen. Selecteer vervolgens **Verfijnde gebeurtenissen maken**.
-    
-    :::image type="content" source="media/create-refined-events-options.png" alt-text="Opties om verfijnde gebeurtenissen te maken.":::
+> [!NOTE]
+> Nadat u de web-SDK aan uw website heeft toegevoegd, kunt u uw basisgebeurtenissen bekijken en verfijnde gebeurtenissen maken. 
 
-1. Voer in het dialoogvenster **Verfijnde gebeurtenissen maken** de volgende informatie in:
+Uw basisgebeurtenissen bekijken:
 
-- Selecteer een gebeurtenis in de vervolgkeuzelijst **Basisgebeurtenissen** als u een nieuwe gebeurtenis maakt.
-- Voer een naam in het vak **Weergavenaam verfijnde gebeurtenissen** in.
-- Werk eventueel de voorgestelde **Werkelijke naam** bij zonder spaties te gebruiken.
+1. Ga naar **Gegevens** in het linkernavigatievenster.
 
-3. Selecteer **Maken** om uw instellingen toe te passen.
+1. Selecteer **Gebeurtenissen** om een lijst met alle gebeurtenissen in de werkruimte te zien.
 
-1. Selecteer in de gedetailleerde weergave van uw verfijnde evenement **Eigenschappen toevoegen en verwijderen** om het deelvenster **Eigenschappen bewerken** te openen. 
+    :::image type="content" source="media/data-events.png" alt-text="Bekijk gebeurtenissen.":::
 
-1. Gebruik de selectievakjes om de eigenschappen te selecteren die u wilt weergeven of verbergen. 
-   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Eigenschappen voor verfijnde gebeurtenissen bewerken.":::
+Een verfijnde gebeurtenis maken op basis van een basisgebeurtenis: 
 
-1. Selecteer **Bevestigen** om uw selectie toe te passen.
+1. Ga naar **Gegevens** > **Gebeurtenissen** en selecteer **+ Nieuwe gebeurtenissen** boven in het scherm.
 
-1. Selecteer **Opslaan** om de configuratie op te slaan.
+1. In het dialoogvenster **Nieuwe gebeurtenissen** selecteer **Verfijnde gebeurtenissen maken** en selecteer vervolgens **Volgende**.
+   
+     :::image type="content" source="media/new-events-wizard.png" alt-text="Wizard Nieuwe gebeurtenissen.":::
+     
+1. Voer in het dialoogvenster **Nieuwe gebeurtenissen** de volgende informatie in:
 
-## <a name="edit-refined-events"></a>Verfijnde gebeurtenissen bewerken
+   - Selecteer een gebeurtenis in de keuzelijst **Basisgebeurtenissen**.
+   - Voer een naam in het vak **Weergavenaam verfijnde gebeurtenissen** in.
+   - Werk eventueel de voorgestelde **Werkelijke naam** bij zonder spaties te gebruiken.
 
-U kunt de naam en de eigenschappen van een verfijnde gebeurtenis wijzigen.
+1. Selecteer **Maken** om uw instellingen toe te passen.
+
+De verfijnde gebeurtenis verschijnt nu in de lijst **Gebeurtenissen**.
 
 ### <a name="edit-event-name"></a>Gebeurtenisnaam bewerken
 
-1. Ga naar **Gegevens** > **Gebeurtenissen**. 
-1. Selecteer **Meer [...]** voor een gebeurtenis en selecteer **Naam bewerken**.
-1. Werk de naam van de gebeurtenis bij en selecteer **Naam wijzigen**.
+U kunt de naam en de eigenschappen van een basis- of verfijnde gebeurtenis wijzigen.
 
-### <a name="edit-selected-properties"></a>Geselecteerde eigenschappen bewerken
+1. Ga naar **Gegevens** > **Gebeurtenissen**. 
+
+1. Selecteer **Meer [...]** voor een gebeurtenis en selecteer **Naam bewerken**.
+    
+     :::image type="content" source="media/create-refined-events-options.png" alt-text="Opties om verfijnde gebeurtenissen te maken.":::
+
+3. Werk de naam van de gebeurtenis bij en selecteer **Naam wijzigen**.
+
+### <a name="view-the-details-of-a-refined-event"></a>De details van een verfijnde gebeurtenis bekijken:
+
+1. Selecteer in de lijst **Gebeurtenis** de basis- of verfijnde gebeurtenis. 
+
+1. Selecteer **Eigenschappen toevoegen en verwijderen** boven aan het scherm om het deelvenster **Eigenschappen bewerken** te openen. 
+
+     :::image type="content" source="media/add-remove-properties.png" alt-text="Eigenschappen toevoegen en verwijderen.":::
+
+1. Gebruik de selectievakjes om de eigenschappen te selecteren die u wilt weergeven of verbergen. 
+
+   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Eigenschappen voor verfijnde gebeurtenissen bewerken.":::
+
+1. Selecteer **Bevestigen** om uw selectie toe te passen en selecteer vervolgens **Opslaan**.
+
+
+### <a name="edit-selected-properties-for-a-refined-event"></a>Geselecteerde eigenschappen bewerken voor een verfijnde gebeurtenis
 
 1. Ga naar **Gegevens** > **Gebeurtenissen** en selecteer de verfijnde gebeurtenissen om de gedetailleerde weergave te openen.
 1. Selecteer **Eigenschappen toevoegen en verwijderen**. 

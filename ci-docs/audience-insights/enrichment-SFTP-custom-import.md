@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032706"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618676"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Klantprofielen verrijken met aangepaste gegevens (preview)
 
@@ -44,6 +44,8 @@ Om aangepaste SFTP-import te configureren, moet aan de volgende voorwaarden word
 1.  Selecteer **Volgende** en voer het **Pad** en de **Bestandsnaam** in van het gegevensbestand dat u wilt importeren.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Schermopname bij invoeren van gegevenslocatie.":::
+
+1. Selecteer **Volgende** en kies de klantgegevensset. Dit kunnen alle klantprofielen zijn of een segment.
 
 1. Selecteer **Volgende** en geef een naam op voor de verrijking en een naam voor de uitvoerentiteit. 
 
@@ -123,6 +125,6 @@ U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrij
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md) en [meetcriteria](measures.md), en [exporteer de gegevens](export-destinations.md) om gepersonaliseerde ervaringen aan uw klanten te leveren.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

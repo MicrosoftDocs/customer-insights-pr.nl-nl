@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465199"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606056"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Wat is er nieuw in de doelgroepinzichten-mogelijkheid van Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Updates van september 2021
+
+De updates in september 2021 omvatten nieuwe functies, prestatie-upgrades en bugfixes.
+
+### <a name="activities"></a>Activiteiten
+
+- **Verbeteringen in de tijdlijn van activiteiten** We hebben de filters voor de activiteitentijdlijn op klantprofielen uitgebreid. Bovendien kunt u het nieuwe filterdeelvenster gebruiken om te filteren op activiteitstype en op datum. Datums kunnen worden gefilterd met verschillende voorwaarden. Voor meer informatie, zie [Activiteitentijdlijnen op klantprofielen bekijken](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Relaties
+
+- **Ondersteuning voor relaties met meerdere hops** Gebruik relaties met meerdere hops bij het configureren van activiteiten en het definiëren van relaties tussen entiteiten. Relaties met meerdere hops gebruiken een tussenliggende entiteit om twee entiteiten te verbinden. Bij het configureren van een activiteit kunt u een relatie met meerdere hops gebruiken om uw activiteitenentiteit te verbinden met een tussenliggende entiteit en vervolgens met een klantentiteit. U kunt relaties met meerdere hops combineren met relaties met meerdere paden. Zie voor meer informatie [Relaties met meerdere hops](relationships.md#multi-hop-relationship).
+
+- **Ondersteuning voor relaties met meerdere paden** Gebruik relaties met meerdere paden bij het configureren van activiteiten en het definiëren van relaties tussen entiteiten. Relaties met meerdere paden relateren een bronentiteit aan meer dan één entiteit. Bij het configureren van een activiteit kunt u een relatie met meerdere paden gebruiken om uw activiteitenentiteit te verbinden met meer dan een klantentiteit. U kunt relaties met meerdere paden combineren met relaties met meerdere hops. Zie voor meer informatie [Relaties met meerdere paden](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Updates augustus 2021
 
