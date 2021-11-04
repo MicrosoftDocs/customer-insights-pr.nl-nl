@@ -1,7 +1,7 @@
 ---
 title: Door Machine Learning aangedreven voorgestelde segmenten
 description: Laat Machine Learning u helpen nieuwe en interessante segmenten te vinden op basis van klantkenmerken.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028354"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673177"
 ---
 # <a name="suggested-segments-preview"></a>Voorgestelde segmenten (preview)
 
@@ -23,7 +23,7 @@ Ontdek interessante segmenten van uw klanten met behulp van een AI-model. Deze d
 > [!NOTE]
 > De functie voor voorgestelde segmenten maakt gebruik van geautomatiseerde middelen om gegevens te evalueren en voorspellingen te doen op basis van die gegevens, en kan daarom worden gebruikt als een methode voor profilering, zoals die term wordt gedefinieerd door de Algemene Verordening Gegevensbescherming ("AVG"). Uw gebruik van deze functie om gegevens te verwerken, kan onderhevig zijn aan de AVG of andere wet- of regelgeving. U bent ervoor verantwoordelijk dat uw gebruik van Dynamics 365 Customer Insights, inclusief deze functie, voldoet aan alle toepasselijke wet- en regelgeving, inclusief wetten met betrekking tot privacy, persoonsgegevens, biometrische gegevens, gegevensbescherming en vertrouwelijkheid van communicatie.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Pagina met voorgestelde segmenten in Customer Insights met details van een suggestie in een deelvenster aan de zijkant.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Pagina met voorgestelde segmenten met details van een suggestie in een zijvenster.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Voorgestelde segmenten om uw KPI's te verbeteren
 
@@ -49,7 +49,7 @@ Segmentsuggesties zijn anders als u een numeriek kenmerk of een categorisch kenm
 
 Met een numeriek kenmerk als *jaarinkomen* of *lidmaatschapsperiode* als primair kenmerk stelt het systeem segmenten voor die een hogere of lagere gemiddelde waarde van het numerieke kenmerk hebben in vergelijking met alle klanten.
 
-Een categorisch kenmerk als *klanttevredenheid* omdat het primaire kenmerk resulteert in voorgestelde segmenten met een hoger of lager percentage klanten die tot een bepaalde categorie behoren in vergelijking met het percentage van alle klanten die tot dezelfde categorie behoren. Bijvoorbeeld *klanttevredenheid* is gekozen als het primaire kenmerk en bestaat uit drie categorieën (*Laag*, *Gemiddeld* en *Hoog*). Voor elke categorie worden segmenten voorgesteld die een significant hoger of lager percentage klanten hebben die tot die categorie behoren in vergelijking met het aandeel van alle klanten in dezelfde categorie. Als 22% van alle klanten voor tevredenheid *Hoog* scoren, dus alleen segmenten met een significant hoger of lager percentage klanten met tevredenheid *Hoog* in vergelijking met 22% zal worden voorgesteld voor die categorie. Evenzo worden segmenten voorgesteld voor elk van de andere categorieën (*Laag* en *Gemiddeld*) als ze statistisch significant zijn.
+Een categorisch kenmerk als *klanttevredenheid* omdat het primaire kenmerk resulteert in voorgestelde segmenten met een hoger of lager percentage klanten die tot een bepaalde categorie behoren in vergelijking met het percentage van alle klanten die tot dezelfde categorie behoren. Bijvoorbeeld *klanttevredenheid* is gekozen als het primaire kenmerk en bestaat uit drie categorieën (*Laag*, *Gemiddeld* en *Hoog*). Voor elke categorie worden segmenten voorgesteld die een hoger of lager percentage klanten hebben die tot die categorie behoren in vergelijking met het aandeel van alle klanten in dezelfde categorie. Als 22% van alle klanten een *hoge* tevredenheid hebben, worden alleen segmenten met een hoger of lager aandeel van klanten met een *hoge* tevredenheid in vergelijking met 22% voorgesteld voor die categorie. Evenzo worden segmenten voorgesteld voor elk van de andere categorieën (*Laag* en *Gemiddeld*) als ze statistisch significant zijn.
 
 > [!NOTE]
 > Momenteel ondersteunen we alleen primaire categorische kenmerken met maximaal 10 categorieën. Als u segmentsuggesties wilt zien op basis van een primair kenmerk met meer dan 10 categorieën, raden we u aan enkele categorieën te groeperen om het aantal categorieën terug te brengen tot 10 of minder. Deze beperking is alleen van toepassing op primaire kenmerken. Voor het beïnvloeden van categorische kenmerken ondersteunen we momenteel maximaal 100 categorieën.
@@ -77,7 +77,7 @@ Een categorisch kenmerk als *klanttevredenheid* omdat het primaire kenmerk resul
 
 Zodra het AI-model de suggesties heeft gegenereerd, vindt u ze bij **Segmenten** > **Suggesties (preview)**.
  
-Selecteer een voorgesteld segment om de details van die suggestie te bekijken, inclusief een vergelijking van de gemiddelde waarde en het aantal segmentleden. U kunt ook de kenmerkwaarden of regels bekijken die het AI-model heeft geleerd om het geselecteerde segment voor te stellen.
+Selecteer een voorgesteld segment om de details van die suggestie te bekijken. U kunt ook de kenmerkwaarden of regels bekijken die het AI-model heeft geleerd om het geselecteerde segment voor te stellen.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Een suggestie als een segment opslaan
 

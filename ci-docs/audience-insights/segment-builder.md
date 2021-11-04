@@ -1,7 +1,7 @@
 ---
 title: Segmenten maken met behulp van de opbouwfunctie voor segmenten
 description: Maak segmenten van klanten om deze te groeperen op basis van verschillende kenmerken.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622998"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673544"
 ---
 # <a name="create-segments"></a>Segmenten maken
 
@@ -23,6 +23,7 @@ Definieer complexe filters rond de uniforme klantentiteit en de bijhorende gerel
 > [!TIP]
 > - Snelle segmenten worden alleen ondersteund in omgevingen voor **individuele klanten**.    
 > - Segmenten op basis van **individuele klanten** nemen automatisch beschikbare contactgegevens voor segmentleden op. In omgevingen voor **zakelijke accounts** zijn segmenten gebaseerd op accounts (bedrijven of dochterondernemingen). Om contactgegevens in een segment op te nemen, gebruikt u de functionaliteit **Projectkenmerken** in de segmentbouwer.
+>    - Zorg ervoor dat de contactgegevensbronnen [semantisch zijn toegewezen aan de entiteit ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Opbouwfunctie voor segmenten
 
@@ -52,7 +53,7 @@ Het bovenstaande voorbeeld illustreert de segmentatiemogelijkheid. We hebben een
 
 Er zijn meerdere manieren om een nieuw segment te maken. In dit gedeelte wordt beschreven hoe u uw eigen segment helemaal opnieuw kunt opbouwen. U kunt ook een *snel segment* maken op basis van bestaande entiteiten of gebruikmaken van Machine Learning-modellen om *voorgestelde segmenten* te krijgen. Ga voor meer informatie naar [Overzicht van segmenten](segments.md).
 
-Terwijl u een segment maakt, kunt u een concept opslaan. In de conceptfase wordt een segment opgeslagen als inactief segment. Wanneer u de segmentconfiguratie hebt voltooid, voert u deze uit om het segment te activeren. U kunt een segment ook ***Activeren** vanuit de pagina *Alle segmenten**.
+Terwijl u een segment maakt, kunt u een concept opslaan. In de conceptfase wordt een segment opgeslagen als inactief segment. Wanneer u de segmentconfiguratie hebt voltooid, voert u deze uit om het segment te activeren. U kunt een segment ook **activeren** via de pagina **Alle segmenten**.
 
 1. Ga naar de pagina **Segmenten**.
 
@@ -86,17 +87,25 @@ Terwijl u een segment maakt, kunt u een concept opslaan. In de conceptfase wordt
 
    Bij gebruik van de OF-operator moeten alle voorwaarden zijn gebaseerd op entiteiten die in het relatiepad zijn opgenomen.
 
-   - U kunt meerdere regels maken om verschillende sets klantrecords te maken. U kunt groepen combineren om de klanten op te nemen die nodig zijn voor uw businesscase. Selecteer **Regel toevoegen** om een nieuwe regel te maken. Als u een entiteit niet in een regel kunt opnemen vanwege het opgegeven relatiepad, moet u een nieuwe regel maken om er kenmerken uit te kiezen.
+   - U kunt meerdere regels maken om verschillende sets klantrecords te maken. U kunt groepen combineren om de klanten op te nemen die nodig zijn voor uw businesscase. Selecteer **Regel toevoegen** om een nieuwe regel te maken. Als u een entiteit niet in een regel kunt opnemen vanwege het opgegeven relatiepad, moet u met name een nieuwe regel maken om er kenmerken uit te kiezen.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Voeg een nieuwe regel toe aan een segment en kies de set-operator.":::
 
    - Selecteer een van de set-operators: **Samenvoegen**, **Doorsnede** of **Uitsluiten**.
 
       - **Verbinding** verbindt de twee groepen.
-      - **Overlappen** overlapt de twee groepen. Alleen gegevens die *gemeenschappelijk* zijn voor beide groepen, worden behouden in de geharmoniseerde groep.
-      - **Behalve** combineert de twee groepen. Alleen gegevens in groep A die *niet gemeenschappelijk* zijn voor gegevens in groep B, worden behouden.
+      - **Overlappen** overlapt de twee groepen. Alleen gegevens die *voorkomen* in beide groepen blijven in de verenigde groep.
+      - **Behalve** combineert de twee groepen. Alleen gegevens in groep A die *niet voorkomen* in groep B worden bewaard.
 
-1. Segmenten genereren standaard de entiteit voor uitvoer die alle kenmerken bevat van klantprofielen die overeenkomen met de gedefinieerde filters. Als een segment is gebaseerd op andere entiteiten dan de entiteit *Klant*, kunt u meer attributen van deze entiteiten aan de uitvoerentiteit toevoegen. Selecteer **Projectkernmerken** om de kenmerken te kiezen die aan de uitvoerentiteit worden toegevoegd.  
+1. Segmenten genereren standaard de entiteit voor uitvoer die alle kenmerken bevat van klantprofielen die overeenkomen met de gedefinieerde filters. Als een segment is gebaseerd op andere entiteiten dan de entiteit *Klant*, kunt u meer attributen van deze entiteiten aan de uitvoerentiteit toevoegen. Selecteer **Projectkernmerken** om de kenmerken te kiezen die aan de uitvoerentiteit worden toegevoegd. 
+
+   > [!IMPORTANT]
+   > Voor segmenten die zijn gebaseerd op zakelijke accounts, moeten details van een of meer contacten van elke account uit de entiteit *ContactProfile* worden opgenomen in het segment om toe te staan dat het segment kan worden geactiveerd of geëxporteerd naar bestemmingen waarvoor contactgegevens nodig zijn. Zie voor meer informatie over de entiteit *ContactProfile* het onderwerp [Semantische toewijzingen](semantic-mappings.md).
+   > Een voorbeelduitvoer voor een segment op basis van zakelijke accounts met geprojecteerde kenmerken van contactpersonen kan er als volgt uitzien: 
+   >
+   > |Id  |Accountnaam  |Omzet  |Naam van contactpersoon  | Rol van contactpersoon|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100 K | [Abbie Moss, Ruth Soto]  | [CEO, inkoopmanager]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Voorbeeld van geprojecteerde kenmerken die in het zijvenster zijn geselecteerd om aan de entiteit voor uitvoer toe te voegen.":::
   
@@ -107,13 +116,14 @@ Terwijl u een segment maakt, kunt u een concept opslaan. In de conceptfase wordt
    > - Als het kenmerk dat u wilt projecteren meer dan één stap verwijderd is van de entiteit *Klant*, zoals gedefinieerd door de relatie, moet dat kenmerk worden gebruikt in elke regel van de segmentquery die u maakt. 
    > - Als het kenmerk dat u wilt projecteren slechts één stap verwijderd is van de entiteit *Klant*, hoeft dat kenmerk niet aanwezig te zijn in elke regel van de segmentquery die u maakt. 
    > - Bij het gebruik van set-operators wordt rekening gehouden met **geprojecteerde kenmerken**.
-   > - Voor segmenten die zijn gebaseerd op zakelijke accounts, moeten details van een of meer contacten van elke account worden opgenomen in het segment om toe te staan dat het segment kan worden geactiveerd of geëxporteerd naar bestemmingen waarvoor contactgegevens nodig zijn.
 
 1. Voordat u het segment opslaat en uitvoert, selecteert u **Details bewerken** naast de naam van het segment. Geef een naam op voor uw segment en werk de voorgestelde **Naam van uitvoerentiteit** voor het segment bij. U kunt ook een beschrijving aan het segment toevoegen.
 
 1. Selecteer **Uitvoeren** om het segment op te slaan, activeer het en begin met het verwerken van uw segment op basis van alle regels en voorwaarden. Anders wordt het opgeslagen als een inactief segment.
-
+   
 1. Selecteer **Terug naar segmenten** om terug te gaan naar de pagina **Segmenten**.
+
+1. Standaard wordt het segment gemaakt als een dynamisch segment. Dit betekent dat het segment wordt vernieuwd tijdens systeemvernieuwingen. Als u de [automatische vernieuwing wilt beëindigen](segments.md#manage-existing-segments), selecteert u het segment en kiest u de optie **Statisch maken**. Statische segmenten kunnen op elk moment [handmatig worden vernieuwd](segments.md#refresh-segments).
 
 > [!TIP]
 > - De opbouwfunctie voor segmenten stelt geen geldige waarden van entiteiten voor bij het instellen van de operators voor de voorwaarden. U kunt naar **Gegevens** > **Entiteiten** gaan en de entiteitsgegevens downloaden om te zien welke waarden er beschikbaar zijn.

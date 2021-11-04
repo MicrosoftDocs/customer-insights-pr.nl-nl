@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617549"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7672993"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Verrijking voor klantprofielen (preview)
 
@@ -29,7 +29,7 @@ U hebt de machtigingen Inzender of Beheerder nodig om verrijkingen te kunnen mak
 
 Op het tabblad **Ontdekken** vindt u alle ondersteunde verrijkingsopties.
 
-# <a name="individual-customers-b2c"></a>[Individuele klanten (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
 
 - [Merken](enrichment-microsoft.md) die worden geleverd door Microsoft
 - [Interesses](enrichment-microsoft.md) die worden geleverd door Microsoft
@@ -38,7 +38,7 @@ Op het tabblad **Ontdekken** vindt u alle ondersteunde verrijkingsopties.
 - [Aangepaste gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) geleverd door Microsoft
 
-# <a name="business-accounts-b2b"></a>[Zakelijke accounts (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
 
 - [Bedrijfsgegevens](enrichment-leadspace.md) worden verstrekt door Leadspace
 - [Uitgebreide adressen](enrichment-enhanced-addresses.md) geleverd door Microsoft 

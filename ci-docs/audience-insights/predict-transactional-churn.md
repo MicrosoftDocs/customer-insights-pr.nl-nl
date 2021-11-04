@@ -1,7 +1,7 @@
 ---
 title: Voorspelling van transactieverloop
 description: Voorspel of het risico bestaat dat een klant de producten of services van uw bedrijf niet meer zal kopen.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643371"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673039"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Voorspelling van transactieverloop (preview)
 
@@ -28,6 +28,32 @@ Voor omgevingen die zijn gebaseerd op zakelijke accounts, kunnen we het transact
 > Probeer de tutorial voor voorspelling van het transactieverloop met voorbeeldgegevens: [Voorbeeldgids voor voorspelling van transactieverloop (preview)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Vereisten
+
+# <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
+
+- Minimaal [inzendermachtigingen](permissions.md) in Customer Insights.
+- Zakelijke kennis om te begrijpen wat verloop voor uw bedrijf betekent. We ondersteunen op tijd gebaseerde verloopdefinities, wat betekent dat een klant na een periode zonder aankopen wordt beschouwd als verlopen.
+- Gegevens over uw transacties/aankopen en hun geschiedenis:
+    - Transactie-id's om aankopen/transacties te onderscheiden.
+    - Klant-id's om transacties af te stemmen op uw klanten.
+    - Transactiegebeurtenisdatums, die de datums definiëren waarop de transactie plaatsvond.
+    - Het semantische gegevensschema voor aankopen/transacties vereist de volgende informatie:
+        - **Transactie-id**: een unieke identificatie van een aankoop of transactie.
+        - **Transactiedatum**: de datum van de aankoop of de transactie.
+        - **Waarde van de transactie**: het bedrag in de valuta/numerieke waarde van de transactie/het item.
+        - (Optioneel) **Unieke product-id**: de id van het gekochte product of de gekochte service als uw gegevens zich op regelitemniveau bevinden.
+        - (Optioneel) **Of deze transactie een retour was**: een waar/onwaar-veld dat aangeeft of de transactie een retour was of niet. Als de **Waarde van de transactie** negatief is, gebruiken we deze informatie ook om een retour af te leiden.
+- (Optioneel) Gegevens over klantactiviteiten:
+    - Activiteits-id's om activiteiten van hetzelfde type te onderscheiden.
+    - Klant-id's om activiteiten te koppelen aan uw klanten.
+    - Activiteitsinformatie met de naam en datum van de activiteit.
+    - Het semantische gegevensschema voor klantactiviteiten omvat:
+        - **Primaire sleutel:** een unieke id voor een activiteit. Bijvoorbeeld een websitebezoek of een gebruiksrecord waaruit blijkt dat de klant een monster van uw product heeft geprobeerd.
+        - **Tijdstempel:** de datum en tijd van de gebeurtenis die wordt geïdentificeerd door de primaire sleutel.
+        - **Gebeurtenis:** de naam van de gebeurtenis die u wilt gebruiken. Een veld met de naam 'UserAction' in een supermarkt kan bijvoorbeeld een kortingsbon zijn die door de klant wordt gebruikt.
+        - **Details:** gedetailleerde informatie over de gebeurtenis. Een veld met de naam 'CouponValue' in een supermarkt kan bijvoorbeeld de valutawaarde van de kortingsbon zijn.
+
+# <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
 
 - Minimaal [inzendermachtigingen](permissions.md) in Customer Insights.
 - Zakelijke kennis om te begrijpen wat verloop voor uw bedrijf betekent. We ondersteunen op tijd gebaseerde verloopdefinities, wat betekent dat een klant na een periode zonder aankopen wordt beschouwd als verlopen.
@@ -59,6 +85,9 @@ Voor omgevingen die zijn gebaseerd op zakelijke accounts, kunnen we het transact
         - **Land:** het land van een klant.
         - **Branche:** het branchetype van een klant. Een veld met de naam 'Branche' voor een koffiebrander kan bijvoorbeeld aangeven of de klant retail was.
         - **Classificatie:** de categorisering van een klant voor uw bedrijf. Een veld met de naam 'Waardesegment' voor een koffiebrander kan bijvoorbeeld het klantniveau aangeven op basis van de klantgrootte.
+
+---
+
 - Voorgestelde gegevenskenmerken:
     - Voldoende historische gegevens: transactiegegevens voor minimaal het dubbele van het geselecteerde tijdvenster. Bij voorkeur twee tot drie jaar transactiegeschiedenis. 
     - Meerdere aankopen per klant: idealiter ten minste twee transacties per klant.
@@ -114,6 +143,32 @@ Voor omgevingen die zijn gebaseerd op zakelijke accounts, kunnen we het transact
 
 1. Selecteer **Volgende**.
 
+# <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Aanvullende gegevens toevoegen (optioneel)
+
+Configureer de relatie van uw klantactiviteitentiteit met de entiteit *Klant*.
+
+1. Selecteer het veld dat de klant identificeert in de tabel Klantactiviteiten. Het kan rechtstreeks verband houden met de primaire klant-id van de entiteit *Klant*.
+
+1. Selecteer de entiteit die uw primaire *Klant*-entiteit is.
+
+1. Voer een naam in waarmee de relatie wordt omschreven.
+
+#### <a name="customer-activities"></a>Klantactiviteiten
+
+1. Selecteer eventueel **Gegevens toevoegen** bij **Klantactiviteiten**.
+
+1. Selecteer het type semantische activiteit dat de gegevens bevat die u wilt gebruiken, en selecteer vervolgens een of meer activiteiten in de sectie **Activiteiten**.
+
+1. Selecteer een activiteitstype dat overeenkomt met het type klantactiviteit dat u configureert. Selecteer **Nieuw maken** en kies een beschikbaar activiteitstype of maak een nieuw type aan.
+
+1. Selecteer **Volgende** en vervolgens **Opslaan**.
+
+1. Herhaal de bovenstaande stappen als u nog andere klantactiviteiten hebt die u wilt opnemen.
+
+# <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Voorspellingsniveau selecteren
 
 De meeste voorspellingen worden op klantniveau gemaakt. In sommige situaties is dat misschien niet gedetailleerd genoeg om aan uw zakelijke behoeften te voldoen. U kunt deze functie gebruiken om bijvoorbeeld het verloop voor een filiaal van een klant te voorspellen, in plaats van voor de klant als geheel.
@@ -122,9 +177,9 @@ De meeste voorspellingen worden op klantniveau gemaakt. In sommige situaties is 
 
 1. Vouw de entiteiten uit waarvan u het secundaire niveau wilt kiezen, of gebruik het zoekfiltervak om de geselecteerde opties te filteren.
 
-1. Kies het kenmerk dat u als secundair niveau wilt gebruiken en selecteer vervolgens **Toevoegen**
+1. Kies het kenmerk dat u als secundair niveau wilt gebruiken en selecteer vervolgens **Toevoegen**.
 
-1. Selecteer **Volgende**
+1. Selecteer **Volgende**.
 
 > [!NOTE]
 > De entiteiten die in deze sectie beschikbaar zijn, worden weergegeven omdat ze een relatie hebben met de entiteit die u in de vorige sectie hebt gekozen. Als u de entiteit niet ziet die u wilt toevoegen, zorg er dan voor dat deze een geldige relatie heeft in **Relaties**. Alleen één-op-één- en veel-op-één-relaties zijn geldig voor deze configuratie.
@@ -159,7 +214,7 @@ Configureer de relatie van uw klantactiviteitentiteit met de entiteit *Klant*.
 
 1. Selecteer **Volgende**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Geef een optionele lijst met benchmarkaccounts op (alleen zakelijke accounts)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Een optionele lijst met benchmarkaccounts opgeven
 
 Voeg een lijst toe met uw zakelijke klanten en accounts die u als benchmarks wilt gebruiken. U krijgt [details voor deze benchmark-accounts](#review-a-prediction-status-and-results) inclusief hun verloopscore en de kenmerken die het meeste invloed hadden op hun verloopvoorspelling.
 
@@ -168,6 +223,8 @@ Voeg een lijst toe met uw zakelijke klanten en accounts die u als benchmarks wil
 1. Kies de klanten die als benchmark fungeren.
 
 1. Selecteer **Volgende** om door te gaan.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Schema instellen en configuratie bekijken
 
@@ -201,6 +258,25 @@ Voeg een lijst toe met uw zakelijke klanten en accounts die u als benchmarks wil
 1. Selecteer de verticale puntjes naast de voorspelling waarvoor u de resultaten wilt beoordelen en selecteer **Weergave**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Weergeven om de resultaten van een voorspelling te zien.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
+
+1. Er zijn drie primaire gegevenssecties op de resultatenpagina:
+   - **Prestaties trainingsmodel**: mogelijke scores zijn A, B of C. Deze score geeft de prestatie van de voorspelling aan en kan u helpen de beslissing te nemen om gebruik te maken van de resultaten die in de uitvoerentiteit zijn opgeslagen. Scores worden bepaald op basis van de volgende regels: 
+        - **A** wanneer het model nauwkeurig ten minste 50% van de totale voorspellingen heeft voorspeld, en wanneer het percentage nauwkeurige voorspellingen voor verlopen klanten met ten minste 10% groter is dan het basislijnpercentage.
+            
+        - **B** wanneer het model nauwkeurig ten minste 50% van de totale voorspellingen heeft voorspeld, en wanneer het percentage nauwkeurige voorspellingen voor verlopen klanten tot 10% groter is dan het basislijnpercentage.
+            
+        - **C** wanneer het model nauwkeurig minder dan 50% van de totale voorspellingen heeft voorspeld, of wanneer het percentage nauwkeurige voorspellingen voor verlopen klanten minder is dan het basislijnpercentage.
+               
+        - **Basislijn** neemt de invoer van het voorspellingstijdvenster voor het model (bijvoorbeeld een jaar), en het model deelt de tijd in fracties door deze door 2 te delen totdat de tijdsperiode van een maand of minder wordt bereikt. Het gebruikt deze breuken om een bedrijfsregel te maken voor klanten die in dit tijdsbestek niets hebben gekocht. Deze klanten worden als verlopen beschouwd. De op tijd gebaseerde bedrijfsregel met de hoogste kans om te goed voorspellen wie waarschijnlijk zal verlopen, wordt gekozen als basislijnmodel.
+            
+    - **Waarschijnlijkheid van verloop (aantal klanten)**: groepen klanten op basis van hun voorspelde verlooprisico. Deze gegevens kunnen u later helpen als u een klantensegment wilt maken met een hoog verlooprisico. Dergelijke segmenten helpen u te begrijpen waar uw grens voor segmentlidmaatschap moet liggen.
+       
+    - **Meest invloedrijke factoren**: er zijn veel factoren waarmee rekening wordt gehouden bij het maken van uw voorspelling. Voor elke factor wordt het belang berekend van de gecombineerde voorspellingen die een model maakt. U kunt deze factoren gebruiken om de resultaten van uw voorspelling te valideren, of u kunt deze informatie later gebruiken om [segmenten te maken](segments.md) die het verlooprisico voor klanten kunnen helpen beïnvloeden.
+
+
+# <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
 
 1. Er zijn drie primaire gegevenssecties op de resultatenpagina:
    - **Prestaties trainingsmodel**: mogelijke scores zijn A, B of C. Deze score geeft de prestatie van de voorspelling aan en kan u helpen de beslissing te nemen om gebruik te maken van de resultaten die in de uitvoerentiteit zijn opgeslagen. Scores worden bepaald op basis van de volgende regels: 
@@ -237,6 +313,11 @@ Voeg een lijst toe met uw zakelijke klanten en accounts die u als benchmarks wil
        Wanneer u klantverloop op accountniveau voorspelt, worden alle accounts in aanmerking genomen bij het afleiden van de gemiddelde kenmerkwaarden voor klantverloopsegmenten. Voor verloopvoorspellingen op secundair niveau voor elk account, hangt de afleiding van verloopsegmenten af van het secundair niveau van het item dat in het deelvenster is geselecteerd. Als een artikel bijvoorbeeld een secundair niveau van productcategorie = kantoorbenodigdheden heeft, worden alleen de artikelen met kantoorbenodigdheden als productcategorie in aanmerking genomen bij het bepalen van de gemiddelde kenmerkwaarden voor verloopsegmenten. Deze logica wordt toegepast om te zorgen voor een eerlijke vergelijking van de kenmerkwaarden van het item met de gemiddelde waarden over de segmenten met laag, gemiddeld en hoog verloop.
 
        In sommige gevallen is de gemiddelde waarde van segmenten met laag, gemiddeld of hoog verloop leeg of niet beschikbaar omdat er geen items zijn die behoren tot de overeenkomstige verloopsegmenten op basis van de bovenstaande definitie.
+       
+       > [!NOTE]
+       > De interpretatie van waarden onder de kolommen Laag, Gemiddeld en Hoog is anders voor categorische kenmerken zoals land of bedrijfstak. Omdat het begrip gemiddelde kenmerkwaarde niet van toepassing is op categorische kenmerken, zijn de waarden in deze kolommen het aandeel klanten in segmenten met een laag, gemiddeld of hoog verloop die vergeleken met het item geselecteerd in het zijpaneel dezelfde waarde hebben als het categorische kenmerk.
+
+---
 
 ## <a name="manage-predictions"></a>Voorspellingen beheren
 

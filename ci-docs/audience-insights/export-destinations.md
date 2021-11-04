@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623095"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673317"
 ---
 # <a name="exports-preview-overview"></a>Overzicht van Exports (preview)
 
@@ -32,14 +32,14 @@ Er zijn twee hoofdtypen exports:
 
 ### <a name="export-segments"></a>Segmenten exporteren
 
-**Segmenten exporteren in omgevingen voor zakelijke accounts (B2B) of individuele klanten (B2C)**  
-De meeste exportopties ondersteunen beide typen omgevingen. Het exporteren van segmenten naar verschillende doelsystemen heeft specifieke eisen. Over het algemeen bevat een segmentlid, het klantprofiel, contactgegevens. Hoewel dit meestal het geval is voor segmenten die zijn gebaseerd op individuele klanten (B2C), is dit niet noodzakelijk het geval voor segmenten die zijn gebaseerd op zakelijke accounts (B2B). 
+**Segmenten exporteren in omgevingen voor zakelijke accounts (B2B) of individuele consumenten (B2C)**  
+De meeste exportopties ondersteunen beide typen omgevingen. Het exporteren van segmenten naar verschillende doelsystemen heeft specifieke eisen. Over het algemeen bevat een segmentlid, het klantprofiel, contactgegevens. Hoewel dit meestal het geval is voor segmenten die zijn gebaseerd op individuele consumenten (B2C), hoeft dit niet het geval te zijn voor segmenten die zijn gebaseerd op zakelijke accounts (B2B). 
 
 **Segmentexport in omgevingen voor zakelijke accounts (B2B)**  
 - Segmenten in de context van omgevingen voor zakelijke accounts zijn gebouwd op de entiteit *account*. Om accountsegmenten ongewijzigd te exporteren, moet het doelsysteem pure accountsegmenten ondersteunen. Dit is het geval voor [LinkedIn](export-linkedin-ads.md) wanneer u kiest voor de optie **bedrijf** bij het definiëren van de export.
 - Voor alle andere doelsystemen zijn velden van de contactentiteit vereist Om ervoor te zorgen dat accountsegmenten gegevens kunnen ophalen van gerelateerde contactpersonen, moet uw segmentdefinitie kenmerken van de contactentiteit projecteren. Meer informatie over het [configureren van segmenten en projectkenmerken](segment-builder.md).
 
-**Segmentexport in omgevingen voor individuele klanten (B2C)**  
+**Segmentexport in omgevingen voor individuele consumenten (B2C)**  
 - Segmenten in de context van omgevingen voor individuele klanten zijn gebouwd op de entiteit *geharmoniseerd klantprofiel*. Elk segment dat voldoet aan de eisen van de doelsystemen (bijvoorbeeld een e-mailadres), kan worden geëxporteerd.
 
 **Limieten voor segmentexport**  

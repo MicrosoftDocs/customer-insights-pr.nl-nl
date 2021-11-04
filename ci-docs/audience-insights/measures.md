@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622853"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673364"
 ---
 # <a name="define-and-manage-measures"></a>Meetcriteria definiëren en beheren
 
@@ -28,7 +28,7 @@ Gebruik de opbouwfunctie voor meetcriteria om bedrijfsactiviteiten te plannen do
 
 In deze sectie wordt uitgelegd hoe u een geheel nieuw meetcriterium maakt. U kunt een meting maken met gegevenskenmerken van gegevensentiteiten waarvoor een relatie is ingesteld om verbinding te maken met de entiteit geharmoniseerd klantprofiel.
 
-# <a name="individual-customers-b2c"></a>[Individuele klanten (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
 
 1. Ga in doelgroepinzichten naar **Meetcriteria**.
 
@@ -92,7 +92,7 @@ In deze sectie wordt uitgelegd hoe u een geheel nieuw meetcriterium maakt. U kun
 
 1. Ga naar **Meetcriteria** om het nieuw gemaakte meetcriterium in de lijst te zien.
 
-# <a name="business-accounts-b2b"></a>[Zakelijke accounts (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
 
 1. Ga in doelgroepinzichten naar **Meetcriteria**.
 
@@ -164,7 +164,7 @@ In deze sectie wordt uitgelegd hoe u een geheel nieuw meetcriterium maakt. U kun
 
 U kunt vooraf gedefinieerde sjablonen van veelgebruikte meetcriteria gebruiken om deze te maken. Gedetailleerde beschrijvingen van de sjablonen en een begeleide ervaring helpen u bij het efficiënt maken van meetcriteria. Sjablonen bouwen voort op toegewezen gegevens uit de entiteit *Unified Activity*. Zorg er dus voor dat u [klantactiviteiten](activities.md) hebt geconfigureerd voordat u een meetcriterium maakt op basis van een sjabloon.
 
-# <a name="individual-customers-b2c"></a>[Individuele klanten (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
 
 U kunt vooraf gedefinieerde sjablonen van veelgebruikte meetcriteria gebruiken om deze te maken. Gedetailleerde beschrijvingen van de sjablonen en een begeleide ervaring helpen u bij het efficiënt maken van meetcriteria. Sjablonen bouwen voort op toegewezen gegevens uit de entiteit *Unified Activity*. Zorg er dus voor dat u [klantactiviteiten](activities.md) hebt geconfigureerd voordat u een meetcriterium maakt op basis van een sjabloon.
 
@@ -212,7 +212,7 @@ De volgende procedure beschrijft de stappen om een nieuw meetcriterium op te ste
 
 1. U kunt nu **Uitvoeren** selecteren om de resultaten van het meetcriterium te berekenen. Selecteer **Concept opslaan** om het later te verfijnen.
 
-# <a name="business-accounts-b2b"></a>[Zakelijke accounts (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
 
 Deze functie is alleen beschikbaar voor metingen die zijn gemaakt in omgevingen met individuele klanten als primaire doelgroep.
 

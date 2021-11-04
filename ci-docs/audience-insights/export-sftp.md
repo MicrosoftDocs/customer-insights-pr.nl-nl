@@ -9,16 +9,18 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b19ca6b8085846785682046f83d0ed4758269e5b98303692c703d995407ca7dd
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a54025588945e4db6ab800dca034520b5f08d49b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035455"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673910"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Segmenten en andere gegevens exporteren naar SFTP (preview)
 
 Gebruik uw klantgegevens in toepassIngen van derden door ze te exporteren naar een SFTP-locatie (Secure File Transfer Protocol).
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Vereisten voor verbinding
 

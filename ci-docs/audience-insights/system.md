@@ -1,7 +1,7 @@
 ---
 title: Systeemconfiguratie in doelgroepinzichten
 description: Meer informatie over systeeminstellingen in Dynamics 365 Customer Insights-mogelijkheden voor doelgroepinzichten.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035892"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651834"
 ---
 # <a name="system-configuration"></a>Systeemconfiguratie
 
@@ -24,9 +24,9 @@ De pagina **Systeem** bevat de volgende tabbladen:
 - [API-gebruik](#api-usage-tab)
 - [Info](#about-tab)
 - [Algemeen](#general-tab)
+- [Beveiliging](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Systeempagina.](media/system-tabs.png "Systeempagina")
+:::image type="content" source="media/system-tabs.png" alt-text="Tabblad Instellingen op de systeempagina.":::
 
 ## <a name="status-tab"></a>Tabblad Status
 
@@ -84,9 +84,15 @@ Het tabblad **Info** bevat de **weergavenaam** van uw organisatie, de actieve **
 
 ## <a name="general-tab"></a>Tabblad Algemeen
 
-Er zijn twee opties op het tabblad **Algemeen**, namelijk **Taal** en **Indeling voor land/regio**.
+U kunt de taal en de indeling voor land/regio wijzigen op het tabblad **Algemeen**.
 
-De app [ondersteunt een aantal talen](supported-languages.md). Kies om uw voorkeurstaal te wijzigen een **taal** uit de dropdown.
+Customer Insights [ondersteunt een aantal talen](/dynamics365/get-started/availability). De app gebruikt uw taalvoorkeur om elementen als het menu, labeltekst en systeemberichten in uw voorkeurstaal weer te geven.
+
+Geïmporteerde gegevens en informatie die u handmatig hebt ingevoerd, worden niet vertaald.
+
+### <a name="update-the-settings"></a>De instellingen bijwerken
+
+Kies om uw voorkeurstaal te wijzigen een **taal** uit de dropdown.
 
 Gebruik de vervolgkeuzelijst **Indeling voor land/regio** om de gewenste opmaak voor datums, tijd en cijfers te wijzigen. Onder dit veld wordt een opmaakvoorbeeld weergegeven. Het systeem stelt automatisch een keuze voor wanneer u een nieuwe taal kiest.
 
@@ -105,6 +111,13 @@ Vind details over het realtime API-gebruik en kijk welke gebeurtenissen hebben p
 
    Bewerkingen die gebruikmaken van [realtime gegevensopname](real-time-data-ingestion.md) bevatten een knop met een verrekijkersymbool om realtime API-gebruik te bekijken. Selecteer de knop om een deelvenster aan de zijkant te openen met gebruiksdetails voor het realtime API-gebruik in de huidige omgeving.   
    Gebruik het vak **Groeperen op** in het deelvenster **Realtime API-gebruik** om te kiezen hoe u uw realtime interacties het best kunt presenteren. U kunt de gegevens groeperen op API-methode, entiteit gekwalificeerde naam (opgenomen entiteit), gemaakt door (bron van de gebeurtenis), resultaat (succes of mislukking) of foutcodes. De gegevens zijn beschikbaar als geschiedenisdiagram en als tabel.
+
+## <a name="security-tab"></a>Tabblad Beveiliging
+
+Via het tabblad **Beveiliging** kunt u uw eigen [Azure Key Vault](/azure/key-vault/general/basic-concepts) voor de omgeving koppelen en beheren.
+De speciale sleutelkluis kan worden gebruikt om geheimen in de nalevingsgrens van een organisatie op te zetten en te gebruiken. Doelgroepinzichten kunnen de geheimen in Azure Key Vault gebruiken om [verbindingen in te stellen](connections.md) naar systemen van derden.
+
+Zie [Bring your own Azure Key Vault](use-azure-key-vault.md) voor meer informatie.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

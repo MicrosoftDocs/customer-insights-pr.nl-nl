@@ -1,19 +1,19 @@
 ---
 title: Ga aan de slag met een betaalde licentie van Dynamics 365 Customer Insights
 author: m-hartmann
-description: Maak kennis met de eerste gebruikservaring in Dynamics 365 Customer Insights en verken de mogelijkheden ervan.
+description: Maak uzelf vertrouwd met de eerste gebruikservaring in Dynamics 365 Customer Insights en verken de mogelijkheden ervan.
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645677"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673430"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Ga aan de slag na aankoop van Customer Insights
 

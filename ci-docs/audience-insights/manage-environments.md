@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645120"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673727"
 ---
 # <a name="manage-environments"></a>Omgevingen beheren
 
@@ -67,7 +67,8 @@ De volgende gegevens worden *niet* gekopieerd:
 
 - Klantprofielen.
 - Referenties voor gegevensbron. U moet de referenties voor elke gegevensbron opgeven en de gegevensbronnen handmatig vernieuwen.
-- Gegevensbronnen uit map Common Data Model en door Dataverse beheerde Data Lake. U moet die gegevensbronnen handmatig maken met dezelfde naam als in de bronomgeving.
+
+- Gegevensbronnen uit de Common Data Model-map en het door Dataverse beheerde data lake. U moet die gegevensbronnen handmatig maken met dezelfde naam als in de bronomgeving.
 
 Wanneer u een omgeving kopieert, ziet u een bevestigingsbericht dat de nieuwe omgeving is gemaakt. Selecteer **Ga naar gegevensbronnen** om de lijst met gegevensbronnen te zien.
 

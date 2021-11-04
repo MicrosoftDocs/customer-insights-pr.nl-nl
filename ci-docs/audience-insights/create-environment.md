@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645678"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673385"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Een omgeving maken in doelgroepinzichten
 
@@ -46,7 +46,7 @@ In de stap **Basisgegevens** kiest u of u een geheel nieuwe omgeving wilt maken 
 
 Geef de volgende details op:
    - **Naam**: de naam voor deze omgeving. Dit veld is al ingevuld als u hebt gekopieerd vanuit een bestaande omgeving, maar u kunt dit wijzigen.
-   - **Kies uw bedrijf**: kies de primaire doelgroep voor de nieuwe omgeving. U kunt werken met individuele klanten (B2C) of [zakelijke accounts](work-with-business-accounts.md) (B2B).
+   - **Uw bedrijf kiezen**: kies de primaire doelgroep voor de nieuwe omgeving. Je kunt werken met individuele consumenten (B2C) of [zakelijke accounts](work-with-business-accounts.md) (B2B).
    - **Type**: selecteer of u een productie- of sandbox-omgeving wilt maken. Sandbox-omgevingen staan geen geplande gegevensvernieuwing toe en zijn bedoeld voor pre-implementatie en testen. Sandbox-omgevingen gebruiken dezelfde primaire doelgroep als de productieomgeving die momenteel is geselecteerd.
    - **Regio**: de regio waarin de service wordt geïmplementeerd en gehost.
 
@@ -54,7 +54,7 @@ Geef de volgende details op:
 
 In de stap **Gegevensopslag** kiest u waar u de gegevens van doelgroepinzichten wilt opslaan.
 
-U hebt twee opties: **Customer Insights-opslag** (een Azure Data Lake beheerd door het Customer Insights-team) en **Azure Data Lake Storage** (uw eigen Azure Data Lake Storage). Standaard is de opslagoptie Customer Insights geselecteerd.
+U hebt twee opties: **Customer Insights-opslag** (een Azure data lake beheerd door het Customer Insights-team) en **Azure Data Lake Storage** (uw eigen Azure Data Lake Storage). Standaard is de opslagoptie Customer Insights geselecteerd.
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Kies de Azure Data Lake Storage om de gegevens van uw doelgroepinzichten in op te slaan.":::
 
@@ -66,7 +66,7 @@ Door gegevens op te slaan in Azure Data Lake Storage, gaat u ermee akkoord dat g
 > - Azure Data Lake Storage-accounts uit dezelfde Azure-regio die u hebt geselecteerd bij het maken van de omgeving.
 > - Azure Data Lake Storage-accounts waarvoor *hiërarchische naamruimte* is ingeschakeld.
 
-Voor de optie Azure Data Lake Storage kunt u kiezen tussen een op resources gebaseerde optie en een op abonnementen gebaseerde optie voor verificatie. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. De naam van de **Container** is `customerinsights`. Dit kan niet worden gewijzigd.
+Voor de optie Azure Data Lake Storage kunt u kiezen tussen een op resources gebaseerde optie en een op abonnementen gebaseerde optie voor verificatie. Zie voor meer informatie [Verbinding met een Azure Data Lake Storage-account maken via een Azure-service-principal](connect-service-principal.md). De naam van de **Container** is `customerinsights`. Dit kan niet worden gewijzigd.
 
 Wanneer systeemprocessen zoals gegevensopname zijn voltooid, maakt het systeem overeenkomstige mappen in de opslagaccount die u hebt opgegeven. Gegevensbestanden en *model.json*-bestanden worden gemaakt en toegevoegd aan mappen op basis van de procesnaam.
 
@@ -76,14 +76,14 @@ Als u meerdere omgevingen van Customer Insights maakt en ervoor kiest om de uitv
    
 In de stap **Microsoft Dataverse** kunt u Customer Insights verbinden met uw Dataverse-omgeving.
 
-Als u [kant-en-klare voorspellingsmodellen](predictions-overview.md#out-of-box-models) wilt gebruiken, configureert u delen van gegevens met Dataverse. Of u kunt gegevensopname van on-premises-gegevensbronnen inschakelen door de Microsoft Dataverse omgevings-URL op te geven die uw organisatie beheert. Selecteer **Gegevens delen inschakelen** om Customer Insights-uitvoergegevens te delen met een Dataverse beheerde data lake.
+Als u [kant-en-klare voorspellingsmodellen](predictions-overview.md#out-of-box-models) wilt gebruiken, configureert u delen van gegevens met Dataverse. Of u kunt gegevensopname van on-premises-gegevensbronnen inschakelen door de Microsoft Dataverse omgevings-URL op te geven die uw organisatie beheert. Selecteer **Gegevens delen inschakelen** om Customer Insights-uitvoergegevens te delen met een door Dataverse beheerd data lake.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Configuratieopties om het delen van gegevens met Microsoft Dataverse mogelijk te maken.":::
 
 > [!NOTE]
 > Customer Insights biedt geen ondersteuning voor de volgende scenario's voor het delen van gegevens:
-> - Als u alle gegevens opslaat naar uw eigen Azure Data Lake Storage, kunt u het delen van gegevens met een door Microsoft Dataverse beheerde Data Lake niet inschakelen.
-> - Als u het delen van gegevens met een door Microsoft Dataverse beheerde Data Lake inschakelt, is het niet mogelijk om [voorspelde of ontbrekende waarden te maken in een entiteit](predictions.md).
+> - Als u alle gegevens opslaat naar uw eigen Azure Data Lake Storage, kunt u het delen van gegevens met een door Dataverse beheerd data lake niet inschakelen.
+> - Als u het delen van gegevens met een door Dataverse beheerd data lake inschakelt, is het niet mogelijk om [voorspelde of ontbrekende waarden te maken in een entiteit](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Stap 4: de instellingen voltooien
 
@@ -93,10 +93,10 @@ U kunt de meeste instellingen ook later wijzigen. Zie [Omgevingen beheren](manag
 
 ## <a name="work-with-your-new-environment"></a>Werken met uw nieuwe omgeving
 
-Bekijk de volgende artikelen om u op weg te helpen met het configureren van Customer Insights. 
+Bekijk de volgende artikelen om u op weg te helpen met het configureren van Customer Insights: 
 
 - [Voeg meer gebruikers toe en wijs machtigingen toe](permissions.md).
 - [Uw gegevensbronnen opnemen](data-sources.md) en deze het [proces voor gegevensharmonisatie](data-unification.md) laten doorlopen om [uniforme klantprofielen](customer-profiles.md) te krijgen.
 - [Verrijk de uniforme klantprofielen](enrichment-hub.md) of [voer voorspellende modellen uit](predictions-overview.md).
-- [Maak segmenten](segments.md) om klanten te groeperen en [meetcriteria](measures.md) om KPI's te beoordelen.
+- [Segmenten maken](segments.md) om klanten en [meetcriteria](measures.md) te groeperen om KPI's te beoordelen.
 - [Stel verbindingen](connections.md) en [exports](export-destinations.md) in om subsets van uw gegevens in andere toepassingen te verwerken.
