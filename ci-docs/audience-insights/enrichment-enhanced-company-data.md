@@ -1,7 +1,7 @@
 ---
 title: Verbetering van bedrijfsgegevens
 description: Verrijk en normaliseer bedrijfsgegevens met de modellen van Microsoft.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770164"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813912"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>De verrijking van bedrijfsprofielen met verbeterde bedrijfsgegevens
 
@@ -51,7 +51,8 @@ Er gelden een paar beperkingen ten aanzien van de verbeterde gegevens. De items 
 
 1.  Bevestig de identiteit van het bedrijf. We controleren niet of de invoer een bestaande organisatie is of dat een bedrijf de uitvoer als standaardnaam gebruikt.
 2.  Bedien bedrijven wereldwijd. De verzamelde bedrijfsgegevens van Microsoft hebben wereldwijde dekking, maar bieden de meeste dekking in Australië, Canada, het Verenigd Koninkrijk en de Verenigde Staten.
-3.  Garandeer de nauwkeurigheid of actualiteit van gegevens. Omdat bedrijfsinformatie vaak verandert, kunnen we niet garanderen dat de verstrekte verbeterde bedrijfsgegevens altijd exact of up-to-date zijn.
+3.  Standaardiseren van bedrijfsadressen wereldwijd. We ondersteunen momenteel het standaardiseren van adressen in deze landen of regio's: Australië, Canada, Frankrijk, Duitsland, Italië, Japan, het Verenigd Koninkrijk en de Verenigde Staten.
+4.  Garandeer de nauwkeurigheid of actualiteit van gegevens. Omdat bedrijfsinformatie vaak verandert, kunnen we niet garanderen dat de verstrekte verbeterde bedrijfsgegevens altijd exact of up-to-date zijn.
 
 ## <a name="configure-the-enrichment"></a>De verrijking configureren
 
