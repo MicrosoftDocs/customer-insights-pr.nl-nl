@@ -1,7 +1,7 @@
 ---
 title: Meetcriteria maken en beheren
 description: Definieer meetcriteria om de prestaties van uw bedrijf te analyseren en weer te geven.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673364"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732720"
 ---
 # <a name="define-and-manage-measures"></a>Meetcriteria definiëren en beheren
 
@@ -238,8 +238,7 @@ Selecteer een meetcriterium in de lijst voor de volgende opties:
 - **Verwijder** het meetcriterium.
 - **Activeren** of **Deactiveren**. Inactieve meetcriteria worden niet vernieuwd tijdens een [geplande vernieuwing](system.md#schedule-tab)​.
 
-> [!TIP]
-> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Zie details** voor een van de taken van de functie vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="next-step"></a>Volgende stap
 

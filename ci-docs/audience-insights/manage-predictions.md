@@ -1,7 +1,7 @@
 ---
 title: Gedeelde taken voor voorspellingsscenario's
 description: Leer hoe u voorspellingen beheert, problemen oplost en verfijnt.
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: eaccf23a81ca4de19763b761cc5a27c14515fe522ee36dc78f294208b681966e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036459"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731982"
 ---
 # <a name="manage-predictions"></a>Voorspellingen beheren
 
@@ -50,12 +50,12 @@ De volgende kolommen in het rapport bevatten nuttige informatie om de gegevens v
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Voorbeeld van een bruikbaarheidsrapport voor invoergegevens met een tabel met fouten, waarschuwingen en aanbevelingen.":::
 
-- Naam: beschrijvende naam van de fout, waarschuwing of aanbeveling.
-- Stap: modelfase, trainen of scoren, waarnaar de informatie verwijst.
-- Status: ernst van de informatie (fout, waarschuwing, aanbeveling).
-- Kolomnaam: kolom in een entiteit die moet worden gewijzigd om de modelprestaties te verbeteren.
-- Entiteitsnaam: naam van de entiteit die moet worden gewijzigd om de modelprestaties te verbeteren.
-- Details: details van de fout, waarschuwing of aanbeveling.
+- **Naam**: beschrijvende naam van de fout, waarschuwing of aanbeveling.
+- **Stap**: modelfase, trainen of scoren, waarnaar de informatie verwijst.
+- **Status**: ernst van de informatie (fout, waarschuwing, aanbeveling).
+- **Kolomnaam**: kolom in een entiteit die moet worden gewijzigd om de modelprestaties te verbeteren.
+- **Entiteitsnaam**: naam van de entiteit die moet worden gewijzigd om de modelprestaties te verbeteren.
+- **Details**: details van de fout, waarschuwing of aanbeveling.
 
 ## <a name="refresh-a-prediction"></a>Een voorspelling vernieuwen
 
@@ -66,6 +66,8 @@ Voorspellingen worden automatisch vernieuwd volgens hetzelfde [schema van gegeve
 1. Selecteer de verticale puntjes naast de voorspelling die u wilt vernieuwen.
 
 1. Selecteer **Vernieuwen**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Een voorspelling verwijderen
 

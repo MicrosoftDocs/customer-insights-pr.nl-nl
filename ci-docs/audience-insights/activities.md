@@ -1,7 +1,7 @@
 ---
 title: Klantactiviteiten
 description: Definieer klantactiviteiten en geef ze weer in een tijdlijn in klantprofielen.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673131"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732438"
 ---
 # <a name="customer-activities"></a>Klantactiviteiten
 
@@ -82,9 +82,7 @@ Een entiteit moet ten minste één kenmerk van het type **Datum** hebben om te w
 
 1. Selecteer op de pagina **Activiteiten** de optie **Uitvoeren** om de activiteit te verwerken. 
 
-> [!TIP]
-> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Bestaande activiteiten beheren
 

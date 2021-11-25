@@ -1,7 +1,7 @@
 ---
 title: Semantische toewijzingen (preview)
 description: Overzicht van semantische toewijzingen en hoe ze te gebruiken.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622929"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731937"
 ---
 # <a name="semantic-mappings"></a>Semantische toewijzingen
 
@@ -75,8 +75,7 @@ Met semantische toewijzingen kunt u uw niet-activiteitsgegevens toewijzen aan vo
 
 1. Om een semantische toewijzing op een later tijdstip uit te voeren, selecteert u de semantische toewijzing en selecteert u **Vernieuwen**.
 
-> [!TIP]
-> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Bestaande semantische toewijzingen beheren
 
@@ -91,5 +90,6 @@ Op **Gegevens** > **Semantische toewijzingen (preview)** kunt u al uw opgeslagen
 - **Naam wijzigen**: een dialoogvenster openen waarin u een andere naam kunt invoeren voor de geselecteerde semantische toewijzing. Selecteer **Opslaan** om uw wijzigingen toe te passen.
 
 - **Verwijderen**: een dialoogvenster openen om het verwijderen van de geselecteerde semantische toewijzing te bevestigen. U kunt ook meerdere semantische toewijzingen tegelijk verwijderen door de semantische toewijzingen en het verwijderpictogram te selecteren. Selecteer **Verwijderen** om het verwijderen te bevestigen.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645440"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673784"
 ---
 # <a name="manage-environments-and-workspaces"></a>Omgevingen en werkruimten beheren
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645440"
 
 Dit onderwerp bespreekt hoe werkruimten en omgevingen kunnen worden beheerd nadat ze zijn gemaakt. 
 
-- Een *werkruimte* is een ruimte om gebeurtenissen en rapporten op te slaan en te beheren. Hier kunt u de gebruikersactiviteit in realtime bekijken. Wanneer u een werkruimte maakt, selecteert u het type gegevens dat u naar de werkruimte wilt verzenden. Momenteel worden webgegevens en mobiele apps ondersteund. Zie voor meer informatie [Een werkruimte maken en leden toevoegen](create-workspace.md).
+- Een *werkruimte* is een ruimte om gebeurtenissen en rapporten op te slaan en te beheren. Hier kunt u de gebruikersactiviteit in realtime bekijken. Wanneer u een werkruimte maakt, selecteert u het type gegevens dat u naar de werkruimte wilt verzenden. Momenteel worden webgegevens en mobiele apps ondersteund. Zie voor meer informatie [Een nieuwe werkruimte maken en leden toevoegen](create-workspace.md).
 
 - Een *omgeving* is een ruimte waarin u uw werkruimten en verbindingen beheert. Zie [Een nieuwe omgeving maken](create-new-environment.md) voor meer informatie.
 
@@ -71,19 +71,11 @@ Als omgevingsbeheerder hebt u toegang tot een omgeving via het linkernavigatiede
 
 :::image type="content" source="media/environment-edit.png" alt-text="Omgevingsbeheercentrum.":::
 
-### <a name="rename-an-environment"></a>De naam van een omgeving wijzigen
+### <a name="edit-an-environment-name"></a>Een omgevingsnaam bewerken
 
 1. Ga naar **Beheer** > **Omgeving** en selecteer **Instellingen**.
 
 1. Werk de **Omgevingsnaam** bij en selecteer **Opslaan** om uw wijzigingen toe te passen.
-
-### <a name="manage-environment-members"></a>Omgevingsleden beheren
-
-1. Ga naar **Beheer** > **Omgeving** en selecteer **Leden**.
-
-1. Selecteer **Leden toevoegen** om leden bij te werken en [rollen toe te wijzen](user-roles.md). Op dit moment is alleen **Omgevingsbeheer** beschikbaar.
-
-1. Selecteer **Leden toevoegen** om deze toe te voegen aan uw omgeving.
 
 ### <a name="delete-an-environment"></a>Een omgeving verwijderen
 
@@ -97,6 +89,14 @@ Omgevingsbeheerders kunnen omgevingen verwijderen. Voordat u een omgeving kunt v
 
 1. Selecteer **Verwijderen** om de omgeving permanent te verwijderen.
 
+### <a name="manage-environment-members"></a>Omgevingsleden beheren
+
+1. Ga naar **Beheer** > **Omgeving** en selecteer **Leden**.
+
+1. Selecteer **Leden toevoegen** om leden bij te werken en [rollen toe te wijzen](user-roles.md). Op dit moment is alleen **Omgevingsbeheer** beschikbaar.
+
+1. Selecteer **Leden toevoegen** om deze toe te voegen aan uw omgeving.
+
 ## <a name="manage-connections"></a>Verbindingen beheren
 
 Door verbindingen tot stand te brengen met doelgroepinzichten, kunt u rapporten in betrokkenheidsinzichten bekijken op basis van geharmoniseerde klantprofielen. 
@@ -107,7 +107,6 @@ Zie [Een koppeling tot stand brengen tussen doelgroepinzichten en betrokkenheids
 
 Om de persoonlijke gegevens van uw klant te beschermen, kunt u identificeerbare gegevens van de eindgebruiker verwijderen of exporteren.
 
-Zie [Gebeurtenisgegevens met persoonlijke informatie verwijderen en exporteren](delete-export-personal-data.md) voor meer informatie.
-
+Zie [Gebeurtenisgegevens met persoonlijke informatie verwijderen en exporteren](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information) voor meer informatie.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,17 +4,17 @@ description: Ontdek hoe u de SDK Android personaliseert en uitvoert
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 09/15/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
+ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494269"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7655336"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Aan de slag met de Android SDK
 
@@ -42,12 +42,12 @@ Begin het proces door een werkruimte te selecteren, het mobiele Android-platform
 
 - Als u geen bestaande werkruimte hebt, selecteert u **Nieuwe werkruimte** en volgt u de stappen voor het maken van een [nieuwe werkruimte](create-workspace.md).
 
-- Nadat u een werkruimte hebt gemaakt, gaat u naar **Beheerder** > **Werkruimte** en selecteert u vervolgens **Installatiehandleiding**. 
+- Nadat u een werkruimte hebt gemaakt, gaat u naar **Beheerder** > **Werkruimte** en selecteert u vervolgens **Installatiehandleiding**.
 
 ## <a name="configure-the-sdk"></a>De SDK configureren
 
 Nadat u de SDK hebt gedownload, kunt u ermee werken in Android Studio om gebeurtenissen in te schakelen en te definiëren. U kunt dit op twee manieren doen.
-### <a name="option-1-using-jitpack-recommended"></a>Optie 1: JitPack gebruiken (aanbevolen)
+### <a name="option-1-use-jitpack-recommended"></a>Optie 1: JitPack gebruiken (aanbevolen)
 1. Voeg de JitPack-opslagplaats toe aan uw hoofdmap `build.gradle`:
     ```gradle
     allprojects {
@@ -61,12 +61,12 @@ Nadat u de SDK hebt gedownload, kunt u ermee werken in Android Studio om gebeurt
 1. Voeg de afhankelijkheid toe:
     ```gradle
     dependencies {
-        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:v1.0.0'
         api 'com.google.code.gson:gson:2.8.1'
     }
     ```
 
-### <a name="option-2-using-download-link"></a>Optie 2: Downloadlink gebruiken
+### <a name="option-2-use-download-link"></a>Optie 2: downloadkoppeling gebruiken
 1. Download de [Android-SDK voor betrokkenheidsinzichten](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) en plaats het bestand `eiandroidsdk-debug.aar` in de map `libs`.
 
 1. Open uw bestand `build.gradle` op projectniveau en voeg de volgende fragmenten toe:
@@ -83,22 +83,23 @@ Nadat u de SDK hebt gedownload, kunt u ermee werken in Android Studio om gebeurt
     }
     ```
 
-1. Voeg toestemming voor netwerk en internet toe aan uw `AndroidManifest.xml`-bestand onder de map `manifests`. 
+## <a name="enable-auto-instrumentation"></a>Automatische instrumentatie inschakelen
+
+1. Voeg toestemming voor netwerk en internet toe aan uw `AndroidManifest.xml`-bestand onder de map `manifests`.
     ```xml
     <manifest>
         ...
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     ```
-    
-1. Stel de SDK-configuratie voor betrokkenheidsinzichten in via uw bestand `AndroidManifest.xml`. 
 
-## <a name="enable-auto-instrumentation"></a>Automatische instrumentatie inschakelen
+1. Stel de SDK-configuratie voor betrokkenheidsinzichten in via uw bestand `AndroidManifest.xml`.
+
 1. Kopieer het XML-fragment van de **installatiehandleiding**. `Your-Ingestion-Key` zou nu automatisch moeten worden ingevuld.
 
    > [!NOTE]
    > U hoeft de sectie `${applicationId}` niet te vervangen. Deze wordt automatisch ingevuld.
-   
+
 
    ```xml
    <application>
@@ -116,20 +117,24 @@ Nadat u de SDK hebt gedownload, kunt u ermee werken in Android Studio om gebeurt
    </application>
    ```
 
-1. Schakel Automatisch vastleggen van gebeurtenissen `View` in of uit door het bovenstaande veld `autoCapture` in te stellen op `true` of `false`. Momenteel moeten `Action`-gebeurtenissen handmatig worden toegevoegd.
+1. Schakel Automatisch vastleggen van gebeurtenissen `View` in of uit door het bovenstaande veld `autoCapture` in te stellen op `true` of `false`. 
 
-1. (Optioneel) Andere configuraties omvatten het instellen van de verzamel-URL voor eindpunten. Ze kunnen worden toegevoegd onder de metagegevens van de opnamesleutel in `AndroidManifest.xml`:
-    ```xml
+   >[!NOTE]
+   >`Action`-gebeurtenissen moeten handmatig worden toegevoegd.
+
+1. (Optioneel) Andere configuraties omvatten het instellen van de verzamel-URL voor eindpunten. Ze kunnen worden toegevoegd onder de metagegevens van de opnamesleutel in `AndroidManifest.xml`.
+
+   ```xml
         <meta-data
             android:name="com.microsoft.engagementinsights.endpointUrl"
             android:value="https://some-endpoint-url.com" />
-    ```
+   ```
 
 ## <a name="implement-custom-events"></a>Aangepaste gebeurtenissen implementeren
 
 Nadat u de SDK hebt geïnitialiseerd, kunt u werken met gebeurtenissen en de bijbehorende eigenschappen in de `MainActivity`-omgeving.
 
-    
+
 Java:
 ```java
 Analytics analytics = new Analytics();
@@ -141,7 +146,7 @@ var analytics = Analytics()
 ```
 
 ### <a name="set-property-for-all-events-optional"></a>Eigenschap instellen voor alle gebeurtenissen (optioneel)
-    
+
 Java:
 ```java
 analytics.setProperty("year", 2021);

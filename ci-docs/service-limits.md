@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483657"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7791975"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Servicelimieten in Customer Insights-mogelijkheden
 
@@ -24,9 +24,9 @@ Dit artikel beschrijft de ingebouwde limieten voor de Customer Insights-service,
 
 ### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Servicelimieten in Dynamics 365 Customer Insights-mogelijkheden voor doelgroepinzichten
 
-| Gebied  | Limieten  | Aantekeningen |
+| Oppervlakte  | Limieten  | Aantekeningen |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmenten en meetcriteria | 100 segmenten of metingen. | Het totale aantal actieve [segmenten](audience-insights/segments.md) en [metingen](audience-insights/measures.md) mag bij elkaar niet meer zijn dan 100.  |
+| Segmenten, metingen en voorspellingen | 300  | Het totale aantal [segmenten](audience-insights/segments.md), [metingen](audience-insights/measures.md) en [voorspellingen](audience-insights/predictions.md) mag samen niet boven de 300 uitkomen.  |
 | Relaties | 20 diepteniveaus bij relaties in entiteitspaden. | Wanneer u [segmenten](audience-insights/segments.md) of [meetcriteria](audience-insights/measures.md) maakt met de Builder-interface, kunnen entiteitspaden maximaal 20 relatiesprongen hebben tussen de beginentiteit en de doelentiteit.  |
 
 

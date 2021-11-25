@@ -9,16 +9,18 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034528"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799676"
 ---
 # <a name="similar-customers-preview"></a>Vergelijkbare klanten (preview)
 
 Met deze functie kunt u vergelijkbare klanten in uw klantenbestand zoeken met behulp van kunstmatige intelligentie. U moet ten minste één segment hebben gemaakt om deze functie te kunnen gebruiken. Door de criteria van een bestaand segment uit te breiden, kunt u klanten vinden die vergelijkbaar zijn met dat segment.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Vergelijkbare klanten zoeken* gebruikt geautomatiseerde middelen om gegevens te evalueren en voorspellingen te doen op basis van die gegevens, en heeft daarom de mogelijkheid om te worden gebruikt als profileringsmethode, zoals die term wordt gedefinieerd door de Algemene verordening gegevensbescherming ("AVG"). Op het gebruik door de klant van deze functie om gegevens te verwerken, zijn mogelijk de AVG of andere wetten of voorschriften van toepassing. U bent ervoor verantwoordelijk dat uw gebruik van Dynamics 365 Customer Insights, inclusief voorspellingen, voldoet aan alle toepasselijke wet- en regelgeving, inclusief wetten met betrekking tot privacy, persoonsgegevens, biometrische gegevens, gegevensbescherming en vertrouwelijkheid van communicatie.

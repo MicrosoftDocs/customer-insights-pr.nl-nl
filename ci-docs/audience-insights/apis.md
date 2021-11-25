@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033579"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732258"
 ---
 # <a name="work-with-customer-insights-apis"></a>Werken met Customer Insights-API's
 
@@ -135,7 +135,7 @@ Leer hoe u aan de slag gaat met de C#-clientbibliotheken van NuGet.org. Voor mee
 
 1. Gebruik de [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) om een `AccessToken` op te halen met uw bestaande [Azure app-registratie](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Na het succesvol verifiëren en verkrijgen van een token, bouwt u een nieuwe of gebruikt u een bestaande `HttpClient` met de extra **DefaultRequestHeaders "Autorisatie"** ingesteld op **Bearer <access token>** en **Ocp-Apim-abonnementssleutel** ingesteld op de [**abonnementssleutel** van uw Customer Insights-omgeving](#get-started-trying-the-customer-insights-apis).   
+1. Nadat u een token hebt geverifieerd en verkregen, maakt u een nieuwe of gebruikt u een bestaande `HttpClient` met de extra **DefaultRequestHeaders "Authorization"** ingesteld op **Bearer "access token"** en **Ocp-Apim-Subscription-Key** ingesteld op de [**abonnementssleutel** uit uw Customer Insights-omgeving](#get-started-trying-the-customer-insights-apis).   
  
    Reset de **Autorisatie**-koptekst indien van toepassing. Bijvoorbeeld wanneer het token is verlopen.
 

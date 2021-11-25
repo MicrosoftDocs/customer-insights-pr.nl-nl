@@ -1,7 +1,7 @@
 ---
 title: Gegevensbronnen gebruiken om gegevens op te nemen
 description: Meer informatie over hoe u gegevens uit verschillende bronnen kunt importeren.
-ms.date: 04/12/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645349"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732136"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
@@ -48,14 +48,7 @@ U ziet de naam van elke opgenomen gegevensbron, de status en de laatste keer dat
 > [!div class="mx-imgBorder"]
 > ![Gegevensbron toegevoegd.](media/configure-data-datasource-added.png "Gegevensbron toegevoegd")
 
-|-Status  |Beschrijving  |
-|---------|---------|
-|Geslaagd   |Gegevensbron is opgenomen als een tijd wordt vermeld in de kolom **Vernieuwd**.
-|Niet gestart   |De gegevensbron heeft nog geen gegevens opgenomen of bevindt zich nog in de conceptmodus.         |
-|Vernieuwen    |De opname van gegevens wordt uitgevoerd. U kunt deze bewerking annuleren door **Stoppen met vernieuwen** te selecteren in de kolom **Acties**. Als u het vernieuwen van een gegevensbron stopt, keert het terug naar de laatste vernieuwingsstatus.       |
-|Mislukt     |Er zijn fouten opgetreden bij de gegevensopname.         |
-
-Selecteer de waarde in de kolom **Status** van een willekeurige gegevensbron voor meer details. Vouw in het deelvenster **Voortgangsgegevens** de optie **Gegevensbronnen** uit. Selecteer **Details weergeven** voor meer informatie over de vernieuwingsstatus, inclusief foutdetails en downstream procesupdates.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 Het laden van gegevens kan enige tijd vergen. Na een succesvolle vernieuwing kunnen de opgenomen gegevens worden bekeken vanaf de pagina **Entiteiten**. Zie [Entiteiten](entities.md) voor meer informatie.
 

@@ -1,7 +1,7 @@
 ---
 title: Entiteiten en gegevenssets
 description: Gegevens weergeven op de pagina Entiteiten.
-ms.date: 04/16/2020
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 137de726b243b501491fcbe7866820aaee26097fcf379270c423c277374ae9a4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033809"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732074"
 ---
 # <a name="entities-in-audience-insights"></a>Entiteiten in doelgroepinzichten
 
@@ -26,9 +26,10 @@ Op de pagina **Entiteiten** worden entiteiten vermeld. Deze worden weergegeven i
 - **Bron**: het type gegevensbron waarin de entiteit is opgenomen
 - **Gemaakt door**: naam van de gebruiker die de entiteit heeft gemaakt.
 - **Gemaakt**: datum en tijdstip waarop de entiteit is gemaakt
-- **Bijgewerkt door**: naam van de gebruiker die de entiteit heeft bijgewerkt.
-- **Laatst bijgewerkt**: datum en tijd van de laatste update van de entiteit
-- **Laatste vernieuwing**: datum en tijd van de laatste gegevensvernieuwing
+- **Bijgewerkt**: naam van de gebruiker die de entiteit heeft bijgewerkt
+- **Status**: details over de laatste update van de entiteit
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>De gegevens van een specifieke entiteit verkennen
 

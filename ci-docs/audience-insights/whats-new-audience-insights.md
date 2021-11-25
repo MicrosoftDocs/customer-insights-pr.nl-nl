@@ -1,7 +1,7 @@
 ---
 title: Nieuwe en komende functies
 description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673822"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753111"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Wat is er nieuw in de doelgroepinzichten-mogelijkheid van Dynamics 365 Customer Insights
 
@@ -26,6 +26,41 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Updates van oktober 2021
+
+De updates in oktober 2021 omvatten nieuwe functies, prestatie-upgrades en bugfixes.
+
+### <a name="b-to-b"></a>B2B
+
+Vanaf oktober 2021 kunt u in Customer Insights werken met zakelijke accounts en hun gerelateerde contacten. Voorheen was de app vooral gericht op individuele consumenten. Verschillende functiegebieden zijn bijgewerkt om B2B-scenario's te ondersteunen naast een nieuw omgevingstype. Zie voor een overzicht van ondersteunde B2B-functies het onderwerp [Werken met zakelijke accounts in doelgroepinzichten](work-with-business-accounts.md).
+
+In de volgende secties worden enkele van de belangrijkste gebieden belicht die zijn aangepast om zakelijke accounts en individuele consumenten te ondersteunen.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Segmenten exporteren op basis van zakelijke accounts
+
+Alle segmentexports in doelgroepinzichten zijn beschikbaar in de context van zakelijke accounts. Voor de meeste segmentexports is extra configuratie vereist en moeten [contactgegevens worden geprojecteerd](segment-builder.md#create-a-new-segment) in de onderliggende segmenten om geldig te zijn voor zakelijke accounts. Zie [Segmenten exporteren](export-destinations.md#export-segments) voor meer informatie.
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>De LinkedIn Ads-export gebruiken met zakelijke accounts
+
+De LinkedIn Ads-export is nu beschikbaar voor contact- en bedrijfstargeting in de context van zakelijke accounts. Wanneer u bedrijfstargeting selecteert als uw primaire focus van de LinkedIn-export, kunt u segmenten exporteren die zijn gebaseerd op zakelijke accounts zonder dat u contactgegevens hoeft te projecteren. Zie voor meer informatie de documenten over [LinkedIn-advertenties exporteren](export-linkedin-ads.md) en het verschil tussen [contacttargeting](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) en [bedrijfstargeting](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Meetcriteria maken op basis van zakelijke accounts en hun hiërarchie
+
+Met de opbouwfunctie voor meetcriteria kunt u meetcriteria met betrekking tot zakelijke accounts maken en desgewenst de hiërarchie-informatie gebruiken. Hiërarchie-informatie wordt gebruikt om een berekening van meetcriteria samen te tellen voor een account en alle gerelateerde subaccounts. U kunt bijvoorbeeld meetcriteria maken, zoals de totale omzet voor elke groep zakelijke accounts die wordt geïdentificeerd door hun hiërarchie. Zie [Metingen definiëren en beheren](measures.md) voor meer informatie.
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Segmenten maken op basis van zakelijke accounts en hun hiërarchie
+
+Met de opbouwfunctie voor segmenten kunt u segmenten van zakelijke accounts maken die optioneel contactgegevens bevatten voor elke account in een segment. Als u een accounthiërarchie hebt ingesteld, kunt u informatie over de accounthiërarchie gebruiken bij het maken van segmenten. Zie [Een nieuw segment maken](segment-builder.md#create-a-new-segment) voor meer informatie.
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Uw zakelijke accounts met diepe inzichten in hun verlooptendens behouden
+
+Het voorspellingsmodel voor klantverloop ondersteunt nu ook zakelijke accounts. U kunt het risico op klantverloop evalueren, niet alleen voor een account, maar ook voor een combinatie van een account en een product- of servicecategorie die ze van u kopen. Deze toevoeging helpt u te begrijpen of het waarschijnlijker is dat een account in het algemeen of alleen voor een bepaalde categorie goederen of diensten niet meer bij u koopt. Om u verder te helpen bij het gebruik van dit AI-model, worden ook redenen vermeld waarom een account waarschijnlijk verloopt. Zie voor meer informatie [Voorspelling van transactieverloop (preview)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Contactpersonen van een zakelijke account bekijken in Klantweergave
+
+Als zakelijke accounts worden toegewezen aan gerelateerde accounts, worden deze gerelateerde contactpersonen als onderdeel van de weergave met klantgegevens weergegeven in de Customer Insights-app. Zie [Klantprofielen](customer-profiles.md) voor meer informatie.
+
 
 ## <a name="september-2021-updates"></a>Updates van september 2021
 

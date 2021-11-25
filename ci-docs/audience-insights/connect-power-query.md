@@ -1,7 +1,7 @@
 ---
 title: Gegevens opnemen via een Power Query-connector
 description: Connectors voor databronnen op basis van Power Query.
-ms.date: 09/29/2020
+ms.date: 11/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643488"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732212"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinden met een Power Query-gegevensbron
 
@@ -79,6 +79,8 @@ Connectors met een vinkje in de kolom **Customer Insights (gegevensstromen)** zi
    > [!div class="mx-imgBorder"]
    > ![Optie bewerken.](media/edit-option-data-sources.png "Optie bewerken")
 
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
 3. Pas uw wijzigingen en transformaties toe in het dialoogvenster **Power Query - Query's bewerken** zoals beschreven in de sectie [Een nieuwe gegevensbron maken](#create-a-new-data-source).
 
 4. Selecteer **Opslaan** in Power Query na het voltooien van uw bewerkingen om uw wijzigingen op te slaan.

@@ -1,7 +1,7 @@
 ---
 title: Gedeeltelijke gegevens voltooien met behulp van voorspellingen
 description: Gebruik voorspellingen om onvolledige klantgegevens in te vullen.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,17 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645028"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732372"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Uw gedeeltelijke gegevens aanvullen met voorspellingen
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Uw gedeeltelijke gegevens aanvullen met voorspellingen (afgeschaft)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Deze functie wordt op **5 november 2021** **afgeschaft**. Huidige implementaties blijven werken totdat de functie wordt verwijderd, maar u kunt geen nieuwe integraties maken met behulp van de onderstaande instructies.
 
 Met Voorspellingen kunt u eenvoudig voorspelde waarden maken die uw begrip van een klant kunnen verbeteren. Op de pagina **Intelligence** > **Voorspellingen** kunt u **Mijn voorspellingen** selecteren om voorspellingen te zien die u hebt geconfigureerd in andere delen van doelgroepinzichten en om deze verder aan te passen.
 
@@ -60,6 +61,8 @@ Zie [Een nieuwe omgeving maken](create-environment.md) voor meer informatie.
    > ![Voorbeeld van toegewezen veldwaarden aan categorieën.](media/intelligence-categorymapping.png "Voorbeeld van toegewezen veldwaarden aan categorieën")
 
 8. Selecteer **Gereed**. De voorspelling wordt nu verwerkt. De verwerking duurt enige tijd, afhankelijk van de grootte en complexiteit van gegevens. De resultaten zijn beschikbaar in een nieuwe entiteit op basis van de **naam van de uitvoerentiteit** van de voorspelling die u hebt gemaakt.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Een voorspelling maken terwijl u een segment maakt
 

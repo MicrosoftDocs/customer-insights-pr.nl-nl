@@ -1,7 +1,7 @@
 ---
 title: Systeemconfiguratie in doelgroepinzichten
 description: Meer informatie over systeeminstellingen in Dynamics 365 Customer Insights-mogelijkheden voor doelgroepinzichten.
-ms.date: 10/15/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651834"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732355"
 ---
 # <a name="system-configuration"></a>Systeemconfiguratie
+
+Om toegang te krijgen tot systeemconfiguraties in doelgroepinzichten, selecteert u in de linkernavigatiebalk **Beheerder** > **Systeem** om een lijst met systeemtaken en -processen te bekijken.
 
 De pagina **Systeem** bevat de volgende tabbladen:
 - [-Status](#status-tab)
@@ -30,39 +32,55 @@ De pagina **Systeem** bevat de volgende tabbladen:
 
 ## <a name="status-tab"></a>Tabblad Status
 
-Op het tabblad **Status** kunt u de voortgang van gegevensopname, gegevensexport en verschillende andere belangrijke productprocessen volgen. Bekijk de informatie op dit tabblad om de volledigheid van actieve processen te garanderen.
+Op het tabblad **Status** kunt u de voortgang van taken, gegevensopname, gegevensexport en verschillende andere belangrijke productprocessen volgen. Bekijk de informatie op dit tabblad om de volledigheid van uw actieve taken en processen te waarborgen.
 
-Dit tabblad bevat tabellen met status- en verwerkingsinformatie voor verschillende processen. Elke tabel volgt de **naam** van de taak en de bijbehorende entiteit bij, de **status** van de meest recente uitvoering en het tijdstip in **Laatst bijgewerkt**.
+Dit tabblad bevat tabellen met status- en verwerkingsinformatie voor verschillende processen. Elke tabel volgt de **naam** van de taak en de bijbehorende entiteit bij, de **status** van de meest recente uitvoering en het tijdstip in **Laatst bijgewerkt**. U kunt de details van de laatste paar uitvoeringen bekijken door de taak- of procesnaam te selecteren. 
 
-Bekijk de details van de laatste verschillende uitvoeringen van de taak door de naam te selecteren.
+Selecteer de status naast de taak of het proces in de kolom **Status** om het deelvenster **Details van voortgang** te openen.
 
-### <a name="status-types"></a>Statustypen
+   :::image type="content" source="media/system-progress-details.png" alt-text="Deelvenster met details van systeemvoortgang":::
 
-Er zijn zes soorten status voor taken. De volgende statustypen worden ook weergegeven op de pagina's *Afstemming*, *Samenvoeging*, *Gegevensbronnen*, *Segmenten*, *Meetcriteria*, *Verrijking*, *Activiteiten* en *Voorspellingen*:
+### <a name="status-definitions"></a>Statusdefinities
 
-- **Verwerken:** taak wordt uitgevoerd. De status kan veranderen in Geslaagd of Mislukt.
-- **Geslaagd:** taak is met succes afgerond.
-- **Overgeslagen:** taak is overgeslagen. Een of meer van de downstreamprocessen waarvan deze taak afhankelijk is, mislukken of worden overgeslagen.
-- **Mislukt:** verwerking van de taak is mislukt.
-- **Geannuleerd:** de verwerking is geannuleerd door de gebruiker voordat deze is voltooid.
-- **In de wachtrij**: de verwerking wordt in de wachtrij geplaatst en begint zodra alle upstream-taken zijn voltooid. Zie [Vernieuwingsbeleid](#refresh-policies) voor meer informatie.
+Het systeem gebruikt de volgende statussen voor taken en processen:
 
-### <a name="refresh-policies"></a>Vernieuwingsbeleid
+|-Status  |Definitie  |
+|---------|---------|
+|Geannuleerd |De verwerking is door de gebruiker geannuleerd voordat deze is voltooid.   |
+|Mislukt   |Er zijn fouten opgetreden bij de gegevensopname.         |
+|Mislukking  |De verwerking is mislukt.  |
+|Niet gestart   |De gegevensbron heeft nog geen gegevens opgenomen of bevindt zich nog in de conceptmodus.         |
+|Verwerking  |De taak of het proces wordt uitgevoerd.  |
+|Vernieuwen    |De opname van gegevens wordt uitgevoerd. U kunt deze bewerking annuleren door **Stoppen met vernieuwen** te selecteren in de kolom **Acties**. Als u het vernieuwen van een gegevensbron stopt, keert het terug naar de laatste vernieuwingsstatus.       |
+|Overgeslagen  |De taak of het proces is overgeslagen. Een of meer van de downstreamprocessen waarvan deze taak afhankelijk is, mislukken of worden overgeslagen.|
+|Geslaagd  |De taak of het proces is voltooid. Geeft voor gegevensbronnen aan dat de gegevens zijn opgenomen als een tijd wordt vermeld in de kolom **Vernieuwd**.|
+|In wachtrij geplaatst | De verwerking wordt in de wachtrij geplaatst en start zodra alle upstreamtaken en -processen zijn voltooid. Zie voor meer informatie [Processen vernieuwen](#refresh-processes).|
 
-Deze lijst toont het vernieuwingsbeleid voor elk van de hoofdprocessen:
+### <a name="refresh-processes"></a>Processen vernieuwen
 
-- **Gegevensbronnen:** wordt uitgevoerd volgens het [geconfigureerde schema](#schedule-tab). Hangt niet af van enig ander proces. Afstemmen is afhankelijk van de succesvolle afronding van dit proces.
-- **Afstemming:** wordt uitgevoerd volgens het [geconfigureerde schema](#schedule-tab). Hangt af van de verwerking van de gegevensbronnen die worden gebruikt in de afstemmingsdefinitie. Samenvoeging is afhankelijk van de succesvolle afronding van dit proces.
-- **Samenvoeging:** wordt uitgevoerd volgens het [geconfigureerde schema](#schedule-tab). Afhankelijk van de succesvolle afronding van het afstemmingsproces. Segmenten, meetcriteria, verrijking, zoeken, activiteiten, voorspellingen en gegevensvoorbereiding zijn afhankelijk van de succesvolle afronding van dit proces.
-- **Segmenten**: wordt handmatig uitgevoerd (eenmalige vernieuwing) en volgens het [geconfigureerde schema](#schedule-tab). Afhankelijk van Samenvoeging. Inzichten zijn afhankelijk van de verwerking.
-- **Meetcriteria**: wordt handmatig uitgevoerd (eenmalige vernieuwing) en volgens het [geconfigureerde schema](#schedule-tab). Afhankelijk van Samenvoeging.
-- **Activiteiten**: wordt handmatig uitgevoerd (eenmalige vernieuwing) en volgens het [geconfigureerde schema](#schedule-tab). Afhankelijk van Samenvoeging.
-- **Verrijking**: wordt handmatig uitgevoerd (eenmalige vernieuwing) en volgens het [geconfigureerde schema](#schedule-tab). Afhankelijk van Samenvoeging.
-- **Zoeken**: wordt handmatig uitgevoerd (eenmalige vernieuwing) en volgens het [geconfigureerde schema](#schedule-tab). Afhankelijk van Samenvoeging.
-- **Gegevensvoorbereiding:** wordt uitgevoerd volgens het [geconfigureerde schema](#schedule-tab). Afhankelijk van Samenvoeging.
-- **Inzichten**: wordt handmatig uitgevoerd (eenmalige vernieuwing) en volgens het [geconfigureerde schema](#schedule-tab). Afhankelijk van Segmenten.
+Vernieuwen voor taken en processen wordt uitgevoerd volgens het [geconfigureerde schema](#schedule-tab). 
 
-Selecteer de status van een taak om de voortgangsdetails te zien van de volledige taak waarin deze zich bevond. Het vernieuwingsbeleid hierboven kan helpen om te begrijpen wat u kunt doen om een taak met de status **Overgeslagen** of **In de wachtrij geplaatst** aan te pakken.
+|Proces  |Beschrijving  |
+|---------|---------|
+|Activiteit  |Wordt handmatig uitgevoerd (eenmalig vernieuwen). Afhankelijk van het samenvoegproces. Inzichten zijn afhankelijk van de verwerking.|
+|Analyse koppelen |Wordt handmatig uitgevoerd (eenmalig vernieuwen). Afhankelijk van segmenten.  |
+|Voorbereiding van analyse |Wordt handmatig uitgevoerd (eenmalig vernieuwen). Afhankelijk van segmenten.  |
+|Gegevensvoorbereiding   |Afhankelijk van samenvoeging.   |
+|Gegevensbronnen   |Hangt niet af van enig ander proces. Afstemmen is afhankelijk van de succesvolle afronding van dit proces.  |
+|Verrijkingen   |Wordt handmatig uitgevoerd (eenmalig vernieuwen). Afhankelijk van het samenvoegproces. |
+|Exportbestemmingen |Wordt handmatig uitgevoerd (eenmalig vernieuwen). Afhankelijk van segmenten.  |
+|Inzichten |Wordt handmatig uitgevoerd (eenmalig vernieuwen). Afhankelijk van segmenten.  |
+|Intelligentie   |Afhankelijk van samenvoeging.   |
+|Vergelijken |Hangt af van de verwerking van de gegevensbronnen die worden gebruikt in de afstemmingsdefinitie.      |
+|Meetcriteria  |Wordt handmatig uitgevoerd (eenmalig vernieuwen). Afhankelijk van het samenvoegproces.  |
+|Samenvoeging   |Afhankelijk van de succesvolle afronding van het afstemmingsproces. Segmenten, meetcriteria, verrijking, zoeken, activiteiten, voorspellingen en gegevensvoorbereiding zijn afhankelijk van de succesvolle afronding van dit proces.   |
+|Profielen   |Wordt handmatig uitgevoerd (eenmalig vernieuwen). Afhankelijk van het samenvoegproces. |
+|Zoeken   |Wordt handmatig uitgevoerd (eenmalig vernieuwen). Afhankelijk van het samenvoegproces. |
+|Segmenten  |Wordt handmatig uitgevoerd (eenmalig vernieuwen). Afhankelijk van het samenvoegproces. Inzichten zijn afhankelijk van de verwerking.|
+|System   |Afhankelijk van de succesvolle afronding van het afstemmingsproces. Segmenten, meetcriteria, verrijking, zoeken, activiteiten, voorspellingen en gegevensvoorbereiding zijn afhankelijk van de succesvolle afronding van dit proces.   |
+|Gebruiker  |Wordt handmatig uitgevoerd (eenmalig vernieuwen). Is afhankelijk van entiteiten.  |
+
+Selecteer de status van een proces om de voortgangsdetails te zien van de volledige taak waarin het zich bevond. De bovenstaande vernieuwingsprocessen kunnen helpen om te begrijpen wat u kunt doen met een taak of proces met de status **Overgeslagen** of **In wachtrij geplaatst**.
 
 ## <a name="schedule-tab"></a>Tabblad Planning
 
@@ -86,7 +104,7 @@ Het tabblad **Info** bevat de **weergavenaam** van uw organisatie, de actieve **
 
 U kunt de taal en de indeling voor land/regio wijzigen op het tabblad **Algemeen**.
 
-Customer Insights [ondersteunt een aantal talen](/dynamics365/get-started/availability). De app gebruikt uw taalvoorkeur om elementen als het menu, labeltekst en systeemberichten in uw voorkeurstaal weer te geven.
+Customer Insights [ondersteunt vele talen](/dynamics365/get-started/availability). De app gebruikt uw taalvoorkeur om elementen als het menu, labeltekst en systeemberichten in uw voorkeurstaal weer te geven.
 
 Geïmporteerde gegevens en informatie die u handmatig hebt ingevoerd, worden niet vertaald.
 
@@ -109,7 +127,7 @@ Vind details over het realtime API-gebruik en kijk welke gebeurtenissen hebben p
 
 -  **Bewerkingen**: een tabel met rijen voor elke beschikbare API-bewerking en details over het gebruik van de bewerkingen. U kunt een bewerkingsnaam selecteren om naar [de API-verwijzing](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances)​te gaan.
 
-   Bewerkingen die gebruikmaken van [realtime gegevensopname](real-time-data-ingestion.md) bevatten een knop met een verrekijkersymbool om realtime API-gebruik te bekijken. Selecteer de knop om een deelvenster aan de zijkant te openen met gebruiksdetails voor het realtime API-gebruik in de huidige omgeving.   
+   Bewerkingen die gebruikmaken van [realtime gegevensopname](real-time-data-ingestion.md) bevatten een knop met een verrekijkersymbool om het realtime API-gebruik te bekijken. Selecteer de knop om een deelvenster aan de zijkant te openen met gebruiksdetails voor het realtime API-gebruik in de huidige omgeving.   
    Gebruik het vak **Groeperen op** in het deelvenster **Realtime API-gebruik** om te kiezen hoe u uw realtime interacties het best kunt presenteren. U kunt de gegevens groeperen op API-methode, entiteit gekwalificeerde naam (opgenomen entiteit), gemaakt door (bron van de gebeurtenis), resultaat (succes of mislukking) of foutcodes. De gegevens zijn beschikbaar als geschiedenisdiagram en als tabel.
 
 ## <a name="security-tab"></a>Tabblad Beveiliging
