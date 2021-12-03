@@ -1,7 +1,7 @@
 ---
 title: Entiteiten matchen voor gegevensharmonisatie
-description: Entiteiten matchen om datasets te combineren en geharmoniseerde klantprofielen te maken.
-ms.date: 11/01/2021
+description: Match entiteiten om geharmoniseerde klantprofielen te maken.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732628"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863805"
 ---
 # <a name="match-entities"></a>Entiteiten toewijzen
 
@@ -224,17 +224,24 @@ U kunt de meeste vergelijkingsparameters opnieuw configureren en verfijnen.
 
 ## <a name="specify-custom-match-conditions"></a>Aangepaste overeenkomstvoorwaarden opgeven
 
-U kunt voorwaarden opgeven die bepaalde records altijd moeten overeenkomen of nooit moeten overeenkomen. Deze regels kunnen worden geüpload om het standaardproces voor overeenkomsten te overschrijven. Als in onze administratie bijvoorbeeld een Jan Pieters I en Jan Pieters II voorkomen, kan het systeem ze als één persoon matchen. Met aangepaste matchregels kunt u opgeven dat hun profielen naar verschillende mensen verwijzen. 
+U kunt voorwaarden opgeven die de standaardovereenkomstlogica overschrijven. Er zijn vier opties beschikbaar: 
+
+|Optie  |Description |Voorbeeld  |
+|---------|---------|---------|
+|Altijd overeenkomen     | Definieert waarden die altijd overeenkomen.         |  *Mike* en *MikeR* komen altijd overeen.       |
+|Nooit overeenkomen     | Definieert waarden die nooit overeenkomen.        | *John* en *Jonathan* komen nooit overeen.        |
+|Aangepaste omleiding     | Definieert waarden die het systeem altijd moet negeren in de overeenkomstfase. |  Negeer de waarden *11111* en *Onbekend* tijdens de overeenkomstfase.        |
+|Aliastoewijzing    | Waarden definiëren die het systeem als dezelfde waarde moet beschouwen.         | Overweeg of *Joe* gelijk is aan *Joseph*.        |
 
 1. Ga naar **Gegevens** > **Verenigen** > **Afstemmen** en selecteer **Aangepaste overeenkomst** in de sectie **Details van afgestemde records**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Schermopname van de sectie voor overeenkomstregels met het gemarkeerde besturingselement Aangepaste overeenkomst.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Schermopname van de sectie voor overeenkomstregels met het gemarkeerde besturingselement Aangepaste overeenkomst.":::
 
-1. Als u geen aangepaste overeenkomstregels hebt ingesteld, wordt een nieuw deelvenster **Aangepaste overeenkomst** met meer details weergegeven.
+1. Ga in het deelvenster **Aangepast** naar het tabblad **Records**.
 
-1. Selecteer **De sjabloon invullen** om een sjabloonbestand te krijgen dat kan specificeren welke records uit welke entiteiten altijd of nooit moeten overeenkomen. U moet de 'altijd overeenkomende' records en 'nooit overeenkomende' records afzonderlijk invullen in twee verschillende bestanden.
+1. Kies de aangepaste overeenkomstoptie uit de vervolgkeuzelijst **Aangepast type** en selecteer **Sjabloon downloaden**. Voor elke overeenkomstoptie hebt u een aparte sjabloon nodig.
 
-1. De sjabloon bevat velden om de entiteit en de primaire sleutelwaarden van de entiteit op te geven die in de aangepaste overeenkomst moeten worden gebruikt. Als u bijvoorbeeld wilt dat de primaire sleutel *12345* uit de entiteit *Verkoop* altijd wordt afgestemd met de primaire sleutel *34567* van de entiteit *Contactpersoon*, vult u de sjabloon in:
+1. Er wordt een sjabloonbestand gedownload. Open het en vul de gegevens in. De sjabloon bevat velden om de entiteit en de primaire sleutelwaarden van de entiteit op te geven die in de aangepaste overeenkomst moeten worden gebruikt. Als u bijvoorbeeld wilt dat de primaire sleutel *12345* uit de entiteit *Verkoop* altijd wordt afgestemd met de primaire sleutel *34567* van de entiteit *Contactpersoon*, vult u de sjabloon in:
     - Entiteit1: Verkoop
     - Entity1Key: 12345
     - Entiteit2: Contactpersoon
@@ -244,26 +251,32 @@ U kunt voorwaarden opgeven die bepaalde records altijd moeten overeenkomen of no
    
    Als u aangepaste overeenkomsten voor ontdubbeling op een entiteit wilt opgeven, geeft u dezelfde entiteit op als Entity1 en Entity2 en stelt u de verschillende primaire sleutelwaarden in.
 
-1. Na het toevoegen van alle overschrijvingen die u wilt toepassen, slaat u het sjabloonbestand op.
+1. Sla het sjabloonbestand op nadat u alle overschrijvingen hebt toegevoegd.
 
-1. Ga naar **Gegevens** > **Gegevensbronnen** en neem de sjabloonbestanden op als nieuwe entiteiten. Na inname kunt u ze gebruiken om de afstemmingsconfiguratie op te geven.
+1. Ga naar **Gegevens** > **Gegevensbronnen** en neem de sjabloonbestanden op als nieuwe entiteiten.
 
-1. Na het uploaden zijn de bestanden en entiteiten beschikbaar. Selecteer vervolgens de optie **Aangepaste overeenkomst** opnieuw. U ziet opties om de entiteiten op te geven die u wilt opnemen. Selecteer de vereiste entiteiten in het vervolgkeuzemenu.
+1. Na het uploaden zijn de bestanden en entiteiten beschikbaar. Selecteer vervolgens de optie **Aangepaste overeenkomst** opnieuw. U ziet opties om de entiteiten op te geven die u wilt opnemen. Selecteer de vereiste entiteiten in het vervolgkeuzemenu en selecteer **Gereed**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Schermopname van het dialoogvenster om overschrijvingen te kiezen voor een aangepast afstemmingsscenario.":::
 
-1. Selecteer de entiteiten die u wilt gebruiken voor **Altijd overeenkomen** en **Nooit overeenkomen** en selecteer vervolgens **Gereed**.
+1. Het toepassen van de aangepaste overeenkomst hangt af van de overeenkomstoptie die u wilt gebruiken. 
+
+   - Ga verder met de volgende stap voor **Altijd overeenkomen** of **Nooit overeenkomen**.
+   - Selecteer voor **Aangepaste omleiding** of **Aliastoewijzing** de optie **Bewerken** op een bestaande overeenkomstregel of maak een nieuwe regel. Kies in de vervolgkeuzelijst Normalisaties de optie **Aangepaste omleiding** of **Aliastoewijzing** en selecteer **Gereed**.
 
 1. Selecteer **Opslaan** op de pagina **Afstemming** om de aangepaste afstemmingsconfiguratie toe te passen.
 
 1. Selecteer **Uitvoeren** op de pagina **Afstemming** om het afstemmingsproces te starten. Andere opgegeven overeenkomstregels worden overschreven door de aangepaste overeenkomstconfiguratie.
 
-> [!TIP]
-> Ga naar **Gegevens** > **Entiteiten** en bekijk de entiteit **ConflationMatchPair** om te bevestigen dat de overschrijvingen zijn toegepast.
+### <a name="known-issues"></a>Bekende problemen
+
+- Zelf-samenvoeging toont niet de genormaliseerde gegevens in deduplicatie-entiteiten. Het past de normalisatie echter intern toe tijdens deduplicatie. Het is ontworpen voor alle normalisaties. 
+- Als de instelling voor het semantische type wordt verwijderd in de **Toewijzing**-fase wanneer een overeenkomstregel Aliastoewijzing of Aangepaste omleiding gebruikt, wordt de normalisatie niet toegepast. Het gebeurt alleen als u het semantische type wist na het configureren van de normalisatie in de overeenkomstregel, omdat het semantische type onbekend zal zijn.
+
 
 ## <a name="next-step"></a>Volgende stap
 
-Na het voltooien van het afstemmingsproces voor ten minste één afstemmingspaar, kunt u mogelijke tegenstrijdigheden in uw gegevens oplossen door het onderwerp [**Samenvoegen**](merge-entities.md) door te nemen.
+Ga na het voltooien van het overeenkomstproces voor ten minste één vergelijkingspaar verder naar de stap [**Samenvoegen**](merge-entities.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

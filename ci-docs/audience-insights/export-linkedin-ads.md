@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618285"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866882"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmenten exporteren naar LinkedIn Ads (preview)
 
@@ -28,6 +28,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar LinkedIn Ads om matc
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- Uw segment in Customer Insights moet minimaal 300 unieke profielen bevatten. 
 - U kunt tot 100.000 klantprofielen per export exporteren naar LinkedIn Ads.
 - Exporteren naar LinkedIn Ads is beperkt tot segmenten.
 - Het exporteren van tot 100.000 klantprofielen naar LinkedIn Ads kan tot 10 minuten duren. 
