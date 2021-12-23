@@ -1,20 +1,20 @@
 ---
-title: Invoegtoepassing Klantkaart voor Dynamics 365-apps
+title: Invoegtoepassing Klantkaart voor Dynamics 365-app (video)
 description: Geef gegevens van doelgroepinzichten weer in Dynamics 365-apps met deze invoegtoepassing.
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792021"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904007"
 ---
 # <a name="customer-card-add-in-preview"></a>Invoegtoepassing Klantkaart (preview)
 
@@ -34,7 +34,7 @@ Krijg een compleet overzicht van uw klanten rechtstreeks in Dynamics 365-apps. A
   - **Metingcontrole**: hiervoor zijn [geconfigureerde metingen](measures.md) van het type klantkenmerken vereist.
   - **Informatiebeheer**: vereist gegevens die zijn gegenereerd met [voorspellingen](predictions.md) of [aangepaste modellen](custom-models.md).
   - **Controle klantgegevens**: alle velden uit het profiel zijn beschikbaar in het geharmoniseerde klantprofiel.
-  - **Besturingselement voor verrijking**: vereist dat actieve [verrijkingen](enrichment-hub.md) worden toegepast op klantprofielen. De invoegtoepassing kaart ondersteunt deze verrijkingen: [Merken](enrichment-microsoft.md) geleverd door Microsoft, [Interesses](enrichment-microsoft.md) geleverd door Microsoft.
+  - **Besturingselement voor verrijking**: vereist dat actieve [verrijkingen](enrichment-hub.md) worden toegepast op klantprofielen. De kaart invoegtoepassing ondersteunt deze verrijkingen: [Merken](enrichment-microsoft.md) geleverd door Microsoft, [Interesses](enrichment-microsoft.md) geleverd door Microsoft en [Betrokkenheidsgegevens kantoor](enrichment-office.md) geleverd door Microsoft.
   - **Controle contactpersonen**: hiervoor is de definitie van de semantische entiteit van het type contactpersonen vereist.
   - **Tijdlijncontrole**: vereist [geconfigureerde activiteiten](activities.md).
 

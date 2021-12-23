@@ -1,7 +1,7 @@
 ---
 title: Semantische toewijzingen (preview)
 description: Overzicht van semantische toewijzingen en hoe ze te gebruiken.
-ms.date: 11/01/2021
+ms.date: 12/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7731937"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881824"
 ---
-# <a name="semantic-mappings"></a>Semantische toewijzingen
+# <a name="semantic-mappings-preview"></a>Semantische toewijzingen (preview)
 
 Met semantische toewijzingen kunt u uw niet-activiteitsgegevens toewijzen aan vooraf gedefinieerde schema's. Deze schema's helpen doelgroepinzichten om uw gegevenskenmerken beter te begrijpen. Semantische toewijzing en de verstrekte gegevens maken nieuwe inzichten en functies mogelijk in doelgroepinzichten. Voor informatie over het koppelen van uw activiteitsgegevens aan de schema's raadpleegt u de documentatie bij [activiteiten](activities.md).
 
@@ -91,5 +91,40 @@ Op **Gegevens** > **Semantische toewijzingen (preview)** kunt u al uw opgeslagen
 
 - **Verwijderen**: een dialoogvenster openen om het verwijderen van de geselecteerde semantische toewijzing te bevestigen. U kunt ook meerdere semantische toewijzingen tegelijk verwijderen door de semantische toewijzingen en het verwijderpictogram te selecteren. Selecteer **Verwijderen** om het verwijderen te bevestigen.
 
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Een semantische entiteitstoewijzing ContactProfile gebruiken om activiteiten op contactniveau te maken
+
+Na het maken van een semantische entiteitstoewijzing *ContactProfile*, kunt u activiteiten van contactpersonen vastleggen. Hiermee kunt u in de activiteitentijdlijn voor een account zien welke contactpersoon verantwoordelijk was voor elke activiteit. De meeste stappen volgen de typische configuratie van activiteitentoewijzing.
+
+   > [!NOTE]
+   > Als u activiteiten op contactpersoonniveau wilt laten werken, moet u zowel het kenmerk **AccountID** als het kenmerk **ContactID** hebben voor elke record binnen uw activiteitsgegevens.
+
+1. [Definieer een toewijzing aan een semantische entiteit *ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) en voer de semantische toewijzing uit.
+
+1. Ga in doelgroepinzichten naar **Gegevens** > **Activiteiten**.
+
+1. Selectee **Activiteit toevoegen** om een nieuwe activiteit te maken.
+
+1. Geef de activiteit een naam, selecteer de bronactiviteitsentiteit en selecteer de primaire sleutel van de activiteitsentiteit.
+
+1. Maak in de stap **Relaties** een indirecte relatie tussen uw activiteitsbrongegevens en accounts, waarbij u uw contactgegevens als tussenpersoon gebruikt. Zie [directe en indirecte relatiepaden](relationships.md#relationship-paths) voor meer informatie.
+   - Voorbeeldrelatie voor een activiteit met de naam *Aankopen*:
+      - **Bronactiviteitsgegevens voor aankopen** > **Contactgegevens** in het kenmerk **ContactID**
+      - **Contactgegevens** > **Accountgegevens** in het kenmerk **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Voorbeeld van het instellen van relaties.":::
+
+1. Selecteer na het instellen van de relatie(s) de optie **Volgende** en voltooi uw activiteitstoewijzingsconfiguratie. Zie [een activiteit definiëren](activities.md) voor gedetailleerde stappen voor het maken van activiteiten.
+
+1. Voer uw activiteitstoewijzingen uit.
+
+1. Uw activiteiten op contactpersoonniveau zijn nu zichtbaar op uw klanttijdlijn.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Eindresultaat na configureren van contactpersoonactiviteiten":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Tijdlijnfiltering voor activiteiten op contactpersoonniveau
+
+Nadat u een activiteittoewijzing op contactpersoonniveau hebt geconfigureerd en uitgevoerd, wordt de activiteitentijdlijn voor uw klanten bijgewerkt. Het bevat hun id's of namen, afhankelijk van uw configuratie *ContactProfile*, voor de activiteiten waarop ze hebben gehandeld. U kunt activiteiten filteren op contactpersonen in de tijdlijn om specifieke contactpersonen te zien waarin u geïnteresseerd bent. Bovendien kunt u alle activiteiten zien die niet aan een specifieke contactpersoon zijn toegewezen door **Activiteiten die niet aan een contactpersoon zijn toegewezen** te selecteren.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Filteropties beschikbaar voor activiteiten op contactpersoonniveau.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

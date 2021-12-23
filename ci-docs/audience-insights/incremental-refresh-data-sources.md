@@ -1,7 +1,7 @@
 ---
 title: Incrementeel vernieuwen voor Power Query-gegevensbronnen
 description: Vernieuw nieuwe en bijgewerkte gegevens voor grote gegevensbronnen op basis van Power Query.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377828"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900249"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Incrementeel vernieuwen voor op Power Query gebaseerde gegevensbronnen
+
+In dit artikel wordt beschreven hoe u incrementele vernieuwing voor gegevensbronnen configureert op basis van Power Query.
 
 Incrementeel vernieuwen voor gegevensbronnen biedt de volgende voordelen:
 
@@ -30,9 +32,9 @@ Doelgroepinzichten maakt incrementele vernieuwing mogelijk voor gegevensbronnen 
 
 1. [Een nieuwe gegevensbron maken op basis van Power Query](connect-power-query.md).
 
-1. Geef een naam op voor de gegevensbron.
+1. Geef een **naam** op voor de gegevensbron.
 
-1. Selecteer een gegevensbron die incrementeel vernieuwen ondersteunt, zoals Azure SQL-database.
+1. Selecteer een gegevensbron die incrementeel vernieuwen ondersteunt, zoals [Azure SQL-database](/power-query/connectors/azuresqldatabase).
 
 1. Selecteer de entiteiten of tabellen die u wilt opnemen.
 

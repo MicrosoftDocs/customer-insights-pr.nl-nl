@@ -1,7 +1,7 @@
 ---
 title: Aangepaste Machine Learning-modellen | Microsoft Docs
 description: Werk met aangepaste modellen van Azure Machine Learning in Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032936"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881778"
 ---
 # <a name="custom-machine-learning-models"></a>Aangepaste Machine Learning-modellen
+
+> [!NOTE]
+> Ondersteuning voor Machine Learning Studio (klassiek) stopt op 31 augustus 2024. We raden u aan voor die tijd over te stappen naar [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning).
+>
+> Vanaf 1 december 2021 kunt u geen nieuwe resources maken voor Machine Learning Studio (klassiek). Tot en met 31 augustus 2024 kunt u de bestaande resources van Machine Learning Studio (klassieke) blijven gebruiken. Zie [Migreren naar Azure Machine Learning](/azure/machine-learning/migrate-overview) voor meer informatie.
+
 
 Met **Informatie** > **Aangepaste modellen** kunt u werkstromen beheren op basis van Azure Machine Learning-modellen. Werkstromen helpen u bij het kiezen van de gegevens waaruit u inzichten wilt genereren, en helpen u de resultaten toe te wijzen aan uw geharmoniseerde klantgegevens. Zie voor meer informatie over het bouwen van aangepaste ML-modellen [Azure Machine Learning-modellen gebruiken](azure-machine-learning-experiments.md).
 
@@ -26,7 +32,7 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
 
 ## <a name="prerequisites"></a>Vereisten
 
-- Momenteel ondersteunt deze functie webservices die zijn gepubliceerd via [Machine Learning Studio (klassiek)](https://studio.azureml.net) en [Azure Machine Learning batch-pijplijnen](/azure/machine-learning/concept-ml-pipelines).
+- Deze functie ondersteunt webservices die zijn gepubliceerd via [batch-pijplijnen voor Azure Machine Learning](/azure/machine-learning/concept-ml-pipelines).
 
 - U hebt een Azure Data Lake Gen2-opslagaccount nodig dat is gekoppeld aan uw Azure Studio-exemplaar om deze functie te gebruiken. Zie voor meer informatie [Een Azure Data Lake Storage Gen2-opslagaccount maken](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
 
 1. Selecteer, als uw Azure Machine Learning-abonnement zich in een andere tenant bevindt dan Customer Insights, **Aanmelden** met uw referenties voor de geselecteerde organisatie.
 
-1. Selecteer de **Werkruimten** die zijn gekoppeld aan uw webservice. Er worden twee secties vermeld, een voor Azure Machine Learning v1 (Machine Learning Studio (klassiek)) en Azure Machine Learning v2 (Azure Machine Learning). Als u niet zeker weet welke werkruimte de juiste is voor uw Machine Learning Studio-webservice (klassiek), selecteert u **Willekeurig**.
+1. Selecteer de **Werkruimten** die zijn gekoppeld aan uw webservice. 
 
-1. Kies de Machine Learning Studio-webservice (klassiek) of Azure Machine Learning-pijplijn in de vervolgkeuzelijst **Webservice met uw model**. Selecteer vervolgens **Volgende**.
-   - Meer informatie over [een webservice publiceren in Machine Learning Studio (klassiek)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Meer informatie over [een pijplijn publiceren in Azure Machine Learning met de designer](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) of [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Uw pijplijn moet worden gepubliceerd onder een [pijplijn-eindpunt](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Kies de Azure Machine Learning-pijplijn in de vervolgkeuzelijst **Webservice die uw model bevat**. Selecteer vervolgens **Volgende**.    
+   Meer informatie over [een pijplijn publiceren in Azure Machine Learning met de designer](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) of [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Uw pijplijn moet worden gepubliceerd onder een [pijplijn-eindpunt](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Voor elke **Invoer voor webservice** selecteert u de overeenkomende **Entiteit** in doelgroepinzichten en tot slot selecteert u **Volgende**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
    > ![Een werkstroom configureren.](media/intelligence-screen2-updated.png "Een werkstroom configureren")
 
 1. Stel in de stap **Modeluitvoerparameters** de volgende eigenschappen in:
-   - Machine Learning Studio (klassiek)
-      1. Voer de **Entiteitsnaam** van de uitvoer in waarnaar u de uitvoerresultaten van de webservice wilt laten stromen.
-   - Azure Machine Learning
       1. Voer de **Entiteitsnaam** van de uitvoer in waarnaar u de uitvoerresultaten van de pijplijn wilt laten stromen.
       1. Selecteer in de vervolgkeuzelijst de **Parameternaam van de uitvoergegevensopslag** van uw batchpijplijn.
       1. Selecteer in de vervolgkeuzelijst de **Parameternaam van het uitvoerpad** van uw batchpijplijn.
@@ -93,9 +95,6 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
 1. Voor elke **Invoer voor webservice** kunt u de overeenkomende **Entiteit** in doelgroepinzichten bijwerken. Selecteer vervolgens **Volgende**.
 
 1. Stel in de stap **Modeluitvoerparameters** de volgende eigenschappen in:
-   - Machine Learning Studio (klassiek)
-      1. Voer de **Entiteitsnaam** van de uitvoer in waarnaar u de uitvoerresultaten van de webservice wilt laten stromen.
-   - Azure Machine Learning
       1. Voer de **Entiteitsnaam** van de uitvoer in waarnaar u de uitvoerresultaten van de pijplijn wilt laten stromen.
       1. Selecteer de **Parameternaam voor uitvoergegevensopslag** voor uw testpijplijn.
       1. Selecteer de **Parameternaam voor uitvoerpad** voor uw testpijplijn.

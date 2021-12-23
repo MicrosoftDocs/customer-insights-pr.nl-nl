@@ -1,7 +1,7 @@
 ---
 title: Entiteiten en gegevenssets
 description: Gegevens weergeven op de pagina Entiteiten.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,51 +9,57 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732074"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900421"
 ---
 # <a name="entities-in-audience-insights"></a>Entiteiten in doelgroepinzichten
 
 Ga, na het [configureren van uw gegevensbronnen](data-sources.md), naar de pagina **Entiteiten** om de kwaliteit van de opgenomen gegevens te evalueren. Entiteiten worden beschouwd als gegevenssets. Meerdere mogelijkheden van Dynamics 365 Customer Insights zijn gebouwd rond deze entiteiten. Door ze nauwkeurig te bekijken, kunt u de uitvoer van die mogelijkheden valideren.
 
-Op de pagina **Entiteiten** worden entiteiten vermeld. Deze worden weergegeven in verschillende kolommen:
+De pagina **Entiteiten** bevat entiteiten en de volgende kolommen:
 
-- **Naam**: de naam van uw gegevensentiteit. Als u een waarschuwingssymbool naast een entiteitsnaam ziet, betekent dit dat de gegevens voor die entiteit niet zijn geladen.
-- **Bron**: het type gegevensbron waarin de entiteit is opgenomen
-- **Gemaakt door**: naam van de gebruiker die de entiteit heeft gemaakt.
-- **Gemaakt**: datum en tijdstip waarop de entiteit is gemaakt
-- **Bijgewerkt**: naam van de gebruiker die de entiteit heeft bijgewerkt
-- **Status**: details over de laatste update van de entiteit
+- **Naam**: de naam van de gegevensentiteit. Als u een waarschuwingssymbool naast een entiteitsnaam ziet, betekent dit dat de gegevens voor die entiteit niet zijn geladen.
+- **Bron**: type gegevensbron dat de entiteit heeft opgenomen.
+- **Bijgewerkt**: het tijdstip waar de entiteit voor het laatst is bijgewerkt.
+- **Status**: details over de laatste update van de entiteit.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>De gegevens van een specifieke entiteit verkennen
 
-Selecteer een entiteit om de verschillende velden en records in die entiteit te verkennen.
+1. Ga in doelgroepinzichten naar **Gegevens** > **Entiteiten**.
+1. Selecteer op de pagina **Entiteiten** een entiteit om de detailpagina te openen.  
+1. Verken de verschillende velden die zijn opgenomen voor die entiteit.
 
-> [!div class="mx-imgBorder"]
-> ![Selecteer een entiteit.](media/data-manager-entities-data.png "Selecteer een entiteit")
-
-- Op het tabblad **Gegevens** wordt een tabel weergegeven met details over individuele records van de entiteit.
+- Het tabblad **Kenmerken** is standaard geselecteerd en bevat een tabel om details voor de geselecteerde entiteit te controleren, zoals veldnamen, gegevenstypen en typen. In de kolom **Type** worden aan het Common Data Model gekoppelde typen weergegeven, die automatisch worden geïdentificeerd door het systeem of [handmatig worden toegewezen](map-entities.md) door gebruikers. Deze typen zijn semantische typen die kunnen verschillen van de gegevenstypen van de kenmerken. Het veld *E-mail* hieronder heeft bijvoorbeeld het gegevenstype *Tekst*, maar het (semantische) Common Data Model-type zou *E-mail* of *E-mailadres* kunnen zijn.
 
 > [!div class="mx-imgBorder"]
 > ![Veldentabel.](media/data-manager-entities-fields.PNG "Veldentabel")
 
-- Het tabblad **Kenmerken** is standaard geselecteerd en bevat een tabel om details voor de geselecteerde entiteit te controleren, zoals veldnamen, gegevenstypen en typen. In de kolom **Type** worden aan het Common Data Model gekoppelde typen weergegeven, die automatisch worden geïdentificeerd door het systeem of [handmatig worden toegewezen](map-entities.md) door gebruikers. Deze typen zijn semantische typen die kunnen verschillen van de gegevenstypen van de kenmerken. Het veld *E-mail* hieronder heeft bijvoorbeeld het gegevenstype *Tekst*, maar het (semantische) Common Data Model-type zou *E-mail* of *E-mailadres* kunnen zijn.
-
 > [!NOTE]
-> In beide tabellen wordt slechts een voorbeeld van de gegevens van uw entiteit weergegeven. Als u de volledige gegevensset wilt bekijken, gaat u naar de pagina **Gegevensbronnen**, selecteert u **Bewerken** en bekijkt u de gegevens van deze entiteit met de Power Query-editor, zoals uitgelegd in [Gegevensbronnen](data-sources.md).
+> Deze pagina toont slechts een voorbeeld van de gegevens van uw entiteit. Als u de volledige gegevensset wilt bekijken, gaat u naar de pagina **Gegevensbronnen**, selecteert u **Bewerken** en bekijkt u de gegevens van deze entiteit met de Power Query-editor, zoals uitgelegd in [Gegevensbronnen](data-sources.md).
 
-Voor meer informatie over de gegevens die zijn opgenomen in de entiteit biedt de kolom **Overzicht** u een aantal belangrijke kenmerken van de gegevens, zoals nullen, ontbrekende waarden, unieke waarden, tellingen en distributies, zoals van toepassing op uw gegevens.
-
-Selecteer het grafiekpictogram om het overzicht van de gegevens weer te geven.
+Voor meer informatie over de gegevens die zijn opgenomen in de entiteit biedt de kolom **Overzicht** u een aantal belangrijke kenmerken van de gegevens, zoals nullen, ontbrekende waarden, unieke waarden, tellingen en distributies, zoals van toepassing op uw gegevens. Selecteer het grafiekpictogram om het overzicht van de gegevens weer te geven.
 
 > [!div class="mx-imgBorder"]
 > ![Overzichtssymbool.](media/data-manager-entities-summary.png "Aanvraagoverzichtstabel")
+
+- Op het tabblad **Gegevens** wordt een tabel weergegeven met details over individuele records van de entiteit. De vermelde details zijn afhankelijk van het gegevenstype van de entiteit.
+
+> [!div class="mx-imgBorder"]
+> ![Selecteer een entiteit.](media/data-manager-entities-data.png "Selecteer een entiteit")
+
+- Het tabblad **Rapporten** (beschikbaar voor sommige entiteiten) stelt u in staat uw gegevens te visualiseren door een rapport te maken. Dit bevat de volgende kolommen:
+
+  - **Naam rapport**: naam van het rapport.
+  - **Gemaakt door**: naam van de gebruiker die de entiteit heeft gemaakt.
+  - **Gemaakt**: datum en tijdstip waarop de entiteit is gemaakt.
+  - **Bewerkt door**: naam van de gebruiker die de entiteit heeft gewijzigd.
+  - **Bewerkt**: datum en tijdstip waarop de entiteit is gewijzigd. 
 
 ## <a name="entity-specific-information"></a>Entiteitsspecifieke informatie
 
@@ -73,8 +79,7 @@ De volgende controles worden uitgevoerd op de opgenomen gegevens om beschadigde 
 
 - De waarde van een veld komt niet overeen met het gegevenstype van de kolom.
 - Velden bevatten tekens waardoor de kolommen niet overeenkomen met het verwachte schema. Bijvoorbeeld: onjuist opgemaakte aanhalingstekens, aanhalingstekens zonder escape of tekens voor nieuwe regels.
-- Indien er datetime/datetime/datetimeoffset kolommen zijn, moet de indeling daarvan in het model worden gespecificeerd indien dit niet de standaard ISO-indeling volgt.
-
+- Als er kolommen voor datetime/date/datetimeoffset zijn, moet hun indeling in het model worden gespecificeerd als niet de standaard ISO-indeling wordt gevolgd.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

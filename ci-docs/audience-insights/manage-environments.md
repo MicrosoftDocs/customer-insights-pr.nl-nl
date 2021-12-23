@@ -1,7 +1,7 @@
 ---
 title: Omgevingen maken en beheren
 description: Ontdek hoe u zich aanmeldt voor de service en hoe u omgevingen beheert.
-ms.date: 11/12/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799630"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892378"
 ---
 # <a name="manage-environments"></a>Omgevingen beheren
 
@@ -45,6 +45,9 @@ Zie voor meer informatie over omgevingsinstellingen [Een nieuwe omgeving maken](
 In de stap **Microsoft Dataverse** kunt u Customer Insights verbinden met uw Dataverse-omgeving.
 
 Als u [kant-en-klare voorspellingsmodellen](predictions-overview.md#out-of-box-models) wilt gebruiken, configureert u delen van gegevens met Dataverse. Of u kunt gegevensopname van on-premises-gegevensbronnen inschakelen door de Microsoft Dataverse omgevings-URL op te geven die uw organisatie beheert. Selecteer **Gegevens delen inschakelen** om Customer Insights-uitvoergegevens te delen met een door Dataverse beheerd data lake.
+
+> [!IMPORTANT]
+> Customer Insights en Dataverse moeten zich in dezelfde regio bevinden om het delen van gegevens mogelijk te maken.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Configuratieopties om het delen van gegevens met Microsoft Dataverse mogelijk te maken.":::
 

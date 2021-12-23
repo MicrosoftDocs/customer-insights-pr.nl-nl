@@ -1,7 +1,7 @@
 ---
 title: Toestemmingsregels voor segmenten activeren
 description: Volg deze stappen om toestemmingsgegevens te koppelen en toestemmingscontroles te activeren in doelgroepinzichten. Een beheerder kan toestemmingscontroles ook uitschakelen.
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790770"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884068"
 ---
 # <a name="activate-consent-rules"></a>Toestemmingsregels activeren
 
@@ -49,3 +49,6 @@ Als u wilt stoppen met het gebruik van toestemmingsgegevens in doelgroepinzichte
 1. Selecteer het tabblad **Toestemming (preview)**.
 
 1. Schakel in de sectie **Toestemmingscontroles inschakelen** de schakeloptie in op **Uit**.
+
+> [!TIP]
+> Zie [Systeeminstellingen in Toestemmingscentrum (preview)](../consent-management/system-settings.md) als u wilt stoppen met het gebruiken van de toestemmingsbeheerfunctie.

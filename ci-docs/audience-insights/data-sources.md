@@ -1,7 +1,7 @@
 ---
 title: Gegevensbronnen gebruiken om gegevens op te nemen
 description: Meer informatie over hoe u gegevens uit verschillende bronnen kunt importeren.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732136"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900336"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
@@ -25,19 +25,22 @@ De doelgroepinzichten-mogelijkheid in Dynamics 365 Customer Insights maakt verbi
 
 ## <a name="add-a-data-source"></a>Een gegevensbron toevoegen
 
-Raadpleeg de gedetailleerde artikelen over het toevoegen van een gegevensbron, afhankelijk van de optie die u kiest.
+Raadpleeg de gedetailleerde artikelen voor het toevoegen van een gegevensbron, afhankelijk van de optie die u kiest.
 
-U kunt een gegevensbron op drie manieren toevoegen:
+U kunt de volgende gegevensbronnen toevoegen:
 
-- [Via tientallen Power Query-connectors](connect-power-query.md)
-- [Via een Common Data Model-map](connect-common-data-model.md)
-- [Via uw eigen Microsoft Dataverse-lake](connect-dataverse-managed-lake.md)
+- [Power Query-connectors](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse lake](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Als u de proefversie gebruikt, bevat de sectie met importmethoden een optie **Gegevensbibliotheek voor Customer Insights**. Kies deze optie om een voorbeeldgegevensset te selecteren die beschikbaar is voor verschillende bedrijfstakken. Zie [proefversie van Dynamics 365 Customer Insights](../trial-signup.md) voor meer informatie.
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Gegevens toevoegen vanuit on-premises gegevensbronnen
 
-Het opnemen van gegevens uit on-premises gegevensbronnen in doelgroepinzichten wordt ondersteund op basis van Microsoft Power Platform-gegevensstromen. Gegevensstromen kunnen worden ingeschakeld in Customer Insights door [het verstrekken van de URL van de Microsoft Dataverse-omgeving](create-environment.md) bij het opzetten van de omgeving.
+Het opnemen van gegevens uit on-premises gegevensbronnen in doelgroepinzichten wordt ondersteund op basis van Microsoft Power Platform-gegevensstromen. U kunt gegevensstromen in Customer Insights inschakelen door [de omgevings-URL voor Microsoft Dataverse te verstrekken](create-environment.md) bij het instellen van de omgeving.
 
-Gegevensbronnen die worden gemaakt na het koppelen van een Dataverse-omgeving met Customer Insights maken standaard gebruik van [Power Platform-gegevensstromen](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Gegevensstromen ondersteunen on-premises connectiviteit met behulp van de gegevensgateway. Verwijder gegevensbronnen die al bestonden vóór een Dataverse-omgeving werd gekoppeld en maak deze opnieuw om [de on-premises gegevensgateways te gebruiken](/data-integration/gateway/service-gateway-app).
+Gegevensbronnen die zijn gemaakt na het koppelen van een Dataverse-omgeving met Customer Insights maken standaard gebruik van [Power Platform-gegevensstromen](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Gegevensstromen ondersteunen on-premises connectiviteit met behulp van de gegevensgateway. U kunt gegevensbronnen verwijderen en opnieuw maken die bestonden voordat een Dataverse-omgeving werd gekoppeld [met behulp van on-premises gegevensgateways](/data-integration/gateway/service-gateway-app).
 
 Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving worden zichtbaar en u kunt deze opnieuw gebruiken in Customer Insights. De pagina met gegevensbronnen toont koppelingen om naar de Microsoft Power Platform-omgeving te gaan waar u on-premises gegevensgateways kunt bekijken en configureren.
 
