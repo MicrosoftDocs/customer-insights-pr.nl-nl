@@ -80,7 +80,7 @@
       items:
         - name: Klantprofielen verrijken
           href: audience-insights/enrichment-hub.md
-        - name: Merk- en interesseaffiniteiten
+        - name: Merken en interesses
           href: audience-insights/enrichment-microsoft.md
         - name: Uitgebreide adressen
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Transactieverloop voorspellen
               href: audience-insights/predict-transactional-churn.md
+            - name: Analyseer gevoel in klantfeedback
+              href: audience-insights/sentiment-analysis.md
             - name: Aangepaste modellen uit Azure Machine Learning gebruiken
               href: audience-insights/custom-models.md
             - name: Gedeeltelijk ontbrekende gegevens invullen

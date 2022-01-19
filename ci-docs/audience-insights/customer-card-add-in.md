@@ -1,7 +1,7 @@
 ---
-title: Invoegtoepassing Klantkaart voor Dynamics 365-app (video)
+title: Invoegtoepassing Klantkaart voor Dynamics 365-app (met video)
 description: Geef gegevens van doelgroepinzichten weer in Dynamics 365-apps met deze invoegtoepassing.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904007"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945421"
 ---
 # <a name="customer-card-add-in-preview"></a>Invoegtoepassing Klantkaart (preview)
 
@@ -27,12 +27,12 @@ Krijg een compleet overzicht van uw klanten rechtstreeks in Dynamics 365-apps. A
 ## <a name="prerequisites"></a>Vereisten
 
 - De invoegtoepassing werkt alleen met modelgestuurde Dynamics 365-apps, zoals Sales of Customer Service, versie 9.0 en hoger.
-- Voor toewijzing van uw Dynamics 365-gegevens aan de klantprofielen van doelgroepinzichten moeten ze [worden opgenomen vanuit de Dynamics 365-app met behulp van de Microsoft Dataverse-connector](connect-power-query.md).
+- Voor toewijzing van uw Dynamics 365-gegevens aan de klantprofielen van doelgroepinzichten raden we aan ze [op te nemen vanuit de Dynamics 365-app met behulp van de Microsoft Dataverse-connector](connect-power-query.md). Als u een andere methode gebruikt om Dynamics 365-contactpersonen (of -accounts) op te nemen, moet u ervoor zorgen dat het veld `contactid` (of `accountid`) is ingesteld als de [primaire sleutel voor die gegevensbron in de kaartstap van het gegevensharmonisatieproces ](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Alle Dynamics 365-gebruikers van de invoegtoepassing Klantkaart moeten worden [toegevoegd als gebruikers](permissions.md) in doelgroepinzichten om de gegevens te zien.
 - [Geconfigureerde zoek- en filtermogelijkheden](search-filter-index.md) in doelgroepinzichten zijn vereist voor het opzoeken van gegevens.
 - Elk besturingselement van de invoegtoepassing is afhankelijk van specifieke gegevens in doelgroepinzichten. Sommige gegevens en besturingselementen zijn alleen beschikbaar in omgevingen van specifieke typen. De configuratie van de invoegtoepassing zal u informeren als een besturingselement niet beschikbaar is vanwege het geselecteerde omgevingstype. Meer informatie over [gebruiksscenario's en omgevingen](work-with-business-accounts.md).
   - **Metingcontrole**: hiervoor zijn [geconfigureerde metingen](measures.md) van het type klantkenmerken vereist.
-  - **Informatiebeheer**: vereist gegevens die zijn gegenereerd met [voorspellingen](predictions.md) of [aangepaste modellen](custom-models.md).
+  - **Informatiebeheer**: vereist gegevens die zijn gegenereerd met [voorspellingen of aangepaste modellen](predictions-overview.md).
   - **Controle klantgegevens**: alle velden uit het profiel zijn beschikbaar in het geharmoniseerde klantprofiel.
   - **Besturingselement voor verrijking**: vereist dat actieve [verrijkingen](enrichment-hub.md) worden toegepast op klantprofielen. De kaart invoegtoepassing ondersteunt deze verrijkingen: [Merken](enrichment-microsoft.md) geleverd door Microsoft, [Interesses](enrichment-microsoft.md) geleverd door Microsoft en [Betrokkenheidsgegevens kantoor](enrichment-office.md) geleverd door Microsoft.
   - **Controle contactpersonen**: hiervoor is de definitie van de semantische entiteit van het type contactpersonen vereist.

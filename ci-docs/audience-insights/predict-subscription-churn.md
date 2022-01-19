@@ -1,5 +1,5 @@
 ---
-title: Voorspelling van abonnementsverloop (video)
+title: Voorspelling van abonnementverloop (met video)
 description: Voorspel of het risico bestaat dat een klant niet langer gebruik zal maken van de abonnementsproducten of -services van uw bedrijf.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903943"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967695"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Voorspelling voor abonnementsverloop (preview)
 
@@ -77,7 +77,7 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
 1. Voer het aantal **Dagen sinds het abonnement is beëindigd** in waarna het bedrijf het abonnement van een klant als verlopen beschouwt. Deze periode is meestal gekoppeld aan zakelijke activiteiten zoals aanbiedingen of andere marketinginspanningen om te voorkomen dat de klant verloren gaat.
 1. Voer het aantal **Dagen om de toekomst te kijken om verloop te voorspellen** in om een venster in te stellen voor het voorspellen van verloop. Bijoorbeeld om het risico van klantverloop voor uw klanten in de komende 90 dagen te voorspellen voor afstemming van uw marketinginspanningen tot behoud. Het voorspellen van het verlooprisico voor langere of kortere perioden kan het moeilijker maken om de factoren in uw verlooprisicoprofiel aan te pakken, afhankelijk van uw specifieke zakelijke vereisten. Selecteer **Volgende** om door te gaan
    >[!TIP]
-   > U kunt op elk gewenst moment **Opslaan en sluiten** selecteren om de voorspelling als concept op te slaan. U vindt de conceptvoorspelling op het tabblad **Mijn voorspellingen** om door te gaan.
+   > U kunt op elk moment **Concept opslaan** selecteren om de voorspelling als concept op te slaan. U vindt de conceptvoorspelling op het tabblad **Mijn voorspellingen** om door te gaan.
 
 ### <a name="add-required-data"></a>Vereiste gegevens toevoegen
 

@@ -1,7 +1,7 @@
 ---
 title: Verbetering van bedrijfsgegevens
 description: Verrijk en normaliseer bedrijfsgegevens met de modellen van Microsoft.
-ms.date: 11/15/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813912"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927576"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>De verrijking van bedrijfsprofielen met verbeterde bedrijfsgegevens
 
@@ -83,6 +83,16 @@ Selecteer **Uitvoeren** vanaf de opdrachtbalk om het verrijkingsproces te starte
 Nadat het verrijkingsproces is voltooid, kunt u de nieuwe verrijkte klantprofielgegevens bekijken onder **Mijn verrijkingen**. Ook vindt u daar het tijdstip van de laatste update en het aantal verrijkte profielen.
 
 U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrijkte gegevens weergeven** te selecteren.
+
+### <a name="overview-card"></a>Overzichtskaart
+
+Op de overzichtskaart staan details over wat onder de verrijking valt. 
+
+* **Verwerkte en gewijzigde klanten**: het aantal klantprofielen dat succesvol is verrijkt.
+
+* **Klanten verwerkt en niet gewijzigd**: het aantal klantprofielen dat is herkend maar niet gewijzigd. Dit gebeurt meestal wanneer de invoergegevens geldig zijn en niet kunnen worden verbeterd door de verrijking.
+
+* **Klanten niet verwerkt en niet gewijzigd**: het aantal klantprofielen dat niet is herkend. Meestal voor invoergegevens die ongeldig zijn of niet worden ondersteund door de verrijking.
 
 ## <a name="next-steps"></a>Volgende stappen
 

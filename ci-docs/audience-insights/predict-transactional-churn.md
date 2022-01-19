@@ -1,7 +1,7 @@
 ---
-title: Voorspelling van transactieverloop (video)
+title: Voorspelling van transactieverloop (met video)
 description: Voorspel of het risico bestaat dat een klant de producten of services van uw bedrijf niet meer zal kopen.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904066"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967741"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Voorspelling van transactieverloop (preview)
 
@@ -103,10 +103,10 @@ Voor omgevingen die zijn gebaseerd op zakelijke accounts, kunnen we het transact
 
 1. Selecteer de tegel **Klantverloopmodel (preview)** en selecteer **Dit model gebruiken**.
 
-1. In het deelvenster **Klantverloopmodel** kies **Transactie** en selecteer **Aan de slag**.
+1. Kies in het deelvenster **Klantverloopmodel (preview)** de optie **Transactie** en selecteer **Aan de slag**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Schermafbeelding met geselecteerde optie Transactie in het deelvenster Klantverloopmodel.":::
-
+ 
 ### <a name="name-model"></a>Model een naam geven
 
 1. Geef het model een naam om het van andere modellen te onderscheiden.
@@ -117,11 +117,11 @@ Voor omgevingen die zijn gebaseerd op zakelijke accounts, kunnen we het transact
 
 ### <a name="define-customer-churn"></a>Klantverloop definiëren
 
-1. Stel een aantal dagen in om het verloop in het veld **Klanten identificeren die kunnen verlopen in de volgende**. Voorspel bijvoorbeeld het verlooprisico voor uw klanten in de komende 90 dagen om deze op uw marketinginspanningen voor klantbehoud af te stemmen. Het voorspellen van het verlooprisico voor een langere of kortere periode kan het moeilijker maken om de factoren in uw verlooprisicoprofiel mee te nemen, maar het hangt af van uw specifieke zakelijke vereisten.
+1. Stel het **Voorspellingsvenster** in. Voorspel bijvoorbeeld het verlooprisico voor uw klanten in de komende 90 dagen om deze op uw marketinginspanningen voor klantbehoud af te stemmen. Het voorspellen van het verlooprisico voor een langere of kortere periode kan het moeilijker maken om de factoren in uw verlooprisicoprofiel mee te nemen, maar het hangt af van uw specifieke zakelijke vereisten.
    >[!TIP]
-   > U kunt op elk gewenst moment **Opslaan en sluiten** selecteren om de voorspelling als concept op te slaan. U vindt de conceptvoorspelling op het tabblad **Mijn voorspellingen** om door te gaan.
+   > U kunt op elk moment **Concept opslaan** selecteren om de voorspelling als concept op te slaan. U vindt de conceptvoorspelling op het tabblad **Mijn voorspellingen** om door te gaan.
 
-1. Voer het aantal dagen in om verloop te definiëren in het veld **Een klant is verlopen als hij geen aankopen heeft gedaan in:**. Als een klant bijvoorbeeld in de afgelopen 30 dagen geen aankopen heeft gedaan, kan deze voor uw bedrijf als verlopen worden beschouwd. 
+1. Voer het aantal dagen in om verloop te definiëren in het veld **Definitie van verloop**. Als een klant bijvoorbeeld in de afgelopen 30 dagen geen aankopen heeft gedaan, kan deze voor uw bedrijf als verlopen worden beschouwd. 
 
 1. Selecteer **Volgende** om door te gaan.
 
@@ -129,19 +129,16 @@ Voor omgevingen die zijn gebaseerd op zakelijke accounts, kunnen we het transact
 
 1. Selecteer **Gegevens toevoegen** en kies in het zijvenster het type activiteit met de vereiste gegevens van de transactie- of aankoopgeschiedenis.
 
-1. Kies onder **De activiteiten kiezen** de specifieke activiteiten van de geselecteerde activiteit waarop de berekening moet worden gericht.
+1. Kies onder **Activiteiten selecteren** de specifieke activiteiten van het geselecteerde activiteitstype waarop u de berekening wilt richten.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Zijvenster met het kiezen van specifieke activiteiten onder het semantische type.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Zijvenster met het kiezen van specifieke activiteiten onder het semantische type.":::
 
-1. Als u de activiteit nog niet hebt toegewezen aan een semantisch type, selecteert u **Bewerken** om dat te doen. De begeleide ervaring voor het toewijzen van semantische activiteiten wordt geopend. Wijs uw gegevens toe aan de overeenkomende velden in het geselecteerde type activiteit.
+   Als u de activiteit nog niet hebt toegewezen aan een semantisch type, selecteert u **Bewerken** om dat te doen. De begeleide ervaring voor het toewijzen van semantische activiteiten wordt geopend. Wijs uw gegevens toe aan de overeenkomende velden in het geselecteerde type activiteit.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Activiteitstype pagina-instelling.":::
+1. Wijs de semantische kenmerken toe aan de velden die nodig zijn om het model uit te voeren. Als de onderstaande velden niet zijn ingevuld, configureert u de relatie tussen de entiteit Aankoopgeschiedenis en de entiteit *Klant*. Selecteer **Opslaan**.
 
-1. Selecteer na het toewijzen van de activiteit aan het corresponderende semantische type de optie **Volgende** om door te gaan
+1. Selecteer **Volgende** in de stap **Vereiste gegevens toevoegen** om verder te gaan als u geen activiteiten meer wilt toevoegen.
 
-1. Wijs de semantische kenmerken toe aan de velden die nodig zijn om het model uit te voeren. Als de onderstaande velden niet zijn ingevuld, configureert u de relatie tussen de entiteit Aankoopgeschiedenis en de entiteit *Klant*.
-
-1. Selecteer **Volgende**.
 
 # <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
 

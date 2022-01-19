@@ -1,5 +1,5 @@
 ---
-title: Customer Insights-gegevens exporteren naar SFTP-hosts (video)
+title: Customer Insights-gegevens exporteren naar SFTP-hosts (met video)
 description: Leer hoe u de verbinding configureert en exporteert naar een SFTP-locatie.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bb73c49cf87657b71e0c2f5934662b062eeffb21
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904113"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934881"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Segmenten en andere gegevens exporteren naar SFTP (preview)
 
@@ -28,6 +28,7 @@ Gebruik uw klantgegevens in toepassIngen van derden door ze te exporteren naar e
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- SFTP-bestemmingen achter firewalls worden momenteel niet ondersteund. 
 - Hoe lang een export duurt, is afhankelijk van uw systeemprestaties. We raden twee CPU-cores en 1 Gb geheugen aan als minimale configuratie van uw server. 
 - Het exporteren van entiteiten met maximaal 100 miljoen klantprofielen kan 90 minuten duren bij gebruik van de aanbevolen minimale configuratie van twee CPU-cores en 1 Gb geheugen. 
 
