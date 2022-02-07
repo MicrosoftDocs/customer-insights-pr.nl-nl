@@ -1,7 +1,7 @@
 ---
 title: Verbetering van bedrijfsgegevens
 description: Verrijk en normaliseer bedrijfsgegevens met de modellen van Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927576"
 ---
+
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>De verrijking van bedrijfsprofielen met verbeterde bedrijfsgegevens
 
 Gebruik de modellen en gecompileerde bedrijfsgegevens van Microsoft om uw bedrijfsprofielen te corrigeren, aan te vullen en te standaardiseren. We gebruiken de [Common Data Model-indeling](/common-data-model/schema/core/applicationcommon/account) voor betere nauwkeurigheid en inzichten.
@@ -82,17 +77,17 @@ Selecteer **Uitvoeren** vanaf de opdrachtbalk om het verrijkingsproces te starte
 
 Nadat het verrijkingsproces is voltooid, kunt u de nieuwe verrijkte klantprofielgegevens bekijken onder **Mijn verrijkingen**. Ook vindt u daar het tijdstip van de laatste update en het aantal verrijkte profielen.
 
-U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrijkte gegevens weergeven** te selecteren.
+U kunt een sample van de verrijkte gegevens zien in de tegel **Preview van verrijkte klanten**. Selecteer **Meer bekijken** en selecteer het tabblad **Gegevens** om toegang te krijgen tot een gedetailleerd overzicht van elk verrijkt profiel.
 
 ### <a name="overview-card"></a>Overzichtskaart
 
 Op de overzichtskaart staan details over wat onder de verrijking valt. 
 
-* **Verwerkte en gewijzigde klanten**: het aantal klantprofielen dat succesvol is verrijkt.
+* **Verwerkte en gewijzigde bedrijven**: het aantal klant-bedrijfsprofielen dat succesvol is verrijkt.
 
-* **Klanten verwerkt en niet gewijzigd**: het aantal klantprofielen dat is herkend maar niet gewijzigd. Dit gebeurt meestal wanneer de invoergegevens geldig zijn en niet kunnen worden verbeterd door de verrijking.
+* **Bedrijven verwerkt en niet gewijzigd**: het aantal klant-bedrijfsprofielen dat is herkend maar niet gewijzigd. Dit gebeurt meestal wanneer de invoergegevens geldig zijn en niet kunnen worden verbeterd door de verrijking.
 
-* **Klanten niet verwerkt en niet gewijzigd**: het aantal klantprofielen dat niet is herkend. Meestal voor invoergegevens die ongeldig zijn of niet worden ondersteund door de verrijking.
+* **Bedrijven niet verwerkt en niet gewijzigd**: het aantal klant-bedrijfsprofielen dat niet werd herkend. Dit gebeurt meestal voor invoergegevens die ongeldig zijn of niet worden ondersteund door de verrijking.
 
 ## <a name="next-steps"></a>Volgende stappen
 

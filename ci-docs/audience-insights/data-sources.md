@@ -9,16 +9,11 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 78379c827e132b3b172aa7381f4c5ef2c70b9771
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977823"
 ---
+
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 De doelgroepinzichten-mogelijkheid in Dynamics 365 Customer Insights maakt verbinding met gegevens uit uiteenlopende bronnen. Verbinden met een gegevensbron wordt vaak *gegevensopname* genoemd. Na het opnemen van de gegevens kunt u ze [samenvoegen](data-unification.md) en actie ondernemen.
 
@@ -33,7 +28,7 @@ U kunt de volgende gegevensbronnen toevoegen:
 - [Microsoft Dataverse lake](connect-dataverse-managed-lake.md)
 
 > [!NOTE]
-> Als u de proefversie gebruikt, bevat de sectie met importmethoden een optie **Gegevensbibliotheek voor Customer Insights**. Kies deze optie om een voorbeeldgegevensset te selecteren die beschikbaar is voor verschillende bedrijfstakken. Zie [proefversie van Dynamics 365 Customer Insights](../trial-signup.md) voor meer informatie.
+> Als u de proefversie gebruikt, bevat de sectie met importmethoden een optie **Gegevensbibliotheek voor Customer Insights**. Kies deze optie om een voorbeeldgegevensset te selecteren die beschikbaar is voor verschillende bedrijfstakken. Zie [Proefversie van Dynamics 365 Customer Insights](../trial-signup.md) voor meer informatie.
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Gegevens toevoegen vanuit on-premises gegevensbronnen
 

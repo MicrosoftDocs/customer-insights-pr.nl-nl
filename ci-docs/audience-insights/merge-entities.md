@@ -1,7 +1,7 @@
 ---
 title: Entiteiten samenvoegen in gegevensharmonisatie
 description: Voeg entiteiten samen om geharmoniseerde klantprofielen te maken.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732766"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Entiteiten samenvoegen
 
 De samenvoegingsfase is de laatste fase in het proces van gegevensharmonisatie. Het doel is het afstemmen van conflicterende gegevens. Voorbeelden van conflicterende gegevens kunnen een klantnaam zijn die in twee van uw gegevenssets is gevonden, maar in elk een beetje anders verschijnt ("Grant Marshall" versus "Grant Marshal"), of een telefoonnummer met een andere indeling(617-803-091X versus 617803091X). Het samenvoegen van die conflicterende gegevenspunten gebeurt op een kenmerk-per-kenmerkbasis.
@@ -99,11 +94,13 @@ Selecteer op de pagina **Samenvoegen** **Uitgesloten velden** om de lijst met al
 
 1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken. 
 
-## <a name="manually-combine-fields"></a>Velden handmatig combineren
+## <a name="combine-fields-manually"></a>Velden handmatig combineren
 
-Geef handmatig een samengevoegd kenmerk op. 
+Geef handmatig een samengevoegd kenmerk op.
 
-1. Selecteer op de pagina **Samenvoegen** **Velden combineren**.
+1. Selecteer **Combineren** op de pagina **Samenvoegen**.
+
+1. Kies de optie **Velden**.
 
 1. Geef het beleid voor de winnende samenvoeging op via het vervolgkeuzemenu **Velden combineren op**.
 
@@ -114,6 +111,26 @@ Geef handmatig een samengevoegd kenmerk op.
 1. Selecteer **Gereed** om de wijzigingen toe te passen.
 
 1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken. 
+
+## <a name="combine-a-group-of-fields"></a>Een groep velden combineren
+
+Behandel een groep velden als een enkele eenheid. Bijvoorbeeld wanneer onze records de velden Address1, Address2, City, State en Zip bevatten. Dan willen we waarschijnlijk niet het veld Address2 van een ander record samenvoegen, vanuit de gedachte dat dit onze gegevens completer zou maken
+
+1. Selecteer **Combineren** op de pagina **Samenvoegen**.
+
+1. Kies de optie **Groep velden**.
+
+1. Geef het beleid voor de winnende samenvoeging op via het vervolgkeuzemenu **Groepen rangschikken op**.
+
+1. Selecteer **Toevoegen** en kies of u meer velden of extra groepen aan de velden wilt toevoegen.
+
+1. Geef een **Naam** en een **Uitvoernaam** op voor elk gecombineerd veld.
+
+1. Geef een **Naam** op voor de groep velden. 
+
+1. Selecteer **Gereed** om de wijzigingen toe te passen.
+
+1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken.
 
 ## <a name="change-the-order-of-fields"></a>De volgorde van velden wijzigen
 
@@ -133,7 +150,7 @@ Sommige entiteiten bevatten meer details dan andere. Als een entiteit de nieuwst
 
 Na het configureren van samenvoegvelden, kunt u definiëren hoe u CustomerId-waarden, de unieke klantprofiel-id's, genereert. In de samenvoegstap in het proces van gegevensharmonisatie wordt de unieke klantprofiel-id gegenereerd. De id is de CustomerId in de entiteit *Klant* die het resultaat is van het proces van gegevensharmonisatie. 
 
-De CustomerId in de entiteit Klant is gebaseerd op een hash van de eerste waarde van de niet-null winnende primaire sleutels. Deze sleutels zijn afkomstig van de entiteiten die worden gebruikt in de overeenkomst- en samenvoegfase en worden beïnvloed door de overeenkomstvolgorde.De gegenereerde CustomerID kan dus veranderen wanneer een primaire sleutelwaarde verandert in de primaire entiteit van de matchorder. De waarde van de primaire sleutel vertegenwoordigt dus mogelijk niet altijd dezelfde klant.
+De CustomerId in de entiteit Klant is gebaseerd op een hash van de eerste waarde van de niet-null winnende primaire sleutels. Deze sleutels zijn afkomstig van de entiteiten die worden gebruikt in de overeenkomst- en samenvoegfase en worden beïnvloed door de overeenkomstvolgorde. De gegenereerde CustomerID kan dus veranderen wanneer een primaire sleutelwaarde verandert in de primaire entiteit van de matchorder. De waarde van de primaire sleutel vertegenwoordigt dus mogelijk niet altijd dezelfde klant.
 
 Door een stabiele klant-id te configureren, kunt u dat gedrag vermijden.
 

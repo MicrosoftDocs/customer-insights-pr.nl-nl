@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380737"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Entiteitsschema's in Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) is een declaratieve specificatie en een definitie van standaardentiteiten waarmee veelgebruikte concepten en activiteiten voor verschillende zakelijke en productiviteitstoepassingen worden aangeduid. Dit model wordt ook uitgebreid voor observatie- en analytische gegevens. Common Data Model biedt goed gedefinieerde, modulaire en uitbreidbare zakelijke entiteiten, zoals Account, Business unit, Aanvraag, Contactpersoon, Potentiële klant, Verkoopkans en Product, en interacties met leveranciers, medewerkers en klanten, zoals activiteiten en serviceovereenkomsten. Iedereen kan Common Data Model-definities bouwen en uitbreiden om aanvullende bedrijfsspecifieke ideeën vast te leggen.
 

@@ -1,7 +1,7 @@
 ---
 title: Common Data Model-gegevens met een Azure Data Lake-account verbinden
 description: Werken met Common Data Model-gegevens met Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900191"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Verbinding maken met een Common Data Model-map via een Azure Data Lake-account
 
 Dit artikel bevat informatie over het opnemen van gegevens uit een Common Data Model-map met uw Azure Data Lake Storage Gen2-account.
@@ -25,6 +20,8 @@ Dit artikel bevat informatie over het opnemen van gegevens uit een Common Data M
 - Gegevens in uw Azure Data Lake moeten de Common Data Model-standaard volgen. Andere indelingen worden momenteel niet ondersteund.
 
 - Gegevensopname ondersteunt alleen Azure Data Lake *Gen2*-opslagaccounts. U kunt geen Azure Data Lake Gen1-opslagaccounts gebruiken om gegevens op te nemen.
+
+- Voor de Azure Data Lake Storage-account moet [hiërarchische naamruimte zijn ingeschakeld](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Om te verifiëren met een Azure Service Principal, moet u ervoor zorgen dat deze in uw tenant is geconfigureerd. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie.
 

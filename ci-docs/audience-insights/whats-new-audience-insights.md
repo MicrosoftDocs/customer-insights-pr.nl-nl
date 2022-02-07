@@ -1,7 +1,7 @@
 ---
 title: Nieuwe en komende functies
-description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 12/02/2021
+description: 'Informatie over nieuwe functies, verbeteringen en bugfixes.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884256"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Wat is er nieuw in de doelgroepinzichten-mogelijkheid van Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 We kondigen vol trots onze meest recente updates aan. Dit artikel geeft een overzicht van openbare preview-functies, verbeteringen in de algemene beschikbaarheid en functie-updates. Als u de langetermijnplannen voor functies wilt zien, bekijkt u de [releaseplannen voor Dynamics 365 en Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Updates van december 2021
+
+De updates in december 2021 omvatten nieuwe functies, prestatie-upgrades en bugfixes.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Customer Insights-logboeken doorsturen naar Azure Monitor
+
+Customer Insights biedt een directe integratie met Azure Monitor. Deze functie omvat controlegebeurtenissen en operationele gebeurtenissen. Met Azure Monitor-resourcelogboeken kunt u logboeken bewaken en naar Azure Storage, Azure Log Analytics verzenden of deze naar Azure Event Hubs streamen.
+
+Zie [Doorsturen van logboeken in Dynamics 365 Customer Insights met Azure Monitor (preview)](diagnostics.md) voor meer informatie.
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Klantprofielen verrijken met betrokkenheidsgegevens
+
+Gebruik gegevens van Microsoft Office 365 om uw klantaccountprofielen te verrijken met inzichten over contacten via Office 365-apps. De betrokkenheidsgegevens bestaan uit e-mail- en vergaderactiviteiten, die op accountniveau worden samengevoegd. Bijvoorbeeld het aantal e-mails van een zakelijk account of het aantal vergaderingen met het account. Er worden geen gegevens over individuele gebruikers gedeeld. Deze verrijking is alleen beschikbaar in de volgende regio's: VK, Europa, Noord-Amerika.
+
+Zie [Klantprofielen verrijken met betrokkenheidsgegevens (preview)](enrichment-office.md) voor meer informatie
+
+### <a name="advanced-data-unification-features"></a>Geavanceerde functies voor gegevensharmonisatie
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Beleid voor conflictoplossing inschakelen op individueel kenmerkniveau
+
+Bij het ontdubbelen van klantenrecords binnen een entiteit, wilt u mogelijk geen volledige record als winnaar kiezen. We bieden u nu de mogelijkheid om de beste velden uit verschillende records samen te voegen op basis van regels voor elk kenmerk. U kunt er bijvoorbeeld voor kiezen om de meest recente e-mail EN het meest volledige adres uit verschillende records te bewaren. 
+
+U kunt nu afzonderlijke samenvoegregels voor afzonderlijke kenmerken definiëren, terwijl u records binnen één entiteit ontdubbelt en samenvoegt. Voorheen kon u slechts één enkele samenvoegregel selecteren (records bijhouden op basis van volledigheid van recentheidsgegevens) en die regel werd op recordniveau toegepast op alle kenmerken. Dat is niet ideaal als sommige gegevens die u wilt bewaren in record A staan en andere goede gegevens in record B.
+
+Zie [Ontdubbeling op een match-entiteit definiëren](match-entities.md#define-deduplication-on-a-match-entity) voor meer informatie.
+
+#### <a name="custom-rules-for-matching"></a>Aangepaste regels voor overeenkomsten
+
+Er zijn momenten waarop u een uitzondering op algemene regels moet specificeren om records NIET te matchen. Dit kan gebeuren wanneer meerdere personen voldoende informatie delen, waardoor het systeem hen als één persoon zou zien. Bijvoorbeeld een tweeling met dezelfde achternaam, die in dezelfde stad woont en dezelfde geboortedatum heeft.
+
+Uitzonderingen zorgen ervoor dat onjuiste gegevensharmonisatie kan worden aangepakt in de harmonisatieregels. U kunt meerdere uitzonderingen aan een regel toevoegen.
+
+Zie [Uitzonderingen toevoegen aan een regel](match-entities.md#add-exceptions-to-a-rule) voor meer informatie.
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Aanvullend beleid voor conflictoplossing bieden en het groeperen van kenmerken inschakelen
+
+Met deze functie kunt u een groep velden als een enkele eenheid behandelen. Bijvoorbeeld wanneer onze records de velden Address1, Address2, City, State en Zip bevatten. Mogelijk willen we het veld Address2 in een andere record niet samenvoegen, vanuit de gedachte dat dit onze gegevens completer zou maken.
+
+Nu kunt u een groep gerelateerde velden combineren en één beleid voor samenvoegen toepassen op de groep. 
+
+Zie [Een groep velden combineren](merge-entities.md#combine-a-group-of-fields) voor meer informatie.
+
 
 ## <a name="november-2021-updates"></a>Updates van november 2021
 
@@ -214,7 +253,7 @@ De updates in maart 2021 bevatten verschillende functies, prestatie-upgrades en 
    Zie [Exporteren naar Constant Contact](export-constant-contact.md) voor meer informatie.
 
 - **Segmenten exporteren naar RollWorks** We hebben onze exportbestemmingen uitgebreid met RollWorks. U kunt nu segmenten van Customer Insights exporteren naar RollWorks-doelgroepen en deze gebruiken als basis voor uw B2B-reclames.    
-   Zie [Exporteren naar RollWorks](export-rollworks.md) voor meer informatie.
+   Zie [Exporteren naar RollWorks ](export-rollworks.md) voor meer informatie.
 
 - **Segmenten exporteren naar Snapchat** We hebben onze exportbestemmingen uitgebreid met Snapchat. U kunt nu segmenten exporteren van Customer Insights naar Snapchat-doelgroepen en deze gebruiken als basis voor uw reclame.     
    Zie [Exporteren naar Snapchat](export-snapchat.md) voor meer informatie.
