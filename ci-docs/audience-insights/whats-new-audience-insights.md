@@ -1,7 +1,7 @@
 ---
 title: Nieuwe en komende functies
-description: 'Informatie over nieuwe functies, verbeteringen en bugfixes.'
-ms.date: 01/27/2022
+description: Informatie over nieuwe functies, verbeteringen en bugfixes.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088279"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Wat is er nieuw in de doelgroepinzichten-mogelijkheid van Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Updates januari 2022
+
+De updates in januari 2022 omvatten nieuwe functies, prestatie-upgrades en bugfixes.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Gevoelsanalyse van de feedback van uw klant
+
+Customer Insights biedt een nieuwe door AI aangedreven functie om het klantgevoel te synthetiseren en specifieke zakelijke aspecten te identificeren als kansen voor gerichte verbeteringen. Door de schriftelijke feedback van uw klanten te analyseren, kunt u tegen lage kosten nauwkeurige inzichten verwerven. Sentimentanalyse op basis van NLP-modellen (Natural Language Processing) die twee afgeleide inzichten genereren voor elke klant-id. Een gevoelsscore (van –5 tot 5) en een lijst van toepasselijke zakelijke aspecten. 
+
+Zie [Gevoel in klantfeedback analyseren (preview)](sentiment-analysis.md) voor meer informatie.
 
 
 ## <a name="december-2021-updates"></a>Updates van december 2021
@@ -37,7 +53,7 @@ Zie [Doorsturen van logboeken in Dynamics 365 Customer Insights met Azure Monito
 
 Gebruik gegevens van Microsoft Office 365 om uw klantaccountprofielen te verrijken met inzichten over contacten via Office 365-apps. De betrokkenheidsgegevens bestaan uit e-mail- en vergaderactiviteiten, die op accountniveau worden samengevoegd. Bijvoorbeeld het aantal e-mails van een zakelijk account of het aantal vergaderingen met het account. Er worden geen gegevens over individuele gebruikers gedeeld. Deze verrijking is alleen beschikbaar in de volgende regio's: VK, Europa, Noord-Amerika.
 
-Zie [Klantprofielen verrijken met betrokkenheidsgegevens (preview)](enrichment-office.md) voor meer informatie
+Zie [Klantprofielen verrijken met betrokkenheidsgegevens (preview)](enrichment-office.md) voor meer informatie.
 
 ### <a name="advanced-data-unification-features"></a>Geavanceerde functies voor gegevensharmonisatie
 

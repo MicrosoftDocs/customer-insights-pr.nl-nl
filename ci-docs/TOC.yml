@@ -2,6 +2,22 @@
   href: index.yml
 - name: Productoverzicht
   href: overview.md
+- name: Trainingscatalogus
+  items:
+    - name: Aan de slag
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Gegevens opnemen
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Een geharmoniseerd klantprofiel maken
+      href: /learn/modules/unified-customer-profile/
+    - name: Werken met doelgroepinzichten
+      href: /learn/modules/working-with-customer-insights/
+    - name: Gegevens verrijken en voorspellingen doen
+      href: /learn/modules/enrich-data/
+    - name: Externe verbindingen beheren
+      href: /learn/modules/configure-third-party-connections/
+    - name: Customer Insights beheren
+      href: /learn/modules/administer-customer-data-platform/
 - name: Gratis proefversie
   items:
     - name: Registreren voor een gratis proefversie
@@ -30,16 +46,6 @@
           href: audience-insights/home.md
     - name: Werken met zakelijke accounts
       href: audience-insights/work-with-business-accounts.md
-    - name: Leermodules
-      items:
-        - name: Gegevens opnemen
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Een geharmoniseerd klantprofiel maken
-          href: /learn/modules/unified-customer-profile/
-        - name: Werken met de app
-          href: /learn/modules/working-with-customer-insights/
-        - name: Gegevens verrijken en voorspellingen
-          href: /learn/modules/enrich-data/
     - name: Gegevensbronnen
       items:
         - name: Overzicht van gegevensbronnen
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: DSR-rechten en -aanvragen
   href: dsr-rights-requests.md
+- name: Ondersteuning vinden
+  href: /power-platform/admin/get-help-support

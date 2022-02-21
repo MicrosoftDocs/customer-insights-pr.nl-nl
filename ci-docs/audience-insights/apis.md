@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
+ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732258"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "8100134"
 ---
 # <a name="work-with-customer-insights-apis"></a>Werken met Customer Insights-API's
 
@@ -35,7 +35,7 @@ In dit artikel wordt beschreven hoe u toegang krijgt tot de Customer Insights-AP
  
    Als u de API's inschakelt, wordt een primaire en secundaire abonnementssleutel voor uw exemplaar gemaakt die wordt gebruikt in de API-aanvragen. U kunt de sleutels opnieuw genereren door **Primaire opnieuw genereren** of **Secundaire opnieuw genereren** te selecteren op **Beheer** > **Machtigingen** > **API's**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insights-API's inschakelen.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. Selecteer **Onze API's verkennen** om de [API's uit te proberen](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -49,7 +49,7 @@ In dit artikel wordt beschreven hoe u toegang krijgt tot de Customer Insights-AP
 
 De HTTP-respons wordt snel hieronder weergegeven.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="Procedure voor het testen van de API's.":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Een nieuwe app-registratie in Azure Portal maken
 
@@ -65,7 +65,7 @@ Met deze stappen kunt u aan de slag gaan met het gebruik van de Customer Insight
 
 1. Ga bij uw nieuwe app-registratie naar **API-machtigingen**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Procedure voor het instellen van API-machtigingen in app-registratie.":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Selecteer **Een machtiging toevoegen** en selecteer **Customer Insights** in het deelvenster aan de zijkant.
 
@@ -77,7 +77,7 @@ Met deze stappen kunt u aan de slag gaan met het gebruik van de Customer Insight
 
 U kunt de toepassings-/client-id voor deze app-registratie gebruiken bij de Microsoft Authentication Library (MSAL) om een bearer-token te verkrijgen om met uw verzoek naar de API te verzenden.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Procedure voor het verlenen van toestemming door de beheerder.":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 Zie voor meer informatie over MSAL [Overzicht van Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +103,7 @@ In de [sectie app-registratie](#create-a-new-app-registration-in-the-azure-porta
 
 1. Selecteer **Beheerders toestemming verlenen voor...** om de app-registratie te voltooien.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Procedure voor het verlenen van toestemming door de beheerder.":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. Tot slot moeten we de naam van de app-registratie als gebruiker toevoegen in Customer Insights.  
    
@@ -129,7 +129,7 @@ Leer hoe u aan de slag gaat met de C#-clientbibliotheken van NuGet.org. Voor mee
  
    U kunt deze opdracht ook uitvoeren in de **NuGet Package Manager-console**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Voeg NuGet-pakket toe aan Visual Studio-project.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>De C#-clientbibliotheek gebruiken
 
@@ -141,7 +141,7 @@ Leer hoe u aan de slag gaat met de C#-clientbibliotheken van NuGet.org. Voor mee
 
 1. Geef deze `HttpClient` door aan de constructie van de `CustomerInsights`-cliënt.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Voorbeeld van httpclient.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Doe oproepen met de client naar de 'extensiemethoden', bijvoorbeeld `GetAllInstancesAsync`. Als toegang tot het onderliggende `Microsoft.Rest.HttpOperationResponse` de voorkeur heeft, gebruik dan de 'http-berichtmethoden', bijvoorbeeld `GetAllInstancesWithHttpMessagesAsync`.
 

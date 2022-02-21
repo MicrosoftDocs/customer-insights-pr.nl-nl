@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900237"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088112"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Verbinding met een Azure Data Lake Storage-account maken met behulp van een Azure-service-principal
 
@@ -23,7 +23,7 @@ In dit artikel wordt beschreven hoe u verbinding kunt maken tussen Dynamics 365 
 Geautomatiseerde hulpmiddelen die Azure-services gebruiken, moeten altijd beperkte machtigingen hebben. In plaats van toepassingen zich te laten aanmelden als een gebruiker met volledige rechten, biedt Azure Service Principals. U kunt service-principals gebruiken om veilig [een Common Data Model-map toe te voegen of te bewerken als een gegevensbron](connect-common-data-model.md) of [een omgeving te maken of bij te werken](create-environment.md).
 
 > [!IMPORTANT]
-> - Voor het Data Lake Storage-account dat de service-principal gaat gebruiken, moet [hiërarchische naamruimte zijn ingeschakeld](/azure/storage/blobs/data-lake-storage-namespace).
+> - Het Data Lake Storage-account dat de service-principal gaat gebruiken, moet Gen2 zijn en moet [hiërarchische naamruimte hebben ingeschakeld](/azure/storage/blobs/data-lake-storage-namespace). Azure Data Lake Gen1-opslagaccounts worden niet ondersteund.
 > - U hebt beheerdersmachtigingen nodig voor uw Azure-abonnement om een service-principal te maken.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Een Azure-service-principal maken voor Customer Insights

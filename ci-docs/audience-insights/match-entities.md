@@ -1,7 +1,7 @@
 ---
 title: Entiteiten matchen voor gegevensharmonisatie
 description: Match entiteiten om geharmoniseerde klantprofielen te maken.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098829"
 ---
-
 # <a name="match-entities"></a>Entiteiten toewijzen
 
 De afstemmingsfase geeft aan hoe u uw datasets kunt combineren in een geharmoniseerde klantprofielgegevensset. Na het voltooien van de [toewijzingsstap](map-entities.md) in het gegevensharmonisatieproces bent u klaar om uw entiteiten te matchen. De afstemmingsfase vereist minimaal twee toegewezen entiteiten.
@@ -24,13 +29,7 @@ De matchpagina bestaat uit drie secties:
 
 ## <a name="specify-the-match-order"></a>De afstemmingsvolgorde opgeven
 
-Ga naar **Gegevens** > **Harmoniseren** > **Afstemming** en selecteer **Volgorde instellen** om de afstemmingsfase te starten.
-
-Elke match verenigt twee of meer entiteiten in één geconsolideerde entiteit. Tegelijkertijd worden de unieke klantrecords behouden. We hebben bijvoorbeeld twee entiteiten geselecteerd: **eCommerce:eCommerceContacts** als de primaire entiteit en **LoyaltyScheme:loyCustomers** als tweede entiteit. De volgorde van de entiteiten geeft aan in welke volgorde wordt geprobeerd de records te matchen.
-
-:::image type="content" source="media/match-page.png" alt-text="Schermopname van de pagina Afstemming in het gedeelte Harmoniseren van het gegevensharmonisatieproces.":::
-  
-De primaire entiteit *eCommerce: eCommerceContacts* wordt afgestemd met de volgende entiteit *LoyaltyScheme: loyCustomers*.​ De gegevensset die voortvloeit uit de eerste afstemmingsstap wordt gekoppeld met de volgende entiteit als u meer dan twee entiteiten hebt.
+Elke match verenigt twee of meer entiteiten in één geconsolideerde entiteit. Tegelijkertijd worden de unieke klantrecords behouden. De afstemmingsvolgorde geeft de volgorde aan waarin het systeem probeert de records af te stemmen.
 
 > [!IMPORTANT]
 > De entiteit die u kiest als uw primaire entiteit dient als basis voor uw geharmoniseerde gegevensset voor profielen. Extra entiteiten die tijdens de afstemmingsfase worden geselecteerd, worden aan deze entiteit toegevoegd. Dit betekent niet dat de geharmoniseerde entiteit *alle* gegevens bevat die in deze entiteit zijn opgenomen.
@@ -38,9 +37,18 @@ De primaire entiteit *eCommerce: eCommerceContacts* wordt afgestemd met de volge
 > Er zijn twee overwegingen die u kunnen helpen bij het kiezen van de hiërarchie van uw entiteiten:
 >
 > - Kies de entiteit met de meest volledige en betrouwbare profielgegevens over uw klanten als primaire entiteit.
-> - Kies de entiteit die verschillende kenmerken gemeen heeft met andere entiteiten (bijvoorbeeld naam, telefoonnummer of e-mailadres) als primaire entiteit.
+> - Kies de entiteit die verschillende kenmerken heeft die worden gedeeld door andere entiteiten (bijvoorbeeld naam, telefoonnummer of e-mailadres) als primaire entiteit.
 
-Nadat u de vergelijkingsvolgorde hebt opgegeven, ziet u de gedefinieerde vergelijkingsparen in de sectie **Details van afgestemde records** in **Gegevens** > **Verenigen** > **Afstemmen**​. De belangrijkste statistieken blijven leeg totdat het vergelijkingsproces is voltooid.
+1. Ga naar **Gegevens** > **Harmoniseren** > **Afstemming** en selecteer **Volgorde instellen** om de afstemmingsfase te starten.
+1. Selecteer **Entiteitsvolgorde**. Selecteer bijvoorbeeld **eCommerce:eCommerceContacts** als de primaire entiteit en **LoyaltyScheme:loyCustomers** als tweede entiteit. 
+1. Als u elke record in de entiteit als unieke klant wilt die is afgestemd op elke volgende entiteit, selecteert u **Alles opnemen**.
+1. Selecteer **Gereed**. 
+
+Na het specificeren van de afstemmingsvolgorde, worden de gedefinieerde afstemmingsparen weergegeven in de sectie **Details van afgestemde records** bij **Gegevens** > **Harmoniseren** > **Afstemmen**. De belangrijkste metrische gegevens zijn leeg totdat het afstemmingsproces is voltooid.
+
+:::image type="content" source="media/match-page.png" alt-text="Schermopname van de pagina Afstemming in het gedeelte Harmoniseren van het gegevensharmonisatieproces.":::
+  
+De primaire entiteit *eCommerce: eCommerceContacts* wordt afgestemd met de volgende entiteit *LoyaltyScheme: loyCustomers*. De gegevensset die voortvloeit uit de eerste afstemmingsstap wordt gekoppeld met de volgende entiteit als u meer dan twee entiteiten hebt.
 
 ## <a name="define-rules-for-match-pairs"></a>Regels voor vergelijkingsparen definiëren
 
@@ -50,7 +58,7 @@ De waarschuwing **Heeft regels nodig** naast de naam van een entiteit suggereert
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Schermopname van de sectie Details van afgestemde records met het gemarkeerde besturingselement om regels toe te voegen.":::
 
-1. Selecteer **Regels toevoegen** onder een entiteit in de sectie **Details van afgestemde records** om overeenkomstregels te definiëren.
+1. Selecteer **Regel toevoegen** onder een entiteit in de sectie **Details van afgestemde records** om afstemmingsregels te definiëren.
 
 1. Configureer in het deelvenster **Regel maken** de voorwaarden voor de regel.
 
@@ -61,15 +69,15 @@ De waarschuwing **Heeft regels nodig** naast de naam van een entiteit suggereert
    - **Entiteit/Veld (tweede rij)**: kies een kenmerk dat betrekking heeft op het kenmerk van de entiteit opgegeven in de eerste rij.
 
    - **Normaliseren**: kies uit de volgende normalisatieopties voor de geselecteerde kenmerken. 
-     - Spatie: verwijdert alle spaties. *Hallo   wereld* wordt *Hallowereld*.
+     - Cijfers: converteert andere cijfersystemen, zoals Romeinse cijfers, naar Arabische cijfers. *VIII* wordt *8*.
      - Symbolen: hiermee verwijdert u alle symbolen en speciale tekens. *Hoofd&schouder* wordt *Hoofdschouder*​.
      - Tekst in kleine letters: alle tekens worden omgezet in kleine letters. *HOOFDLETTERS en Beginhoofdletters* wordt *hoofdletters en beginhoofdletters*​.
+     - Type (Telefoon, Naam, Adres, Organisatie): standaardiseert namen, titels, telefoonnummers, adressen enz. 
      - Van Unicode naar ASCII: converteert de Unicode-notatie naar ASCII-tekens. */u00B2* wordt *2*.
-     - Cijfers: converteert andere cijfersystemen, zoals Romeinse cijfers, naar Arabische cijfers. *VIII* wordt *8*.
-     - Semantische typen: standaardiseert namen, titels, telefoonnummers, adressen, enzovoort. 
+     - Spatie: verwijdert alle spaties. *Hallo   wereld* wordt *Hallowereld*.
 
    - **Precisie**: stel het precisieniveau in dat voor deze voorwaarde moet worden toegepast. 
-     - **Basis**: kies uit *Laag*, *Gemiddeld*, *Hoog* en *Exact*. Selecteer **Exact** als u alleen records wilt afstemmen die 100 procent overeenkomen. Selecteer een van de andere niveaus om records af te stemmen die niet 100 procent identiek zijn.
+     - **Basis**: kies uit *Laag*, *Gemiddeld*, *Hoog* en *Exact*. Selecteer **Exact** om alleen records af te stemmen die voor 100 procent overeenkomen. Selecteer een van de andere niveaus om records af te stemmen die niet 100 procent identiek zijn.
      - **Aangepast**: stel een percentage in waaraan records moeten voldoen. Alleen records die deze drempel halen, worden vergeleken.
 
 1. Geef een **naam** op voor de regel.
@@ -84,7 +92,7 @@ De waarschuwing **Heeft regels nodig** naast de naam van een entiteit suggereert
 
 Als u entiteiten alleen wilt matchen als kenmerken aan meerdere voorwaarden voldoen, voegt u meer voorwaarden toe aan een overeenkomstregel. Voorwaarden zijn verbonden met een logische EN-operator en worden dus alleen uitgevoerd als aan alle voorwaarden is voldaan.
 
-1. Ga naar **Gegevens** > **Verenigen** > **Afstemmen** en selecteer **Bewerken** voor de regel waaraan u voorwaarden wilt toevoegen.
+1. Ga naar **Gegevens** > **Harmoniseren** > **Afstemmen** en selecteer **Bewerken** voor de regel waaraan u voorwaarden wilt toevoegen.
 
 1. Selecteer in het deelvenster **Regel bewerken** de optie **Voorwaarde toevoegen**.
 
@@ -92,7 +100,7 @@ Als u entiteiten alleen wilt matchen als kenmerken aan meerdere voorwaarden vold
 
 ### <a name="add-rules-to-a-match-pair"></a>Regels toevoegen aan een vergelijkingspaar
 
-Overeenkomstregels staan voor voorwaardensets. Voeg meer regels toe om entiteiten te matchen op voorwaarden op basis van meerdere kenmerken.
+Overeenkomstregels staan voor voorwaardensets. Voeg meer regels toe om entiteiten af te stemmen op voorwaarden op basis van meerdere kenmerken.
 
 1.  Ga naar **Gegevens** > **Verenigen** > **Afstemmen** en selecteer **Regel toevoegen** voor de entiteit waaraan u regels wilt toevoegen.
 
@@ -117,7 +125,7 @@ U kunt entiteiten voor overeenkomstregels opnieuw rangschikken om de volgorde wa
 
 Naast [regels voor matchen tussen entiteiten](#define-rules-for-match-pairs) kunt u ook ontdubbelingsregels opgeven. *Ontdubbeling* is een ander proces bij het matchen van records. Het identificeert dubbele records en voegt ze samen in één record. Bronrecords worden met alternatieve id's aan de samengevoegde record gekoppeld.
 
-Ontdubbelde records worden gebruikt in het matchingproces tussen verschillende entiteiten. Ontdubbeling vindt plaats op individuele entiteiten en kan worden geconfigureerd voor elke entiteit die in vergelijkingsparen wordt gebruikt.
+Ontdubbelde records worden gebruikt in het afstemmingsproces tussen verschillende entiteiten. Ontdubbeling vindt plaats op individuele entiteiten en kan worden geconfigureerd voor elke entiteit die in afstemmingsparen wordt gebruikt.
 
 Het specificeren van ontdubbelingsregels is niet verplicht. Als dergelijke regels niet zijn geconfigureerd, worden de door het systeem gedefinieerde regels toegepast. Ze combineren alle records in één record voordat de entiteitsgegevens worden doorgegeven aan matching tussen entiteiten voor betere prestaties.
 

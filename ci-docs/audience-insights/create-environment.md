@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892332"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088096"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Een omgeving maken in doelgroepinzichten
 
@@ -28,7 +28,7 @@ Organisaties kunnen *twee* omgevingen maken voor elke Customer Insights-licentie
 
 ## <a name="create-a-new-environment"></a>Een nieuwe omgeving maken
 
-Na aanschaf van een abonnementslicentie voor Customer Insights, ontvangt de algemene beheerder van de Microsoft 365-tenant een e-mail met een uitnodiging om de omgeving te maken. Ga naar [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) om aan de slag te gaan. 
+Na aanschaf van een abonnementslicentie voor Customer Insights, ontvangt de globale beheerder van de Microsoft 365-tenant een e-mail die hen uitnodigt om de omgeving te maken. Ga naar [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) om aan de slag te gaan. 
 
 Een begeleide ervaring helpt u bij de stappen om alle benodigde informatie voor een nieuwe omgeving te verzamelen. U hebt [beheerdermachtigingen](permissions.md) in doelgroepinzichten nodig om omgevingen te creëren of te beheren.
 
@@ -64,7 +64,7 @@ Door gegevens op te slaan in Azure Data Lake Storage, gaat u ermee akkoord dat g
 > Customer Insights ondersteunt momenteel het volgende:
 > - Opgenomen entiteiten van Power BI-gegevensstromen die zijn opgeslagen in een door Microsoft Dataverse beheerde Data Lake.  
 > - Azure Data Lake Storage-accounts uit dezelfde Azure-regio die u hebt geselecteerd bij het maken van de omgeving.
-> - Azure Data Lake Storage-accounts waarvoor *hiërarchische naamruimte* is ingeschakeld.
+> - Azure Data Lake Storage-accounts die Gen2 zijn en waarvoor *hiërarchische naamruimte* is ingeschakeld. Azure Data Lake Gen1-opslagaccounts worden niet ondersteund.
 
 Voor de optie Azure Data Lake Storage kunt u kiezen tussen een op resources gebaseerde optie en een op abonnementen gebaseerde optie voor verificatie. Zie voor meer informatie [Verbinding met een Azure Data Lake Storage-account maken via een Azure-service-principal](connect-service-principal.md). De naam van de **Container** is `customerinsights`. Dit kan niet worden gewijzigd.
 

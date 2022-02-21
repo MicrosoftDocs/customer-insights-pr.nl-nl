@@ -9,13 +9,23 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
+ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.translationtype: HT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8090917"
 ---
-
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Segmenten gebruiken in Dynamics 365 Sales (preview)
 
 
 
 Gebruik uw klantgegevens om marketinglijsten te maken, werkstromen op te volgen en aanbiedingen te verzenden met Dynamics 365 Sales.
+
+## <a name="known-limitations"></a>Bekende beperkingen
+
+- Exports naar Dynamics 365 Sales zijn beperkt tot 100.000 leden per segment.
+- Het exporteren van segmenten naar Dynamics 365 Sales kan tot 3 uur in beslag nemen. 
 
 ## <a name="prerequisite-for-connection"></a>Vereiste voor verbinding
 
