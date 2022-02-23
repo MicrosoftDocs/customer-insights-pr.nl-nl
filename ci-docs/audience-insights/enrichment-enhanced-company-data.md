@@ -9,8 +9,13 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
+ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
+ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.translationtype: HT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8010891"
 ---
-
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>De verrijking van bedrijfsprofielen met verbeterde bedrijfsgegevens
 
 Gebruik de modellen en gecompileerde bedrijfsgegevens van Microsoft om uw bedrijfsprofielen te corrigeren, aan te vullen en te standaardiseren. We gebruiken de [Common Data Model-indeling](/common-data-model/schema/core/applicationcommon/account) voor betere nauwkeurigheid en inzichten.
