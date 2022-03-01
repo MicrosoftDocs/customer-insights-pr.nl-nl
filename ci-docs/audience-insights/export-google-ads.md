@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar Google Ads
 description: Leer hoe u de verbinding configureert en exporteert naar Google Ads.
-ms.date: 09/27/2021
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,19 +9,16 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
+ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617912"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6604271"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmenten exporteren naar Google Ads (preview)
 
 Exporteer segmenten van geharmoniseerde klantprofielen naar een Google Ads-doelgroepenlijst en gebruik ze om te adverteren op Google Search, Gmail, YouTube en Google Display Network. 
-
-> [!IMPORTANT]
-> Momenteel kunt u alleen een nieuwe verbinding maken en gegevens exporteren naar Google Ads als u al een goedgekeurde Google Ads Developer-token heeft. Vanwege beleidswijzigingen gaan we de Google Ads-export binnenkort bijwerken en een exportoptie bieden waarvoor geen ontwikkelaarstoken nodig is om de continuïteit van uw ervaring te garanderen en de export naar Google Ads te vereenvoudigen. We raden aan om niet meer verbindingen met Google Ads in te stellen om een gemakkelijkere overstap naar de nieuwe exportoptie te faciliteren.
 
 ## <a name="prerequisites-for-connection"></a>Vereisten voor verbinding
 
@@ -35,9 +32,9 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar een Google Ads-doelg
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Tot 1 miljoen klantprofielen per export naar Google Ads.
+- Maximaal 1 miljoen profielen per export naar Google Ads.
 - Exporteren naar Google Ads is beperkt tot segmenten.
-- Het exporteren van segmenten met in totaal 1 miljoen klantprofielen kan tot 5 minuten duren vanwege beperkingen aan de kant van de provider. 
+- Segmenten exporteren met in totaal 1 miljoen profielen kan tot 5 minuten duren vanwege beperkingen aan de providerzijde. 
 - Het matchen in Google Ads kan tot 48 uur duren.
 
 ## <a name="set-up-connection-to-google-ads"></a>Verbinding met Google Ads instellen
@@ -74,7 +71,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Voer uw **[Google Ads-doelgroep-id](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** in en selecteer **Verbinden** om de verbinding met Google Ads te initialiseren.
 
-1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt.
+1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant.
 
 1. Selecteer de segmenten die u wilt exporteren. U kunt in totaal tot 1 miljoen klantprofielen exporteren naar Google Ads.
 

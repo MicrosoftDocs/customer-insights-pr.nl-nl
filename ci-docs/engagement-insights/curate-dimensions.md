@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466342"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461097"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Demografische dimensies gebruiken voor het opsplitsen van gedragsgegevens
 
@@ -29,7 +29,7 @@ Door gebruik te maken van geharmoniseerde demografische profieldimensies hebben 
 - Een omgeving voor betrokkenheidsinzichten waarin u klantprofielgegevens hebt gekoppeld aan de omgeving voor doelgroepinzichten waar de klantprofielen worden gemaakt. Meer informatie: [Een koppeling tot stand brengen tussen doelgroepinzichten en betrokkenheidsinzichten](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Nadat u een koppeling hebt gemaakt tussen de omgeving voor doelgroepinzichten en de omgeving voor betrokkenheidsinzichten, wilt u misschien alleen gegevens die specifiek zijn voor klantprofieleigenschappen, wat handig kan zijn als dimensies in betrokkenheidsinzichten. Ga naar [Geharmoniseerde profielkenmerken en segmenten instellen voor doelgroepinzichten](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments) voor meer informatie.
+> Nadat u een koppeling hebt gemaakt tussen de omgeving voor doelgroepinzichten en de omgeving voor betrokkenheidsinzichten, wilt u misschien alleen gegevens die specifiek zijn voor klantprofieleigenschappen, wat handig kan zijn als dimensies in betrokkenheidsinzichten. Ga naar [Geharmoniseerde profielkenmerken en segmenten instellen voor doelgroepinzichten](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments) voor meer informatie.<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>Een nieuw aangepast rapport maken
 

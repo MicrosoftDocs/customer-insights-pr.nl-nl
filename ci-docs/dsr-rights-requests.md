@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732674"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483656"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Rechten van betrokkenen (DSR) onder AVG
 
@@ -79,14 +79,7 @@ Een tenantbeheerder kan deze stappen volgen om gegevens te exporteren:
 2. Erken de bevestiging om de gegevens voor de gevraagde gebruiker te exporteren.
 3. Ontvang de geëxporteerde gegevens via het e-mailadres van de tenantbeheerder.
 
-## <a name="consent-management-preview"></a>Toestemmingsbeheer (preview)
-
-De functie voor toestemmingsbeheer verzamelt niet rechtstreeks gebruikersgegevens. De functie importeert en verwerkt alleen toestemmingsgegevens die door gebruikers in andere toepassingen worden verstrekt.
-
-Als u toestemmingsgegevens over specifieke gebruikers wilt verwijderen, verwijdert u deze uit de gegevensbronnen die zijn opgenomen in de toestemmingsbeheerfunctie. Nadat de gegevensbron is vernieuwd, worden de verwijderde gegevens ook in Toestemmingscentrum verwijderd. Toepassingen die de toestemmingsentiteit gebruiken, verwijderen ook gegevens die op de bron zijn verwijderd na het [vernieuwen](audience-insights/system.md#refresh-processes). We raden u aan om gegevensbronnen snel te vernieuwen na de reactie op een verzoek van een betrokkene om de gegevens van de gebruiker uit alle andere processen en toepassingen te verwijderen.
-
-
-## <a name="engagement-insights-preview"></a>Betrokkenheidsinzichten (preview)
+## <a name="engagement-insights"></a>Betrokkenheidsinzichten
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Gebeurtenisgegevens met identificeerbare informatie van de eindgebruiker verwijderen en exporteren
 

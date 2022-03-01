@@ -1,7 +1,7 @@
 ---
 title: Geharmoniseerde klantprofielen verrijken
 description: Gebruik mogelijkheden om uw klantgegevens te verrijken.
-ms.date: 02/07/2022
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5c3dda3b9bae828857258025ff79958ee22bdb6f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098783"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7672993"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Verrijking voor klantprofielen (preview)
 
@@ -37,17 +37,14 @@ Op het tabblad **Ontdekken** vindt u alle ondersteunde verrijkingsopties.
 - [Demografische gegevens](enrichment-experian.md) geleverd door Experian
 - [Aangepaste gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) geleverd door Microsoft
-- [Locatiegegevens](enrichment-here.md) worden geleverd door HERE Technologies 
 
 # <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
 
 - [Bedrijfsgegevens](enrichment-leadspace.md) worden verstrekt door Leadspace
 - [Uitgebreide adressen](enrichment-enhanced-addresses.md) geleverd door Microsoft 
-- [Verbeterde bedrijfsgegevens](enrichment-enhanced-company-data.md) door Microsoft
 - [Locatiegegevens](enrichment-here.md) worden geleverd door HERE Technologies 
 - [Aangepaste gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) geleverd door Microsoft
-- [Gegevens over accountbetrokkenheid](enrichment-office.md) geleverd door Microsoft
 
 ---
 

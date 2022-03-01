@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar AdRoll
-description: Leer hoe u de verbinding configureert en exporteert naar AdRoll.
-ms.date: 10/08/2021
+description: Ontdek hoe u de verbinding met AdRoll configureert.
+ms.date: 02/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,40 +9,32 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6fedd549c2e7de362f36e3fb23d363200bb92a04
+ms.sourcegitcommit: d24e52150fe5a4fab45128e12d6a03637771d9b9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617328"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "5697068"
 ---
-# <a name="export-segments-to-adroll-preview"></a>Segmenten exporteren naar AdRoll (preview)
+# <a name="connector-for-adroll-preview"></a>Connector voor AdRoll (preview)
 
 Exporteer segmenten van geharmoniseerde klantprofielen naar AdRoll en gebruik ze voor advertenties. 
 
-## <a name="prerequisites-for-a-connection"></a>Vereisten voor een verbinding
+## <a name="prerequisites"></a>Vereisten
 
 -   U hebt een [AdRoll-account](https://www.adroll.com/) en bijbehorende beheerdersreferenties nodig.
 -   U hebt [geconfigureerde segmenten](segments.md) in doelgroepinzichten.
 -   Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten een veld voor e-mailadres.
 
-## <a name="known-limitations"></a>Bekende beperkingen
+## <a name="connect-to-adroll"></a>Verbinding maken met AdRoll
 
-- U kunt maximaal 250.000 klantprofielen tegelijk naar AdRoll exporteren.
-- U kunt geen segmenten met minder dan 100 klantprofielen exporteren naar AdRoll. 
-- Exporteren naar AdRoll is beperkt tot segmenten.
-- Het exporteren van tot 250.000 klantprofielen naar AdRoll kan tot 10 minuten duren. 
-- Het aantal klantprofielen dat u kunt exporteren naar AdRoll, is afhankelijk van en wordt beperkt door uw contract met AdRoll.
+1. Ga naar **Beheer** > **Exportbestemmingen**.
 
-## <a name="set-up-connection-to-adroll"></a>Verbinding met AdRoll instellen
+1. Selecteer onder **AdRoll** de optie **Instellen**.
 
-1. Ga naar **Beheerder** > **Verbindingen**.
+1. Geef uw exportbestemming een herkenbare naam in het veld **Weergavenaam**.
 
-1. Selecteer **Verbinding toevoegen** en kies **AdRoll** om de verbinding te configureren.
-
-1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
-
-1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
+   :::image type="content" source="media/AdRoll_config.PNG" alt-text="Configuratiedeelvenster voor AdRoll-verbinding.":::
 
 1. Selecteer **Ik ga akkoord** om **Gegevensprivacy en naleving** te bevestigen.
 
@@ -52,32 +44,29 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar AdRoll en gebruik ze
 
 1. Selecteer **Uzelf toevoegen als exportgebruiker** en geef uw Customer Insights-referenties op.
 
-1. Selecteer **Opslaan** om de verbinding te voltooien.
+1. Voer uw **AdRoll-adverteerders-id** [AdRoll Advertisable](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles)​ in.
 
-## <a name="configure-an-export"></a>Een export configureren
+1. Selecteer **Volgende** om de export te configureren.
 
-U kunt deze export configureren als u toegang hebt tot een verbinding van dit type. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+## <a name="configure-the-connector"></a>De connector configureren
 
-1. Ga naar **Gegevens** > **Exports**.
-
-1. Selecteer **Bestemming toevoegen** om een nieuwe export te maken.
-
-1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie AdRoll. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
-
-1. Voer uw **AdRoll-adverteerders-id** in. Zie [AdRoll-adverteerdersprofielen](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles) voor meer informatie.
-
-1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Het is vereist om segmenten naar AdRoll te exporteren.
+1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. Het is vereist om segmenten naar AdRoll te exporteren.
 
 1. Selecteer de segmenten die u wilt exporteren. Selecteer een segment met minimaal 100 leden. U kunt geen kleinere segmenten exporteren. Bovendien is de maximale grootte van een te exporteren segment 250.000 leden per export. 
 
 1. Selecteer **Opslaan**.
 
-Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
+## <a name="export-the-data"></a>De gegevens exporteren
 
-De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). 
+U kunt [gegevens op aanvraag exporteren](export-destinations.md). De export wordt ook uitgevoerd bij elke [geplande vernieuwing](system.md#schedule-tab).
 
-U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
+## <a name="known-limitations"></a>Bekende beperkingen
 
+- U kunt in totaal tot 250.000 profielen per export exporteren naar AdRoll.
+- U kunt geen segmenten met minder dan 100 profielen naar AdRoll exporteren. 
+- Exporteren naar AdRoll is beperkt tot segmenten.
+- Het exporteren van maximaal 250.000 profielen naar AdRoll kan tot 10 minuten duren. 
+- Het aantal profielen dat u naar AdRoll kunt exporteren, is afhankelijk van uw contract met AdRoll.
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 

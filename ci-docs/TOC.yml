@@ -2,30 +2,8 @@
   href: index.yml
 - name: Productoverzicht
   href: overview.md
-- name: Trainingscatalogus
-  items:
-    - name: Aan de slag
-      href: /learn/modules/get-started-customer-data-platform/
-    - name: Gegevens opnemen
-      href: /learn/modules/ingest-data-customer-insights/
-    - name: Een geharmoniseerd klantprofiel maken
-      href: /learn/modules/unified-customer-profile/
-    - name: Werken met doelgroepinzichten
-      href: /learn/modules/working-with-customer-insights/
-    - name: Gegevens verrijken en voorspellingen doen
-      href: /learn/modules/enrich-data/
-    - name: Externe verbindingen beheren
-      href: /learn/modules/configure-third-party-connections/
-    - name: Customer Insights beheren
-      href: /learn/modules/administer-customer-data-platform/
-- name: Gratis proefversie
-  items:
-    - name: Registreren voor een gratis proefversie
-      href: trial-signup.md
-    - name: Veelgestelde vragen over proefabonnement
-      href: trial-FAQ.md
-- name: Beginnen met een betaalde licentie
-  href: paid-license.md
+- name: Een proefversie maken
+  href: audience-insights/get-started-trial.md
 - name: Toegang tot uw omgeving
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Doelgroepinzichten
@@ -41,11 +19,19 @@
         - name: Snelstartgids
           href: audience-insights/get-started.md
         - name: Een nieuwe omgeving maken
-          href: audience-insights/create-environment.md
+          href: audience-insights/get-started-paid.md
         - name: Doelgroepinzichten verkennen
           href: audience-insights/home.md
-    - name: Werken met zakelijke accounts
-      href: audience-insights/work-with-business-accounts.md
+    - name: Leermodules
+      items:
+        - name: Gegevens opnemen
+          href: /learn/modules/ingest-data-customer-insights/
+        - name: Een geharmoniseerd klantprofiel maken
+          href: /learn/modules/unified-customer-profile/
+        - name: Werken met de app
+          href: /learn/modules/working-with-customer-insights/
+        - name: Gegevens verrijken en voorspellingen
+          href: /learn/modules/enrich-data/
     - name: Gegevensbronnen
       items:
         - name: Overzicht van gegevensbronnen
@@ -80,18 +66,14 @@
           href: audience-insights/relationships.md
         - name: Klantactiviteiten in een lijst vermelden
           href: audience-insights/activities.md
-        - name: Semantische toewijzingen definiëren
-          href: audience-insights/semantic-mappings.md
     - name: Gegevensverrijking
       items:
         - name: Klantprofielen verrijken
           href: audience-insights/enrichment-hub.md
-        - name: Merken en interesses
+        - name: Merk- en interesseaffiniteiten
           href: audience-insights/enrichment-microsoft.md
         - name: Uitgebreide adressen
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Uitgebreide bedrijfsgegevens
-          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Verrijken met Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Verrijken met HERE Technologies
@@ -100,8 +82,6 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Verrijken met Experian
           href: audience-insights/enrichment-experian.md
-        - name: Verrijken met Office 365-gegevens
-          href: audience-insights/enrichment-office.md
         - name: Verrijken met aangepaste SFTP-import
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmenten
@@ -136,8 +116,6 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Transactieverloop voorspellen
               href: audience-insights/predict-transactional-churn.md
-            - name: Analyseer gevoel in klantfeedback
-              href: audience-insights/sentiment-analysis.md
             - name: Aangepaste modellen uit Azure Machine Learning gebruiken
               href: audience-insights/custom-models.md
             - name: Gedeeltelijk ontbrekende gegevens invullen
@@ -148,12 +126,14 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Voorbeeldhandleiding abonnementsverloop voorspellen
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Voorbeeldgids voor voorspelling van transactieverloop
+            - name: Voorbeeldhandleiding transactieverloop voorspellen
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Voorbeeldgids voor voorspelling van productaanbevelingen
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Experimenten met Azure Machine learning
               href: audience-insights/azure-machine-learning-experiments.md
+            - name: Experimenten met Azure Machine Learning Studio
+              href: audience-insights/machine-learning-studio-experiments.md
         - name: Voorspellingen beheren
           href: audience-insights/manage-predictions.md
         - name: Segmenten maken op basis van voorspellingen
@@ -242,14 +222,10 @@
           href: audience-insights/connections.md
         - name: Meerdere omgevingen beheren
           href: audience-insights/manage-environments.md
-        - name: Beveiliging
-          items:
-            - name: Bring your own Key Vault
-              href: audience-insights/use-azure-key-vault.md
-            - name: Verbinding maken met een ADLS-opslagaccount met een Service Principal
-              href: audience-insights/connect-service-principal.md
-            - name: Diagnostische logboeken exporteren
-              href: audience-insights/diagnostics.md
+        - name: Verbinding maken met een ADLS-opslagaccount met een Service Principal
+          href: audience-insights/connect-service-principal.md
+        - name: Ondersteunde talen
+          href: audience-insights/supported-languages.md
     - name: Uitbreidbaarheid
       items:
         - name: Webgegevens integreren van betrokkenheidsinzichten
@@ -262,40 +238,6 @@
           href: audience-insights/apis.md
         - name: API-verwijzingen
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Toestemmingsbeheer (preview)
-  items:
-    - name: Help-hub
-      href: consent-management/index.yml
-    - name: Overzicht van de mogelijkheden
-      href: consent-management/overview.md
-    - name: Aan de slag
-      items:
-        - name: Aan de slag
-          href: consent-management/get-started.md
-        - name: Concepten en terminologie
-          href: consent-management/glossary.md
-    - name: Toestemmingsgegevens importeren
-      items:
-        - name: Toestemmingsgegevens importeren
-          href: consent-management/import-consent-data.md
-        - name: Toestemmingsgegevens instellen en toestemmingsvoorkeuren toepassen
-          href: consent-management/set-consent-rules.md
-    - name: Toestemmingsgegevens beheren
-      items:
-        - name: Toestemmingsregels inschakelen in doelgroepinzichten
-          href: audience-insights/activate-consent.md
-        - name: Standaardtoestemmingsregels beheren in segmenten voor doelgroepinzichten
-          href: audience-insights/change-default-consent-rules.md
-    - name: Instellingen en gebruikers beheren
-      items:
-        - name: Systeeminstellingen configureren
-          href: consent-management/system-settings.md
-        - name: Gebruikers en machtigingen beheren
-          href: consent-management/manage-users.md
-    - name: Toestemmingsgegevens gebruiken
-      items:
-        - name: Voorspellingen maken met toestemmingsgegevens
-          href: consent-management/predictions-consent-data.md
 - name: Betrokkenheidsinzichten (preview)
   items:
     - name: Help-hub
@@ -306,8 +248,6 @@
       items:
         - name: Snelstartgids
           href: engagement-insights/get-started.md
-        - name: Een omgeving maken
-          href: engagement-insights/create-new-environment.md
         - name: Een werkruimte maken
           href: engagement-insights/create-workspace.md
         - name: Gebeurtenissen vastleggen van websites en mobiele apps
@@ -378,5 +318,3 @@
   href: service-limits.md
 - name: DSR-rechten en -aanvragen
   href: dsr-rights-requests.md
-- name: Ondersteuning vinden
-  href: /power-platform/admin/get-help-support

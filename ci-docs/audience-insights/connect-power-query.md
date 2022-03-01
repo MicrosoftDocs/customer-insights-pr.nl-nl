@@ -1,6 +1,6 @@
 ---
 title: Gegevens opnemen via een Power Query-connector (met video)
-description: Connectors voor gegevensbronnen op basis van Power Query.
+description: Connectors voor databronnen op basis van Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
-ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
+ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "8092066"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934972"
 ---
-# <a name="connect-to-a-power-query-data-source"></a>Verbinding maken met een Power Query-gegevensbron
+# <a name="connect-to-a-power-query-data-source"></a>Verbinden met een Power Query-gegevensbron
 
-Power Query biedt een brede reeks connectors voor het opnemen van gegevens. De meeste van deze connectors worden ondersteund door Dynamics 365 Customer Insights. 
+Power Query biedt een brede set connectors om gegevens op te nemen. De meeste van deze connectors worden ondersteund door Dynamics 365 Customer Insights. 
 
 Bij het toevoegen van gegevensbronnen op basis van Power Query-connectors worden over het algemeen de stappen gevolgd die in deze sectie worden beschreven. Afhankelijk van de connector die u gebruikt, kan echter andere informatie vereist zijn. Zie de documentatie over afzonderlijke connectors in de [Power Query-connectorreferentie](/power-query/connectors/) voor meer informatie.
 
@@ -30,7 +30,7 @@ Bij het toevoegen van gegevensbronnen op basis van Power Query-connectors worden
 
 1. Selecteer **Gegevensbron toevoegen**.
 
-1. Selecteer **Microsoft Power Query**.
+1. Selecteer **Microsoft Power Query** en selecteer daaran **Volgende**.
 
 1. Geef een **Naam** op voor de gegevensbron en selecteer **Volgende** om de gegevensbron te maken.
 
@@ -40,21 +40,21 @@ Bij het toevoegen van gegevensbronnen op basis van Power Query-connectors worden
 
 1. Selecteer **Gegevens transformeren**. In deze stap voegt u entiteiten toe aan uw gegevensbron. Entiteiten zijn gegevenssets. Als u een database hebt die meerdere gegevenssets bevat, is elke gegevensset zijn eigen entiteit.
 
-1. Met het dialoogvenster **Power Query - Query's bewerken** kunt u de gegevens bekijken en verfijnen. De entiteiten die de systemen in uw geselecteerde gegevensbron hebben geïdentificeerd, verschijnen in het linkerdeelvenster.
+1. In het dialoogvenster **Power Query - Query's bewerken** kunt u de gegevens bekijken en verfijnen. De entiteiten die de systemen in uw geselecteerde gegevensbron hebben geïdentificeerd, verschijnen in het linkerdeelvenster.
 
    > [!div class="mx-imgBorder"]
    > ![Dialoogvenster Query's bewerken.](media/data-manager-configure-edit-queries.png "Dialoogvenster Query's bewerken")
 
-1. U kunt uw gegevens ook transformeren. Selecteer een entiteit om te bewerken of transformeren. Gebruik de opties in het Power Query-venster om transformaties toe te passen. Elke transformatie wordt vermeld onder **Toegepaste stappen**. Power Query biedt tal van vooraf gebouwde transformatieopties. Voor meer informatie raadpleegt u [Power Query-transformaties](/power-query/power-query-what-is-power-query#transformations).
+1. U kunt uw gegevens ook transformeren. Selecteer een entiteit om te bewerken of transformeren. Gebruik de opties in het venster Power Query om transformaties toe te passen. Elke transformatie wordt vermeld onder **Toegepaste stappen**. Power Query biedt tal van vooraf gebouwde transformatie-opties. Zie [Power Query-transformaties](/power-query/power-query-what-is-power-query#transformations) voor meer informatie.
+
+1. U kunt extra entiteiten toevoegen aan uw gegevensbron door **Gegevens ophalen** te selecteren in het dialoogvenster **Query's bewerken**.
 
    We raden u aan de volgende transformaties te gebruiken:
 
-   - Als u gegevens opneemt uit een CSV-bestand, bevat de eerste rij vaak kopteksten. Ga naar **Transformeren** en selecteer **De eerste rij als veldnamen gebruiken**.
-   - Zorg ervoor dat het gegevenstype correct is ingesteld. Selecteer bijvoorbeeld een datumtype voor datumvelden.
+   - Als u gegevens opneemt uit een CSV-bestand, bevat de eerste rij vaak kopteksten. Ga naar **Tabel transformeren** en selecteer **Gebruik kopteksten als eerste rij**.
+   - Zorg ervoor dat het gegevenstype correct is ingesteld.
 
-1. Als u extra entiteiten wilt toe te voegen aan uw gegevensbron in het dialoogvenster **Query's bewerken**, ga naar **Start** en selecteer **Gegevens ophalen**.
-
-1. Selecteer **Opslaan** onder aan het Power Query-venster om de transformaties op te slaan. Nadat u hebt opgeslagen, ziet u gegevensbron onder **Gegevens** > **Gegevensbronnen**.
+1. Selecteer **Opslaan** onderin het venster Power Query om de transformaties op te slaan. Nadat u hebt opgeslagen, ziet u gegevensbron onder **Gegevens** > **Gegevensbronnen**.
 
 1. Op de pagina **Gegevensbronen** ziet u dat de nieuwe gegevensbron de status **Vernieuwen** heeft.
 

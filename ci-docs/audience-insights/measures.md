@@ -1,247 +1,113 @@
 ---
-title: Meetcriteria maken en beheren
-description: Definieer meetcriteria om de prestaties van uw bedrijf te analyseren en weer te geven.
-ms.date: 11/01/2021
+title: Metingen maken en bewerken
+description: Definieer klantgerelateerde meetcriteria om de prestaties van bepaalde bedrijfsgebieden te analyseren en weer te geven.
+ms.date: 10/15/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: wameng
-ms.reviewer: mhart
+ms.author: mhart
+ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732720"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405508"
 ---
 # <a name="define-and-manage-measures"></a>Meetcriteria definiëren en beheren
 
-Meetcriteria helpen u het klantgedrag en de bedrijfsprestaties beter te begrijpen. Ze kijken naar relevante waarden uit [geharmoniseerde profielen](data-unification.md). Een bedrijf wil bijvoorbeeld de *totale uitgaven per klant* bekijken om de aankoopgeschiedenis van een individuele klant te begrijpen of de *totale omzet van het bedrijf* meten om inzicht te krijgen in de omzet op geaggregeerd niveau in het hele bedrijf.  
+**Meetcriteria** vertegenwoordigen key performance indicators (KPI's) die de prestaties en gezondheid van specifieke bedrijfsgebieden weerspiegelen. Doelgroepinzichten bieden een intuïtieve ervaring voor het bouwen van verschillende soorten metingen, met behulp van een querybuilder waarvoor u uw metingen niet handmatig hoeft te coderen of te valideren. U kunt uw zakelijke meetcriteria bijhouden op de pagina **Start**, meetcriteria voor specifieke klanten bekijken op de **Klantkaart** en meetcriteria gebruiken om klantsegmenten op de pagina **Segmenten** te definiëren.
 
-Meetcriteria worden gemaakt met behulp van de opbouwfunctie voor meetcriteria, een gegevensqueryplatform met verschillende operators en eenvoudige toewijzingsopties. Hiermee kunt u de gegevens filteren, resultaten groeperen, [entiteitsrelatiepaden](relationships.md) detecteren en een voorbeeld van de uitvoer bekijken.
+## <a name="create-a-measure"></a>Een meetcriterium maken
 
-Gebruik de opbouwfunctie voor meetcriteria om bedrijfsactiviteiten te plannen door klantgegevens op te vragen en inzichten te verkrijgen. Als u bijvoorbeeld een meetcriterium maakt van *totale uitgaven per klant* en *totaal rendement per klant*, helpt dit u een groep klanten met hoge uitgaven en toch een hoog rendement te identificeren. U kunt [een segment maken](segments.md) om de volgende beste acties aan te sturen. 
+In deze sectie wordt u begeleid bij het maken van een geheel nieuw meetcriteria. U kunt meetcriteria samenstellen met gegevens uit meerdere gegevensbronnen die zijn verbonden via de entiteit Klant. Er zijn enkele [servicelimieten](service-limits.md) van toepassing.
 
-## <a name="build-your-own-measure-from-scratch"></a>Uw eigen meetcriterium bouwen
+1. Ga in doelgroepinzichten naar **Metingen**.
 
-In deze sectie wordt uitgelegd hoe u een geheel nieuw meetcriterium maakt. U kunt een meting maken met gegevenskenmerken van gegevensentiteiten waarvoor een relatie is ingesteld om verbinding te maken met de entiteit geharmoniseerd klantprofiel.
+2. Selecteer **Nieuw meetcriterium**.
 
-# <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
+3. Kies het meetcriteria **Type**:
 
-1. Ga in doelgroepinzichten naar **Meetcriteria**.
+   - **Klantkenmerk**: een enkel veld per klant dat een score, waarde of status voor de klant aangeeft. Klantkenmerken worden gemaakt als kenmerken in een nieuwe, door het systeem gegenereerde entiteit genaamd **Customer_Measure**.
 
-1. Selecteer **Nieuw** en kies **Bouw uw eigen**.
+   - **Meetcriterium klant**: inzichten in klantgedrag met uitsplitsing naar geselecteerde dimensies. Voor elk meetcriterium wordt een nieuwe entiteit gegenereerd, mogelijk met meerdere records per klant.
 
-1. Selecteer **Naam bewerken** en geef een **Naam** op voor het meetcriterium. 
+   - **Zakelijk meetcriterium**: houdt uw bedrijfsprestaties en de gezondheid van het bedrijf bij. Zakelijke meetcriteria kunnen twee verschillende uitvoeren hebben: een numerieke uitvoer die wordt weergegeven op de pagina **Start** of een nieuwe entiteit die u vindt op de pagina **Entiteiten**.
 
-1. Kies in het configuratiegebied de aggregatiefunctie uit het vervolgkeuzemenu **Functie selecteren**. Aggregatiefuncties omvatten: 
-   - **Sum**
-   - **Gemiddeld**
-   - **Tellen**
-   - **Aantal unieke**
-   - **Max.**
-   - **Min**
-   - **Eerste**: neemt de eerste waarde van de gegevensrecord
-   - **Laatste**: neemt de laatste waarde die aan de gegevensrecord is toegevoegd
+4. Geef een **naam** en een optionele **weergavenaam** op en selecteer daarna **Volgende**.
 
-   :::image type="content" source="media/measure-operators.png" alt-text="Operators voor berekeningen van meetcriteria.":::
+5. Selecteer in de sectie **Entiteiten** de eerste entiteit in de vervolgkeuzelijst. Op dit punt moet u beslissen of aanvullende entiteiten nodig zijn als onderdeel van de definitie van uw meetcriterium.
 
-1. Selecteer **Kenmerk toevoegen** om de gegevens te selecteren die u nodig hebt om dit meetcriterium te maken.
-   
-   1. Selecteer het tabblad **Kenmerken**. 
-   1. Gegevensentiteit: kies de entiteit die het kenmerk bevat dat u wilt meten. 
-   1. Gegevenskenmerk: kies het kenmerk dat u in de aggregatiefunctie wilt gebruiken om het meetcriterium te berekenen. U kunt slechts één kenmerk tegelijk selecteren.
-   1. U kunt ook een gegevenskenmerk van een bestaand meetcriterium selecteren door het tabblad **Meetcriteria** te selecteren, of u kunt zoeken naar de naam van een entiteit of meetcriterium. 
-   1. Selecteer **Toevoegen** om het geselecteerde kenmerk aan het meetcriterium toe te voegen.
+   > [!div class="mx-imgBorder"]
+   > ![Definitie van meetcriterium](media/measure-definition.png "Definitie van meetcriterium")
 
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Selecteer een kenmerk om in berekeningen te gebruiken.":::
+   Als u meer entiteiten wilt toevoegen, selecteert u **Entiteit toevoegen** en selecteert u entiteiten die u voor het meetcriterium wilt gebruiken.
 
-1. Om complexere meetcriteria te bouwen, kunt u meer kenmerken toevoegen of wiskundige operatoren gebruiken voor uw functie voor meetcriteria.
+   > [!NOTE]
+   > U kunt alleen entiteiten selecteren die relaties hebben met uw eerste entiteit. Zie [Relaties](relationships.md) voor meer informatie over het definiëren van relaties.
 
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Maak een complex meetcriterium met wiskundige operatoren.":::
+6. Optioneel kunt u variabelen configureren. Selecteer in de sectie **Variabelen** de optie **Nieuwe variabele**.
 
-1. Om filters toe te voegen, selecteert u het **Filter** in het configuratiegebied. 
-  
-   1. Selecteer in de sectie **Kenmerk toevoegen** van het deelvensteer **Filters** het kenmerk dat u wilt gebruiken om filters te maken.
-   1. Stel de filteroperatoren in om het filter voor elk geselecteerd kenmerk te definiëren.
-   1. Selecteer **Toepassen** om de filters aan het meetcriterium toe te voegen.
+   Variabelen zijn berekeningen die worden uitgevoerd op elk van uw geselecteerde records. Bijvoorbeeld het optellen van verkopen via point-of-sale (POS) en online verkopen voor elk van de records van uw klanten.
 
-1. Om dimensies toe te voegen, selecteert u **Dimensie** in het configuratiegebied. Dimensies worden weergegeven als kolommen in de entiteit voor uitvoer van meetcriteria.
- 
-   1. Selecteer **Dimensies bewerken** om gegevenskenmerken toe te voegen waarop u de meetwaarden wilt groeperen. Bijvoorbeeld plaats of gender. Standaard is de dimensie *CustomerID* geselecteerd om *meetcriteria op klantniveau* te maken. U kunt de standaarddimensie verwijderen als u *meetcriteria op bedrijfsniveau*​wilt maken.
-   1. Selecteer **Gereed** om de dimensies aan het meetcriterium toe te voegen.
+7. Geef een **naam** op voor de variabele.
 
-1. Als er waarden in uw gegevens zijn die u moet vervangen door een geheel getal, selecteert u **Regels**. Configureer de regel en zorg ervoor dat u alleen hele getallen kiest als vervanging. Vervang bijvoorbeeld *null* door *0*.
+8. Kies in het gebied **Expressie** een veld waarmee u uw berekening wilt beginnen.
 
-1. Als er meerdere paden zijn tussen de gegevensentiteit die u hebt toegewezen en de entiteit *Klant*, moet u een van de geïdentificeerde [entiteitsrelatiepaden​](relationships.md) kiezen. Meetresultaten kunnen variëren, afhankelijk van het geselecteerde pad. 
-   
-   1. Selecteer **Relatiepad** en kies het entiteitspad dat moet worden gebruikt om uw meting te identificeren. Als er maar één pad is naar de entiteit *Klant*, wordt dit besturingselement niet weergegeven.
-   1. Selecteer **Gereed** om uw selectie toe te passen. 
+9. Typ een expressie in het gebied **Expressie** terwijl u meer velden kiest om in uw berekening op te nemen.
 
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Selecteer het entiteitspad voor het meetcriterium.":::
+   > [!NOTE]
+   > Momenteel worden alleen rekenkundige expressies ondersteund. Bovendien wordt variabele berekening niet ondersteund voor entiteiten uit verschillende [entiteitspaden](relationships.md).
 
-1. Als u meer berekeningen voor het meetcriterium wilt toevoegen, selecteert u **Nieuwe berekening**​. U kunt alleen entiteiten op hetzelfde entiteitspad gebruiken voor nieuwe berekeningen. Meer berekeningen worden weergegeven als nieuwe kolommen in de entiteit voor uitvoer van meetcriteria.
+10. Selecteer **Gereed**.
 
-1. Selecteer **...** in de berekening om een berekening uit een meetcriterium te **Dupliceren** **Naam wijzigen** of te **Verwijderen**.
+11. In de sectie **Definitie van meetcriterium** definieert u hoe uw gekozen entiteiten en berekende variabelen worden geaggregeerd in een nieuwe entiteit Meetcriterium of een nieuw kenmerk Meetcriterium.
 
-1. In het gebied **Voorbeeld** ziet u het gegevensschema van de entiteit voor uitvoer van meetcriteria, inclusief filters en dimensies. Het voorbeeld reageert dynamisch op wijzigingen in de configuratie.
+12. Selecteer **Nieuwe dimensie**. Een dimensie kan worden beschouwd als een functie *groeperen op*. De gegevensuitvoer van uw entiteit of kenmerk Meetcriterium wordt gegroepeerd op basis van al uw gedefinieerde dimensies.
 
-1. Selecteer **Uitvoeren** om resultaten voor het geconfigureerde meetcriterium te berekenen. Selecteer **Opslaan en sluiten** als u de huidige configuratie wilt behouden en het meetcriterium later wilt uitvoeren.
+    > [!div class="mx-imgBorder"]
+    > ![Aggregatiecyclus kiezen](media/measures-businessreport-measure-definition2.png "Aggregatiecyclus kiezen")
 
-1. Ga naar **Meetcriteria** om het nieuw gemaakte meetcriterium in de lijst te zien.
+    Selecteer of voer de volgende informatie in als onderdeel van de definitie van uw dimensie:
 
-# <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
+    - **Entiteit**: als u een entiteit Meetcriterium definieert, moet dit ten minste één kenmerk bevatten. Als u een kenmerk Meetcriterium definieert, bevat dit standaard slechts één kenmerk. Deze selectie gaat over het kiezen van de entiteit die dat kenmerk bevat.
+    - **Veld**: kies het specifieke kenmerk dat u wilt opnemen in uw entiteit of kenmerk Meetcriterium.
+    - **Bucket**: kies of u gegevens wilt samenvoegen op dagelijkse, maandelijkse of jaarlijkse basis. Dit is alleen een vereiste selectie als u een kenmerk Datumtype hebt geselecteerd.
+    - **Als**: definieert de naam van uw nieuwe veld.
+    - **Weergavenaam**: definieert de weergavenaam van uw veld.
 
-1. Ga in doelgroepinzichten naar **Meetcriteria**.
+    > [!NOTE]
+    > Uw zakelijke meetcriterium wordt opgeslagen als een entiteit met één nummer en verschijnt op de pagina **Start** tenzij u meer dimensies toevoegt aan uw meetcriterium. Na het toevoegen van meer dimensies zal het meetcriterium *niet* worden weergegeven op de pagina **Start**.
 
-1. Selecteer **Nieuw** en kies **Bouw uw eigen**.
+13. Voeg optioneel aggregatiefuncties toe. Elke aggregatie die u maakt, resulteert in een nieuwe waarde binnen uw entiteit of kenmerk Meetcriterium. Ondersteunde aggregatiefuncties zijn: **Min**, **Max**, **Gemiddelde**, **Mediaan**, **Som**, **Aantal unieke**, **Eerste** (neemt de eerste record van een dimensiewaarde) en **Laatste** (neemt de laatste record die aan een dimensiewaarde is toegevoegd).
 
-1. Selecteer **Naam bewerken** en geef een **Naam** op voor het meetcriterium. 
-
-1. Kies in het configuratiegebied de aggregatiefunctie uit het vervolgkeuzemenu **Functie selecteren**. Aggregatiefuncties omvatten: 
-   - **Sum**
-   - **Gemiddeld**
-   - **Tellen**
-   - **Aantal unieke**
-   - **Max.**
-   - **Min**
-   - **Eerste**: neemt de eerste waarde van de gegevensrecord
-   - **Laatste**: neemt de laatste waarde die aan de gegevensrecord is toegevoegd
-
-   :::image type="content" source="media/measure-operators.png" alt-text="Operators voor berekeningen van meetcriteria.":::
-
-1. Selecteer **Kenmerk toevoegen** om de gegevens te selecteren die u nodig hebt om dit meetcriterium te maken.
-   
-   1. Selecteer het tabblad **Kenmerken**. 
-   1. Gegevensentiteit: kies de entiteit die het kenmerk bevat dat u wilt meten. 
-   1. Gegevenskenmerk: kies het kenmerk dat u in de aggregatiefunctie wilt gebruiken om het meetcriterium te berekenen. U kunt slechts één kenmerk tegelijk selecteren.
-   1. U kunt ook een gegevenskenmerk van een bestaand meetcriterium selecteren door het tabblad **Meetcriteria** te selecteren, of u kunt zoeken naar de naam van een entiteit of meetcriterium. 
-   1. Selecteer **Toevoegen** om het geselecteerde kenmerk aan het meetcriterium toe te voegen.
-
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Selecteer een kenmerk om in berekeningen te gebruiken.":::
-
-1. Om complexere meetcriteria te bouwen, kunt u meer kenmerken toevoegen of wiskundige operatoren gebruiken voor uw functie voor meetcriteria.
-
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Maak een complex meetcriterium met wiskundige operatoren.":::
-
-1. Om filters toe te voegen, selecteert u het **Filter** in het configuratiegebied. 
-  
-   1. Selecteer in de sectie **Kenmerk toevoegen** van het deelvensteer **Filters** het kenmerk dat u wilt gebruiken om filters te maken.
-   1. Stel de filteroperatoren in om het filter voor elk geselecteerd kenmerk te definiëren.
-   1. Selecteer **Toepassen** om de filters aan het meetcriterium toe te voegen.
-
-1. Om dimensies toe te voegen, selecteert u **Dimensie** in het configuratiegebied. Dimensies worden weergegeven als kolommen in de entiteit voor uitvoer van meetcriteria.
- 
-   1. Selecteer **Dimensies bewerken** om gegevenskenmerken toe te voegen waarop u de meetwaarden wilt groeperen. Bijvoorbeeld plaats of gender. Standaard is de dimensie *CustomerID* geselecteerd om *meetcriteria op klantniveau* te maken. U kunt de standaarddimensie verwijderen als u *meetcriteria op bedrijfsniveau*​wilt maken.
-   1. Selecteer **Gereed** om de dimensies aan het meetcriterium toe te voegen.
-
-1. Als er waarden in uw gegevens zijn die u moet vervangen door een geheel getal, selecteert u **Regels**. Configureer de regel en zorg ervoor dat u alleen hele getallen kiest als vervanging. Vervang bijvoorbeeld *null* door *0*.
-
-1. U kunt de schakeloptie **Subaccounts totaliseren** gebruiken als u [accounts gebruikt met hiërarchieën](relationships.md#set-up-account-hierarchies).
-   - Als deze is ingesteld op **Uit** wordt de meting voor elke account berekend. Elke account krijgt een eigen resultaat.
-   - Als deze is ingesteld op **Aan**, selecteert u **Bewerken** om de accounthiërarchie te kiezen op basis van de opgenomen hiërarchieën. De meting levert slechts één resultaat op omdat deze wordt geaggregeerd met subaccounts.
-
-1. Als er meerdere paden zijn tussen de gegevensentiteit die u hebt toegewezen en de entiteit *Klant*, moet u een van de geïdentificeerde [entiteitsrelatiepaden​](relationships.md) kiezen. Meetresultaten kunnen variëren, afhankelijk van het geselecteerde pad. 
-   
-   1. Selecteer **Relatiepad** en kies het entiteitspad dat moet worden gebruikt om uw meting te identificeren. Als er maar één pad is naar de entiteit *Klant*, wordt dit besturingselement niet weergegeven.
-   1. Selecteer **Gereed** om uw selectie toe te passen. 
-
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Selecteer het entiteitspad voor het meetcriterium.":::
-
-1. Selecteer **...** in de berekening om een berekening uit een meetcriterium te **Dupliceren** **Naam wijzigen** of te **Verwijderen**.
-
-1. In het gebied **Voorbeeld** ziet u het gegevensschema van de entiteit voor uitvoer van meetcriteria, inclusief filters en dimensies. Het voorbeeld reageert dynamisch op wijzigingen in de configuratie.
-
-1. Selecteer **Uitvoeren** om resultaten voor het geconfigureerde meetcriterium te berekenen. Selecteer **Opslaan en sluiten** als u de huidige configuratie wilt behouden en het meetcriterium later wilt uitvoeren.
-
-1. Ga naar **Meetcriteria** om het nieuw gemaakte meetcriterium in de lijst te zien.
-
----
-
-## <a name="use-a-template-to-build-a-measure"></a>Een sjabloon gebruiken om een meetcriterium op te stellen
-
-U kunt vooraf gedefinieerde sjablonen van veelgebruikte meetcriteria gebruiken om deze te maken. Gedetailleerde beschrijvingen van de sjablonen en een begeleide ervaring helpen u bij het efficiënt maken van meetcriteria. Sjablonen bouwen voort op toegewezen gegevens uit de entiteit *Unified Activity*. Zorg er dus voor dat u [klantactiviteiten](activities.md) hebt geconfigureerd voordat u een meetcriterium maakt op basis van een sjabloon.
-
-# <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
-
-U kunt vooraf gedefinieerde sjablonen van veelgebruikte meetcriteria gebruiken om deze te maken. Gedetailleerde beschrijvingen van de sjablonen en een begeleide ervaring helpen u bij het efficiënt maken van meetcriteria. Sjablonen bouwen voort op toegewezen gegevens uit de entiteit *Unified Activity*. Zorg er dus voor dat u [klantactiviteiten](activities.md) hebt geconfigureerd voordat u een meetcriterium maakt op basis van een sjabloon.
-
-Beschikbare sjablonen voor meetcriteria: 
-- Gemiddelde transactiewaarde (ATV)
-- Totale transactiewaarde
-- Gemiddelde dagelijkse omzet
-- Gemiddelde jaaromzet
-- Aantal transacties
-- Verdiende loyaliteitspunten
-- Verzilverde loyaliteitspunten
-- Saldo loyaliteitspunten
-- Actieve levensduur van klant
-- Lidmaatschapsduur van loyaliteitsprogramma
-- Tijd sinds laatste aankoop
-
-De volgende procedure beschrijft de stappen om een nieuw meetcriterium op te stellen met behulp van een sjabloon.
-
-1. Ga in doelgroepinzichten naar **Meetcriteria**.
-
-1. Selecteer **Nieuw** en selecteer **Een sjabloon kiezen**.
-
-   :::image type="content" source="media/measure-use-template.png" alt-text="Schermopname van het vervolgkeuzemenu bij het maken van een nieuw meetcriterium met markering op sjabloon.":::
-
-1. Zoek de sjabloon die bij uw behoeften past en selecteer **Sjabloon kiezen**.
-
-1. Bekijk de vereiste gegevens en selecteer **Aan de slag** als u over alle gegevens beschikt.
-
-1. Stel in het deelvenster **Naam bewerken** de naam in voor uw meetcriterium en de uitvoerentiteit. 
-
-1. Selecteer **Gereed**.
-
-1. Definieer in de sectie **Tijdsperiode instellen** het tijdsbestek van de te gebruiken gegevens. Kies of u wilt dat het nieuwe meetcriterium de hele gegevensset omvat door **Altijd** te selecteren of dat u wilt dat het meetcriterium zich concentreert op een **Specifieke tijdsperiode**.
-
-   :::image type="content" source="media/measure-set-time-period.png" alt-text="Schermopname die de tijdsperiode laat zien bij het configureren van een meetcriterium vanuit een sjabloon.":::
-
-1. Selecteer in de volgende sectie de optie **Gegevens toevoegen** om de activiteiten te kiezen en de bijbehorende gegevens toe te wijzen vanuit uw entiteit *Unified Activity*.
-
-    1. Stap 1 van 2: kies onder **Type activiteit** het type entiteit dat u wilt gebruiken. Selecteer voor **Activiteiten** de entiteiten die u wilt toewijzen.
-    1. Stap 2 van 2: kies het kenmerk van de entiteit *Unified Activity* voor het onderdeel dat is vereist door de formule. Voor Gemiddelde transactiewaarde is dit bijvoorbeeld het kenmerk dat de transactiewaarde vertegenwoordigt. Kies voor **Tijdstempel van activiteit** het kenmerk van de entiteit Unified Activity dat de datum en tijd van de activiteit vertegenwoordigt.
-   
-1. Zodra de gegevenstoewijzing is geslaagd, ziet u de status als **Voltooid** en de naam van de toegewezen activiteiten en kenmerken.
-
-   :::image type="content" source="media/measure-template-configured.png" alt-text="Schermopname van een voltooide configuratie van een meetsjabloon.":::
-
-1. U kunt nu **Uitvoeren** selecteren om de resultaten van het meetcriterium te berekenen. Selecteer **Concept opslaan** om het later te verfijnen.
-
-# <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
-
-Deze functie is alleen beschikbaar voor metingen die zijn gemaakt in omgevingen met individuele klanten als primaire doelgroep.
-
----
+14. Selecteer **Opslaan** om uw wijzigingen toe te passen op het meetcriterium.
 
 ## <a name="manage-your-measures"></a>Uw meetcriteria beheren
 
-U vindt de lijst met meetcriteria op de pagina **Meetcriteria**.
+Nadat u ten minste één meting hebt gemaakt, ziet u een lijst met metingen op de pagina **Metingen**.
 
-U vindt informatie over het type meetcriterium, de maker, de datum waarop het meetcriterium is gemaakt en de status. Wanneer u een meetcriterium uit de lijst selecteert, kunt u een voorbeeld van de uitvoer bekijken en een CSV-bestand downloaden.
+U vindt informatie over het type meetcriterium, de maker, de aanmaakdatum en -tijd, de datum en tijd van laatste bewerking, de status (of het meetcriterium actief, inactief of mislukt is) en de meest recente vernieuwingsdatum en -tijd. Wanneer u een meetcriterium uit de lijst selecteert, kunt u een voorbeeld van de uitvoer bekijken.
 
 Selecteer om al uw meetcriteria tegelijkertijd te vernieuwen de optie **Alles vernieuwen** zonder een specifiek meetcriterium te selecteren.
 
 > [!div class="mx-imgBorder"]
-> ![Acties om afzonderlijke meetcriteria te beheren.](media/measure-actions.png "Acties om afzonderlijke meetcriteria te beheren.")
+> ![Acties om afzonderlijke meetcriteria te beheren](media/measure-actions.png "Acties om afzonderlijke meetcriteria te beheren")
 
-Selecteer een meetcriterium in de lijst voor de volgende opties:
+U kunt ook een meetcriterium uit de lijst selecteren en een van de volgende acties uitvoeren:
 
 - Selecteer de naam van het meetcriterium om de details te zien.
 - **Bewerk** de configuratie van het meetcriterium.
-- **Vernieuw** het meetcriterium op basis van de laatste gegevens.
 - **Hernoem** het meetcriterium.
 - **Verwijder** het meetcriterium.
-- **Activeren** of **Deactiveren**. Inactieve meetcriteria worden niet vernieuwd tijdens een [geplande vernieuwing](system.md#schedule-tab)​.
+- Selecteer het beletselteken (...) en vervolgens **Vernieuwen** om het vernieuwingsproces voor het meetcriterium te starten.
+- Selecteer het beletselteken (...) en vervolgens **Downloaden** om een .CSV-bestand van het meetcriterium op te halen.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
 
 ## <a name="next-step"></a>Volgende stap
 
-U kunt bestaande meetcriteria gebruiken om [een klantsegment](segments.md) te maken.
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+U kunt bestaande meetcriteria gebruiken om uw eerste klantensegment ter maken op de pagina **Segmenten**. Zie [Segmenten](segments.md) voor meer informatie.

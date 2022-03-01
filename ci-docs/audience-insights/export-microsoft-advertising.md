@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar Microsoft Advertising
 description: Leer hoe u de verbinding configureert en exporteert naar Microsoft Advertising.
-ms.date: 10/08/2021
+ms.date: 05/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 12fd221acb7c0eed443c9b860aca42dcb2b3788c
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618055"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124474"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Segmenten exporteren naar Microsoft Advertising (preview)
 
@@ -29,9 +29,9 @@ Exporteer Customer Insights-segmenten naar Microsoft Advertising om doelgroepen 
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- U kunt tot 250.000 klantprofielen per export exporteren naar Microsoft Advertising.
+- U kunt maximaal 500.000 profielen per export exporteren naar Microsoft Advertising.
 - Exporteren naar Microsoft Advertising is beperkt tot segmenten.
-- Het exporteren van tot 500.000 klantprofielen naar Microsoft Advertising kan tot 10 minuten duren. 
+- Het exporteren van maximaal 500.000 profielen naar Microsoft Advertising kan tot 10 minuten duren. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>De verbinding met Microsoft Advertising instellen
@@ -68,7 +68,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Voer uw **klant-id en account-id voor Microsoft Advertising** in. U vindt de klant-id (`cid`) en account-id (`aid`) in de parameters van de URL wanneer u bent aangemeld bij Microsoft Advertising.
 
-1. In de sectie **Gegevensvergelijking** selecteert in u het veld **E-mail** met een e-mailadres van de klant. Dit is vereist voor het exporteren van segmenten naar Microsoft Advertising.
+1. Selecteer in het veld **E-mail** van de sectie **Gegevensvergelijking** het veld in uw geharmoniseerde klantprofiel met het e-mailadres van een klant. Dit is vereist voor het exporteren van segmenten naar Microsoft Advertising.
 
 1. Selecteer **Opslaan**.
 

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar Omnisend
 description: Leer hoe u de verbinding configureert en exporteert naar Omnisend.
-ms.date: 10/08/2021
+ms.date: 05/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619022"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124475"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Segmenten exporteren naar Omnisend (preview)
 
@@ -28,9 +28,9 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Omnisend en gebruik 
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- U kunt per export tot 1 miljoen klantprofielen exporteren naar Omnisend en dit kan tot 4 uur duren.
+- U kunt maximaal 1 miljoen profielen per export exporteren naar Omnisend en het kan tot 4 uur duren voordat dit is voltooid.
 - Exporteren naar Omnisend is beperkt tot segmenten.
-- Het aantal klantprofielen dat u kunt exporteren naar Omnisend, is afhankelijk van en wordt beperkt door uw contract met Omnisend.
+- Het aantal profielen dat u naar Omnisend kunt exporteren, is afhankelijk van uw contract met Omnisend.
 
 ## <a name="set-up-connection-to-omnisend"></a>Verbinding instellen met Omnisend
 
@@ -62,7 +62,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Omnisend. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
 
-1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Deze is vereist voor het exporteren van segmenten naar Omnisend. Optioneel kunt u Voornaam, Achternaam, Adres, Land/regio, Staat, Plaats en Postcode exporteren om meer gepersonaliseerde e-mails te maken. Selecteer **Kenmerk toevoegen** om deze velden toe te wijzen.
+1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. Deze is vereist voor het exporteren van segmenten naar Omnisend. Optioneel kunt u Voornaam, Achternaam, Adres, Land/regio, Staat, Plaats en Postcode exporteren om meer gepersonaliseerde e-mails te maken. Selecteer **Kenmerk toevoegen** om deze velden toe te wijzen.
 
 1. Selecteer **Opslaan**.
 

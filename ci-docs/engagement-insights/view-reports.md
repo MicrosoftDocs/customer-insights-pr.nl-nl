@@ -4,17 +4,17 @@ description: Gebruik de beschikbare rapporten om realtime activiteit op uw site 
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 10/01/2021
+ms.date: 06/18/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 5ccdcb47db597154cf79b9f2e8fc238ab75dfde9
-ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
+ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "7582916"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036642"
 ---
 # <a name="view-reports"></a>Rapporten weergeven
 
@@ -92,18 +92,12 @@ Mobiele rapporten zijn gegroepeerd in realtime gebruiks-, app- en gebruikerscate
 
 - **Locaties** tonen informatie over app-gebruikers per land, regio en stad.
 
-## <a name="filter-by-time-or-date-range"></a>Filteren op tijd of datumbereik
+## <a name="filter-by-time-or-value"></a>Filteren op tijd of waarde
 
-U kunt het tijdsbestek of datumbereik in een web- of mobiel rapport selecteren om de focus te leggen op een waarde of tijdsperiode. 
+U kunt de tijdsbestek of waarde in een web- of mobiel rapport selecteren om u te concentreren op een waarde of tijdsperiode. 
 
-- Om een tijdsbestek te selecteren, selecteert u in de rechterbovenhoek van de rapportweergave een waarde in de vervolgkeuzelijst van het rapport. U kunt ook een **Vast datumbereik** kiezen. 
+- Als u een tijdsbestek wilt selecteren, selecteert u **Meer [...]** uit de vervolgkeuzelijst van het rapport. Tijdbereikselectie is uitgeschakeld voor een realtime gebruiksrapport; het tijdsbereik voor een realtime gebruiksrapport is 'nu'.
 
-  :::image type="content" source="media/filter-by-time.png" alt-text="Filteren op tijd of datumbereik.":::   
-
-- Voor de meeste rapporten selecteert u een waarde in een diagram of lijst om het rapport te filteren.
-
-> [!NOTE]
-> Tijdbereikselectie is uitgeschakeld voor een realtime gebruiksrapport; het tijdsbereik voor een realtime gebruiksrapport is 'nu'.
-
+- In de meeste rapporten selecteert u een waarde in een diagram of lijst om het rapport op de geselecteerde waarde te filteren.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

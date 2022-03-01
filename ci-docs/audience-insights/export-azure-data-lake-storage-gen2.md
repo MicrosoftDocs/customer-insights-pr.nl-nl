@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar Azure Data Lake Storage Gen2
 description: Ontdek hoe u de verbinding met Azure Data Lake Storage Gen2 configureert.
-ms.date: 10/06/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,24 +9,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 934c396559d4c4be8e640917d2265805753eb62d
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: f431b707e1d65ffe47f8b3aa1c52abaa964e871a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7605897"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760045"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Segmentlijst en andere gegevens exporteren naar Azure Data Lake Storage Gen2 (preview)
-
-Sla uw Customer Insights-gegevens op in een Data Lake Storage Gen2-account of gebruik deze om uw gegevens over te brengen naar andere toepassingen.
-
-## <a name="known-limitations"></a>Bekende beperkingen
-
-1. Voor Azure Data Lake Storage Gen2 kunt u kiezen tussen [Standaardprestaties en Premium prestatielaag](/azure/storage/blobs/create-data-lake-storage-account) wanneer u een opslagaccount maakt voor uw data lake. Als u de Premium prestatielaag kiest, selecteert u de premium blok-blobs als accounttype. 
-
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>De verbinding instellen met Azure Data Lake Storage Gen2 
-
+# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a>De verbinding instellen met Azure Data Lake Storage Gen2 (preview)
 
 1. Ga naar **Beheerder** > **Verbindingen**.
 

@@ -1,7 +1,7 @@
 ---
 title: Verbetering van bedrijfsgegevens
 description: Verrijk en normaliseer bedrijfsgegevens met de modellen van Microsoft.
-ms.date: 01/19/2022
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010891"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813912"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>De verrijking van bedrijfsprofielen met verbeterde bedrijfsgegevens
 
@@ -82,17 +82,7 @@ Selecteer **Uitvoeren** vanaf de opdrachtbalk om het verrijkingsproces te starte
 
 Nadat het verrijkingsproces is voltooid, kunt u de nieuwe verrijkte klantprofielgegevens bekijken onder **Mijn verrijkingen**. Ook vindt u daar het tijdstip van de laatste update en het aantal verrijkte profielen.
 
-U kunt een sample van de verrijkte gegevens zien in de tegel **Preview van verrijkte klanten**. Selecteer **Meer bekijken** en selecteer het tabblad **Gegevens** om toegang te krijgen tot een gedetailleerd overzicht van elk verrijkt profiel.
-
-### <a name="overview-card"></a>Overzichtskaart
-
-Op de overzichtskaart staan details over wat onder de verrijking valt. 
-
-* **Verwerkte en gewijzigde bedrijven**: het aantal klant-bedrijfsprofielen dat succesvol is verrijkt.
-
-* **Bedrijven verwerkt en niet gewijzigd**: het aantal klant-bedrijfsprofielen dat is herkend maar niet gewijzigd. Dit gebeurt meestal wanneer de invoergegevens geldig zijn en niet kunnen worden verbeterd door de verrijking.
-
-* **Bedrijven niet verwerkt en niet gewijzigd**: het aantal klant-bedrijfsprofielen dat niet werd herkend. Dit gebeurt meestal voor invoergegevens die ongeldig zijn of niet worden ondersteund door de verrijking.
+U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrijkte gegevens weergeven** te selecteren.
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -1,27 +1,27 @@
 ---
 title: Bot voor Microsoft Teams
 description: Zoek geharmoniseerde klantprofielen op in Microsoft Teams met behulp van een bot.
-ms.date: 10/08/2021
+ms.date: 04/21/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: conceptual
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6a9575de922bc2ff9c9d2212b99b4c0c8b61ab0e
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967813"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405498"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Teams-bot voor Dynamics 365 Customer Insights (preview)
 
 Maak verbinding met Microsoft Teams om een bot geharmoniseerde klantprofielen in Teams-kanalen te laten opzoeken.
 
 > [!div class="mx-imgBorder"]
-> ![Teams-bot die een klantrecord weergeeft.](media/teams-bot.png "Teams-bot die een klantrecord weergeeft")
+> ![Teams-bot die een klantrecord weergeeft](media/teams-bot.png "Teams-bot die een klantrecord weergeeft")
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -31,10 +31,7 @@ Als u de bot wilt instellen en configureren, moet aan de volgende voorwaarden wo
 - Het [harmoniseringsproces](data-unification.md) is voltooid.
 - Er zijn velden toegevoegd aan de [zoek- en filterindex](search-filter-index.md).
 - Customer Insights en Teams bevinden zich in dezelfde organisatie.
-- Uw omgeving heeft de primaire doelgroep ingesteld op individuele klanten. Zakelijke accounts worden niet ondersteund.
 
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>De bot configureren
 
 1. Ga in doelgroepinzichten naar **Beheer** > **Exportbestemmingen**.
@@ -55,6 +52,3 @@ De bot biedt zoekmogelijkheden voor geharmoniseerde klantprofielen.
 - Als uw organisatie meerdere Customer Insights-omgevingen in dezelfde organisatie heeft, kunt u **switchinstance** invoeren om te kiezen met welke omgeving u de bot wilt verbinden.
 
 - VOer **help** in om een lijst met beschikbare opdrachten voor de bot te bekijken.  
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

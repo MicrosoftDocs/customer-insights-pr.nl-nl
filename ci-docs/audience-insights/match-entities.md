@@ -1,7 +1,7 @@
 ---
 title: Entiteiten matchen voor gegevensharmonisatie
-description: Match entiteiten om geharmoniseerde klantprofielen te maken.
-ms.date: 02/07/2022
+description: Entiteiten matchen om datasets te combineren en geharmoniseerde klantprofielen te maken.
+ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098829"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648202"
 ---
 # <a name="match-entities"></a>Entiteiten toewijzen
 
@@ -29,7 +29,13 @@ De matchpagina bestaat uit drie secties:
 
 ## <a name="specify-the-match-order"></a>De afstemmingsvolgorde opgeven
 
-Elke match verenigt twee of meer entiteiten in één geconsolideerde entiteit. Tegelijkertijd worden de unieke klantrecords behouden. De afstemmingsvolgorde geeft de volgorde aan waarin het systeem probeert de records af te stemmen.
+Ga naar **Gegevens** > **Harmoniseren** > **Afstemming** en selecteer **Volgorde instellen** om de afstemmingsfase te starten.
+
+Elke match verenigt twee of meer entiteiten in één geconsolideerde entiteit. Tegelijkertijd worden de unieke klantrecords behouden. We hebben bijvoorbeeld twee entiteiten geselecteerd: **eCommerce:eCommerceContacts** als de primaire entiteit en **LoyaltyScheme:loyCustomers** als tweede entiteit. De volgorde van de entiteiten geeft aan in welke volgorde wordt geprobeerd de records te matchen.
+
+:::image type="content" source="media/match-page.png" alt-text="Schermopname van de pagina Afstemming in het gedeelte Harmoniseren van het gegevensharmonisatieproces.":::
+  
+De primaire entiteit *eCommerce: eCommerceContacts* wordt afgestemd met de volgende entiteit *LoyaltyScheme: loyCustomers*.​ De gegevensset die het resultaat is van de eerste afstemmingsstap wordt vergeleken met de volgende entiteit als u meer dan twee entiteiten hebt.
 
 > [!IMPORTANT]
 > De entiteit die u kiest als uw primaire entiteit dient als basis voor uw geharmoniseerde gegevensset voor profielen. Extra entiteiten die tijdens de afstemmingsfase worden geselecteerd, worden aan deze entiteit toegevoegd. Dit betekent niet dat de geharmoniseerde entiteit *alle* gegevens bevat die in deze entiteit zijn opgenomen.
@@ -37,18 +43,9 @@ Elke match verenigt twee of meer entiteiten in één geconsolideerde entiteit. T
 > Er zijn twee overwegingen die u kunnen helpen bij het kiezen van de hiërarchie van uw entiteiten:
 >
 > - Kies de entiteit met de meest volledige en betrouwbare profielgegevens over uw klanten als primaire entiteit.
-> - Kies de entiteit die verschillende kenmerken heeft die worden gedeeld door andere entiteiten (bijvoorbeeld naam, telefoonnummer of e-mailadres) als primaire entiteit.
+> - Kies de entiteit die verschillende kenmerken gemeen heeft met andere entiteiten (bijvoorbeeld naam, telefoonnummer of e-mailadres) als primaire entiteit.
 
-1. Ga naar **Gegevens** > **Harmoniseren** > **Afstemming** en selecteer **Volgorde instellen** om de afstemmingsfase te starten.
-1. Selecteer **Entiteitsvolgorde**. Selecteer bijvoorbeeld **eCommerce:eCommerceContacts** als de primaire entiteit en **LoyaltyScheme:loyCustomers** als tweede entiteit. 
-1. Als u elke record in de entiteit als unieke klant wilt die is afgestemd op elke volgende entiteit, selecteert u **Alles opnemen**.
-1. Selecteer **Gereed**. 
-
-Na het specificeren van de afstemmingsvolgorde, worden de gedefinieerde afstemmingsparen weergegeven in de sectie **Details van afgestemde records** bij **Gegevens** > **Harmoniseren** > **Afstemmen**. De belangrijkste metrische gegevens zijn leeg totdat het afstemmingsproces is voltooid.
-
-:::image type="content" source="media/match-page.png" alt-text="Schermopname van de pagina Afstemming in het gedeelte Harmoniseren van het gegevensharmonisatieproces.":::
-  
-De primaire entiteit *eCommerce: eCommerceContacts* wordt afgestemd met de volgende entiteit *LoyaltyScheme: loyCustomers*. De gegevensset die voortvloeit uit de eerste afstemmingsstap wordt gekoppeld met de volgende entiteit als u meer dan twee entiteiten hebt.
+Nadat u de vergelijkingsvolgorde hebt opgegeven, ziet u de gedefinieerde vergelijkingsparen in de sectie **Details van afgestemde records** in **Gegevens** > **Verenigen** > **Afstemmen**​. De belangrijkste statistieken blijven leeg totdat het vergelijkingsproces is voltooid.
 
 ## <a name="define-rules-for-match-pairs"></a>Regels voor vergelijkingsparen definiëren
 
@@ -58,7 +55,7 @@ De waarschuwing **Heeft regels nodig** naast de naam van een entiteit suggereert
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Schermopname van de sectie Details van afgestemde records met het gemarkeerde besturingselement om regels toe te voegen.":::
 
-1. Selecteer **Regel toevoegen** onder een entiteit in de sectie **Details van afgestemde records** om afstemmingsregels te definiëren.
+1. Selecteer **Regels toevoegen** onder een entiteit in de sectie **Details van afgestemde records** om overeenkomstregels te definiëren.
 
 1. Configureer in het deelvenster **Regel maken** de voorwaarden voor de regel.
 
@@ -69,15 +66,15 @@ De waarschuwing **Heeft regels nodig** naast de naam van een entiteit suggereert
    - **Entiteit/Veld (tweede rij)**: kies een kenmerk dat betrekking heeft op het kenmerk van de entiteit opgegeven in de eerste rij.
 
    - **Normaliseren**: kies uit de volgende normalisatieopties voor de geselecteerde kenmerken. 
-     - Cijfers: converteert andere cijfersystemen, zoals Romeinse cijfers, naar Arabische cijfers. *VIII* wordt *8*.
+     - Spatie: verwijdert alle spaties. *Hallo   wereld* wordt *Hallowereld*.
      - Symbolen: hiermee verwijdert u alle symbolen en speciale tekens. *Hoofd&schouder* wordt *Hoofdschouder*​.
      - Tekst in kleine letters: alle tekens worden omgezet in kleine letters. *HOOFDLETTERS en Beginhoofdletters* wordt *hoofdletters en beginhoofdletters*​.
-     - Type (Telefoon, Naam, Adres, Organisatie): standaardiseert namen, titels, telefoonnummers, adressen enz. 
      - Van Unicode naar ASCII: converteert de Unicode-notatie naar ASCII-tekens. */u00B2* wordt *2*.
-     - Spatie: verwijdert alle spaties. *Hallo   wereld* wordt *Hallowereld*.
+     - Cijfers: converteert andere cijfersystemen, zoals Romeinse cijfers, naar Arabische cijfers. *VIII* wordt *8*.
+     - Semantische typen: standaardiseert namen, titels, telefoonnummers, adressen, enzovoort. 
 
    - **Precisie**: stel het precisieniveau in dat voor deze voorwaarde moet worden toegepast. 
-     - **Basis**: kies uit *Laag*, *Gemiddeld*, *Hoog* en *Exact*. Selecteer **Exact** om alleen records af te stemmen die voor 100 procent overeenkomen. Selecteer een van de andere niveaus om records af te stemmen die niet 100 procent identiek zijn.
+     - **Basis**: kies uit *Laag*, *Gemiddeld*, *Hoog* en *Exact*. Selecteer **Exact** als u alleen records wilt afstemmen die 100 procent overeenkomen. Selecteer een van de andere niveaus om records af te stemmen die niet 100 procent identiek zijn.
      - **Aangepast**: stel een percentage in waaraan records moeten voldoen. Alleen records die deze drempel halen, worden vergeleken.
 
 1. Geef een **naam** op voor de regel.
@@ -92,7 +89,7 @@ De waarschuwing **Heeft regels nodig** naast de naam van een entiteit suggereert
 
 Als u entiteiten alleen wilt matchen als kenmerken aan meerdere voorwaarden voldoen, voegt u meer voorwaarden toe aan een overeenkomstregel. Voorwaarden zijn verbonden met een logische EN-operator en worden dus alleen uitgevoerd als aan alle voorwaarden is voldaan.
 
-1. Ga naar **Gegevens** > **Harmoniseren** > **Afstemmen** en selecteer **Bewerken** voor de regel waaraan u voorwaarden wilt toevoegen.
+1. Ga naar **Gegevens** > **Verenigen** > **Afstemmen** en selecteer **Bewerken** voor de regel waaraan u voorwaarden wilt toevoegen.
 
 1. Selecteer in het deelvenster **Regel bewerken** de optie **Voorwaarde toevoegen**.
 
@@ -100,7 +97,7 @@ Als u entiteiten alleen wilt matchen als kenmerken aan meerdere voorwaarden vold
 
 ### <a name="add-rules-to-a-match-pair"></a>Regels toevoegen aan een vergelijkingspaar
 
-Overeenkomstregels staan voor voorwaardensets. Voeg meer regels toe om entiteiten af te stemmen op voorwaarden op basis van meerdere kenmerken.
+Overeenkomstregels staan voor voorwaardensets. Voeg meer regels toe om entiteiten te matchen op voorwaarden op basis van meerdere kenmerken.
 
 1.  Ga naar **Gegevens** > **Verenigen** > **Afstemmen** en selecteer **Regel toevoegen** voor de entiteit waaraan u regels wilt toevoegen.
 
@@ -111,7 +108,7 @@ Overeenkomstregels staan voor voorwaardensets. Voeg meer regels toe om entiteite
 
 ### <a name="change-the-entity-order-in-match-rules"></a>De entiteitsvolgorde in matchregels wijzigen
 
-U kunt entiteiten voor overeenkomstregels opnieuw rangschikken om de volgorde waarin ze worden verwerkt te wijzigen. Regels die conflicteren vanwege een gewijzigde volgorde, worden verwijderd. U moet verwijderde regels opnieuw maken met een bijgewerkte configuratie.
+U kunt entiteiten voor matchregels opnieuw rangschikken om de volgorde te wijzigen waarin ze worden verwerkt. Regels die conflicteren vanwege een gewijzigde volgorde, worden verwijderd. U moet verwijderde regels opnieuw maken met een bijgewerkte configuratie.
 
 1. Ga naar **Gegevens** > **Harmoniseren** > **Afstemming** en selecteer **Bewerken**.
 
@@ -125,29 +122,25 @@ U kunt entiteiten voor overeenkomstregels opnieuw rangschikken om de volgorde wa
 
 Naast [regels voor matchen tussen entiteiten](#define-rules-for-match-pairs) kunt u ook ontdubbelingsregels opgeven. *Ontdubbeling* is een ander proces bij het matchen van records. Het identificeert dubbele records en voegt ze samen in één record. Bronrecords worden met alternatieve id's aan de samengevoegde record gekoppeld.
 
-Ontdubbelde records worden gebruikt in het afstemmingsproces tussen verschillende entiteiten. Ontdubbeling vindt plaats op individuele entiteiten en kan worden geconfigureerd voor elke entiteit die in afstemmingsparen wordt gebruikt.
+Ontdubbelde records worden gebruikt in het matchingproces tussen verschillende entiteiten. Ontdubbeling vindt plaats op individuele entiteiten en kan worden geconfigureerd voor elke entiteit die in vergelijkingsparen wordt gebruikt.
 
 Het specificeren van ontdubbelingsregels is niet verplicht. Als dergelijke regels niet zijn geconfigureerd, worden de door het systeem gedefinieerde regels toegepast. Ze combineren alle records in één record voordat de entiteitsgegevens worden doorgegeven aan matching tussen entiteiten voor betere prestaties.
 
 ### <a name="add-deduplication-rules"></a>Ontdubbelingsregels toevoegen
 
-1. Ga naar **Gegevens** > **Harmoniseren** > **Afstemming**.
+1. Ga naar **Gegevens** > **Verenigen** > **Afstemming**.
 
-1. In de sectie **Details van ontdubbelde records** selecteert u **Entiteiten instellen**. Als er al ontdubbelingsregels zijn gemaakt, selecteert u **Bewerken**​.
+1. Selecteer in de sectie **Samengevoegde duplicaten** de optie **Entiteiten instellen**. Als er al ontdubbelingsregels zijn gemaakt, selecteert u **Bewerken**​.
 
 1. Kies in het deelvenster **Voorkeuren samenvoegen** de entiteiten waarvoor u ontdubbeling wilt uitvoeren.
 
-   1. Geef op hoe u de dubbele records wilt combineren en kies een van de drie opties:
-      - **Meest gevuld**: identificeert de record met de meeste gevulde kenmerkvelden als de winnende record. Dit is de standaard samenvoegingsoptie.
-      - **Meest recent**: identificeert het winnende record op basis van recentheid. Vereist een datum of een numeriek veld om de recentheid te definiëren.
-      - **Minst recent**: identificeert het winnende record op basis van minst recent zijn. Vereist een datum of een numeriek veld om de recentheid te definiëren.
-
-   1. Eventueel kunt u **Geavanceerd** selecteren om ontdubbelingsregels te definiëren voor individuele kenmerken van een entiteit. U kunt er bijvoorbeeld voor kiezen om de meest recente e-mail EN het meest volledige adres uit verschillende records te bewaren. Vouw de entiteit uit om alle kenmerken te bekijken en definieer welke optie moet worden gebruikt voor afzonderlijke kenmerken. Als u een op recentheid gebaseerde optie kiest, moet u ook een datum-/tijdveld opgeven dat de recentheid definieert. 
+1. Geef op hoe u de dubbele records wilt combineren en kies een van de drie opties:
+   - **Meest gevuld**: identificeert de record met de meeste gevulde kenmerkvelden als de winnende record. Dit is de standaard samenvoegingsoptie.
+   - **Meest recent**: identificeert het winnende record op basis van recentheid. Vereist een datum of een numeriek veld om de recentheid te definiëren.
+   - **Minst recent**: identificeert het winnende record op basis van minst recent zijn. Vereist een datum of een numeriek veld om de recentheid te definiëren.
  
-      > [!div class="mx-imgBorder"]
-      > ![Ontdubbelingsregels stap 1.](media/match-selfconflation.png "Ontdubbelingsregels stap 1")
-
-   1. Selecteer **Gereed** om uw voorkeuren voor samenvoegen voor ontdubbeling toe te passen.
+   > [!div class="mx-imgBorder"]
+   > ![Ontdubbelingsregels stap 1.](media/match-selfconflation.png "Ontdubbelingsregels stap 1")
  
 1. Zodra de entiteiten zijn geselecteerd en de voorkeur voor samenvoegen is ingesteld, selecteert u **Regel toevoegen** om de ontdubbelingsregels op entiteitsniveau te definiëren.
    - Met **Veld selecteren** worden alle beschikbare velden uit die entiteit weergegeven. Kies het veld dat u op duplicaten wilt controleren. Kies velden die waarschijnlijk uniek zijn voor elke afzonderlijke klant, bijvoorbeeld een e-mailadres of de combinatie van naam, plaats en telefoonnummer.
@@ -163,9 +156,9 @@ Het specificeren van ontdubbelingsregels is niet verplicht. Als dergelijke regel
 
 1. Deze winnende record wordt vervolgens doorgegeven aan de overeenkomsten zoeken tussen entiteiten, samen met de niet-winnende records (bijvoorbeeld alternatieve id's) om de kwaliteit van de overeenkomst te verbeteren.
 
-1. Alle aangepaste gedefinieerde overeenkomstregels overschrijven ontdubbelingsregels. Als een ontdubbelingsregel overeenkomende records identificeert, en een aangepaste overeenkomstregel is ingesteld om nooit te matchen met die records, dan worden deze twee records niet gematcht.
+1. Alle aangepaste gedefinieerde overeenkomstregels overschrijven ontdubbelingsregels. Als een ontdubbelingsregel overeenkomende records identificeert, en een aangepaste matchregel is ingesteld om nooit te matchen met die records, dan matchen deze twee records niet.
 
-1. Na [uitvoeren van het overeenkomstproces](#run-the-match-process), ziet u de ontdubbelingsstatistieken in de tegels met de belangrijkste metrische gegevens.
+1. Nadat u het [matchproces hebt uitgevoerd](#run-the-match-process), ziet u de ontdubbelingsstatistieken in de tegels met de belangrijkste statistieken.
 
 ### <a name="deduplication-output-as-an-entity"></a>Uitvoer van ontdubbeling als een entiteit
 
@@ -187,7 +180,10 @@ Ga naar **Gegevens** > **Verenigen** > **Afstemmen** en selecteer **Uitvoeren** 
 
 U vindt het resultaat van een geslaagde uitvoering, de geharmoniseerde klantprofielentiteit, op de pagina **Entiteiten**. Uw geharmoniseerde klantentiteit heeft de naam **Klanten** in de sectie **Profielen**. Bij de eerste geslaagde vergelijkingsuitvoering wordt de geharmoniseerde entiteit *Klant* gemaakt. Bij elke volgende vergelijking wordt die entiteit uitgebreid.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Nadat u het vergelijkingsproces hebt uitgevoerd, selecteert u de processtatus om het deelvenster **Taakdetails** te openen. Het geeft een overzicht van de verwerkingstijd, de laatste verwerkingsdatum, en alle fouten en waarschuwingen in verband met de taak. Selecteer **Details bekijken** om te zien welke entiteiten hebben deelgenomen aan het vergelijkingsproces, welke regels erop zijn toegepast en of de updates met succes zijn gepubliceerd.  
+> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Inzoompad om naar procesdetails te gaan vanuit de taakstatuskoppeling.":::
 
 ## <a name="review-and-validate-your-matches"></a>Uw afstemmingen controleren en valideren
 
@@ -225,46 +221,23 @@ U kunt de meeste vergelijkingsparameters opnieuw configureren en verfijnen.
 
 - **Een regel deactiveren** om een overeenkomstregel te behouden en deze uit te sluiten van het vergelijkingsproces.
 
-- **Dupliceer uw regels** als u een overeenkomstregel hebt gedefinieerd en u een soortgelijke regel met aanpassingen wilt maken. Selecteer vervolgens **Dupliceren**​.
+- **Dupliceer uw regels** als u een overeenkomstregel hebt gedefinieerd en u een sportgelijke regel met aanpassingen wilt maken. Selecteer vervolgens **Dupliceren**​.
 
 - **Verwijder een regel** door het symbool voor **Verwijderen** te selecteren.
 
-## <a name="advanced-options"></a>Geavanceerde opties
+## <a name="specify-custom-match-conditions"></a>Aangepaste overeenkomstvoorwaarden opgeven
 
-### <a name="add-exceptions-to-a-rule"></a>Uitzonderingen toevoegen aan een regel
-
-In de meeste gevallen leidt het matchen van entiteiten tot unieke gebruikersprofielen met samengevoegde gegevens. Om zeldzame gevallen van fout-positieven en fout-negatieven dynamisch aan te pakken, kunt u uitzonderingen definiëren voor een overeenkomstregel. Uitzonderingen worden toegepast na verwerking van de overeenkomstregels en voorkomen dat alle records die aan de uitzonderingscriteria voldoen, worden gematcht.
-
-Als uw overeenkomstregel bijvoorbeeld achternaam, stad en geboortedatum combineert, zou het systeem een tweeling met dezelfde achternaam die in dezelfde stad woont als hetzelfde profiel identificeren. U kunt een uitzondering specificeren die de profielen niet matcht als de voornaam in de entiteiten die u combineert niet gelijk zijn.
-
-1. Ga naar **Gegevens** > **Harmoniseren** > **Afstemmen** en selecteer **Bewerken** voor de regel waaraan u voorwaarden wilt toevoegen.
-
-1. Selecteer in het deelvenster **Regel bewerken**, **Uitzondering toevoegen**.
-
-1. Geef de uitzonderingscriteria op. 
-
-1. Selecteer **Gereed** om de regel op te slaan.
-
-### <a name="specify-custom-match-conditions"></a>Aangepaste overeenkomstvoorwaarden opgeven
-
-U kunt voorwaarden opgeven die de standaardovereenkomstlogica overschrijven. Er zijn vier opties beschikbaar: 
-
-|Optie  |Description |Voorbeeld  |
-|---------|---------|---------|
-|Altijd overeenkomen     | Definieert waarden die altijd overeenkomen.         |  *Mike* en *MikeR* komen altijd overeen.       |
-|Nooit overeenkomen     | Definieert waarden die nooit overeenkomen.        | *John* en *Jonathan* komen nooit overeen.        |
-|Aangepaste omleiding     | Definieert waarden die het systeem altijd moet negeren in de overeenkomstfase. |  Negeer de waarden *11111* en *Onbekend* tijdens de overeenkomstfase.        |
-|Aliastoewijzing    | Waarden definiëren die het systeem als dezelfde waarde moet beschouwen.         | Overweeg of *Joe* gelijk is aan *Joseph*.        |
+U kunt voorwaarden opgeven die bepaalde records altijd moeten overeenkomen of nooit moeten overeenkomen. Deze regels kunnen worden geüpload om het standaardproces voor overeenkomsten te overschrijven. Als in onze administratie bijvoorbeeld een Jan Pieters I en Jan Pieters II voorkomen, kan het systeem ze als één persoon matchen. Met aangepaste matchregels kunt u opgeven dat hun profielen naar verschillende mensen verwijzen. 
 
 1. Ga naar **Gegevens** > **Verenigen** > **Afstemmen** en selecteer **Aangepaste overeenkomst** in de sectie **Details van afgestemde records**.
 
-   :::image type="content" source="media/custom-match-create.png" alt-text="Schermopname van de sectie voor overeenkomstregels met het gemarkeerde besturingselement Aangepaste overeenkomst.":::
+  :::image type="content" source="media/custom-match-create.png" alt-text="Schermopname van de sectie voor overeenkomstregels met het gemarkeerde besturingselement Aangepaste overeenkomst.":::
 
-1. Ga in het deelvenster **Aangepast** naar het tabblad **Records**.
+1. Als u geen aangepaste overeenkomstregels hebt ingesteld, wordt een nieuw deelvenster **Aangepaste overeenkomst** met meer details weergegeven.
 
-1. Kies de aangepaste overeenkomstoptie uit de vervolgkeuzelijst **Aangepast type** en selecteer **Sjabloon downloaden**. Voor elke overeenkomstoptie hebt u een aparte sjabloon nodig.
+1. Selecteer **De sjabloon invullen** om een sjabloonbestand te krijgen dat kan specificeren welke records uit welke entiteiten altijd of nooit moeten overeenkomen. U moet de 'altijd overeenkomende' records en 'nooit overeenkomende' records afzonderlijk invullen in twee verschillende bestanden.
 
-1. Open het gedownloade sjabloonbestand en vul de details in. De sjabloon bevat velden om de entiteit en de primaire sleutelwaarden van de entiteit op te geven die in de aangepaste overeenkomst moeten worden gebruikt. Als u bijvoorbeeld wilt dat de primaire sleutel *12345* uit de entiteit *Verkoop* altijd wordt afgestemd met de primaire sleutel *34567* van de entiteit *Contactpersoon*, vult u de sjabloon in:
+1. De sjabloon bevat velden om de entiteit en de primaire sleutelwaarden van de entiteit op te geven die in de aangepaste overeenkomst moeten worden gebruikt. Als u bijvoorbeeld wilt dat de primaire sleutel *12345* uit de entiteit *Verkoop* altijd wordt afgestemd met de primaire sleutel *34567* van de entiteit *Contactpersoon*, vult u de sjabloon in:
     - Entiteit1: Verkoop
     - Entity1Key: 12345
     - Entiteit2: Contactpersoon
@@ -274,32 +247,26 @@ U kunt voorwaarden opgeven die de standaardovereenkomstlogica overschrijven. Er 
    
    Als u aangepaste overeenkomsten voor ontdubbeling op een entiteit wilt opgeven, geeft u dezelfde entiteit op als Entity1 en Entity2 en stelt u de verschillende primaire sleutelwaarden in.
 
-1. Sla het sjabloonbestand op nadat u alle overschrijvingen hebt toegevoegd.
+1. Na het toevoegen van alle overschrijvingen die u wilt toepassen, slaat u het sjabloonbestand op.
 
-1. Ga naar **Gegevens** > **Gegevensbronnen** en neem de sjabloonbestanden op als nieuwe entiteiten.
+1. Ga naar **Gegevens** > **Gegevensbronnen** en neem de sjabloonbestanden op als nieuwe entiteiten. Na inname kunt u ze gebruiken om de afstemmingsconfiguratie op te geven.
 
-1. Na het uploaden zijn de bestanden en entiteiten beschikbaar. Selecteer vervolgens de optie **Aangepaste overeenkomst** opnieuw. U ziet opties om de entiteiten op te geven die u wilt opnemen. Selecteer de vereiste entiteiten in het vervolgkeuzemenu en selecteer **Gereed**.
+1. Na het uploaden zijn de bestanden en entiteiten beschikbaar. Selecteer vervolgens de optie **Aangepaste overeenkomst** opnieuw. U ziet opties om de entiteiten op te geven die u wilt opnemen. Selecteer de vereiste entiteiten in het vervolgkeuzemenu.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Schermopname van het dialoogvenster om overschrijvingen te kiezen voor een aangepast afstemmingsscenario.":::
 
-1. Het toepassen van de aangepaste overeenkomst hangt af van de overeenkomstoptie die u wilt gebruiken. 
-
-   - Ga verder met de volgende stap voor **Altijd overeenkomen** of **Nooit overeenkomen**.
-   - Selecteer voor **Aangepaste omleiding** of **Aliastoewijzing** de optie **Bewerken** op een bestaande overeenkomstregel of maak een nieuwe regel. Kies in de vervolgkeuzelijst Normalisaties de optie **Aangepaste omleiding** of **Aliastoewijzing** en selecteer **Gereed**.
+1. Selecteer de entiteiten die u wilt gebruiken voor **Altijd overeenkomen** en **Nooit overeenkomen** en selecteer vervolgens **Gereed**.
 
 1. Selecteer **Opslaan** op de pagina **Afstemming** om de aangepaste afstemmingsconfiguratie toe te passen.
 
 1. Selecteer **Uitvoeren** op de pagina **Afstemming** om het afstemmingsproces te starten. Andere opgegeven overeenkomstregels worden overschreven door de aangepaste overeenkomstconfiguratie.
 
-#### <a name="known-issues"></a>Bekende problemen
-
-- Zelf-samenvoeging toont niet de genormaliseerde gegevens in deduplicatie-entiteiten. Het past de normalisatie echter intern toe tijdens deduplicatie. Het is ontworpen voor alle normalisaties. 
-- Als de instelling voor het semantische type wordt verwijderd in de **Toewijzing**-fase wanneer een overeenkomstregel Aliastoewijzing of Aangepaste omleiding gebruikt, wordt de normalisatie niet toegepast. Het gebeurt alleen als u het semantische type wist na het configureren van de normalisatie in de overeenkomstregel, omdat het semantische type onbekend zal zijn.
-
+> [!TIP]
+> Ga naar **Gegevens** > **Entiteiten** en bekijk de entiteit **ConflationMatchPair** om te bevestigen dat de overschrijvingen zijn toegepast.
 
 ## <a name="next-step"></a>Volgende stap
 
-Ga na het voltooien van het overeenkomstproces voor ten minste één vergelijkingspaar verder naar de stap [**Samenvoegen**](merge-entities.md).
+Na het voltooien van het afstemmingsproces voor ten minste één afstemmingspaar, kunt u mogelijke tegenstrijdigheden in uw gegevens oplossen door het onderwerp [**Samenvoegen**](merge-entities.md) door te nemen.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

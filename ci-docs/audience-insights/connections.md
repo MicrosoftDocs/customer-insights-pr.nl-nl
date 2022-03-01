@@ -5,16 +5,16 @@ ms.date: 04/09/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e78e18b75ee9797b5fc76486615992e301e4c650
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977731"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304966"
 ---
 # <a name="connections-preview-overview"></a>Overzicht van Verbindingen (preview)
 
@@ -47,7 +47,6 @@ Als u verbindingen wilt toevoegen, moet u over [beheerdersmachtigingen](permissi
 1. Geef in het deelvenster **Verbindingen instellen** de vereiste details op. 
    1. De **weergavenaam** en het type verbinding beschrijven een verbinding. We raden u aan een naam te kiezen die het doel en het doel van deze verbinding uitlegt.
    1. De exacte velden zijn afhankelijk van de service waarmee u verbinding maakt. U kunt meer te weten komen over de details van een specifiek verbindingstype in het artikel over de doelservice.
-   1. Als u uw [eigen Key Vault gebruikt](use-azure-key-vault.md) om geheimen op te slaan, activeert u **Key Vault gebruiken** en kiest u het geheim uit de lijst.
 
 1. Selecteer **Opslaan** om de verbinding te maken.
 
@@ -94,6 +93,3 @@ Losgekoppelde verrijkingen en exports worden inactief. U activeert deze opnieuw 
 
 1. Selecteer **Verwijderen** om de verwijdering te bevestigen.
 
-## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Verbindingen instellen met geheimen die worden beheerd door uw eigen Key Vault
-
-Sommige verbindingen hebben geheimen nodig, zoals API-sleutels of wachtwoorden. Sommige verbindingen ondersteunen geheimen die zijn opgeslagen in uw eigen Key Vault. Meer informatie over ondersteunde verbindingen en hoe u uw [eigen Key Vault kunt instellen voor doelgroepinzichten](use-azure-key-vault.md).

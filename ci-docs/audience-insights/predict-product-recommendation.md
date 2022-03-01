@@ -1,7 +1,7 @@
 ---
 title: Productaanbevelingen voorspellen
 description: Voorspel de producten die een klant waarschijnlijk zal kopen of gebruiken.
-ms.date: 01/13/2022
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967788"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494533"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Productaanbevelingen voorspellen (preview)
 
@@ -79,11 +79,11 @@ Als je deze functie wilt proberen, maar geen gegevens hebt om aan de onderstaand
 1. Stel het **Aantal producten** in dat u een klant wilt aanbevelen. Deze waarde is afhankelijk van de manier waarop uw leveringsmethode de gegevens vult. Als u drie producten kunt aanbevelen, stelt u deze waarde dienovereenkomstig in.
    
    >[!TIP]
-   > U kunt op elk moment **Concept opslaan** selecteren om de voorspelling als concept op te slaan. U vindt de conceptvoorspelling op het tabblad **Mijn voorspellingen**.
+   > U kunt op elk gewenst moment **Opslaan en sluiten** selecteren om de voorspelling als concept op te slaan. U vindt de conceptvoorspelling op het tabblad **Mijn voorspellingen**.
 
-1. Kies of u producten wilt opnemen die klanten onlangs hebben gekocht in het veld **Verwachte herhaalde aankopen**.
+1. U kunt kiezen voor de optie **Producten voorstellen die onlangs door klanten zijn aangeschaft**.
 
-1. Stel het **Terugkijkvenster** in. Deze instelling specificeert de tijdsbestek die het model in overweging neemt voordat het product opnieuw aan de gebruiker wordt aanbevolen. Geef bijvoorbeeld aan dat een klant om de twee jaar een laptop koopt. In dit tijdsbestek wordt de aankoopgeschiedenis van de afgelopen twee jaar bekeken en als ze een item vinden, wordt het uit de aanbevelingen gefilterd.
+1. Als u ervoor hebt gekozen *geen* aanbeveling te doen voor onlangs gekochte producten, stelt u het **Terugkijkvenster** in. Deze instelling specificeert de tijdsbestek die het model in overweging neemt voordat het product opnieuw aan de gebruiker wordt aanbevolen. Geef bijvoorbeeld aan dat een klant om de twee jaar een laptop koopt. In dit tijdsbestek wordt de aankoopgeschiedenis van de afgelopen twee jaar bekeken en als ze een item vinden, wordt het uit de aanbevelingen gefilterd.
 
 1. Selecteer **Volgende**
 

@@ -1,22 +1,20 @@
 ---
-title: Entiteiten en kenmerken toewijzen voor gegevensharmonisering
-description: Selecteer entiteiten, kenmerken, primaire sleutels en semantische typen om gegevens toe te wijzen aan het geharmoniseerde klantprofiel.
-ms.date: 10/18/2020
+title: Entiteiten toewijzen voor gegevensharmonisatie
+description: Wijs gegevens toe om geharmoniseerde klantprofielen te maken.
+ms.date: 09/25/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: adkuppa
 manager: shellyha
-searchScope:
-- ci-map
-ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673257"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405502"
 ---
 # <a name="map-entities-and-attributes"></a>Entiteiten en attributen toewijzen
 
@@ -37,14 +35,14 @@ Zie [Harmoniseren](data-unification.md) voor meer informatie over de algemene st
 3. Selecteer de entiteiten en kenmerken die u wilt gebruiken in de fasen voor *afstemmen* en *samenvoegen*. U kunt de vereiste kenmerken van een entiteit afzonderlijk selecteren of alle kenmerken van een entiteit opnemen door het selectievakje **Alle velden opnemen** in te schakelen op entiteitsniveau. We raden u aan ten minste twee entiteiten te selecteren om te profiteren van het proces voor gegevensharmonisatie.
 
    > [!div class="mx-imgBorder"]
-   > ![Voorbeeld van toevoegen van entiteiten.](media/data-manager-configure-map-add-entities-example.png "Voorbeeld van toevoegen van entiteiten")
+   > ![Voorbeeld van toevoegen van entiteiten](media/data-manager-configure-map-add-entities-example.png "Voorbeeld van toevoegen van entiteiten")
 
    In dit voorbeeld voegen we de entiteiten **eCommerceContacten** en **loyCustomers** toe. Door deze entiteiten te kiezen, kunt u inzicht krijgen in welke van de online zakelijke klanten leden van het loyaliteitsprogramma zijn.
    
    U kunt zoeken op trefwoorden in alle kenmerken en entiteiten om de vereiste kenmerken te selecteren die u wilt toewijzen.
    
      > [!div class="mx-imgBorder"]
-   > ![Voorbeeld van zoekvelden.](media/data-manager-configure-map-search-fields-example.png "Voorbeeld van zoekvelden")
+   > ![Voorbeeld van zoekvelden](media/data-manager-configure-map-search-fields-example.png "Voorbeeld van zoekvelden")
 
 4. Selecteer **Toepassen** om uw selecties te bevestigen.
 
@@ -57,7 +55,7 @@ Nadat u uw entiteiten hebt geselecteerd, bevat de pagina **Toewijzen** de gesele
 - **Semantische type van kenmerk**: categorieën van uw kenmerken, zoals e-mailadres of naam. Als u AI-modellen wilt gebruiken voor slimme voorspelling van semantiek, tijdsbesparing en verbeterde nauwkeurigheid, zet u **Intelligente toewijzing** op **AAN**. Met Intelligente toewijzing markeert u op AI gebaseerde semantische aanbevelingen in het veld **Type**. Als u dit instelt op **UIT**, ziet u onze normale aanbevelingen voor toewijzingen. U kunt elk semantisch type uit de beschikbare lijst met opties selecteren en de voorgestelde selectie negeren.
 
 > [!div class="mx-imgBorder"]
-> ![Kenmerktype en semantische voorspelling.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Kenmerktype en semantische voorspelling")
+> ![Kenmerktype en semantische voorspelling](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Kenmerktype en semantische voorspelling")
 
 Het toevoegen van een aangepast semantisch type is eveneens mogelijk. Selecteer het type veld voor een kenmerk en typ de aangepaste naam van het semantische type. Zo kunt u ook de kenmerktypen wijzigen die door het systeem zijn geïdentificeerd.
 
@@ -66,7 +64,7 @@ Alle kenmerken waarvoor een semantisch type automatisch wordt geïdentificeerd, 
 Kenmerken die niet automatisch worden toegewezen aan een semantisch type, worden gegroepeerd in de sectie **De gegevens in de niet-toegewezen velden definiëren**. Selecteer het semantische typeveld voor de niet-toegewezen kenmerken of voer uw aangepaste naam voor het kenmerktype in.
 
 > [!div class="mx-imgBorder"]
-> ![Primaire sleutel en kenmerktype.](media/data-manager-configure-map-add-attributes.png "Primaire sleutel en kenmerktype")
+> ![Primaire sleutel en kenmerktype](media/data-manager-configure-map-add-attributes.png "Primaire sleutel en kenmerktype")
 
 > [!NOTE]
 > Eén veld moet worden toegewezen aan het semantische type Person.FullName om de klantnaam in de klantenkaart te vullen. Anders verschijnen de klantenkaarten zonder naam. 
@@ -78,7 +76,7 @@ Kenmerken die niet automatisch worden toegewezen aan een semantisch type, worden
 2. Voeg in het deelvenster **Velden bewerken** kenmerken en entiteiten toe of verwijder deze. Gebruik de zoekopdracht of schuif om de kenmerken en entiteiten waarin u bent interessante te zoeken en te selecteren. U kunt een kenmerk of entiteit niet verwijderen als deze al zijn afgestemd.
 
    > [!div class="mx-imgBorder"]
-   > ![Kenmerken toevoegen of verwijderen.](media/configure-data-map-edit.png "Kenmerken toevoegen of verwijderen")
+   > ![Kenmerken toevoegen of verwijderen](media/configure-data-map-edit.png "Kenmerken toevoegen of verwijderen")
 
 3. Selecteer **Toepassen**.
 
@@ -96,7 +94,7 @@ Ga verder met de harmoniseringsstappen en zorg ervoor dat het kenmerk dat de afb
 
 Voor organisaties (preview) moet het kenmerktype worden toegewezen aan 'Organization.Name'
 > [!div class="mx-imgBorder"]
-> ![Primaire sleutel en kernmerktype B2B.](media/configure-data-map-edit-b2b.png "Primaire sleutel en kernmerktype B2B")
+> ![Primaire sleutel en kenmerktype B2B](media/configure-data-map-edit-b2b.png "Primaire sleutel en kenmerktype B2B")
 
 ## <a name="next-step"></a>Volgende stap
 
@@ -104,6 +102,3 @@ Als onderdeel van het proces voor gegevensharmonisatie gaat u naar de pagina **A
 
 > [!TIP]
 > Bekijk de volgende video: [Aan de slag: Een geharmoniseerd klantprofiel maken](https://youtu.be/oBfGEhucAxs).
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

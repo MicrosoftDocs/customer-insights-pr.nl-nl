@@ -1,7 +1,7 @@
 ---
 title: Verbinding maken met tabellen in Microsoft Dataverse
 description: Gegevens importeren uit een door Microsoft Dataverse beheerd data lake.
-ms.date: 12/06/2021
+ms.date: 07/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,25 +9,22 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: 436345d8932820eb4c517a9e9164b1377c1f62d3
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: f92d64723e6a4d2fcebdbb3758519d4bfd4aeaf4
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046419"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692568"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Verbinding maken met gegevens in een beheerd Microsoft Dataverse data lake
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-
-Dit artikel geeft informatie over hoe Dataverse-gebruikers snel verbinding kunnen maken met analytische entiteiten in een beheerd lake in Microsoft Dataverse. 
-
-> [!NOTE]
-> U moet een beheerder zijn in de Dataverse-organisatie om door te kunnen gaan en de lijst te kunnen bekijken van entiteiten die beschikbaar zijn in het beheerde lake.
+Dit artikel geeft informatie over hoe Dataverse-gebruikers snel verbinding kunnen maken met hun analytische entiteiten in een door Dataverse beheerde lake. U moet een beheerder zijn in de Dataverse-organisatie om verder te gaan en de lijst met entiteiten te bekijken die beschikbaar zijn in het beheerde lake.
 
 ## <a name="important-considerations"></a>Belangrijke aandachtspunten
 
-Gegevens die worden opgeslagen in online services, zoals Azure Data Lake Storage, kunnen worden opgeslagen op een andere locatie dan waar gegevens worden verwerkt of opgeslagen in Dynamics 365 Customer Insights. Door gegevens te importeren die zijn opgeslagen in online services, gaat u ermee akkoord dat gegevens kunnen worden overgedragen naar en opgeslagen met Dynamics 365 Customer Insights. [Meer informatie in het Microsoft Trust Centerr](https://www.microsoft.com/trust-center).
+Gegevens die worden opgeslagen in online services, zoals Azure Data Lake Storage, kunnen worden opgeslagen op een andere locatie dan waar gegevens worden verwerkt of opgeslagen in Dynamics 365 Customer Insights. Door gegevens te importeren die zijn opgeslagen in online services, gaat u ermee akkoord dat gegevens kunnen worden overgedragen naar en opgeslagen met Dynamics 365 Customer Insights.  [Meer informatie in het Microsoft Trust Center.](https://www.microsoft.com/trust-center)
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Verbinding maken met een door Dataverse beheerd lake
 
@@ -35,9 +32,12 @@ Gegevens die worden opgeslagen in online services, zoals Azure Data Lake Storage
 
 2. Selecteer **Gegevensbron toevoegen**.
 
-3. Selecteer **Microsoft Dataverse** en selecteer daarna **Volgende**.
+3. Selecteer **Verbinden met door Microsoft Dataverse beheerde lake** en selecteer **Volgende**.
 
-4. Voer een **naam** in voor de gegevensbron en selecteer **Volgende**. 
+4. Voer een **naam** in voor de gegevensbron en selecteer **Volgende**. Naamrichtlijnen: 
+   - Begin met een letter.
+   - Gebruik alleen letters en cijfers. Speciale tekens en spaties zijn niet toegestaan.
+   - Gebruik minimaal 3 en maximaal 64 tekens.
 
 5. Geef het **Serveradres** voor de Dataverse-organisatie op en selecteer **Aanmelden**.
 

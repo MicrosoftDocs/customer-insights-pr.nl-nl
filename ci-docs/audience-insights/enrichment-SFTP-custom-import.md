@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618676"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304644"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Klantprofielen verrijken met aangepaste gegevens (preview)
 
@@ -45,8 +45,6 @@ Om aangepaste SFTP-import te configureren, moet aan de volgende voorwaarden word
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Schermopname bij invoeren van gegevenslocatie.":::
 
-1. Selecteer **Volgende** en kies de klantgegevensset. Dit kunnen alle klantprofielen zijn of een segment.
-
 1. Selecteer **Volgende** en geef een naam op voor de verrijking en een naam voor de uitvoerentiteit. 
 
 1. Selecteer **Verrijking opslaan** na het bekijken van uw keuzes.
@@ -66,7 +64,7 @@ U moet een beheerder zijn om verbindingen te kunnen configureren. Selecteer **Ve
 1. Nadat de verificatie is voltooid, kan de verbinding worden opgeslagen door **Opslaan** te selecteren.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian-verbindingsconfiguratiepagina.](media/enrichment-SFTP-connection.png "Experian-verbindingsconfiguratiepagina")
+   > ![Experian-verbindingsconfiguratiepagina](media/enrichment-SFTP-connection.png "Experian-verbindingsconfiguratiepagina")
 
 
 ## <a name="defining-field-mappings"></a>Veldtoewijzingen definiëren 
@@ -125,6 +123,6 @@ U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrij
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md) en [meetcriteria](measures.md), en [exporteer de gegevens](export-destinations.md) om gepersonaliseerde ervaringen aan uw klanten te leveren.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

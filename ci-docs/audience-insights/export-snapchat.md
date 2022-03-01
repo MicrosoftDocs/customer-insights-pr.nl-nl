@@ -1,7 +1,7 @@
 ---
 title: Customer Insights-gegevens exporteren naar Snapchat
 description: Leer hoe u de verbinding configureert en exporteert naar Snapchat.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618654"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760505"
 ---
-# <a name="export-segments-to-snapchat-preview"></a>Segmenten exporteren naar Snapchat (preview)
+# <a name="export-segment-lists-to-snapchat-preview"></a>Segmentlijsten exporteren naar Snapchat (preview)
 
 Exporteer segmenten van geharmoniseerde klantprofielen naar Snapchat en gebruik deze voor reclame. 
 
@@ -29,7 +29,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Snapchat en gebruik 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
 - Exporteren naar Snapchat is beperkt tot segmenten.
-- Het exporteren van tot 1 miljoen klantprofielen naar Snapchat kan tot 15 minuten duren. 
+- Het exporteren van maximaal 1 miljoen profielen naar Snapchat kan tot 15 minuten duren. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Verbinding instellen met Snapchat
 
@@ -63,7 +63,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Voer de [**Snapchat-doelgroep-id**](https://businesshelp.snapchat.com/s/article/custom-audiences) in.
 
-1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Deze is vereist voor het exporteren van segmenten naar Snapchat.
+1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. Deze is vereist voor het exporteren van segmenten naar Snapchat.
 
 1. Selecteer de segmenten die u wilt exporteren. 
 

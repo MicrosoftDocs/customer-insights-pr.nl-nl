@@ -1,5 +1,5 @@
 ---
-title: Gevoelsanalyse voor klantfeedback
+title: Semantische analyse voor feedback van klanten
 description: Leer hoe u een gevoelsanalysemodel op klantfeedback kunt gebruiken in Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
-ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
+ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8008759"
+ms.lasthandoff: 01/10/2022
+ms.locfileid: "7951077"
 ---
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analyseer gevoel in klantfeedback (preview)
 
@@ -38,7 +38,7 @@ Om ervoor te zorgen dat u de resultaten van de modellen kunt vertrouwen, geven w
 
 We gebruiken twee **Modellen voor verwerking van natuurlijke taal (Natural Language Processing, NLP)**: het eerste kent aan elke feedbackopmerking een gevoelsscore toe. Het tweede model legt een relatie met alle toepasselijke bedrijfsaspecten. De modellen zijn getraind op openbare gegevens uit bronnen uit sociale media, de detailhandel, restaurants, consumentenproducten en de auto-industrie.    
   
-Vooraf gedefinieerde bedrijfsaspecten voor het model om te relateren aan feedbackgegevens zijn onder meer:
+- Vooraf gedefinieerde bedrijfsaspecten voor het model om te relateren aan feedbackgegevens zijn onder meer:
 -   Accountbeheer
 -   Uitchecken en betaling
 -   Klantenondersteuning
@@ -60,7 +60,7 @@ Vooraf gedefinieerde bedrijfsaspecten voor het model om te relateren aan feedbac
 
 Gevoelsanalyse is gebaseerd op tekstfeedbackgegevens die door het [proces voor gegevensharmonisatie](data-unification.md). We raden u sterk aan om vooraf [uw feedbackgegevensentiteiten te configureren als activiteitsentiteiten van het semantische type](map-entities.md#select-primary-key-and-semantic-type-for-attributes) (Feedback-type). 
 
-Om een gevoelsanalysemodel te configureren, hebt u minimaal [Inzender-machtigingen](permissions.md) nodig.
+Om een gevoelsanalysemodel te configureren, hebt u minimaal [Inzender-machtigingen ](permissions.md) nodig.
 
 Customer Insights kan tot 10 miljoen feedbackrecords verwerken voor een enkele modelrun. Het model kan feedbackopmerkingen tot 128 woorden analyseren. Als een feedbackopmerking langer is, houdt de analyse alleen rekening met de eerste 128 woorden.
 

@@ -4,17 +4,17 @@ metadata:
   author: m-hartmann
   description: Vind relevante artikelen om te beginnen met Help-inhoud.
   ms.author: mhart
-  ms.date: 03/02/2022
+  ms.date: 10/29/2020
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e154b37f57bb2765f48a9f6b38f86dffcb05f403
-  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
   ms.translationtype: HT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 02/10/2022
-  ms.locfileid: "8107193"
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4405518"
 title: Dynamics 365 Customer Insights-documentatie
-summary: Vind nuttige hulpbronnen om aan de slag te gaan en meer te weten te komen over de functies en mogelijkheden van Customer Insights.
+summary: Vind nuttige bronnen om aan de slag te gaan en lees over de functies en mogelijkheden van Customer Insights.
 landingContent:
 - title: Kennismaken met Customer Insights
   linkLists:
@@ -23,41 +23,19 @@ landingContent:
     - text: " Overzicht van Customer Insights"
       url: overview.md
     - text: Releaseplannen
-      url: /dynamics365/release-plans/
-    - text: De CDP ontdekken
-      url: https://dynamics.microsoft.com/ai/customer-insights/
-  - linkListType: learn
-    links:
-    - text: Leertraject voor Customer Insights
-      url: /learn/paths/build-customer-insights/
-- title: Aan de slag met Customer Insights
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Toegang tot uw omgeving
+      url: https://home.ci.ai.dynamics.com/
+- title: Aan de slag met doelgroepinzichten
   linkLists:
   - linkListType: get-started
     links:
     - text: Aanmelden voor een proefversie
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Nieuwe functies in doelgroepinzichten
+    - text: Wat is er nieuw
       url: audience-insights/whats-new-audience-insights.md
-    - text: Snelstartgids
-      url: audience-insights/get-started.md
-  - linkListType: learn
-    links:
-    - text: Aan de slag
-      url: /learn/modules/get-started-customer-data-platform/
-- title: Doelgroepinzichten beheren
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Het systeem configureren
-      url: audience-insights/system.md
-    - text: Gebruikersmachtigingen definiëren
-      url: audience-insights/permissions.md
-    - text: Meerdere omgevingen beheren
-      url: audience-insights/manage-environments.md
-  - linkListType: learn
-    links:
-    - text: Customer Insights beheren
-      url: /learn/modules/administer-customer-data-platform/
+    - text: Documentatie voor doelgroepinzichten
+      url: audience-insights/index.yml
 - title: Contact opnemen
   linkLists:
   - linkListType: overview
@@ -68,16 +46,16 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Een probleem melden
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Gegevens delen tussen mogelijkheden
+- title: Zelfstudie over doelgroepinzichten
   linkLists:
-  - linkListType: how-to-guide
+  - linkListType: tutorial
     links:
-    - text: Een koppeling maken tussen mogelijkheden
-      url: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - text: Segmenten maken voor gebruik in rapporten
-      url: engagement-insights/integrate-audience-insights-segments.md
-    - text: Profieleigenschappen gebruiken voor interactieve analyse
-      url: engagement-insights/curate-dimensions.md
+    - text: Een nieuwe omgeving maken
+      url: audience-insights/home.md
+    - text: Een geharmoniseerd klantprofiel maken
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Werken met de app
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
 - title: Gegevens van doelgroepinzichten exporteren
   linkLists:
   - linkListType: how-to-guide
@@ -88,6 +66,16 @@ landingContent:
       url: audience-insights/customer-card-add-in.md
     - text: Power BI-connector
       url: audience-insights/export-power-bi.md
+- title: Doelgroepinzichten beheren
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Het systeem configureren
+      url: audience-insights/system.md
+    - text: Gebruikersmachtigingen definiëren
+      url: audience-insights/permissions.md
+    - text: Meerdere omgevingen beheren
+      url: audience-insights/manage-environments.md
 - title: Over interactie-inzichten (preview)
   linkLists:
   - linkListType: overview
