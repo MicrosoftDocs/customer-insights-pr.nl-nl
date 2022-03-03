@@ -1,20 +1,32 @@
 ---
 title: Relaties tussen entiteiten en entiteitspaden
 description: Maak en beheer relaties tussen entiteiten uit meerdere gegevensbronnen.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+searchScope:
+- ci-semantic-mapping
+- ci-entities
+- ci-relationships
+- ci-activities
+- ci-activities-wizard
+- ci-measures
+- ci-segments
+- ci-segment-builder
+- ci-measure-builder
+- ci-measure-template
+- ci-permissions
+- customerInsights
+ms.openlocfilehash: db8822aa9e89afb9dc16428af6ca202de789ba1c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171158"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355699"
 ---
 # <a name="relationships-between-entities"></a>Relaties tussen entiteiten
 
@@ -68,6 +80,20 @@ Relatie bestaat uit een *bronentiteit* met de refererende sleutel en een *doelen
 
 4. Selecteer **Opslaan** om de aangepaste relatie te maken.
 
+## <a name="set-up-account-hierarchies"></a>Accounthiërarchieën instellen
+
+Omgevingen die zijn geconfigureerd om zakelijke accounts als primaire doelgroep te gebruiken, kunnen accounthiërarchieën configureren voor gerelateerde zakelijke accounts. Bijvoorbeeld een bedrijf met aparte business units. 
+
+Organisaties maken accounthiërarchieën om accounts en hun relaties beter met elkaar te kunnen beheren. De mogelijkheid doelgroepinzichten ondersteunt hiërarchieën van bovenliggende en onderliggende accounts die al bestaan in opgenomen klantgegevens. Bijvoorbeeld accounts uit Dynamics 365 Sales. Deze hiërarchieën kunnen worden geconfigureerd op de pagina **Relaties** in doelgroepinzichten, op het tabblad accounthiërarchie.
+
+1. Ga naar **Gegevens** > **Relaties**.
+1. Selecteer het tabblad **Accounthiërarchie**.
+1. Selecteer **Nieuwe accounthiërarchie**. 
+1. Geef in het deelvenster **Accounthiërarchie** een naam op voor de hiërarchie. Het systeem maakt een naam voor de uitvoerentiteit. U kunt de naam van de uitvoerentiteit wijzigen.
+1. Selecteer de entiteit die uw accounthiërarchie bevat. Het bevindt zich meestal in dezelfde entiteit die de accounts bevat.
+1. Selecteer de **Account-id** en **Bovenliggende account-id** van de geselecteerde entiteit 
+1. Selecteer **Opslaan** om de instellingen toe te passen en de accounthiërarchie te voltooien.
+
 ## <a name="view-relationships"></a>Relaties weergeven
 
 Op de pagina Relaties worden alle relaties vermeld die zijn gemaakt. Elke rij vertegenwoordigt een relatie, die ook details bevat over de bronentiteit, de doelentiteit en de kardinaliteit. 
@@ -82,7 +108,7 @@ Deze pagina biedt een reeks opties voor bestaande en nieuwe relaties:
 
 ### <a name="explore-the-relationship-visualizer"></a>De relatievisualizer verkennen
 
-De relatievisualizer geeft een netwerkdiagram van de bestaande relaties tussen verbonden entiteiten en hun kardinaliteit weer.
+De relatievisualizer geeft een netwerkdiagram van de bestaande relaties tussen verbonden entiteiten en hun kardinaliteit weer. Het visualiseert ook het relatiepad.
 
 Om de weergave aan te passen, kunt u de positie van de vakken wijzigen door ze op het canvas te slepen.
 
@@ -92,6 +118,56 @@ Beschikbare opties:
 - **Exporteren als afbeelding**: sla de huidige weergave op als een afbeeldingsbestand.
 - **Wijzigen naar horizontale/verticale indeling**: wijzig de uitlijning van de entiteiten en relaties.
 - **Bewerken**: werk eigenschappen van aangepaste relaties bij in het bewerkingsvenster en sla de wijzigingen op.
+
+## <a name="relationship-paths"></a>Relatiepaden
+
+Een relatiepad beschrijft de entiteiten die zijn verbonden met relaties tussen een bron- en een doelentiteit. Het wordt gebruikt bij het maken van een segment of een meting die andere entiteiten dan de geharmoniseerde profielentiteit omvat en er zijn meerdere opties om de geharmoniseerde profielentiteit te bereiken. 
+
+Een relatiepad informeert het systeem over welke relaties toegang moeten krijgen tot de uniforme profielentiteit. Verschillende relatiepaden kunnen verschillende resultaten opleveren.
+
+Zo heeft de entiteit *eCommerce_eCommercePurchases* bijvoorbeeld de volgende relaties met de geharmoniseerde profielentiteit *Klant*:
+
+- eCommerce_eCommercePurchases > Klant
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klant
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klant 
+
+Een relatiepad bepaalt welke entiteiten u kunt gebruiken bij het maken van regels voor metingen of segmenten. Het kiezen van de optie met het langste relatiepad zal waarschijnlijk minder resultaten opleveren omdat de overeenkomende records deel moeten uitmaken van alle entiteiten. In dit voorbeeld moet een klant goederen hebben gekocht via e-commerce (eCommerce_eCommercePurchases) bij een verkooppunt (POS_posPurchases) en deelnemen aan ons loyaliteitsprogramma (loyaltyScheme_loyCustomers). Als u de eerste optie kiest, krijgt u waarschijnlijk meer resultaten omdat klanten maar in één extra entiteit hoeven te bestaan.
+
+### <a name="direct-relationship"></a>Directe relatie
+
+Een relatie wordt geclassificeerd als een **directe relatie** wanneer een bronentiteit een relatie heeft met een doelentiteit met slechts één relatie.
+
+Als bijvoorbeeld een activiteitsentiteit genaamd *eCommerce_eCommercePurchases* verbinding maakt met een doelentiteit *eCommerce_eCommerceContacts* alleen via *ContactId*, is het een directe relatie.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Bronentiteit maakt rechtstreeks verbinding met doelentiteit.":::
+
+#### <a name="multi-path-relationship"></a>Relatie met meerdere paden
+
+Een **relatie met meerdere paden** is een speciaal type directe relatie die een bronentiteit verbindt met meer dan één doelentiteit.
+
+Als bijvoorbeeld een activiteitsentiteit genaamd *eCommerce_eCommercePurchase* een relatie heeft met twee doelentiteiten, zowel *eCommerce_eCommerceContacts* en *loyaltyScheme_loyCustomers*, is het een relatie met meerdere paden.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Bronentiteit maakt rechtstreeks verbinding met meer dan één doelentiteit via een relatie met meerdere hops.":::
+
+### <a name="indirect-relationship"></a>Indirecte relatie
+
+Een relatie wordt geclassificeerd als een **indirecte relatie** wanneer een bronentiteit een relatie heeft met een of meer extra entiteiten voordat het een relatie heeft met een doelentiteit.
+
+#### <a name="multi-hop-relationship"></a>Relatie met meerdere hops
+
+Een *relatie met meerdere hops* is een *indirecte relatie* waarmee u een bronentiteit kunt verbinden met een doelentiteit via een of meer andere intermediaire entiteiten.
+
+Als bijvoorbeeld een activiteitsentiteit genaamd *eCommerce_eCommercePurchasesWest* verbinding maakt met een tussenliggende entiteit genaamd *eCommerce_eCommercePurchasesEast* en vervolgens verbinding maakt met een doelentiteit genaamd *eCommerce_eCommerceContacts*, is het een relatie met meerdere hops.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Bronentiteit maakt rechtstreeks verbinding met een doelentiteit met een tussenliggende entiteit.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Relatie met meerdere hops, meerdere paden
+
+Relaties met meerdere hops en meerdere paden kunnen samen worden gebruikt om **relaties met meerdere hops, meerdere paden** te maken. Dit speciale type combineert de functies van **relaties met meerdere hops** en **meerdere paden**. Hiermee kunt u verbinding maken met meer dan één doelentiteit terwijl u tussenliggende entiteiten gebruikt.
+
+Als bijvoorbeeld een activiteitsentiteit genaamd *eCommerce_eCommercePurchasesWest* verbinding maakt met een tussenliggende entiteit genaamd *eCommerce_eCommercePurchasesEast* en vervolgens verbinding maakt met twee doelentiteiten genaamd *eCommerce_eCommerceContacts* en *loyaltyScheme_loyCustomers* is het een relatie met meerdere hops en meerdere paden.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Bronentiteit maakt rechtstreeks verbinding met de één doelentiteit en maakt verbinding met een andere doelentiteit via een tussenliggende entiteit.":::
 
 ## <a name="manage-existing-relationships"></a>Bestaande relaties beheren 
 
@@ -105,6 +181,6 @@ Selecteer een relatie en kies een van de volgende opties:
 
 ## <a name="next-step"></a>Volgende stap
 
-Systeem- en aangepaste relaties worden gebruikt om [segmenten te maken](segments.md) op basis van meerdere gegevensbronnen die niet langer geïsoleerd zijn.
+Systeem- en aangepaste relaties worden gebruikt om [segmenten](segments.md) en [metingen](measures.md) te maken gebaseerd op meerdere gegevensbronnen die zich niet langer in silo's bevinden.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,15 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 09/30/2021
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: dc1ea94ad55886c605d27caea031e00964f6f7c8
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645485"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350217"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Registreren voor een gratis proefversie van Dynamics 365 Customer Insights
 
@@ -32,8 +31,6 @@ Het laden van de proefversie duurt enkele ogenblikken. Vervolgens kunt u aan de 
 
 Uw proefomgeving bevat dezelfde functies als de betaalde versie. De volgende koppelingen helpen u met enkele van de belangrijkste functies.
 
-### <a name="audience-insights"></a>Doelgroepinzichten
-
 - [Snelstartgids voor doelgroepinzichten.](audience-insights/get-started.md)
 - [Meer gebruikers toevoegen en machtigingen toewijzen.](audience-insights/permissions.md)
 - [Uw gegevensbronnen opnemen](audience-insights/data-sources.md) en deze het [proces voor gegevensharmonisatie](audience-insights/data-unification.md) laten doorlopen om [uniforme klantprofielen](audience-insights/customer-profiles.md) te krijgen.
@@ -41,16 +38,7 @@ Uw proefomgeving bevat dezelfde functies als de betaalde versie. De volgende kop
 - [Segmenten](audience-insights/segments.md) maken om klanten te groeperen en [meetcriteria](audience-insights/measures.md) maken om KPI's te beoordelen.
 - Stel [verbindingen](audience-insights/connections.md) en [exports](audience-insights/export-destinations.md) in om subsets van uw gegevens in andere toepassingen te verwerken.
 
-### <a name="engagement-insights"></a>Betrokkenheidsinzichten
-
-- [Snelstartgids voor betrokkenheidsinzichten.](engagement-insights/get-started.md)
-- [Maak een werkruimte](engagement-insights/create-workspace.md) en voeg leden toe.
-- [Voeg code toe aan uw website](engagement-insights/instrument-website.md) of [mobiele app](engagement-insights/developer-resources.md#capture-events-from-mobile-apps).
-- Bekijk een [realtime rapport](engagement-insights/view-reports.md) of creëer [aangepaste rapporten](engagement-insights/custom-reports.md).
-- [Maak verfijnde gebeurtenissen](engagement-insights/refined-events.md) voor export.
-- [Exporteer de gegevens](engagement-insights/export-events.md) naar Azure Data Lake Storage.
-
-## <a name="additional-resources"></a>Aanvullende bronnen
+## <a name="additional-resources"></a>Extra resources
 
 - [Trainingen bekijken op Microsoft Learn](/learn/browse/?filter-products=dynamics-dynamics-cust-insights)
 - [Veelgestelde vragen over proefabonnement](trial-faq.md)

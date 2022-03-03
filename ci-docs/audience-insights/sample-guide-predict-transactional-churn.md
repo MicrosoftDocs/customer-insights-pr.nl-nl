@@ -3,26 +3,25 @@ title: Voorbeeldhandleiding transactieverloop voorspellen
 description: Gebruik deze voorbeeldhandleiding om het standaard voorspellingsmodel voor transactieverloop uit te proberen.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029439"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354595"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Voorbeeldhandleiding transactieverloop voorspellen (preview)
+# <a name="transactional-churn-prediction-sample-guide"></a>Voorbeeldhandleiding transactieverloop voorspellen
 
-We laten u een compleet voorbeeld van transactieverloop-voorspelling in Customer Insights zien aan de hand van de onderstaande voorbeeldgegevens. Alle gegevens die in deze handleiding worden gebruikt, zijn geen echte klantgegevens en maken deel uit van de Contoso-gegevensset die te vinden is in de omgeving *Demo* binnen uw Customer Insights-abonnement.
+We laten u een compleet voorbeeld van transactieverloop-voorspelling in Customer Insights zien aan de hand van de onderstaande voorbeeldgegevens. Alle gegevens die in deze handleiding worden gebruikt, zijn geen echte klantgegevens en maken deel uit van de Contoso gegevensset in de *Demo*-omgeving binnen uw Customer Insights-abonnement.
 
 ## <a name="scenario"></a>Scenario
 
-Contoso is een bedrijf dat koffie en koffiemachines van hoge kwaliteit produceert, die ze verkopen via hun Contoso Coffee-website. Hun doel is te weten te komen welke klanten die hun producten normaal gesproken regelmatig kopen, in de komende 60 dagen geen actieve klant meer zijn. Weten welke van hun klanten **waarschijnlijk zal verlopen**, kan hen helpen zich marketinginspanningen te besparen door zich te concentreren op het behouden van hun klanten.
+Contoso is een bedrijf dat koffie- en koffiemachines van hoge kwaliteit produceert, die ze verkopen via hun Contoso Coffee-website. Hun doel is te weten te komen welke klanten die hun producten normaal gesproken regelmatig kopen, in de komende 60 dagen geen actieve klant meer zijn. Weten welke van hun klanten **waarschijnlijk zal verlopen**, kan hen helpen zich marketinginspanningen te besparen door zich te concentreren op het behouden van hun klanten.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -31,7 +30,7 @@ Contoso is een bedrijf dat koffie en koffiemachines van hoge kwaliteit produceer
 
 ## <a name="task-1---ingest-data"></a>Taak 1 - Gegevens opnemen
 
-Lees vooral de artikelen [over gegevensopname](data-sources.md) en [gegevensbronnen importeren met Power Query-connectors](connect-power-query.md). Bij de volgende informatie wordt ervan uitgegaan dat u bekend bent met opnemen van gegevens in het algemeen. 
+Lees de artikelen [over gegevensopname](data-sources.md) en [gegevensbronnen importeren met behulp van Power Query-connectoren](connect-power-query.md) in het bijzonder. Bij de volgende informatie wordt ervan uitgegaan dat u bekend bent met opnemen van gegevens in het algemeen. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Klantgegevens opnemen van het e-commerceplatform
 
@@ -149,7 +148,7 @@ Na het opnemen van de gegevens beginnen we nu met het proces **Toewijzen, Matche
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Taak 3 - Configureer de voorspelling van het transactieverloop
 
-Met de geharmoniseerde klantprofielen op hun plaats, kunnen we nu het abonnementsverloop voorspellen. Zie het artikel [Abonnementsverloop voorspellen (preview)](predict-subscription-churn.md) voor gedetailleerde stappen. 
+Met de geharmoniseerde klantprofielen op hun plaats, kunnen we nu het abonnementsverloop voorspellen. Zie het artikel [Voorspelling van abonnementsverloop](predict-subscription-churn.md) voor gedetailleerde stappen. 
 
 1. Ga naar **Intelligence** > **Ontdekken** en selecteer het **Klantverloopmodel**.
 

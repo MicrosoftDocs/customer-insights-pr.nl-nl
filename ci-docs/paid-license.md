@@ -1,25 +1,24 @@
 ---
 title: Ga aan de slag met een betaalde licentie van Dynamics 365 Customer Insights
 author: m-hartmann
-description: Maak kennis met de eerste gebruikservaring in Dynamics 365 Customer Insights en verken de mogelijkheden ervan.
+description: Maak uzelf vertrouwd met de eerste gebruikservaring in Dynamics 365 Customer Insights en verken de mogelijkheden ervan.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645677"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350125"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Ga aan de slag na aankoop van Customer Insights
 
 In dit artikel wordt uitgelegd hoe u uw eerste stappen zet in Dynamics 365 Customer Insights nadat uw organisatie een abonnement heeft aangeschaft. Als u Customer Insights wilt kopen, vindt u onze contactmogelijkheden op de [Dynamics 365 Customer Insights-website](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Na aanschaf van een abonnementslicentie voor Customer Insights, ontvangt de algemene beheerder van de Microsoft 365-tenant een e-mail met een uitnodiging om de omgeving te maken. 
+Na aanschaf van een abonnementslicentie voor Customer Insights, ontvangt de globale beheerder van de Microsoft 365-tenant een e-mail die hen uitnodigt om de omgeving te maken. 
 
 Customer Insights wordt gelicentieerd per tenant en bevat meerdere mogelijkheden. U kunt meer capaciteit en licenties aanschaffen om het standaardquotum te verhogen. 
 - [Prijsoverzicht](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -40,10 +39,7 @@ De eerste gebruikservaring helpt u bij het kiezen van uw eerste focus met Custom
 
 ## <a name="create-your-own-environment"></a>Uw eigen omgeving maken
 
-Na uw eerste aanmelding ziet u een omgeving met voorbeeldgegevens. U kunt die gegevens gebruiken om functies te verkennen en vertrouwd te raken met de app. Om eigen data te gebruiken, moet u een omgeving creëren in de mogelijkheid waarin u wilt werken.
-
-- [Een omgeving maken in doelgroepinzichten.](audience-insights/get-started-paid.md)
-- [Een omgeving maken in betrokkenheidsinzichten.](engagement-insights/create-new-environment.md) 
+Na uw eerste aanmelding ziet u een omgeving met voorbeeldgegevens. U kunt die gegevens gebruiken om functies te verkennen en vertrouwd te raken met de app. Als u uw eigen gegevens wilt gebruiken, moet u [een omgeving maken](audience-insights/get-started-paid.md).
 
 
 

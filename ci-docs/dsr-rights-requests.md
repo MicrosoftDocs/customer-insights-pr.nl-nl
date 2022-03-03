@@ -3,18 +3,17 @@ title: Rechten van betrokkenen (DSR) onder AVG | Microsoft Docs
 description: Reageren op verzoeken van betrokkenen om de mogelijkheden van Dynamics 365 Customer Insights doelgroepinzichten.
 ms.date: 08/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: e095eb4f8e194f314d7d6baf6fa6a7a319319d2a
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483656"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350263"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Rechten van betrokkenen (DSR) onder AVG
 
@@ -79,71 +78,78 @@ Een tenantbeheerder kan deze stappen volgen om gegevens te exporteren:
 2. Erken de bevestiging om de gegevens voor de gevraagde gebruiker te exporteren.
 3. Ontvang de geëxporteerde gegevens via het e-mailadres van de tenantbeheerder.
 
-## <a name="engagement-insights"></a>Betrokkenheidsinzichten
+## <a name="consent-management-preview"></a>Toestemmingsbeheer (preview)
 
-### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Gebeurtenisgegevens met identificeerbare informatie van de eindgebruiker verwijderen en exporteren
+De functie voor toestemmingsbeheer verzamelt niet rechtstreeks gebruikersgegevens. De functie importeert en verwerkt alleen toestemmingsgegevens die door gebruikers in andere toepassingen worden verstrekt.
 
-In de volgende secties wordt beschreven hoe u gebeurtenisgegevens verwijdert en exporteert die mogelijk persoonlijke gegevens bevatten.
+Als u toestemmingsgegevens over specifieke gebruikers wilt verwijderen, verwijdert u deze uit de gegevensbronnen die zijn opgenomen in de toestemmingsbeheerfunctie. Nadat de gegevensbron is vernieuwd, worden de verwijderde gegevens ook in Toestemmingscentrum verwijderd. Toepassingen die de toestemmingsentiteit gebruiken, verwijderen ook gegevens die op de bron zijn verwijderd na het [vernieuwen](audience-insights/system.md#refresh-processes). We raden u aan om gegevensbronnen snel te vernieuwen na de reactie op een verzoek van een betrokkene om de gegevens van de gebruiker uit alle andere processen en toepassingen te verwijderen.
 
-Gegevens verwijderen of exporteren:
 
-1. Tag gebeurteniseigenschappen die gegevens bevatten met persoonlijke informatie.
-2. Verwijder of exporteer gegevens die zijn gekoppeld aan specifieke waarden (bijvoorbeeld: een opgegeven gebruikers-id).
+<!-- ## Engagement insights (preview)
 
-#### <a name="tag-and-update-event-properties"></a>Gebeurteniseigenschappen taggen en bijwerken
+### Deleting and exporting event data containing end user identifiable information
 
-Persoonlijke gegevens krijgen een tag op het niveau van een gebeurteniseigenschap. Tag eerst de eigenschappen die u wilt meenemen voor verwijdering of export.
+The following sections describe how to delete and export event data that might contain personal data.
 
-Volg deze stappen om een evenementeigenschap te taggen alsof deze persoonlijke informatie bevat:
+To delete or export data:
 
-1. Open de werkruimte met de gebeurtenis.
+1. Tag event properties that contain data with personal information.
+2. Delete or export data associated with specific values (for example: a specified user ID).
 
-1. Ga naar **Gegevens** > **Gebeurtenissen** om de lijst met gebeurtenissen in de geselecteerde werkruimte te zien.
+#### Tag and update event properties
+
+Personal data is tagged on an event property level. First, tag the properties being considered for deletion or export.
+
+To tag an event property as containing personal information, follow these steps:
+
+1. Open the workspace containing the event.
+
+1. Go to **Data** > **Events** to see the list of events in the selected workspace.
   
-1. Selecteer de gebeurtenis die u wilt taggen.
+1. Select the event you want to tag.
 
-1. Selecteer **Eigenschappen bewerken** om het deelvenster te openen waarop alle eigenschappen van de geselecteerde gebeurtenis worden vermeld.
+1. Select **Edit properties** to open the pane listing all properties of the selected event.
      
-1. Selecteer **...** en kies **Bewerken** om het dialoogvenster **Eigenschap bijwerken** te openen.
+1. Select **...** and then choose **Edit** to reach the **Update property** dialog.
 
-   ![Gebeurtenis bewerken.](engagement-insights/media/edit-event.png "Gebeurtenis bewerken")
+   ![Edit event.](engagement-insights/media/edit-event.png "Edit event")
 
-1. Kies in het venster **Eigenschap bijwerken** het beletselteken **...** in de rechterbovenhoek en kies het vak **Bevat EUII**. Kies **Bijwerken** om uw wijzigingen op te slaan.
+1. In the **Update Property** window, choose **...** in the upper right corner, and then choose the **Contains EUII** box. Choose **Update** to save your changes.
 
-   ![Sla uw wijzigingen op.](engagement-insights/media/update-property.png "Uw wijzigingen opslaan")
+   ![Save your changes.](engagement-insights/media/update-property.png "Save your changes")
 
    > [!NOTE]
-   > Elke keer dat het gebeurtenisschema verandert of u een nieuwe gebeurtenis maakt, is het raadzaam de bijbehorende gebeurteniseigenschappen te evalueren en indien nodig te taggen of de tag te verwijderen alsof ze persoonlijke gegevens bevatten.
+   > Every time the event schema changes or you create a new event, it's recommended that you evaluate the associated event properties and tag or untag them as containing personal data, if necessary.
 
-#### <a name="delete-or-export-tagged-event-data"></a>De gebeurtenisgegevens met tag verwijderen of exporteren
+#### Delete or export tagged event data
 
-Als alle gebeurteniseigenschappen op de juiste manier van een tag zijn voorzien, zoals beschreven in de vorige stap, kan een omgevingsbeheerder een verwijderingsverzoek indienen voor de gebeurtenisgegevens met tag.
+If all event properties have been tagged appropriately as described in the previous step, an environment admin can issue a deletion request against the tagged event data.
 
-EUII-verwijderings- of exportverzoeken beheren
+To manage EUII deletion or export requests
 
-1. Ga naar **Beheer** > **Omgeving** > **Instellingen**.
+1. Go to **Admin** > **Environment** > **Settings**.
 
-1. Selecteer in de sectie **Identificeerbare informatie van de eindgebruiker (EUII) beheren** de optie **EUII beheren**.
+1. In the **Manage end user identifiable information (EUII)** section, select **Manage EUII**.
 
-##### <a name="deletion"></a>Verwijdering
+##### Deletion
 
-Voor verwijdering kunt u een lijst met door komma's gescheiden gebruikers-id's invoeren in de sectie **Identificeerbare informatie van de eindgebruiker (EUII) verwijderen**. Deze id's worden vervolgens vergeleken met alle gebeurteniseigenschappen met tag van alle projecten in de huidige omgeving via exacte reeksovereenkomsten. 
+For deletion, you can enter a list of comma-separated user IDs in the **Delete end user identifiable information (EUII)** section. These IDs will then be compared with all tagged event properties of all projects in the current environment via exact string matching. 
 
-Als een eigenschapwaarde overeenkomt met een van de opgegeven id's, wordt de bijbehorende gebeurtenis definitief verwijderd. Vanwege de onomkeerbaarheid van deze actie, moet u de verwijdering bevestigen nadat u **Verwijderen** hebt geselecteerd.
+If a property value matches one of the provided IDs, the associated event will be permanently deleted. Due to the irreversibility of this action, you must confirm the deletion after selecting **Delete**.
 
-##### <a name="export"></a>Export
+##### Export
 
-Het exportproces is identiek aan het verwijderingsproces als het gaat om het definiëren van gebeurteniseigenschapwaarden in de sectie **Identificeerbare informatie van de eindgebruiker (EUII) exporteren**. Bovendien moet u een **URL voor Azure Blob Storage** opgeven om de exportbestemming op te geven. De Azure Blob-URL moet een [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview) bevatten.
+The export process is identical to the deletion process when it comes to defining event property values in the **Export end user identifiable information (EUII)** section. Additionally, you'll need to provide an **Azure blob storage URL** to specify the export destination. The Azure Blob URL must include a [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview).
 
-Nadat u **Exporteren** hebt geselecteerd, worden alle gebeurtenissen van het huidige team die overeenkomende eigenschappen met tags bevatten in CSV-indeling naar de exportbestemming geëxporteerd.
+After selecting **Export**, all events of the current team that contain matching tagged properties will be exported in CSV format to the export destination.
 
-### <a name="good-practices"></a>Aanbevolen procedures
+### Good practices
 
-* Probeer geen gebeurtenissen te verzenden die persoonlijke gegevens bevatten.
-* Als u gebeurtenissen met EUII-gegevens moet verzenden, beperk dan het aantal gebeurtenissen en gebeurteniseigenschappen die EUII-gegevens bevatten. In het ideale geval beperkt u zich tot één zo'n gebeurtenis.
-* Zorg ervoor dat zo min mogelijk mensen toegang hebben tot de verzonden persoonsgegevens.
-* Voor gebeurtenissen die persoonlijke gegevens bevatten, moet u ervoor zorgen dat u één eigenschap instelt om een unieke identificatiecode uit te zenden die gemakkelijk kan worden gekoppeld aan een specifieke gebruiker (bijvoorbeeld een gebruikers-id). Dit maakt het eenvoudiger om gegevens te scheiden en om de juiste gegevens te exporteren of te verwijderen.
-* Tag slechts één eigenschap per gebeurtenis als eigenschap die persoonsgegevens bevat. Het liefst één die alleen een unieke id bevat.
-* Tag geen eigenschappen die uitgebreide waarden bevatten (bijvoorbeeld een volledige hoofdtekst van een verzoek). De functionaliteit voor betrokkenheidsinzichten maakt gebruik van exacte reeksovereenkomsten bij de beslissing welke gebeurtenissen moeten worden verwijderd of geëxporteerd.
+* Try to avoid sending any events that contain personal data.
+* If you need to send events containing EUII data, limit the number of events and event properties that contain EUII data. Ideally, limit yourself to one such event.
+* Make sure that as few people as possible have access to the sent personal data.
+* For events containing personal data, make sure that you set one property to emit a unique identifier that can easily be linked to a specific user (for example, a user ID). This makes it easier to segregate data and to export or delete the right data.
+* Only tag one property per event as containing personal data. Ideally one that only contains a unique identifier.
+* Do not tag properties containing verbose values (for example, an entire request body). Engagement insights capability uses exact string matching when deciding which events to delete or export. -->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

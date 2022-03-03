@@ -1,39 +1,33 @@
 ---
-title: Kant-en-klare profielrapporten inschakelen
-description: Procedure om kant-en-klare profielrapporten te maken, gegroepeerd op geslacht, leeftijd en land of regio van herkomst.
+title: Kant-en-klare profielrapporten (OOB) inschakelen
+description: Procedure om kant-en-klare profielrapporten (OOB) te maken, gegroepeerd op geslacht, leeftijd en land of regio van herkomst.
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 05/03/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 3aa9599fc780098a2f7f31f0210d76ed2ef27ece774dd6212b5cb2a599ad537e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4c165c4278a4870e6872d460e20cf7cb1eb8df83
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033946"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233948"
 ---
-# <a name="out-of-box-profile-reports"></a>Kant-en-klare profielrapporten
+# <a name="out-of-box-oob-unified-profile-reports"></a>Kant-en-klare geharmoniseerde profielrapporten (OOB) inschakelen
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Een rapport is een verzameling gegevensvisualisaties waarmee u inzicht kunt krijgen in gedrag van gebruikers. Door verbinding te maken met Customer Insights doelgroepinzichten, kunnen betrokkenheidsinzichten een rapport maken met informatie over geharmoniseerde klantprofielen. Dit rapport bevat het aantal profielen dat u hebt, gegroepeerd per geslacht, leeftijd en geografische locatie.
+Een geharmoniseerd profielrapport is een verzameling gegevensvisualisaties die u helpen te begrijpen hoe gebruikers zich gedragen. Door verbinding te maken met de mogelijkheid van doelgroepeninzichten van Customer Insights, kunnen betrokkenheidsinzichten OOB-rapporten weergeven met informatie over geharmoniseerde klantprofielen. Dit rapport bevat het aantal profielen dat u hebt, gegroepeerd per geslacht, leeftijd en geografische locatie. Zie voor informatie over klantprofielen [Klantprofielen](../audience-insights/customer-profiles.md).
 
 ## <a name="prerequisites"></a>Vereisten
 
-De doelgroepinzichten-omgeving moet gegevens opslaan in een door de klant beheerd Azure Data Lake Storage-account.
-
-Als u een proefversie van de functionaliteit voor doelgroepinzichten gebruikt of een omgeving in een door Customer Insights beheerde data lake, [neem dan contact op met ons](https://go.microsoft.com/fwlink/?linkid=2145734) voor assistentie.  
-
+Een omgevingsbeheerder moet [een koppeling maken tussen betrokkenheidsinzichten en doelgroepeninzichten](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="enable-the-customer-profile-report"></a>Het klantprofielrapport inschakelen
 
-Een omgevingsbeheerder moet [een verbinding maken met doelgroepinzichten](configure-connections.md).
-
-Na het opgeven van de verbindingsdetails, kan de beheerder andere mensen in de organisatie toegang verlenen om het rapport te zien. De omgevingsbeheerder die de verbinding tot stand brengt, heeft automatisch toegang tot het rapport. 
+Nadat de koppeling tussen betrokkenheidsinzichten en doelgroepeninzichten is opgegeven, kan de beheerder toegang verlenen aan andere mensen in de organisatie om het rapport te bekijken. De omgevingsbeheerder die de verbinding tot stand brengt, heeft automatisch toegang tot het rapport. 
 
 Nadat de verbinding is voltooid, wordt de functie **Profielen** beschikbaar in het linkernavigatiedeelvenster. 
 

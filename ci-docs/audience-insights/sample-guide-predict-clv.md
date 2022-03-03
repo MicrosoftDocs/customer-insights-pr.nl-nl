@@ -3,18 +3,17 @@ title: Voorbeeldgids voor voorspelling van de levensduurwaarde van klanten
 description: Gebruik deze voorbeeldgids om het voorspellingsmodel voor de levensduurwaarden van klanten uit te proberen.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306343"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354825"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Voorbeeldgids voor voorspelling van de levensduurwaarde van klanten (CLV)
 
@@ -22,7 +21,7 @@ In deze gids wordt een end-to-end voorbeeld van de voorspelling van de levensduu
 
 ## <a name="scenario"></a>Scenario
 
-Contoso is een bedrijf dat koffie en koffiemachines van hoge kwaliteit produceert. Ze verkopen de producten via hun Contoso Coffee-website. Het bedrijf inzicht krijgen in de waarde (omzet) die hun klanten in de komende 12 maanden kunnen genereren. Als ze de verwachte waarde van hun klanten in de komende 12 maanden kennen, kunnen ze hun marketinginspanningen op hoogwaardige klanten concentreren.
+Contoso is een bedrijf dat hoogwaardige koffie en koffiemachines produceert. Ze verkopen de producten via hun Contoso Coffee-website. Het bedrijf inzicht krijgen in de waarde (omzet) die hun klanten in de komende 12 maanden kunnen genereren. Als ze de verwachte waarde van hun klanten in de komende 12 maanden kennen, kunnen ze hun marketinginspanningen op hoogwaardige klanten concentreren.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -31,7 +30,7 @@ Contoso is een bedrijf dat koffie en koffiemachines van hoge kwaliteit produceer
 
 ## <a name="task-1---ingest-data"></a>Taak 1 - Gegevens opnemen
 
-Bekijk de artikelen [over gegevensopname](data-sources.md) en [het importeren van gegevensbronnen met Power Query-connectors](connect-power-query.md). Bij de volgende informatie wordt ervan uitgegaan dat u bekend bent met opnemen van gegevens in het algemeen.
+Lees de artikelen [over gegevensopname](data-sources.md) en [gegevensbronnen importeren met behulp van Power Query-connectoren](connect-power-query.md). Bij de volgende informatie wordt ervan uitgegaan dat u bekend bent met opnemen van gegevens in het algemeen.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Klantgegevens opnemen van het e-commerceplatform
 
@@ -164,7 +163,7 @@ Nadat we de gegevens hebben opgenomen, beginnen we nu met het proces voor gegeve
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Taak 3 - De voorspelling van de levensduurwaarde van klanten configureren
 
-Met de geharmoniseerde klantprofielen kunnen we nu de voorspelling voor de levensduurwaarde van klanten uitvoeren. Zie [Voorspelling van levensduurwaarde van klant (preview)](predict-customer-lifetime-value.md) voor gedetailleerde stappen.
+Met de geharmoniseerde klantprofielen kunnen we nu de voorspelling voor de levensduurwaarde van klanten uitvoeren. Zie [Voorspellingen van de levensduurwaarde van de klant](predict-customer-lifetime-value.md) voor gedetailleerde stappen.
 
 1. Ga naar **Informatie**  > **Voorspellingen** en selecteer **Model voor waarde voor levensduur van klant**.
 

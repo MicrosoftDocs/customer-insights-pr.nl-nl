@@ -3,26 +3,28 @@ title: Voorbeeldhandleiding abonnementsverloop voorspellen
 description: Gebruik deze voorbeeldhandleiding om het standaard voorspellingsmodel voor abonnementsverloop uit te proberen.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306297"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355607"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Voorbeeldhandleiding abonnementsverloop voorspellen (preview)
+# <a name="subscription-churn-prediction-sample-guide"></a>Voorbeeldhandleiding abonnementsverloop voorspellen
 
 We laten u een compleet voorbeeld van abonnementsverloop-voorspelling zien aan de hand van de onderstaande voorbeeldgegevens. 
 
 ## <a name="scenario"></a>Scenario
 
-Contoso is een bedrijf dat koffie en koffiemachines van hoge kwaliteit produceert, die ze verkopen via hun Contoso Coffee-website. Onlangs zijn ze begonnen met een abonnementsbedrijf voor hun klanten om regelmatig koffie te halen. Hun doel is om te begrijpen welke geabonneerde klanten hun abonnement in de komende maanden kunnen opzeggen. Weten welke van hun klanten **waarschijnlijk zal verlopen**, kan hen helpen zich marketinginspanningen te besparen door zich te concentreren op het behouden van hun klanten.
+Contoso is een bedrijf dat koffie- en koffiemachines van hoge kwaliteit produceert, die ze verkopen via hun Contoso Coffee-website. Onlangs zijn ze begonnen met een abonnementsbedrijf voor hun klanten om regelmatig koffie te halen. Hun doel is om te begrijpen welke geabonneerde klanten hun abonnement in de komende maanden kunnen opzeggen. Weten welke van hun klanten **waarschijnlijk zal verlopen**, kan hen helpen zich marketinginspanningen te besparen door zich te concentreren op het behouden van hun klanten.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -31,7 +33,7 @@ Contoso is een bedrijf dat koffie en koffiemachines van hoge kwaliteit produceer
 
 ## <a name="task-1---ingest-data"></a>Taak 1 - Gegevens opnemen
 
-Lees vooral de artikelen [over gegevensopname](data-sources.md) en [gegevensbronnen importeren met Power Query-connectors](connect-power-query.md). Bij de volgende informatie wordt ervan uitgegaan dat u bekend bent met opnemen van gegevens in het algemeen. 
+Lees de artikelen [over gegevensopname](data-sources.md) en [gegevensbronnen importeren met behulp van Power Query-connectoren](connect-power-query.md) in het bijzonder. Bij de volgende informatie wordt ervan uitgegaan dat u bekend bent met opnemen van gegevens in het algemeen. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Klantgegevens opnemen van het e-commerceplatform
 
@@ -168,7 +170,7 @@ Na het opnemen van de gegevens beginnen we nu met het proces **Toewijzen, Matche
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Taak 3 - Configureer de voorspelling van het abonnementsverloop
 
-Met de geharmoniseerde klantprofielen op hun plaats, kunnen we nu het abonnementsverloop voorspellen. Zie het artikel [Abonnementsverloop voorspellen (preview)](predict-subscription-churn.md) voor gedetailleerde stappen. 
+Met de geharmoniseerde klantprofielen op hun plaats, kunnen we nu het abonnementsverloop voorspellen. Zie het artikel [Voorspelling van abonnementsverloop](predict-subscription-churn.md) voor gedetailleerde stappen. 
 
 1. Ga naar **Intelligence** > **Ontdekken** en selecteer het **Klantverloopmodel**.
 

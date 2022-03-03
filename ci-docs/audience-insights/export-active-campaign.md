@@ -1,20 +1,19 @@
 ---
 title: Gegevens uit Customer Insights exporteren naar ActiveCampaign
 description: Leer hoe u de verbinding configureert en exporteert naar ActiveCampaign.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.openlocfilehash: 089b9b0d76437e695f797f941ed384734d8f772e
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314599"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227803"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Segmenten exporteren naar ActiveCampaign (preview)
 
@@ -28,9 +27,9 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar ActiveCampaign en ge
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- U kunt maximaal 1 miljoen profielen per export exporteren naar ActiveCampaign en het kan tot 90 minuten duren voordat de export is voltooid.
+- U kunt per export tot 1 miljoen klantprofielen exporteren naar ActiveCampaign en dit kan tot 90 minuten duren.
 - Het exporteren naar ActiveCampaign is beperkt tot segmenten.
-- Het aantal profielen dat u naar ActiveCampaign kunt exporteren, is afhankelijk van uw contract met ActiveCampaign.
+- Het aantal klantprofielen dat u kunt exporteren naar ActiveCampaign, is afhankelijk van en wordt beperkt door uw contract met ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Verbinding instellen met ActiveCampaign
 
@@ -64,7 +63,7 @@ U kunt een export configureren als u toegang hebt tot een verbinding van dit typ
 
 1. Voer uw [**ActiveCampaign-lijst-id**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign) in.    
 
-3. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. Dit is vereist voor het exporteren van segmenten naar ActiveCampaign. Optioneel kunt u voornaam, achternaam, en telefoon exporteren om meer gepersonaliseerde e-mails te maken. Selecteer Kenmerk toevoegen om deze velden toe te wijzen.
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Dit is vereist voor het exporteren van segmenten naar ActiveCampaign. Optioneel kunt u voornaam, achternaam, en telefoon exporteren om meer gepersonaliseerde e-mails te maken. Selecteer Kenmerk toevoegen om deze velden toe te wijzen.
 
 1. Selecteer **Opslaan**.
 

@@ -1,93 +1,224 @@
 ---
 title: Entiteiten samenvoegen in gegevensharmonisatie
 description: Voeg entiteiten samen om geharmoniseerde klantprofielen te maken.
-ms.date: 04/16/2020
-ms.service: customer-insights
+ms.date: 01/28/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+searchScope:
+- ci-match
+- ci-merge
+- ci-relationships
+- customerInsights
+ms.openlocfilehash: c7743104bf89d9a2a741f1b358a89ed0240be024
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896505"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355839"
 ---
 # <a name="merge-entities"></a>Entiteiten samenvoegen
 
-De samenvoegingsfase is de laatste fase in het proces voor gegevensharmonisatie. Het doel is het afstemmen van conflicterende gegevens. Voorbeelden van conflicterende gegevens kunnen een klantnaam zijn die in twee van uw gegevenssets is gevonden, maar in elk een beetje anders verschijnt ("Grant Marshall" versus "Grant Marshal"), of een telefoonnummer met een andere indeling(617-803-091X versus 617803091X). Het samenvoegen van die conflicterende gegevenspunten gebeurt op een kenmerk-per-kenmerkbasis.
+De samenvoegingsfase is de laatste fase in het proces van gegevensharmonisatie. Het doel is het afstemmen van conflicterende gegevens. Voorbeelden van conflicterende gegevens kunnen een klantnaam zijn die in twee van uw gegevenssets is gevonden, maar in elk een beetje anders verschijnt ("Grant Marshall" versus "Grant Marshal"), of een telefoonnummer met een andere indeling(617-803-091X versus 617803091X). Het samenvoegen van die conflicterende gegevenspunten gebeurt op een kenmerk-per-kenmerkbasis.
+
+:::image type="content" source="media/merge-fields-page.png" alt-text="Samenvoegpagina in het gegevensharmonisatieproces waarop een tabel wordt weergegeven met samengevoegde velden die het uniforme klantprofiel definiëren.":::
 
 Na het voltooien van de [afstemmingsfase](match-entities.md), kunt u de samenvoegingsfase starten door de tegel **Samenvoegen** te selecteren op de pagina **Harmoniseren**.
 
 ## <a name="review-system-recommendations"></a>Systeemaanbevelingen bekijken
 
-Op de pagina **Samenvoegen** kunt u kenmerken kiezen en uitsluiten die moeten worden samengevoegd binnen uw geharmoniseerde klantprofielentiteit (het resultaat van het configuratieproces). Sommige kenmerken worden automatisch door het systeem samengevoegd.
+Bij **Gegevens** > **Harmoniseren** > **Samenvoegen** kiest u welke kenmerken u wel en niet wilt opnemen voor samenvoeging in uw uniforme klantprofielentiteit. Het uniforme klantprofiel is het resultaat van het gegevensharmonisatieproces. Sommige kenmerken worden automatisch door het systeem samengevoegd.
 
-### <a name="view-merged-attributes"></a>Samengevoegde kenmerken bekijken
+Als u de kenmerken wilt weergeven die zijn opgenomen in een van uw automatisch samengevoegde kenmerken, selecteert u dat samengevoegde kenmerk op het tabblad **Klantvelden** van de tabel. De kenmerken waaruit dat samengevoegde kenmerk is samengesteld, worden weergegeven in twee nieuwe rijen onder het samengevoegde kenmerk.
 
-Selecteer het samengevoegde kenmerk om de kenmerken te bekijken die zijn opgenomen in een van uw automatisch samengevoegde kenmerken. De twee kenmerken waaruit dat samengevoegde kenmerk is samengesteld, verschijnen in twee nieuwe rijen onder het samengevoegde kenmerk.
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Samengevoegde velden scheiden, hernoemen, uitsluiten en bewerken
 
-> [!div class="mx-imgBorder"]
-> ![Samengevoegd kenmerk selecteren](media/configure-data-merge-profile-attributes.png "Samengevoegd kenmerk selecteren")
+U kunt wijzigen hoe in het systeem samengevoegde kenmerken worden verwerkt om het uniforme klantprofiel te genereren. Selecteer **Meer weergeven** en kies wat u wilt veranderen.
 
-### <a name="separate-merged-attributes"></a>Aparte samengevoegde kenmerken
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opties in het vervolgkeuzemenu Meer weergeven om samengevoegde kenmerken te beheren.":::
 
-Als u een van de automatisch samengevoegde kenmerken wilt scheiden of de samenvoeging ongedaan wilt maken, zoekt u het kenmerk in de tabel **Profielkenmerken**.
+Zie de volgende gedeelten voor meer informatie.
 
-1. Selecteer de knop met de drie puntjes (…).
+## <a name="separate-merged-fields"></a>Aparte samengevoegde velden
+
+Zoek het kenmerk in de tabel om samengevoegde velden te scheiden. Gescheiden velden worden weergegeven als individuele gegevenspunten in het uniforme klantprofiel. 
+
+1. Selecteer het samengevoegde veld.
   
-2. Selecteer **Afzonderlijke velden** in de vervolgkeuzelijst.
+1. Selecteer **Meer weergeven** en kies **Afzonderlijke velden**.
+ 
+1. Bevestig de scheiding.
 
-### <a name="remove-merged-attributes"></a>Samengevoegde kenmerken verwijderen
+1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken.
 
-Als u een kenmerk wilt uitsluiten van de uiteindelijke klantprofielentiteit, kunt u deze vinden in de tabel **Profielkenmerken**.
+## <a name="rename-merged-fields"></a>Samengevoegde velden hernoemen
 
-1. Selecteer de knop met de drie puntjes (…).
+Wijzig de weergavenaam van samengevoegde kenmerken. U kunt de naam van de uitvoerentiteit niet wijzigen.
+
+1. Selecteer het samengevoegde veld.
   
-2. Selecteer **Niet samenvoegen** in de vervolgkeuzelijst.
+1. Selecteer **Meer weergeven** en kies **Naam wijzigen**.
 
-   Het kenmerk wordt verplaatst naar de sectie **Verwijderd uit klantenrecord**.
+1. Bevestig de gewijzigde weergavenaam. 
 
-## <a name="manually-add-a-merged-attribute"></a>Handmatig een samengevoegd kenmerk toevoegen
+1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken.
 
-Ga naar de pagina **Samenvoegen** om een samengevoegd kenmerk toe te voegen .
+## <a name="exclude-merged-fields"></a>Samengevoegde velden uitsluiten
 
-1. Selecteer **Samengevoegd kenmerk toevoegen**.
+Sluit een kenmerk uit van het uniforme klantprofiel. Als het veld in andere processen wordt gebruikt, bijvoorbeeld in een segment, verwijder het dan uit deze processen voordat u het uitsluit van het klantprofiel. 
 
-2. Geef een **naam** op om het later te kunnen identificeren op de pagina **Samenvoegen**.
+1. Selecteer een samengevoegd veld.
+  
+1. Selecteer **Meer weergeven** en kies **Uitsluiten**.
 
-3. Geef desgewenst een **weergavenaam** op die verschijnt in de geharmoniseerde entiteit Klantprofiel.
+1. Bevestig de uitsluiting.
 
-4. Configureeer **Dubbele kenmerken selecteren** om de kenmerken te selecteren die u wilt samenvoegen uit de afgestemde entiteiten. U kunt ook naar kenmerken zoeken.
+1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken. 
 
-5. Stel de optie **Rangschikken op basis van belang** in om het ene kenmerk een hogere prioriteit te geven dan de andere. Als bijvoorbeeld de entiteit *WebAccountCSV* de meest nauwkeurige gegevens over het kenmerk *Volledige namen* bevat, kunt u deze entiteit prioriteit geven boven *ContactCSV* door *WebAccountCSV* te selecteren. Het resultaat is dat *WebAccountCSV* de hoogste prioriteit krijgt, terwijl *ContactCSV* de tweede prioriteit krijgt bij het ophalen van waarden voor het kenmerk *Volledige naam*.
+Selecteer op de pagina **Samenvoegen** **Uitgesloten velden** om de lijst met alle uitgesloten velden te zien. In dit deelvenster kunt u uitgesloten velden weer toevoegen.
+
+## <a name="edit-a-merged-field"></a>Een samengevoegd veld bewerken
+
+1.  Selecteer een samengevoegd veld.
+
+1.  Selecteer **Meer weergeven** en kies **Bewerken**.
+
+1.  Geef op hoe u de velden wilt combineren of samenvoegen door een van de drie opties te kiezen:
+    - **Belang**: geeft de winnende waarde aan op basis van de mate van belang die voor de deelnemende velden is opgegeven. Dit is de standaard samenvoegingsoptie. Selecteer **Omhoog/omlaag verplaatsen** om de rangorde van belang in te stellen.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="De optie Belang in het dialoogvenster voor het samenvoegen van velden."::: 
+    - **Meest recente** : geeft de winnende waarde aan op basis van de meest recente. Vereist een datum of een numeriek veld voor elke deelnemende entiteit in het bereik van samenvoegvelden om de recentheid te definiëren.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="De optie Recentheid in het dialoogvenster voor het samenvoegen van velden.":::
+    - **Minst recente** : geeft de winnende waarde aan op basis van de minst recente. Vereist een datum of een numeriek veld voor elke deelnemende entiteit in het bereik van samenvoegvelden om de recentheid te definiëren.
+
+1.  U kunt meer velden toevoegen om deel te nemen aan het samenvoegproces.
+
+1.  U kunt de naam van het samenvoegveld wijzigen.
+
+1. Selecteer **Gereed** om uw wijzigingen toe te passen.
+
+1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken. 
+
+## <a name="combine-fields-manually"></a>Velden handmatig combineren
+
+Geef handmatig een samengevoegd kenmerk op.
+
+1. Selecteer **Combineren** op de pagina **Samenvoegen**.
+
+1. Kies de optie **Velden**.
+
+1. Geef het beleid voor de winnende samenvoeging op via het vervolgkeuzemenu **Velden combineren op**.
+
+1. Kies een veld dat u wilt toevoegen. Selecteer **Velden toevoegen** om meer velden te combineren.
+
+1. Geef informatie op voor **Naam** en **Naam van uitvoerveld**.
+
+1. Selecteer **Gereed** om de wijzigingen toe te passen.
+
+1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken. 
+
+## <a name="combine-a-group-of-fields"></a>Een groep velden combineren
+
+Behandel een groep velden als een enkele eenheid. Bijvoorbeeld wanneer onze records de velden Address1, Address2, City, State en Zip bevatten. Dan willen we waarschijnlijk niet het veld Address2 van een ander record samenvoegen, vanuit de gedachte dat dit onze gegevens completer zou maken
+
+1. Selecteer **Combineren** op de pagina **Samenvoegen**.
+
+1. Kies de optie **Groep velden**.
+
+1. Geef het beleid voor de winnende samenvoeging op via het vervolgkeuzemenu **Groepen rangschikken op**.
+
+1. Selecteer **Toevoegen** en kies of u meer velden of extra groepen aan de velden wilt toevoegen.
+
+1. Geef een **Naam** en een **Uitvoernaam** op voor elk gecombineerd veld.
+
+1. Geef een **Naam** op voor de groep velden. 
+
+1. Selecteer **Gereed** om de wijzigingen toe te passen.
+
+1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken.
+
+## <a name="change-the-order-of-fields"></a>De volgorde van velden wijzigen
+
+Sommige entiteiten bevatten meer details dan andere. Als een entiteit de nieuwste gegevens over een veld bevat, kunt u deze prioriteit geven boven andere entiteiten bij het samenvoegen van waarden.
+
+1. Selecteer het samengevoegde veld.
+  
+1. Selecteer **Meer weergeven** en kies **Bewerken**.
+
+1. Selecteer in het deelvenster **Velden combineren** **Omhoog/omlaag** om de volgorde in te stellen of gebruik slepen en neerzetten om de velden op de gewenste positie te plaatsen.
+
+1. Bevestig de wijziging.
+
+1. Selecteer **Opslaan** en **Uitvoeren** om de wijzigingen te verwerken.
+
+## <a name="configure-customer-id-generation"></a>Het genereren van een unieke klant-id configureren 
+
+Na het configureren van samenvoegvelden, kunt u definiëren hoe u CustomerId-waarden, de unieke klantprofiel-id's, genereert. In de samenvoegstap in het proces van gegevensharmonisatie wordt de unieke klantprofiel-id gegenereerd. De id is de CustomerId in de entiteit *Klant* die het resultaat is van het proces van gegevensharmonisatie. 
+
+De CustomerId in de entiteit Klant is gebaseerd op een hash van de eerste waarde van de niet-null winnende primaire sleutels. Deze sleutels zijn afkomstig van de entiteiten die worden gebruikt in de overeenkomst- en samenvoegfase en worden beïnvloed door de overeenkomstvolgorde. De gegenereerde CustomerID kan dus veranderen wanneer een primaire sleutelwaarde verandert in de primaire entiteit van de matchorder. De waarde van de primaire sleutel vertegenwoordigt dus mogelijk niet altijd dezelfde klant.
+
+Door een stabiele klant-id te configureren, kunt u dat gedrag vermijden.
+
+**Een unieke klant-id configureren**
+
+1. Ga naar **Unify** > **Samenvoegen**.
+
+1. Ga naar het tabblad **Sleutels**. 
+
+1. Houd de muisaanwijzer op de rij **CustomerId** en selecteer de optie **Configureren**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Controle om het genereren van de id aan te passen.":::
+
+1. Selecteer maximaal vijf velden die een unieke klant-id vormen en stabieler zijn. Records die niet overeenkomen met uw configuratie, gebruiken in plaats daarvan een door het systeem geconfigureerde id.  
+
+1. Selecteer **Gereed** en voer het samenvoegproces uit om uw wijzigingen toe te passen.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Groepeer profielen in huishoudens of clusters
+
+Als onderdeel van het configuratieproces voor het genereren van klantprofielen kunt u regels definiëren om gerelateerde profielen in een cluster te groeperen. Er zijn momenteel twee soorten clusters beschikbaar: huishoudelijke en aangepaste clusters. Het systeem kiest automatisch een huishouden met vooraf gedefinieerde regels als de entiteit *Klant* de semantische velden *Person.LastName* en *Location.Address* bevat. U kunt ook een cluster maken met uw eigen regels en voorwaarden, vergelijkbaar met [afstemmingsregels](match-entities.md#define-rules-for-match-pairs).
+
+**Een huishouden of cluster definiëren**
+
+1. Ga naar **Unify** > **Samenvoegen**.
+
+1. Op het tabblad **Samenvoegen** selecteer **Geavanceerd** > **Cluster maken**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Besturingselement om een nieuwe cluster te maken.":::
+
+1. Kies tussen een cluster van het type **Huishouden** of **Aangepast**. Als de semantische velden *Person.LastName* en *Location.Address* bestaan in de entiteit *Klant*, wordt automatisch huishouden geselecteerd.
+
+1. Geef een naam op voor het cluster en selecteer **Gereed**.
+
+1. Selecteer het tabblad **Clusters** om het cluster te vinden dat u hebt gemaakt.
+
+1. Geef de regels en voorwaarden op om uw cluster te definiëren.
+
+1. Selecteer **Uitvoeren** om het samenvoegproces uit te voeren en het cluster te maken.
+
+Nadat het samenvoegproces is uitgevoerd, worden de cluster-id's als nieuwe velden toegevoegd aan de entiteit *Klant*.
 
 ## <a name="run-your-merge"></a>Uw samenvoeging uitvoeren
 
 Of u kenmerken handmatig samenvoegt of deze laat samenvoegen door het systeem, u kunt altijd uw samenvoeging uitvoeren. Selecteer **Uitvoeren** op de pagina **Samenvoegen** om het proces te starten.
 
 > [!div class="mx-imgBorder"]
-> ![Samenvoegen van gegevens opslaan en uitvoeren](media/configure-data-merge-save-run.png "Samenvoegen van gegevens opslaan en uitvoeren")
+> ![Samenvoegen van gegevens opslaan en uitvoeren.](media/configure-data-merge-save-run.png "Samenvoegen van gegevens opslaan en uitvoeren")
 
-Om aanvullende wijzigingen aan te brengen en de stap opnieuw uit te voeren, kunt u een lopende samenvoeging annuleren. Selecteer **Vernieuwen...** en selecteer **Taak annuleren** in het zijvenster dat wordt weergegeven.
+Kies **Alleen samenvoegen uitvoeren** als u alleen de uitvoer weerspiegeld wilt zien in de uniforme klantentiteit. Downstreamprocessen worden vernieuwd zoals dat is [gedefinieerd in de vernieuwingsplanning](system.md#schedule-tab).
 
-Nadat de tekst **Vernieuwen...** is gewijzigd in **Geslaagd**, is de samenvoeging voltooid en zijn tegenstrijdigheden in uw gegevens opgelost volgens het door u gedefinieerde beleid. Samengevoegde en niet-samengevoegde kenmerken worden opgenomen in de geharmoniseerde profielentiteit. Uitgesloten kenmerken worden niet opgenomen in de geharmoniseerde profielentiteit.
+Kies **Samenvoegen en downstreamprocessen uitvoeren** om het systeem te vernieuwen met uw wijzigingen. Alle processen, inclusief verrijking, segmenten en metingen, worden automatisch opnieuw uitgevoerd. Nadat alle downstreamprocessen zijn voltooid, weerspiegelen de klantprofielen alle wijzigingen die u hebt aangebracht.
 
-Als het niet de eerste keer was dat u met succes een samenvoeging hebt uitgevoerd, worden alle stroomafwaartse processen, inclusief verrijking, segmentatie en meetcriteria, automatisch opnieuw uitgevoerd. Nadat alle stroomafwaartse processen opnieuw zijn uitgevoerd, weerspiegelen de klantprofielen alle wijzigingen die u hebt aangebracht.
+Als u meer wijzigingen wilt aanbrengen en de stap opnieuw wilt uitvoeren, kunt u een samenvoeging in uitvoering annuleren. Selecteer **Vernieuwen...** en selecteer **Taak annuleren** in het zijvenster dat wordt weergegeven.
 
-> [!TIP]
-> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Inzoompad om naar procesdetails te gaan vanuit de taakstatuskoppeling.":::
 
 ## <a name="next-step"></a>Volgende stap
 
 Configureer [activiteiten](activities.md), [verrijking](enrichment-hub.md) of [relaties](relationships.md) voor meer inzichten over uw klanten.
 
-Als u al activiteiten, verrijking of relaties hebt geconfigureerd of segmenten hebt gedefinieerd, worden deze automatisch verwerkt om de nieuwste klantgegevens te gebruiken.
-
-
-
+Als u al activiteiten, een verrijking of segmenten hebt geconfigureerd, worden deze automatisch verwerkt om de nieuwste klantgegevens te gebruiken.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

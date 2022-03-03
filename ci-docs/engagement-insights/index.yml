@@ -1,92 +1,29 @@
 ### YamlMime:Landing
-title: Betrokkenheidsinzichten in Dynamics 365 Customer Insights (preview)
-summary: Verzamel gegevens voor uw websites. Krijg interactief inzicht in de interacties en het gebruik van klanten op al uw sites. Gebruik de diepe integratie tussen betrokkenheidsinzichten en doelgroepinzichten om uw realtime gedragsanalyses te verrijken met klantprofielrapporten. Verrijk klantprofielen met webactiviteiten om naast relevante klantgegevens ook realtime gedragsgegevens te krijgen. Transformeer uw bedrijf om onmiddellijke waarde uit uw klantgegevens te halen.
+title: Betrokkenheidsinzichten (preview) loopt af
+summary: De Dynamics 365 Customer Insights preview van de mogelijkheden voor betrokkenheidsinzichten is op 15 februari 2022 beëindigd. Deze wijziging betekent dat de proefervaring van Customer Insights niet langer de mogelijkheid biedt om trechters of andere rapportagefunctionaliteit te maken. We nodigen u uit om de vele andere functies van Customer Insights, het Microsoft-klantgegevensplatform (CDP) te verkennen en te evalueren. Neem rechtstreeks contact op met uw Microsoft-accountteam als u vragen hebt over de beëindiging van de preview van de mogelijkheden. Uw accountteam houdt u op de hoogte van komende lanceringen. Bedankt!
 metadata:
   title: Documentatie voor betrokkenheidsinzichten (preview)
   description: Help-hub met belangrijke links voor betrokkenheidsinzichten.
-  ms.service: customer-insights
   ms.subservice: engagement-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
   ms.date: 09/15/2021
-  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
-  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+  ms.openlocfilehash: 99933c69c791da12815ebee3edb6413276b19b09
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
   ms.translationtype: HT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 09/15/2021
-  ms.locfileid: "7494178"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350462"
 landingContent:
-- title: Info
+- title: Contact opnemen
   linkLists:
   - linkListType: overview
     links:
-    - text: Voordelen van de mogelijkheden
-      url: overview.md
-    - text: Woordenlijst
-      url: glossary.md
-    - text: Nieuwe en bijgewerkt functies
-      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
-- title: Onboarding
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Aan de slag
-      url: get-started.md
-    - text: Een werkruimte maken
-      url: create-workspace.md
-    - text: Uw website van instrumenten voorzien
-      url: instrument-website.md
-- title: Rapporten weergeven en filteren
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Rapporten weergeven
-      url: view-reports.md
-    - text: Een geharmoniseerd profielrapport weergeven
-      url: profile-reports.md
-    - text: Doelgroepsegmenten gebruiken om rapporten te filteren
-      url: integrate-audience-insights-segments.md
-- title: Analyseren
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Trechterrapporten maken
-      url: funnel-reports.md
-    - text: Gedragsgegevens analyseren
-      url: curate-dimensions.md
-    - text: Aangepaste rapporten maken
-      url: custom-reports.md
-    - text: Verfijnde gebeurtenissen maken
-      url: refined-events.md
-    - text: Gebeurtenissen exporteren
-      url: export-events.md
-- title: Bronnen voor ontwikkelaars
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Bronnen voor ontwikkelaars
-      url: developer-resources.md
-    - text: WebSDK-voorbeeld
-      url: websdk-sample.md
-    - text: Geavanceerde web SDK-scenario's
-      url: advanced-SDK-implementation.md
-    - text: Voorbeeld van Android-SDK
-      url: get-started-android.md
-    - text: Voorbeeld van iOS-SDK
-      url: get-started-ios.md
-- title: Beheer
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Omgevingen en werkruimten beheren
-      url: manage-environments-workspaces.md
-    - text: Verbinding maken met doelgroepinzichten
-      url: integrate-audience-insights-engagement-insights.md
-    - text: Cookies en toestemming van gebruikers beheren
-      url: user-consent-storage.md
-    - text: Persoonsgegevens verwijderen en exporteren
-      url: delete-export-personal-data.md
-    - text: Servicelimieten
-      url: ../service-limits.md
+    - text: Aansluiten bij de Dynamics 365-community
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Uw ideeën delen
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Een probleem melden
+      url: https://go.microsoft.com/fwlink/?linkid=2079641

@@ -1,24 +1,28 @@
 ---
 title: Gedeeltelijke gegevens voltooien met behulp van voorspellingen
 description: Gebruik voorspellingen om onvolledige klantgegevens in te vullen.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692521"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353997"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Uw gedeeltelijke gegevens aanvullen met voorspellingen
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Uw gedeeltelijke gegevens aanvullen met voorspellingen (afgeschaft)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Deze functie wordt op **5 november 2021** **afgeschaft**. Huidige implementaties blijven werken totdat de functie wordt verwijderd, maar u kunt geen nieuwe integraties maken met behulp van de onderstaande instructies.
 
 Met Voorspellingen kunt u eenvoudig voorspelde waarden maken die uw begrip van een klant kunnen verbeteren. Op de pagina **Intelligence** > **Voorspellingen** kunt u **Mijn voorspellingen** selecteren om voorspellingen te zien die u hebt geconfigureerd in andere delen van doelgroepinzichten en om deze verder aan te passen.
 
@@ -35,7 +39,7 @@ Voordat uw organisatie de voorspellingsfunctie kan gebruiken, moet u ervoor zorg
 
 2. Uw doelgroepinzichtomgeving is gekoppeld aan uw Dataverse-exemplaar.
 
-Als u [een nieuwe omgeving maakt](get-started-paid.md), configureert u deze in het dialoogvenster **Een omgeving maken** en selecteert u **Geavanceerd**. Als u al een omgeving hebt gemaakt, gaat u naar de instellingen en selecteert u **Geavanceerd**. Hoe dan ook, in de sectie **Voorspellingen gebruiken** voert u de URL van het Dataverse-exemplaar in waaraan u uw omgeving wilt koppelen.
+Zie [Een nieuwe omgeving maken](create-environment.md) voor meer informatie.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Een voorspelling maken in de entiteit Klant
 
@@ -60,6 +64,8 @@ Als u [een nieuwe omgeving maakt](get-started-paid.md), configureert u deze in h
    > ![Voorbeeld van toegewezen veldwaarden aan categorieën.](media/intelligence-categorymapping.png "Voorbeeld van toegewezen veldwaarden aan categorieën")
 
 8. Selecteer **Gereed**. De voorspelling wordt nu verwerkt. De verwerking duurt enige tijd, afhankelijk van de grootte en complexiteit van gegevens. De resultaten zijn beschikbaar in een nieuwe entiteit op basis van de **naam van de uitvoerentiteit** van de voorspelling die u hebt gemaakt.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Een voorspelling maken terwijl u een segment maakt
 
@@ -125,7 +131,7 @@ Nadat u een voorspelling hebt gemaakt, kunt u het model aanpassen in de AI Build
 Bij de volgende uitvoering van uw voorspelling wordt het bijgewerkte model gebruikt dat u hebt gemaakt.
 
 > [!NOTE]
-> Nieuwe modellen die zijn gemaakt in AI Builder, worden niet weergegeven in doelgroepinzichten, tenzij het model is gemaakt op basis van de hierboven genoemde ervaringen.
+> Nieuwe modellen gemaakt in AI Builder worden niet weergegeven in doelgroep-inzichten, tenzij het model is gemaakt op basis van de hierboven genoemde ervaringen.
 
 ## <a name="remove-a-prediction"></a>Een voorspelling verwijderen
 

@@ -1,22 +1,21 @@
 ---
-title: Voorspelling voor abonnementsverloop
+title: Voorspelling van abonnementverloop (met video)
 description: Voorspel of het risico bestaat dat een klant niet langer gebruik zal maken van de abonnementsproducten of -services van uw bedrijf.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799722"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354687"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Voorspelling voor abonnementsverloop (preview)
+# <a name="subscription-churn-prediction"></a>Voorspelling voor abonnementsverloop
 
 Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat een klant niet langer gebruik zal maken van de abonnementsproducten of -services van uw bedrijf. U kunt een nieuwe voorspelling voor abonnementsverloop maken op de pagina **Informatie** > **Voorspellingen**. Selecteer **Mijn voorspellingen** om andere voorspellingen te bekijken die u hebt gemaakt.
 
@@ -63,7 +62,7 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
 ## <a name="create-a-subscription-churn-prediction"></a>Een voorspelling voor abonnementsverloop maken
 
 1. Ga in doelgroepinzichten naar **Intelligence** > **Voorspellingen**.
-1. Selecteer de tegel **Abonnementsverloopmodel (preview)** en selecteer **Dit model gebruiken**.
+1. Selecteer de tegel **Verloopmodel van abonnement** en selecteer **Dit model gebruiken**.
    > [!div class="mx-imgBorder"]
    > ![Tegel Abonnementverloopmodel met knop Dit model gebruiken.](media/subscription-churn-usethismodel.PNG "Tegel Abonnementverloopmodel met knop Dit model gebruiken")
 
@@ -77,7 +76,7 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
 1. Voer het aantal **Dagen sinds het abonnement is beëindigd** in waarna het bedrijf het abonnement van een klant als verlopen beschouwt. Deze periode is meestal gekoppeld aan zakelijke activiteiten zoals aanbiedingen of andere marketinginspanningen om te voorkomen dat de klant verloren gaat.
 1. Voer het aantal **Dagen om de toekomst te kijken om verloop te voorspellen** in om een venster in te stellen voor het voorspellen van verloop. Bijoorbeeld om het risico van klantverloop voor uw klanten in de komende 90 dagen te voorspellen voor afstemming van uw marketinginspanningen tot behoud. Het voorspellen van het verlooprisico voor langere of kortere perioden kan het moeilijker maken om de factoren in uw verlooprisicoprofiel aan te pakken, afhankelijk van uw specifieke zakelijke vereisten. Selecteer **Volgende** om door te gaan
    >[!TIP]
-   > U kunt op elk gewenst moment **Opslaan en sluiten** selecteren om de voorspelling als concept op te slaan. U vindt de conceptvoorspelling op het tabblad **Mijn voorspellingen** om door te gaan.
+   > U kunt op elk moment **Concept opslaan** selecteren om de voorspelling als concept op te slaan. U vindt de conceptvoorspelling op het tabblad **Mijn voorspellingen** om door te gaan.
 
 ### <a name="add-required-data"></a>Vereiste gegevens toevoegen
 

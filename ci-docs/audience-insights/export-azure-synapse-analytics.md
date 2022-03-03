@@ -1,20 +1,19 @@
 ---
-title: Customer Insights-gegevens exporteren naar Azure Synapse Analytics
-description: Meer informatie over het configureren van de verbinding met Azure Synapse Analytics.
-ms.date: 04/12/2021
+title: Gegevens uit Customer Insights exporteren naar Azure Synapse Analytics
+description: Ontdek hoe u de verbinding met Azure Synapse Analytics configureert.
+ms.date: 01/05/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
-ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
+ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "6327358"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231306"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Gegevens exporteren naar Azure Synapse Analytics (preview)
 
@@ -49,9 +48,11 @@ In Azure:
 
 ### <a name="configure-a-connection"></a>Een verbinding configureren
 
+Om een verbinding tot stand te brengen, hebben de service-principal en het gebruikersaccount in Customer Insights **Lezer**-machtigingen nodig op de *resourcegroep* waar de Synapse Analytics-werkruimte zich bevindt. Bovendien hebben de service-principal en de gebruiker op de Synapse Analytics-werkruimte **Synaps-beheerder**-machtigingen nodig. 
+
 1. Ga naar **Beheerder** > **Verbindingen**.
 
-1. Selecteer **Verbinding toevoegen** en kies **Azure Synapse Analytics** of selecteer **Instellen** op de tegel **Azure Synapse Analytics** om de verbinding te configureren.
+1. Selecteer **Verbinding toevoegen** en kies **Azure Synapse Analytics** of selecteer **Instellen** op de **Azure Synapse Analytics**-tegel om de verbinding te configureren.
 
 1. Geef uw verbinding een herkenbare naam in het veld Weergavenaam. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
 
@@ -63,7 +64,7 @@ In Azure:
 
 ### <a name="configure-an-export"></a>Een export configureren
 
-U kunt deze export configureren als u toegang hebt tot een verbinding van dit type. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+U kunt deze export configureren als u toegang hebt tot een verbinding van dit type. Om de export met een gedeelde verbinding te configureren, hebt u minimaal **Inzender**-machtigingen in Customer Insights. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
 
 1. Ga naar **Gegevens** > **Exports**.
 
@@ -73,7 +74,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Zorg voor een herkenbare **weergavenaam** voor uw export en een **databasenaam**.
 
-1. Geef aan welke entiteiten u wilt exporteren naar Azure Synapse Analytics.
+1. Selecteer naar welke entiteiten u wilt exporteren naar Azure Synapse Analytics.
    > [!NOTE]
    > Gegevensbronnen die zijn gebaseerd op een [Common Data Model-map](connect-common-data-model.md), worden niet ondersteund.
 
@@ -82,6 +83,8 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 
 De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand).
+
+Om gegevens op te vragen die naar Synapse Analytics zijn geëxporteerd, hebt u toegang als **Lezer van gegevens in opslagblob** nodig tot de doelopslag op de werkruimte van exports. 
 
 ### <a name="update-an-export"></a>Een export bijwerken
 

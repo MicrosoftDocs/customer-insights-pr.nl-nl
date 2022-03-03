@@ -1,32 +1,37 @@
 ---
 title: Segmenten in doelgroepinzichten
 description: Overzicht van segmenten en hoe u segmenten kunt maken en beheren.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+searchScope:
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617369"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355977"
 ---
 # <a name="segments-overview"></a>Overzicht van segmenten
 
 Met segmenten kunt u uw klanten groeperen op basis van demografische, transactionele of gedragskenmerken. U kunt segmenten gebruiken om promotiecampagnes, verkoopactiviteiten en acties voor klantenondersteuning te targeten om uw zakelijke doelstellingen te bereiken.
 
-Klantprofielen die overeenkomen met de filters van een segmentdefinitie worden aangeduid als *leden* van een segment. Er zijn enkele [servicelimieten](service-limits.md) van toepassing.
+Klantprofielen die overeenkomen met de filters van een segmentdefinitie worden aangeduid als *leden* van een segment. Er zijn enkele [servicelimieten](/dynamics365/customer-insights/service-limits) van toepassing.
 
 ## <a name="create-a-new-segment"></a>Een nieuw segment maken
 
 Er zijn meerdere manieren om een nieuw segment te maken: 
 
-# <a name="individual-customers-b2c"></a>[Individuele klanten (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
 
 - Complex segment met segmentbouwer: [Bouw onze eigen](segment-builder.md#create-a-new-segment) 
 - Eenvoudige segmenten met één operator: [Snel segment](segment-builder.md#quick-segments) 
@@ -34,7 +39,7 @@ Er zijn meerdere manieren om een nieuw segment te maken:
 - Via AI mogelijk gemaakte suggesties op basis van meetcriteria of kenmerken: [Voorgestelde segmenten om meetcriteria te verbeteren](suggested-segments.md) 
 - Suggesties op basis van activiteiten: [Voorgestelde segmenten op basis van klantactiviteit](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Zakelijke accounts (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
 
 - Complex segment met segmentbouwer: [Bouw onze eigen](segment-builder.md#create-a-new-segment)
 
@@ -65,8 +70,7 @@ De volgende actie is beschikbaar wanneer u een segment selecteert:
 
 U kunt alle segmenten tegelijk vernieuwen door **Alles vernieuwen** te selecteren op de pagina **Segmenten** of u kunt een of meerdere segmenten vernieuwen wanneer u deze selecteert en **Vernieuwen** uit de opties kiezen. U kunt ook een terugkerende vernieuwing configureren via **Beheerder** > **Systeem** > **Schema**.
 
-> [!TIP]
-> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Segmenten exporteren
 
@@ -106,4 +110,5 @@ Het onderste gedeelte bevat een lijst met de segmentleden.
 >
 >De lijst is een voorbeeld van de overeenkomende segmentleden en toont de eerste 100 records van uw segment, zodat u het snel kunt evalueren en indien nodig de definities kunt bekijken. Als u alle overeenkomende records wilt bekijken, moet u [het segment exporteren](export-destinations.md).
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

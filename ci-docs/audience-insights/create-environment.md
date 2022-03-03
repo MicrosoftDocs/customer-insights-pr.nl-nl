@@ -1,21 +1,23 @@
 ---
 title: Omgevingen maken in Customer Insights
 description: Stappen om omgevingen te creëren met een gelicentieerd abonnement voor Dynamics 365 Customer Insights.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088096"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354089"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Een omgeving maken in doelgroepinzichten
 
@@ -76,12 +78,14 @@ Als u meerdere omgevingen van Customer Insights maakt en ervoor kiest om de uitv
    
 In de stap **Microsoft Dataverse** kunt u Customer Insights verbinden met uw Dataverse-omgeving.
 
-Als u [kant-en-klare voorspellingsmodellen](predictions-overview.md#out-of-box-models) wilt gebruiken, configureert u delen van gegevens met Dataverse. Of u kunt gegevensopname van on-premises-gegevensbronnen inschakelen door de Microsoft Dataverse omgevings-URL op te geven die uw organisatie beheert. Selecteer **Gegevens delen inschakelen** om Customer Insights-uitvoergegevens te delen met een door Dataverse beheerd data lake.
+Bied uw eigen Microsoft Dataverse-omgeving om gegevens (profielen en inzichten) te delen met zakelijke toepassingen op basis van Dataverse, zoals Dynamics 365 Marketing of modelgestuurde toepassingen in Power Apps. Laat dit veld leeg als u geen eigen Dataverse-omgeving hebt, dan richten wij er een voor u in.
+
+Verbinding maken met uw Dataverse-omgeving stelt u ook in staat om [gegevens op te nemen uit on-premises gegevensbronnen met behulp van Power Platform-gegevensstromen en -gateways](data-sources.md#add-data-from-on-premises-data-sources). U kunt ook [kant-en-klare voorspellingsmodellen](predictions-overview.md?tabs=b2c#out-of-box-models) gebruiken door verbinding te maken met een Dataverse-omgeving.
 
 > [!IMPORTANT]
 > Customer Insights en Dataverse moeten zich in dezelfde regio bevinden om het delen van gegevens mogelijk te maken.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Configuratieopties om het delen van gegevens met Microsoft Dataverse mogelijk te maken.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="gegevens delen met Microsoft Dataverse automatisch ingeschakeld voor netto nieuwe exemplaren.":::
 
 > [!NOTE]
 > Customer Insights biedt geen ondersteuning voor de volgende scenario's voor het delen van gegevens:

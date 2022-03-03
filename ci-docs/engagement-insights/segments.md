@@ -4,17 +4,16 @@ description: Procedure voor het maken, bewerken en verwijderen van segmenten en 
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: e99c04e6c92d8ca16c2d69957e0f5b7dba0ac757
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036142"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225370"
 ---
 # <a name="view-and-create-segments"></a>Segmenten weergeven en maken
 
@@ -44,22 +43,27 @@ In dit gedeelte wordt beschreven hoe u een geheel *leeg segment* maakt.
 
 1. Selecteer **Nieuw segment**.
 
-1. Kies in **Resourcebibliotheek** het kenmerk waarop u wilt filteren. Momenteel kunt u alleen segmenten maken op basis van dimensies.
+1. Selecteer in de **Resourcebibliotheek** de (+) naast het kenmerk waarop u wilt filteren. Momenteel kunt u alleen segmenten maken op basis van dimensies.
 
-1. Kies een operator en een waarde voor het geselecteerde kenmerk. De volgende bewerkingen worden ondersteund.
+   :::image type="content" source="media/create-new-segment.png" alt-text="Een nieuw segment maken.":::
+
+1. Kies in de sectie **Regel** een operator en een waarde voor het geselecteerde kenmerk. De volgende bewerkingen worden ondersteund.
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Kies een operator voor uw nieuwe segment.":::
+
    - **is**: vereist een exacte overeenkomst om waarden op te nemen. Gebruikt **is gelijk aan** voor een enkele waarde of **is een van** om meerdere waarden op te nemen.
    - **is niet**: vereist een exacte overeenkomst om waarden uit te sluiten. Gebruikt **is gelijk aan** voor een enkele waarde of **is een van** om meerdere waarden op te nemen.
    - **begint met**: een tekenreeks waarmee de overeenkomende waarden beginnen.
    - **eindigt op**: een tekenreeks waarmee de overeenkomende waarden eindigen.
    - **bevat**: een tekenreeks in overeenkomende waarden.
 
-1. Als u meer voorwaarden aan een groep wilt toevoegen, kunt u twee logische operators gebruiken. Bij het gebruik van set-operators wordt rekening gehouden met geprojecteerde kenmerken.
+1. Om meer voorwaarden aan een groep toe te voegen, kunt u logische operators gebruiken. Bij het gebruik van set-operators wordt rekening gehouden met geprojecteerde kenmerken.
    - **EN**-operator: er moet aan beide voorwaarden worden voldaan als onderdeel van het segmentatieproces. Deze optie is vooral handig wanneer u voorwaarden definieert voor verschillende entiteiten.
    - **OF**-operator: er moet aan een van beide voorwaarden worden voldaan als onderdeel van het segmentatieproces. Deze optie is vooral handig wanneer u meerdere voorwaarden definieert voor dezelfde entiteit.
 
 1. Selecteer **Opslaan** en geef het segment een naam. 
 
-Het segment wordt vermeld op de pagina Segmenten en u kunt het toepassen op alle rapporten en trechters in de werkruimte.
+Het segment wordt vermeld op de pagina **Segmenten** en u kunt het toepassen op alle rapporten en trechters in de werkruimte.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Een segment gebruiken in een rapport of trechter
 
@@ -67,7 +71,7 @@ U kunt segmenten toepassen op een rapport of trechter om ze te filteren op basis
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Een rapport met paginaweergaven met een uitgebreide vervolgkeuzelijst om te kiezen welke segmenten moeten worden toegepast.":::
 
-Open het rapport of de trechter om een segment toe te passen. Selecteer **Voorwaarde toevoegen** en kies **Filteren op segment**. Kies het segment in de lijst die u wilt toepassen. Het segment wordt toegepast op het rapport. Als een diagram het segment niet ondersteunt, wordt er een fout weergegeven.
+Open het rapport of de trechter om een segment toe te passen. Selecteer **+ Voorwaarde toevoegen** en kies **Filteren op segment**. Kies het segment in de lijst die u wilt toepassen. Het segment wordt toegepast op het rapport. Als een diagram het segment niet ondersteunt, wordt er een fout weergegeven. Zie voor meer informatie [Trechterrapporten maken en beheren](funnel-reports.md).
  
 U kunt *tot drie segmenten* toepassen aan een rapport of trechter.
 
@@ -91,5 +95,7 @@ U kunt *tot drie segmenten* toepassen aan een rapport of trechter.
 1. Selecteer in de segmentenlijst de optie **Meer [...]**. 
 1. Kies **Verwijderen** uit de vervolgkeuzelijst.
 1. Selecteer **Verwijderen** om te bevestigen.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

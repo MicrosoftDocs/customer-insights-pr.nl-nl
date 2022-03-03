@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648111"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225417"
 ---
 # <a name="create-a-new-environment"></a>Een nieuwe omgeving maken 
 
@@ -40,13 +39,13 @@ Een omgeving is een ruimte waarin u uw werkruimten en verbindingen beheert. Hoe 
 
 1. Kies de **Regio** en selecteer **Volgende**. 
 
-1. Typ een **Werkruimtenaam** waarmee u gegevens kunt verzamelen voor specifieke websites of apps. Zie [Een werkruimte maken](create-workspace.md) voor meer informatie.
+1. Typ een **werkruimtenaam** waarmee u gegevens kunt verzamelen voor specifieke websites of apps. Zie [Een werkruimte maken](create-workspace.md) voor meer informatie.
 
-1. Kies het **Werkruimtetype** (web of mobiel) dat u wilt maken. 
+1. Kies het **werkruimtetype** (web of mobiel) dat u wilt maken. 
 
 1. Selecteer **Geavanceerde instellingen weergeven** om deze optionele instellingen in of uit te schakelen:
 
-   - Schakel **Onbekend tot bekend** in op "ingeschakeld" om webgebeurtenissen te koppelen aan gebruikers die zich eerder hebben geverifieerd. Voor meer informatie, zie [Webgebeurtenissen herkennen van eerder geverifieerde bezoekers](unknown-to-known.md)
+   - Schakel **Onbekend tot bekend** in op "ingeschakeld" om webgebeurtenissen te koppelen aan gebruikers die zich eerder hebben geverifieerd. Zie voor meer informatie [Webgebeurtenissen herkennen van eerder geverifieerde bezoekers](unknown-to-known.md).
    - Schakel **Filteren op botverkeer** in op "ingeschakeld" om webverkeer door bots voor deze werkruimte te verwijderen. 
 
 1. Selecteer **Voltooien** als u klaar bent. 

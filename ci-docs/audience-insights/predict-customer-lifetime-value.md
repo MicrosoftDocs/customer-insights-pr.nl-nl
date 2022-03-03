@@ -3,20 +3,24 @@ title: Voorspelling van de levensduurwaarde van klanten
 description: Voorspel het inkomstenpotentieel voor actieve klanten in de toekomst.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035363"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355783"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Voorspelling van de levensduurwaarde van klant (preview)
+# <a name="customer-lifetime-value-clv-prediction"></a>Voorspelling van de levensduurwaarde van klanten
 
 Voorspel potentiële waarde (inkomsten) die individuele actieve klanten voor uw bedrijf zullen binnenhalen gedurende een bepaalde toekomstige periode. Deze functie kan u helpen verschillende doelen te bereiken: 
 - Klanten met hoge waarde identificeren en dit inzicht verwerken
@@ -65,7 +69,7 @@ De volgende gegevens zijn vereist en worden, indien gemarkeerd als optioneel, aa
     - Compleetheid van gegevens: minder dan 20% ontbrekende waarden in verplichte velden in de invoergegevens   
 
 > [!NOTE]
-> - Het model vereist de transactiegeschiedenis van uw klanten. Er kan momenteel slechts één transactiehistorie-entiteit worden geconfigureerd. Als er meerdere aankoop-/transactie-entiteiten zijn, kunt u deze samenvoegen in Power Query voordat de gegevens worden opgenomen.
+> - Het model vereist de transactiegeschiedenis van uw klanten. Er kan momenteel slechts één transactiehistorie-entiteit worden geconfigureerd. Als er meerdere aankoop-/transactie-entiteiten zijn, kunt u deze samenvoegen in Power Query vóór de gegevensopname.
 > - Voor aanvullende klantactiviteitsgegevens (optioneel) kunt u echter zoveel klantactiviteitsentiteiten toevoegen als u wilt om in aanmerking te komen voor het model.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Een voorspelling over de levensduurwaarde van een klant maken
@@ -74,7 +78,7 @@ De volgende gegevens zijn vereist en worden, indien gemarkeerd als optioneel, aa
 
 1. Selecteer de tegel **Levensduurwaarde van klanten** en selecteer **Model gebruiken**. 
 
-1. Selecteer in het deelvenster **Levensduurwaarde van klant (preview)** de optie **Aan de slag**.
+1. Selecteer in het deelvenster **Levensduurwaarde van klant** de optie **Aan de slag**.
 
 1. **Geef dit model een naam** en de **Naam van uitvoerentiteit** om ze te onderscheiden van andere modellen of entiteiten.
 

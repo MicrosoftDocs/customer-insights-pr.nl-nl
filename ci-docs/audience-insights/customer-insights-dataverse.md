@@ -1,20 +1,22 @@
 ---
 title: Customer Insights-gegevens in Microsoft Dataverse
 description: Gebruik Customer Insights-entiteiten als tabellen in Microsoft Dataverse.
-ms.date: 10/14/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645212"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355423"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Werken met Customer Insights-gegevens in Microsoft Dataverse
 
@@ -45,6 +47,7 @@ Sommige uitvoerentiteiten van doelgroepinzichten zijn beschikbaar als tabellen i
 - [CustomerMeasure](#customermeasure)
 - [Enrichment](#enrichment)
 - [Prediction](#prediction)
+- [Segmentlidmaatschap](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -121,3 +124,16 @@ Deze tabel bevat de uitvoer van de modelvoorspellingen.
 | Waarden               | JSON-tekenreeks | Lijst met kenmerken die wordt geproduceerd door het model |
 | msdynci_predictionid | GUID        | Deterministische GUID die wordt gegenereerd op basis van msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Segmentlidmaatschap
+
+Deze tabel bevat informatie over het segmentlidmaatschap van de klantprofielen.
+
+| Column        | Type | Description                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | Klantprofiel-id        |
+| SegmentProvider      | String       | App die de segmenten publiceert. Standaardinstelling: Doelgroepinzichten         |
+| SegmentMembershipType | String       | Type van de klant van deze segmentlidmaatschapsrecord. Ondersteunt meerdere typen, zoals Klant, Contactpersoon of Account. Standaardinstelling: Klant  |
+| Segmenten       | JSON-tekenreeks  | Lijst met unieke segmenten waarvan het klantprofiel lid is      |
+| msdynci_identifier  | String   | De unieke id van de segmentlidmaatschapsrecord. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | Deterministische GUID gegenereerd uit `msdynci_identifier`          |

@@ -1,20 +1,19 @@
 ---
 title: Customer Insights-gegevens exporteren naar Constant Contact
 description: Leer hoe u de verbinding configureert en exporteert naar Constant Contact.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 8841945814397ffa70c56638a8bed25499c1a06f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124267"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226397"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Segmenten exporteren naar Constant Contact (preview)
 
@@ -28,10 +27,10 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Constant Contact en 
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- U kunt maximaal 1 miljoen profielen per export exporteren naar Constant Contact.
+- U kunt tot 1 miljoen klantprofielen per export exporteren naar Constant Contact.
 - Exporteren naar Constant Contact is beperkt tot segmenten.
-- Het exporteren van maximaal 1 miljoen profielen naar Constant Contact kan tot 1 uur duren. 
-- Het aantal profielen dat u naar Constant Contact kunt exporteren, is afhankelijk van en wordt beperkt door uw contract met Constant Contact.
+- Het exporteren van tot 1 miljoen klantprofielen naar Constant Contact kan tot 1 uur duren. 
+- Het aantal klantprofielen dat u kunt exporteren naar Constant Contact, is afhankelijk van en wordt beperkt door uw contract met Constant Contact.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Verbinding instellen met Constant Contact
 
@@ -47,7 +46,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Constant Contact en 
 
 1. Selecteer **Verbinden** om de verbinding met Constant Contact te initialiseren.
 
-1. Selecteer **Verifiëren met AdRoll** en geef uw beheerdersreferenties voor Constant Contact op. 
+1. Selecteer **Verifiëren met Constant Contact** en geef uw beheerdersreferenties op voor Constant Contact. 
 
 1. Selecteer **Uzelf toevoegen als exportgebruiker** en geef uw Customer Insights-referenties op.
 
@@ -65,7 +64,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Enter your [**Id van Constant Contact-lijst**](https://app.constantcontact.com/pages/contacts/ui#lists) in. Open een lijst in Constant Contact om de lijst-id in de URL te vinden.
 
-1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. Deze is vereist voor het exporteren van segmenten naar Constant Contact.
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Deze is vereist voor het exporteren van segmenten naar Constant Contact.
 
 1. Optioneel kunt u Voornaam en Achternaam exporteren als extra velden om meer gepersonaliseerde e-mails te maken. Selecteer **Kenmerk toevoegen** om deze velden toe te wijzen.
 

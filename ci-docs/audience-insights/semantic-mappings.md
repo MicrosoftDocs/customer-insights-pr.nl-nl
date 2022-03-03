@@ -1,22 +1,24 @@
 ---
 title: Semantische toewijzingen (preview)
 description: Overzicht van semantische toewijzingen en hoe ze te gebruiken.
-ms.date: 09/28/2021
-ms.service: customer-insights
+ms.date: 12/01/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+searchScope:
+- ci-semantic-mapping
+- customerInsights
+ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622929"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353951"
 ---
-# <a name="semantic-mappings"></a>Semantische toewijzingen
+# <a name="semantic-mappings-preview"></a>Semantische toewijzingen (preview)
 
 Met semantische toewijzingen kunt u uw niet-activiteitsgegevens toewijzen aan vooraf gedefinieerde schema's. Deze schema's helpen doelgroepinzichten om uw gegevenskenmerken beter te begrijpen. Semantische toewijzing en de verstrekte gegevens maken nieuwe inzichten en functies mogelijk in doelgroepinzichten. Voor informatie over het koppelen van uw activiteitsgegevens aan de schema's raadpleegt u de documentatie bij [activiteiten](activities.md).
 
@@ -75,8 +77,7 @@ Met semantische toewijzingen kunt u uw niet-activiteitsgegevens toewijzen aan vo
 
 1. Om een semantische toewijzing op een later tijdstip uit te voeren, selecteert u de semantische toewijzing en selecteert u **Vernieuwen**.
 
-> [!TIP]
-> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Bestaande semantische toewijzingen beheren
 
@@ -91,5 +92,41 @@ Op **Gegevens** > **Semantische toewijzingen (preview)** kunt u al uw opgeslagen
 - **Naam wijzigen**: een dialoogvenster openen waarin u een andere naam kunt invoeren voor de geselecteerde semantische toewijzing. Selecteer **Opslaan** om uw wijzigingen toe te passen.
 
 - **Verwijderen**: een dialoogvenster openen om het verwijderen van de geselecteerde semantische toewijzing te bevestigen. U kunt ook meerdere semantische toewijzingen tegelijk verwijderen door de semantische toewijzingen en het verwijderpictogram te selecteren. Selecteer **Verwijderen** om het verwijderen te bevestigen.
+
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Een semantische entiteitstoewijzing ContactProfile gebruiken om activiteiten op contactniveau te maken
+
+Na het maken van een semantische entiteitstoewijzing *ContactProfile*, kunt u activiteiten van contactpersonen vastleggen. Hiermee kunt u in de activiteitentijdlijn voor een account zien welke contactpersoon verantwoordelijk was voor elke activiteit. De meeste stappen volgen de typische configuratie van activiteitentoewijzing.
+
+   > [!NOTE]
+   > Als u activiteiten op contactpersoonniveau wilt laten werken, moet u zowel het kenmerk **AccountID** als het kenmerk **ContactID** hebben voor elke record binnen uw activiteitsgegevens.
+
+1. [Definieer een toewijzing aan een semantische entiteit *ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) en voer de semantische toewijzing uit.
+
+1. Ga in doelgroepinzichten naar **Gegevens** > **Activiteiten**.
+
+1. Selectee **Activiteit toevoegen** om een nieuwe activiteit te maken.
+
+1. Geef de activiteit een naam, selecteer de bronactiviteitsentiteit en selecteer de primaire sleutel van de activiteitsentiteit.
+
+1. Maak in de stap **Relaties** een indirecte relatie tussen uw activiteitsbrongegevens en accounts, waarbij u uw contactgegevens als tussenpersoon gebruikt. Zie [directe en indirecte relatiepaden](relationships.md#relationship-paths) voor meer informatie.
+   - Voorbeeldrelatie voor een activiteit met de naam *Aankopen*:
+      - **Bronactiviteitsgegevens voor aankopen** > **Contactgegevens** in het kenmerk **ContactID**
+      - **Contactgegevens** > **Accountgegevens** in het kenmerk **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Voorbeeld van het instellen van relaties.":::
+
+1. Selecteer na het instellen van de relatie(s) de optie **Volgende** en voltooi uw activiteitstoewijzingsconfiguratie. Zie [een activiteit definiëren](activities.md) voor gedetailleerde stappen voor het maken van activiteiten.
+
+1. Voer uw activiteitstoewijzingen uit.
+
+1. Uw activiteiten op contactpersoonniveau zijn nu zichtbaar op uw klanttijdlijn.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Eindresultaat na configureren van contactpersoonactiviteiten":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Tijdlijnfiltering voor activiteiten op contactpersoonniveau
+
+Nadat u een activiteittoewijzing op contactpersoonniveau hebt geconfigureerd en uitgevoerd, wordt de activiteitentijdlijn voor uw klanten bijgewerkt. Het bevat hun id's of namen, afhankelijk van uw configuratie *ContactProfile*, voor de activiteiten waarop ze hebben gehandeld. U kunt activiteiten filteren op contactpersonen in de tijdlijn om specifieke contactpersonen te zien waarin u geïnteresseerd bent. Bovendien kunt u alle activiteiten zien die niet aan een specifieke contactpersoon zijn toegewezen door **Activiteiten die niet aan een contactpersoon zijn toegewezen** te selecteren.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Filteropties beschikbaar voor activiteiten op contactpersoonniveau.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -2,19 +2,21 @@
 title: Segmentinzichten voor bestaande segmenten
 description: Krijg inzicht in bestaande segmenten om verschillen en overeenkomsten te zien.
 ms.date: 06/10/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+searchScope:
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 8ae832c69c89bee08b8ef36ed99233b6e8e5a0f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554979"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355561"
 ---
 # <a name="segment-insights-preview"></a>Segmentinzichten (preview)
 

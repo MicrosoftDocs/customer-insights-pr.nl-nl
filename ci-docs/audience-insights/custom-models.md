@@ -3,18 +3,20 @@ title: Aangepaste Machine Learning-modellen | Microsoft Docs
 description: Werk met aangepaste modellen van Azure Machine Learning in Dynamics 365 Customer Insights.
 ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881778"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355045"
 ---
 # <a name="custom-machine-learning-models"></a>Aangepaste Machine Learning-modellen
 
@@ -40,6 +42,8 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
 
    > [!NOTE]
    > Gegevens worden overgedragen tussen uw Customer Insights-exemplaren en de geselecteerde Azure-webservices of -pijplijnen in de werkstroom. Als u gegevens overboekt naar een Azure-service, moet u ervoor zorgen dat de service is geconfigureerd om gegevens te verwerken op de manier en de locatie die voldoen aan de juridische vereisten of voorschriften voor die gegevens voor uw organisatie.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Een nieuwe werkstroom toevoegen
 

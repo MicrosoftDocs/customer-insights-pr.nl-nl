@@ -1,20 +1,23 @@
 ---
 title: Gebruikersrechten beheren
 description: Meer informatie over machtigingen en gebruikersrollen.
-ms.date: 10/27/2020
-ms.reviewer: nimagen
-ms.service: customer-insights
+ms.date: 03/25/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 7de78c0ef71ec5b83870d396de36a7dcabbd14e5
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+searchScope:
+- ci-permissions
+- ci-system-security
+- customerInsights
+ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689214"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355931"
 ---
 # <a name="user-permissions"></a>Gebruikersmachtigingen
 
@@ -31,7 +34,7 @@ Er zijn drie soorten rollen:
 - Bekijk en verken de pagina **Verrijking**.
 - Verken en exporteer entiteiten met behulp van de pagina **Entiteiten**.
 - Bekijk de status van systeemprocessen met behulp van de pagina **Systeem**.
-- Exporteer segmenten van de pagina **Segmenten**.
+- Exports weergeven op de pagina **Exports**.
 - Installeer en gebruik het **Power BI Customer Insights**-dashboard.
 
 ## <a name="contributor"></a>Inzender
@@ -43,6 +46,7 @@ Er zijn drie soorten rollen:
 - Maak segmenten met behulp van de pagina **Segmenten**.
 - Maak meetcriteria met behulp van de pagina **Meetcriteria**.
 - Beheer configuratie en verrijk klantprofielen vanaf de pagina **Verrijking** (alleen voor eigen verrijkingen).
+- Beheer en maak exports op basis van verbindingen die worden gedeeld met inzenders. [Meer informatie over hoe beheerders inzenders toestaan een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Beheerder
 
@@ -50,8 +54,9 @@ Er zijn drie soorten rollen:
 - Wijzig de instellingen op de pagina **Systeem**, inclusief de werktaal en vernieuwingsschema's voor uw systeemprocessen.
 - Bekijk en voeg machtigingen toe met behulp van de pagina **Machtigingen**.
 - Stel zoek- en filterdefinities in voor de pagina Klanten met behulp van de pagina **Index voor zoeken en filteren** (toegankelijk via de pagina **Klanten**).
-- Definieer Dynamics 365 Sales-segmentbestemmingen met behulp van de pagina **Bestemmingen exporteren**.
+- Beheer verbindingen en sta deze toe voor andere gebruikersrollen op de pagina **Verbindingen**.
 - Beheer configuratie en verrijk klantprofielen vanaf de pagina **Verrijking** (voor alle verrijkingen).
+- Beheer en maak exports op de pagina **Exports**.
 - Installeer en gebruik de **invoegtoepassing Klantkaart**.
 - Voeg de **Power Apps-connector** toe en gebruik deze.
 - Gebruik van [Customer Insights-API's](apis.md) inschakelen.
@@ -74,3 +79,6 @@ Ga in doelgroepinzichten naar **Beheer** > **Machtigingen** om te zien welke rol
 - Rollen worden gespecificeerd onder de kolom **Rol**.
 - Selecteer een willekeurige kolomtitel om de resultaten op die kolomwaarde te sorteren.
 - Gebruik het veld **Zoeken** boven aan de pagina om specifieke gebruikers te vinden.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

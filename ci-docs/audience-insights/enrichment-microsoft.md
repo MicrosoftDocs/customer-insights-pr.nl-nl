@@ -1,37 +1,44 @@
 ---
 title: Klantprofielen verrijken met gegevens van Microsoft
-description: Gebruik bedrijfseigen gegevens van Microsoft om uw klantgegevens te verrijken met merk- en interesseaffiniteiten.
-ms.date: 06/14/2021
+description: Eigendomsgegevens van Microsoft gebruiken om uw klantgegevens te verrijken met affiniteiten en share of voice (aandeel in reclametijd).
+ms.date: 11/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+searchScope:
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 77972475c9a448186cee3b1b62eeda7b1996edfc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305150"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355313"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Klantprofielen verrijken met merk- en interesseaffiniteiten (preview)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Klantprofielen verrijken met affiniteiten en share of voice (preview)
 
-Gebruik bedrijfseigen gegevens van Microsoft om uw klantgegevens te verrijken met merk- en interesseaffiniteiten. Deze affiniteiten zijn gebaseerd op gegevens van personen in een vergelijkbare demografische groep als uw klanten. Deze informatie helpt u om uw klanten beter te begrijpen en te segmenteren op basis van hun affiniteit met specifieke merken en interesses.
+Eigendomsgegevens van Microsoft gebruiken om uw klantgegevens te verrijken met merkaffiniteiten, interesseaffiniteiten en share of voice (SoV). Deze affiniteiten en SoV zijn gebaseerd op gegevens van mensen met een vergelijkbare demografie als uw klanten. Deze informatie helpt u om uw klanten beter te begrijpen en in te delen op basis van hun affiniteiten of SoV met specifieke merken en interesses.
 
 Ga in doelgroepinzichten naar **Gegevens** > **Verrijking** om [verrijkingen te configureren en weer te geven](enrichment-hub.md).
 
-Ga naar het tabblad **Ontdekken** en selecteer **Mijn gegevens verrijken** op de tegel **Merken** om de verrijking van merkaffiniteiten te configureren.
+Om verrijking van merkaffiniteiten en SoV te configureren, gaat u naar het tabblad **Ontdekken** en selecteert u **Verrijk mijn gegevens** op de tegel **Merken**.
 
-Ga naar het tabblad **Ontdekken** en selecteer **Mijn gegevens verrijken** op de tegel **Interesses** om de verrijking van interesseaffiniteiten te configureren.
+Om verrijking van interesse-affiniteiten en SoV te configureren, gaat u naar het tabblad **Ontdekken** en selecteert u **Verrijk mijn gegevens** op de tegel **Interesses**.
 
    > [!div class="mx-imgBorder"]
-   > ![Tegels Merken en Interesses](media/BrandsInterest-tile-Hub.png "Tegels Merken en Interesses")
+   > ![Tegels Merken en Interesses.](media/BrandsInterest-tile-Hub.png "Tegels Merken en Interesses")
 
-## <a name="how-we-determine-affinities"></a>Hoe we affiniteiten bepalen
+## <a name="how-we-determine-affinities-and-sov"></a>Hoe worden affiniteiten en SoV bepaald
 
-We gebruiken de online zoekgegevens van Microsoft om affiniteiten te vinden voor merken en interesses in verschillende demografische segmenten (gedefinieerd door leeftijd, geslacht of locatie). Het online zoekvolume voor een merk of interesse bepaalt hoeveel affiniteit een demografisch segment heeft, vergeleken met andere segmenten, voor dat merk of die interesse.
+We gebruiken de online zoekgegevens van Microsoft om affiniteiten en SoV te vinden voor merken en interesses in verschillende demografische segmenten (gedefinieerd op leeftijd, geslacht of locatie). Het online zoekvolume voor een merk of interesse vormt de basis voor het bepalen van de affiniteit of SoV. Elk biedt echter een ander perspectief om uw klanten te begrijpen.
+
+- Affiniteit is een vergelijking tussen demografische segmenten. U kunt deze informatie gebruiken om demografische segmenten te identificeren die de hoogste affiniteit hebben voor een bepaald merk of interesse, in vergelijking met andere segmenten.
+
+- Share of voice is een vergelijking tussen uw geselecteerde merken of interesses. U kunt deze informatie gebruiken om te identificeren welk merk of interesse de hoogste share-of-voice heeft voor een bepaald demografisch segment, in vergelijking met andere merken of interesses die u hebt geselecteerd.
 
 ## <a name="affinity-level-and-score"></a>Affiniteitsniveau en score
 
@@ -48,6 +55,10 @@ Op elk verrijkt klantprofiel geven we twee gerelateerde waarden: affiniteitsnive
 |Laag     | 1-34        |
 
 Afhankelijk van de granulariteit waarmee u de affiniteit wilt meten, kunt u het affiniteitsniveau of de score gebruiken. De affiniteitsscore geeft u een nauwkeurigere controle.
+
+## <a name="share-of-voice-sov"></a>Share of voice (SoV)
+
+We berekenen SoV op een schaal van 100 punten. De totale SoV voor alle merken of interesses voor elk verrijkt klantprofiel is totaal 100. In tegenstelling tot affiniteiten, is SoV relatief aan de merken en interesses die je selecteert. De SoV-waarden voor 'Microsoft' kunnen bijvoorbeeld verschillen als de geselecteerde merken ('Microsoft', 'GitHub') versus ('Microsoft', 'LinkedIn') zijn.
 
 ## <a name="supported-countriesregions"></a>Ondersteunde landen/regio's
 
@@ -82,7 +93,7 @@ Beoordeel uw standaardverrijkingsvoorkeuren en werk deze indien nodig bij.
 
 ### <a name="select-entity-to-enrich"></a>Te verrijken entiteit selecteren
 
-Selecteer **Verrijkte entiteit** en kies de gegevensset die u wilt verrijken met bedrijfsgegevens van Microsoft. U kunt de entiteit Klant selecteren om al uw klantprofielen te verrijken of een segmententiteit selecteren om alleen klantprofielen in dat segment te verrijken.
+Selecteer **Verrijkte entiteit** en kies de gegevensset die u wilt verrijken met gegevens van Microsoft. U kunt de entiteit Klant selecteren om al uw klantprofielen te verrijken of een segmententiteit selecteren om alleen klantprofielen in dat segment te verrijken.
 
 ### <a name="map-your-fields"></a>Uw velden toewijzen
 
@@ -116,26 +127,25 @@ Voer de verrijking uit na het configureren van merken, interesses en de veldtoew
 
 Afhankelijk van de omvang van uw klantgegevens kan het enkele minuten duren voordat een verrijking is voltooid.
 
-> [!TIP]
-> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Zie details** voor een van de taken van de functie vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="enrichment-results"></a>Verrijkingsresultaten
 
 Na het uitvoeren van het verrijkingsproces gaat u naar **Mijn verrijkingen** om het totale aantal verrijkte klanten en een uitsplitsing van merken of interesses in de verrijkte klantprofielen te bekijken.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Voorbeeldweergave van resultaten na het uitvoeren van het verrijkingsproces":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Voorbeeldweergave van resultaten na het uitvoeren van het verrijkingsproces.":::
 
-Bekijk de verrijkte gegevens door **Verrijkte gegevens weergeven** te selecteren in de grafiek. Verrijkte gegevens voor merken gaan naar de entiteit **BrandAffinityFromMicrosoft**. Gegevens voor interesses bevinden zich in de entiteit **InterestAffinityFromMicrosoft**. U vindt deze entiteiten ook in de groep **Verrijking** in **Gegevens** > **Entiteiten**.
+U vindt een grafiek met het aantal verrijkte klantprofielen in de loop van de tijd en voorbeelden van de verrijkte entiteiten. Bekijk de verrijkte gegevens door **Bekijk meer** in de grafieken **Affiniteitsniveau** of **Share of Voice** te selecteren. Verrijkte data voor merken gaat naar de entiteiten **MerkAffiniteitVanMicrosoft** en **MerkShareOfVoiceVanMicrosoft**. Gegevens voor interesses staan in de entiteiten **InteresseAffiniteitVanMicrosoft** en **InteresseShareOfVoiceVanMicrosoft**. U vindt deze entiteiten ook in de groep **Verrijking** in **Gegevens** > **Entiteiten**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Zie verrijkingsgegevens op de klantenkaart
 
-Merk- en interesse-affiniteiten kunnen ook worden bekeken op individuele klantenkaarten. Ga naar **Klanten** en selecteer een klantprofiel. Op de klantkaart vindt u grafieken voor de merken of interesses waarvoor mensen in het demografische profiel van die klant affiniteit hebben.
+Merk- en interesse-SoV kunnen ook op individuele klantenkaarten worden weergegeven. Ga naar **Klanten** en selecteer een klantprofiel. Op de klantenkaart vindt u grafieken voor het merk- of de interesse-SoV op basis van mensen in het demografische profiel van die klant.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Klantenkaart met verrijkte gegevens":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Klantenkaart met verrijkte gegevens.":::
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](segments.md) en [metingen](measures.md), en [exporteer de gegevens](export-destinations.md) zelfs om gepersonaliseerde ervaringen aan uw klanten te leveren.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,27 +1,30 @@
 ---
 title: Klantprofielen zoeken en filteren
 description: Vind snel informatie over geharmoniseerde klantprofielen en filter op opgegeven kenmerken.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+searchScope:
+- ci-search-filter
+- customerInsights
+ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469959"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354503"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Klantprofielen: zoek- en filterindex
 
 Het resultaat van het harmoniseren van uw klantgegevens is een entiteit Klantprofiel die een geharmoniseerde weergave biedt van uw totale klantenbestand. Als u snel [informatie wilt vinden over een specifieke klant of groep klanten](customer-profiles.md), kunt u de mogelijkheden **Zoeken** en **Filteren** configureren op de pagina **Klanten**. Lees verder om te zien hoe beheerders de kenmerken op de pagina **Index voor zoeken en filteren** kunnen bewerken, die beschikbaar zijn voor gebruikers om te zoeken en te filteren.
 
-> [!div class="mx-imgBorder"]
-> ![Zoekfilter.](media/search-filter.png "Zoekfilter")
+   :::image type="content" source="media/search-filter.png" alt-text="Zoekfilter":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Velden toevoegen en kenmerken opgeven
 

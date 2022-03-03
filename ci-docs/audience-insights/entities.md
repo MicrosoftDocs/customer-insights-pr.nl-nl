@@ -3,18 +3,20 @@ title: Entiteiten en gegevenssets
 description: Gegevens weergeven op de pagina Entiteiten.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900421"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355292"
 ---
 # <a name="entities-in-audience-insights"></a>Entiteiten in doelgroepinzichten
 
@@ -41,7 +43,7 @@ De pagina **Entiteiten** bevat entiteiten en de volgende kolommen:
 > ![Veldentabel.](media/data-manager-entities-fields.PNG "Veldentabel")
 
 > [!NOTE]
-> Deze pagina toont slechts een voorbeeld van de gegevens van uw entiteit. Als u de volledige gegevensset wilt bekijken, gaat u naar de pagina **Gegevensbronnen**, selecteert u **Bewerken** en bekijkt u de gegevens van deze entiteit met de Power Query-editor, zoals uitgelegd in [Gegevensbronnen](data-sources.md).
+> Deze pagina toont slechts een voorbeeld van de gegevens van uw entiteit. Als u de volledige gegevensset wilt bekijken, gaat u naar de pagina **Gegevensbronnen**, selecteert u **Bewerken** en bekijkt u de gegevens van deze entiteit met de Power Query-editor, zoals wordt uitgelegd in [Gegevensbronnen](data-sources.md).
 
 Voor meer informatie over de gegevens die zijn opgenomen in de entiteit biedt de kolom **Overzicht** u een aantal belangrijke kenmerken van de gegevens, zoals nullen, ontbrekende waarden, unieke waarden, tellingen en distributies, zoals van toepassing op uw gegevens. Selecteer het grafiekpictogram om het overzicht van de gegevens weer te geven.
 
@@ -71,7 +73,9 @@ Velden van een opgenomen gegevensbron kunnen beschadigde gegevens bevatten. Reco
 
 In een kolom 'verjaardag' bijvoorbeeld is het gegevenstype ingesteld op 'datum'. Voor een klantrecord is de verjaardag ingevoerd als '01/01/19777'. Het systeem markeert dit record als beschadigd. Iemand kan nu in het bronsysteem de geboortedatum wijzigen in '1977'. Na een automatische vernieuwing van gegevensbronnen heeft het veld nu een geldige indeling en wordt het record verwijderd uit de beschadigde entiteit. 
 
-Ga naar **Gegevens** > **Entiteiten** en zoek naar de beschadigde entiteiten in de sectie **Systeem**. Naamgevingsschema van beschadigde entiteiten: 'DataSourceName_EntityName_corrupt'.
+Ga naar **Gegevens** > **Entiteiten** en zoek naar de beschadigde entiteiten in de sectie **Systeem**. Naamgevingsschema van beschadigde entiteiten: 'DataSourceName_EntityName_corrupt'. Selecteer een beschadigde entiteit om alle beschadigde velden en de reden op individueel recordniveau te identificeren.
+> [!div class="mx-imgBorder"]
+> ![Reden van beschadiging.](media/corruption-reason.png "Reden van beschadiging")
 
 Customer Insights verwerkt nog steeds beschadigde records. Zij kunnen echter problemen veroorzaken wanneer met de uniforme gegevens wordt gewerkt.
 
