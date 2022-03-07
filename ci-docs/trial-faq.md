@@ -3,17 +3,18 @@ title: FAQ proefversie - Dynamics 365 Customer Insights
 description: Oplossingen voor veelgestelde vragen over de installatie en het beheer van de proefversie van Customer Insights. Meer informatie over het oplossen van platform- en app-specifieke problemen.
 author: m-hartmann
 ms.author: mhart
-ms.date: 02/10/2022
+ms.date: 09/30/2021
 ms.topic: get-started
+ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
+ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229489"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "7642860"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Veelgestelde vragen over de proefversie van Dynamics 365 Customer Insights
 
@@ -23,7 +24,7 @@ ms.locfileid: "8229489"
 
 Deze app is een cloudservice waarvoor geen andere software op de computers van gebruikers hoeft te zijn geïnstalleerd dan een bijgewerkte webbrowser, hoewel er enkele beperkingen gelden. Voor de beste ervaring met de proefversie raden we af de proefsite te benaderen in de incognitomodus en kiest u het best de proeflocatie die het dichtst bij u in de buurt is. [Meer informatie over vereisten voor webtoepassingen.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Hoe meld ik me aan voor de proefversie zonder een Microsoft 365-tenant?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Hoe registreer ik me voor de proefversie zonder een Microsoft 365-tenant?
 
 U kunt een niet-zakelijk e-mailadres invoeren en wij maken een account en tenant voor u aan.
 
@@ -42,7 +43,7 @@ Wanneer u zich registreert voor de proefversie, ontvangt u een e-mail met de det
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Hoe voeg ik meer gebruikers toe aan een proefversie?
 
-Als u gebruikers wilt toevoegen, gaat u naar het [Microsoft 365-beheercentrum](https://admin.microsoft.com) met het proefbeheeraccount. Volg de [richtlijnen van het beheercentrum](/microsoft-365/admin/add-users/add-users) om gebruikers toe te voegen tot de limiet voor proeflicenties. Als de gebruiker die u toevoegt al een Microsoft 365-account heeft, wijst u aan hem of haar een geschikte beveiligingsrol toe in de proeforganisatie. Zie [Een beveiligingsrol toewijzen aan een gebruiker](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user) voor meer informatie.
+Als u gebruikers wilt toevoegen, gaat u naar het [Microsoft 365-beheercentrum](https://admin.microsoft.com) met de proefbeheeraccount. Volg de [richtlijnen van het beheercentrum](/microsoft-365/admin/add-users/add-users) om gebruikers toe te voegen tot de limiet voor proeflicenties. Als de gebruiker die u toevoegt al een Microsoft 365-account heeft, wijst u aan hem of haar een geschikte beveiligingsrol toe in de proeforganisatie. Zie [Een beveiligingsrol toewijzen aan een gebruiker](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user) voor meer informatie.
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Hoeveel gebruikers kan ik toevoegen aan mijn proefomgeving?
 
@@ -62,7 +63,7 @@ U kunt de proefperiode direct in de app verlengen. U kunt uw proefperiode één 
 
 Over het algemeen raden we aan opnieuw te beginnen met uw eigen gegevens bij het upgraden naar de betaalde versie van Customer Insights. 
 
-Optioneel, als u alleen doelgroepinzichten gebruikt, kunt u uw gegevens vanuit een proefomgeving kopiëren als u Customer Insights aanschaft. U moet de beheerder van de Customer Insights-proefversie en de globale beheerder van uw Microsoft 365-tenant zijn, of de Dynamics 365-beheerder in uw organisatie, om de instellingen van een proefomgeving naar een betaalde omgeving te kunnen migreren. 
+Optioneel, als u alleen doelgroepinzichten gebruikt, kunt u uw gegevens vanuit een proefomgeving kopiëren als u Customer Insights aanschaft. U moet de beheerder van de Customer Insights-proefversie en de algemene beheerder van uw Microsoft 365-tenant zijn, of de Dynamics 365-beheerder in uw organisatie om de instellingen van een proefomgeving naar een betaalde omgeving te migreren. 
 
 Nadat u voor de eerste keer bent ingelogd op uw betaalde exemplaar van Customer Insights, wordt u gevraagd een nieuwe omgeving te maken. In dit proces kunt u ervoor kiezen de configuratie uit een bestaande omgeving te kopiëren en de meeste instellingen te migreren. Als u de hierboven genoemde machtigingen hebt, wordt de proefomgeving in deze lijst weergegeven. Zie [De omgevingsconfiguratie kopiëren](audience-insights/manage-environments.md#copy-the-environment-configuration) voor meer informatie.
 
@@ -81,9 +82,8 @@ Nadat u zich hebt geregistreerd voor de proefversie, komt u terecht in het hoofd
 
 De meeste functies van Customer Insights zijn beschikbaar in de proefversie.
 
-De volgende functies zijn **niet beschikbaar**: 
+De volgende functie is niet beschikbaar: 
 - U kunt geen nieuwe omgevingen maken die uw eigen Azure Data Lake Storage-account gebruiken.
-- U kunt de proefomgeving niet verwijderen. 
 
 ### <a name="how-long-does-the-trial-last"></a>Hoe lang duurt de proefversie?
 

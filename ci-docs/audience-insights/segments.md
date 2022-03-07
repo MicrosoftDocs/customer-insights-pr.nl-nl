@@ -1,94 +1,169 @@
 ---
-title: Segmenten in doelgroepinzichten
-description: Overzicht van segmenten en hoe u segmenten kunt maken en beheren.
-ms.date: 11/01/2021
+title: Segmenten maken en beheren
+description: Maak segmenten van klanten om deze te groeperen op basis van verschillende kenmerken.
+ms.date: 10/15/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
-author: JimsonChalissery
-ms.author: jimsonc
-ms.reviewer: mhart
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: jimsonc
 manager: shellyha
-searchScope:
-- ci-customers-page
-- ci-enrichment-details
-- ci-segments
-- ci-segment-details
-- customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 6931110c2ae93cd2792d319aa5a34f0df3088552
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355977"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405517"
 ---
-# <a name="segments-overview"></a>Overzicht van segmenten
+# <a name="create-and-manage-segments"></a>Segmenten maken en beheren
 
 Met segmenten kunt u uw klanten groeperen op basis van demografische, transactionele of gedragskenmerken. U kunt segmenten gebruiken om promotiecampagnes, verkoopactiviteiten en acties voor klantenondersteuning te targeten om uw zakelijke doelstellingen te bereiken.
 
-Klantprofielen die overeenkomen met de filters van een segmentdefinitie worden aangeduid als *leden* van een segment. Er zijn enkele [servicelimieten](/dynamics365/customer-insights/service-limits) van toepassing.
+U kunt complexe filters definiëren rondom de entiteit Klantprofiel en de bijbehorende entiteiten. Elk segment maakt na verwerking een set klantrecords die u kunt exporteren en waarop u actie kunt ondernemen. Er zijn enkele [servicelimieten](service-limits.md) van toepassing.
+
+Tenzij anders vermeld, zijn alle segmenten **Dynamische segmenten**, die worden vernieuwd volgens een terugkerend schema.
+
+Het volgende voorbeeld illustreert de segmentatiemogelijkheid. We hebben een segment gedefinieerd voor klanten die in de afgelopen 90 dagen voor ten minste $ 500 aan goederen hebben besteld *en* die betrokken waren bij een klantenserviceoproep die werd geëscaleerd.
+
+> [!div class="mx-imgBorder"]
+> ![Meerdere groepen](media/segmentation-group1-2.png "Meerdere groepen")
 
 ## <a name="create-a-new-segment"></a>Een nieuw segment maken
 
-Er zijn meerdere manieren om een nieuw segment te maken: 
+Segmenten worden beheerd op de pagina **Segmenten**.
 
-# <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
+1. Ga in doelgroepinzichten naar de pagina **Segmenten**.
 
-- Complex segment met segmentbouwer: [Bouw onze eigen](segment-builder.md#create-a-new-segment) 
-- Eenvoudige segmenten met één operator: [Snel segment](segment-builder.md#quick-segments) 
-- Via AI mogelijk gemaakte manier om vergelijkbare klanten te vinden: [Vergelijkbare klanten](find-similar-customer-segments.md) 
-- Via AI mogelijk gemaakte suggesties op basis van meetcriteria of kenmerken: [Voorgestelde segmenten om meetcriteria te verbeteren](suggested-segments.md) 
-- Suggesties op basis van activiteiten: [Voorgestelde segmenten op basis van klantactiviteit](suggested-segments-activity.md) 
+2. Selecteer **Nieuw** > **Leeg segment**.
 
-# <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
+3. Kies in het deelvenster **Nieuw segment** een segmenttype en geef een **Naam** op.
 
-- Complex segment met segmentbouwer: [Bouw onze eigen](segment-builder.md#create-a-new-segment)
+   Geef optioneel een weergavenaam op en een beschrijving die helpt bij het identificeren van het segment.
 
----
+4. Selecteer **Volgende** om naar de pagina **Segmentbouwer** te gaan waar u een groep definieert. Een groep is een set klanten.
+
+5. Kies de entiteit die het kenmerk bevat waarop u wilt segmenteren.
+
+6. Kies het kenmerk waarop u wilt segmenteren. Dit kenmerk kan een van de volgende vier waardetypen hebben: numeriek, tekenreeks, datum of booleaans.
+
+7. Kies een operator en een waarde voor het geselecteerde kenmerk.
+
+   > [!div class="mx-imgBorder"]
+   > ![Aangepast groepsfilter](media/customer-group-numbers.png "Klantgroepsfilter")
+
+   |Getal |Definitie  |
+   |---------|---------|
+   |1     |Entity          |
+   |2     |Kenmerk          |
+   |3    |Operator         |
+   |4    |waarde         |
+
+8. Als de entiteit via [relaties](relationships.md) met de geharmoniseerde klantentiteit is verbonden, moet u het relatiepad definiëren om een geldig segment te maken. Voeg de entiteiten uit het relatiepad toe totdat u de entiteit **Klant : CustomerInsights** in de vervolgkeuzelijst kunt selecteren. Kies vervolgens **Alle records** voor elke conditie.
+
+   > [!div class="mx-imgBorder"]
+   > ![Relatiepad tijdens het maken van segmenten](media/segments-multiple-relationships.png "Relatiepad tijdens het maken van segmenten")
+
+9. Selecteer **Opslaan** om uw segment op te slaan. Uw segment wordt opgeslagen en verwerkt als alle vereisten zijn gevalideerd. Anders wordt het opgeslagen als concept.
+
+10. Selecteer **Terug naar segmenten** om terug te gaan naar de pagina **Segmenten**.
 
 ## <a name="manage-existing-segments"></a>Bestaande segmenten beheren
 
-Ga naar de pagina **Segmenten** om al uw opgeslagen segmenten te bekijken en te beheren.
+Op de pagina **Segmenten** kunt u al uw opgeslagen segmenten bekijken en beheren.
 
 Elk segment wordt weergegeven door een rij met aanvullende informatie over het segment.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Geselecteerd segment met vervolgkeuzelijst met opties en beschikbare opties.":::
+U kunt de segmenten in een kolom sorteren door de kolomkop te selecteren.
+
+Gebruik het vak **Zoeken** in de rechterbovenhoek om de segmenten te filteren.
+
+> [!div class="mx-imgBorder"]
+> ![Opties voor het beheren van een bestaand segment](media/segments-selected-segment.png "Opties voor het beheren van een bestaand segment")
 
 De volgende actie is beschikbaar wanneer u een segment selecteert:
 
 - **Bekijk** de segmentdetails, inclusief trend van ledentelling en voorbeeld van segmentleden.
 - **Bewerk** het segment om de eigenschappen te wijzigen.
-- **Maak een duplicaat** van een segment. U kunt ervoor kiezen om de eigenschappen meteen te bewerken of gewoon het duplicaat op te slaan.
 - **Vernieuw** het segment om de nieuwste gegevens op te nemen.
 - **Activeer** of **Deactiveer** het segment. Segmenten hebben twee mogelijke statussen: actief of inactief. Deze statussen zijn handig bij het bewerken van een segment. Voor inactieve segmenten bestaat de segmentdefinitie, maar bevat deze nog geen klanten. Wanneer u een segment activeert, verandert de status van 'inactief' in 'actief' en wordt gezocht naar klanten die voldoen aan de segmentdefinitie. Als een [geplande vernieuwing](system.md#schedule-tab) is geconfigureerd, hebben inactieve segmenten de **Status** **Overgeslagen**, wat aangeeft dat er niet eens is geprobeerd te vernieuwen. Wanneer een inactief segment wordt geactiveerd, wordt het vernieuwd en opgenomen in geplande vernieuwingen.
   U kunt ook de functionaliteit **Later plannen** in de vervolgkeuzelisjt **Activeren/Deactiveren** gebruiken om een toekomstige datum en tijd op te geven voor activering en deactivering van een bepaald segment.
 - **Wijzig de naam** van het segment.
 - **Download** de lijst van leden als .CSV-bestand.
-- **Exports beheren** om exportgerelateerde segmenten te bekijken en te beheren. [Meer informatie over exports.](export-destinations.md)
+- **Toevoegen aan** verzendt de lijst met klant-id's in het segment voor verwerking in een andere applicatie.
 - **Verwijder** het segment.
 
 ## <a name="refresh-segments"></a>Segmenten vernieuwen
 
 U kunt alle segmenten tegelijk vernieuwen door **Alles vernieuwen** te selecteren op de pagina **Segmenten** of u kunt een of meerdere segmenten vernieuwen wanneer u deze selecteert en **Vernieuwen** uit de opties kiezen. U kunt ook een terugkerende vernieuwing configureren via **Beheerder** > **Systeem** > **Schema**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Er zijn [zes soorten status](system.md#status-types) voor taken/processen. Bovendien zijn de meeste processen [afhankelijk van andere stroomafwaartse processen](system.md#refresh-policies). U kunt de status van een proces selecteren om voortgangsdetails te zien van de volledige taak. Na het selecteren van **Details bekijken** voor een van de taken vindt u aanvullende informatie: verwerkingstijd, de laatste verwerkingsdatum en alle fouten en waarschuwingen die bij de taak horen.
 
-## <a name="export-segments"></a>Segmenten exporteren
+## <a name="download-and-export-segments"></a>Segmenten downloaden en exporteren
 
-U kunt een segment exporteren vanaf de pagina met segmenten of de [pagina met exports](export-destinations.md). 
+U kunt uw segmenten downloaden naar een CSV-bestand of ze exporteren naar Dynamics 365 Sales.
 
-1. Ga naar de pagina **Segmenten**.
+### <a name="download-segments-to-a-csv-file"></a>Segmenten downloaden naar een CSV-bestand
 
-1. Selecteer **Meer weergeven [...]** voor het segment dat u wilt exporteren.
+1. Ga in doelgroepinzichten naar de pagina **Segmenten**.
 
-1. Selecteer **Exports beheren** uit de vervolgkeuzelijst met acties.
+2. Selecteer het beletselteken in de tegel van een specifiek segment.
 
-1. De pagina **Exports (preview) voor segment** wordt geopend. U kunt alle geconfigureerde exports bekijken gegroepeerd op of ze het huidige segment bevatten of niet.
+3. Selecteer **Downloaden als CSV** in de vervolgkeuzelijst Acties.
 
-   1. Om het geselecteerde segment aan een export toe te voegen, selecteert u **Bewerken** en selecteert u het corresponderende segment. Sla vervolgens op. In omgevingen voor individuele klanten kunt u in plaats daarvan de export in de lijst selecteren en selecteert u **Segment toevoegen** om hetzelfde resultaat te bereiken.
+### <a name="export-segments-to-dynamics-365-sales"></a>Segmenten exporteren naar Dynamics 365 Sales
 
-   1. Als u een nieuwe export wilt maken met het geselecteerde segment, selecteert u **Export toevoegen**. Zie [Een nieuwe export instellen](export-destinations.md#set-up-a-new-export) voor meer informatie over het maken van exports..
+Voordat een beheerder segmenten gaat exporteren naar Dynamics 365 Sales, moet deze [de exportbestemming maken](export-destinations.md) voor Dynamics 365 Sales.
 
-1. Selecteer **Vorige** om terug te gaan naar de hoofdpagina voor segmenten.
+1. Ga in doelgroepinzichten naar de pagina **Segmenten**.
+
+2. Selecteer het beletselteken in de tegel van een specifiek segment.
+
+3. Selecteer **Toevoegen aan** in de vervolgkeuzelijst met acties en selecteer de exportbestemming waarnaar u de gegevens wilt verzenden.
+
+## <a name="draft-mode-for-segments"></a>Conceptmodus voor segmenten
+
+Als niet aan alle vereisten voor het verwerken van een segment is voldaan, kunt u het segment als concept opslaan en openen vanaf de pagina **Segmenten**.
+
+Het wordt opgeslagen als een inactief segment en kan niet worden geactiveerd totdat het geldig is.
+
+## <a name="add-more-conditions-to-a-group"></a>Meer voorwaarden toevoegen aan een groep
+
+Als u meer voorwaarden aan een groep wilt toevoegen, kunt u twee logische operators gebruiken:
+
+- **EN**-operator: er moet aan beide voorwaarden worden voldaan als onderdeel van het segmentatieproces. Deze optie is vooral handig wanneer u voorwaarden definieert voor verschillende entiteiten.
+
+- **OF**-operator: er moet aan een van beide voorwaarden worden voldaan als onderdeel van het segmentatieproces. Deze optie is vooral handig wanneer u meerdere voorwaarden definieert voor dezelfde entiteit.
+
+   > [!div class="mx-imgBorder"]
+   > ![OF-operator waarbij aan een van beide voorwaarden moet worden voldaan](media/segmentation-either-condition.png "OF-operator waarbij aan een van beide voorwaarden moet worden voldaan")
+
+Het is momenteel mogelijk om een **OF**-operator te nesten onder een **EN**-operator, maar niet andersom.
+
+## <a name="combine-multiple-groups"></a>Meerdere groepen combineren
+
+Elke groep produceert een specifieke set klanten. U kunt deze groepen combineren om de klanten op te nemen die nodig zijn voor uw bedrijfsscenario.
+
+1. Ga in doelgroepinzichten naar de pagina **Segmenten** en selecteer een segment.
+
+2. Selecteer **Groep toevoegen**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Klantengroep - Groep toevoegen](media/customer-group-add-group.png "Klantengroep - Groep toevoegen")
+
+3. Selecteer een van de volgende set-operators: **Verbinding**, **Overlappen** of **Behalve**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Klantengroep - Verbinding toevoegen](media/customer-group-union.png "Klantengroep - Verbinding toevoegen")
+
+   Selecteer een setoperator om een nieuwe groep te definiëren. Sla verschillende groepen op om te bepalen welke gegevens moeten worden behouden:
+
+   - **Verbinding** verbindt de twee groepen.
+
+   - **Overlappen** overlapt de twee groepen. Alleen gegevens die *gemeenschappelijk* zijn voor beide groepen, worden behouden in de geharmoniseerde groep.
+
+   - **Behalve** combineert de twee groepen. Alleen gegevens in groep A die *niet gemeenschappelijk* zijn voor gegevens in groep B, worden behouden.
 
 ## <a name="view-processing-history-and-segment-members"></a>Verwerkingsgeschiedenis en segmentleden weergeven
 
@@ -101,7 +176,7 @@ Het bovenste deel van de pagina bevat een trendgrafiek waarin wijzigingen in het
 U kunt het tijdsbereik van de visualisatie bijwerken.
 
 > [!div class="mx-imgBorder"]
-> ![Tijdsbereik van segment.](media/segment-time-range.png "Tijdsbereik van segment")
+> ![Tijdsbereik van segment](media/segment-time-range.png "Tijdsbereik van segment")
 
 Het onderste gedeelte bevat een lijst met de segmentleden.
 
@@ -110,5 +185,40 @@ Het onderste gedeelte bevat een lijst met de segmentleden.
 >
 >De lijst is een voorbeeld van de overeenkomende segmentleden en toont de eerste 100 records van uw segment, zodat u het snel kunt evalueren en indien nodig de definities kunt bekijken. Als u alle overeenkomende records wilt bekijken, moet u [het segment exporteren](export-destinations.md).
 
+## <a name="quick-segments"></a>Snelle segmenten
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Naast de segment-builder is er nog een ander pad om segmenten te maken. Met snelle segmenten kunt u snel met een enkele operator en met directe inzichten eenvoudige segmenten bouwen.
+
+1. Selecteer op de pagina **Segmenten** de optie **Nieuw** > **Snel maken van**.
+
+   - Selecteer de optie **Profielen** om een segment te bouwen dat is gebaseerd op de geharmoniseerde entiteit Klant.
+   - Selecteer de optie **Meetcriteria** om een segment te bouwen rond elk van de typen meetcriteria voor klantkenmerken die u eerder hebt gemaakt op de pagina **Meetcriteria**.
+   - Selecteer de optie **Intelligentie** om een segment op te bouwen rond een van de uitvoerentiteiten die u hebt gegenereerd met behulp van de mogelijkheden **Voorspellingen** of **Aangepaste modellen**.
+
+2. Selecteer in het dialoogvenster **Nieuw snel segment** een kenmerk uit de vervolgkeuzelijst **Veld**.
+
+3. Het systeem biedt enkele aanvullende inzichten waarmee u betere segmenten van uw klanten kunt maken.
+   - Voor categorievelden geven we tien topposities van klanten weer. Kies een **Waarde** en selecteer **Evalueren**.
+
+   - Voor een numeriek kenmerk laat het systeem zien welke kenmerkwaarde onder het percentiel van elke klant valt. Kies een **Operator** en een **Waarde** en selecteer vervolgens **Evalueren**.
+
+4. Het systeem zal u van een **Geschatte segmentgrootte** voorzien. U kunt kiezen of u het door u gedefinieerde segment wilt genereren of het eerst opnieuw wilt bezoeken om een andere segmentgrootte te krijgen.
+
+    > [!div class="mx-imgBorder"]
+    > ![Naam en schatting voor een snel segment](media/quick-segment-name.png "Naam en schatting voor een snel segment")
+
+5. Geef een **Naam** op voor uw segment. Voer desgewenst een **Weergavenaam** in.
+
+6. Selecteer **Opslaan** om uw segment te maken.
+
+7. Nadat de verwerking van segment is voltooid, kunt u het bekijken zoals elk ander segment dat u hebt gemaakt.
+
+Voor de volgende scenario's adviseren wij het gebruik van de segmentbouwer in plaats van de mogelijkheid voor aanbevolen segmenten:
+
+- Segmenten maken met filters voor categorievelden waarbij de operator anders is dan de **Is**-operator
+- Segmenten maken met filters voor numerieke velden waarvan de operator anders is dan de operators **Tussen**, **Groter dan** en **Kleiner dan**
+- Segmenten maken met filters op datumtypevelden
+
+## <a name="next-steps"></a>Volgende stappen
+
+[Exporteer een segment](export-destinations.md) en verken de [klantenkaart](customer-card-add-in.md) en [connectors](export-power-bi.md) om inzichten op klantniveau te verkrijgen.

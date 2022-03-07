@@ -1,23 +1,20 @@
 ---
-title: Vergelijkbare klanten zoeken met AI (met video)
+title: Vergelijkbare klanten zoeken met AI
 description: Vergelijkbare klantsegmenten zoeken met kunstmatige intelligentie.
 ms.date: 06/25/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-segment-builder
-- ci-segment-insights
-- customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355239"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799676"
 ---
 # <a name="similar-customers-preview"></a>Vergelijkbare klanten (preview)
 

@@ -1,27 +1,24 @@
 ---
 title: Customer Insights-gegevens naar een Azure Blob Storage exporteren
 description: Leer hoe u de verbinding configureert en exporteert naar Blob-opslag.
-ms.date: 10/06/2021
+ms.date: 06/30/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5ea8e58822e1bb901552ff1de960d5340d340003
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: e38fc06a948178fcbc62c08a4cf4816e1d030e79
+ms.sourcegitcommit: 656b1a6cdff37ba4f808311fd0327ab38e02ed13
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231245"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6318293"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmentlijst en andere gegevens exporteren naar Azure Blob Storage (preview)
 
 Sla uw Customer Insights-gegevens op in een Blob-opslag of gebruik deze om uw gegevens over te brengen naar andere toepassingen.
-
-## <a name="known-limitations"></a>Bekende beperkingen
-
-1. Voor Azure Blob Storage kunt u kiezen tussen [Standaardprestaties en Premium prestatielaag](/azure/storage/blobs/storage-blob-performance-tiers). Als u de Premium prestatielaag kiest, selecteert u de premium [blok-blobs als accounttype](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 
 ## <a name="set-up-the-connection-to-blob-storage"></a>De verbinding met Blob Storage instellen
 
@@ -64,7 +61,7 @@ U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-
 
 Geëxporteerde gegevens worden opgeslagen in de Blob Storage-container die u hebt geconfigureerd. De volgende mappaden worden automatisch in uw container gemaakt:
 
-- Voor bronentiteiten en entiteiten die door het systeem zijn gegenereerd:  
+- Voor bronentiteiten en entiteiten die door het systeem zijn gegenereerd:   
   `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Voorbeeld: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
  

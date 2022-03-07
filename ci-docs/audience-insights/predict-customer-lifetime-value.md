@@ -3,24 +3,20 @@ title: Voorspelling van de levensduurwaarde van klanten
 description: Voorspel het inkomstenpotentieel voor actieve klanten in de toekomst.
 ms.date: 02/05/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-searchScope:
-- ci-predictions
-- ci-create-prediction
-- ci-custom-models
-- customerInsights
-ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355783"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954573"
 ---
-# <a name="customer-lifetime-value-clv-prediction"></a>Voorspelling van de levensduurwaarde van klanten
+# <a name="customer-lifetime-value-clv-prediction-preview"></a>Voorspelling van de levensduurwaarde van klant (preview)
 
 Voorspel potentiële waarde (inkomsten) die individuele actieve klanten voor uw bedrijf zullen binnenhalen gedurende een bepaalde toekomstige periode. Deze functie kan u helpen verschillende doelen te bereiken: 
 - Klanten met hoge waarde identificeren en dit inzicht verwerken
@@ -69,7 +65,7 @@ De volgende gegevens zijn vereist en worden, indien gemarkeerd als optioneel, aa
     - Compleetheid van gegevens: minder dan 20% ontbrekende waarden in verplichte velden in de invoergegevens   
 
 > [!NOTE]
-> - Het model vereist de transactiegeschiedenis van uw klanten. Er kan momenteel slechts één transactiehistorie-entiteit worden geconfigureerd. Als er meerdere aankoop-/transactie-entiteiten zijn, kunt u deze samenvoegen in Power Query vóór de gegevensopname.
+> - Het model vereist de transactiegeschiedenis van uw klanten. Er kan momenteel slechts één transactiehistorie-entiteit worden geconfigureerd. Als er meerdere aankoop-/transactie-entiteiten zijn, kunt u deze samenvoegen in Power Query voordat de gegevens worden opgenomen.
 > - Voor aanvullende klantactiviteitsgegevens (optioneel) kunt u echter zoveel klantactiviteitsentiteiten toevoegen als u wilt om in aanmerking te komen voor het model.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Een voorspelling over de levensduurwaarde van een klant maken
@@ -78,7 +74,7 @@ De volgende gegevens zijn vereist en worden, indien gemarkeerd als optioneel, aa
 
 1. Selecteer de tegel **Levensduurwaarde van klanten** en selecteer **Model gebruiken**. 
 
-1. Selecteer in het deelvenster **Levensduurwaarde van klant** de optie **Aan de slag**.
+1. Selecteer in het deelvenster **Levensduurwaarde van klant (preview)** de optie **Aan de slag**.
 
 1. **Geef dit model een naam** en de **Naam van uitvoerentiteit** om ze te onderscheiden van andere modellen of entiteiten.
 
@@ -153,6 +149,7 @@ Gegevens die belangrijke klantinteracties weerspiegelen (zoals web, klantenservi
 
 1. Selecteer **Volgende**.
 
+
 ### <a name="review-and-run-the-model-configuration"></a>De modelconfiguratie controleren en uitvoeren
 
 1. In de stap **Uw modelgegevens controleren** valideert u de configuratie van de voorspelling. U kunt teruggaan naar elk willekeurig deel van de voorspellingsconfiguratie door **Bewerken** te selecteren onder de weergegeven waarde. U kunt ook een configuratiestap selecteren via de voortgangsindicator.
@@ -173,10 +170,11 @@ Gegevens die belangrijke klantinteracties weerspiegelen (zoals web, klantenservi
 - **Status**: de status of the voorspellingsuitvoering.
     - **In de wachtrij**: voorspelling wacht tot andere processen voltooid zijn.
     - **Vernieuwen**: de voorspelling wordt momenteel uitgevoerd om resultaten te produceren die naar de uitvoerentiteit zullen stromen.
-    - **Mislukt**: voorspellingsuitvoering is mislukt. [Controleer de logbestanden](manage-predictions.md#troubleshoot-a-failed-prediction) voor meer informatie.
+    - **Mislukt**: voorspellingsuitvoering is mislukt. [Controleer de logbestanden](#troubleshoot-a-failed-prediction) voor meer informatie.
     - **Geslaagd**: de voorspelling is geslaagd. Selecteer **Weergeven** onder de verticale ellipsen om de resultaten van de voorspelling te bekijken.
 - **Bewerkt**: de datum waarop de configuratie voor de voorspelling is gewijzigd.
 - **Laatst vernieuwd**: de datum waarop de voorspelling is vernieuwd resulteert in de uitvoerentiteit.
+
 
 ### <a name="review-prediction-results"></a>Resultaten van de voorspelling controleren
 
@@ -218,8 +216,28 @@ Er zijn drie primaire gegevenssecties op de resultatenpagina.
 
 - **Meest invloedrijke factoren**: er worden verschillende factoren in overweging genomen bij het maken van uw voorspelling voor de levensduurwaarde van klanten op basis van de invoergegevens die aan het AI-model worden verstrekt. Voor elk van de factoren wordt het belang berekend bij de geaggregeerde voorspellingen die een model opstelt. U kunt deze factoren gebruiken om uw voorspellingsresultaten te valideren. Deze factoren geven ook meer inzicht in de meest invloedrijke factoren die hebben bijgedragen aan het voorspellen van de levensduurwaarde voor al uw klanten.
 
-## <a name="manage-predictions"></a>Voorspellingen beheren
+## <a name="refresh-a-prediction"></a>Een voorspelling vernieuwen
 
-Het is mogelijk om voorspellingen te optimaliseren, problemen op te lossen, voorspellingen te vernieuwen of deze te verwijderen. Bekijk een bruikbaarheidsrapport voor invoergegevens om erachter te komen hoe u een voorspelling sneller en betrouwbaarder kunt maken. Zie [Voorspellingen beheren](manage-predictions.md) voor meer informatie.
+Voorspellingen worden automatisch volgens dezelfde [planning vernieuwd als uw gegevens](system.md#schedule-tab), zoals geconfigureerd in instellingen. U kunt ze ook handmatig vernieuwen.
+
+1. Ga naar **Intelligence** > **Voorspellingen** en selecteer het tabblad **Mijn voorspellingen**.
+2. Selecteer de verticale puntjes naast de voorspelling die u wilt vernieuwen.
+3. Selecteer **Vernieuwen**.
+
+## <a name="delete-a-prediction"></a>Een voorspelling verwijderen
+
+Als u een voorspelling verwijdert, wordt ook de uitvoerentiteit ervan verwijderd.
+
+1. Ga naar **Intelligence** > **Voorspellingen** en selecteer het tabblad **Mijn voorspellingen**.
+2. Selecteer de verticale puntjes naast de voorspelling die u wilt verwijderen.
+3. Selecteer **Verwijderen**.
+
+## <a name="troubleshoot-a-failed-prediction"></a>Probleem van een mislukte voorspelling oplossen
+
+1. Ga naar **Intelligence** > **Voorspellingen** en selecteer het tabblad **Mijn voorspellingen**.
+2. Selecteer het verticale beletselteken naast de voorspelling waarvoor u foutenlogbestanden wilt bekijken.
+3. Selecteer **Logbestanden**.
+4. Bekijk alle fouten. Er zijn verschillende typen fouten die kunnen optreden en deze beschrijven welke toestand de fout heeft veroorzaakt. Bijvoorbeeld een fout die niet voldoende gegevens bevat om nauwkeurig te voorspellen, wordt meestal opgelost door meer gegevens te laden in doelgroepinzichten.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

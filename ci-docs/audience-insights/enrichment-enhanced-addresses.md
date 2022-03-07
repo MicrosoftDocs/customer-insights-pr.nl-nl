@@ -1,25 +1,20 @@
 ---
-title: Verrijking van adresverbetering (met video)
+title: Verrijking van adresuitbreiding
 description: Verrijk en normaliseer adresgegevens van klantprofielen met de modellen van Microsoft.
-ms.date: 01/19/2022
+ms.date: 07/25/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-searchScope:
-- ci-data-sources-enrichment
-- ci-data-sources-enrichment-details
-- ci-enrichments
-- ci-enrichment-wizard
-- customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353630"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643362"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Verrijking van klantprofielen met uitgebreide adressen
 
@@ -105,17 +100,7 @@ Selecteer **Uitvoeren** vanaf de opdrachtbalk om het verrijkingsproces te starte
 
 Nadat het verrijkingsproces is voltooid, kunt u de nieuwe verrijkte klantprofielgegevens bekijken onder **Mijn verrijkingen**. Ook vindt u daar het tijdstip van de laatste update en het aantal verrijkte profielen.
 
-U kunt een sample van de verrijkte gegevens zien in de tegel **Preview van verrijkte klanten**. Selecteer **Meer bekijken** en selecteer het tabblad **Gegevens** om toegang te krijgen tot een gedetailleerd overzicht van elk verrijkt profiel.
-
-### <a name="overview-card"></a>Overzichtskaart
-
-Op de overzichtskaart staan details over wat onder de verrijking valt. 
-
-* **Verwerkte en gewijzigde adressen**: het aantal klantprofielen met adressen dat succesvol is verrijkt.
-
-* **Adressen verwerkt en niet gewijzigd**: het aantal klantprofielen met adressen dat is herkend maar niet gewijzigd. Dit gebeurt meestal wanneer de invoergegevens geldig zijn en niet kunnen worden verbeterd door de verrijking.
-
-* **Adressen niet verwerkt en niet gewijzigd**: het aantal klantprofielen met adressen die niet werden herkend. Meestal voor invoergegevens die ongeldig zijn of niet worden ondersteund door de verrijking.
+U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrijkte gegevens weergeven** te selecteren.
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -1,22 +1,20 @@
 ---
 title: Customer Insights-gegevens in Microsoft Dataverse
 description: Gebruik Customer Insights-entiteiten als tabellen in Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 06/15/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-searchScope:
-- ci-system-diagnostic
-- customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355423"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259185"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Werken met Customer Insights-gegevens in Microsoft Dataverse
 
@@ -26,7 +24,11 @@ Customer Insights biedt de mogelijkheid om uitvoerentiteiten beschikbaar te make
 
 **Organisaties met bestaande Dataverse-omgevingen**
 
-Organisaties die al gebruikmaken van Dataverse kunnen [een van hun bestaande Dataverse-omgevingen gebruiken](create-environment.md) wanneer een beheerder doelgroepinzichten instelt. Door de URL voor de Dataverse-omgeving te verstrekken, wordt deze gekoppeld aan hun nieuwe omgeving voor doelgroepinzichten. Om de best mogelijke prestaties te garanderen, moeten Customer Insights en Dataverse-omgevingen in dezelfde regio worden gehost.
+Organisaties die al gebruikmaken van Dataverse kunnen [een van hun bestaande Dataverse-omgevingen gebruiken](manage-environments.md#create-an-environment-in-an-existing-organization) wanneer een beheerder doelgroepinzichten instelt. Door de URL voor de Dataverse-omgeving te verstrekken, wordt deze gekoppeld aan hun nieuwe omgeving voor doelgroepinzichten. Om de best mogelijke prestaties te garanderen, moeten Customer Insights en Dataverse-omgevingen in dezelfde regio worden gehost.
+
+U kunt een Dataverse-omgeving toevoegen door **Geavanceerde instellingen** uit te breiden bij het maken van de omgeving voor doelgroepinzichten. Geef de **URL van de Microsoft Dataverse-omgeving** op en schakel het selectievakje **Gegevens delen inschakelen** in.
+
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
 
 **Nieuwe organisatie**
 
@@ -47,7 +49,6 @@ Sommige uitvoerentiteiten van doelgroepinzichten zijn beschikbaar als tabellen i
 - [CustomerMeasure](#customermeasure)
 - [Enrichment](#enrichment)
 - [Prediction](#prediction)
-- [Segmentlidmaatschap](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -124,16 +125,3 @@ Deze tabel bevat de uitvoer van de modelvoorspellingen.
 | Waarden               | JSON-tekenreeks | Lijst met kenmerken die wordt geproduceerd door het model |
 | msdynci_predictionid | GUID        | Deterministische GUID die wordt gegenereerd op basis van msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
-
-### <a name="segment-membership"></a>Segmentlidmaatschap
-
-Deze tabel bevat informatie over het segmentlidmaatschap van de klantprofielen.
-
-| Column        | Type | Description                        |
-|--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Klantprofiel-id        |
-| SegmentProvider      | String       | App die de segmenten publiceert. Standaardinstelling: Doelgroepinzichten         |
-| SegmentMembershipType | String       | Type van de klant van deze segmentlidmaatschapsrecord. Ondersteunt meerdere typen, zoals Klant, Contactpersoon of Account. Standaardinstelling: Klant  |
-| Segmenten       | JSON-tekenreeks  | Lijst met unieke segmenten waarvan het klantprofiel lid is      |
-| msdynci_identifier  | String   | De unieke id van de segmentlidmaatschapsrecord. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministische GUID gegenereerd uit `msdynci_identifier`          |

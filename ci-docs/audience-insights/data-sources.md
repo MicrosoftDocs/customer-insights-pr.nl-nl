@@ -2,26 +2,23 @@
 title: Gegevensbronnen gebruiken om gegevens op te nemen
 description: Meer informatie over hoe u gegevens uit verschillende bronnen kunt importeren.
 ms.date: 12/06/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-data-sources
-- ci-create-data-source
-- customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 78379c827e132b3b172aa7381f4c5ef2c70b9771
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354043"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977823"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 De doelgroepinzichten-mogelijkheid in Dynamics 365 Customer Insights maakt verbinding met gegevens uit uiteenlopende bronnen. Verbinden met een gegevensbron wordt vaak *gegevensopname* genoemd. Na het opnemen van de gegevens kunt u ze [samenvoegen](data-unification.md) en actie ondernemen.
 
@@ -31,13 +28,12 @@ Raadpleeg de gedetailleerde artikelen voor het toevoegen van een gegevensbron, a
 
 U kunt de volgende gegevensbronnen toevoegen:
 
-- [Via tientallen Power Query-connectoren](connect-power-query.md)
-- [Via een Common Data Model-map](connect-common-data-model.md)
-- [Via uw eigen Microsoft Dataverse-lake](connect-dataverse-managed-lake.md)
-- [Vanuit een Azure Synapse Analytics-database](connect-synapse.md)
+- [Power Query-connectors](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse lake](connect-dataverse-managed-lake.md)
 
 > [!NOTE]
-> Als u de proefversie gebruikt, bevat de sectie met importmethoden een optie **Gegevensbibliotheek voor Customer Insights**. Kies deze optie om een voorbeeldgegevensset te selecteren die beschikbaar is voor verschillende bedrijfstakken. Zie [Proefversie van Dynamics 365 Customer Insights](../trial-signup.md) voor meer informatie.
+> Als u de proefversie gebruikt, bevat de sectie met importmethoden een optie **Gegevensbibliotheek voor Customer Insights**. Kies deze optie om een voorbeeldgegevensset te selecteren die beschikbaar is voor verschillende bedrijfstakken. Zie [proefversie van Dynamics 365 Customer Insights](../trial-signup.md) voor meer informatie.
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Gegevens toevoegen vanuit on-premises gegevensbronnen
 
