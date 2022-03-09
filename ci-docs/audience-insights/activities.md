@@ -2,19 +2,27 @@
 title: Klantactiviteiten
 description: Definieer klantactiviteiten en geef ze weer in een tijdlijn in klantprofielen.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+searchScope:
+- ci-entities
+- ci-customer-card
+- ci-relationships
+- ci-activities
+- ci-activities-wizard
+- ci-measures
+- ci-segment-suggestions
+- customerInsight
+ms.openlocfilehash: a2f1e8ecf49664a4bb2dc271131d437e50cfdd24
+ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732438"
+ms.lasthandoff: 02/28/2022
+ms.locfileid: "8359812"
 ---
 # <a name="customer-activities"></a>Klantactiviteiten
 
@@ -61,7 +69,7 @@ Een entiteit moet ten minste één kenmerk van het type **Datum** hebben om te w
    - **Optionele velden**
       - **Aanvullende details**: veld met relevante informatie voor deze activiteit.
       - **Pictogram**: pictogram dat dit type activiteit het beste weergeeft.
-      - **webadres**: veld dat een URL bevat met informatie over deze activiteit. Bijvoorbeeld het transactiesysteem dat de bron van deze activiteit vormt. Deze URL kan elk veld zijn uit de gegevensbron, of het kan worden geconstrueerd als een nieuw veld via een Power Query-transformatie. De URL-gegevens worden opgeslagen in de entiteit *Unified Activity*, die stroomafwaarts kan worden gebruikt met [API's](apis.md).
+      - **webadres**: veld dat een URL bevat met informatie over deze activiteit. Bijvoorbeeld het transactiesysteem dat de bron van deze activiteit vormt. Deze URL kan elk veld uit de gegevensbron zijn, of het kan worden geconstrueerd als een nieuw veld met behulp van een Power Query-transformatie. De URL-gegevens worden opgeslagen in de entiteit *Unified Activity*, die stroomafwaarts kan worden gebruikt met [API's](apis.md).
 
    - **Weergeven in tijdlijn**
       - Kies of u deze activiteit wilt weergeven in de tijdlijnweergave in uw klantprofielen. Selecteer **Ja** als u de activiteit in de tijdlijn wilt weergeven of **Nee** als u de activiteit wilt verbergen.

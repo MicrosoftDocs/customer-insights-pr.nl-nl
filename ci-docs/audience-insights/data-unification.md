@@ -3,20 +3,20 @@ title: Een geharmoniseerde weergave maken van uw klanten
 description: Doorloop het proces voor gegevensharmonisering met uw gegevens om één hoofdgegevensset van klantprofielen te maken.
 ms.date: 10/18/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 searchScope:
-- ci-unify
-ms.openlocfilehash: c5422c9b60c21923caf4d9dc9baeec575cba093f
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+- ci-map
+- customerInsights
+ms.openlocfilehash: 2012d32494ccd4639cbffbb81d4f6eac1258e23b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977453"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353813"
 ---
 # <a name="data-unification-overview"></a>Overzicht van gegevensharmonisatie
 

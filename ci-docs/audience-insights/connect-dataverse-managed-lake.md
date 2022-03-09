@@ -2,23 +2,25 @@
 title: Verbinding maken met tabellen in Microsoft Dataverse
 description: Gegevens importeren uit een door Microsoft Dataverse beheerd data lake.
 ms.date: 12/06/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-dataverse
+- customerInsights
+ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900145"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354135"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Verbinding maken met gegevens in een beheerd Microsoft Dataverse data lake
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Dit artikel geeft informatie over hoe Dataverse-gebruikers snel verbinding kunnen maken met analytische entiteiten in een beheerd lake in Microsoft Dataverse. 
 

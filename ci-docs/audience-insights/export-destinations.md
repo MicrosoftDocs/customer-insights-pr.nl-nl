@@ -1,33 +1,59 @@
 ---
 title: Gegevens exporteren vanuit Customer Insights
 description: Beheer exports om gegevens te delen.
-ms.date: 06/14/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+searchScope:
+- ci-export
+- ci-connections
+- customerInsights
+ms.openlocfilehash: 33f59c62565560517c480be63e581465605c5f7b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253034"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354319"
 ---
 # <a name="exports-preview-overview"></a>Overzicht van Exports (preview)
 
-De pagina **Exports** toont u alle geconfigureerde exports. Exports delen specifieke gegevens met verschillende toepassingen. Ze kunnen klantprofielen of entiteiten, schema's en toewijzingsdetails bevatten. Elke export vereist een [verbinding, opgezet door een beheerder, om de verificatie en toegang te beheren](connections.md).
+De pagina **Exports** toont u alle geconfigureerde exports. Exports delen specifieke gegevens met verschillende toepassingen. Ze kunnen klantprofielen, entiteiten, schema's en toewijzingsdetails bevatten. Elke export vereist een [verbinding, opgezet door een beheerder, om de verificatie en toegang te beheren](connections.md).
 
-Ga naar **Gegevens** > **Exports** om de pagina met exports te bekijken. Alle gebruikersrollen hebben toegang om geconfigureerde exports te bekijken. Gebruik van het zoekveld op de opdrachtbalk om exports te zoeken op naam, verbindingsnaam of verbindingstype.
+Ga naar **Gegevens** > **Exports** om de pagina met exports te bekijken. Alle gebruikersrollen kunnen geconfigureerde exports bekijken. Gebruik het zoekveld in de opdrachtbalk om exports te zoeken op naam, verbindingsnaam of verbindingstype.
 
-## <a name="set-up-a-new-export"></a>Een nieuwe export instellen
+## <a name="export-types"></a>Exporttypen
 
+Er zijn twee hoofdtypen exports:  
+
+- **Gegevens uit-export** hiermee kunt u elk type entiteit exporteren dat beschikbaar is in doelgroepinzichten. De entiteiten die u selecteert voor export, worden geëxporteerd met alle gegevensvelden, metagegevens, schema's en toewijzingsdetails. 
+- **Segmentexport** hiermee kunt u segmententiteiten exporteren uit doelgroepinzichten. Segmenten vertegenwoordigen een lijst met klantprofielen. Bij het configureren van de export selecteert u de inbegrepen gegevensvelden, afhankelijk van het doelsysteem waarnaar u gegevens exporteert. 
+
+### <a name="export-segments"></a>Segmenten exporteren
+
+**Segmenten exporteren in omgevingen voor zakelijke accounts (B2B) of individuele consumenten (B2C)**  
+De meeste exportopties ondersteunen beide typen omgevingen. Het exporteren van segmenten naar verschillende doelsystemen heeft specifieke eisen. Over het algemeen bevat een segmentlid, het klantprofiel, contactgegevens. Hoewel dit meestal het geval is voor segmenten die zijn gebaseerd op individuele consumenten (B2C), hoeft dit niet het geval te zijn voor segmenten die zijn gebaseerd op zakelijke accounts (B2B). 
+
+**Segmentexport in omgevingen voor zakelijke accounts (B2B)**  
+- Segmenten in de context van omgevingen voor zakelijke accounts zijn gebouwd op de entiteit *account*. Om accountsegmenten ongewijzigd te exporteren, moet het doelsysteem pure accountsegmenten ondersteunen. Dit is het geval voor [LinkedIn](export-linkedin-ads.md) wanneer u kiest voor de optie **bedrijf** bij het definiëren van de export.
+- Voor alle andere doelsystemen zijn velden van de contactentiteit vereist Om ervoor te zorgen dat accountsegmenten gegevens kunnen ophalen van gerelateerde contactpersonen, moet uw segmentdefinitie kenmerken van de contactentiteit projecteren. Meer informatie over het [configureren van segmenten en projectkenmerken](segment-builder.md).
+
+**Segmentexport in omgevingen voor individuele consumenten (B2C)**  
+- Segmenten in de context van omgevingen voor individuele klanten zijn gebouwd op de entiteit *geharmoniseerd klantprofiel*. Elk segment dat voldoet aan de eisen van de doelsystemen (bijvoorbeeld een e-mailadres), kan worden geëxporteerd.
+
+**Limieten voor segmentexport**  
+- Doelsystemen van derden kunnen het aantal klantprofielen dat u kunt exporteren, beperken. 
+- Voor individuele klanten ziet u het werkelijke aantal segmentleden wanneer u een segment selecteert om te exporteren. Er verschijnt een waarschuwing als een segment te groot is. 
+- Voor zakelijke accounts ziet u het aantal accounts in een segment; het aantal contacten dat mogelijk wordt geprojecteerd, wordt echter niet weergegeven. In sommige gevallen kan dit ertoe leiden dat het geëxporteerde segment daadwerkelijk meer klantprofielen bevat dan het doelsysteem accepteert. Als de limieten van de doelsystemen worden overschreden, wordt de export overgeslagen. 
+
+## <a name="set-up-a-new-export"></a>Een nieuwe export instellen  
 Als u een export wilt instellen of bewerken, moet u over verbindingen beschikken. Verbindingen zijn afhankelijk van uw [gebruikersrol](permissions.md):
-- Beheerders hebben toegang tot alle verbindingen. Ze kunnen ook nieuwe verbindingen maken bij het opzetten van een export.
-- Inzenders kunnen toegang hebben tot specifieke verbindingen. Zij zijn afhankelijk van beheerders om verbindingen te configureren en te delen. De exportlijst laat zien of inzenders een export kunnen bewerken of alleen bekijken in de kolom **Uw machtigingen**. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
-- Kijkers kunnen alleen bestaande exports bekijken, maar deze niet maken.
+- **Beheerders** hebben toegang tot alle verbindingen. Ze kunnen ook nieuwe verbindingen maken bij het opzetten van een export.
+- **Inzenders** kunnen toegang hebben tot specifieke verbindingen. Zij zijn afhankelijk van beheerders om verbindingen te configureren en te delen. De exportlijst laat zien of inzenders een export kunnen bewerken of alleen bekijken in de kolom **Uw machtigingen**. Ga voor meer informatie naar [Toestaan dat inzenders een verbinding gebruiken voor export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Kijkers** kunnen alleen bestaande exports bekijken, niet maken.
 
 ### <a name="define-a-new-export"></a>Een nieuwe export definiëren
 
@@ -65,7 +91,7 @@ Nadat u exportbestemmingen hebt gemaakt, worden deze vermeld bij **Gegevens** > 
 
 1. Ga naar **Gegevens** > **Exports**.
 
-1. Gebruikers zonder machtigingen voor bewerken selecteren **Weergeven** in plaats van **Bewerken** om de exportdetails te bekijken.
+1. Gebruikers zonder bewerkingsrechten selecteren **Weergeven** in plaats van **Bewerken** om de exportdetails te zien.
 
 1. Het zijvenster toont de configuratie van een export. Zonder bewerkingsrechten kunt u geen waarden wijzigen. Selecteer **Sluiten** om terug te keren naar de pagina met exports.
 
@@ -73,7 +99,9 @@ Nadat u exportbestemmingen hebt gemaakt, worden deze vermeld bij **Gegevens** > 
 
 Elke export die u configureert, heeft een vernieuwingsschema. Tijdens een vernieuwing zoekt het systeem naar nieuwe of bijgewerkte gegevens om in een export op te nemen. Standaard worden exports uitgevoerd als onderdeel van elke [geplande systeemvernieuwing](system.md#schedule-tab). U kunt het vernieuwingsschema aanpassen of uitschakelen om exports handmatig uit te voeren.
 
-Exportschema's zijn afhankelijk van de status van uw omgeving. Als er updates van [afhankelijkheden](system.md#refresh-policies) bezig zijn wanneer een geplande export moet starten, voltooit het systeem eerst de afhankelijkheden en voert het vervolgens de export uit. U kunt zien wanneer een export voor het laatst is vernieuwd in de kolom **Vernieuwd**.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+Exportschema's zijn afhankelijk van de status van uw omgeving. Als er updates worden uitgevoerd op [afhankelijkheden](system.md#refresh-processes), voltooit het systeem bij het starten van een geplande eerst de updates en voert vervolgens de export uit. U kunt zien wanneer een export voor het laatst is vernieuwd in de kolom **Vernieuwd**.
 
 ### <a name="schedule-exports"></a>Exports plannen
 

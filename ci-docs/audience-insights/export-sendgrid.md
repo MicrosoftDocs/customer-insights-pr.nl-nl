@@ -1,20 +1,19 @@
 ---
 title: Customer Insights-gegevens exporteren naar SendGrid
 description: Leer hoe u de verbinding configureert en exporteert naar SendGrid.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 03df2ab5fce1da1f4f662e1975533f2b538b47dbdd5cf96aae4f1007163e3729
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 65d60e7e70e3444b0695b905431bab9a0269ceef
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036095"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231566"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Segmenten exporteren naar SendGrid (preview)
 
@@ -29,10 +28,10 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar SendGrid en gebruik 
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Tot 100.000 profielen in totaal naar SendGrid.
+- Tot 100.000 klantprofielen in totaal naar SendGrid.
 - Exporteren naar SendGrid is beperkt tot segmenten.
-- Het exporteren van maximaal 100.000 profielen naar SendGrid kan enkele uren duren. 
-- Het aantal profielen dat u naar SendGrid kunt exporteren, is afhankelijk van uw contract met SendGrid.
+- Het exporteren van tot 100.000 klantprofielen naar SendGrid kan tot een paar uur duren. 
+- Het aantal klantprofielen dat u kunt exporteren naar SendGrid, is afhankelijk van en wordt beperkt door uw contract met SendGrid.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Verbinding instellen met SendGrid
 
@@ -66,7 +65,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Voer uw **[SendGrid-lijst-id](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)** in.
 
-1. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. Herhaal dezelfde stappen voor andere optionele velden, zoals **Voornaam**, **Achternaam**, **Land/regio**, **Staat**, **Plaats** en **Postcode**.
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Herhaal dezelfde stappen voor andere optionele velden, zoals **Voornaam**, **Achternaam**, **Land/regio**, **Staat**, **Plaats** en **Postcode**.
 
 1. Selecteer de segmenten die u wilt exporteren. Wij **raden u sterk aan niet meer dan 100.000 klantprofielen in totaal te exporteren** naar SendGrid. 
 

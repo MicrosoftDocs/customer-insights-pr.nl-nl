@@ -1,20 +1,19 @@
 ---
 title: Customer Insights-gegevens exporteren naar AdRoll
 description: Leer hoe u de verbinding configureert en exporteert naar AdRoll.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3a318750077c71a17e5a47c40722f6153e6640f3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304807"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227614"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Segmenten exporteren naar AdRoll (preview)
 
@@ -28,11 +27,11 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar AdRoll en gebruik ze
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- U kunt maximaal 250.000 profielen tegelijkertijd exporteren naar AdRoll.
-- U kunt geen segmenten met minder dan 100 profielen naar AdRoll exporteren. 
+- U kunt maximaal 250.000 klantprofielen tegelijk naar AdRoll exporteren.
+- U kunt geen segmenten met minder dan 100 klantprofielen exporteren naar AdRoll. 
 - Exporteren naar AdRoll is beperkt tot segmenten.
-- Het exporteren van maximaal 250.000 profielen naar AdRoll kan tot 10 minuten duren. 
-- Het aantal profielen dat u naar AdRoll kunt exporteren, is afhankelijk van uw contract met AdRoll.
+- Het exporteren van tot 250.000 klantprofielen naar AdRoll kan tot 10 minuten duren. 
+- Het aantal klantprofielen dat u kunt exporteren naar AdRoll, is afhankelijk van en wordt beperkt door uw contract met AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Verbinding met AdRoll instellen
 
@@ -66,7 +65,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Voer uw **AdRoll-adverteerders-id** in. Zie [AdRoll-adverteerdersprofielen](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles) voor meer informatie.
 
-3. Selecteer in de sectie **Gegevensvergelijking** in het veld **E-mail** het veld in uw geharmoniseerde klantprofiel voor het e-mailadres van een klant. Het is vereist om segmenten naar AdRoll te exporteren.
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Het is vereist om segmenten naar AdRoll te exporteren.
 
 1. Selecteer de segmenten die u wilt exporteren. Selecteer een segment met minimaal 100 leden. U kunt geen kleinere segmenten exporteren. Bovendien is de maximale grootte van een te exporteren segment 250.000 leden per export. 
 

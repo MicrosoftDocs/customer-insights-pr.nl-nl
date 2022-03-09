@@ -3,20 +3,19 @@ title: Productaanbevelingen voorspellen
 description: Voorspel de producten die een klant waarschijnlijk zal kopen of gebruiken.
 ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967788"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355745"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Productaanbevelingen voorspellen (preview)
+# <a name="product-recommendation-prediction"></a>Productaanbevelingen voorspellen
 
 Het productaanbevelingsmodel maakt sets met voorspellende productaanbevelingen. Aanbevelingen zijn gebaseerd op eerder aankoopgedrag en klanten met vergelijkbare aankooppatronen. U kunt voorspellingen voor nieuwe productaanbevelingen maken op de pagina **Informatie** > **Voorspellingen**. Selecteer **Mijn voorspellingen** om andere voorspellingen te bekijken die u hebt gemaakt.
 
@@ -54,7 +53,7 @@ Als je deze functie wilt proberen, maar geen gegevens hebt om aan de onderstaand
 
 > [!NOTE]
 > - Het model vereist de transactiegeschiedenis van uw klanten. De definitie van een transactie is vrij flexibel. Alle gegevens die een interactie tussen gebruiker en product beschrijven, kunnen als input dienen. Bijvoorbeeld het aanschaffen van een product, het volgen van een les of het bijwonen van een gebeurtenis.
-> - Er kan momenteel slechts één transactiehistorie-entiteit worden geconfigureerd. Als er meerdere aankoopentiteiten zijn, voegt u deze samen in Power Query voordat de gegevens worden opgenomen.
+> - Er kan momenteel slechts één transactiehistorie-entiteit worden geconfigureerd. Als er meerdere aankoop-entiteiten zijn, voegt u deze samen in Power Query vóór de gegevensopname.
 > - Als order- en ordergegevens verschillende entiteiten zijn, voegt u deze samen voordat u ze in het model gebruikt. Het model werkt niet alleen met een bestellings-id of ontvangst-id in een entiteit.
 
 
@@ -62,7 +61,7 @@ Als je deze functie wilt proberen, maar geen gegevens hebt om aan de onderstaand
 
 1. Ga in Customer Insights naar **Informatie** > **Voorspellingen**.
 
-1. Selecteer de tegel **Model voor productaanbevelingen (preview)** en selecteer **Dit model gebruiken**.
+1. Selecteer de tegel **Model voor productaanbevelingen** en selecteer **Dit model gebruiken**.
    > [!div class="mx-imgBorder"]
    > ![Tegel Productaanbevelingsmodel met knop Dit model gebruiken.](media/product-recommendation-usethismodel.PNG "Tegel Productaanbevelingsmodel met knop Dit model gebruiken")
 

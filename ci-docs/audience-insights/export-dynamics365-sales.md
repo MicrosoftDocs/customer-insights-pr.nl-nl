@@ -3,28 +3,35 @@ title: Customer Insights-gegevens exporteren naar Dynamics 365 Sales
 description: Leer hoe u de verbinding configureert en exporteert naar Dynamics 365 Sales.
 ms.date: 03/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: fc1a05ba4d21d96aa1a9724d158687bbb86949b6
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+searchScope:
+- ci-export
+- customerInsights
+ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759585"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355011"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Segmenten gebruiken in Dynamics 365 Sales (preview)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Gebruik uw klantgegevens om marketinglijsten te maken, werkstromen op te volgen en aanbiedingen te verzenden met Dynamics 365 Sales.
 
+## <a name="known-limitations"></a>Bekende beperkingen
+
+- Exports naar Dynamics 365 Sales zijn beperkt tot 100.000 leden per segment.
+- Het exporteren van segmenten naar Dynamics 365 Sales kan tot 3 uur in beslag nemen. 
+
 ## <a name="prerequisite-for-connection"></a>Vereiste voor verbinding
 
-1. Contactpersoonrecords moeten aanwezig zijn in Dynamics 365 Sales voordat u een segment van Customer Insights naar Sales kunt exporteren. Lees meer over het opnemen van contactpersonen in [Dynamics 365 Sales met Common Data Services](connect-power-query.md)​.
+1. Contactpersoonrecords moeten aanwezig zijn in Dynamics 365 Sales voordat u een segment van Customer Insights naar Sales kunt exporteren. Lees meer over het opnemen van contactpersonen in [Dynamics 365 Sales met Microsoft Dataverse](connect-power-query.md)​.
 
    > [!NOTE]
    > Als u segmenten van doelgroepinzichten naar Sales exporteert, worden er geen nieuwe contactpersoonrecords gemaakt in de Sales-exemplaren. De contactpersoonrecords van Sales moeten worden opgenomen in doelgroepinzichten en worden gebruikt als een gegevensbron. Ze moeten ook worden opgenomen in de geharmoniseerde klantentiteit om klant-id's toe te wijzen aan contactpersoon-id's voordat segmenten kunnen worden geëxporteerd.

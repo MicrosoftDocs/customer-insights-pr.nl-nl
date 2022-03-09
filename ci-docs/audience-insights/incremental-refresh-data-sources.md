@@ -3,20 +3,22 @@ title: Incrementeel vernieuwen voor Power Query-gegevensbronnen
 description: Vernieuw nieuwe en bijgewerkte gegevens voor grote gegevensbronnen op basis van Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900249"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353675"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Incrementeel vernieuwen voor op Power Query gebaseerde gegevensbronnen
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Incrementeel vernieuwen voor gegevensbronnen die zijn gebaseerd op Power Query
 
 In dit artikel wordt beschreven hoe u incrementele vernieuwing voor gegevensbronnen configureert op basis van Power Query.
 
@@ -28,9 +30,9 @@ Incrementeel vernieuwen voor gegevensbronnen biedt de volgende voordelen:
 
 ## <a name="configure-incremental-refresh"></a>Incrementele vernieuwing configureren
 
-Doelgroepinzichten maakt incrementele vernieuwing mogelijk voor gegevensbronnen die zijn geïmporteerd via Power Query die incrementele opname ondersteunen. Bijvoorbeeld Azure SQL-databases met datum- en tijdvelden, die aangeven wanneer gegevensrecords voor het laatst zijn bijgewerkt.
+Doelgroepinzichten maken incrementele vernieuwing mogelijk voor gegevensbronnen die zijn geïmporteerd via Power Query die incrementele opname ondersteunen. Bijvoorbeeld Azure SQL-databases met datum- en tijdvelden, die aangeven wanneer gegevensrecords voor het laatst zijn bijgewerkt.
 
-1. [Een nieuwe gegevensbron maken op basis van Power Query](connect-power-query.md).
+1. [Maak een nieuwe gegevensbron op basis van Power Query](connect-power-query.md).
 
 1. Geef een **naam** op voor de gegevensbron.
 

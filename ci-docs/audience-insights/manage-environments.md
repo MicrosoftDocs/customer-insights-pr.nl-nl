@@ -1,104 +1,73 @@
 ---
 title: Omgevingen maken en beheren
 description: Ontdek hoe u zich aanmeldt voor de service en hoe u omgevingen beheert.
-ms.date: 06/15/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+searchScope:
+- ci-system-about
+- customerInsights
+ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304874"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354273"
 ---
 # <a name="manage-environments"></a>Omgevingen beheren
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-In dit artikel wordt uitgelegd hoe u een nieuwe organisatie maakt en hoe u een omgeving inricht.
 
-## <a name="sign-up-and-create-an-organization"></a>Aanmelden en een organisatie maken
+## <a name="switch-environments"></a>Omgevingen omschakelen
 
-1. Ga naar de website [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/).
+Selecteer het besturingselement **Omgeving** in de rechterbovenhoek van de pagina om van omgeving te veranderen.
 
-2. Selecteer **Aan de slag**.
+:::image type="content" source="media/home-page-environment-switcher.png" alt-text="Schermafbeelding van het besturingselement om van omgeving te wisselen.":::
 
-3. Kies het gewenste aanmeldingsscenario en selecteer de bijbehorende koppeling.
+Beheerders kunnen omgevingen [maken](create-environment.md) en beheren.
 
-4. Accepteer de algemene voorwaarden en selecteer **Doorgaan** om te beginnen met het maken van de organisatie.
+## <a name="edit-an-existing-environment"></a>Een bestaande omgeving bewerken
 
-5. Nadat de omgeving is gemaakt, wordt u doorgestuurd naar [Customer Insights](https://home.ci.ai.dynamics.com).
+U kunt enkele details van bestaande omgevingen bewerken.
 
-6. Gebruik de demo-omgeving om de app te verkennen of maak een nieuwe omgeving door de stappen in de volgende sectie te volgen.
+1.  Selecteer de picker **Omgeving** in de koptekst van de app.
 
-7. Nadat u de omgevingsinstellingen hebt opgegeven, selecteert u **Maken**.
+2.  Selecteer het pictogram **Bewerken**.
 
-8. Nadat de omgeving is gemaakt, wordt u aangemeld.
+3. In het vak **Omgeving bewerken** kunt u de omgevingsinstellingen bijwerken.
 
-## <a name="create-an-environment-in-an-existing-organization"></a>Een omgeving maken in een bestaande organisatie
+Zie voor meer informatie over omgevingsinstellingen [Een nieuwe omgeving maken](create-environment.md).
 
-U kunt op twee manieren een nieuwe omgeving maken. U kunt een geheel nieuwe configuratie opgeven of u kunt enkele configuratie-instellingen uit een bestaande omgeving kopiëren.
+## <a name="connect-to-microsoft-dataverse"></a>Verbinding maken met Microsoft Dataverse
+   
+In de stap **Microsoft Dataverse** kunt u Customer Insights verbinden met uw Dataverse-omgeving.
+
+Als u [kant-en-klare voorspellingsmodellen](predictions-overview.md#out-of-box-models) wilt gebruiken, configureert u delen van gegevens met Dataverse. Of u kunt gegevensopname van on-premises-gegevensbronnen inschakelen door de Microsoft Dataverse omgevings-URL op te geven die uw organisatie beheert.
+
+> [!IMPORTANT]
+> Customer Insights en Dataverse moeten zich in dezelfde regio bevinden om het delen van gegevens mogelijk te maken.
+
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Configuratieopties om het delen van gegevens met Microsoft Dataverse mogelijk te maken.":::
 
 > [!NOTE]
-> Organisaties kunnen *twee* omgevingen maken voor elke Customer Insights-licentie. Als uw organisatie meer dan één licentie aanschaft, [neemt u contact op met ons ondersteuningsteam](https://go.microsoft.com/fwlink/?linkid=2079641) om het aantal beschikbare omgevingen te vergroten. Download de [licentiegids voor Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544) voor meer informatie over capaciteit en uitbreidingscapaciteit.
+> Customer Insights biedt geen ondersteuning voor de volgende scenario's voor het delen van gegevens:
+> - Als u alle gegevens opslaat naar uw eigen Azure Data Lake Storage, kunt u het delen van gegevens met een door Dataverse beheerd data lake niet inschakelen.
+> - Als u het delen van gegevens met een door Dataverse beheerd data lake inschakelt, is het niet mogelijk om [voorspelde of ontbrekende waarden te maken in een entiteit](predictions.md).
 
-Een omgeving maken:
+## <a name="copy-the-environment-configuration"></a>De configuratie van de omgeving kopiëren
 
-1. Selecteer de picker **Omgeving** in de koptekst van de app.
+Wanneer u een nieuwe omgeving maakt, kunt u ervoor kiezen de configuratie uit een bestaande omgeving te kopiëren. 
 
-1. Selecteer **Nieuw**.
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="Schermafbeelding van de opties in de omgevingsinstellingen.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Omgevingsinstellingen.](media/environment-settings-dialog.png)
-
-1. Selecteer in het dialoogvenster **Een omgeving maken** de optie **Nieuwe omgeving**.
-
-   Als u [gegevens wilt kopiëren uit de huidige omgeving](#considerations-for-copy-configuration-preview), selecteert u **Kopiëren uit bestaande omgeving**. U ziet een lijst met alle beschikbare omgevingen in uw organisatie waaruit u gegevens kunt kopiëren.
-
-1. Geef de volgende details op:
-   - **Naam**: de naam voor deze omgeving. Dit veld is al ingevuld als u hebt gekopieerd vanuit een bestaande omgeving, maar u kunt dit wijzigen.
-   - **Type**: selecteer of u een productie- of sandbox-omgeving wilt maken.
-   - **Regio**: de regio waarin de service wordt geïmplementeerd en gehost.
-   
-1. U kunt desgewenst het **Geavanceerde instellingen** inschakelen:
-
-   - **Alle gegevens opslaan naar**: geeft aan waar u de uitvoergegevens wilt opslaan die zijn gegenereerd vanuit Customer Insights. U hebt twee opties: **Customer Insights-opslag** (een Azure Data Lake beheerd door het Customer Insights-team) en **Azure Data Lake Storage** (uw eigen Azure Data Lake Storage). Standaard is de opslagoptie Customer Insights geselecteerd.
-
-     > [!NOTE]
-     > Door gegevens op te slaan in Azure Data Lake Storage stemt u ermee in dat gegevens worden overgebracht naar en opgeslagen in de juiste geografische locatie voor dat Azure Storage-account, die kan afwijken van waar gegevens zijn opgeslagen in Dynamics 365 Customer Insights. [Meer informatie op het Microsoft Trust Center.](https://www.microsoft.com/trust-center)
-     >
-     > Momenteel worden opgenomen entiteiten altijd opgeslagen in het beheerde Data Lake van Customer Insights. 
-     > 
-     > Wij ondersteunen alleen Azure Data Lake Storage-accounts uit dezelfde Azure-regio die u hebt geselecteerd bij het maken van de omgeving. 
-     > 
-     > Wij ondersteunen alleen Azure Data Lake Storage-accounts waarvoor hiërarchische naamruimte is ingeschakeld.
-
-
-   - Voor de optie Azure Data Lake Storage kunt u kiezen tussen een op resources gebaseerde optie en een op abonnementen gebaseerde optie voor verificatie. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. De naam van **Container** kan niet worden gewijzigd en luidt `customerinsights`.
-   
-   - Als u [voorspellingen](predictions.md) wilt gebruiken, configureert u het delen van gegevens met Microsoft Dataverse of schakelt u gegevensopname uit on-premises-gegevensbronnen in en geeft u de URL voor de Microsoft Dataverse-omgeving op onder **Gegevens delen met Microsoft Dataverse configureren en aanvullende functionaliteit inschakelen**. Selecteer **Gegevens delen inschakelen** om Customer Insights-uitvoergegevens te delen met een Microsoft Dataverse beheerde data lake.
-
-     > [!NOTE]
-     > - Gegevens delen met Microsoft Dataverse beheerde Data Lake wordt momenteel niet ondersteund wanneer u alle gegevens in uw eigen Azure Data Lake Storage​opslaat.
-     > - [voorspelling van ontbrekende waarden in een entiteit](predictions.md) wordt momenteel niet ondersteund wanneer u gegevens delen met Microsoft Dataverse beheerde data lake inschakelt.
-
-     > [!div class="mx-imgBorder"]
-     > ![Configuratieopties om het delen van gegevens met Microsoft Dataverse mogelijk te maken.](media/datasharing-with-DataverseMDL.png)
-
-   Wanneer u processen uitvoert, zoals het opnemen van gegevens of het maken van segmenten, worden overeenkomstige mappen gemaakt in het opslagaccount dat u hierboven hebt opgegeven. Er worden gegevensbestanden en bestanden model.json gemaakt en toegevoegd aan mappen op basis van de procesnaam.
-
-   Als u meerdere omgevingen van Customer Insights maakt en ervoor kiest de uitvoerentiteiten van die omgevingen op te slaan in uw opslagaccount, worden voor elke omgeving aparte mappen gemaakt met ci_<environmentid> in de container.
-
-### <a name="considerations-for-copy-configuration-preview"></a>Overwegingen bij kopiëren van configuratie (preview)
+U ziet een lijst met alle beschikbare omgevingen in uw organisatie waaruit u gegevens kunt kopiëren.
 
 De volgende configuratie-instellingen worden gekopieerd:
 
-- Functieconfiguraties
 - Opgenomen/geïmporteerde gegevensbronnen
 - Configuratie van gegevensharmonisatie (Toewijzing, Overeenkomst, Samenvoeging)
 - Segmenten
@@ -112,48 +81,22 @@ De volgende configuratie-instellingen worden gekopieerd:
 - Modelbeheer
 - Roltoewijzingen
 
-De volgende instellingen worden *niet* gekopieerd:
+De volgende gegevens worden *niet* gekopieerd:
 
 - Klantprofielen.
 - Referenties voor gegevensbron. U moet de referenties voor elke gegevensbron opgeven en de gegevensbronnen handmatig vernieuwen.
-- Gegevensbronnen uit map Common Data Model en door Dataverse beheerde Data Lake. U moet die gegevensbronnen handmatig maken met dezelfde naam als in de bronomgeving.
+
+- Gegevensbronnen uit de Common Data Model-map en het door Dataverse beheerde data lake. U moet die gegevensbronnen handmatig maken met dezelfde naam als in de bronomgeving.
 
 Wanneer u een omgeving kopieert, ziet u een bevestigingsbericht dat de nieuwe omgeving is gemaakt. Selecteer **Ga naar gegevensbronnen** om de lijst met gegevensbronnen te zien.
 
 Alle gegevensbronnen hebben de status **Referenties vereist**. Bewerk de gegevensbronnen en voer de referenties in om ze te vernieuwen.
 
-> [!div class="mx-imgBorder"]
-> ![Gegevensbronnen gekopieerd.](media/data-sources-copied.png)
+:::image type="content" source="media/data-sources-copied.png" alt-text="Lijst met gegevensbronnen die zijn gekopieerd en waarvoor verificatie is vereist.":::
 
 Ga na het vernieuwen van de gegevensbronnen naar **Gegevens** > **Harmoniseren**. Hier vindt u instellingen uit de bronomgeving. Bewerk deze indien nodig of selecteer **Uitvoeren** om het proces voor gegevensharmonisering te starten en de geharmoniseerde klantentiteit te maken.
 
 Ga wanneer de gegevensharmonisering is voltooid naar **Meetcriteria** en **Segmenten** om deze eveneens te vernieuwen.
-
-## <a name="edit-an-existing-environment"></a>Een bestaande omgeving bewerken
-
-U kunt enkele details van bestaande omgevingen bewerken.
-
-1.  Selecteer de picker **Omgeving** in de koptekst van de app.
-
-2.  Selecteer het pictogram **Bewerken**.
-
-3. In het vak **Omgeving bewerken** kunt u de **Weergavenaam** van de omgeving bijwerken, maar u kunt niet de **Regio** of het **Type** bijwerken.
-
-4. Als een omgeving is geconfigureerd om gegevens op te slaan in Azure Data Lake Storage, kunt u de **accountsleutel** bijwerken. U kunt de **accountnaam** of naam van de **container** echter niet wijzigen.
-
-5. Optioneel kunt u bijwerken vanaf een accountsleutelverbinding naar een resource- of een abonnementsverbinding. Na het upgraden kunt u na de update geen accountsleutel meer gebruiken. Zie [Doelgroepinzichten verbinden met een Azure Data Lake Storage Gen2-account met een Azure Service Principal](connect-service-principal.md) voor meer informatie. U kunt geen informatie over **Container** wijzigen bij het bijwerken van de verbinding.
-
-6. Optioneel kunt u een URL voor een Microsoft Dataverse-omgeving opgeven onder **Het delen van gegevens met Microsoft Dataverse configureren en extra mogelijkheden inschakelen**. Deze mogelijkheden omvatten het delen van gegevens met toepassingen en oplossingen op basis van Microsoft Dataverse, gegevensopname uit on-premises-gegevensbronnen of het gebruik van [voorspellingen](predictions.md). Selecteer **Gegevens delen inschakelen** om Customer Insights-uitvoergegevens te delen met een Microsoft Dataverse beheerde data lake.
-
-   > [!NOTE]
-   > - Gegevens delen met Microsoft Dataverse beheerde data lake wordt momenteel niet ondersteund wanneer u alle gegevens in uw eigen Azure Data Lake Storage opslaat.
-   > - [Voorspelling van ontbrekende waarden in een entiteit](predictions.md) wordt momenteel niet ondersteund wanneer u gegevens delen met een Microsoft Dataverse beheerde data lake inschakelt.
-
-   Nadat u het delen van gegevens met Microsoft Dataverse hebt ingeschakeld, wordt een volledige vernieuwing van uw gegevensbronnen en andere processen gestart. Als er momenteel processen actief zijn, ziet u de optie om het delen van gegevens met Microsoft Dataverse in te schakelen niet. Wacht tot die processen zijn voltooid of annuleer ze om het delen van gegevens in te schakelen. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Configuratieopties om het delen van gegevens met Microsoft Dataverse mogelijk te maken.":::
-   
-   Wanneer u processen uitvoert, zoals het opnemen van gegevens of het maken van segmenten, worden overeenkomstige mappen gemaakt in het opslagaccount dat u hierboven hebt opgegeven. Er worden gegevensbestanden en bestanden model.json gemaakt en toegevoegd aan de respectievelijke submappen, afhankelijk van het proces dat u uitvoert.
 
 ## <a name="reset-an-existing-environment"></a>Een bestaande omgeving opnieuw instellen
 

@@ -1,24 +1,28 @@
 ---
 title: Aan de slag met zakelijke accounts als primaire doelgroep
 description: Aan de slag met zakelijke accounts als primaire doelgroep Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
+ms.custom: intro-internal
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-semantic-mapping
+- ci-connections
+- customerInsights
+ms.openlocfilehash: 88882dc727c37262c9f204fbc8049abe17bd21a3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644982"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353536"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Werken met zakelijke accounts in doelgroepinzichten
 
-Met de functionaliteit doelgroepinzichten in Dynamics 365 Customer Insights kunt u uw omgeving configureren voor verschillende primaire doelgroepen: individuele klanten (B2C) en zakelijke accounts (B2B). In B2C-scenario's staan individuen centraal in de gegevens. Voor B2B zijn de primaire doelgroepen accounts - organisaties of bedrijven - en contactpersonen. Dit artikel helpt u om aan de slag te gaan met een omgeving voor zakelijke accounts. Het geeft een overzicht van de verschillen voor de functiegebieden in doelgroepinzichten, afhankelijk van de focus van uw omgeving. Raadpleeg de documenten van de functiegebieden voor meer informatie over de verschillen. 
+Met de functionaliteit doelgroepinzichten in Dynamics 365 Customer Insights kunt u uw omgeving configureren voor verschillende primaire doelgroepen: individuele consumenten (B2C) en zakelijke accounts (B2B). In B2C-scenario's staan individuen centraal in de gegevens. Voor B2B zijn de primaire doelgroepen accounts (organisaties of bedrijven) en contactpersonen. Dit artikel helpt u om aan de slag te gaan met een omgeving voor zakelijke accounts. Het geeft een overzicht van de verschillen voor de functiegebieden in doelgroepinzichten, afhankelijk van de focus van uw omgeving. Raadpleeg de documenten van de functiegebieden voor meer informatie over de verschillen. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Een omgeving maken voor zakelijke accounts
 
@@ -32,7 +36,7 @@ Na het harmoniseren van de gegevens gaat u [accounthiërarchieën opgeven](relat
 
 Als uw organisatie omgevingen onderhoudt voor individuele klanten en zakelijke accounts, kunt u met de schakeloptie in het linkerdeelvenster de primaire doelgroep kiezen.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Schakeloptie om de primaire doelgroep te schakelen tussen individuele klanten en zakelijke accounts.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Schakeloptie om de primaire doelgroep te schakelen tussen individuele klanten en zakelijke accounts.":::
 
 ## <a name="supported-feature-areas"></a>Ondersteunde functiegebieden
 

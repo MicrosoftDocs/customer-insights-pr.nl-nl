@@ -3,22 +3,24 @@ title: Customer Insights-gegevens exporteren naar Dynamics 365 Marketing
 description: Leer hoe u de verbinding configureert en exporteert naar Dynamics 365 Marketing.
 ms.date: 08/24/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
-ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
+searchScope:
+- ci-export
+- customerInsights
+ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "7417199"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353905"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Segmenten gebruiken in Dynamics 365 Marketing (preview)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Gebruik de [segmenten](segments.md) om campagnes te genereren en contact op te nemen met specifieke groepen klanten met Dynamics 365 Marketing. Zie [Segmenten van Dynamics 365 Customer Insights gebruiken met Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments) voor meer informatie.
 
@@ -45,7 +47,7 @@ Als u de nieuwe mogelijkheden van Dynamics 365 Marketing gebruikt voor realtime 
 
 1. Selecteer in de sectie **Account van serverbeheerder** de optie **Aanmelden** en kies een Dynamics 365 Marketing-account.
 
-1. Wijs een klant-id-veld toe aan de Dynamics 365-contactpersoon-id.
+1. Wijs het veld Contact-id in de entiteit Klant toe aan de contactpersoon-id van Dynamics 365.
 
 1. Selecteer **Opslaan** om de verbinding te voltooien. 
 
