@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355885"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376502"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Bring your own Azure Key Vault (preview)
 
@@ -31,7 +31,7 @@ Om de sleutelkluis in doelgroepinzichten te configureren, moet aan de volgende v
 
 - U heeft een actief Azure-abonnement.
 
-- U hebt de rol van [Beheerder](permissions.md#administrator) in doelgroepinzichten. Meer informatie over [gebruikersmachtigingen in doelgroepinzichten](permissions.md#assign-roles-and-permissions).
+- U hebt de rol van [Beheerder](permissions.md#admin) in doelgroepinzichten. Meer informatie over [gebruikersmachtigingen in doelgroepinzichten](permissions.md#assign-roles-and-permissions).
 
 - Er zijn de rollen [Inzender](/azure/role-based-access-control/built-in-roles#contributor) en [Beheerder gebruikerstoegang](/azure/role-based-access-control/built-in-roles#user-access-administrator) in de sleutelkluis of de resourcegroep waartoe de sleutelkluis behoort. Ga voor meer informatie naar [Azure-roltoewijzingen toevoegen of verwijderen met behulp van de Azure-portal](/azure/role-based-access-control/role-assignments-portal). Als u de rol Beheerder gebruikerstoegang niet hebt in de sleutelkluis, moet u afzonderlijk op rollen gebaseerde toegangsbeheermachtigingen instellen voor de Azure-service-principal voor Dynamics 365 Customer Insights. Volg de stappen om [een Azure-service-principal te gebruiken](connect-service-principal.md) voor de sleutelkluis die moet worden gekoppeld.
 

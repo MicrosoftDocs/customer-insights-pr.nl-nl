@@ -58,6 +58,8 @@
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Azure Synapse Analytics toevoegen
           href: audience-insights/connect-synapse.md
+        - name: Verrijking voor gegevensbronnen
+          href: audience-insights/data-sources-enrichment.md
         - name: Incrementeel vernieuwen voor gegevensbronnen
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Realtime gegevensopname
@@ -100,6 +102,8 @@
           href: audience-insights/enrichment-here.md
         - name: Verrijken met Leadspace
           href: audience-insights/enrichment-leadspace.md
+        - name: Verrijken met LiveRamp
+          href: audience-insights/enrichment-liveramp.md
         - name: Verrijken met Experian
           href: audience-insights/enrichment-experian.md
         - name: Verrijken met Office 365-gegevens

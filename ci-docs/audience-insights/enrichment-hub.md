@@ -1,7 +1,7 @@
 ---
 title: Geharmoniseerde klantprofielen verrijken
 description: Gebruik mogelijkheden om uw klantgegevens te verrijken.
-ms.date: 02/07/2022
+ms.date: 02/18/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: e8cac35ccf7012524dc22cb4a499dc605dd66346
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355377"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372696"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Verrijking voor klantprofielen (preview)
 
@@ -42,6 +42,7 @@ Op het tabblad **Ontdekken** vindt u alle ondersteunde verrijkingsopties.
 - [Aangepaste gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) geleverd door Microsoft
 - [Locatiegegevens](enrichment-here.md) worden geleverd door HERE Technologies 
+- [Identiteit](enrichment-liveramp.md) aangeboden door LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
 
@@ -80,6 +81,10 @@ Verrijkingen van derden worden geconfigureerd met [verbindingen](connections.md)
 ## <a name="multiple-enrichments-of-the-same-type"></a>Meerdere verrijkingen van hetzelfde type
 
 De entiteit die moet worden verrijkt, wordt gespecificeerd tijdens de verrijkingsconfiguratie, waardoor u de mogelijkheid hebt om slechts een subset van uw profielen te verrijken. Verrijk bijvoorbeeld alleen gegevens voor een specifiek segment. U kunt meerdere verrijkingen van hetzelfde type configureren en dezelfde verbinding opnieuw gebruiken. Sommige verrijkingen hebben limieten voor het aantal verrijkingen van hetzelfde type dat kan worden gemaakt. De limieten en het huidige gebruik zijn te zien op de pagina **Verrijking**.
+
+## <a name="enrich-data-sources-before-unification"></a>Gegevensbronnen verrijken vóór harmonisatie
+
+U kunt uw klantgegevens verrijken vóór gegevensharmonisatie om de kwaliteit van een gegevensmatch te helpen verbeteren. Zie [Verrijking voor gegevensbronnen](data-sources-enrichment.md) voor meer informatie.
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>De voortgang van het verrijkingsproces bekijken
 

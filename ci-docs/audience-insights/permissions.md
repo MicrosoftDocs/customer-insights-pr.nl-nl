@@ -1,7 +1,7 @@
 ---
 title: Gebruikersrechten beheren
 description: Meer informatie over machtigingen en gebruikersrollen.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355931"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376732"
 ---
 # <a name="user-permissions"></a>Gebruikersmachtigingen
 
@@ -48,7 +48,7 @@ Er zijn drie soorten rollen:
 - Beheer configuratie en verrijk klantprofielen vanaf de pagina **Verrijking** (alleen voor eigen verrijkingen).
 - Beheer en maak exports op basis van verbindingen die worden gedeeld met inzenders. [Meer informatie over hoe beheerders inzenders toestaan een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Beheerder
+## <a name="admin"></a>Beheerder
 
 - Alle machtingen beschikbaar voor de inzender.
 - Wijzig de instellingen op de pagina **Systeem**, inclusief de werktaal en vernieuwingsschema's voor uw systeemprocessen.
@@ -60,6 +60,12 @@ Er zijn drie soorten rollen:
 - Installeer en gebruik de **invoegtoepassing Klantkaart**.
 - Voeg de **Power Apps-connector** toe en gebruik deze.
 - Gebruik van [Customer Insights-API's](apis.md) inschakelen.
+- [Eigendom van omgeving toewijzen](manage-environments.md#change-the-owner-of-an-environment) aan een andere beheerder.
+
+## <a name="admin-owner"></a>Beheerder (eigenaar)
+
+- Alle machtigingen beschikbaar voor de beheerder.
+- De omgeving [opnieuw instellen en verwijderen](manage-environments.md#reset-an-existing-environment).
 
 ## <a name="assign-roles-and-permissions"></a>Rollen en machtigingen toewijzen
 

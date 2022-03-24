@@ -8,12 +8,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 18cc32a169e79794d2d3203d462620ab41efaafe
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229025"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455946"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps-connector (preview)
 
@@ -39,7 +39,9 @@ Na het toevoegen van Customer Insights als een gegevensverbinding, kunt u de vol
 
 U kunt alleen de entiteiten **Klant**, **UnifiedActivity**, **Segmenten** en **ContactProfile** verbinden via de Power Apps-connector. ContactProfile is alleen beschikbaar in instanties van doelgroepinzichten voor zakelijke accounts. Andere entiteiten worden weergegeven omdat de onderliggende connector deze ondersteunt via triggers in Power Automate.
 
-### <a name="delegation"></a>Overdracht
+U kunt maximaal 100 oproepen per 60 seconden uitvoeren. U kunt het API-eindpunt meerdere keren aanroepen door de parameter $skip te gebruiken. [Meer informatie over de parameter $skip](/connectors/customerinsights/#get-items-from-an-entity).
+
+### <a name="delegation"></a>Delegering
 
 Delegatie werkt voor de entiteit **Klant** en de entiteit **UnifiedActivity**. 
 

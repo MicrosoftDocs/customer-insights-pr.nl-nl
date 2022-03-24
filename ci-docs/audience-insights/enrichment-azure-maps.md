@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 2cc44f7b453d2aca328c397b14787c8a02c5e490
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226443"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376640"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Verrijking van klantprofielen met Azure Maps (preview)
 
@@ -25,7 +25,7 @@ Als u gegevensverrijking van Azure Maps wilt configureren, moet aan de volgende 
 
 - U moet een actief Azure Maps-abonnement hebben. Als u een abonnement wilt nemen, kunt u [zich aanmelden of een gratis proefperiode nemen](https://azure.microsoft.com/services/azure-maps/).
 
-- Er is een Azure Maps-[verbinding](connections.md) beschikbaar *of* u hebt [beheerders](permissions.md#administrator)machtigingen en een actieve Azure Maps API-sleutel.
+- Er is een Azure Maps-[verbinding](connections.md) beschikbaar *of* u hebt [beheerders](permissions.md#admin)machtigingen en een actieve Azure Maps API-sleutel.
 
 ## <a name="configure-the-enrichment"></a>De verrijking configureren
 

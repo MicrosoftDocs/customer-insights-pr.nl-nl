@@ -1,7 +1,7 @@
 ---
 title: Omgevingen maken en beheren
 description: Ontdek hoe u zich aanmeldt voor de service en hoe u omgevingen beheert.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354273"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376870"
 ---
 # <a name="manage-environments"></a>Omgevingen beheren
-
-
 
 ## <a name="switch-environments"></a>Omgevingen omschakelen
 
@@ -98,9 +96,29 @@ Ga na het vernieuwen van de gegevensbronnen naar **Gegevens** > **Harmoniseren**
 
 Ga wanneer de gegevensharmonisering is voltooid naar **Meetcriteria** en **Segmenten** om deze eveneens te vernieuwen.
 
+## <a name="change-the-owner-of-an-environment"></a>De eigenaar van een omgeving wijzigen
+
+Hoewel meerdere gebruikers beheerdersmachtigingen kunnen hebben in Customer Insights, is slechts één gebruiker de eigenaar van een omgeving. Standaard is het de beheerder die in eerste instantie een omgeving maakt. Als beheerder van een omgeving kunt u het eigendom toewijzen aan een andere gebruiker met beheerdersrechten.
+
+1. Selecteer de picker **Omgeving** in de koptekst van de app.
+
+1. Selecteer het pictogram **Bewerken**.
+
+1. Ga in het vak **Omgeving bewerken** naar de stap **Basisinformatie**.
+
+1. Kies in het veld **Eigenaar van omgeving wijzigen** de nieuwe eigenaar van de omgeving.  
+
+1. Selecteer **Controleren en voltooien** en vervolgens **Bijwerken** om de wijzigingen toe te passen. 
+
+## <a name="claim-ownership-of-an-environment"></a>Eigendom van een omgeving claimen
+
+Als de eigenaar van een omgeving de organisatie verlaat of als zijn of haar gebruikersaccount wordt verwijderd, heeft de omgeving geen eigenaar. Een gebruiker met beheerdersmachtigingen kan het eigendom claimen en de nieuwe eigenaar worden. Ze kunnen eigenaar blijven van de omgeving of [het eigendom wijzigen naar een andere beheerder](#change-the-owner-of-an-environment). 
+
+U kunt het eigendom claimen door de knop **Eigenaar worden** te selecteren die boven aan elke pagina in Customer Insights wordt weergegeven wanneer de oorspronkelijke eigenaar de organisatie heeft verlaten.
+
 ## <a name="reset-an-existing-environment"></a>Een bestaande omgeving opnieuw instellen
 
-Als beheerder kunt u een omgeving terugzetten naar een lege staat als u alle configuraties wilt verwijderen en de opgenomen gegevens wilt verwijderen.
+Als eigenaar van een omgeving kunt u een omgeving opnieuw instellen op een lege status als u alle configuraties wilt verwijderen en de opgenomen gegevens wilt verwijderen.
 
 1.  Selecteer de picker **Omgeving** in de koptekst van de app. 
 
@@ -112,7 +130,7 @@ Als beheerder kunt u een omgeving terugzetten naar een lege staat als u alle con
 
 ## <a name="delete-an-existing-environment"></a>Een bestaande omgeving verwijderen
 
-Als beheerder kunt u een door u beheerde omgeving verwijderen.
+Als eigenaar van een omgeving kunt u een door u beheerde omgeving verwijderen.
 
 1.  Selecteer de picker **Omgeving** in de koptekst van de app.
 

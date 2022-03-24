@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355147"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376916"
 ---
 # <a name="match-entities"></a>Entiteiten toewijzen
 
@@ -180,12 +180,24 @@ Een entiteit voor ontdubbelingsuitvoer bevat de volgende informatie:
   - Deduplication_WinnerId: dit veld bevat de winnende id van de geïdentificeerde groepen of clusters. Als de Deduplication_WinnerId hetzelfde is als de primaire sleutelwaarde voor een record, betekent dit dat de record de winnende record is.
 - Velden die worden gebruikt om de ontdubbelingsregels te definiëren.
 - Regel- en scorevelden om aan te geven welke van de ontdubbelingsregels zijn toegepast en welke score is geretourneerd door het matching-algoritme.
-   
+ 
+## <a name="include-enriched-entities-preview"></a>Verrijkte entiteiten opnemen (preview)
+
+Als u entiteiten hebt verrijkt op het gegevensbronniveau, selecteert u deze voordat u het overeenkomstproces uitvoert. De verrijkte entiteiten kunnen uw harmonisatieresultaten verbeteren. Zie [Verrijking voor gegevensbronnen](data-sources-enrichment.md) voor meer informatie. 
+
+De verrijkte entiteit bevat de originele gegevensbronvelden en de verrijkte velden. Dus als u ervoor kiest om met de verrijkte entiteit te werken, wordt de bestaande configuratie niet beïnvloed. Het is echter mogelijk dat u de overeenkomstregels moet bijwerken om in plaats daarvan de verrijkte velden te gebruiken.
+
+1. Ga naar **Gegevens** > **Harmoniseren** > **Afstemmen** en selecteert u **Verrijkte entiteiten gebruiken** boven aan de pagina.
+
+1. Kies een of meer verrijkte entiteiten in het deelvenster **Verrijkte entiteiten gebruiken**.
+
+1. Selecteer **Gereed**. Waar de bronentiteit ook wordt gebruikt (zoals vergelijkingsvolgorde of regels), wordt deze automatisch gewijzigd in de verrijkte entiteit.
+  
 ## <a name="run-the-match-process"></a>Het vergelijkingsproces uitvoeren
 
 Met geconfigureerde overeenkomstregels, inclusief tussen entiteiten en ontdubbelingsregels, kunt u het vergelijkingsproces uitvoeren. 
 
-Ga naar **Gegevens** > **Verenigen** > **Afstemmen** en selecteer **Uitvoeren** om het proces te starten. Het vergelijkingsalgoritme heeft enige tijd nodig om te voltooien en u kunt de configuratie pas wijzigen als deze is voltooid. U kunt de uitvoering annuleren als u wijzigingen wilt aanbrengen. Selecteer de status van de taak en selecteer **Taak annuleren** in het deelvenster **Details van voortgang**.
+Ga naar **Gegevens** > **Harmoniseren** > **Afstemmen** en selecteer **Uitvoeren** om het proces te starten. Het vergelijkingsalgoritme heeft enige tijd nodig om te voltooien en u kunt de configuratie pas wijzigen als deze is voltooid. U kunt de uitvoering annuleren als u wijzigingen wilt aanbrengen. Selecteer de status van de taak en selecteer **Taak annuleren** in het deelvenster **Details van voortgang**.
 
 U vindt het resultaat van een geslaagde uitvoering, de geharmoniseerde klantprofielentiteit, op de pagina **Entiteiten**. Uw geharmoniseerde klantentiteit heeft de naam **Klanten** in de sectie **Profielen**. Bij de eerste geslaagde vergelijkingsuitvoering wordt de geharmoniseerde entiteit *Klant* gemaakt. Bij elke volgende vergelijking wordt die entiteit uitgebreid.
 

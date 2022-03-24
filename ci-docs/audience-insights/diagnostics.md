@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354366"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376410"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Logboeken doorsturen in Dynamics 365 Customer Insights met Azure Monitor (preview)
 
@@ -37,7 +37,7 @@ Customer Insights stuurt de volgende gebeurtenislogboeken:
 Als u diagnoses wilt configureren in Customer Insights, moet aan de volgende vereisten worden voldaan:
 
 - U hebt een actief [Azure-abonnement](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- U hebt machtigingen voor [beheerders](permissions.md#administrator) in Customer Insights.
+- U hebt machtigingen voor [beheerders](permissions.md#admin) in Customer Insights.
 - U hebt de rol van **inzender** en **beheerder voor gebruikerstoegang** voor de doelresource in Azure. De resource kan een Azure Storage-account, een Azure Event Hub of een Azure Log Analytics-werkruimte zijn. Zie [Azure-roltoewijzingen toevoegen of verwijderen met behulp van de Azure-portal](/azure/role-based-access-control/role-assignments-portal) voor meer informatie.
 - [Bestemmingsvereisten](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) voor Azure Storage, Azure Event Hub of Azure Log Analytics met.
 - U hebt in ieder geval de rol **Lezer** in de resourcegroep waartoe de resource behoort.
@@ -132,7 +132,7 @@ API-gebeurtenissen en werkstroomgebeurtenissen hebben een gemeenschappelijke str
 | `resultSignature` | String    | Optioneel          | Resultaatstatus van de gebeurtenis. Als de bewerking overeenkomt met een REST API-aanroep, is dit de HTTP-statuscode.        | `200`             |
 | `durationMs`      | Lang      | Optioneel          | Duur van de bewerking in milliseconden.     | `133`     |
 | `callerIpAddress` | String    | Optioneel          | IP-adres van beller, als de bewerking overeenkomt met een API-aanroep die afkomstig is van een openbaar beschikbaar IP-adres.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Optioneel          | JSON-object dat de identiteit beschrijft van de gebruiker of toepassing die de bewerking heeft uitgevoerd.       | Zie de sectie [Identiteit](#identity-schema).     |  |
+| `identity`        | String    | Optioneel          | JSON-object dat de identiteit beschrijft van de gebruiker of toepassing die de bewerking heeft uitgevoerd.       | Zie de sectie [Identiteit](#identity-schema).     |  
 | `properties`      | String    | Optioneel          | JSON-object met meer eigenschappen voor de specifieke categorie gebeurtenissen.      | Zie de sectie [Eigenschappen](#api-properties-schema).    |
 | `level`           | String    | Vereist          | Ernstniveau van de gebeurtenis.    | `Informational`, `Warning`, `Error` of `Critical`.           |
 | `uri`             | String    | Optioneel          | Absolute aanvraag-URI.    |               |
@@ -230,7 +230,7 @@ Werkstroomgebeurtenissen hebben de volgende eigenschappen.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Ja      | Ja  | Altijd `WorkflowEvent`, waarbij de gebeurtenis als werkstroomgebeurtenis wordt gemarkeerd.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Ja      | Ja  | Id van de werkstroomuitvoering. Alle werkstroom- en taakgebeurtenissen binnen de werkstroomuitvoering hebben hetzelfde `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Ja      | Ja  | Id van de bewerking, zie [Bewerkingstypen].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Ja      | Ja  | Zie [Bewerkingstypen].(#operation-types) voor de id van de bewerking                                                                                                                                                                                       |
 | `properties.tasksCount`                      | Ja      | No   | Uitsluitend werkstroom. Aantal taken dat door de werkstroom wordt geactiveerd.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Ja      | No   | Optioneel. Alleen werkstroomgebeurtenissen. De Azure Active Directory-[object-id van de gebruiker](/azure/marketplace/find-tenant-object-id#find-user-object-id) die de werkstroom heeft geactiveerd. Zie ook `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Ja      | No   | `full` of `incremental` vernieuwing.                                                                                                                                                                                                                            |
@@ -239,7 +239,7 @@ Werkstroomgebeurtenissen hebben de volgende eigenschappen.
 | `properties.startTimestamp`                  | Ja      | Ja  | UTC-tijdstempel `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Ja      | Ja  | UTC-tijdstempel `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Ja      | Ja  | UTC-tijdstempel `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Ja      | Ja  | `instanceId` van Customer Insights                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Ja      | Ja  | `instanceId` van Customer Insights                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Ja  | - Voor OperationType = `Export` vormt de guid van de exportconfiguratie de id. <br> - Voor OperationType = `Enrichment` is dit de guid van de verrijking <br> - Voor OperationType `Measures` en `Segmentation` vormt de naam van de entiteit de id. |
 | `properties.friendlyName`                    | No       | Ja  | Gebruiksvriendelijke naam van de export of de entiteit die wordt verwerkt.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Ja  | Optioneel. Foutbericht met nadere details.                                                                                                                                                                                                                  |

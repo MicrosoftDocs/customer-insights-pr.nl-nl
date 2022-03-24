@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355011"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455832"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Segmenten gebruiken in Dynamics 365 Sales (preview)
 
@@ -31,7 +31,7 @@ Gebruik uw klantgegevens om marketinglijsten te maken, werkstromen op te volgen 
 
 ## <a name="prerequisite-for-connection"></a>Vereiste voor verbinding
 
-1. Contactpersoonrecords moeten aanwezig zijn in Dynamics 365 Sales voordat u een segment van Customer Insights naar Sales kunt exporteren. Lees meer over het opnemen van contactpersonen in [Dynamics 365 Sales met Microsoft Dataverse](connect-power-query.md)​.
+1. Contactpersoonrecords moeten aanwezig zijn in Dynamics 365 Sales voordat u een segment van Customer Insights naar Sales kunt exporteren. Lees meer over het opnemen van contactpersonen uit [Dynamics 365 Sales met behulp van Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > Als u segmenten van doelgroepinzichten naar Sales exporteert, worden er geen nieuwe contactpersoonrecords gemaakt in de Sales-exemplaren. De contactpersoonrecords van Sales moeten worden opgenomen in doelgroepinzichten en worden gebruikt als een gegevensbron. Ze moeten ook worden opgenomen in de geharmoniseerde klantentiteit om klant-id's toe te wijzen aan contactpersoon-id's voordat segmenten kunnen worden geëxporteerd.

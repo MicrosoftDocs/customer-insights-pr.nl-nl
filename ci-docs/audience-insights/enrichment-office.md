@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228468"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376824"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Klantprofielen verrijken met contactgegevens (preview)
 
@@ -28,7 +28,7 @@ Als u de verrijking wilt configureren, moet aan de volgende vereisten worden vol
 - U hebt een actieve Office 365-cloudlicentie.
 - U hebt [geharmoniseerde klantprofielen](customer-profiles.md) op basis van [bedrijfsaccounts](work-with-business-accounts.md).
 - Aan uw Customer Insights-omgeving moet een [Microsoft Dataverse-organisatie zijn toegevoegd](create-environment.md#step-3-connect-to-microsoft-dataverse).
-- U hebt machtigingen voor [beheerders](permissions.md#administrator).
+- U hebt machtigingen voor [beheerders](permissions.md#admin).
 - U hebt toestemming van de beheerder van uw Office 365-tenant, of kunt deze krijgen, om Office 365-gegevens te gebruiken om **Inzichten voor de organisatie** binnen Dynamics 365-toepassingen te verstrekken.
 
 ## <a name="configure-the-enrichment"></a>De verrijking configureren

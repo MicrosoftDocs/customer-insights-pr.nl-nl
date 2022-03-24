@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232652"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376456"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Wat is er nieuw in de doelgroepinzichten-mogelijkheid van Dynamics 365 Customer Insights
-
-
 
 We kondigen vol trots onze meest recente updates aan. Dit artikel geeft een overzicht van openbare preview-functies, verbeteringen in de algemene beschikbaarheid en functie-updates. Als u de langetermijnplannen voor functies wilt zien, bekijkt u de [releaseplannen voor Dynamics 365 en Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +24,62 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="february-2022-updates"></a>Updates van februari 2022
+
+De updates in februari 2022 omvatten nieuwe functies, prestatie-upgrades en bugfixes.
+
+### <a name="general-availability-for-prediction-models"></a>Algemene beschikbaarheid voor voorspellingsmodellen
+
+Kant-en-klare voorspellingsmodellen, inclusief **abonnementsverloop**, **transactieverloop** en **levensduurwaarde van klant (CLV)** komen algemeen beschikbaar als onderdeel van Customer Insights. 
+
+Zie [Overzicht van voorspellingen](predictions-overview.md) voor meer informatie.
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nieuw gegevensbron: Integratie met Azure Synapse Analytics (preview)
+
+Azure Synapse Analytics is een enterprise analytics-service die sneller inzichten verkrijgt in datawarehouses en big data-systemen.
+
+Als uw organisatie al gebruikmaakt van geavanceerde analysemogelijkheden van Azure Synapse Analytics en de uitvoer opslaat in de Data Lake-databases, kunt u die gegevens eenvoudig opnemen in Customer Insights. Zie [Verbinding maken met een Azure Synapse-gegevensbron (preview)](connect-synapse.md) voor meer informatie.
+
+### <a name="liveramp-enrichment-preview"></a>LiveRamp-verrijking (preview)
+
+LiveRamp biedt deterministische offline identiteitsresolutie en consolidatie van klantgegevens. U kunt persoonlijke identificatiegegevens in uw klantgegevens toewijzen aan de AbiliTec-identiteitsgrafiek en AbiliTec-id's ontvangen. U kunt deze id's vervolgens gebruiken voor een betere harmonisatie van uw klantgegevens.
+
+Zie [Klantprofielen verrijken met identiteitsgegevens van LiveRamp (preview)](enrichment-liveramp.md) voor meer informatie.
+
+### <a name="enrichment-for-data-sources-preview"></a>Verrijking voor gegevensbronnen (preview)
+
+Gebruik gegevens uit bronnen zoals Microsoft en andere partners om uw klantgegevens te verrijken voordat gegevens worden geharmoniseerd. Gegevensbronverrijkingen zorgen ervoor dat gegevens vollediger zijn en een hogere kwaliteit hebben waardoor betere resultaten kunnen worden behaald nadat u uw gegevens hebt geharmoniseerd.
+
+Zie [Verrijking voor gegevensbronnen (preview)](data-sources-enrichment.md) voor meer informatie.
+
+### <a name="change-owner-of-environment"></a>Eigenaar van omgeving wijzigen
+
+Hoewel meerdere gebruikers beheerdersmachtigingen kunnen hebben in Customer Insights, is slechts één gebruiker de eigenaar van een omgeving. Dankzij een verbeterde ervaring kunt u de eigenaren van een omgeving wijzigen en het eigendom claimen als een voormalige eigenaar de organisatie heeft verlaten. 
+
+Zie [De eigenaar van een omgeving wijzigen](manage-environments.md#change-the-owner-of-an-environment) voor meer informatie.
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Gegevensvoorbereidingsproces geeft een beschadigingsreden voor beschadigde records
+
+Het gegevensvoorbereidingsproces toont nu de reden voor beschadiging voor alle velden met beschadigde gegevens op individueel recordniveau voor gemakkelijke identificatie. 
+
+Zie [Beschadigde gegevensbronnen](entities.md#corrupted-data-sources) voor meer informatie.
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Einde van preview voor rapportagefuncties in de mogelijkheid voor betrokkenheidsinzichten
+
+De Dynamics 365 Customer Insights preview van de mogelijkheden voor betrokkenheidsinzichten is op 15 februari 2022 beëindigd.  
+Deze wijziging betekent dat de proefervaring van Customer Insights niet langer de mogelijkheid biedt om trechters of andere rapportagefunctionaliteit te maken.
+
+We nodigen u uit om de vele andere functies van [Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/), het Microsoft-klantgegevensplatform (CDP) te verkennen en te evalueren.    
+ 
+Gedurende een overgangsperiode hebben bestaande preview-deelnemers nog steeds toegang tot enkele preview-mogelijkheden en -functionaliteit:
+
+- Ontvang code om een website of mobiele app in te stellen 
+- Bekijk gebeurtenissen en gebeurteniseigenschappen 
+- Verbeter geharmoniseerde profielen met opgenomen en verfijnde gebeurtenissen om te profiteren van de volledige waarde van hun klantgegevens
+  
+Tijdens de overgangsperiode worden vastgelegde gebeurtenissen nog steeds gestreamd naar het verbonden Data Lake. Zodra deze functionaliteit is uitgeschakeld, stopt het delen van gegevens tussen engagement-inzichten en doelgroep-inzichten en worden er geen nieuwe gebeurtenissen naar de verbonden opslag verzonden.
+Neem rechtstreeks contact op met uw Microsoft-accountteam als u vragen hebt over de beëindiging van de preview van de mogelijkheden. Uw accountteam houdt u op de hoogte van komende lanceringen. 
 
 ## <a name="january-2022-updates"></a>Updates januari 2022
 
