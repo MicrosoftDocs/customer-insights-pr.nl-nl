@@ -9,15 +9,10 @@ author: brndkfr
 ms.author: bkief
 manager: shellyha
 searchScope:
-- ci-system-diagnostic
-- customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376410"
+  - ci-system-diagnostic
+  - customerInsights
 ---
+
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Logboeken doorsturen in Dynamics 365 Customer Insights met Azure Monitor (preview)
 
 Dynamics 365 Customer Insights biedt een directe integratie met Azure Monitor. Met Azure Monitor-resourcelogboeken kunt u logboeken bewaken en naar [Azure-opslag](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) verzenden of deze naar [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/) streamen.
@@ -230,7 +225,7 @@ Werkstroomgebeurtenissen hebben de volgende eigenschappen.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Ja      | Ja  | Altijd `WorkflowEvent`, waarbij de gebeurtenis als werkstroomgebeurtenis wordt gemarkeerd.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Ja      | Ja  | Id van de werkstroomuitvoering. Alle werkstroom- en taakgebeurtenissen binnen de werkstroomuitvoering hebben hetzelfde `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Ja      | Ja  | Zie [Bewerkingstypen].(#operation-types) voor de id van de bewerking                                                                                                                                                                                       |
+| `properties.operationType`                   | Ja      | Ja  | Zie [Bewerkingstypen](#operation-types) voor de id van de bewerking.                                                                                                                                                                               |
 | `properties.tasksCount`                      | Ja      | No   | Uitsluitend werkstroom. Aantal taken dat door de werkstroom wordt geactiveerd.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Ja      | No   | Optioneel. Alleen werkstroomgebeurtenissen. De Azure Active Directory-[object-id van de gebruiker](/azure/marketplace/find-tenant-object-id#find-user-object-id) die de werkstroom heeft geactiveerd. Zie ook `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Ja      | No   | `full` of `incremental` vernieuwing.                                                                                                                                                                                                                            |

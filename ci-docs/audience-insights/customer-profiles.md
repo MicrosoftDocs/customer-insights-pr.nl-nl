@@ -9,23 +9,20 @@ author: Nils-2m
 ms.author: nikeller
 manager: shellyha
 searchScope:
-- ci-customers-page
-- ci-customer-card
-- ci-activities
-- ci-activities-wizard
-- customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354875"
+  - ci-customers-page
+  - ci-customer-card
+  - ci-activities
+  - ci-activities-wizard
+  - customerInsights
 ---
+
 # <a name="customer-profiles"></a>Klantprofielen
 
 Op de pagina **Klanten** wordt een gecombineerde weergave getoond van uw geharmoniseerde klantprofielen. De klantprofielen zijn beschikbaar zodra u [de geharmoniseerde klantentiteit heeft gemaakt](data-unification.md). Op de pagina kunt u naar klanten zoeken en de index voor die zoekopdracht definiëren.
 
-Klanten kunnen individuen of organisaties zijn. Elk klantprofiel wordt weergegeven door een tegel. Gebruik de pagineringsknoppen om meer records te krijgen. De kaart geeft velden weer van de entiteit *Klant* zoals gedefinieerd in de **Zoek- en filterindex**. Selecteer een tegel om gegevens voor de geselecteerde klant te zien op een speciale pagina met de naam [Klantdetails](customer-profiles.md#customer-details-page).
+Klanten kunnen individuen of organisaties zijn. Elk klantprofiel wordt weergegeven door een tegel. Gebruik de pagineringsknoppen om meer records te krijgen. De kaart geeft velden weer van de entiteit *Klant* zoals gedefinieerd in de **Zoek- en filterindex**. De volgorde van de velden binnen elke kaart wordt door het systeem gekozen.
+
+Selecteer een tegel om gegevens voor de geselecteerde klant te zien op een speciale pagina met de naam [Klantdetails](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Klantenpagina met resultaattegels](media/customers-page-result-tiles-B2C.png "Klantenpagina met resultaattegels")

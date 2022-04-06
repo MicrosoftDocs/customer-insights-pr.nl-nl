@@ -1,7 +1,7 @@
 ---
 title: Gegevensbronnen gebruiken om gegevens op te nemen
 description: Meer informatie over hoe u gegevens uit verschillende bronnen kunt importeren.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -9,16 +9,11 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-data-sources
-- ci-create-data-source
-- customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354043"
+  - ci-data-sources
+  - ci-create-data-source
+  - customerInsights
 ---
+
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
 
@@ -47,7 +42,18 @@ Gegevensbronnen die zijn gemaakt na het koppelen van een Dataverse-omgeving met 
 
 Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving worden zichtbaar en u kunt deze opnieuw gebruiken in Customer Insights. De pagina met gegevensbronnen toont koppelingen om naar de Microsoft Power Platform-omgeving te gaan waar u on-premises gegevensgateways kunt bekijken en configureren.
 
+> [!IMPORTANT]
+> Zorg ervoor dat uw gateways zijn bijgewerkt naar de nieuwste versie. U kunt een update installeren en een gateway opnieuw configureren vanaf een prompt die direct op het gatewayscherm wordt weergegeven of [de meest recente versie downloaden](https://powerapps.microsoft.com/downloads/). Als u niet de nieuwste gatewayversie gebruikt, mislukt het vernieuwen van de gegevensstroom met foutmeldingen zoals **Het trefwoord wordt niet ondersteund: configuratie-eigenschappen. Parameternaam: trefwoord**.
+
 ## <a name="review-ingested-data"></a>Opgenomen gegevens bekijken
+Als uw omgeving Power Platform-gegevensstromen bevat, bevat de pagina **Gegevensbronnen** drie secties: 
+- **Gedeeld**: gegevensbronnen die kunnen worden beheerd door alle Customer Insights-beheerders. Power BI-gegevensstromen, uw eigen opslagaccount en koppelen aan een door Dataverse beheerd data lake zijn voorbeelden van gedeelde gegevensbronnen.
+- **Beheerd door mij**: Power Platform-gegevensstromen die alleen door u zijn gemaakt en kunnen worden beheerd. Andere Customer Insights-beheerders kunnen deze gegevensstromen alleen bekijken, maar niet bewerken, vernieuwen of verwijderen.
+- **Beheerd door anderen**: Power Platform-gegevensstromen die door andere beheerders zijn gemaakt. Je kunt deze alleen bekijken. Er wordt een vermelding weergegeven van de eigenaar van de gegevensstroom waarmee contact kan worden opgenomen voor hulp.
+> [!NOTE]
+> Alle entiteiten kunnen worden bekeken en gebruikt door andere gebruikers. Gebruikerscontextualiteit is alleen van toepassing op de gegevensbronnen en niet op de entiteiten die het resultaat zijn van deze gegevensstromen.
+
+Als geen Power Platform-gegevensstromen worden gebruikt, ziet u geen groepen of secties. De pagina **Gegevensbronnen** bevat alleen een lijst van alle gegevensbronnen.
 
 U ziet de naam van elke opgenomen gegevensbron, de status en de laatste keer dat de gegevens voor die bron zijn vernieuwd. U kunt de lijst met gegevensbronnen op elke kolom sorteren.
 

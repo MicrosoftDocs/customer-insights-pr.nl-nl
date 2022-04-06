@@ -1,24 +1,19 @@
 ---
 title: Omgevingen maken in Customer Insights
 description: Stappen om omgevingen te creëren met een gelicentieerd abonnement voor Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
-- ci-home
-- customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354089"
+  - ci-home
+  - customerInsights
 ---
+
 # <a name="create-an-environment-in-audience-insights"></a>Een omgeving maken in doelgroepinzichten
 
 In dit artikel wordt uitgelegd hoe u een nieuwe omgeving kunt maken nadat uw organisatie een Dynamics 365 Customer Insights-abonnement heeft aangeschaft. 
@@ -83,14 +78,16 @@ Bied uw eigen Microsoft Dataverse-omgeving om gegevens (profielen en inzichten) 
 Verbinding maken met uw Dataverse-omgeving stelt u ook in staat om [gegevens op te nemen uit on-premises gegevensbronnen met behulp van Power Platform-gegevensstromen en -gateways](data-sources.md#add-data-from-on-premises-data-sources). U kunt ook [kant-en-klare voorspellingsmodellen](predictions-overview.md?tabs=b2c#out-of-box-models) gebruiken door verbinding te maken met een Dataverse-omgeving.
 
 > [!IMPORTANT]
-> Customer Insights en Dataverse moeten zich in dezelfde regio bevinden om het delen van gegevens mogelijk te maken.
+> 1. Customer Insights en Dataverse moeten zich in dezelfde regio bevinden om het delen van gegevens mogelijk te maken.
+> 1. U moet de rol van algemene beheerder hebben in de Dataverse-omgeving. Controleer of deze [Dataverse-omgeving is gekoppeld](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) aan bepaalde beveiligingsgroepen en zorg ervoor dat u aan die beveiligingsgroepen wordt toegevoegd.
+> 1. Er is nog geen bestaande Customer Insights-omgeving aan die Dataverse-omgeving gekoppeld. Leren hoe u [een bestaande verbinding met een Dataverse omgeving kunt verwijderen](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="gegevens delen met Microsoft Dataverse automatisch ingeschakeld voor netto nieuwe exemplaren.":::
 
-> [!NOTE]
-> Customer Insights biedt geen ondersteuning voor de volgende scenario's voor het delen van gegevens:
-> - Als u alle gegevens opslaat naar uw eigen Azure Data Lake Storage, kunt u het delen van gegevens met een door Dataverse beheerd data lake niet inschakelen.
-> - Als u het delen van gegevens met een door Dataverse beheerd data lake inschakelt, is het niet mogelijk om [voorspelde of ontbrekende waarden te maken in een entiteit](predictions.md).
+Zie [Verbinden met Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse) voor meer informatie over het inschakelen van het delen van gegevens met Microsoft Dataverse vanuit uw eigen Azure Data Lake Storage.
+
+Customer Insights biedt geen ondersteuning voor de volgende scenario's voor het delen van gegevens:
+- Als u het delen van gegevens met een door Dataverse beheerd data lake inschakelt, is het niet mogelijk om [voorspelde of ontbrekende waarden te maken in een entiteit](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Stap 4: de instellingen voltooien
 

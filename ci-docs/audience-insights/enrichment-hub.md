@@ -1,7 +1,7 @@
 ---
 title: Geharmoniseerde klantprofielen verrijken
 description: Gebruik mogelijkheden om uw klantgegevens te verrijken.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,17 +10,12 @@ ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
-- ci-enrichments
-- ci-enrichment-details
-- ci-enrichment-wizard
-- customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372696"
+  - ci-enrichments
+  - ci-enrichment-details
+  - ci-enrichment-wizard
+  - customerInsights
 ---
+
 # <a name="enrichment-for-customer-profiles-preview"></a>Verrijking voor klantprofielen (preview)
 
 Gebruik gegevens vanuit bronnen zoals Microsoft en andere partners om uw klantgegevens te verrijken.
@@ -97,5 +92,19 @@ De status van een verrijking weergeven
 1. Vouw in het deelvenster **Voortgangsdetails** de sectie **Verrijkingen** uit. 
 1. Selecteer onder de verrijking waarvan u de voortgang wilt bekijken de optie **Details weergeven**. 
 1. Selecteer in het deelvenster **Taakdetails** de optie **Details weergeven** om de processen te bekijken die betrokken zijn bij het bijwerken van de verrijking en hun status. 
+
+## <a name="enrichment-results"></a>Verrijkingsresultaten
+
+Na een voltooide verrijkingsuitvoering kunt u de verrijkingsresultaten bekijken.
+
+1. Ga naar **Gegevens** > **Verrijking**. 
+1. Selecteer de verrijking waarover u informatie wilt.
+
+Alle verrijkingen tonen basisinformatie zoals het aantal verrijkte profielen, een voorbeeld van de gegenereerde verrijkingsentiteit en het aantal verrijkte profielen in de loop van de tijd. Indien beschikbaar, biedt **Aantal klanten dat wordt verrijkt per veld** een gedetailleerde beschrijving van de dekking van elk verrijkt veld.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Pagina met verrijkingsresultaten.":::
+
+Sommige verrijkingen tonen ook informatie die specifiek is voor het type verrijking. Raadpleeg de documentatie bij de desbetreffende verrijking voor meer informatie.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

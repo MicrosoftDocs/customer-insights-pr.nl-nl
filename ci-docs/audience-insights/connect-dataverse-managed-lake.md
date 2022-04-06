@@ -1,7 +1,7 @@
 ---
 title: Verbinding maken met tabellen in Microsoft Dataverse
 description: Gegevens importeren uit een door Microsoft Dataverse beheerd data lake.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -9,18 +9,11 @@ ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
 searchScope:
-- ci-dataverse
-- customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354135"
+  - ci-dataverse
+  - customerInsights
 ---
+
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Verbinding maken met gegevens in een beheerd Microsoft Dataverse data lake
-
-
 
 Dit artikel geeft informatie over hoe Dataverse-gebruikers snel verbinding kunnen maken met analytische entiteiten in een beheerd lake in Microsoft Dataverse. 
 
@@ -29,7 +22,8 @@ Dit artikel geeft informatie over hoe Dataverse-gebruikers snel verbinding kunne
 
 ## <a name="important-considerations"></a>Belangrijke aandachtspunten
 
-Gegevens die worden opgeslagen in online services, zoals Azure Data Lake Storage, kunnen worden opgeslagen op een andere locatie dan waar gegevens worden verwerkt of opgeslagen in Dynamics 365 Customer Insights. Door gegevens te importeren die zijn opgeslagen in online services, gaat u ermee akkoord dat gegevens kunnen worden overgedragen naar en opgeslagen met Dynamics 365 Customer Insights. [Meer informatie in het Microsoft Trust Centerr](https://www.microsoft.com/trust-center).
+1. Gegevens die worden opgeslagen in online services, zoals Azure Data Lake Storage, kunnen worden opgeslagen op een andere locatie dan waar gegevens worden verwerkt of opgeslagen in Dynamics 365 Customer Insights. Door gegevens te importeren die zijn opgeslagen in online services, gaat u ermee akkoord dat gegevens kunnen worden overgedragen naar en opgeslagen met Dynamics 365 Customer Insights. [Meer informatie in het Microsoft Trust Centerr](https://www.microsoft.com/trust-center).
+2. Alleen Dataverse-entiteiten waarvoor [wijzigingen bijhouden](/power-platform/admin/enable-change-tracking-control-data-synchronization) is ingeschakeld zijn zichtbaar. Deze entiteiten kunnen worden geëxporteerd naar de door Dataverse beheerde data lake en gebruikt in Customer Insights. Standaard Dataverse-tabellen hebben standaard het bijhouden van wijzigingen ingeschakeld. U moet het bijhouden van wijzigingen inschakelen voor aangepaste tabellen. Als u wilt controleren of een Dataverse-tabel is ingeschakeld voor het bijhouden van wijzigingen, gaat u naar [Power Apps](https://make.powerapps.com) > **Gegevens** > **Tabellen**. Zoek de tabel waarin u bent geïnteresseerd en selecteer deze. Ga naar **Instellingen** > **Geavanceerde opties** en bekijk de instelling **Wijzigingen bijhouden**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Verbinding maken met een door Dataverse beheerd lake
 

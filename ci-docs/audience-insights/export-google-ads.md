@@ -1,42 +1,32 @@
 ---
 title: Customer Insights-gegevens exporteren naar Google Ads
 description: Leer hoe u de verbinding configureert en exporteert naar Google Ads.
-ms.date: 09/27/2021
+ms.date: 03/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8227004"
 ---
+
 # <a name="export-segments-to-google-ads-preview"></a>Segmenten exporteren naar Google Ads (preview)
 
 Exporteer segmenten van geharmoniseerde klantprofielen naar een Google Ads-doelgroepenlijst en gebruik ze om te adverteren op Google Search, Gmail, YouTube en Google Display Network. 
 
-> [!IMPORTANT]
-> Momenteel kunt u alleen een nieuwe verbinding maken en gegevens exporteren naar Google Ads als u al een goedgekeurde Google Ads Developer-token heeft. Vanwege beleidswijzigingen gaan we de Google Ads-export binnenkort bijwerken en een exportoptie bieden waarvoor geen ontwikkelaarstoken nodig is om de continuïteit van uw ervaring te garanderen en de export naar Google Ads te vereenvoudigen. We raden aan om niet meer verbindingen met Google Ads in te stellen om een gemakkelijkere overstap naar de nieuwe exportoptie te faciliteren.
 
 ## <a name="prerequisites-for-connection"></a>Vereisten voor verbinding
 
 -   U hebt een [Google Ads-account](https://ads.google.com/) en bijbehorende beheerdersreferenties nodig.
--   U hebt een [goedgekeurd Google Ads-ontwikkelaarstoken](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
 -   U voldoet aan de eisen van het [beleid inzake klantafstemming](https://support.google.com/adspolicy/answer/6299717).
 -   U voldoet aan de eisen van de [hermarketinglijstformaten](https://support.google.com/google-ads/answer/7558048).
--   Er zijn bestaande doelgroepen met bijbehorende id's in Google Ads. Zie [Google Ads-doelgroepen](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.) voor meer informatie.
 -   U hebt [geconfigureerde segmenten](segments.md).
--   Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten velden voor e-mailadres, voornaam en achternaam.
+-   Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten velden die een e-mailadres, telefoon, mobiele adverteerder-id, gebruikers-id van derden of adres vertegenwoordigen.
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Tot 1 miljoen klantprofielen per export naar Google Ads.
 - Exporteren naar Google Ads is beperkt tot segmenten.
-- Het exporteren van segmenten met in totaal 1 miljoen klantprofielen kan tot 5 minuten duren vanwege beperkingen aan de kant van de provider. 
+- Het exporteren van segmenten met in totaal 1 miljoen klantprofielen kan tot 30 minuten duren vanwege beperkingen aan de kant van de provider. 
 - Het matchen in Google Ads kan tot 48 uur duren.
 
 ## <a name="set-up-connection-to-google-ads"></a>Verbinding met Google Ads instellen
@@ -50,8 +40,6 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar een Google Ads-doelg
 1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
 1. Voer uw **[Google Ads-klant-id](https://support.google.com/google-ads/answer/1704344)** in.
-
-1. Voer uw **[Door Google Ads goedgekeurde ontwikkelaarstoken](https://developers.google.com/google-ads/api/docs/first-call/dev-token)** in.
 
 1. Selecteer **Ik ga akkoord** om **Gegevensprivacy en naleving** te bevestigen.
 
@@ -71,11 +59,11 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Google Ads. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
 
-1. Voer uw **[Google Ads-doelgroep-id](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** in en selecteer **Verbinden** om de verbinding met Google Ads te initialiseren.
+1. Als u een nieuwe doelgroep wilt maken, laat u het veld Google-doelgroep-id leeg. We maken automatisch een nieuwe doelgroep in uw Google Ads-account en gebruiken de naam van het geëxporteerde segment. Als u een bestaande Google Ads-doelgroep wilt bijwerken, voert u uw [Google Ads-doelgroep-id](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.) in
 
-1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt.
+1. Selecteer in de sectie **Gegevensvergelijking** een of meer gegevensvelden om te exporteren en selecteer het veld dat de corresponderende gegevensvelden in Customer Insights vertegenwoordigt.
 
-1. Selecteer de segmenten die u wilt exporteren. U kunt in totaal tot 1 miljoen klantprofielen exporteren naar Google Ads.
+1. Selecteer de segmenten die u wilt exporteren. 
 
 Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 

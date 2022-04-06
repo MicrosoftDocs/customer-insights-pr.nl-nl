@@ -1,20 +1,15 @@
 ---
 title: Overzicht over ondersteunde voorspellingsscenario's
 description: Voorspellingsscenario's en opties die worden gedekt door de Dynamics 365 Customer Insights-toepassing.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
-ms.contentlocale: nl-NL
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228238"
 ---
+
 # <a name="predictions-overview"></a>Overzicht van voorspellingen
 
 Dynamics 365 Customer Insights wordt geleverd met een verscheidenheid aan opties die gebruikmaken van AI en Machine Learning om gegevens te voorspellen. 
@@ -36,6 +31,11 @@ De eenvoudigste manier om te beginnen met het voorspellen van gegevens zijn voor
 - [Transactioneel verloop](predict-transactional-churn.md) : voorspelt of een klant niet langer uw producten of services zal kopen in een bepaald tijdsbestek.
 
 ---
+
+> [!TIP]
+> We raden u aan om kant-en-klare modellen regelmatig te vernieuwen met bijgewerkte gegevens om ervoor te zorgen dat ze uw zakelijke gebruiksscenario nauwkeurig van informatie voorzien. Gegevens worden ad hoc vernieuwd wanneer het systeem nieuwe of bijgewerkte gegevensbronnen opneemt. Modellen zullen echter alleen in dit geval opnieuw een score bepalen en de bestaande trainingsgegevens blijven gebruiken.
+> 
+> U kunt een **updateschema** configureren door het schema voor hertraining voor het model in te stellen in de configuratie-ervaring. Het model wordt opnieuw getraind en bepaalt opnieuw een score volgens dit schema, dat u op elk moment kunt wijzigen.
 
 
 ## <a name="azure-machine-learning-integration"></a>Azure Machine Learning-integratie
