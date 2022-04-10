@@ -9,13 +9,18 @@ author: Nils-2m
 ms.author: nikeller
 manager: shellyha
 searchScope:
-  - ci-customers-page
-  - ci-customer-card
-  - ci-activities
-  - ci-activities-wizard
-  - customerInsights
+- ci-customers-page
+- ci-customer-card
+- ci-activities
+- ci-activities-wizard
+- customerInsights
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523716"
 ---
-
 # <a name="customer-profiles"></a>Klantprofielen
 
 Op de pagina **Klanten** wordt een gecombineerde weergave getoond van uw geharmoniseerde klantprofielen. De klantprofielen zijn beschikbaar zodra u [de geharmoniseerde klantentiteit heeft gemaakt](data-unification.md). Op de pagina kunt u naar klanten zoeken en de index voor die zoekopdracht definiëren.

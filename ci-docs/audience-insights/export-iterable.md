@@ -8,8 +8,13 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: 4de499fcc4a5a0dcc2dfd3bae02913c81a59647b
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8524140"
 ---
-
 # <a name="export-segment-lists-to-iterable-preview"></a>Segmentlijsten exporteren naar Iterable (preview)
 
 Exporteer segmenten van geharmoniseerde klantprofielen naar Iterable en gebruik deze voor marketingactiviteiten.

@@ -10,10 +10,15 @@ ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
-  - ci-home
-  - customerInsights
+- ci-home
+- customerInsights
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
+ms.translationtype: HT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491907"
 ---
-
 # <a name="create-an-environment-in-audience-insights"></a>Een omgeving maken in doelgroepinzichten
 
 In dit artikel wordt uitgelegd hoe u een nieuwe omgeving kunt maken nadat uw organisatie een Dynamics 365 Customer Insights-abonnement heeft aangeschaft. 

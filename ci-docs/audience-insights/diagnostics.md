@@ -9,10 +9,15 @@ author: brndkfr
 ms.author: bkief
 manager: shellyha
 searchScope:
-  - ci-system-diagnostic
-  - customerInsights
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523662"
 ---
-
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Logboeken doorsturen in Dynamics 365 Customer Insights met Azure Monitor (preview)
 
 Dynamics 365 Customer Insights biedt een directe integratie met Azure Monitor. Met Azure Monitor-resourcelogboeken kunt u logboeken bewaken en naar [Azure-opslag](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) verzenden of deze naar [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/) streamen.
