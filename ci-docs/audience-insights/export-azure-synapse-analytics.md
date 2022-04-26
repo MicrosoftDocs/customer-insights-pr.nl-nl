@@ -1,19 +1,19 @@
 ---
 title: Gegevens uit Customer Insights exporteren naar Azure Synapse Analytics
 description: Ontdek hoe u de verbinding met Azure Synapse Analytics configureert.
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231306"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560381"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Gegevens exporteren naar Azure Synapse Analytics (preview)
 
@@ -28,21 +28,21 @@ Er moet aan de volgende vereisten zijn voldaan om de verbinding van Customer Ins
 
 ## <a name="prerequisites-in-customer-insights"></a>Vereisten in Customer Insights
 
-* U hebt de rol van **Beheerder** in doelgroepinzichten. Meer informatie over [het instellen van gebruikersmachtigingen in doelgroepinzichten](permissions.md#assign-roles-and-permissions)
+* Uw Azure Active Directory (AD)-gebruikersaccount heeft een rol **Beheerder** in Customer Insights. Meer informatie over [het instellen van gebruikersmachtigingen in doelgroepinzichten](permissions.md#assign-roles-and-permissions)
 
 In Azure: 
 
 - Een actief Azure-abonnement.
 
-- Als u een nieuwe Azure Data Lake Storage Gen2-account gebruikt, zijn voor de *service-principal voor doelgroepinzichten* machtigingen van **Bijdrager van opslagblobgegevens** vereist. Meer informatie over het [maken van verbinding met een Azure Data Lake Storage Gen2-account met de service-principal van Azure voor doelgroepinzichten](connect-service-principal.md). Voor Data Lake Storage Gen2 **moet een** [hiërarchische naamruimte](/azure/storage/blobs/data-lake-storage-namespace) zijn ingeschakeld.
+- Bij gebruik van een nieuw Azure Data Lake Storage Gen2-account heeft de *service-principal voor Customer Insights* de machtigingen voor **Bijdrager van Storage Blob-gegevens** nodig. Meer informatie over het [maken van verbinding met een Azure Data Lake Storage Gen2-account met de service-principal van Azure voor doelgroepinzichten](connect-service-principal.md). Voor Data Lake Storage Gen2 **moet een** [hiërarchische naamruimte](/azure/storage/blobs/data-lake-storage-namespace) zijn ingeschakeld.
 
-- In de resourcegroep waar de Azure Synapse-werkruimte zich bevindt, moeten aan de *service-principal* en de *gebruiker voor doelgroepinzichten* minimaal **Lezer**-machtigingen zijn toegewezen. Zie voor meer informatie [Azure-rollen toewijzen met behulp van de Azure-portal](/azure/role-based-access-control/role-assignments-portal).
+- In de resourcegroep waarin de Azure Synapse workspace zich bevindt, moeten aan de *service-principal* en de *Azure AD-gebruiker met beheerdersmachtigingen in Customer Insights* minimaal machtigingen **Lezer** worden toegewezen. Zie voor meer informatie [Azure-rollen toewijzen met behulp van de Azure-portal](/azure/role-based-access-control/role-assignments-portal).
 
-- De *gebruiker* heeft machtigingen van **Bijdrager van opslagblobgegevens** in de Azure Data Lake Storage Gen2-account nodig waar de gegevens zich bevinden en zijn gekoppeld aan de Azure Synapse-werkruimte. Meer informatie over [het gebruik van de Azure-portal om een Azure-rol toe te wijzen voor toegang tot blob- en wachtrijgegevens](/azure/storage/common/storage-auth-aad-rbac-portal) en [machtigingen van Bijdrager van opslagblobgegevens](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- De *Azure AD-gebruiker met beheerdersmachtigingen in Customer Insights* heeft machtigingen **Bijdrager van Storage Blob-gegevens** nodig in het Azure Data Lake Storage Gen2-account waar de gegevens zich bevinden en moet zijn gekoppeld aan de Azure Synapse workspace. Meer informatie over [het gebruik van de Azure-portal om een Azure-rol toe te wijzen voor toegang tot blob- en wachtrijgegevens](/azure/storage/common/storage-auth-aad-rbac-portal) en [machtigingen van Bijdrager van opslagblobgegevens](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Voor de in de *[Azure Synapse-werkruimte beheerde identiteit](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* zijn machtigingen van **Bijdrager van opslagblobgegevens** in de Azure Data Lake Storage Gen2-account vereist waarin de gegevens zich bevinden en zijn gekoppeld aan de Azure Synapse-werkruimte. Meer informatie over [het gebruik van de Azure-portal om een Azure-rol toe te wijzen voor toegang tot blob- en wachtrijgegevens](/azure/storage/common/storage-auth-aad-rbac-portal) en [machtigingen van Bijdrager van opslagblobgegevens](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- Voor de in de *[Azure Synapse workspace beheerde identiteit](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* zijn machtigingen van **Bijdrager van opslagblobgegevens** in de Azure Data Lake Storage Gen2-account vereist waarin de gegevens zich bevinden en zijn gekoppeld aan de Azure Synapse-werkruimte. Meer informatie over [het gebruik van de Azure-portal om een Azure-rol toe te wijzen voor toegang tot blob- en wachtrijgegevens](/azure/storage/common/storage-auth-aad-rbac-portal) en [machtigingen van Bijdrager van opslagblobgegevens](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- In de Azure Synapse-werkruimte moet voor de *service-principal voor doelgroepinzichten* de rol **Synapse-beheerder** zijn toegewezen. Zie voor meer informatie [Toegangsbeheer instellen voor uw Synapse-werkruimte](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- In de Azure Synapse workspace moet aan de *service-principal voor Customer Insights* de rol van **Synapse-beheerder** worden toegewezen. Zie voor meer informatie [Toegangsbeheer instellen voor uw Synapse-werkruimte](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>De verbinding instellen en exporteren naar Azure Synapse
 

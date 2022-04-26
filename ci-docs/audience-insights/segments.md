@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508560"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529533"
 ---
 # <a name="segments-overview"></a>Overzicht van segmenten
 
@@ -51,20 +51,26 @@ Ga naar de pagina **Segmenten** om al uw opgeslagen segmenten te bekijken en te 
 
 Elk segment wordt weergegeven door een rij met aanvullende informatie over het segment.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Geselecteerd segment met vervolgkeuzelijst met opties en beschikbare opties.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Geselecteerd segment met vervolgkeuzelijst met opties en beschikbare opties." lightbox="media/segments-selected-segment.png":::
 
-De volgende actie is beschikbaar wanneer u een segment selecteert:
+De volgende acties zijn beschikbaar wanneer u een segment selecteert:
 
 - **Bekijk** de segmentdetails, inclusief trend van ledentelling en voorbeeld van segmentleden.
+- **Download** de lijst van leden als .CSV-bestand.
 - **Bewerk** het segment om de eigenschappen te wijzigen.
 - **Maak een duplicaat** van een segment. U kunt ervoor kiezen om de eigenschappen meteen te bewerken of gewoon het duplicaat op te slaan.
 - **Vernieuw** het segment om de nieuwste gegevens op te nemen.
-- **Activeer** of **Deactiveer** het segment. Segmenten hebben twee mogelijke statussen: actief of inactief. Deze statussen zijn handig bij het bewerken van een segment. Voor inactieve segmenten bestaat de segmentdefinitie, maar bevat deze nog geen klanten. Wanneer u een segment activeert, verandert de status van 'inactief' in 'actief' en wordt gezocht naar klanten die voldoen aan de segmentdefinitie. Als een [geplande vernieuwing](system.md#schedule-tab) is geconfigureerd, hebben inactieve segmenten de **Status** **Overgeslagen**, wat aangeeft dat er niet eens is geprobeerd te vernieuwen. Wanneer een inactief segment wordt geactiveerd, wordt het vernieuwd en opgenomen in geplande vernieuwingen.
+- **Activeer** of **Deactiveer** het segment. Voor inactieve segmenten bestaat de segmentdefinitie, maar bevat deze nog geen klanten. Een actief segment zoekt naar klanten die voldoen aan de segmentdefinitie. Als een [geplande vernieuwing](system.md#schedule-tab) is geconfigureerd, hebben inactieve segmenten de **Status** **Overgeslagen**, wat aangeeft dat er niet eens is geprobeerd te vernieuwen. Wanneer een inactief segment wordt geactiveerd, wordt het vernieuwd en opgenomen in geplande vernieuwingen.
   U kunt ook de functionaliteit **Later plannen** in de vervolgkeuzelisjt **Activeren/Deactiveren** gebruiken om een toekomstige datum en tijd op te geven voor activering en deactivering van een bepaald segment.
+- **[Zoek vergelijkbare klanten](find-similar-customer-segments.md)** uit het segment.
 - **Wijzig de naam** van het segment.
+- **Tag** om [tags te beheren](work-with-tags-columns.md#manage-tags) voor het segment.
 - **Download** de lijst van leden als .CSV-bestand.
 - **Exports beheren** om exportgerelateerde segmenten te bekijken en te beheren. [Meer informatie over exports.](export-destinations.md)
 - **Verwijder** het segment.
+- **Kolommen** om de [kolommen aan te passen](work-with-tags-columns.md#customize-columns) die worden weergegeven.
+- **Filter** om te [filteren op tags](work-with-tags-columns.md#filter-on-tags).
+- **Naam zoeken** om op segmentnaam te zoeken.
 
 ## <a name="refresh-segments"></a>Segmenten vernieuwen
 

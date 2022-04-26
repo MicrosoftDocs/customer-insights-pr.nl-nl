@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Doelgroepinzichten verkennen
           href: audience-insights/home.md
+        - name: Werken met tags en kolommen
+          href: audience-insights/work-with-tags-columns.md
         - name: Werken met zakelijke accounts
           href: audience-insights/work-with-business-accounts.md
     - name: Gegevensbronnen

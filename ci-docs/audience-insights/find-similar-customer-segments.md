@@ -1,23 +1,23 @@
 ---
 title: Vergelijkbare klanten zoeken met AI (met video)
 description: Vergelijkbare klantsegmenten zoeken met kunstmatige intelligentie.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355239"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561564"
 ---
 # <a name="similar-customers-preview"></a>Vergelijkbare klanten (preview)
 
@@ -36,6 +36,8 @@ Met deze functie kunt u vergelijkbare klanten in uw klantenbestand zoeken met be
 
 1. Bekijk de voorgestelde naam voor uw nieuwe segment en wijzig deze indien nodig.
 
+1. Voeg optioneel [tags](work-with-tags-columns.md#manage-tags) toe aan het nieuwe segment.
+
 1. Bekijk de velden die uw nieuwe segment definiëren. Deze velden definiëren de basis waarop het systeem zal proberen vergelijkbare klanten te vinden voor uw bronsegment. Het systeem selecteert standaard aanbevolen velden.
   Velden die de modelprestaties aanzienlijk kunnen verminderen, worden automatisch uitgesloten:
   
@@ -44,9 +46,9 @@ Met deze functie kunt u vergelijkbare klanten in uw klantenbestand zoeken met be
 
 1. Kies of u **Alle klanten** wilt opnemen of alleen klanten in een **Specifiek bestaand segment** in uw nieuwe segment.
 
-1. Sluit klanten in uw bronsegment uit door het selectievakje **Iedereen uitsluiten in bronsegment** in te schakelen.
-
 1. Standaard stelt het systeem voor om slechts 20% van de doelgroep op te nemen in uw uitvoer. Bewerk deze drempelwaarde indien nodig. Als de drempelwaarde wordt verhoogd, neemt de precisie af.
+
+1. Neem klanten op in uw bronsegment door het selectievakje **Neem naast klanten met vergelijkbare kenmerken ook leden uit bronsegment op** in te schakelen.
 
 1. Selecteer **Uitvoeren** onder aan de pagina om een binaire classificatietaak te starten (een methode van Machine Learning) die de gegevensset analyseert.
 
@@ -67,7 +69,7 @@ U kunt [werken met de uitvoer van een vergelijkbaar segment](segments.md) zoals 
 
 Als u een vergelijkbaar segment wilt vernieuwen, selecteert u het op de pagina **Segmenten** en selecteert u **Vernieuwen** op de actiebalk.
 
-Als u een vergelijkbaar segment bewerkt, worden uw gegevens opnieuw verwerkt. Het eerder gemaakte segment wordt bijgewerkt met vernieuwde gegevens.    
+Als u een vergelijkbaar segment bewerkt, worden uw gegevens opnieuw verwerkt. Het eerder gemaakte segment wordt bijgewerkt met vernieuwde gegevens.
 Als u een vergelijkbaar segment wilt bewerken, selecteert u het op de pagina **Segmenten** en selecteert u **Bewerken** op de actiebalk. Pas uw wijzigingen toe en selecteer **Uitvoeren** om de verwerking te starten.
 
 ## <a name="delete-a-similar-segment"></a>Een vergelijkbaar segment verwijderen
@@ -84,6 +86,5 @@ Het Machine Learning-model voor binaire classificatie kent een score toe aan kla
 - Klanten met overeenkomstscores tussen 0,85 en 1 zijn klanten die door het systeem als *zeer vergelijkbaar* worden geclassificeerd
 
 Klanten met een overeenkomstscore onder de 0,4 worden niet opgenomen in de modeluitvoer. Het systeem beschouwt ze niet als vergelijkbaar genoeg met het bronsegment.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
