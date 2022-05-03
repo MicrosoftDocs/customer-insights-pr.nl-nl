@@ -2,6 +2,8 @@
   href: index.yml
 - name: Productoverzicht
   href: overview.md
+- name: Nieuwe en bijgewerkt functies
+  href: whats-new-customer-insights.md
 - name: Trainingscatalogus
   items:
     - name: Aan de slag
@@ -10,7 +12,7 @@
       href: /learn/modules/ingest-data-customer-insights/
     - name: Een geharmoniseerd klantprofiel maken
       href: /learn/modules/unified-customer-profile/
-    - name: Werken met doelgroepinzichten
+    - name: Werken met Customer Insights
       href: /learn/modules/working-with-customer-insights/
     - name: Gegevens verrijken en voorspellingen doen
       href: /learn/modules/enrich-data/
@@ -26,266 +28,260 @@
       href: trial-FAQ.md
 - name: Toegang tot uw omgeving
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Doelgroepinzichten
+- name: Aan de slag
   items:
-    - name: Help-hub
-      href: audience-insights/index.yml
-    - name: Overzicht van de mogelijkheden
-      href: audience-insights/overview.md
-    - name: Nieuwe en bijgewerkt functies
-      href: audience-insights/whats-new-audience-insights.md
-    - name: Aan de slag
+    - name: Snelstartgids
+      href: get-started.md
+    - name: Beginnen met een betaalde licentie
+      href: paid-license.md
+    - name: Een nieuwe omgeving maken
+      href: create-environment.md
+    - name: Customer Insights verkennen
+      href: home.md
+    - name: Werken met tags en kolommen
+      href: work-with-tags-columns.md
+    - name: Werken met zakelijke accounts
+      href: work-with-business-accounts.md
+    - name: Integratie met Dynamics 365 Marketing
+      href: marketing-get-started.md
+- name: Gegevensbronnen
+  items:
+    - name: Overzicht van gegevensbronnen
+      href: data-sources.md
+    - name: Gegevensbronnen toevoegen via Power Query-connectors
+      href: connect-power-query.md
+    - name: Een Common Data Model-map toevoegen als een gegevensbron
+      href: connect-common-data-model.md
+    - name: Door Dataverse beheerd data lake toevoegen
+      href: connect-dataverse-managed-lake.md
+    - name: Azure Synapse Analytics toevoegen
+      href: connect-synapse.md
+    - name: Verrijking voor gegevensbronnen
+      href: data-sources-enrichment.md
+    - name: Incrementeel vernieuwen voor gegevensbronnen
+      href: incremental-refresh-data-sources.md
+    - name: Realtime gegevensopname
+      href: real-time-data-ingestion.md
+- name: Gegevensharmonisatie
+  items:
+    - name: Overzicht van gegevensharmonisatie
+      href: data-unification.md
+    - name: Entiteiten en attributen toewijzen
+      href: map-entities.md
+    - name: Entiteiten toewijzen
+      href: match-entities.md
+    - name: Entiteiten samenvoegen
+      href: merge-entities.md
+- name: Gegevensverrijking
+  items:
+    - name: Klantprofielen verrijken
+      href: enrichment-hub.md
+    - name: Merken en interesses
+      href: enrichment-microsoft.md
+    - name: Uitgebreide adressen
+      href: enrichment-enhanced-addresses.md
+    - name: Uitgebreide bedrijfsgegevens
+      href: enrichment-enhanced-company-data.md
+    - name: Verrijken met Azure Maps
+      href: enrichment-azure-maps.md
+    - name: Verrijking met Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Verrijken met HERE Technologies
+      href: enrichment-here.md
+    - name: Verrijken met Leadspace
+      href: enrichment-leadspace.md
+    - name: Verrijken met LiveRamp
+      href: enrichment-liveramp.md
+    - name: Verrijken met Experian
+      href: enrichment-experian.md
+    - name: Verrijken met Office 365-gegevens
+      href: enrichment-office.md
+    - name: Verrijken met aangepaste SFTP-import
+      href: enrichment-SFTP-custom-import.md
+- name: Geharmoniseerde profielen
+  items:
+    - name: Geharmoniseerde klantprofielen evalueren
+      href: customer-profiles.md
+    - name: Geharmoniseerde klantprofielen filteren
+      href: search-filter-index.md
+    - name: Klantactiviteiten definiëren
+      href: activities.md
+- name: Segments
+  items:
+    - name: Overzicht van segmenten
+      href: segments.md
+    - name: Segmenten maken
+      href: segment-builder.md
+    - name: Voorgestelde segmenten op basis van meetcriteria
+      href: suggested-segments.md
+    - name: Voorgestelde segmenten op basis van activiteit
+      href: suggested-segments-activity.md
+    - name: Inzichten verwerven in segmenten
+      href: segment-insights.md
+    - name: Vergelijkbare klanten zoeken
+      href: find-similar-customer-segments.md
+- name: Meetcriteria
+  items:
+    - name: Overzicht van metingen
+      href: measures.md
+    - name: Een nieuwe meting maken
+      href: measure-builder.md
+    - name: Een metingsjabloon gebruiken
+      href: measure-templates.md
+- name: Voorspellingen
+  items:
+    - name: Gegevens voorspellen met behulp van AI
       items:
-        - name: Snelstartgids
-          href: audience-insights/get-started.md
-        - name: Beginnen met een betaalde licentie
-          href: paid-license.md
-        - name: Een nieuwe omgeving maken
-          href: audience-insights/create-environment.md
-        - name: Doelgroepinzichten verkennen
-          href: audience-insights/home.md
-        - name: Werken met tags en kolommen
-          href: audience-insights/work-with-tags-columns.md
-        - name: Werken met zakelijke accounts
-          href: audience-insights/work-with-business-accounts.md
-    - name: Gegevensbronnen
+        - name: Overzicht van voorspellingsmodellen
+          href: predictions-overview.md
+        - name: Levensduurwaarde van klant voorspellen
+          href: predict-customer-lifetime-value.md
+        - name: Productaanbevelingen voorspellen
+          href: predict-product-recommendation.md
+        - name: Abonnementsverloop voorspellen
+          href: predict-subscription-churn.md
+        - name: Transactieverloop voorspellen
+          href: predict-transactional-churn.md
+        - name: Analyseer gevoel in klantfeedback
+          href: sentiment-analysis.md
+        - name: Aangepaste modellen uit Azure Machine Learning gebruiken
+          href: custom-models.md
+        - name: Gedeeltelijk ontbrekende gegevens invullen
+          href: predictions.md
+    - name: Voorbeeldgidsen
       items:
-        - name: Overzicht van gegevensbronnen
-          href: audience-insights/data-sources.md
-        - name: Gegevensbronnen toevoegen via Power Query-connectors
-          href: audience-insights/connect-power-query.md
-        - name: Een Common Data Model-map toevoegen als een gegevensbron
-          href: audience-insights/connect-common-data-model.md
-        - name: Door Dataverse beheerd data lake toevoegen
-          href: audience-insights/connect-dataverse-managed-lake.md
-        - name: Azure Synapse Analytics toevoegen
-          href: audience-insights/connect-synapse.md
-        - name: Verrijking voor gegevensbronnen
-          href: audience-insights/data-sources-enrichment.md
-        - name: Incrementeel vernieuwen voor gegevensbronnen
-          href: audience-insights/incremental-refresh-data-sources.md
-        - name: Realtime gegevensopname
-          href: audience-insights/real-time-data-ingestion.md
-    - name: Gegevensharmonisatie
+        - name: Voorbeeldgids voor CLV-voorspelling
+          href: sample-guide-predict-clv.md
+        - name: Voorbeeldhandleiding abonnementsverloop voorspellen
+          href: sample-guide-predict-subscription-churn.md
+        - name: Voorbeeldgids voor voorspelling van transactieverloop
+          href: sample-guide-predict-transactional-churn.md
+        - name: Voorbeeldgids voor voorspelling van productaanbevelingen
+          href: sample-guide-predict-product-recommendation.md
+        - name: Experimenten met Azure Machine learning
+          href: azure-machine-learning-experiments.md
+    - name: Voorspellingen beheren
+      href: manage-predictions.md
+    - name: Segmenten maken op basis van voorspellingen
+      href: prediction-based-segment.md
+- name: Opties voor exporteren
+  items:
+    - name: Exports
       items:
-        - name: Overzicht van gegevensharmonisatie
-          href: audience-insights/data-unification.md
-        - name: Entiteiten en attributen toewijzen
-          href: audience-insights/map-entities.md
-        - name: Entiteiten toewijzen
-          href: audience-insights/match-entities.md
-        - name: Entiteiten samenvoegen
-          href: audience-insights/merge-entities.md
-    - name: Gegevensverrijking
+        - name: Overzicht van exports
+          href: export-destinations.md
+        - name: Actieve campagne
+          href: export-active-campaign.md
+        - name: AdRoll
+          href: export-adroll.md
+        - name: Autopilot
+          href: export-autopilot.md
+        - name: Azure Blob Storage
+          href: export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: export-azure-data-lake-storage-gen2.md
+        - name: Azure Synapse Analytics
+          href: export-azure-synapse-analytics.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
+        - name: Braze
+          href: export-braze.md
+        - name: Campaign Monitor
+          href: export-campaign-monitor.md
+        - name: Constant Contact
+          href: export-constant-contact.md
+        - name: DotDigital
+          href: export-dotdigital.md
+        - name: Dynamics 365 Marketing
+          href: export-dynamics365-marketing.md
+        - name: Dynamics 365 Sales
+          href: export-dynamics365-sales.md
+        - name: Facebook Ads Manager
+          href: export-facebook.md
+        - name: Google Ads
+          href: export-google-ads.md
+        - name: Iterable
+          href: export-iterable.md
+        - name: Klaviyo
+          href: export-klaviyo.md
+        - name: LinkedIn Ads
+          href: export-linkedin-ads.md
+        - name: LiveRamp
+          href: export-liveramp.md
+        - name: Mailchimp
+          href: export-mailchimp.md
+        - name: Marketo
+          href: export-marketo.md
+        - name: Microsoft Advertising
+          href: export-microsoft-advertising.md
+        - name: Omnisend
+          href: export-omnisend.md
+        - name: RollWorks
+          href: export-rollworks.md
+        - name: Salesforce Marketing Cloud
+          href: export-salesforce.md
+        - name: SendGrid
+          href: export-sendgrid.md
+        - name: SendInBlue
+          href: export-sendinblue.md
+        - name: Snapchat
+          href: export-snapchat.md
+        - name: SFTP
+          href: export-sftp.md
+    - name: Andere toepassingen
       items:
-        - name: Klantprofielen verrijken
-          href: audience-insights/enrichment-hub.md
-        - name: Merken en interesses
-          href: audience-insights/enrichment-microsoft.md
-        - name: Uitgebreide adressen
-          href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Uitgebreide bedrijfsgegevens
-          href: audience-insights/enrichment-enhanced-company-data.md
-        - name: Verrijken met Azure Maps
-          href: audience-insights/enrichment-azure-maps.md
-        - name: Verrijken met HERE Technologies
-          href: audience-insights/enrichment-here.md
-        - name: Verrijken met Leadspace
-          href: audience-insights/enrichment-leadspace.md
-        - name: Verrijken met LiveRamp
-          href: audience-insights/enrichment-liveramp.md
-        - name: Verrijken met Experian
-          href: audience-insights/enrichment-experian.md
-        - name: Verrijken met Office 365-gegevens
-          href: audience-insights/enrichment-office.md
-        - name: Verrijken met aangepaste SFTP-import
-          href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Geharmoniseerde profielen
-      items:
-        - name: Geharmoniseerde klantprofielen evalueren
-          href: audience-insights/customer-profiles.md
-        - name: Geharmoniseerde klantprofielen filteren
-          href: audience-insights/search-filter-index.md
-        - name: Klantactiviteiten definiëren
-          href: audience-insights/activities.md
-    - name: Segments
-      items:
-        - name: Overzicht van segmenten
-          href: audience-insights/segments.md
-        - name: Segmenten maken
-          href: audience-insights/segment-builder.md
-        - name: Voorgestelde segmenten op basis van meetcriteria
-          href: audience-insights/suggested-segments.md
-        - name: Voorgestelde segmenten op basis van activiteit
-          href: audience-insights/suggested-segments-activity.md
-        - name: Inzichten verwerven in segmenten
-          href: audience-insights/segment-insights.md
-        - name: Vergelijkbare klanten zoeken
-          href: audience-insights/find-similar-customer-segments.md
-    - name: Meetcriteria
-      items:
-        - name: Overzicht van metingen
-          href: audience-insights/measures.md
-        - name: Een nieuwe meting maken
-          href: audience-insights/measure-builder.md
-        - name: Een metingsjabloon gebruiken
-          href: audience-insights/measure-templates.md
-    - name: Voorspellingen
-      items:
-        - name: Gegevens voorspellen met behulp van AI
-          items:
-            - name: Overzicht van voorspellingsmodellen
-              href: audience-insights/predictions-overview.md
-            - name: Levensduurwaarde van klant voorspellen
-              href: audience-insights/predict-customer-lifetime-value.md
-            - name: Productaanbevelingen voorspellen
-              href: audience-insights/predict-product-recommendation.md
-            - name: Abonnementsverloop voorspellen
-              href: audience-insights/predict-subscription-churn.md
-            - name: Transactieverloop voorspellen
-              href: audience-insights/predict-transactional-churn.md
-            - name: Analyseer gevoel in klantfeedback
-              href: audience-insights/sentiment-analysis.md
-            - name: Aangepaste modellen uit Azure Machine Learning gebruiken
-              href: audience-insights/custom-models.md
-            - name: Gedeeltelijk ontbrekende gegevens invullen
-              href: audience-insights/predictions.md
-        - name: Voorbeeldgidsen
-          items:
-            - name: Voorbeeldgids voor CLV-voorspelling
-              href: audience-insights/sample-guide-predict-clv.md
-            - name: Voorbeeldhandleiding abonnementsverloop voorspellen
-              href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Voorbeeldgids voor voorspelling van transactieverloop
-              href: audience-insights/sample-guide-predict-transactional-churn.md
-            - name: Voorbeeldgids voor voorspelling van productaanbevelingen
-              href: audience-insights/sample-guide-predict-product-recommendation.md
-            - name: Experimenten met Azure Machine learning
-              href: audience-insights/azure-machine-learning-experiments.md
-        - name: Voorspellingen beheren
-          href: audience-insights/manage-predictions.md
-        - name: Segmenten maken op basis van voorspellingen
-          href: audience-insights/prediction-based-segment.md
-    - name: Opties voor exporteren
-      items:
-        - name: Exports
-          items:
-            - name: Overzicht van exports
-              href: audience-insights/export-destinations.md
-            - name: Actieve campagne
-              href: audience-insights/export-active-campaign.md
-            - name: AdRoll
-              href: audience-insights/export-adroll.md
-            - name: Autopilot
-              href: audience-insights/export-autopilot.md
-            - name: Azure Blob Storage
-              href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage Gen2
-              href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
-              href: audience-insights/export-azure-synapse-analytics.md
-            - name: Adobe Campaign Standard
-              href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
-              href: audience-insights/export-adobe-experience-platform.md
-            - name: Braze
-              href: audience-insights/export-braze.md
-            - name: Campaign Monitor
-              href: audience-insights/export-campaign-monitor.md
-            - name: Constant Contact
-              href: audience-insights/export-constant-contact.md
-            - name: DotDigital
-              href: audience-insights/export-dotdigital.md
-            - name: Dynamics 365 Marketing
-              href: audience-insights/export-dynamics365-marketing.md
-            - name: Dynamics 365 Sales
-              href: audience-insights/export-dynamics365-sales.md
-            - name: Facebook Ads Manager
-              href: audience-insights/export-facebook.md
-            - name: Google Ads
-              href: audience-insights/export-google-ads.md
-            - name: Iterable
-              href: audience-insights/export-iterable.md
-            - name: Klaviyo
-              href: audience-insights/export-klaviyo.md
-            - name: LinkedIn Ads
-              href: audience-insights/export-linkedin-ads.md
-            - name: LiveRamp
-              href: audience-insights/export-liveramp.md
-            - name: Mailchimp
-              href: audience-insights/export-mailchimp.md
-            - name: Marketo
-              href: audience-insights/export-marketo.md
-            - name: Microsoft Advertising
-              href: audience-insights/export-microsoft-advertising.md
-            - name: Omnisend
-              href: audience-insights/export-omnisend.md
-            - name: RollWorks
-              href: audience-insights/export-rollworks.md
-            - name: Salesforce Marketing Cloud
-              href: audience-insights/export-salesforce.md
-            - name: SendGrid
-              href: audience-insights/export-sendgrid.md
-            - name: SendInBlue
-              href: audience-insights/export-sendinblue.md
-            - name: Snapchat
-              href: audience-insights/export-snapchat.md
-            - name: SFTP
-              href: audience-insights/export-sftp.md
-        - name: Andere toepassingen
-          items:
-            - name: Invoegtoepassing Klantenkaart voor Dynamics 365
-              href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (bot)
-              href: audience-insights/export-teams-bot.md
-            - name: Power Apps
-              href: audience-insights/export-power-apps.md
-            - name: Power Automate
-              href: audience-insights/export-power-automate.md
-            - name: Power BI
-              href: audience-insights/export-power-bi.md
-    - name: Entiteiten
-      items:
-        - name: Entiteiten begrijpen
-          href: audience-insights/entities.md
-        - name: De entiteitsschema's controleren in Common Data Model
-          href: audience-insights/entity-schemas.md
-        - name: Customer Insights-gegevens in Dataverse
-          href: audience-insights/customer-insights-dataverse.md
-        - name: Relaties en verbonden entiteiten samenstellen
-          href: audience-insights/relationships.md
-        - name: Semantische toewijzingen definiëren
-          href: audience-insights/semantic-mappings.md
-    - name: Beheer
-      items:
-        - name: De systeemconfiguratie instellen
-          href: audience-insights/system.md
-        - name: Gebruikersmachtigingen toewijzen
-          href: audience-insights/permissions.md
-        - name: Overzicht van verbindingen
-          href: audience-insights/connections.md
-        - name: Meerdere omgevingen beheren
-          href: audience-insights/manage-environments.md
-        - name: Bring your own Key Vault
-          href: audience-insights/use-azure-key-vault.md
-        - name: Verbinding maken met een opslagaccount met Service-Principal
-          href: audience-insights/connect-service-principal.md
-        - name: Diagnostische logboeken exporteren
-          href: audience-insights/diagnostics.md
-        - name: Servicelimieten
-          href: service-limits.md
-        - name: DSR-rechten en -aanvragen
-          href: dsr-rights-requests.md
-    - name: API's
-      items:
-        - name: De entiteitsschema's controleren in Common Data Model
-          href: audience-insights/entity-schemas.md
-        - name: Customer Insights-gegevens in Dataverse
-          href: audience-insights/customer-insights-dataverse.md
-        - name: Werken met API's
-          href: audience-insights/apis.md
-        - name: API-verwijzingen
-          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+        - name: Invoegtoepassing Klantenkaart voor Dynamics 365
+          href: customer-card-add-in.md
+        - name: Microsoft Teams (bot)
+          href: export-teams-bot.md
+        - name: Power Apps
+          href: export-power-apps.md
+        - name: Power Automate
+          href: export-power-automate.md
+        - name: Power BI
+          href: export-power-bi.md
+- name: Entiteiten
+  items:
+    - name: Entiteiten begrijpen
+      href: entities.md
+    - name: De entiteitsschema's controleren in Common Data Model
+      href: entity-schemas.md
+    - name: Customer Insights-gegevens in Dataverse
+      href: customer-insights-dataverse.md
+    - name: Relaties en verbonden entiteiten samenstellen
+      href: relationships.md
+    - name: Semantische toewijzingen definiëren
+      href: semantic-mappings.md
+- name: Beheer
+  items:
+    - name: De systeemconfiguratie instellen
+      href: system.md
+    - name: Beveiligingsinstellingen configureren
+      href: security-overview.md
+    - name: Gebruikersmachtigingen toewijzen
+      href: permissions.md
+    - name: Overzicht van verbindingen
+      href: connections.md
+    - name: Meerdere omgevingen beheren
+      href: manage-environments.md
+    - name: Bring your own Key Vault
+      href: use-azure-key-vault.md
+    - name: Verbinding maken met een opslagaccount met Service-Principal
+      href: connect-service-principal.md
+    - name: Diagnostische logboeken exporteren
+      href: diagnostics.md
+    - name: Servicelimieten
+      href: service-limits.md
+    - name: DSR-rechten en -aanvragen
+      href: dsr-rights-requests.md
+- name: API's
+  items:
+    - name: Werken met API's
+      href: apis.md
+    - name: API-verwijzingen
+      href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
 - name: Toestemmingsbeheer (preview)
   items:
     - name: Help-hub
@@ -306,10 +302,10 @@
           href: consent-management/set-consent-rules.md
     - name: Toestemmingsgegevens beheren
       items:
-        - name: Toestemmingsregels inschakelen in doelgroepinzichten
-          href: audience-insights/activate-consent.md
-        - name: Standaardtoestemmingsregels beheren in segmenten voor doelgroepinzichten
-          href: audience-insights/change-default-consent-rules.md
+        - name: Toestemmingsregels inschakelen in Customer Insights
+          href: activate-consent.md
+        - name: Standaardtoestemmingsregels beheren in Customer Insights-segmenten
+          href: change-default-consent-rules.md
     - name: Instellingen en gebruikers beheren
       items:
         - name: Systeeminstellingen configureren
@@ -320,7 +316,5 @@
       items:
         - name: Voorspellingen maken met toestemmingsgegevens
           href: consent-management/predictions-consent-data.md
-- name: Betrokkenheidsinzichten (preview)
-  href: engagement-insights/overview.md
 - name: Ondersteuning vinden
   href: /power-platform/admin/get-help-support

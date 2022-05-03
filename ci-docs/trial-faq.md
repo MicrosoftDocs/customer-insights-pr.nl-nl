@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229489"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641802"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Veelgestelde vragen over de proefversie van Dynamics 365 Customer Insights
 
@@ -62,13 +62,13 @@ U kunt de proefperiode direct in de app verlengen. U kunt uw proefperiode één 
 
 Over het algemeen raden we aan opnieuw te beginnen met uw eigen gegevens bij het upgraden naar de betaalde versie van Customer Insights. 
 
-Optioneel, als u alleen doelgroepinzichten gebruikt, kunt u uw gegevens vanuit een proefomgeving kopiëren als u Customer Insights aanschaft. U moet de beheerder van de Customer Insights-proefversie en de globale beheerder van uw Microsoft 365-tenant zijn, of de Dynamics 365-beheerder in uw organisatie, om de instellingen van een proefomgeving naar een betaalde omgeving te kunnen migreren. 
+Optioneel, als u alleen Customer Insights gebruikt, kunt u uw gegevens vanuit een proefomgeving kopiëren als u Customer Insights aanschaft. U moet de beheerder van de Customer Insights-proefversie en de globale beheerder van uw Microsoft 365-tenant zijn, of de Dynamics 365-beheerder in uw organisatie, om de instellingen van een proefomgeving naar een betaalde omgeving te kunnen migreren. 
 
-Nadat u voor de eerste keer bent ingelogd op uw betaalde exemplaar van Customer Insights, wordt u gevraagd een nieuwe omgeving te maken. In dit proces kunt u ervoor kiezen de configuratie uit een bestaande omgeving te kopiëren en de meeste instellingen te migreren. Als u de hierboven genoemde machtigingen hebt, wordt de proefomgeving in deze lijst weergegeven. Zie [De omgevingsconfiguratie kopiëren](audience-insights/manage-environments.md#copy-the-environment-configuration) voor meer informatie.
+Nadat u voor de eerste keer bent ingelogd op uw betaalde exemplaar van Customer Insights, wordt u gevraagd een nieuwe omgeving te maken. In dit proces kunt u ervoor kiezen de configuratie uit een bestaande omgeving te kopiëren en de meeste instellingen te migreren. Als u de hierboven genoemde machtigingen hebt, wordt de proefomgeving in deze lijst weergegeven. Zie [De omgevingsconfiguratie kopiëren](manage-environments.md#copy-the-environment-configuration) voor meer informatie.
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Wat zijn de limieten en targets voor de proefversie?
 
-- U kunt uw eigen Azure Data Lake Storage-account niet gebruiken om uitvoergegevens op te slaan tijdens de proef van doelgroepinzichten. U kunt echter gegevens van een Data Lake-opslagaccount opnemen.
+- U kunt uw eigen Azure Data Lake Storage-account niet gebruiken om uitvoergegevens op te slaan tijdens de proef van Customer Insights. U kunt echter gegevens van een Data Lake-opslagaccount opnemen.
 - U kunt maximaal 3 GB aan gegevens opslaan in de Dataverse-omgeving die automatisch wordt ingericht wanneer u een proefversie van Customer Insights start.
 
 ## <a name="customer-insights-specific-questions"></a>Specifieke vragen over Customer Insights

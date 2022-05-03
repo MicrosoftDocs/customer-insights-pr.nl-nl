@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 98c7bd1cec20481874681e98bda050846c760e45
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92dc5c662af39a5a4393f15ac48b50af81f8f4d
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619271"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641464"
 ---
-Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](../audience-insights/segments.md) en [metingen](../audience-insights/measures.md) door de pictogrammen op de opdrachtbalk te selecteren. U kunt ook de [gegevens exporteren](../audience-insights/export-destinations.md) om gepersonaliseerde ervaringen aan uw klanten te leveren.
+Bouw voort op uw verrijkte klantgegevens. Maak [segmenten](../segments.md) en [metingen](../measures.md) door de pictogrammen op de opdrachtbalk te selecteren. U kunt ook de [gegevens exporteren](../export-destinations.md) om gepersonaliseerde ervaringen aan uw klanten te leveren.
