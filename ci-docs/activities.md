@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646137"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755492"
 ---
 # <a name="customer-activities"></a>Klantactiviteiten
 
-Combineer klantactiviteiten van [verschillende databronnen](data-sources.md) in Dynamics 365 Customer Insights om een tijdlijn te maken met de activiteiten in chronologische volgorde. Neem de tijdlijn op in Dynamics 365-apps met de [invoegtoepassing Klantenkaart](customer-card-add-in.md) of in een Power BI-dashboard.
+Combineer klantactiviteiten van [verschillende gegevensbronnen](data-sources.md) in Dynamics 365 Customer Insights. Maak een tijdlijn die de activiteiten chronologisch weergeeft. Neem de tijdlijn op in Dynamics 365-apps met de [invoegtoepassing Klantkaart](customer-card-add-in.md)-oplossing.
 
 ## <a name="define-an-activity"></a>Een activiteit definiëren
 
@@ -78,7 +78,7 @@ Een entiteit moet ten minste één kenmerk van het type **Datum** hebben om te w
 
 1. Selecteer **Volgende** om naar de volgende stap te gaan. U kunt **Voltooien en controleren** selecteren om de activiteit nu op te slaan met het activiteitstype ingesteld op **Overige**. 
 
-1. Kies in de stap **Type activiteit** het activiteitstype en selecteer optioneel of u enkele van de activiteitstypen semantisch wilt toewijzen voor gebruik in andere gebieden van Customer Insights. Momenteel kunnen de activiteitstypen *Feedback*, *Loyaliteit*, *SalesOrder*, *SalesOrderLine* en *Abonnement* semantisch worden toegewezen nadat u akkoord bent gegaan met het toewijzen van de velden. Als een activiteitstype niet relevant is voor de nieuwe activiteit, kunt u *Overige* of *Nieuwe maken* kiezen voor een aangepast activiteitstype.
+1. Kies in de stap **Type activiteit** het activiteitstype en selecteer optioneel of u enkele van de activiteitstypen semantisch wilt toewijzen voor gebruik in andere gebieden van Customer Insights. Momenteel wordt door activiteitstypen *Feedback*, *Loyalty*, *SalesOrder*, *SalesOrderLine* en *Subscription* semantiek ondersteund nadat akkoord is gegaan met het toewijzen van de velden. Als een activiteitstype niet relevant is voor de nieuwe activiteit, kunt u *Overige* of *Nieuwe maken* kiezen voor een aangepast activiteitstype.
 
 1. Selecteer **Volgende** om naar de volgende stap te gaan. 
 
@@ -110,7 +110,7 @@ Nadat u klantactiviteiten hebt geconfigureerd, selecteert u **Weergeven in activ
 
 Om de tijdlijn voor een klant te openen, gaat u naar **Klanten** en kiest u het klantprofiel dat u wilt bekijken.
 
-Als een klant heeft deelgenomen aan een activiteit die u heeft geconfigureerd, vindt u deze in de sectie **Activiteitentijdlijn**.
+Als een klant heeft deelgenomen aan een geconfigureerde activiteit, vindt u deze in de sectie **Activiteitentijdlijn**.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Bekijk geconfigureerde activiteiten in klantprofielen.":::
 

@@ -1,7 +1,7 @@
 ---
 title: Startpagina in Customer Insights
 description: Verken de app op de startpagina.
-ms.date: 04/12/2022
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,38 +11,55 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: ebc5eb6b2dfaa9b013cfa0c9ce60c8a0a57a065d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
+ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646330"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "8743407"
 ---
 # <a name="explore-customer-insights"></a>Customer Insights verkennen
 
-U kunt [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) vinden via de volgende URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+U kunt toegang krijgen tot [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) via de volgende URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-De **Startpagina** bevat een overzicht van segmenten, metingen en verrijkingsgegevens (indien geconfigureerd) nadat de fasen [toewijzen](map-entities.md), [overeenkomen](match-entities.md) en [samenvoegen](merge-entities.md) zijn afgerond.
+De **startpagina** begeleidt u door het configuratieproces voor de belangrijkste functies en biedt een overzicht van segmenten, metingen en verrijkingsgegevens.
 
 :::image type="content" source="media/home-page.png" alt-text="Schermafbeelding van het startscherm met voorbeeldinzichten.":::
 
-Belangrijkste bedieningselementen in Customer Insights:
+## <a name="left-side-pane"></a>Deelvenster aan de linkerkant
 
-- Linkerdeelvenster: schakelen tussen primaire doelgroepen als u een B2C- en een B2B-omgeving hebt
+Gebruik het linkerdeelvenster om tussen verschillende gebieden van Customer Insights te navigeren. 
 
-- Linkerdeelvenster: tussen verschillende gebieden navigeren en de primaire doelgroep kiezen
+Als u met zakelijke accounts en individuele consumenten werkt, kunt u uw primaire doelgroep selecteren om uw focus dienovereenkomstig in te stellen. 
 
-- Kop: de omgeving wijzigen waarin u werkt en omgevingen als beheerder beheren
+## <a name="application-header"></a>Toepassingsheader
 
-- Kop: persoonlijke instellingen opgeven voor Customer Insights en opties om hulp te krijgen
+De **omgevingskiezer** toont de omgeving waarin u werkt en laat u omgevingen maken of beheren als beheerder.
 
-Nu kunt u de volgende secties op de startpagina bekijken:
+Het smiley-pictogram is het **feedbackbesturingselement**. Selecteer het om ons uw ervaring met Customer Insights te laten weten. We zijn oprecht geïnteresseerd in uw feedback en danken u bij voorbaat dat u ons laat weten wat u leuk vindt en wat we kunnen verbeteren.
 
-- **Recente segmenten** toont groepen klanten op basis van demografische, gedrags- of transactiekenmerken die u hebt gedefinieerd. Met [Segmenten maken](segments.md) kunt u uw klantenbestand groeperen en uw zakelijke activiteiten beter afstemmen.
+Het **instellingen**-besturingselement, aangeduid met een tandwielpictogram, laat u sessiedetails verzamelen voor Customer Insights en algemene instellingen configureren voor uw Microsoft 365-profiel. 
 
-- **Recente bedrijfsmaatregelen** toont tegels met [KPI's (Key Performance Indicators)](measures.md) die u hebt gedefinieerd. Bijvoorbeeld de gemiddelde kans op klantverloop of de gemiddelde online uitgaven per klant.
+**Help**-opties, aangeduid met een vraagtekenpictogram, bieden koppelingen naar contextspecifieke help en andere nuttige bronnen.
 
-- **Recente verrijkingen** geeft de resultaten weer van recent voltooide verrijkingsuitvoeringen. [Verrijkingen](enrichment-hub.md) voegen informatie toe over uw klantenbestand. Bijvoorbeeld door de interesses en merken waar ze affiniteit mee hebben te begrijpen.
+Uw profielfoto opent de **Accountmanager** voor uw Microsoft 365-profiel. Selecteer **Mijn account** om uw persoonlijke instellingen te beheren.
+
+## <a name="getting-started-with-customer-insights-section"></a>Sectie Aan de slag met Customer Insights
+
+Dit gedeelte bevat kaarten die u helpen bij het instellen van uw Customer Insights-omgeving. 
+
+1. De kaart **Gegevens toevoegen** helpt u bij het importeren van gegevens. Customer Insights ondersteunt [verschillende opties om gegevens over uw klanten in te voeren](data-sources.md). Ga aan de slag door **Gegevensbronnen toevoegen** te selecteren.
+1. Zodra de eerste gegevensimport met succes is voltooid, kunt u de kaart **Gegevens harmoniseren** gebruiken om de gegevens te harmoniseren en [geharmoniseerde klantprofielen te maken](data-unification.md) uit verschillende bronnen. 
+1. Als er geharmoniseerde klantprofielen zijn, is het tijd om de opties bij **Gegevens analyseren** te bekijken en extra inzichten te krijgen. Probeer eens [zakelijke meetcriteria](measures.md) te maken om KPI's te volgen, [segmenten te definiëren](segments.md) om specifieke doelgroepen te bereiken, of [voorspellingen te configureren](predictions-overview.md) met behulp van AI.
+1. Nu uw klantgegevens geïmporteerd, geharmoniseerd en netjes gestructureerd zijn, gebruikt u onze [diverse exportbestemmingen](export-destinations.md) om acties uit te voeren op de gegevens. Selecteer **Verbindingen toevoegen** om verbinding te maken met uw favoriete services. Exporteer de gegevens bijvoorbeeld naar Dynamics 365 Marketing om uitgaande marketingcampagnes te maken of klantreizen te bouwen. 
+
+## <a name="your-customer-insights-section"></a>Sectie Uw klantinzichten
+
+- **Segmenten** toont groepen klanten op basis van demografische, gedrags- of transactiekenmerken die u hebt gedefinieerd. Met [Segmenten maken](segments.md) kunt u uw klantenbestand groeperen en uw zakelijke activiteiten beter afstemmen.
+
+- **Bedrijfsmetingen** toont tegels met [KPI's (Key Performance Indicators)](measures.md) die u hebt gedefinieerd. Bijvoorbeeld de gemiddelde kans op klantverloop of de gemiddelde online uitgaven per klant.
+
+- **Verrijkingen** geeft de resultaten weer van recent voltooide verrijkingsuitvoeringen. [Verrijkingen](enrichment-hub.md) voegen informatie toe over uw klantenbestand. Bijvoorbeeld door de interesses en merken waar ze affiniteit mee hebben te begrijpen.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

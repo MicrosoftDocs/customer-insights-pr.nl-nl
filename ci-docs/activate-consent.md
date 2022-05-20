@@ -1,23 +1,22 @@
 ---
 title: Toestemmingsregels voor segmenten activeren
 description: Volg deze stappen om toestemmingsgegevens te koppelen en toestemmingscontroles te activeren in Dynamics 365 Customer Insights. Een beheerder kan toestemmingscontroles ook uitschakelen.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646047"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755164"
 ---
 # <a name="activate-consent-rules"></a>Toestemmingsregels activeren
 
-Het [Toestemmingscentrum (preview)](consent-management/overview.md) helpt u toestemmingsgegevens uit verschillende bronnen op elkaar af te stemmen. Gebruik de verenigde entiteit *Toestemming* om standaard toestemmingscontroles toe te passen. Na het importeren van toestemmingsgegevens in het Toestemmingscentrum en het configureren van de regels voor de gegevens, wordt de entiteit *Toestemming* automatisch gesynchroniseerd met Dynamics 365 Customer Insights.
+Het [Toestemmingscentrum (preview)](consent-management/overview.md) helpt u toestemmingsgegevens uit verschillende bronnen op elkaar af te stemmen. Gebruik de verenigde entiteit *Toestemming* om standaard toestemmingscontroles toe te passen. Na het importeren van toestemmingsgegevens en het configureren van de toewijzingsregels, wordt de entiteit *Toestemming* automatisch gesynchroniseerd met Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Toestemmingscontroles inschakelen
 

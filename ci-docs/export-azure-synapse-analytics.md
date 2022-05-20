@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646074"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741497"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Gegevens exporteren naar Azure Synapse Analytics (preview)
 
@@ -34,7 +34,7 @@ In Azure:
 
 - Een actief Azure-abonnement.
 
-- Bij gebruik van een nieuw Azure Data Lake Storage Gen2-account heeft de *service-principal voor Customer Insights* de machtigingen voor **Bijdrager van Storage Blob-gegevens** nodig. Meer informatie over het [maken van verbinding met een Azure Data Lake Storage Gen2-account met de service-principal van Azure voor doelgroepinzichten](connect-service-principal.md). Voor Data Lake Storage Gen2 **moet een** [hiërarchische naamruimte](/azure/storage/blobs/data-lake-storage-namespace) zijn ingeschakeld.
+- Bij gebruik van een nieuw Azure Data Lake Storage Gen2-account heeft de *service-principal voor Customer Insights* de machtigingen voor **Bijdrager van Storage Blob-gegevens** nodig. Hier vindt u meer informatie over [verbinding maken met een Azure Data Lake Storage-Gen2-account met een Azure-service-principal voor Customer Insights](connect-service-principal.md). Voor Data Lake Storage Gen2 **moet een** [hiërarchische naamruimte](/azure/storage/blobs/data-lake-storage-namespace) zijn ingeschakeld.
 
 - In de resourcegroep waarin de Azure Synapse workspace zich bevindt, moeten aan de *service-principal* en de *Azure AD-gebruiker met beheerdersmachtigingen in Customer Insights* minimaal machtigingen **Lezer** worden toegewezen. Zie voor meer informatie [Azure-rollen toewijzen met behulp van de Azure-portal](/azure/role-based-access-control/role-assignments-portal).
 

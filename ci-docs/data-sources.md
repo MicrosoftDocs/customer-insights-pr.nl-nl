@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: bcc50c6fa8f8e2a66ef6164bfa9022e068c0e374
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646017"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739202"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
@@ -35,9 +35,6 @@ U kunt de volgende gegevensbronnen toevoegen:
 - [Via een Common Data Model-map](connect-common-data-model.md)
 - [Via uw eigen Microsoft Dataverse-lake](connect-dataverse-managed-lake.md)
 - [Vanuit een Azure Synapse Analytics-database](connect-synapse.md)
-
-> [!NOTE]
-> Als u de proefversie gebruikt, bevat de sectie met importmethoden een optie **Gegevensbibliotheek voor Customer Insights**. Kies deze optie om een voorbeeldgegevensset te selecteren die beschikbaar is voor verschillende bedrijfstakken. Zie [Proefversie van Dynamics 365 Customer Insights](trial-signup.md) voor meer informatie.
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Gegevens toevoegen vanuit on-premises gegevensbronnen
 

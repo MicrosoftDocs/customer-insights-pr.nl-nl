@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646034"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755630"
 ---
 # <a name="customer-card-add-in-preview"></a>Invoegtoepassing Klantkaart (preview)
-
-
 
 Krijg een compleet overzicht van uw klanten rechtstreeks in Dynamics 365-apps. Als de invoegtoepassing Klantkaart is geïnstalleerd in een ondersteunde Dynamics 365-app, kunt u ervoor kiezen om klantprofielvelden, inzichten en activiteitentijdlijn weer te geven. Met de invoegtoepassing worden gegevens opgehaald uit Customer Insights zonder dat dit invloed heeft op de gegevens in de verbonden Dynamics 365-app.
 
@@ -31,7 +29,7 @@ Krijg een compleet overzicht van uw klanten rechtstreeks in Dynamics 365-apps. A
 ## <a name="prerequisites"></a>Vereisten
 
 - De invoegtoepassing werkt alleen met modelgestuurde Dynamics 365-apps, zoals Sales of Customer Service, versie 9.0 en hoger.
-- Voor toewijzing van uw Dynamics 365-gegevens aan Customer Insights raden we aan ze [op te nemen vanuit de Dynamics 365-app met behulp van de Microsoft Dataverse-connector](connect-power-query.md). Als u een andere methode gebruikt om Dynamics 365-contactpersonen (of -accounts) op te nemen, moet u ervoor zorgen dat het veld `contactid` (of `accountid`) is ingesteld als de [primaire sleutel voor die gegevensbron in de kaartstap van het gegevensharmonisatieproces](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Voor toewijzing van uw Dynamics 365-gegevens aan Customer Insights raden we aan ze [op te nemen vanuit de Dynamics 365-app met behulp van de Microsoft Dataverse-connector](connect-power-query.md). Als u een andere methode gebruikt om Dynamics 365-contactpersonen (of -accounts) op te nemen, moet u ervoor zorgen dat het veld `contactid` (of `accountid`) is ingesteld als de [primaire sleutel voor die gegevensbron in de kaartstap van het gegevensharmonisatieproces](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Alle Dynamics 365-gebruikers van de Customer Card-invoegtoepassing moeten worden [toegevoegd als gebruikers](permissions.md) in Customer Insights om de gegevens te bekijken.
 - [Geconfigureerde zoek- en filtermogelijkheden](search-filter-index.md) in Customer Insights zijn vereist om het opzoeken van gegevens te laten werken.
 - Elk besturingselement van de invoegtoepassing is afhankelijk van specifieke gegevens in Customer Insights. Sommige gegevens en besturingselementen zijn alleen beschikbaar in omgevingen van specifieke typen. De configuratie van de invoegtoepassing zal u informeren als een besturingselement niet beschikbaar is vanwege het geselecteerde omgevingstype. Meer informatie over [gebruiksscenario's en omgevingen](work-with-business-accounts.md).
@@ -132,16 +130,16 @@ Zelfs met correct geconfigureerde id-velden kunnen de besturingselementen voor g
 
 **Oplossing:**
 
-1. Zorg ervoor dat u de invoegtoepassing hebt geconfigureerd volgens de instructies: [De invoegtoepassing Klantkaart configureren](#configure-the-customer-card-add-in) 
+1. Zorg ervoor dat u de invoegtoepassing hebt geconfigureerd volgens de instructies: [De invoegtoepassing Klantkaart configureren](#configure-the-customer-card-add-in)
 
-1. Bekijk de configuratie van de gegevensopname. Bewerk de gegevensbron voor het Dynamics 365-systeem dat de GUID van de contactpersoon-id bevat. Als de GUID van de contactpersoon-id wordt weergegeven in hoofdletters in de Power Query-editor, probeert u het volgende: 
+1. Bekijk de configuratie van de gegevensopname. Bewerk de gegevensbron voor het Dynamics 365-systeem dat de GUID van de contactpersoon-id bevat. Als de GUID van de contactpersoon-id wordt weergegeven in hoofdletters in de Power Query-editor, probeert u de volgende stappen:
     1. Bewerk de gegevensbron om de gegevensbron te openen in de Power Query-editor.
     1. Selecteer de kolom voor de contactpersoon-id.
     1. Selecteer **Transformeren** in de koptekstbalk om beschikbare acties te zien.
     1. Selecteer **kleine letters**. Valideer of GUID's in de tabel nu in kleine letters zijn.
     1. Sla de gegevensbron op.
-    1. Voer gegevensopname, harmonisatie en downstreamprocessen uit om de wijzigingen in de GUID door te voeren. 
+    1. Voer gegevensopname, harmonisatie en downstreamprocessen uit om de wijzigingen in de GUID door te voeren.
 
-Nadat de volledige vernieuwing is voltooid, moeten de besturingselementen van de invoegtoepassing Klantenkaart de verwachte gegevens weergeven. 
+Nadat de volledige vernieuwing door het systeem is voltooid, moeten de besturingselementen van de invoegtoepassing Klantenkaart de verwachte gegevens weergeven.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

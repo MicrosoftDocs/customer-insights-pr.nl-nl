@@ -1,19 +1,19 @@
 ---
 title: Voorbeeldgids voor voorspelling van de levensduurwaarde van klanten
 description: Gebruik deze voorbeeldgids om het voorspellingsmodel voor de levensduurwaarden van klanten uit te proberen.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646298"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740805"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Voorbeeldgids voor voorspelling van de levensduurwaarde van klanten (CLV)
 
@@ -102,64 +102,7 @@ Lees de artikelen [over gegevensopname](data-sources.md) en [gegevensbronnen imp
 
 ## <a name="task-2---data-unification"></a>Taak 2 - Gegevensharmonisatie
 
-Nadat we de gegevens hebben opgenomen, beginnen we nu met het proces voor gegevensharmonisatie om een geharmoniseerd klantprofiel te maken. Zie [Gegevensharmonisatie](data-unification.md) voor meer informatie.
-
-### <a name="map"></a>Toewijzen
-
-1. Na het opnemen van de gegevens, wijst u contacten uit eCommerce en Loyaliteitsgegevens toe aan veelgebruikte gegevenstypen. Ga naar **Gegevens** > **Unify** > **Toewijzen**.
-
-1. Selecteer de entiteiten die het klantprofiel vertegenwoordigen: **eCommerceContacts** en **loyCustomers**. Selecteer vervolgens **Toepassen**.
-
-   ![harmoniseer eCommerce- en loyaliteitsgegevensbronnen.](media/unify-ecommerce-loyalty.png)
-
-1. Selecteer **ContactId** als de primaire sleutel voor **eCommerceContacts** en **LoyaltyID** als de primaire sleutel voor **loyCustomers**.
-
-   ![Harmoniseer LoyaltyId als primaire sleutel.](media/unify-loyaltyid.png)
-
-1. Selecteer **Opslaan**.
-
-### <a name="match"></a>Bij elkaar zoeken
-
-1. Ga naar het tabblad **Matchen** en selecteer **Volgorde instellen**.
-
-1. Kies in de vervolgkeuzelijst **Primair** de optie **eCommerceContacts : eCommerce** als primaire bron en neem alle records op.
-
-1. Kies in de vervolgkeuzelijst **Entiteit 2** de optie **loyCustomers: LoyaltyScheme** en neem alle records op.
-
-   ![Harmoniseer match eCommerce en Loyaliteit](media/unify-match-order.png)
-
-1. Selecteer **Regel toevoegen**
-
-1. Voeg uw eerste voorwaarde toe met FullName.
-
-   - Selecteer voor eCommerceContacts de optie **FullName** in de vervolgkeuzelijst.
-   - Selecteer voor loyCustomers de optie **FullName** in de vervolgkeuzelijst.
-   - Selecteer de vervolgkeuzelijst **Normaliseren** en kies **Type (telefoon, naam, adres, organisatie)**.
-   - Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
-
-1. Voer de naam **FullName, Email** in voor de nieuwe regel.
-
-   - Voeg een tweede voorwaarde voor het e-mailadres toe door **Voorwaarde toevoegen** te selecteren
-   - Kies voor entiteit eCommerceContacts de optie **E-mail** in de vervolgkeuzelijst.
-   - Kies voor entiteit loyCustomers de optie **E-mail** in de vervolgkeuzelijst.
-   - Laat Normaliseren leeg.
-   - Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
-
-   ![Harmoniseer de matchregel voor naam en e-mailadres.](media/unify-match-rule.png)
-
-1. Selecteer **Gereed**.
-
-1. Selecteer **Opslaan** en **Uitvoeren**.
-
-### <a name="merge"></a>Samenvoeging
-
-1. Ga naar het tabblad **Samenvoegen**.
-
-1. Bij **ContactId** voor de entiteit **loyCustomers** wijzigt u de weergavenaam in **ContactIdLOYALTY** om deze te onderscheiden van de andere opgenomen id's.
-
-   ![hernoem contactid van loyaliteits-id.](media/unify-merge-contactid.png)
-
-1. Selecteer **Opslaan** en **Samenvoegen en downstreamprocessen uitvoeren**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Taak 3 - De voorspelling van de levensduurwaarde van klanten configureren
 

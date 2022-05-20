@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646004"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755256"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Logboeken doorsturen in Dynamics 365 Customer Insights met Azure Monitor (preview)
 
@@ -27,8 +27,8 @@ Customer Insights stuurt de volgende gebeurtenislogboeken:
 - **Controlegebeurtenissen**
   - **APIEvent** - maakt het bijhouden van wijzigingen via de gebruikersinterface van Dynamics 365 Customer Insights mogelijk.
 - **Operationele gebeurtenissen**
-  - **WorkflowEvent** - De workflow maakt het mogelijk om [Gegevensbronnen](data-sources.md) in te stellen en gegevens te [harmoniseren](data-unification.md) en [verrijken](enrichment-hub.md) en tot slot te [exporteren](export-destinations.md) naar andere systemen. Al deze stappen kunnen afzonderlijk worden uitgevoerd (bijvoorbeeld een enkele export activeren) of georkestreerd (bijvoorbeeld gegevens vernieuwen van gegevensbronnen die het harmoniseringsproces activeren dat extra verrijkingen zal opleveren en, eenmaal gedaan, de gegevens naar een ander systeem exporteren). Raadpleeg het [WorkflowEvent-schema](#workflow-event-schema) voor nadere details.
-  - **APIEvent** - alle API-aanroepen van het klantexemplaar van Dynamics 365 Customer Insights. Raadpleeg het [APIEvent-schema](#api-event-schema) voor nadere details.
+  - **WorkflowEvent** - De workflow maakt het u mogelijk om [Gegevensbronnen](data-sources.md) in te stellen en gegevens te [harmoniseren](data-unification.md), te [verrijken](enrichment-hub.md) en tot slot te [exporteren](export-destinations.md) naar andere systemen. Al die stappen kunnen afzonderlijk worden uitgevoerd (bijvoorbeeld een enkele export activeren). Ze kunnen ook georkestreerd worden uitgevoerd (bijvoorbeeld gegevensvernieuwing van gegevensbronnen die het harmonisatieproces in gang zetten, waardoor verrijkingen worden binnengehaald en als dit klaar is, worden de gegevens naar een ander systeem geëxporteerd). Voor meer informatie raadpleegt u het [WorkflowEvent-schema](#workflow-event-schema).
+  - **APIEvent** - alle API-aanroepen van het klantexemplaar van Dynamics 365 Customer Insights. Voor meer informatie raadpleegt u het [APIEvent-schema](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>De diagnose-instellingen uitvoeren
 
@@ -182,7 +182,7 @@ Het JSON-object `identity` heeft de volgende structuur.
 
 ### <a name="workflow-event-schema"></a>Werkstroomgebeurtenisschema
 
-De werkstroom bevat meerdere stappen. [Gegevensbronnen opnemen](data-sources.md), gegevens [harmoniseren](data-unification.md), [verrijken](enrichment-hub.md) en [exporteren](export-destinations.md). Al die stappen kunnen afzonderlijk of georkestreerd worden uitgevoerd via de volgende processen. 
+De werkstroom bevat meerdere stappen. [Gegevensbronnen opnemen](data-sources.md), gegevens [harmoniseren](data-unification.md), [verrijken](enrichment-hub.md) en [exporteren](export-destinations.md). Al die stappen kunnen afzonderlijk of georkestreerd worden uitgevoerd via de volgende processen.
 
 #### <a name="operation-types"></a>Bewerkingstypen
 
@@ -215,7 +215,7 @@ De werkstroom bevat meerdere stappen. [Gegevensbronnen opnemen](data-sources.md)
 | `time`          | Tijdstempel | Vereist          | Timestamp van de gebeurtenis (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Vereist          | ResourceId van het exemplaar dat de gebeurtenis heeft verzonden.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Vereist          | Naam van de bewerking die door deze gebeurtenis wordt vertegenwoordigd. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Zie [Bewerkingstypen](#operation-types) ter referentie. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Vereist          | Logboekcategorie van de gebeurtenis. Altijd `Operational` voor werkstroomgebeurtenissen                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Vereist          | Logboekcategorie van de gebeurtenis. Altijd `Operational` voor werkstroomgebeurtenissen                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Vereist          | Status van de gebeurtenis. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Lang      | Optioneel          | Duur van de bewerking in milliseconden.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Optioneel          | JSON-object met meer eigenschappen voor de specifieke categorie gebeurtenissen.                                                                                        | Zie subsectie [Werkstroomeigenschappen](#workflow-properties-schema)                                                                                                       |

@@ -66,12 +66,18 @@
   items:
     - name: Overzicht van gegevensharmonisatie
       href: data-unification.md
-    - name: Entiteiten en attributen toewijzen
+    - name: Bronvelden selecteren
       href: map-entities.md
-    - name: Entiteiten toewijzen
+    - name: Dubbele records verwijderen
+      href: remove-duplicates.md
+    - name: Overeenkomstvoorwaarden
       href: match-entities.md
-    - name: Entiteiten samenvoegen
+    - name: Klantvelden harmoniseren
       href: merge-entities.md
+    - name: Gegevensharmonisatie bekijken
+      href: review-unification.md
+    - name: De harmonisatie-instellingen bijwerken
+      href: data-unification-update.md
 - name: Gegevensverrijking
   items:
     - name: Klantprofielen verrijken
@@ -282,6 +288,8 @@
       href: apis.md
     - name: API-verwijzingen
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: OData-voorbeeldquery's
+      href: odata-examples.md
 - name: Toestemmingsbeheer (preview)
   items:
     - name: Help-hub

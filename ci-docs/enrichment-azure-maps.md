@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645994"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755348"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Verrijking van klantprofielen met Azure Maps (preview)
 
@@ -51,7 +51,7 @@ Als u gegevensverrijking van Azure Maps wilt configureren, moet aan de volgende 
 
 1. Selecteer **Volgende** om de veldtoewijzing te voltooien.
 
-1. Evalueer of u **Geavanceerde instellingen** wilt wijzigen. Deze instellingen zijn bedoeld om maximale flexibiliteit te bieden bij het verwerken van geavanceerde gebruiksscenario's, maar in de meeste gevallen zijn de standaardwaarden voldoende:
+1. Evalueer of u **Geavanceerde instellingen** wilt wijzigen. Deze instellingen zijn bedoeld om maximale flexibiliteit te bieden bij het omgaan met geavanceerde gebruiksscenario's, maar de standaardwaarden zullen in de meeste gevallen voldoende zijn:
    - **Type adressen** : het standaardgedrag is dat de verrijking de beste adresovereenkomst retourneert, zelfs als deze onvolledig is. Als u alleen volledige adressen wilt krijgen, bijvoorbeeld adressen met het huisnummer, wist u alle selectievakjes behalve **Adressen van punten**. 
    - **Taal** : standaard worden adressen geretourneerd in de taal voor de regio waartoe het adres behoort. Als u een gestandaardiseerde adrestaal wilt toepassen, selecteert u de taal in het vervolgkeuzemenu. Als u bijvoorbeeld **Engels** selecteert, wordt **Kopenhagen, Denemarken** geretourneerd in plaats van **København, Danmark**.
 
@@ -89,7 +89,7 @@ U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrij
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 
-Wanneer u Dynamics 365 Customer Insights inschakelt om gegevens te verzenden naar Azure Maps, staat u de overdracht van gegevens buiten de nalevingsgrens toe voor Dynamics 365 Customer Insights, inclusief de overdracht van mogelijk gevoelige gegevens zoals persoonsgegevens. Microsoft draagt dergelijke gegevens in uw opdracht over, maar u bent er zelf verantwoordelijk voor dat Azure Maps voldoet aan alle privacy- of beveiligingsverplichtingen die u hebt. Ga voor meer informatie naar [Privacyverklaring van Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Wanneer u Dynamics 365 Customer Insights inschakelt om gegevens te verzenden naar Azure Maps, staat u de overdracht van gegevens buiten de nalevingsgrens toe voor Dynamics 365 Customer Insights, inclusief de overdracht van mogelijk gevoelige gegevens zoals persoonsgegevens. Microsoft zal dergelijke gegevens in uw opdracht overdragen, maar het is uw verantwoordelijkheid ervoor te zorgen dat Azure Maps voldoen aan eventuele privacy- of beveiligingsverplichtingen die u hebt. Ga voor meer informatie naar [Privacyverklaring van Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

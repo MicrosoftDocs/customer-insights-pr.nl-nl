@@ -1,25 +1,25 @@
 ---
 title: Productaanbevelingen voorspellen
 description: Voorspel de producten die een klant waarschijnlijk zal kopen of gebruiken.
-ms.date: 01/13/2022
+ms.date: 05/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fe6c0e8ba8236243682a4105535a0026c4343c3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9b3e60c49d294d031f43ef0594cb69707bb64019
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646404"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762726"
 ---
 # <a name="product-recommendation-prediction"></a>Productaanbevelingen voorspellen
 
 Het productaanbevelingsmodel maakt sets met voorspellende productaanbevelingen. Aanbevelingen zijn gebaseerd op eerder aankoopgedrag en klanten met vergelijkbare aankooppatronen. U kunt voorspellingen voor nieuwe productaanbevelingen maken op de pagina **Informatie** > **Voorspellingen**. Selecteer **Mijn voorspellingen** om andere voorspellingen te bekijken die u hebt gemaakt.
 
-Productaanbevelingen kunnen onderhevig zijn aan lokale wet- en regelgeving en verwachtingen van de klant, waarmee het model niet specifiek rekening houdt.  Als gebruiker van deze voorspellende mogelijkheid, **moet u de aanbevelingen beoordelen voordat u ze aan uw klanten doorgeeft** om ervoor te zorgen dat u voldoet aan alle toepasselijke wet- of regelgeving en de verwachtingen van de klant voor wat u mogelijk aanbeveelt. 
+Productaanbevelingen kunnen onderhevig zijn aan lokale wet- en regelgeving en verwachtingen van de klant, waarmee het model niet specifiek rekening houdt.  Als gebruiker van deze voorspellende mogelijkheid, **moet u de aanbevelingen beoordelen voordat u ze aan uw klanten doorgeeft** om ervoor te zorgen dat u voldoet aan alle toepasselijke wet- of regelgeving en de verwachtingen van de klant voor wat u mogelijk aanbeveelt.
 
 Bovendien geeft de uitvoer van dit model aanbevelingen op basis van het product-id. Uw leveringsmechanisme moet de voorspelde product-id's toewijzen aan de juiste inhoud voor uw klanten om rekening te houden met lokalisatie, afbeeldingsinhoud en andere bedrijfsspecifieke inhoud of gedragingen.
 
@@ -33,29 +33,31 @@ Als je deze functie wilt proberen, maar geen gegevens hebt om aan de onderstaand
 
 - Zakelijke kennis om verschillende soorten producten voor uw bedrijf te begrijpen en te begrijpen hoe uw klanten ermee omgaan. We ondersteunen het aanbevelen van producten die eerder door uw klanten zijn gekocht of aanbevelingen voor nieuwe producten.
 
+- Uw omgeving moet worden geconfigureerd voor de primaire doelgroep **individuele consumenten**.
+
 - Gegevens over uw transacties, aankopen en hun geschiedenis:
-    - Transactie-id's om aankopen of transacties te onderscheiden.
-    - Klant-id's om transacties toe te wijzen aan uw klanten.
-    - Transactiegebeurtenisdatums die de datums specificeren waarop de transactie plaatsvond.
-    - Informatie over product-id voor de transactie.
-    - (Optioneel) Een gegevensentiteit voor een productcatalogus om een productfilter te gebruiken.
-    - (Optioneel) Of een transactie een retour is of niet.
-    - Het semantische gegevensschema vereist de volgende informatie:
-        - **Transactie-id:** een unieke identificatie van een aankoop of transactie.
-        - **Transactiedatum:** de datum van de aankoop of de transactie.
-        - **Waarde van de transactie**: de numerieke waarde van de aankoop of de transactie.
-        - **Unieke product-id**: de id van het gekochte product of de gekochte service als uw gegevens zich op regelitemniveau bevinden.
-        - (Optioneel) **Aankoop of retour:** Een booleaans veld waarin de waarde *waar* aangeeft dat een transactie een retour was. Als de gegevens voor Aankoop of retour niet zijn opgegeven en het model en **Waarde van de transactie** negatief is, zullen we deze informatie ook gebruiken om een retour af te leiden.
+  - Transactie-id's om aankopen of transacties te onderscheiden.
+  - Klant-id's om transacties toe te wijzen aan uw klanten.
+  - Transactiegebeurtenisdatums die de datums specificeren waarop de transactie plaatsvond.
+  - Informatie over product-id voor de transactie.
+  - (Optioneel) Een gegevensentiteit voor een productcatalogus om een productfilter te gebruiken.
+  - (Optioneel) Of een transactie een retour is of niet.
+  - Het semantische gegevensschema vereist de volgende informatie:
+    - **Transactie-id:** een unieke identificatie van een aankoop of transactie.
+    - **Transactiedatum:** de datum van de aankoop of de transactie.
+    - **Waarde van de transactie**: de numerieke waarde van de aankoop of de transactie.
+    - **Unieke product-id**: de id van het gekochte product of de gekochte service als uw gegevens zich op regelitemniveau bevinden.
+    - (Optioneel) **Aankoop of retour:** Een booleaans veld waarin de waarde *waar* aangeeft dat een transactie een retour was. Als de gegevens voor Aankoop of retour niet zijn opgegeven en het model en **Waarde van de transactie** negatief is, zullen we deze informatie ook gebruiken om een retour af te leiden.
 - Voorgestelde gegevenskenmerken:
-    - Voldoende historische gegevens: ten minste één jaar aan transactiegegevens, bij voorkeur twee tot drie jaar om enige seizoensinvloeden op te nemen.
-    - Meerdere aankopen per klant: drie of meer transacties per klant-id
-    - Aantal klanten: minimaal 100 klanten, bij voorkeur meer dan 10.000 klanten. Het model zal mislukken bij minder dan 100 klanten.
+  - Voldoende historische gegevens: ten minste één jaar aan transactiegegevens, bij voorkeur twee tot drie jaar om enige seizoensinvloeden op te nemen.
+  - Meerdere aankopen per klant: drie of meer transacties per klant-id
+  - Aantal klanten: minimaal 100 klanten, bij voorkeur meer dan 10.000 klanten. Het model zal mislukken bij minder dan 100 klanten.
 
 > [!NOTE]
+>
 > - Het model vereist de transactiegeschiedenis van uw klanten. De definitie van een transactie is vrij flexibel. Alle gegevens die een interactie tussen gebruiker en product beschrijven, kunnen als input dienen. Bijvoorbeeld het aanschaffen van een product, het volgen van een les of het bijwonen van een gebeurtenis.
 > - Er kan momenteel slechts één transactiehistorie-entiteit worden geconfigureerd. Als er meerdere aankoop-entiteiten zijn, voegt u deze samen in Power Query vóór de gegevensopname.
 > - Als order- en ordergegevens verschillende entiteiten zijn, voegt u deze samen voordat u ze in het model gebruikt. Het model werkt niet alleen met een bestellings-id of ontvangst-id in een entiteit.
-
 
 ## <a name="create-a-product-recommendation-prediction"></a>Een voorspelling voor een productaanbeveling maken
 
@@ -76,7 +78,7 @@ Als je deze functie wilt proberen, maar geen gegevens hebt om aan de onderstaand
 ### <a name="define-product-recommendation-configuration"></a>De configuratie van productaanbevelingen definiëren
 
 1. Stel het **Aantal producten** in dat u een klant wilt aanbevelen. Deze waarde is afhankelijk van de manier waarop uw leveringsmethode de gegevens vult. Als u drie producten kunt aanbevelen, stelt u deze waarde dienovereenkomstig in.
-   
+
    >[!TIP]
    > U kunt op elk moment **Concept opslaan** selecteren om de voorspelling als concept op te slaan. U vindt de conceptvoorspelling op het tabblad **Mijn voorspellingen**.
 
@@ -98,14 +100,13 @@ Als je deze functie wilt proberen, maar geen gegevens hebt om aan de onderstaand
 
    :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Activiteitstype pagina-instelling.":::
 
-1. Selecteer na het toewijzen van de activiteit aan het corresponderende semantische type de optie **Volgende** om door te gaan 
- 
+1. Selecteer na het toewijzen van de activiteit aan het corresponderende semantische type de optie **Volgende** om door te gaan.
+
 1. Wijs de semantische kenmerken toe aan de velden die nodig zijn om het model uit te voeren.
 
 1. Selecteer **Opslaan**.
 
 1. Selecteer **Volgende**.
-
 
 ### <a name="configure-product-filters"></a>Productfilters configureren
 
@@ -113,11 +114,11 @@ Soms zijn alleen bepaalde producten gunstig of geschikt voor het type voorspelli
 
 1. In de stap **Productgegevens toevoegen** voegt u uw productcatalogus toe met informatie voor elk product. Wijs de vereiste informatie toe en selecteer **Volgende**.
 
-3. Maak in de stap **Productfilters** een keuze uit de volgende opties.
+1. Maak in de stap **Productfilters** een keuze uit de volgende opties.
 
-   * **Geen filters**: gebruik alle producten in Productaanbevelingen voorspellen.
+   - **Geen filters**: gebruik alle producten in Productaanbevelingen voorspellen.
 
-   * **Specifieke productfilters definiëren**: gebruik specifieke producten in Productaanbevelingen voorspellen.
+   - **Specifieke productfilters definiëren**: gebruik specifieke producten in Productaanbevelingen voorspellen.
 
 1. Selecteer **Volgende**.
 
@@ -126,7 +127,7 @@ Soms zijn alleen bepaalde producten gunstig of geschikt voor het type voorspelli
    :::image type="content" source="media/product-filters-sidepane.png" alt-text="Zijpaneel met kenmerken in de Productcatalogus-entiteit om te selecteren voor productfilters.":::
 
 1. Kies of u het productfilter **en**- of **of**-connectors wilt laten gebruiken om uw selectie van kenmerken uit de productcatalogus logisch te combineren.
-   
+
    :::image type="content" source="media/product-filters-sample.png" alt-text="Voorbeeldconfiguratie van productfilters gecombineerd met logische EN-connectors.":::
 
 1. Selecteer **Volgende**.
@@ -150,7 +151,7 @@ Soms zijn alleen bepaalde producten gunstig of geschikt voor het type voorspelli
 1. Selecteer de voorspelling die u wilt beoordelen.
    - **Voorspellingsnaam:** de naam van de voorspelling die is opgegeven bij het maken ervan.
    - **Voorspellingstype:** het type model dat voor de voorspelling is gebruikt
-   - **Uitvoerentiteit:** naam van de entiteit om de uitvoer van de voorspelling op te slaan. U kunt een entiteit met deze naam vinden onder **Gegevens** > **Entiteiten**.    
+   - **Uitvoerentiteit:** naam van de entiteit om de uitvoer van de voorspelling op te slaan. U kunt een entiteit met deze naam vinden onder **Gegevens** > **Entiteiten**.
       *Score* in de uitvoerentiteit is een kwantitatieve maatstaf van de aanbeveling. Het model adviseert producten met een hogere score boven producten met een lagere score.
    - **Voorspeld veld:** dit veld wordt alleen ingevuld voor bepaalde typen voorspellingen en wordt niet gebruikt in Productaanbevelingen voorspellen.
    - **Status:** de huidige status van de uitvoering van de voorspelling.
@@ -171,28 +172,27 @@ Soms zijn alleen bepaalde producten gunstig of geschikt voor het type voorspelli
             - **A** Het model wordt beschouwd als een model van kwaliteit **A** als de metriek "Succes bij K" ten minste 10% meer dan de basislijn is. 
             - **B** Het model wordt beschouwd als een model van kwaliteit **B** als de metriek "Succes bij K" 0% tot 10% meer dan de basislijn is.
             - **C** Het model wordt beschouwd als een model van kwaliteit **C** als de metriek "Succes bij K" minder dan de basislijn is.
-               
+
                > [!div class="mx-imgBorder"]
                > ![Weergave van het modelprestatieresultaat.](media/product-recommendation-modelperformance.PNG "Weergave van het modelprestatieresultaat")
             - **Basislijn**: het model neemt de beste aanbevolen producten op basis van het aantal aankopen voor alle klanten, en gebruikt geleerde regels die door het model zijn geïdentificeerd om een reeks aanbevelingen voor de klanten te maken. De voorspellingen worden vervolgens vergeleken met de beste producten, zoals berekend door het aantal klanten dat het product heeft gekocht. Als een klant ten minste één product in zijn aanbevolen producten heeft dat ook te zien was in de best gekochte producten, worden ze beschouwd als een onderdeel van de basislijn. Als er 10 van deze klanten waren die een aanbevolen product hadden gekocht op een totaal van 100 klanten, zou de basislijn 10% zijn.
             - **Succes bij K**: door gebruik te maken van een validatieset van transacties, worden aanbevelingen gemaakt voor alle klanten en vergeleken met de validatieset van transacties. In een periode van 12 maanden kan bijvoorbeeld maand 12 worden gereserveerd als een validatieset van gegevens. Als het model ten minste één ding voorspelt dat u in maand 12 zou kopen op basis van wat het van de afgelopen 11 maanden heeft geleerd, zou de klant de metriek "Succesbij K" verhogen.
-    
+
     1. **Meest voorgestelde producten (met aantal):** de top vijf producten die zijn voorspeld voor uw klanten.
        > [!div class="mx-imgBorder"]
        > ![Grafiek met de top 5 van meest aanbevolen producten.](media/product-recommendation-topproducts.PNG "Grafiek met de top 5 van meest aanbevolen producten")
-    
+
     1. **Belangrijkste aanbevelingsfactoren:** het model gebruikt de transactiegeschiedenis van de klant om productaanbevelingen te doen. Het leert patronen op basis van eerdere aankopen en vindt overeenkomsten tussen klanten en producten. Deze overeenkomsten worden vervolgens gebruikt om productaanbevelingen te genereren.
-    Hieronder volgen de factoren die van invloed kunnen zijn op een productaanbeveling die door het model wordt gegenereerd. 
-        - **Transacties uit het verleden**: aankooppatronen in het verleden werden door het model gebruikt om productaanbevelingen te genereren. Het model kan bijvoorbeeld een _Surface Arc Mouse_ adviseren als iemand onlangs een _Surface Book 3_ en een _Surface-pen_ heeft aangeschaft. Het model heeft geleerd dat historisch gezien veel klanten een _Surface Arc Mouse_ kochten na aankoop van een _Surface Book 3_ en een _Surface-pen_.
-        - **Klantovereenkomst**: een aanbevolen product is in het verleden gekocht door andere klanten die vergelijkbare aankooppatronen vertonen. John kreeg bijvoorbeeld _Surface Headphones 2_ als aanbeveling omdat Jennifer en Brad onlangs _Surface Headphones 2_ hebben gekocht. Het model gelooft dat John vergelijkbaar is met Jennifer en Brad omdat ze in het verleden vergelijkbare aankooppatronen hebben gehad.
-        - **Productovereenkomst**: een aanbevolen product is vergelijkbaar met andere producten die de klant eerder had gekocht. Het model beschouwt twee producten als vergelijkbaar als ze samen of door vergelijkbare klanten zijn gekocht. Iemand krijgt bijvoorbeeld een aanbeveling voor een _USB-opslagstation_ omdat hij of zij eerder een _USB-C naar USB-adapter_ heeft gekocht en het model gelooft dat _USB-opslagstation_ gelijkaardig is aan _USB-C naar USB-adapter_ op basis van historische aankooppatronen.
+    Hieronder volgen de factoren die van invloed kunnen zijn op een productaanbeveling die door het model wordt gegenereerd.
+        - **Transacties uit het verleden**: aankooppatronen in het verleden werden door het model gebruikt om productaanbevelingen te genereren. Het model kan bijvoorbeeld een *Surface Arc Mouse* adviseren als iemand onlangs een *Surface Book 3* en een *Surface-pen* heeft aangeschaft. Het model heeft geleerd dat historisch gezien veel klanten een *Surface Arc Mouse* kochten na aankoop van een *Surface Book 3* en een *Surface-pen*.
+        - **Klantovereenkomst**: een aanbevolen product is in het verleden gekocht door andere klanten die vergelijkbare aankooppatronen vertonen. John kreeg bijvoorbeeld *Surface Headphones 2* als aanbeveling omdat Jennifer en Brad onlangs *Surface Headphones 2* hebben gekocht. Het model gelooft dat John vergelijkbaar is met Jennifer en Brad omdat ze in het verleden vergelijkbare aankooppatronen hebben gehad.
+        - **Productovereenkomst**: een aanbevolen product is vergelijkbaar met andere producten die de klant eerder had gekocht. Het model beschouwt twee producten als vergelijkbaar als ze samen of door vergelijkbare klanten zijn gekocht. Iemand krijgt bijvoorbeeld een aanbeveling voor een *USB-opslagstation* omdat hij of zij eerder een *USB-C naar USB-adapter* heeft gekocht en het model gelooft dat *USB-opslagstation* gelijkaardig is aan *USB-C naar USB-adapter* op basis van historische aankooppatronen.
 
         Elke productaanbeveling wordt beïnvloed door een of meer van deze factoren. Het percentage aanbevelingen waarbij elke beïnvloedende factor een rol speelde, wordt weergegeven in een grafiek. In het volgende voorbeeld werd 100% van de aanbevelingen beïnvloed door eerdere transacties, 60% door klantovereenkomst en 22% door productovereenkomst. Beweeg over de balken in de grafiek om het exacte percentage te zien waaraan de beïnvloedende factoren hebben bijgedragen.
 
         > [!div class="mx-imgBorder"]
         > ![Belangrijke aanbevelingsfactoren.](media/product-recommendation-keyrecommendationfactors.png "Belangrijkste aanbevelingsfactoren die door het model zijn geleerd om productaanbevelingen te genereren")
-       
-     
+
    1. **Gegevensstatistieken**: biedt een overzicht van het aantal transacties, klanten en producten dat het model in overweging heeft genomen. Het is gebaseerd op de invoergegevens die zijn gebruikt om patronen te leren en productaanbevelingen te genereren.
 
       > [!div class="mx-imgBorder"]
@@ -208,6 +208,5 @@ Soms zijn alleen bepaalde producten gunstig of geschikt voor het type voorspelli
 ## <a name="manage-predictions"></a>Voorspellingen beheren
 
 Het is mogelijk om voorspellingen te optimaliseren, problemen op te lossen, voorspellingen te vernieuwen of deze te verwijderen. Bekijk een bruikbaarheidsrapport voor invoergegevens om erachter te komen hoe u een voorspelling sneller en betrouwbaarder kunt maken. Zie [Voorspellingen beheren](manage-predictions.md) voor meer informatie.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646303"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740713"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Uw gedeeltelijke gegevens aanvullen met voorspellingen (afgeschaft)
 
@@ -37,7 +37,7 @@ Voordat uw organisatie de voorspellingsfunctie kan gebruiken, moet u ervoor zorg
 
 1. Uw organisatie heeft een exemplaar [ingesteld in Microsoft Dataverse](/ai-builder/build-model#prerequisites) en het bevindt zich in dezelfde organisatie als Customer Insights.
 
-2. Uw doelgroepinzichtomgeving is gekoppeld aan uw Dataverse-exemplaar.
+2. Uw Customer Insights-omgeving is gekoppeld aan uw exemplaar van Dataverse.
 
 Zie [Een nieuwe omgeving maken](create-environment.md) voor meer informatie.
 

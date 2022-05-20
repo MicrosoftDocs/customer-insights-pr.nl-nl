@@ -1,19 +1,19 @@
 ---
 title: Voorbeeldhandleiding transactieverloop voorspellen
 description: Gebruik deze voorbeeldhandleiding om het standaard voorspellingsmodel voor transactieverloop uit te proberen.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646361"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741313"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Voorbeeldhandleiding transactieverloop voorspellen
 
@@ -86,69 +86,13 @@ Lees de artikelen [over gegevensopname](data-sources.md) en [gegevensbronnen imp
 
 1. Sla de gegevensbron op.
 
-
 ## <a name="task-2---data-unification"></a>Taak 2 - Gegevensharmonisatie
 
-Na het opnemen van de gegevens beginnen we nu met het proces **Toewijzen, Matchen, Samenvoegen** om een geharmoniseerd klantprofiel te maken. Zie [Gegevensharmonisatie](data-unification.md) voor meer informatie.
-
-### <a name="map"></a>Toewijzen
-
-1. Na het opnemen van de gegevens, wijst u contacten uit eCommerce en Loyaliteitsgegevens toe aan veelgebruikte gegevenstypen. Ga naar **Gegevens** > **Unify** > **Toewijzen**.
-
-1. Selecteer de entiteiten die het klantprofiel vertegenwoordigen: **eCommerceContacts** en **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="harmoniseer eCommerce- en loyaliteitsgegevensbronnen.":::
-
-1. Selecteer **ContactId** als de primaire sleutel voor **eCommerceContacts** en **LoyaltyID** als de primaire sleutel voor **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Harmoniseer LoyaltyId als primaire sleutel.":::
-
-### <a name="match"></a>Bij elkaar zoeken
-
-1. Ga naar het tabblad **Matchen** en selecteer **Volgorde instellen**.
-
-1. Kies in de vervolgkeuzelijst **Primair** de optie **eCommerceContacts : eCommerce** als primaire bron en neem alle records op.
-
-1. Kies in de vervolgkeuzelijst **Entiteit 2** de optie **loyCustomers: LoyaltyScheme** en neem alle records op.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Harmoniseer match eCommerce en Loyaliteit":::
-
-1. Selecteer **Een nieuwe regel maken**
-
-1. Voeg uw eerste voorwaarde toe met FullName.
-
-   * Selecteer voor eCommerceContacts de optie **FullName** in de vervolgkeuzelijst.
-   * Selecteer voor loyCustomers de optie **FullName** in de vervolgkeuzelijst.
-   * Selecteer de vervolgkeuzelijst **Normaliseren** en kies **Type (telefoon, naam, adres, ...)**.
-   * Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
-
-1. Voer de naam **FullName, Email** in voor de nieuwe regel.
-
-   * Voeg een tweede voorwaarde voor het e-mailadres toe door **Voorwaarde toevoegen** te selecteren
-   * Kies voor entiteit eCommerceContacts de optie **E-mail** in de vervolgkeuzelijst.
-   * Kies voor entiteit loyCustomers de optie **E-mail** in de vervolgkeuzelijst. 
-   * Laat Normaliseren leeg. 
-   * Stel **Precisieniveau**: **Basic** en **Waarde**: **Hoog** in.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Harmoniseer de matchregel voor naam en e-mailadres.":::
-
-7. Selecteer **Opslaan** en **Uitvoeren**.
-
-### <a name="merge"></a>Samenvoeging
-
-1. Ga naar het tabblad **Samenvoegen**.
-
-1. Bij **ContactId** voor de entiteit **loyCustomers** wijzigt u de weergavenaam in **ContactIdLOYALTY** om deze te onderscheiden van de andere opgenomen id's.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="hernoem contactid van loyaliteits-id.":::
-
-1. Selecteer **Opslaan** en **Uitvoeren** om het samenvoegingsproces te starten.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Taak 3 - Configureer de voorspelling van het transactieverloop
 
-Met de geharmoniseerde klantprofielen op hun plaats, kunnen we nu het abonnementsverloop voorspellen. Zie het artikel [Voorspelling van abonnementsverloop](predict-subscription-churn.md) voor gedetailleerde stappen. 
+Met de geharmoniseerde klantprofielen kunnen we nu de voorspelling van het transactieverloop uitvoeren. Zie het artikel [Voorspelling van transactieverloop](predict-transactional-churn.md) voor gedetailleerde stappen. 
 
 1. Ga naar **Intelligence** > **Ontdekken** en selecteer het **Klantverloopmodel**.
 
@@ -180,7 +124,7 @@ Met de geharmoniseerde klantprofielen op hun plaats, kunnen we nu het abonnement
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Taak 4 - Bekijk modelresultaten en uitleg
 
-Laat het model de training en score van de gegevens voltooien. U kunt nu de uitleg van het abonnementverloopmodel bekijken. Zie [Een voorspellingsstatus en resultaten beoordelen](predict-subscription-churn.md#review-a-prediction-status-and-results) voor meer informatie.
+Laat het model de training en score van de gegevens voltooien. U kunt nu de uitleg van het verloopmodel bekijken. Zie [Een voorspellingsstatus en resultaten beoordelen](predict-transactional-churn.md#review-a-prediction-status-and-results) voor meer informatie.
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Taak 5 - Maak een segment van klanten met een hoog verlooprisico
 
@@ -192,14 +136,12 @@ U kunt een nieuw segment maken op basis van de entiteit die door het model is ge
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Een segment maken met de modeluitvoer.":::
 
-1. Selecteer het eindpunt **OOBSubscriptionChurnPrediction** en definieer het segment: 
+1. Selecteer het **OOBeCommerceChurnPrediction**-eindpunt en definieer het segment: 
    - Veld: ChurnScore
    - Operator: groter dan
    - Waarde: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Stel een segment abonnementverloop in.":::
 
-U hebt nu een segment dat dynamisch wordt bijgewerkt en dat klanten met een hoog verlooprisico identificeert voor dit abonnementsbedrijf.
+U hebt nu een segment dat dynamisch wordt bijgewerkt en dat klanten met een hoog verlooprisico identificeert.
 
 Zie [Segmenten maken en beheren](segments.md) voor meer informatie.
 

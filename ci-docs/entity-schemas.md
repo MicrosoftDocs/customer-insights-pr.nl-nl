@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646187"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757426"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Entiteitsschema's in Common Data Model
 
@@ -23,7 +23,7 @@ ms.locfileid: "8646187"
 
 Met dit gedeelde gegevensmodel kunnen toepassingen en gegevensintegrators eenvoudiger samenwerken door een uniforme definitie van gegevens te bieden. Common Data Model bevat een uitgebreid metadatasysteem met standaardentiteiten, relaties, hiërarchieën, eigenschappen en meer. Het is afkomstig van Dynamics 365-apps en is open source op GitHub met meer dan 260 standaardentiteiten. Een groot systeem van interne en externe partners draagt branchespecifieke concepten bij aan Common Data Model.
 
-Meerdere systemen en platforms implementeren nu het Common Data Model, inclusief Power BI-gegevensstromen en Azure Data Services. Het wordt al ondersteund in Microsoft Dataverse, Dynamics 365, Power Apps, Power BI en aankomende Azure-dataservices, die direct waarde genereren voor het [Open Data-initiatief](https://www.microsoft.com/open-data-initiative).
+Meerdere systemen en platforms implementeren nu het Common Data Model, inclusief Power BI-gegevensstromen en Azure Data Services. Het wordt al ondersteund in Microsoft Dataverse, Dynamics 365, Power Apps, Power BI en aankomende Azure-dataservices, die direct waarde genereren voor het [Open Data-initiatief](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Schema's van Customer Insights-entiteiten
 

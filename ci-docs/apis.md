@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646134"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755444"
 ---
 # <a name="work-with-customer-insights-apis"></a>Werken met Customer Insights-API's
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights biedt API's om uw eigen toepassingen te bouwen op
 > [!IMPORTANT]
 > Details van deze API's staan vermeld in de [Referentie voor Customer Insights-API's](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Ze bevatten aanvullende informatie over bewerkingen, parameters en reacties.
 
-In dit artikel wordt beschreven hoe u toegang krijgt tot de Customer Insights-API's, een registratie van Azure-apps maakt en aan de slag gaat met de beschikbare clientbibliotheken.
+In dit artikel wordt beschreven hoe u toegang krijgt tot de Customer Insights-API's, een Azure-app-registratie maakt en aan de slag gaat met clientbibliotheken.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>De Customer Insights-API's uitproberen
 
@@ -83,13 +83,13 @@ U kunt de toepassings-/client-id voor deze app-registratie gebruiken bij de Micr
 
 Zie voor meer informatie over MSAL [Overzicht van Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Zie [Een toepassing registreren](/azure/active-directory/develop/quickstart-register-app.md#register-an-application) voor meer informatie over app-registratie in Azure.
+Zie [Een toepassing registreren](/graph/auth-register-app-v2) voor meer informatie over app-registratie in Azure.
 
 Zie [Customer Insights-clientbibliotheken](#customer-insights-client-libraries) voor informatie over het gebruik van de API's in onze clientbibliotheken.
 
 ### <a name="server-to-server-application-permissions"></a>Machtigingen voor server-naar-server-toepassingen
 
-In de [sectie app-registratie](#create-a-new-app-registration-in-the-azure-portal) wordt beschreven hoe u een app registreert waarvoor een gebruiker zich moet aanmelden voor verificatie. Ontdek hoe u een app-registratie maakt die geen gebruikersinteractie vereist en die op een server kan worden uitgevoerd.
+In de [sectie app-registratie](#create-a-new-app-registration-in-the-azure-portal) wordt beschreven hoe u een app registreert waarvoor een gebruiker zich moet aanmelden voor verificatie. Leer hoe u een app-registratie maakt waarvoor geen gebruikersinteractie nodig is en die op een server kan worden uitgevoerd.
 
 1. Ga bij uw app-registratie in de Azure-portal naar **API-machtigingen**.
 
@@ -112,6 +112,10 @@ In de [sectie app-registratie](#create-a-new-app-registration-in-the-azure-porta
    Open Customer Insights, ga naar **Beheerder** > **Rechten** en selecteer **Gebruiker toevoegen**.
 
 1. Zoek naar de naam van uw app-registratie, selecteer deze in de zoekresultaten en selecteer **Opslaan**.
+
+## <a name="sample-queries"></a>Voorbeeldquery's
+
+We hebben een korte lijst met OData-voorbeeldquery's samengesteld om met de API's: [Voorbeelden van OData-query's](odata-examples.md) te werken.
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insights-clientbibliotheken
 
@@ -137,7 +141,7 @@ Leer hoe u aan de slag gaat met de C#-clientbibliotheken van NuGet.org. Voor mee
 
 1. Gebruik de [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) om een `AccessToken` op te halen met uw bestaande [Azure app-registratie](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Nadat u een token hebt geverifieerd en verkregen, maakt u een nieuwe of gebruikt u een bestaande `HttpClient` met de extra **DefaultRequestHeaders "Authorization"** ingesteld op **Bearer "access token"** en **Ocp-Apim-Subscription-Key** ingesteld op de [**abonnementssleutel** uit uw Customer Insights-omgeving](#get-started-trying-the-customer-insights-apis).   
+1. Nadat u een token hebt geverifieerd en verkregen, maakt u een nieuwe of gebruikt u een bestaande `HttpClient` met de **DefaultRequestHeaders "Authorization"** ingesteld op **Bearer "access token"** en **Ocp-Apim-Subscription-Key** ingesteld op de [**abonnementssleutel** uit uw Customer Insights-omgeving](#get-started-trying-the-customer-insights-apis).   
  
    Reset de **Autorisatie**-koptekst indien van toepassing. Bijvoorbeeld wanneer het token is verlopen.
 
@@ -147,7 +151,7 @@ Leer hoe u aan de slag gaat met de C#-clientbibliotheken van NuGet.org. Voor mee
 
 1. Doe oproepen met de client naar de 'extensiemethoden', bijvoorbeeld `GetAllInstancesAsync`. Als toegang tot het onderliggende `Microsoft.Rest.HttpOperationResponse` de voorkeur heeft, gebruik dan de 'http-berichtmethoden', bijvoorbeeld `GetAllInstancesWithHttpMessagesAsync`.
 
-1. De respons is waarschijnlijk het type `object` omdat de methode meerdere typen kan retourneren (bijvoorbeeld `IList<InstanceInfo>` en `ApiErrorResult`). Om het retourtype te controleren, kunt u de objecten veilig casten in de responstypen die zijn opgegeven op de [API-detailpagina](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) voor die bewerking.    
+1. De respons is waarschijnlijk het type `object` omdat de methode meerdere typen kan retourneren (bijvoorbeeld `IList<InstanceInfo>` en `ApiErrorResult`). Om het retourtype te controleren, gebruikt u de objecten in de responstypen die zijn opgegeven op de [API-detailspagina](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) voor die bewerking.    
    
    Als er meer informatie over de aanvraag nodig is, gebruik dan de **http-berichtmethoden** om toegang te krijgen tot het onbewerkte responsobject.
 

@@ -1,110 +1,83 @@
 ---
-title: Entiteiten en kenmerken toewijzen voor gegevensharmonisering
-description: Selecteer entiteiten, kenmerken, primaire sleutels en semantische typen om gegevens toe te wijzen aan het geharmoniseerde klantprofiel.
-ms.date: 10/18/2020
+title: Bronvelden selecteren voor gegevensharmonisatie
+description: De eerste stap in het harmonisatieproces is het selecteren van entiteiten, kenmerken, primaire sleutels en semantische typen om gegevens toe te wijzen aan het geharmoniseerde klantprofiel.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646077"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740989"
 ---
-# <a name="map-entities-and-attributes"></a>Entiteiten en attributen toewijzen
+# <a name="select-source-fields-for-data-unification"></a>Bronvelden selecteren voor gegevensharmonisatie
 
-**Toewijzen** is de eerste fase in het proces van gegevensharmonisatie. Toewijzing bestaat uit drie fasen:
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Entiteitsselectie*: identificeer de combineerbare entiteiten die leiden tot een gegevensset met meer volledige informatie over uw klanten.
-- *Kenmerkselectie:* identificeer voor elke entiteit de kolommen die u wilt combineren en op elkaar afstemmen in de fasen voor *afstemmen* en *samenvoegen*. Deze kolommen worden *Kenmerken* genoemd.
-- *Selectie van primaire sleutel en semantisch type*: identificeer voor elke entiteit een kenmerk dat u wilt definiëren als de primaire sleutel voor die entiteit en identificeer voor elk kenmerk een semantisch type dat dit kenmerk het beste beschrijft.
+De eerste stap bij harmonisatie is het selecteren van de entiteiten en velden binnen uw gegevenssets die u wilt harmoniseren. Selecteer entiteiten die klantgerelateerde details bevatten, zoals naam, adres, telefoonnummer en e-mailadres. U kunt een of meerdere entiteiten selecteren.
 
-Zie [Harmoniseren](data-unification.md) voor meer informatie over de algemene stroom van gegevensharmonisatie.
+## <a name="select-entities-and-fields"></a>Entiteiten en velden selecteren
 
-## <a name="select-the-first-entities"></a>De eerste entiteiten selecteren
+1. Ga naar **Gegevens** > **Harmoniseren**.
 
-1. Ga naar **Gegevens** > **Unify** > **Toewijzen**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Schermopname van Unify-landingspagina voor ervaring van eerste uitvoering met Aan de slag gemarkeerd.":::
 
-2. Start de toewijzingsfase door **Entiteiten selecteren** te selecteren.
+1. Selecteer **Aan de slag**.
 
-3. Selecteer de entiteiten en kenmerken die u wilt gebruiken in de fasen voor *afstemmen* en *samenvoegen*. U kunt de vereiste kenmerken van een entiteit afzonderlijk selecteren of alle kenmerken van een entiteit opnemen door het selectievakje **Alle velden opnemen** in te schakelen op entiteitsniveau. We raden u aan ten minste twee entiteiten te selecteren om te profiteren van het proces voor gegevensharmonisatie.
+1. Op de pagina **Bronvelden** selecteert u **Entiteiten en velden selecteren**. Het deelvenster **Entiteiten en velden selecteren** wordt weergegeven.
 
-   > [!div class="mx-imgBorder"]
-   > ![Voorbeeld van toevoegen van entiteiten.](media/data-manager-configure-map-add-entities-example.png "Voorbeeld van toevoegen van entiteiten")
+1. Selecteer ten minste één entiteit.
 
-   In dit voorbeeld voegen we de entiteiten **eCommerceContacten** en **loyCustomers** toe. Door deze entiteiten te kiezen, kunt u inzicht krijgen in welke van de online zakelijke klanten leden van het loyaliteitsprogramma zijn.
-   
-   U kunt zoeken op trefwoorden in alle kenmerken en entiteiten om de vereiste kenmerken te selecteren die u wilt toewijzen.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Voorbeeld van zoekvelden.](media/data-manager-configure-map-search-fields-example.png "Voorbeeld van zoekvelden")
+1. Identificeer voor elke geselecteerde entiteit de velden die u wilt gebruiken om klantenrecords en velden te matchen die u in het geharmoniseerde profiel wilt opnemen. Deze velden heten *Kenmerken*. U kunt de vereiste kenmerken van een entiteit één voor één selecteren of alle kenmerken van een entiteit opnemen door het selectievakje op entiteitsniveau in te schakelen. U kunt zoeken op trefwoorden in alle kenmerken en entiteiten om de vereiste kenmerken te selecteren die u wilt toewijzen.
 
-4. Selecteer **Toepassen** om uw selecties te bevestigen.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Schermopname van geselecteerde entiteiten en kenmerken.":::
+
+   In dit voorbeeld voegen we de entiteiten **Contacts** en **CustomerLoyalty** toe. Door deze entiteiten te kiezen, kunt u inzicht krijgen in welke van de online zakelijke klanten leden van het loyaliteitsprogramma zijn.
+
+1. Selecteer **Toepassen** om uw selecties te bevestigen. De geselecteerde entiteiten en kenmerken worden weergegeven.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>De primaire sleutel en het semantische type voor kenmerken selecteren
 
-Nadat u uw entiteiten hebt geselecteerd, bevat de pagina **Toewijzen** de geselecteerde entiteiten voor uw beoordeling. Definieer de primaire sleutel voor een entiteit en identificeer het semantische type voor een kenmerk in de entiteit.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Schermopname van geselecteerde entiteiten met primaire sleutel niet geselecteerd." lightbox="media/m3_select_primary.png":::
 
-- **Primaire sleutel**: selecteer één kenmerk als primaire sleutel voor elk van uw entiteiten. Als een kenmerk een geldige primaire sleutel is, mag het geen dubbele waarden, ontbrekende waarden of null-waarden bevatten. Kenmerken van het gegevenstype tekenreeks, geheel getal en GUID worden ondersteund als primaire sleutels en worden weergegeven in een veld waaruit u kunt kiezen.
+Voer voor elke entiteit de volgende stappen uit.
 
-- **Semantische type van kenmerk**: categorieën van uw kenmerken, zoals e-mailadres of naam. Als u AI-modellen wilt gebruiken voor slimme voorspelling van semantiek, tijdsbesparing en verbeterde nauwkeurigheid, zet u **Intelligente toewijzing** op **AAN**. Met Intelligente toewijzing markeert u op AI gebaseerde semantische aanbevelingen in het veld **Type**. Als u dit instelt op **UIT**, ziet u onze normale aanbevelingen voor toewijzingen. U kunt elk semantisch type uit de beschikbare lijst met opties selecteren en de voorgestelde selectie negeren.
+1. Kies de **primaire sleutel**. De primaire sleutel is een kenmerk dat uniek is voor de entiteit. Als een kenmerk een geldige primaire sleutel is, mag het geen dubbele waarden, ontbrekende waarden of null-waarden bevatten. Kenmerken van het gegevenstype string, integer en GUID worden ondersteund als primaire sleutels.
 
-> [!div class="mx-imgBorder"]
-> ![Kenmerktype en semantische voorspelling.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Kenmerktype en semantische voorspelling")
+1. Om AI-modellen voor slimme voorspelling van semantiek te gebruiken, tijd te besparen en de nauwkeurigheid te verbeteren, is **Intelligente toewijzing** ingeschakeld. Met Intelligente toewijzing markeert u op AI gebaseerde semantische aanbevelingen in het veld **Type**. U kunt de voorgestelde selectie overschrijven door een semantisch type te kiezen uit de beschikbare lijst met opties.
 
-Het toevoegen van een aangepast semantisch type is eveneens mogelijk. Selecteer het type veld voor een kenmerk en typ de aangepaste naam van het semantische type. Zo kunt u ook de kenmerktypen wijzigen die door het systeem zijn geïdentificeerd.
+1. Kies voor elk kenmerk een semantisch **type** dat het kenmerk het beste beschrijft, zoals naam, plaats of e-mailadres.
 
-Alle kenmerken waarvoor een semantisch type automatisch wordt geïdentificeerd, worden gegroepeerd in de sectie **Toegewezen velden beoordelen**. Bekijk deze kenmerken en hun semantische typen, want ze zullen worden gebruikt om uw entiteiten te combineren in de samenvoegstap van gegevensharmonisering.
+   > [!NOTE]
+   > Eén veld moet worden toegewezen aan het semantische type *Person.FullName* om de naam van de klant in de klantenkaart in te vullen. Anders verschijnen de klantenkaarten zonder naam.
 
-Kenmerken die niet automatisch worden toegewezen aan een semantisch type, worden gegroepeerd in de sectie **De gegevens in de niet-toegewezen velden definiëren**. Selecteer het semantische typeveld voor de niet-toegewezen kenmerken of voer uw aangepaste naam voor het kenmerktype in.
+   1. U kunt ook een ander type selecteren om een kenmerktype te wijzigen dat automatisch door het systeem is geïdentificeerd. Als het type niet bestaat, maak dan een aangepast semantisch type door het veld **Type** te selecteren voor het kenmerk en een naam voor uw eigen semantische type in te voeren.
 
-> [!div class="mx-imgBorder"]
-> ![Primaire sleutel en kenmerktype.](media/data-manager-configure-map-add-attributes.png "Primaire sleutel en kenmerktype")
+   1. Als u een kenmerk met een URL wilt toevoegen aan openbaar beschikbare profielafbeeldingen of logo's, selecteert u de entiteit en het veld dat de URL bevat. Voer het volgende in het veld **Type** in:
+      - Voor een persoon: Person.ProfileImage
+      - Voor een organisatie: Organization.LogoImage
 
-> [!NOTE]
-> Eén veld moet worden toegewezen aan het semantische type Person.FullName om de klantnaam in de klantenkaart te vullen. Anders verschijnen de klantenkaarten zonder naam. 
+   1. Voer voor een accountnaamkenmerk "Organization.Name" in het veld **Type** in.
 
-## <a name="add-and-remove-attributes-and-entities"></a>Kenmerken en entiteiten toevoegen en verwijderen
+1. Bekijk de kenmerken waar een semantisch type automatisch wordt geïdentificeerd. Deze kenmerken staan vermeld onder **Toegewezen velden bekijken**. Alleen kenmerken van hetzelfde type kunnen worden gecombineerd in de stap **Geharmoniseerde klantvelden**. Semantische typen worden gebruikt om automatisch inzichten voor te stellen. Zorg ervoor dat de typen die u kiest overeenkomen in alle geselecteerde entiteiten.
 
-1. Selecteer in **Harmoniseren** > **Toewijzen** de optie **Velden bewerken**.
+1. Voor kenmerken die niet automatisch worden toegewezen aan een semantisch type, selecteert u een veld voor het semantische type, voert u de naam van uw aangepaste kenmerktype in of laat u ze niet toegewezen. Deze kenmerken staan vermeld onder **De gegevens in de niet-toegewezen velden definiëren**.
 
-2. Voeg in het deelvenster **Velden bewerken** kenmerken en entiteiten toe of verwijder deze. Gebruik de zoekopdracht of schuif om de kenmerken en entiteiten waarin u bent interessante te zoeken en te selecteren. U kunt een kenmerk of entiteit niet verwijderen als deze al zijn afgestemd.
+1. Nadat u de stappen voor elke entiteit hebt uitgevoerd, selecteert u **Bronvelden opslaan**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Kenmerken toevoegen of verwijderen.](media/configure-data-map-edit.png "Kenmerken toevoegen of verwijderen")
+1. Selecteer **Volgende**.
 
-3. Selecteer **Toepassen**.
-
-## <a name="add-images-to-profiles"></a>Afbeeldingen toevoegen aan profielen
-
-Als een entiteit URL's bevat naar openbaar beschikbare profielafbeeldingen of logo's, kunt u deze toevoegen aan het geharmoniseerde klantprofiel.
-
-Selecteer de entiteit en zoek het veld dat de URL naar de profielafbeelding bevat. Voer in het invoerveld **Type** handmatig de volgende waarde in: 
-- Voor een persoon: Person.ProfileImage
-- Voor een organisatie: Organization.LogoImage
-
-Ga verder met de harmoniseringsstappen en zorg ervoor dat het kenmerk dat de afbeeldings-URL bevat ook wordt toegevoegd aan de stap [Samenvoegen](merge-entities.md).
-
-## <a name="set-attributes-for-organizations"></a>Kenmerken instellen voor organisaties
-
-Voor organisaties (preview) moet het kenmerktype worden toegewezen aan 'Organization.Name'
-> [!div class="mx-imgBorder"]
-> ![Primaire sleutel en kernmerktype B2B.](media/configure-data-map-edit-b2b.png "Primaire sleutel en kernmerktype B2B")
-
-## <a name="next-step"></a>Volgende stap
-
-Als onderdeel van het proces voor gegevensharmonisatie gaat u naar de pagina **Afstemmen**. Bezoek [**Afstemmen**](match-entities.md) voor meer informatie over deze fase.
-
-> [!TIP]
-> Bekijk de volgende video: [Aan de slag: Een geharmoniseerd klantprofiel maken](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Volgende stap: Duplicaten verwijderen](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

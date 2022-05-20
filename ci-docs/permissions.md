@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653562"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740897"
 ---
 # <a name="user-permissions"></a>Gebruikersmachtigingen
 
@@ -41,7 +41,7 @@ Er zijn drie soorten rollen:
 
 - Alle machtingen beschikbaar voor de kijker.
 - Laad en transformeer gegevens met de pagina **Gegevensbronnen**.
-- Voltooi de secties *Gegevensharmonisatie* (**Toewijzen**, **Afstemmen** en **Samenvoegen**) die resulteren in de geharmoniseerde klantprofielentiteit.
+- Voltooi ***Gegevensharmonisatie**, dat resulteert in de entiteit Unified customer profile.
 - Definieer **relaties** en **activiteiten**.
 - Maak segmenten met behulp van de pagina **Segmenten**.
 - Maak meetcriteria met behulp van de pagina **Meetcriteria**.

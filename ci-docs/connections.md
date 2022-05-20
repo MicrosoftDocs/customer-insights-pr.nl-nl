@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646167"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755303"
 ---
 # <a name="connections-preview-overview"></a>Overzicht van Verbindingen (preview)
 
@@ -24,15 +24,15 @@ Verbindingen zijn de sleutel om het delen van gegevens van en naar Customer Insi
 
 Ga naar **Beheerder** > **Verbindingen** om verbindingen te maken en te bekijken.
 
-Het tabblad **Verbindingen** laat u alle actieve verbindingen zien. De lijst toont een rij voor elke verbinding. 
+Het tabblad **Verbindingen** laat u alle actieve verbindingen zien. De lijst toont een rij voor elke verbinding.
 
 Krijg een snel overzicht met beschrijving en ontdek wat u kunt doen met elke uitbreidingsoptie op het tabblad **Ontdekken**.
 
-### <a name="exports"></a>Exports
+## <a name="exports"></a>Exports
 
 Alleen beheerders kunnen nieuwe verbindingen configureren, maar ze kunnen inzenders toegang verlenen om bestaande verbindingen te gebruiken. Beheerders bepalen waar gegevens naartoe kunnen, inzenders bepalen de nettolading en de frequentie die aan hun behoeften voldoen. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
-### <a name="enrichments"></a>Verrijkingen
+## <a name="enrichments"></a>Verrijkingen
 
 Alleen beheerders kunnen nieuwe verbindingen configureren, maar de gemaakte verbindingen zijn altijd beschikbaar voor zowel beheerders als inzenders. Beheerders beheren referenties en geven toestemming voor gegevensoverdrachten. De verbindingen kunnen vervolgens door zowel beheerders als inzenders worden gebruikt voor verrijkingen.
 
@@ -46,7 +46,7 @@ Als u verbindingen wilt toevoegen, moet u over [beheerdersmachtigingen](permissi
 
 1. Selecteer **Verbinding toevoegen** om een nieuwe verbinding te maken. Kies in het vervolgkeuzemenu welk type verbinding u wilt maken.
 
-1. Geef in het deelvenster **Verbindingen instellen** de vereiste details op. 
+1. Geef in het deelvenster **Verbindingen instellen** de vereiste details op.
    1. De **weergavenaam** en het type verbinding beschrijven een verbinding. We raden u aan een naam te kiezen die het doel en het doel van deze verbinding uitlegt.
    1. De exacte velden zijn afhankelijk van de service waarmee u verbinding maakt. U kunt meer te weten komen over de details van een specifiek verbindingstype in het artikel over de doelservice.
    1. Als u uw [eigen Key Vault gebruikt](use-azure-key-vault.md) om geheimen op te slaan, activeert u **Key Vault gebruiken** en kiest u het geheim uit de lijst.
@@ -59,7 +59,7 @@ U kunt ook **Instellen** selecteren op een tegel op het tabblad **Ontdekken**.
 
 Bij het opzetten of bewerken van een exportverbinding, kiest u welke gebruikers deze specifieke verbinding mogen gebruiken om [exports](export-destinations.md) te definiëren. Standaard is er een verbinding beschikbaar voor gebruikers met de beheerdersrol. U kunt deze instelling wijzigen onder **Kiezen wie deze verbinding kan gebruiken** en laat gebruikers met de rol van inzender deze verbinding gebruiken.
 
-- Inzenders kunnen de verbinding niet bekijken of bewerken. Ze zullen alleen de weergavenaam en het type zien wanneer ze een export maken.
+- Inzenders kunnen de verbinding niet bekijken of bewerken. Ze zien alleen de weergavenaam en het type ervan bij het maken van een export.
 - Door een verbinding te delen, staat u inzenders toe een verbinding te gebruiken. Inzenders zien gedeelde verbindingen wanneer ze exports instellen. Zij kunnen elke export beheren die deze specifieke verbinding gebruikt.
 - U kunt deze instelling wijzigen terwijl u de export behoudt die al door inzenders is gedefinieerd.
 
@@ -77,7 +77,7 @@ Bij het opzetten of bewerken van een exportverbinding, kiest u welke gebruikers 
 
 ## <a name="remove-a-connection"></a>Een verbinding verwijderen
 
-Als de verbinding die u verwijdert, wordt gebruikt door verrijkingen of exports, moet u deze eerst loskoppelen of verwijderen. Het dialoogvenster voor verwijdering leidt u naar de relevante verrijkingen of exports. 
+Als de verbinding die u verwijdert, wordt gebruikt door verrijkingen of exports, moet u deze eerst loskoppelen of verwijderen. Het dialoogvenster voor verwijdering leidt u naar de relevante verrijkingen of exports.
 
 Losgekoppelde verrijkingen en exports worden inactief. U activeert deze opnieuw door er een andere verbinding aan toe te voegen op de pagina [Verrijkingen](enrichment-hub.md) of [Exports](export-destinations.md).
 
@@ -91,7 +91,7 @@ Losgekoppelde verrijkingen en exports worden inactief. U activeert deze opnieuw 
 
    1. Als er verrijkingen of exports zijn die deze verbinding gebruiken, selecteert u de knop om te zien wat de verbinding gebruikt.
       - **Exports:** u kunt ervoor kiezen om de exports te verwijderen of los te koppelen om de verbinding te kunnen verwijderen. Voor het loskoppelen van een export kunnen beheerders de actie **Verbinding verbreken** gebruiken. Deze actie is beschikbaar voor individuele en meerdere geselecteerde exports. Door de verbinding te verbreken, behoudt u de exportconfiguratie, maar wordt deze pas uitgevoerd als er een andere verbinding aan is toegevoegd.
-      - **Verrijkingen:** u kunt ervoor kiezen om de verrijkingen te verwijderen of te deactiveren om de verbinding te kunnen verwijderen. 
+      - **Verrijkingen:** u kunt ervoor kiezen om de verrijkingen te verwijderen of te deactiveren om de verbinding te kunnen verwijderen.
    1. Zodra de verbinding geen afhankelijkheden meer heeft, gaat u terug naar **Beheerder** > **Verbindingen** en probeert u de verbinding opnieuw te verwijderen.
 
 1. Selecteer **Verwijderen** om de verwijdering te bevestigen.

@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646037"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712896"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Een omgeving maken in Customer Insights
 
@@ -63,8 +63,7 @@ U hebt twee opties: **Customer Insights-opslag** (een Azure data lake beheerd do
 Door gegevens op te slaan in Azure Data Lake Storage, gaat u ermee akkoord dat gegevens worden overgedragen naar en opgeslagen op de juiste geografische locatie voor die Azure-opslagaccount. Deze locatie kan verschillen van waar de gegevens worden opgeslagen in Dynamics 365 Customer Insights. Ga voor meer informatie naar het [Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights ondersteunt momenteel het volgende:
-> - Opgenomen entiteiten van Power BI-gegevensstromen die zijn opgeslagen in een door Microsoft Dataverse beheerde Data Lake.  
+> Customer Insights ondersteunt momenteel het volgende:  
 > - Azure Data Lake Storage-accounts uit dezelfde Azure-regio die u hebt geselecteerd bij het maken van de omgeving.
 > - Azure Data Lake Storage-accounts die Gen2 zijn en waarvoor *hiërarchische naamruimte* is ingeschakeld. Azure Data Lake Gen1-opslagaccounts worden niet ondersteund.
 
@@ -80,7 +79,7 @@ In de stap **Microsoft Dataverse** kunt u Customer Insights verbinden met uw Dat
 
 Bied uw eigen Microsoft Dataverse-omgeving om gegevens (profielen en inzichten) te delen met zakelijke toepassingen op basis van Dataverse, zoals Dynamics 365 Marketing of modelgestuurde toepassingen in Power Apps. Laat dit veld leeg als u geen eigen Dataverse-omgeving hebt, dan richten wij er een voor u in.
 
-Verbinding maken met uw Dataverse-omgeving stelt u ook in staat om [gegevens op te nemen uit on-premises gegevensbronnen met behulp van Power Platform-gegevensstromen en -gateways](data-sources.md#add-data-from-on-premises-data-sources). U kunt ook [kant-en-klare voorspellingsmodellen](predictions-overview.md?tabs=b2c#out-of-box-models) gebruiken door verbinding te maken met een Dataverse-omgeving.
+Verbinding maken met uw Dataverse-omgeving stelt u ook in staat om [gegevens op te nemen uit on-premises gegevensbronnen met behulp van Power Platform-gegevensstromen en -gateways](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Customer Insights en Dataverse moeten zich in dezelfde regio bevinden om het delen van gegevens mogelijk te maken.
