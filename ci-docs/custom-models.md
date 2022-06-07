@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646094"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800414"
 ---
 # <a name="custom-machine-learning-models"></a>Aangepaste Machine Learning-modellen
 
@@ -92,7 +92,7 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
 
 ## <a name="edit-a-workflow"></a>Een werkstroom bewerken
 
-1. Selecteer op de pagina **Aangepaste modellen** de verticale ellips in de kolom **Acties** naast een werkstroom die u eerder hebt gemaakt en selecteer vervolgens **Bewerken**.
+1. Selecteer op de pagina **Aangepaste modellen** het verticale weglatingsteken (&vellip;) in de kolom **Acties** naast een werkstroom die u eerder hebt gemaakt en selecteer vervolgens **Bewerken**.
 
 1. U kunt de herkenbare naam van uw werkstroom bijwerken in het veld **Weergavenaam**, maar u kunt de geconfigureerde webservice of pijplijn niet wijzigen. Selecteer **Volgende**.
 
@@ -108,7 +108,7 @@ Voorspellingen bieden mogelijkheden om betere klantervaringen te creëren, zakel
 
 ## <a name="run-a-workflow"></a>Een werkstroom uitvoeren
 
-1. Selecteer op de pagina **Aangepaste modellen** de verticale ellips in de kolom **Acties** naast een werkstroom die u eerder hebt gemaakt.
+1. Selecteer op de pagina **Aangepaste modellen** het verticale weglatingsteken (&vellip;) in de kolom **Acties** naast een werkstroom die u eerder hebt gemaakt.
 
 1. Selecteer **Uitvoeren**.
 
@@ -116,7 +116,7 @@ Uw werkstroom wordt ook automatisch uitgevoerd bij elke geplande vernieuwing. Le
 
 ## <a name="delete-a-workflow"></a>Een werkstroom verwijderen
 
-1. Selecteer op de pagina **Aangepaste modellen** de verticale ellips in de kolom **Acties** naast een werkstroom die u eerder hebt gemaakt.
+1. Selecteer op de pagina **Aangepaste modellen** het verticale weglatingsteken (&vellip;) in de kolom **Acties** naast een werkstroom die u eerder hebt gemaakt.
 
 1. Selecteer **Verwijderen** en bevestig de verwijdering.
 

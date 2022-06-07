@@ -1,7 +1,7 @@
 ---
 title: Common Data Model-gegevens met een Azure Data Lake-account verbinden
 description: Werken met Common Data Model-gegevens met Azure Data Lake Storage.
-ms.date: 01/25/2022
+ms.date: 05/24/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -13,12 +13,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: eeb6b9d97be5f9c0b9f6cbd6dbc6985559a1cd9d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646164"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833350"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Verbinding maken met een Common Data Model-map via een Azure Data Lake-account
 
@@ -46,16 +46,16 @@ Dit artikel geeft informatie over het opnemen van gegevens in Dynamics 365 Custo
 
 1. Selecteer **Azure Data Lake Storage**, voer een **naam** voor de gegevensbron in en selecteer daarna **Volgende**.
 
-   - Selecteer desgevraagd een van de voorbeeldgegevenssets die betrekking hebben op uw branche en selecteer daarna **Volgende**. 
+   - Selecteer desgevraagd een van de voorbeeldgegevenssets die betrekking hebben op uw branche en selecteer daarna **Volgende**.
 
 1. U kunt kiezen tussen een resource-optie en een abonnementsoptie voor verificatie. Zie voor meer informatie [Verbinding met een Azure Data Lake Storage Gen2-account maken met een Azure-service-principal](connect-service-principal.md). Voer het **serveradres** in, selecteer **Aanmelden** en selecteer daarna **Volgende**.
    > [!div class="mx-imgBorder"]
    > ![Dialoogvenster om nieuwe verbindingsdetails in te voeren voor Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
-   > U hebt een van de volgende rollen nodig voor de container of het opslagaccount waarnaar hierboven wordt verwezen om verbinding te kunnen maken met een gegevensbron en deze te maken:
-   >  - Opslag-blobgegevens lezer
-   >  - Opslag-blobgegevens eigenaar
-   >  - Inzender van opslag-blobgegevens
+   > U hebt een van de volgende rollen nodig voor de container in het opslagaccount om de gegevensbron te maken:
+   >
+   >  - Storage Blob-gegevenslezer is voldoende om van een opslagaccount te lezen en de gegevens op te nemen in Customer Insights. 
+   >  - Bijdrager van Storage Blob-gegevens of Eigenaar van Storage Blob-gegevens is vereist als u de manifestbestanden rechtstreeks in Customer Insights wilt bewerken.
 
 1. Selecteer in het dialoogvenster **Een Common Data Model-map selecteren** het bestand model.json of manifest.json waaruit u gegevens wilt importeren en selecteer **Volgende**.
    > [!NOTE]
@@ -65,11 +65,11 @@ Dit artikel geeft informatie over het opnemen van gegevens in Dynamics 365 Custo
    > [!div class="mx-imgBorder"]
    > ![Dialoogvenster met een lijst met entiteiten uit een model.json-bestand.](media/review-entities.png)
 
-8. Geef aan voor welke gegevensentiteiten u profilering wilt inschakelen en selecteer vervolgens **Opslaan**. Met gegevensprofilering kunnen analyses en andere functies worden gebruikt. U kunt de hele entiteit selecteren, die alle kenmerken uit de entiteit selecteert, of bepaalde kenmerken selecteren. Standaard is geen entiteit ingeschakeld voor gegevensprofilering.
+1. Geef aan voor welke gegevensentiteiten u profilering wilt inschakelen en selecteer vervolgens **Opslaan**. Met gegevensprofilering kunnen analyses en andere functies worden gebruikt. U kunt de hele entiteit selecteren, die alle kenmerken uit de entiteit selecteert, of bepaalde kenmerken selecteren. Standaard is geen entiteit ingeschakeld voor gegevensprofilering.
    > [!div class="mx-imgBorder"]
    > ![Dialoogvenster met gegevensprofilering.](media/dataprofiling-entities.png)
 
-9. Na het opslaan van uw selecties wordt de pagina **Gegevensbronnen** geopend. U zou nu de Common Data Model-mapverbinding moeten zien als een gegevensbron.
+1. Na het opslaan van uw selecties wordt de pagina **Gegevensbronnen** geopend. U zou nu de Common Data Model-mapverbinding moeten zien als een gegevensbron.
 
 > [!NOTE]
 > Een model.json- of manifest.json-bestand kan alleen worden gekoppeld aan één gegevensbron in dezelfde omgeving. Hetzelfde model.json- of manifest.json-bestand kan echter worden gebruikt voor gegevensbronnen in meerdere omgevingen.
@@ -80,7 +80,7 @@ U kunt de toegangssleutel bijwerken voor het opslagaccount dat de map Common Dat
 
 1. Ga naar **Gegevens** > **Gegevensbronnen**.
 
-2. Selecteer het weglatingsteken naast de gegevensbron die u wilt bijwerken.
+2. Selecteer het verticale weglatingsteken (&vellip;) naast de gegevensbron die u wilt bijwerken.
 
 3. Selecteer de optie **Bewerken** in de lijst.
 
@@ -93,13 +93,6 @@ U kunt de toegangssleutel bijwerken voor het opslagaccount dat de map Common Dat
 
    > ![Dialoogvenster om verbindingsdetails voor Azure Data Lake in te voeren met een bestaand opslagaccount.](media/enter-existing-storage-details.png)
 
-   > [!NOTE]
-   > U hebt een van de volgende rollen nodig voor de container of het opslagaccount waarnaar hierboven wordt verwezen om verbinding te kunnen maken met een gegevensbron en deze te maken:
-   >  - Opslag-blobgegevens lezer
-   >  - Opslag-blobgegevens eigenaar
-   >  - Inzender van opslag-blobgegevens
-
-
 6. Kies optioneel een ander model.json- of manifest.json-bestand met een andere set entiteiten uit de container.
 
 7. Optioneel kunt u extra entiteiten selecteren om op te nemen. U kunt ook reeds geselecteerde entiteiten verwijderen als er geen afhankelijkheden zijn.
@@ -107,7 +100,6 @@ U kunt de toegangssleutel bijwerken voor het opslagaccount dat de map Common Dat
    > [!IMPORTANT]
    > Als er afhankelijkheden zijn in het bestaande model.json- of manifest.json-bestand en de set entiteiten, ziet u een foutbericht en kunt u geen ander model.json- of manifest.json-bestand selecteren. Verwijder die afhankelijkheden voordat u het model.json- of manifest.json-bestand wijzigt, of maak een nieuw gegevensbron met model.json of manifest.json dat u wilt gebruiken om te voorkomen dat u de afhankelijkheden verwijdert.
 
-8. Optioneel kunt u extra kenmerken of entiteiten selecteren om gegevensprofilering in te schakelen of reeds geselecteerde uit te schakelen.   
-
+8. Optioneel kunt u extra kenmerken of entiteiten selecteren om gegevensprofilering in te schakelen of reeds geselecteerde uit te schakelen.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

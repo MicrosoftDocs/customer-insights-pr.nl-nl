@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755256"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807575"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Logboeken doorsturen in Dynamics 365 Customer Insights met Azure Monitor (preview)
 
-Dynamics 365 Customer Insights biedt een directe integratie met Azure Monitor. Met Azure Monitor-resourcelogboeken kunt u logboeken bewaken en naar [Azure-opslag](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) verzenden of deze naar [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/) streamen.
+Dynamics 365 Customer Insights biedt een directe integratie met Azure Monitor. Met Azure Monitor-resourcelogboeken kunt u logboeken bewaken en naar [Azure-opslag](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) verzenden of deze naar [Azure-gebeurtenishubs](https://azure.microsoft.com/services/event-hubs/) streamen.
 
 Customer Insights stuurt de volgende gebeurtenislogboeken:
 
@@ -38,8 +38,8 @@ Als u diagnoses wilt configureren in Customer Insights, moet aan de volgende ver
 
 - U hebt een actief [Azure-abonnement](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - U hebt machtigingen voor [beheerders](permissions.md#admin) in Customer Insights.
-- U hebt de rol van **inzender** en **beheerder voor gebruikerstoegang** voor de doelresource in Azure. De resource kan een Azure Storage-account, een Azure Event Hub of een Azure Log Analytics-werkruimte zijn. Zie [Azure-roltoewijzingen toevoegen of verwijderen met behulp van de Azure-portal](/azure/role-based-access-control/role-assignments-portal) voor meer informatie.
-- [Bestemmingsvereisten](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) voor Azure Storage, Azure Event Hub of Azure Log Analytics met.
+- U hebt de rol van **inzender** en **beheerder voor gebruikerstoegang** voor de doelresource in Azure. De resource kan een Azure Data Lake Storage-account, een Azure-gebeurtenishub of een Azure Log Analytics-werkruimte zijn. Zie [Azure-roltoewijzingen toevoegen of verwijderen met behulp van de Azure-portal](/azure/role-based-access-control/role-assignments-portal) voor meer informatie. Deze machtiging is nodig tijdens het configureren van diagnostische instellingen in Customer Insights. De machtiging kan worden gewijzigd na een succesvolle installatie.
+- [Bestemmingsvereisten](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) voor Azure Storage, Azure-gebeurtenishub of Azure Log Analytics met.
 - U hebt in ieder geval de rol **Lezer** in de resourcegroep waartoe de resource behoort.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Diagnoses instellen met Azure Monitor
@@ -102,7 +102,7 @@ Customer Insights-service-principal krijgt de machtiging **Inzender opslagaccoun
 
 ### <a name="event-hub"></a>Event Hub
 
-Customer Insights-service-principal krijgt de machtiging **Eigenaar van gegevens van Azure Event Hubs** voor de resource en maakt twee Event Hubs onder de geselecteerde naamruimte:
+Customer Insights-service-principal krijgt de machtiging **Eigenaar van gegevens van Azure-gebeurtenishubs** voor de resource en maakt twee Event Hubs onder de geselecteerde naamruimte:
 
 - `insight-logs-audit` die **controlegebeurtenissen** bevat
 - `insight-logs-operational` die **operationele gebeurtenissen** bevat

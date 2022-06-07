@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646282"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800090"
 ---
 # <a name="create-segments"></a>Segmenten maken
 
@@ -134,8 +134,9 @@ Terwijl u een segment maakt, kunt u een concept opslaan. In de conceptfase wordt
 > - De opbouwfunctie voor segmenten stelt geen geldige waarden van entiteiten voor bij het instellen van de operators voor de voorwaarden. U kunt naar **Gegevens** > **Entiteiten** gaan en de entiteitsgegevens downloaden om te zien welke waarden er beschikbaar zijn.
 > - Met voorwaarden op basis van de datums kunt u schakelen tussen vaste datums en een zwevend datumbereik.
 > - Als u meerdere regels voor uw segment heeft, heeft de regel die u aan het bewerken bent, een verticale blauwe lijn ernaast.
-> - U kunt regels en voorwaarden naar andere plaatsen in de segmentdefinitie verplaatsen. Selecteer [...] naast een regel of voorwaarde en kies hoe en waarnaartoe u deze wilt verplaatsen.
+> - U kunt regels en voorwaarden naar andere plaatsen in de segmentdefinitie verplaatsen. Selecteer het verticale weglatingsteken (&vellip;) naast een regel of voorwaarde en kies hoe en waar u deze wilt verplaatsen.
 > - Met de opties **Ongedaan maken** en **Opnieuw** in de opdrachtbalk kunt u wijzigingen ongedaan maken.
+> - Nadat u een segment hebt gemaakt, kunt u met sommige segmenten [het gebruik van het segment bijhouden](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Snelle segmenten
 

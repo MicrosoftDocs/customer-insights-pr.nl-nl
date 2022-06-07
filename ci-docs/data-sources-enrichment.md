@@ -1,19 +1,19 @@
 ---
 title: Verrijking van gegevensbronnen
 description: Verrijk gegevensbronnen voordat u het proces voor gegevensharmonisatie doorloopt.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755680"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800275"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Verrijking voor gegevensbronnen (preview)
 
@@ -27,7 +27,7 @@ U moet de inzenders- of beheerdersrechten hebben om verrijkingen te kunnen maken
 
 1. Ga naar **Gegevens** > **Gegevensbronnen**.
 
-1. Selecteer het verticale weglatingsteken naast de gegevensbron die u wilt verrijken en selecteer **Verrijken**.
+1. Selecteer het verticale weglatingsteken (&vellip;) naast de gegevensbron die u wilt verrijken en selecteer **Verrijken**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Pagina voor verrijking van gegevensbronnen.":::
 
@@ -41,11 +41,12 @@ De volgende verrijkingen zijn momenteel beschikbaar voor gegevensbronnen. Bekijk
 
 - [Uitgebreide adressen](enrichment-enhanced-addresses.md)
 - [Uitgebreide bedrijfsgegevens](enrichment-enhanced-company-data.md)
+- [Identiteitsgegevens van LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Bestaande gegevensbronverrijkingen beheren
 
 Ga naar het tabblad **Mijn verrijkingen** om alle geconfigureerde verrijkingen te zien.
 
-Selecteer de verrijking om de beschikbare opties te zien. U kunt ook het beletselteken (...) in een lijstitem selecteren om de opties te zien. Als u verschillende verrijkingen hebt geconfigureerd, kunt u het zoekvak gebruiken om ze snel te vinden.
+Selecteer de verrijking om de beschikbare opties te zien. U kunt ook het verticale weglatingsteken (&vellip;) selecteren op een lijstitem om de opties te zien. Als u verschillende verrijkingen hebt geconfigureerd, kunt u het zoekvak gebruiken om ze snel te vinden.
 
 U kunt een gegevensbronverrijking bekijken, bewerken, uitvoeren of verwijderen. Zie [Bestaande verrijkingen beheren](enrichment-hub.md) voor meer informatie.

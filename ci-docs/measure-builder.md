@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646371"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800320"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Gebruik de metingenbouwer om helemaal vanaf de grond metingen te maken
 
@@ -88,7 +88,7 @@ U kunt metingen maken op het niveau van individuele klanten (klantkenmerk, klant
 
 1. Als u meer berekeningen voor het meetcriterium wilt toevoegen, selecteert u **Nieuwe berekening**​. U kunt alleen entiteiten op hetzelfde entiteitspad gebruiken voor nieuwe berekeningen. Meer berekeningen worden weergegeven als nieuwe kolommen in de entiteit voor uitvoer van meetcriteria.
 
-1. Selecteer **...** in de berekening om een berekening uit een meetcriterium te **Dupliceren** **Naam wijzigen** of te **Verwijderen**.
+1. Selecteer het verticale weglatingsteken (&vellip;) in de berekening voor het **dupliceren**, **hernoemen** of **verwijderen** van een berekening vanuit een meting.
 
 1. In het gebied **Voorbeeld** ziet u het gegevensschema van de entiteit voor uitvoer van meetcriteria, inclusief filters en dimensies. Het voorbeeld reageert dynamisch op wijzigingen in de configuratie.
 
@@ -158,7 +158,7 @@ U kunt metingen maken op het niveau van individuele accounts (klantmeting) of op
    1. Selecteer **Relatiepad** en kies het entiteitspad dat moet worden gebruikt om uw meting te identificeren. Als er maar één pad is naar de entiteit *Klant*, wordt dit besturingselement niet weergegeven.
    1. Selecteer **Gereed** om uw selectie toe te passen.
 
-1. Selecteer **...** in de berekening om een berekening uit een meetcriterium te **Dupliceren** **Naam wijzigen** of te **Verwijderen**.
+1. Selecteer het verticale weglatingsteken (&vellip;) in de berekening voor het **dupliceren**, **hernoemen** of **verwijderen** van een berekening vanuit een meting.
 
 1. In het gebied **Voorbeeld** ziet u het gegevensschema van de entiteit voor uitvoer van meetcriteria, inclusief filters en dimensies. Het voorbeeld reageert dynamisch op wijzigingen in de configuratie.
 

@@ -1,7 +1,7 @@
 ---
 title: Verbinding met een Azure Data Lake Storage-account maken met behulp van een service-principal
 description: Gebruik een Azure-service-principal om verbinding te maken met uw eigen data lake.
-ms.date: 04/26/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,22 +11,23 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739156"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833379"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Verbinding met een Azure Data Lake Storage-account maken met behulp van een Azure-service-principal
 
-In dit artikel wordt beschreven hoe u verbinding kunt maken tussen Dynamics 365 Customer Insights en een Azure Data Lake Storage-account met behulp van een Azure-service-principal in plaats van opslagaccountsleutels. 
+In dit artikel wordt beschreven hoe u verbinding kunt maken tussen Dynamics 365 Customer Insights en een Azure Data Lake Storage-account met behulp van een Azure-service-principal in plaats van opslagaccountsleutels.
 
 Geautomatiseerde hulpmiddelen die Azure-services gebruiken, moeten altijd beperkte machtigingen hebben. In plaats van toepassingen zich te laten aanmelden als een gebruiker met volledige rechten, biedt Azure Service Principals. U kunt service-principals gebruiken om veilig [een Common Data Model-map toe te voegen of te bewerken als een gegevensbron](connect-common-data-model.md) of [een omgeving te maken of bij te werken](create-environment.md).
 
 > [!IMPORTANT]
+>
 > - Het Data Lake Storage-account dat de service-principal gaat gebruiken, moet Gen2 zijn en moet [hiërarchische naamruimte hebben ingeschakeld](/azure/storage/blobs/data-lake-storage-namespace). Azure Data Lake Gen1-opslagaccounts worden niet ondersteund.
-> - U hebt beheerdersmachtigingen nodig voor uw Azure-abonnement om een service-principal te maken.
+> - U hebt beheerdersmachtigingen nodig voor uw Azure-tenant om een service-principal te maken.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Een Azure-service-principal maken voor Customer Insights
 
@@ -38,29 +39,15 @@ Voordat u een nieuwe service-principal voor Customer Insights maakt, moet u cont
 
 2. Ga naar **Azure-services** en selecteer **Azure Active Directory**.
 
-3. Selecteer onder **Beheer** de optie **Ondernemingstoepassingen**.
+3. Selecteer onder **Beheren** de optie **Microsoft-toepassing**.
 
 4. Voeg een filter toe voor **Toepassings-id begint met** `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` of zoek op de naam `Dynamics 365 AI for Customer Insights`.
 
-5. Als u een overeenkomende record vindt, betekent dit dat de service-principal al bestaat. 
-   
+5. Als u een overeenkomende record vindt, betekent dit dat de service-principal al bestaat.
+
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Schermopname van een bestaande service-principal.":::
-   
-6. Als er geen resultaten worden geretourneerd, maakt u een nieuwe service principal.
 
-### <a name="create-a-new-service-principal"></a>Een nieuwe service principal maken
-
-1. Installeer de meest recente versie van Azure Active Directory PowerShell for Graph. Ga voor meer informatie naar [Azure Active Directory PowerShell for Graph installeren](/powershell/azure/active-directory/install-adv2).
-
-   1. Selecteer op uw pc de Windows-toets op uw toetsenbord en zoek naar **Windows PowerShell**. Selecteer vervolgens **Uitvoeren als beheerder**.
-   
-   1. Voer `Install-Module AzureAD` in het PowerShell-venster dat wordt geopend in.
-
-2. Maak de service-principal voor Customer Insights met de Azure AD PowerShell-module.
-
-   1. Voer `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure` in het PowerShell-venster in. Vervang *[uw directory-id]* met de daadwerkelijke directory-id van uw Azure-abonnement waar u de service-principal wilt maken. De omgevingsnaamparameter, `AzureEnvironmentName`, is optioneel.
-  
-   1. Voer `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"` in. Met deze opdracht wordt de service-principal voor Customer Insights gemaakt voor het geselecteerde Azure-abonnement. 
+6. Als er geen resultaten worden geretourneerd, kunt u [een nieuwe service-principal maken](#create-a-new-service-principal). In de meeste gevallen bestaat deze al en hoeft u alleen machtigingen te verlenen aan de service-principal om toegang te krijgen tot het opslagaccount.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Machtigingen verlenen aan de service principal om toegang te krijgen tot het opslagaccount
 
@@ -77,9 +64,9 @@ Ga naar de Azure-portal om machtigingen te verlenen aan de service-principal voo
 1. Stel in het deelvenster **Roltoewijzing toevoegen** de volgende eigenschappen in:
    - Rol: **Inzender van opslagblob-gegevens**
    - Wijs toegang toe aan: **Gebruiker, groep of service principal**
-   - Selecteer leden: **Dynamics 365 AI voor Customer Insights** (de [service-principal](#create-a-new-service-principal) die u eerder in deze procedure hebt gemaakt)
+   - Selecteer leden: **Dynamics 365 AI voor Customer Insights** (de [service-principal](#create-a-new-service-principal) die u eerder in deze procedure hebt opgezocht)
 
-1.  Selecteer **Controleren + toewijzen**.
+1. Selecteer **Controleren + toewijzen**.
 
 Het kan tot 15 minuten duren om de wijzigingen door te geven.
 
@@ -91,7 +78,7 @@ U kunt een Data Lake Storage-account in Customer Insights koppelen om [uitvoerge
 
 1. Ga naar de [Azure-beheerportal](https://portal.azure.com), meld u aan bij uw abonnement en open het opslagaccount.
 
-1. Ga in het linkerdeelvenster naar **Instellingen** > **Eigenschappen**.
+1. Ga in het linkerdeelvenster naar **Instellingen** > **Eindpunten**.
 
 1. Kopieer de waarde voor de resource-id van het opslagaccount.
 
@@ -115,5 +102,18 @@ U kunt een Data Lake Storage-account in Customer Insights koppelen om [uitvoerge
 
 1. Ga verder met de resterende stappen in Customer Insights om het opslagaccount te koppelen.
 
+### <a name="create-a-new-service-principal"></a>Een nieuwe service principal maken
+
+1. Installeer de meest recente versie van Azure Active Directory PowerShell for Graph. Ga voor meer informatie naar [Azure Active Directory PowerShell for Graph installeren](/powershell/azure/active-directory/install-adv2).
+
+   1. Druk op uw pc op de Windows-toets op uw toetsenbord en zoek naar **Windows PowerShell** en selecteer **Uitvoeren als beheerder**.
+
+   1. Voer `Install-Module AzureAD` in het PowerShell-venster dat wordt geopend in.
+
+2. Maak de service-principal voor Customer Insights met de Azure AD PowerShell-module.
+
+   1. Voer `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure` in het PowerShell-venster in. Vervang *[uw directory-id]* met de daadwerkelijke directory-id van uw Azure-abonnement waar u de service-principal wilt maken. De omgevingsnaamparameter, `AzureEnvironmentName`, is optioneel.
+  
+   1. Voer `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"` in. Met deze opdracht wordt de service-principal voor Customer Insights gemaakt voor het geselecteerde Azure-abonnement.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

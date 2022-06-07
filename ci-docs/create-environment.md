@@ -1,110 +1,137 @@
 ---
-title: Omgevingen maken in Customer Insights
-description: Stappen om omgevingen te creëren met een gelicentieerd abonnement voor Dynamics 365 Customer Insights.
-ms.date: 04/25/2022
+title: Procedure - Een nieuwe omgeving maken
+description: Stappen om omgevingen te maken voor Dynamics 365 Customer Insights.
+ms.date: 05/31/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
-ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.openlocfilehash: 795eaa3598257f5188070f6ea02d04e4423b66eb
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "8712896"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833552"
 ---
-# <a name="create-an-environment-in-customer-insights"></a>Een omgeving maken in Customer Insights
+# <a name="how-to-create-a-new-environment"></a>Procedure: Een nieuwe omgeving maken
 
-In dit artikel wordt uitgelegd hoe u een nieuwe omgeving kunt maken nadat uw organisatie een Dynamics 365 Customer Insights-abonnement heeft aangeschaft. 
+Na [aanschaf van een abonnementslicentie voor Dynamics 365 Customer Insights](paid-license.md), ontvangt de globale beheerder van de Microsoft 365-tenant een e-mail die hem of haar uitnodigt om de omgeving te maken. Ga naar [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) om aan de slag te gaan. In dit scenario kunt u direct naar [Stap 1: Geef basisinformatie op](#step-1-provide-basic-information) gaan.
 
-Organisaties kunnen voor elke Customer Insights-licentie meerdere omgevingen maken. Als uw organisatie meer dan één licentie aanschaft, [neemt u contact op met ons ondersteuningsteam](https://go.microsoft.com/fwlink/?linkid=2079641) om het aantal beschikbare omgevingen te vergroten. Raadpleeg voor meer informatie over capaciteit en uitbreidingscapaciteit de [Dynamics 365-licentiegids](https://go.microsoft.com/fwlink/?LinkId=866544).
+Nadat de eerste omgeving is gemaakt, kan de globale beheerder van de Microsoft 365-tenant [gebruikers uit hun organisatie toevoegen als beheerders](permissions.md). In de toekomst zullen deze beheerders gebruikers en omgevingen kunnen beheren. Als uw organisatie meer dan één licentie aanschaft voor Customer Insights, [neemt u contact op met ons ondersteuningsteam](https://go.microsoft.com/fwlink/?linkid=2079641) om het aantal beschikbare omgevingen te vergroten. Raadpleeg voor meer informatie over capaciteit en uitbreidingscapaciteit de [Dynamics 365-licentiegids](https://go.microsoft.com/fwlink/?LinkId=866544).
 
-> [!NOTE]
+> [!TIP]
 > Als u de service wilt uitproberen, zie [Een proefomgeving instellen](trial-signup.md).
 
-## <a name="create-a-new-environment"></a>Een nieuwe omgeving maken
+## <a name="prerequisites"></a>Vereisten
 
-Na aanschaf van een abonnementslicentie voor Customer Insights, ontvangt de globale beheerder van de Microsoft 365-tenant een e-mail die hen uitnodigt om de omgeving te maken. Ga naar [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) om aan de slag te gaan. 
+U hebt [beheerdermachtigingen](permissions.md) in Customer Insights nodig om omgevingen te creëren of te beheren.
 
-Een begeleide ervaring helpt u bij de stappen om alle benodigde informatie voor een nieuwe omgeving te verzamelen. U hebt [beheerdermachtigingen](permissions.md) in Customer Insights nodig om omgevingen te creëren of te beheren.
+## <a name="start-the-environment-creation-process"></a>Het proces voor het maken van de omgeving starten
 
 1. Open de omgevingskiezer en selecteer **+ Nieuw**.
   
    :::image type="content" source="media/environment-picker.png" alt-text="Selecteer de omgevingskiezer.":::
 
-1. Volg de begeleide ervaring die in de volgende secties wordt beschreven.
+1. Volg de begeleide ervaring die in de volgende secties wordt beschreven om alle vereiste informatie voor een nieuwe omgeving te verstrekken. Als u eerder een omgeving hebt geconfigureerd, kunt u ook [de configuratie kopiëren](#copy-the-environment-configuration).
 
-### <a name="step-1-provide-environment-information"></a>Stap 1: omgevingsinformatie opgeven
+## <a name="step-1-provide-basic-information"></a>Stap 1: Geef basisinformatie op
 
-In de stap **Basisgegevens** kiest u of u een geheel nieuwe omgeving wilt maken of [gegevens wilt kopiëren uit een andere omgeving](manage-environments.md#copy-the-environment-configuration).
+In de stap **Basisgegevens** kiest u of u een geheel nieuwe omgeving wilt maken of [gegevens wilt kopiëren uit een andere omgeving](#copy-the-environment-configuration).
 
    :::image type="content" source="media/environment-settings-dialog.png" alt-text="Dialoogvenster om een nieuwe Customer Insights-omgeving te maken.":::
 
 Geef de volgende details op:
-   - **Naam**: de naam voor deze omgeving. Dit veld is al ingevuld als u hebt gekopieerd vanuit een bestaande omgeving, maar u kunt dit wijzigen.
-   - **Uw bedrijf kiezen**: kies de primaire doelgroep voor de nieuwe omgeving. Je kunt werken met individuele consumenten (B2C) of [zakelijke accounts](work-with-business-accounts.md) (B2B).
-   - **Type**: selecteer of u een productie- of sandbox-omgeving wilt maken. Sandbox-omgevingen staan geen geplande gegevensvernieuwing toe en zijn bedoeld voor pre-implementatie en testen. Sandbox-omgevingen gebruiken dezelfde primaire doelgroep als de productieomgeving die momenteel is geselecteerd.
-   - **Regio**: de regio waarin de service wordt geïmplementeerd en gehost.
 
-### <a name="step-2-configure-data-storage"></a>Stap 2: gegevensopslag configureren
+- **Naam**: de naam voor deze omgeving. Dit veld is al ingevuld als u hebt gekopieerd vanuit een bestaande omgeving, maar u kunt dit wijzigen.
+- **Uw bedrijf kiezen**: kies de primaire doelgroep voor de nieuwe omgeving. Je kunt werken met individuele consumenten (B2C) of [zakelijke accounts](work-with-business-accounts.md) (B2B). Als uw organisatie voornamelijk zaken doet met individuen, zoals een retailer of een coffeeshop, kies dan voor individuele consumenten. Als uw belangrijkste doelgroep uit andere bedrijven bestaat, zoals een auto- of papierfabriek, kiest u zakelijke accounts.
+- **Type**: selecteer of u een productie- of sandbox-omgeving wilt maken. Sandbox-omgevingen staan geen geplande gegevensvernieuwing toe en zijn bedoeld voor pre-implementatie en testen. Sandbox-omgevingen gebruiken dezelfde primaire doelgroep als de productieomgeving die momenteel is geselecteerd.
+- **Regio**: de regio waarin de service wordt geïmplementeerd en gehost. Als u [uw eigen Azure Data Lake Storage-account wilt gebruiken](own-data-lake-storage.md) of [verbinding wilt maken met een bestaande Microsoft Dataverse-organisatie](customer-insights-dataverse.md), moet de Customer Insights-omgeving zich in dezelfde regio bevinden.
+
+## <a name="step-2-configure-data-storage"></a>Stap 2: gegevensopslag configureren
 
 In de stap **Gegevensopslag** kiest u waar u de gegevens van Customer Insights wilt opslaan.
 
-U hebt twee opties: **Customer Insights-opslag** (een Azure data lake beheerd door het Customer Insights-team) en **Azure Data Lake Storage** (uw eigen Azure Data Lake Storage). Standaard is de opslagoptie Customer Insights geselecteerd.
+U kunt uit twee opties kiezen:
 
-:::image type="content" source="media/data-storage-environment.png" alt-text="Kies de Azure Data Lake Storage om uw gegevens op te slaan.":::
+- **Customer Insights-opslag**: gegevensopslag wordt beheerd door het Customer Insights-team. Dit is de standaardoptie en tenzij er specifieke vereisten zijn om gegevens in uw eigen opslagaccount op te slaan, raden we u aan deze optie te gebruiken.
+- **Azure Data Lake Storage**: geef uw eigen Azure Data Lake Storage-account om de gegevens op te slaan, zodat u volledige controle hebt over waar de gegevens worden opgeslagen. Zie [Uw eigen Azure Data Lake Storage-account gebruiken](own-data-lake-storage.md) voor meer informatie.
 
-Door gegevens op te slaan in Azure Data Lake Storage, gaat u ermee akkoord dat gegevens worden overgedragen naar en opgeslagen op de juiste geografische locatie voor die Azure-opslagaccount. Deze locatie kan verschillen van waar de gegevens worden opgeslagen in Dynamics 365 Customer Insights. Ga voor meer informatie naar het [Microsoft Trust Center](https://www.microsoft.com/trust-center).
+:::image type="content" source="media/data-storage-environment.png" alt-text="Kies de voorkeursoptie om uw gegevens op te slaan.":::
 
-> [!NOTE]
-> Customer Insights ondersteunt momenteel het volgende:  
-> - Azure Data Lake Storage-accounts uit dezelfde Azure-regio die u hebt geselecteerd bij het maken van de omgeving.
-> - Azure Data Lake Storage-accounts die Gen2 zijn en waarvoor *hiërarchische naamruimte* is ingeschakeld. Azure Data Lake Gen1-opslagaccounts worden niet ondersteund.
+## <a name="step-3-connect-to-microsoft-dataverse"></a>Stap 3: verbinden met Microsoft Dataverse
 
-Voor de optie Azure Data Lake Storage kunt u kiezen tussen een op resources gebaseerde optie en een op abonnementen gebaseerde optie voor verificatie. Zie voor meer informatie [Verbinding met een Azure Data Lake Storage-account maken via een Azure-service-principal](connect-service-principal.md). Een container met de naam `customerinsights` moet aanwezig zijn in het opslagaccount.
+In de stap **Microsoft Dataverse** kunt u Customer Insights verbinden met uw Dataverse-omgeving. Deel gegevens met Dataverse om deze te gebruiken met zakelijke toepassingen op basis van Dataverse, zoals Dynamics 365 Marketing of modelgestuurde toepassingen in Power Apps.
 
-Wanneer systeemprocessen zoals gegevensopname zijn voltooid, maakt het systeem overeenkomstige mappen in de opslagaccount die u hebt opgegeven. Gegevensbestanden en *model.json*-bestanden worden gemaakt en toegevoegd aan mappen op basis van de procesnaam.
+Laat dit veld leeg als u geen eigen Dataverse-omgeving hebt. Wij maken deze dan voor u.
 
-Als u meerdere omgevingen van Customer Insights maakt en ervoor kiest om de uitvoerentiteiten van die omgevingen op te slaan in uw opslagaccount, maakt Customer Insights afzonderlijke mappen voor elke omgeving met `ci_environmentID` in de container.
+Zie [Werken met Customer Insights-gegevens in Microsoft Dataverse](customer-insights-dataverse.md) voor meer informatie.
 
-### <a name="step-3-connect-to-microsoft-dataverse"></a>Stap 3: verbinden met Microsoft Dataverse
-   
-In de stap **Microsoft Dataverse** kunt u Customer Insights verbinden met uw Dataverse-omgeving.
-
-Bied uw eigen Microsoft Dataverse-omgeving om gegevens (profielen en inzichten) te delen met zakelijke toepassingen op basis van Dataverse, zoals Dynamics 365 Marketing of modelgestuurde toepassingen in Power Apps. Laat dit veld leeg als u geen eigen Dataverse-omgeving hebt, dan richten wij er een voor u in.
-
-Verbinding maken met uw Dataverse-omgeving stelt u ook in staat om [gegevens op te nemen uit on-premises gegevensbronnen met behulp van Power Platform-gegevensstromen en -gateways](data-sources.md#add-data-from-on-premises-data-sources).
-
-> [!IMPORTANT]
-> 1. Customer Insights en Dataverse moeten zich in dezelfde regio bevinden om het delen van gegevens mogelijk te maken.
-> 1. U moet de rol van algemene beheerder hebben in de Dataverse-omgeving. Controleer of deze [Dataverse-omgeving is gekoppeld](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) aan bepaalde beveiligingsgroepen en zorg ervoor dat u aan die beveiligingsgroepen wordt toegevoegd.
-> 1. Er is nog geen bestaande Customer Insights-omgeving aan die Dataverse-omgeving gekoppeld. Leren hoe u [een bestaande verbinding met een Dataverse omgeving kunt verwijderen](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
-
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="gegevens delen met Microsoft Dataverse automatisch ingeschakeld voor netto nieuwe exemplaren.":::
-
-Zie [Verbinden met Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse) voor meer informatie over het inschakelen van het delen van gegevens met Microsoft Dataverse vanuit uw eigen Azure Data Lake Storage.
-
-Customer Insights biedt geen ondersteuning voor de volgende scenario's voor het delen van gegevens:
-- Als u het delen van gegevens met een door Dataverse beheerd data lake inschakelt, is het niet mogelijk om [voorspelde of ontbrekende waarden te maken in een entiteit](predictions.md).
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="gegevens delen met Microsoft Dataverse automatisch ingeschakeld voor netto nieuwe omgevingen.":::
 
 ### <a name="step-4-finalize-the-settings"></a>Stap 4: de instellingen voltooien
 
-In de stap **Beoordeling** doorloopt u alle opgegeven instellingen. Als alles er compleet uitziet, selecteert u **Maken** om de omgeving in te richten. 
+In de stap **Beoordeling** doorloopt u alle opgegeven instellingen. Als alles er compleet uitziet, selecteert u **Maken** om de omgeving in te richten.
 
-U kunt de meeste instellingen ook later wijzigen. Zie [Omgevingen beheren](manage-environments.md) voor meer informatie.
+U kunt een aantal instellingen later wijzigen. Zie [Omgevingen beheren](manage-environments.md) voor meer informatie.
 
 ## <a name="work-with-your-new-environment"></a>Werken met uw nieuwe omgeving
 
-Bekijk de volgende artikelen om u op weg te helpen met het configureren van Customer Insights: 
+Bekijk de volgende artikelen om u op weg te helpen met het configureren van Customer Insights:
 
 - [Voeg meer gebruikers toe en wijs machtigingen toe](permissions.md).
 - [Uw gegevensbronnen opnemen](data-sources.md) en deze het [proces voor gegevensharmonisatie](data-unification.md) laten doorlopen om [uniforme klantprofielen](customer-profiles.md) te krijgen.
 - [Verrijk de uniforme klantprofielen](enrichment-hub.md) of [voer voorspellende modellen uit](predictions-overview.md).
 - [Segmenten maken](segments.md) om klanten en [meetcriteria](measures.md) te groeperen om KPI's te beoordelen.
 - [Stel verbindingen](connections.md) en [exports](export-destinations.md) in om subsets van uw gegevens in andere toepassingen te verwerken.
+
+## <a name="copy-the-environment-configuration"></a>De configuratie van de omgeving kopiëren
+
+Als beheerder kunt u ervoor kiezen om de configuratie uit een bestaande omgeving te kopiëren wanneer u een nieuwe maakt.
+
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="Schermafbeelding van de opties in de omgevingsinstellingen.":::
+
+U ziet een lijst met alle beschikbare omgevingen in uw organisatie waaruit u gegevens kunt kopiëren.
+
+De volgende configuratie-instellingen worden gekopieerd:
+
+- Gegevensbronnen die worden geïmporteerd via Power Query
+- Configuratie van gegevensharmonisatie
+- Segments
+- Meetcriteria
+- Relaties
+- Activiteiten
+- Index voor zoeken en filteren
+- Exports
+- Planning vernieuwen
+- Verrijkingen
+- Voorspellingsmodellen
+- Roltoewijzingen
+
+## <a name="set-up-a-copied-environment"></a>Een gekopieerde omgeving instellen
+
+Wanneer u de omgevingsconfiguratie kopieert, moet u enkele extra stappen doorlopen om de referenties te bevestigen:
+
+- Klantprofielen. Verifieer eerst uw gegevensbronnen en neem deze op en voer de gegevensharmonisatie uit om de klantprofielen opnieuw te maken.
+- Referenties voor gegevensbron. U moet de referenties opgeven voor elke gegevensbron om de gegevensbronnen handmatig te verifiëren en te vernieuwen.
+- Gegevensbronnen uit de Common Data Model-map en Dataverse. U moet deze gegevensbronnen handmatig maken met dezelfde naam als in de bronomgeving.
+- Verbindingsgeheimen die worden gebruikt voor exports en verrijkingen. U moet de verbindingen opnieuw verifiëren en vervolgens verrijkingen en exports opnieuw activeren.
+
+U krijgt een bevestigingsbericht te zien wanneer de gekopieerde omgeving is gemaakt. Selecteer **Ga naar gegevensbronnen** om de lijst met gegevensbronnen te zien.
+
+Alle gegevensbronnen hebben de status **Referenties vereist**. Bewerk de gegevensbronnen en voer de referenties in om ze te vernieuwen.
+
+:::image type="content" source="media/data-sources-copied.png" alt-text="Lijst met gegevensbronnen die zijn gekopieerd en waarvoor verificatie is vereist.":::
+
+Ga na het vernieuwen van de gegevensbronnen naar **Gegevens** > **Harmoniseren**. Hier vindt u instellingen uit de bronomgeving. Bewerk deze indien nodig of selecteer **Uitvoeren** om het proces voor gegevensharmonisering te starten en de geharmoniseerde klantentiteit te maken.
+
+Ga wanneer de gegevensharmonisering is voltooid naar **Meetcriteria** en **Segmenten** om deze eveneens te vernieuwen.
+
+Voordat u exports en verrijkingen opnieuw activeert, gaat u naar **Beheerder** > **Verbindingen** om de verbindingen in uw nieuwe omgeving opnieuw te verifiëren.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641510"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808540"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Rechten van betrokkenen (DSR) onder AVG
 
@@ -41,7 +41,7 @@ Een Customer Insights-beheerder kan deze stappen volgen om klantgegevens te verw
 1. Aanmelden bij Dynamics 365 Customer Insights.
 2. Ga naar **Gegevens** > **Gegevensbronnen**
 3. Voor elke gegevensbron in de lijst met verwijderde klantgegevens:
-   1. Selecteer (...) en selecteer vervolgens **Vernieuwen**.
+   1. Selecteer het verticale weglatingsteken (&vellip;) en selecteer vervolgens **Vernieuwen**.
    2. Controleer de status van de gegevensbron onder **Status**. Een vinkje betekent dat de vernieuwing is geslaagd. Een gevarendriehoek betekent dat er iets mis is gegaan. Neem bij een gevarendriehoek contact op met D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Een Customer Insights-beheerder kan deze stappen volgen om klantgegevens te verw
 Een Customer Insights-beheerder kan deze stappen volgen om gegevens van Customer Insights-gebruikers te verwijderen:
 
 1. Aanmelden bij Dynamics 365 Customer Insights.
-2. Ga naar **Beheerder** > **Machtigingen**.
+2. Ga naar **Beheerder** > **Beveiliging** > **Machtigingen**.
 3. Schakel het selectievakje in voor de gebruiker die u wilt verwijderen.
 4. Selecteer **Verwijderen**.
 

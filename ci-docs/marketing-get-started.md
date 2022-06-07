@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653716"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833302"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Werken met geharmoniseerde klantprofielen in Dynamics 365 Marketing
 
@@ -23,7 +23,6 @@ Door Customer Insights-gegevens te koppelen aan Marketing, kunt u het volgende d
 - Dynamische inhoud (zoals gepersonaliseerde tokens) in e-mails, sms- en pushmeldingen baseren op factoren zoals de loyaliteitsstatus, verlengingsdatum van het abonnement, bovenliggend account of een andere factor die u hebt vastgelegd in het geharmoniseerde Customer Insights-profiel.
 - Gegevens vanuit Marketing in Customer Insights laden en combineren met klantgegevens uit andere bronnen.
 - Customer Insights-gegevens opschonen en verrijken, en tools voor fuzzy overeenkomst toepassen.
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Uitgebreide klantprofielen in realtime marketing gebruiken
 
@@ -41,4 +40,4 @@ Meer informatie: [Segmenten uit Dynamics 365 Customer Insights gebruiken met Dyn
 
 U bent niet beperkt tot cloudopslag als u Customer Insights-gegevens wilt gebruiken met Marketing. Als u al een eigen Azure Data Lake Storage hebt ingesteld, kunt u verbinding maken met Customer Insights en de gegevens delen met de Marketing-app (zoals u ook zou doen met een cloudgebaseerde installatie).
 
-Meer informatie: [Het delen van gegevens met Dataverse vanuit uw eigen Azure Data Lake Storage inschakelen](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+Meer informatie: [Het delen van gegevens met Dataverse vanuit uw eigen Azure Data Lake Storage inschakelen](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

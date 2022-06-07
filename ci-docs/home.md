@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743407"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768344"
 ---
 # <a name="explore-customer-insights"></a>Customer Insights verkennen
 
@@ -28,9 +28,9 @@ De **startpagina** begeleidt u door het configuratieproces voor de belangrijkste
 
 ## <a name="left-side-pane"></a>Deelvenster aan de linkerkant
 
-Gebruik het linkerdeelvenster om tussen verschillende gebieden van Customer Insights te navigeren. 
+Gebruik het linkerdeelvenster om tussen verschillende gebieden van Customer Insights te navigeren.
 
-Als u met zakelijke accounts en individuele consumenten werkt, kunt u uw primaire doelgroep selecteren om uw focus dienovereenkomstig in te stellen. 
+Als u met zakelijke accounts en individuele consumenten werkt, kunt u uw primaire doelgroep selecteren om uw focus dienovereenkomstig in te stellen.
 
 ## <a name="application-header"></a>Toepassingsheader
 
@@ -38,7 +38,7 @@ De **omgevingskiezer** toont de omgeving waarin u werkt en laat u omgevingen mak
 
 Het smiley-pictogram is het **feedbackbesturingselement**. Selecteer het om ons uw ervaring met Customer Insights te laten weten. We zijn oprecht geïnteresseerd in uw feedback en danken u bij voorbaat dat u ons laat weten wat u leuk vindt en wat we kunnen verbeteren.
 
-Het **instellingen**-besturingselement, aangeduid met een tandwielpictogram, laat u sessiedetails verzamelen voor Customer Insights en algemene instellingen configureren voor uw Microsoft 365-profiel. 
+Het **instellingen**-besturingselement, aangeduid met een tandwielpictogram, laat u sessiedetails verzamelen voor Customer Insights en algemene instellingen configureren voor uw Microsoft 365-profiel.
 
 **Help**-opties, aangeduid met een vraagtekenpictogram, bieden koppelingen naar contextspecifieke help en andere nuttige bronnen.
 
@@ -46,7 +46,7 @@ Uw profielfoto opent de **Accountmanager** voor uw Microsoft 365-profiel. Select
 
 ## <a name="getting-started-with-customer-insights-section"></a>Sectie Aan de slag met Customer Insights
 
-Dit gedeelte bevat kaarten die u helpen bij het instellen van uw Customer Insights-omgeving. 
+Dit gedeelte bevat kaarten die u helpen bij het instellen van uw Customer Insights-omgeving.
 
 1. De kaart **Gegevens toevoegen** helpt u bij het importeren van gegevens. Customer Insights ondersteunt [verschillende opties om gegevens over uw klanten in te voeren](data-sources.md). Ga aan de slag door **Gegevensbronnen toevoegen** te selecteren.
 1. Zodra de eerste gegevensimport met succes is voltooid, kunt u de kaart **Gegevens harmoniseren** gebruiken om de gegevens te harmoniseren en [geharmoniseerde klantprofielen te maken](data-unification.md) uit verschillende bronnen. 

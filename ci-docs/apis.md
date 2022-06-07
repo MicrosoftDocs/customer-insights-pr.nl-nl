@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755444"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808500"
 ---
 # <a name="work-with-customer-insights-apis"></a>Werken met Customer Insights-API's
 
@@ -31,11 +31,11 @@ In dit artikel wordt beschreven hoe u toegang krijgt tot de Customer Insights-AP
 
 1. [Meld u aan](https://home.ci.ai.dynamics.com) bij Customer Insights. Als u nog geen abonnement hebt, [meld u dan aan voor een proefversie van Customer Insights](https://aka.ms/tryci).
 
-1. Ga naar **Beheer** > **Machtigingen** om API's in uw Customer Insights-omgeving in te schakelen. Hiervoor hebt u beheerdersmachtigingen nodig.
+1. Als u API's wilt inschakelen in uw Customer Insights-omgeving, gaat u naar **Beheerder** > **Beveiliging**. Hiervoor hebt u beheerdersmachtigingen nodig.
 
 1. Ga naar het tabblad **API's** en selecteer de knop **Inschakelen**.    
  
-   Als u de API's inschakelt, wordt een primaire en secundaire abonnementssleutel voor uw exemplaar gemaakt die wordt gebruikt in de API-aanvragen. U kunt de sleutels opnieuw genereren door **Primaire opnieuw genereren** of **Secundaire opnieuw genereren** te selecteren op **Beheer** > **Machtigingen** > **API's**.
+   Als u de API's inschakelt, wordt een primaire en secundaire abonnementssleutel voor uw exemplaar gemaakt die wordt gebruikt in de API-aanvragen. U kunt de sleutels opnieuw genereren door **Primaire opnieuw genereren** of **Secundaire opnieuw genereren** te selecteren in **Beheerder** > **Beveiliging** > **API's**.
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Met deze stappen kunt u aan de slag gaan met het gebruik van de Customer Insight
 1. Selecteer aan de linkerkant **App-registraties**.
 
 1. Selecteer **Nieuwe registratie**, geef een toepassingsnaam op en kies het accounttype.
- 
+
    Voeg eventueel een omleidings-URL toe. http://localhost is voldoende om een toepassing op uw lokale computer te ontwikkelen.
 
 1. Ga bij uw nieuwe app-registratie naar **API-machtigingen**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Selecteer **Een machtiging toevoegen** en selecteer **Customer Insights** in het deelvenster aan de zijkant.
+1. Selecteer **Een machtiging toevoegen** en selecteer **Dynamics 365 AI voor Customer Insights** in het zijpaneel.
 
 1. Selecteer voor **Type machtiging** de optie **Gedelegeerde machtigingen** en selecteer vervolgens de machtiging **user_impersonation**.
 
@@ -109,7 +107,7 @@ In de [sectie app-registratie](#create-a-new-app-registration-in-the-azure-porta
 
 1. Tot slot moeten we de naam van de app-registratie als gebruiker toevoegen in Customer Insights.  
    
-   Open Customer Insights, ga naar **Beheerder** > **Rechten** en selecteer **Gebruiker toevoegen**.
+   Open Customer Insights, ga naar **Beheerder** > **Beveiliging** en selecteer **Gebruiker toevoegen**.
 
 1. Zoek naar de naam van uw app-registratie, selecteer deze in de zoekresultaten en selecteer **Opslaan**.
 

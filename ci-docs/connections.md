@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755303"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800366"
 ---
 # <a name="connections-preview-overview"></a>Overzicht van Verbindingen (preview)
 
@@ -69,7 +69,7 @@ Bij het opzetten of bewerken van een exportverbinding, kiest u welke gebruikers 
 
 1. Ga naar het tabblad **Verbindingen**.
 
-1. Selecteer het verticale weglatingsteken voor de verbinding die u wilt bewerken.
+1. Selecteer het verticale weglatingsteken (&vellip;) voor de verbinding die u wilt bewerken.
 
 1. Selecteer **Bewerken**.
 
@@ -85,7 +85,7 @@ Losgekoppelde verrijkingen en exports worden inactief. U activeert deze opnieuw 
 
 1. Ga naar het tabblad **Verbindingen**.
 
-1. Selecteer het verticale weglatingsteken voor de verbinding die u wilt verwijderen.
+1. Selecteer het verticale weglatingsteken (&vellip;) voor de verbinding die u wilt verwijderen.
 
 1. Selecteer **Verwijderen** in het vervolgkeuzemenu. Er wordt een bevestigingsvenster weergegeven.
 

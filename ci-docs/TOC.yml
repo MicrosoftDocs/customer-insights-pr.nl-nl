@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: Trainingscatalogus
   items:
-    - name: Aan de slag
+    - name: Certificeren als Microsoft Customer Data Platform Specialist
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Aan de slag met Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
     - name: Gegevens opnemen
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: Beginnen met een betaalde licentie
       href: paid-license.md
-    - name: Een nieuwe omgeving maken
-      href: create-environment.md
     - name: Customer Insights verkennen
       href: home.md
     - name: Werken met tags en kolommen
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Constant Contact
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: Dynamics 365 Marketing
@@ -254,12 +256,22 @@
       href: entities.md
     - name: De entiteitsschema's controleren in Common Data Model
       href: entity-schemas.md
-    - name: Customer Insights-gegevens in Dataverse
-      href: customer-insights-dataverse.md
     - name: Relaties en verbonden entiteiten samenstellen
       href: relationships.md
     - name: Semantische toewijzingen definiëren
       href: semantic-mappings.md
+- name: Omgevingen
+  items:
+    - name: Een nieuwe omgeving maken
+      href: create-environment.md
+    - name: Verbinding maken met Microsoft Dataverse
+      href: customer-insights-dataverse.md
+    - name: Uw eigen Azure Data Lake Storage gebruiken
+      href: own-data-lake-storage.md
+    - name: Omgevingsinstellingen beheren
+      href: manage-environments.md
+    - name: Verbinding maken met een opslagaccount met Service-Principal
+      href: connect-service-principal.md
 - name: Beheer
   items:
     - name: De systeemconfiguratie instellen
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: Gebruikersmachtigingen toewijzen
       href: permissions.md
-    - name: Overzicht van verbindingen
-      href: connections.md
-    - name: Meerdere omgevingen beheren
-      href: manage-environments.md
     - name: Bring your own Key Vault
       href: use-azure-key-vault.md
-    - name: Verbinding maken met een opslagaccount met Service-Principal
-      href: connect-service-principal.md
     - name: Diagnostische logboeken exporteren
       href: diagnostics.md
-    - name: Servicelimieten
-      href: service-limits.md
-    - name: DSR-rechten en -aanvragen
-      href: dsr-rights-requests.md
+    - name: Overzicht van verbindingen
+      href: connections.md
 - name: API's
   items:
     - name: Werken met API's
@@ -324,5 +328,9 @@
       items:
         - name: Voorspellingen maken met toestemmingsgegevens
           href: consent-management/predictions-consent-data.md
+- name: Servicelimieten
+  href: service-limits.md
+- name: DSR-rechten en -aanvragen
+  href: dsr-rights-requests.md
 - name: Ondersteuning vinden
   href: /power-platform/admin/get-help-support

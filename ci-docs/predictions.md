@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740713"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800644"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Uw gedeeltelijke gegevens aanvullen met voorspellingen (afgeschaft)
 
@@ -95,7 +95,7 @@ Als onderdeel van deze stroom kiest u een specifiek kenmerk om uw segment op te 
 
 2. Selecteer de voorspelling die u wilt beoordelen.
 
-3. Selecteer de drie puntjes in de kolom **Acties** en kies **Weergeven**.
+3. Selecteer het verticale weglatingsteken (&vellip;) in de kolom **Acties** en kies **Weergave**.
 
 4. U ziet een aantal gegevenspunten in de weergave van uw voorspelling.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Nadat u een voorspelling hebt gemaakt, kunt u het model aanpassen in de AI Build
 
 2. Selecteer de voorspelling die u wilt bewerken.
 
-3. Selecteer de drie puntjes in de kolom **Acties** en kies **Weergeven**.
+3. Selecteer het verticale weglatingsteken (&vellip;) in de kolom **Acties** en kies **Weergave**.
 
 4. Selecteer **Aanpassen in AI Builder**.
 
@@ -139,7 +139,7 @@ Bij de volgende uitvoering van uw voorspelling wordt het bijgewerkte model gebru
 
 2. Selecteer de voorspelling die u wilt verwijderen.
 
-3. Selecteer de drie puntjes in de kolom **Acties** en kies **Verwijderen**.
+3. Selecteer het verticale weglatingsteken (&vellip;) in de kolom **Acties** en kies **Verwijderen**.
 
 4. Bevestig de verwijdering.
 
@@ -153,7 +153,7 @@ Als u het proces voor het bijvoegen van Dataverse niet kunt voltooien als gevolg
 - App-machtigingen worden niet verleend.
     1. Ga naar [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Selecteer **Omgevingen**.
-    1. Selecteer het beletselteken naast de omgeving waaraan u de toestemming wilt toevoegen en selecteer **Instellingen**.
+    1. Selecteer het verticale weglatingsteken (&vellip;) naast de omgeving waaraan u de machtiging wilt toevoegen en selecteer vervolgens **Instellingen**.
     1. Vouw **Gebruikers + machtigingen** uit en selecteer **Gebruikers**.
     1. Selecteer **+ Nieuw** en selecteer **Gebruiker**.
     1. Selecteer **Toepassingsgebruiker** als dit nog niet is geselecteerd en voer de volgende informatie in:
