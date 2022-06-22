@@ -6,22 +6,22 @@ ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641894"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947086"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Productoverzicht voor Dynamics 365 Customer Insights
 
 [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) is het klantgegevensplatform (CDP) van Microsoft dat helpt bij het leveren van gepersonaliseerde klantervaringen. De toepassing biedt een holistisch weergave van klanten met een ongeëvenaard snel inzicht. Verwerf de meest uitgebreide weergave van uw klanten door klantgegevens in realtime te harmoniseren met operationele gegevens en IoT-gegevens. Verrijk klantprofielen met gegevensbronnen van eigen en derde partijen. 
 
 Customer Insights helpt u uw bedrijf om te vormen tot een klantgerichte organisatie door uw marketing-, verkoop- en serviceprofessionals in staat te stellen om 1:1-interacties op schaal aan te passen. Kant-en-klare integraties met Microsoft en toepassingen van derden kunnen worden gebruikt om realtime inzichten te activeren om zinvolle acties te stimuleren.
- 
+
 Verbind gegevens uit transactie-, gedrags- en demografische gegevensbronnen om 360-graden klantweergaven te creëren. Verkrijg kant-en-klare inzichten met vooraf gebouwde AI-modellen of bouw, test en implementeer snel aangepaste AI/ML-modellen met behulp van geavanceerde analyseoplossingen op onbeperkte schaal.
 
-Behoud de volledige controle over uw klantgegevens om het hoogste mate van gegevensbeheer en conformiteit te waarborgen met een selfservice-, CDP op enterpriseniveau die is gebouwd met behulp van Microsoft Azure. Ondersteun de Algemene Verordening Gegevensbescherming (AVG) en andere wettelijke vereisten en industrienormen door middel van ingebouwde tools voor privacy, beveiliging en governance en toestemmingsbeheer.
+Behoud de volledige controle over uw klantgegevens om het hoogste mate van gegevensbeheer en conformiteit te waarborgen met een selfservice-, CDP op enterpriseniveau die is gebouwd met behulp van Microsoft Azure. Ondersteun de Algemene Verordening Gegevensbescherming (AVG) en andere wettelijke vereisten en industrienormen door middel van ingebouwde tools voor privacy, beveiliging en governance.
 
 ## <a name="pricing-and-licensing"></a>Prijzen en licenties
 Customer Insights wordt gelicentieerd per tenant en omvat mogelijkheden voor zowel business-to-consumer (B2C) als business-to-business (B2B). U kunt extra capaciteit aanschaffen met licenties voor invoegtoepassingen om het aantal profielen en accounts te vergroten.

@@ -7,20 +7,20 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800163"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011697"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Verbinding maken met gegevens in een beheerd Microsoft Dataverse data lake
 
-Dit artikel geeft informatie over hoe Dataverse-gebruikers snel verbinding kunnen maken met analytische entiteiten in een beheerd lake in Microsoft Dataverse. 
+Microsoft Dataverse-gebruikers kunnen snel verbinding maken met analytische entiteiten in een door Microsoft Dataverse beheerde lake.
 
 > [!NOTE]
 > U moet een beheerder zijn in de Dataverse-organisatie om door te kunnen gaan en de lijst te kunnen bekijken van entiteiten die beschikbaar zijn in het beheerde lake.
@@ -32,40 +32,34 @@ Dit artikel geeft informatie over hoe Dataverse-gebruikers snel verbinding kunne
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Verbinding maken met een door Dataverse beheerd lake
 
-1. Ga in Customer Insights naar **Gegevens** > **Gegevensbronnen**.
+1. Ga naar **Gegevens** > **Gegevensbronnen**.
 
-2. Selecteer **Gegevensbron toevoegen**.
+1. Selecteer **Gegevensbron toevoegen**.
 
-3. Selecteer **Microsoft Dataverse** en selecteer daarna **Volgende**.
+1. Selecteer **Microsoft Dataverse**.
 
-4. Voer een **naam** in voor de gegevensbron en selecteer **Volgende**. 
+1. Voer een **Naam** voor de gegevensbron en een optionele **Beschrijving** in.
 
-5. Geef het **Serveradres** voor de Dataverse-organisatie op en selecteer **Aanmelden**.
+1. Geef het **Serveradres** voor de Dataverse-organisatie op en selecteer **Aanmelden**.
 
-   :::image type="content" source="media/ingest-dataverse-server-address.png" alt-text="Scherm in stap voor gegevensopname waarin een gebruiker de URL van de Dataverse-omgeving kan invoeren.":::
-
-6. Selecteer in de beschikbare lijst de tabellen die u als entiteiten in Customer Insights wilt opnemen.    
+1. Selecteer in de beschikbare lijst de tabellen die u als entiteiten in Customer Insights wilt opnemen.
 
    > [!NOTE]
    > Als er al tabellen zijn geselecteerd, worden deze mogelijk gebruikt door andere Dynamics 365-toepassingen (zoals Dynamics 365 Sales Insights of Customer Service Insights). U kunt de selectie niet wijzigen. Deze tabellen zijn als entiteiten beschikbaar zodra de gegevensbron is gemaakt.
 
-   :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dialoogvenster met een lijst entiteiten in de Dataverse-omgeving.":::
+    :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dialoogvenster met een lijst entiteiten in de Dataverse-omgeving.":::
 
-7. Sla uw selectie op om te beginnen met de synchronisatie van de geselecteerde tabellen van Dataverse. U vindt de nieuw toegevoegde verbinding op de pagina **Gegevensbronnen**. Deze wordt in de wachtrij geplaatst voor vernieuwing en toont het aantal entiteiten als 0, totdat alle geselecteerde tabellen gesynchroniseerd zijn.
+1. Sla uw selectie op om te beginnen met de synchronisatie van de geselecteerde tabellen van Dataverse. U vindt de nieuw toegevoegde verbinding op de pagina **Gegevensbronnen**. Deze wordt in de wachtrij geplaatst voor vernieuwing en toont het aantal entiteiten als 0, totdat alle geselecteerde tabellen gesynchroniseerd zijn.
 
 Slechts één gegevensbron van een omgeving kan tegelijkertijd dezelfde Dataverse beheerde lake gebruiken.
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Een gegevensbron van een door Dataverse beheerde lake bewerken
 
-U kunt de entiteitsselectie pas bewerken nadat u de gegevensbron hebt gemaakt. Als er bijvoorbeeld extra entiteiten zijn toegevoegd aan Dataverse en u ze ook wilt importeren.    
+U kunt de entiteitsselectie pas bewerken nadat u de gegevensbron hebt gemaakt. Als er bijvoorbeeld extra entiteiten zijn toegevoegd aan Dataverse en u ze ook wilt importeren.
 Om verbinding te maken met een ander Dataverse-data lake, [moet u een nieuwe gegevensbron maken](#connect-to-a-dataverse-managed-lake).
 
 1. Ga naar **Gegevens** > **Gegevensbronnen**.
 
-2. Selecteer het verticale weglatingsteken (&vellip;) naast de gegevensbron die u wilt bijwerken.
+1. Selecteer **Bewerken** naast de gegevensbron die u wilt bijwerken.
 
-3. Selecteer de optie **Bewerken** in de lijst.
-
-4. Selecteer extra entiteiten in de beschikbare lijst met entiteiten en selecteer vervolgens **Opslaan**.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Selecteer extra entiteiten in de beschikbare lijst met entiteiten en selecteer vervolgens **Opslaan**.

@@ -1,19 +1,19 @@
 ---
 title: Rechten van betrokkenen (DSR) onder AVG | Microsoft Docs
 description: Reageren op verzoeken van betrokkenen voor Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808540"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947362"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Rechten van betrokkenen (DSR) onder AVG
 
@@ -77,11 +77,5 @@ Een tenantbeheerder kan deze stappen volgen om gegevens te exporteren:
 1. Verzend een e-mail naar D365CI@microsoft.com met het e-mailadres van de gebruiker in de aanvraag. Het Customer Insights-team verzendt een e-mail naar het geregistreerde e-mailadres van de tenantbeheerder waarin wordt gevraagd om bevestiging voor het exporteren van gegevens.
 2. Erken de bevestiging om de gegevens voor de gevraagde gebruiker te exporteren.
 3. Ontvang de geëxporteerde gegevens via het e-mailadres van de tenantbeheerder.
-
-## <a name="consent-management-preview"></a>Toestemmingsbeheer (preview)
-
-De functie voor toestemmingsbeheer verzamelt niet rechtstreeks gebruikersgegevens. De functie importeert en verwerkt alleen toestemmingsgegevens die door gebruikers in andere toepassingen worden verstrekt.
-
-Als u toestemmingsgegevens over specifieke gebruikers wilt verwijderen, verwijdert u deze uit de gegevensbronnen die zijn opgenomen in de toestemmingsbeheerfunctie. Nadat de gegevensbron is vernieuwd, worden de verwijderde gegevens ook in Toestemmingscentrum verwijderd. Toepassingen die de toestemmingsentiteit gebruiken, verwijderen ook gegevens die op de bron zijn verwijderd na het [vernieuwen](system.md#refresh-processes). We raden u aan om gegevensbronnen snel te vernieuwen na de reactie op een verzoek van een betrokkene om de gegevens van de gebruiker uit alle andere processen en toepassingen te verwijderen.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

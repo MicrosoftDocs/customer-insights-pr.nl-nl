@@ -48,14 +48,14 @@
   items:
     - name: Overzicht van gegevensbronnen
       href: data-sources.md
+    - name: Verbinding maken met gegevens in Azure Data Lake Storage
+      href: connect-common-data-model.md
+    - name: Verbinding maken met Azure Synapse Analytics
+      href: connect-synapse.md
+    - name: Verbinding maken met gegevens in een beheerd Microsoft Dataverse data lake
+      href: connect-dataverse-managed-lake.md
     - name: Gegevensbronnen toevoegen via Power Query-connectors
       href: connect-power-query.md
-    - name: Een Common Data Model-map toevoegen als een gegevensbron
-      href: connect-common-data-model.md
-    - name: Door Dataverse beheerd data lake toevoegen
-      href: connect-dataverse-managed-lake.md
-    - name: Azure Synapse Analytics toevoegen
-      href: connect-synapse.md
     - name: Verrijking voor gegevensbronnen
       href: data-sources-enrichment.md
     - name: Incrementeel vernieuwen voor gegevensbronnen
@@ -82,27 +82,27 @@
   items:
     - name: Klantprofielen verrijken
       href: enrichment-hub.md
+    - name: Accounts van Office 365-gegevens
+      href: enrichment-office.md
     - name: Merken en interesses
       href: enrichment-microsoft.md
+    - name: Bedrijfsgegevens van Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Bedrijfsgegevens van Leadspace
+      href: enrichment-leadspace.md
+    - name: Demografische gegevens met Experian
+      href: enrichment-experian.md
     - name: Uitgebreide adressen
       href: enrichment-enhanced-addresses.md
     - name: Uitgebreide bedrijfsgegevens
       href: enrichment-enhanced-company-data.md
-    - name: Verrijken met Azure Maps
-      href: enrichment-azure-maps.md
-    - name: Verrijking met Dun & Bradstreet
-      href: enrichment-dnb.md
-    - name: Verrijken met HERE Technologies
-      href: enrichment-here.md
-    - name: Verrijken met Leadspace
-      href: enrichment-leadspace.md
-    - name: Verrijken met LiveRamp
+    - name: Identiteit met LiveRamp
       href: enrichment-liveramp.md
-    - name: Verrijken met Experian
-      href: enrichment-experian.md
-    - name: Verrijken met Office 365-gegevens
-      href: enrichment-office.md
-    - name: Verrijken met aangepaste SFTP-import
+    - name: Locatie van Azure Maps
+      href: enrichment-azure-maps.md
+    - name: Locatie van HERE Technologies
+      href: enrichment-here.md
+    - name: Aangepast importeren via SFTP
       href: enrichment-SFTP-custom-import.md
 - name: Geharmoniseerde profielen
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: Klantactiviteiten definiëren
       href: activities.md
+    - name: Toestemmingsbeheer voor Customer Insights
+      href: consent-management.md
 - name: Segments
   items:
     - name: Overzicht van segmenten
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: OData-voorbeeldquery's
       href: odata-examples.md
-- name: Toestemmingsbeheer (preview)
-  items:
-    - name: Help-hub
-      href: consent-management/index.yml
-    - name: Overzicht van de mogelijkheden
-      href: consent-management/overview.md
-    - name: Aan de slag
-      items:
-        - name: Aan de slag
-          href: consent-management/get-started.md
-        - name: Concepten en terminologie
-          href: consent-management/glossary.md
-    - name: Toestemmingsgegevens importeren
-      items:
-        - name: Toestemmingsgegevens importeren
-          href: consent-management/import-consent-data.md
-        - name: Toestemmingsgegevens instellen en toestemmingsvoorkeuren toepassen
-          href: consent-management/set-consent-rules.md
-    - name: Toestemmingsgegevens beheren
-      items:
-        - name: Toestemmingsregels inschakelen in Customer Insights
-          href: activate-consent.md
-        - name: Standaardtoestemmingsregels beheren in Customer Insights-segmenten
-          href: change-default-consent-rules.md
-    - name: Instellingen en gebruikers beheren
-      items:
-        - name: Systeeminstellingen configureren
-          href: consent-management/system-settings.md
-        - name: Gebruikers en machtigingen beheren
-          href: consent-management/manage-users.md
-    - name: Toestemmingsgegevens gebruiken
-      items:
-        - name: Voorspellingen maken met toestemmingsgegevens
-          href: consent-management/predictions-consent-data.md
 - name: Servicelimieten
   href: service-limits.md
 - name: DSR-rechten en -aanvragen

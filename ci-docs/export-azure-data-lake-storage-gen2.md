@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646124"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947224"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Segmentlijst en andere gegevens exporteren naar Azure Data Lake Storage Gen2 (preview)
 
@@ -21,11 +21,9 @@ Sla uw Customer Insights-gegevens op in een Data Lake Storage Gen2-account of ge
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-1. Voor Azure Data Lake Storage Gen2 kunt u kiezen tussen [Standaardprestaties en Premium prestatielaag](/azure/storage/blobs/create-data-lake-storage-account) wanneer u een opslagaccount maakt voor uw data lake. Als u de Premium prestatielaag kiest, selecteert u de premium blok-blobs als accounttype. 
+1. Voor Azure Data Lake Storage Gen2 kunt u kiezen tussen [Standaardprestaties en Premium prestatielaag](/azure/storage/blobs/create-data-lake-storage-account) wanneer u een opslagaccount maakt voor uw data lake. Als u de Premium prestatielaag kiest, selecteert u de premium blok-blobs als accounttype.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>De verbinding instellen met Azure Data Lake Storage Gen2 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>De verbinding instellen met Azure Data Lake Storage Gen2
 
 1. Ga naar **Beheerder** > **Verbindingen**.
 
@@ -39,7 +37,7 @@ Sla uw Customer Insights-gegevens op in een Data Lake Storage Gen2-account of ge
     - Voor informatie over het maken van een opslagaccount om te gebruiken met Azure Data Lake Storage Gen2, zie [Een opslagaccount maken](/azure/storage/blobs/create-data-lake-storage-account)​. 
     - Zie [De instellingen van het opslagaccount in de Azure-portal beheren](/azure/storage/common/storage-account-manage) voor meer informatie over het vinden van de Azure Data Lake Gen 2-opslagaccountnaam en -accountsleutel.
 
-1. Selecteer **Opslaan** om de verbinding te voltooien. 
+1. Selecteer **Opslaan** om de verbinding te voltooien.
 
 ## <a name="configure-an-export"></a>Een export configureren
 
@@ -57,8 +55,12 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 
-De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
+De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab).
+U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand).
 
-Geëxporteerde gegevens worden opgeslagen in de Azure Data Lake Gen 2-opslagcontainer die u hebt geconfigureerd. 
+Geëxporteerde gegevens worden opgeslagen in de Azure Data Lake Gen 2-opslagcontainer die u hebt geconfigureerd.
+
+> [!TIP]
+> Export van entiteiten die een grote hoeveelheid gegevens bevatten, kan leiden tot meerdere CSV-bestanden in dezelfde map voor elke export. Het splitsen van exports gebeurt om prestatieredenen om de tijd die nodig is om een export te voltooien tot een minimum te beperken.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

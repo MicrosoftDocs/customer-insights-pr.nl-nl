@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800275"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011467"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Verrijking voor gegevensbronnen (preview)
 
@@ -29,9 +29,11 @@ U moet de inzenders- of beheerdersrechten hebben om verrijkingen te kunnen maken
 
 1. Selecteer het verticale weglatingsteken (&vellip;) naast de gegevensbron die u wilt verrijken en selecteer **Verrijken**.
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Pagina voor verrijking van gegevensbronnen.":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Gegevensbronnenpagina met Verrijken gemarkeerd":::
 
    Op het tabblad **Detecteren** worden de [ondersteunde verrijkingsopties voor gegevensbronnen](#supported-data-source-enrichments) weergegeven.
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Pagina voor verrijking van gegevensbronnen.":::
 
 1. Selecteer **Mijn gegevens verrijken** om een gegevensbronverrijking te configureren. De naam van de uitvoerentiteit wordt automatisch ingevuld.
 

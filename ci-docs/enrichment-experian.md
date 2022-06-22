@@ -1,101 +1,92 @@
 ---
 title: Verrijking met de verrijking van derden Experian
 description: Algemene informatie over de verrijking van derden Experian.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f5aa45316b9e0e99c7ba4389353063e9d3ce06c
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645977"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954081"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klantprofielen verrijken met demografische gegevens van Experian (preview)
 
 Experian is een wereldleider op het gebied van kredietrapportage en marketingdiensten voor consumenten en bedrijven. Met de dataverrijkingsdiensten van Experian kunt u een dieper inzicht in uw klanten opbouwen door uw klantprofielen te verrijken met demografische gegevens zoals de grootte van het huishouden, inkomen en meer.
 
-## <a name="prerequisites"></a>Vereisten
-
-Als u Experian wilt configureren, moet aan de volgende vereisten worden voldaan:
-
-- U moet een actief abonnement hebben voor Experian. U kunt een abonnement nemen door rechtstreeks [contact op te nemen met Experian](https://www.experian.com/marketing-services/contact). [Kom meer te weten over gegevensverrijking met Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-
-- Er is al een Experian-verbinding geconfigureerd door een beheerder *of* u hebt [beheerdersmachtigingen](permissions.md#admin). U hebt ook de gebruikers-id, de partij-id en het modelnummer nodig voor uw ST-account (Secure Transport) met SSH-ondersteuning dat Experian voor u heeft gemaakt.
-
 ## <a name="supported-countriesregions"></a>Ondersteunde landen/regio's
 
 We ondersteunen momenteel alleen het verrijken van klantprofielen in de Verenigde Staten.
+
+## <a name="prerequisites"></a>Vereisten
+
+- Een actief Experian-abonnement. U kunt een abonnement nemen door rechtstreeks [contact op te nemen met Experian](https://www.experian.com/marketing-services/contact). [Kom meer te weten over gegevensverrijking met Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
+
+- Een Experian-[verbinding](connections.md) wordt [geconfigureerd](#configure-the-connection-for-experian) door een beheerder.
+
+- Experian gebruikers-id, partij-id en modelnummer voor uw SSH-enabled Secure Transport (ST)-account dat Experian voor u heeft gemaakt.
+
+## <a name="configure-the-connection-for-experian"></a>De verbinding configureren voor Experian
+
+Je moet een [beheerder](permissions.md#admin) in Customer Insights zijn en een Experian gebruikers-id, partij-id en modelnummer hebben.
+
+1. Selecteer **Verbinding toevoegen** bij het configureren van een verrijking of ga naar **Beheer** > **Verbindingen** en selecteer **Instellen** op de Experian-tegel.
+
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian-verbindingsconfiguratievenster.":::
+
+1. Voer een naam in voor de verbinding en een geldige gebruikers-id, partij-id en modelnummer voor uw Experian Secure Transport-account.
+
+1. Bekijk en geef uw toestemming voor [Gegevensprivacy en naleving](#data-privacy-and-compliance) door **Ik ga akkoord** te selecteren.
+
+1. Selecteer **Verifiëren** om de configuratie te valideren en selecteer **Opslaan**.
+
+### <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
+
+Wanneer u Dynamics 365 Customer Insights inschakelt om gegevens te verzenden naar Experian, staat u de overdracht van gegevens buiten de nalevingsgrens toe voor Dynamics 365 Customer Insights, inclusief mogelijk gevoelige gegevens zoals persoonsgegevens. Microsoft zal dergelijke gegevens in uw opdracht overdragen, maar u bent er zelf verantwoordelijk voor dat Experian voldoet aan alle privacy- of beveiligingsverplichtingen die u hebt. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie. Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
 
 ## <a name="configure-the-enrichment"></a>De verrijking configureren
 
 1. Ga naar **Gegevens** > **Verrijking** en selecteer het tabblad **Detecteren**.
 
-1. Selecteer **Mijn gegevens verrijken** op de Experian-tegel.
+1. Selecteer **Mijn gegevens verrijken** op de tegel **Demografische gegevens** van Experian.
 
-   > [!div class="mx-imgBorder"]
-   > ![Experian-tegel.](media/experian-tile.png "Experian tile")
-   > 
+   :::image type="content" source="media/experian-tile.png" alt-text="Experian-tegel op de overzichtspagina voor verrijking. ":::
 
-1. Selecteer een [verbinding](connections.md) in de vervolgkeuzelijst. Neem contact op met een beheerder als er geen verbinding beschikbaar is. Als u een beheerder bent, kunt u een verbinding maken door **Verbinding toevoegen** te selecteren en Experian te kiezen in de vervolgkeuzelijst. 
+1. Bekijk het overzicht en selecteer **Volgende**.
 
-1. Selecteer **Verbinden met Experian** om de verbindingsselectie te bevestigen.
+1. Selecteer de verbinding. Neem contact op met een beheerder als er geen verbinding beschikbaar is.
 
-1.  Selecteer **Volgende** en kies de **klantgegevensset** die u wilt verrijken met demografische gegevens van Experian. U kunt de entiteit **Klant** selecteren om al uw klantprofielen te verrijken of een segmententiteit selecteren om alleen klantprofielen in dat segment te verrijken.
+1. Selecteer **Volgende**.
+
+1. Selecteer de **Klantgegevensset** en kies het profiel of segment dat u wilt verrijken met demografische gegevens van Experian. De entiteit *Klant* verrijkt al uw klantprofielen, terwijl een segment alleen klantprofielen in dat segment verrijkt.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Schermopname bij het kiezen van de klantgegevensset.":::
 
-1. Selecteer **Volgende** en definieer welk type velden uit uw geharmoniseerde profielen moeten worden gebruikt om te zoeken naar overeenkomende demografische gegevens van Experian. Ten minste één van de velden **Naam en adres**, **Telefoon** of **E-mail** is vereist. Voor een hogere nauwkeurigheid bij de afstemming kunnen maximaal twee andere velden worden toegevoegd. Deze selectie heeft invloed op de toewijzingsvelden waartoe u in de volgende stap toegang hebt.
+1. Definieer welk type velden uit uw geharmoniseerde profielen moeten worden gebruikt voor overeenkomende demografische gegevens van Experian. Ten minste één van de velden **Naam en adres**, **Telefoon** of **E-mail** is vereist. Voeg meer velden toe voor een hogere matchnauwkeurigheid. Selecteer **Volgende**.
 
-    > [!TIP]
-    > Als meer sleutel-id-kenmerken naar Experian worden verzonden, levert dit waarschijnlijk een hoger matchpercentage op.
+1. Wijs uw velden toe aan de demografische gegevens van Experian.
 
-1. Selecteer **Volgende** om de veldtoewijzing te starten.
+1. Selecteer **Volgende** om de veldtoewijzing te voltooien.
 
-1. Definieer welke velden uit uw geharmoniseerde profielen moeten worden gebruikt om te zoeken naar overeenkomende demografische gegevens van Experian. Vereiste velden zijn gemarkeerd.
-
-1. Geef een naam op voor de verrijking en een naam voor de uitvoerentiteit.
+1. Geef een **Naam** op voor de verrijking en de **Naam van uitvoerentiteit**.
 
 1. Selecteer **Verrijking opslaan** na het bekijken van uw keuzes.
 
-## <a name="configure-the-connection-for-experian"></a>De verbinding configureren voor Experian 
-
-U moet een beheerder zijn om verbindingen te kunnen configureren. Selecteer **Verbinding toevoegen** bij het configureren van een verrijking *of* ga naar **Beheerder** > **Verbindingen** en selecteer **Instellen** op de Experian-tegel.
-
-1. Selecteer **Aan de slag**.
-
-1. Voer een naam in voor de verbinding in het vak **Weergavenaam**.
-
-1. Voer een geldige gebruikers-id, partij-id en modelnummer in voor uw Experian Secure Transport-account.
-
-1. Bekijk en geef uw toestemming voor **Gegevensprivacy en naleving** door **Ik ga akkoord** te selecteren.
-
-1. Selecteer **Verifiëren** om de configuratie te valideren.
-
-1. Voltooi de verificatie en selecteer **Opslaan**.
-   
-   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian-verbindingsconfiguratievenster.":::
+1. Selecteer **Uitvoeren** om het verrijkingsproces te starten of sluit om terug te keren naar de pagina **Verrijkingen**.
 
 ## <a name="enrichment-results"></a>Verrijkingsresultaten
 
-Selecteer **Uitvoeren** vanaf de opdrachtbalk om het verrijkingsproces te starten. U kunt de verrijking ook automatisch laten uitvoeren als onderdeel van een [geplande vernieuwing](system.md#schedule-tab). De verwerkingstijd is afhankelijk van de omvang van uw klantgegevens en de verrijkingsprocessen die voor uw account zijn ingesteld door Experian.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Nadat het verrijkingsproces is voltooid, kunt u de nieuwe verrijkte klantprofielgegevens bekijken onder **Mijn verrijkingen**. Ook vindt u daar het tijdstip van de laatste update en het aantal verrijkte profielen.
-
-U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrijkte gegevens weergeven** te selecteren.
+Het **Aantal klanten dat wordt verrijkt per veld** biedt een gedetailleerde beschrijving van de dekking van elk verrijkt veld.
 
 ## <a name="next-steps"></a>Volgende stappen
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
-
-Wanneer u Dynamics 365 Customer Insights inschakelt om gegevens te verzenden naar Experian, staat u de overdracht van gegevens buiten de nalevingsgrens toe voor Dynamics 365 Customer Insights, inclusief mogelijk gevoelige gegevens zoals persoonsgegevens. Microsoft zal dergelijke gegevens in uw opdracht overdragen, maar u bent er zelf verantwoordelijk voor dat Experian voldoet aan alle privacy- of beveiligingsverplichtingen die u hebt. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
-Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833670"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011514"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Werken met Customer Insights-gegevens in Microsoft Dataverse
 
 Customer Insights biedt de mogelijkheid om uitvoerentiteiten beschikbaar te stellen als [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Deze integratie maakt eenvoudig delen van gegevens en aangepaste ontwikkeling mogelijk via een low-code/no-code-aanpak. De [uitvoerentiteiten](#output-entities) zijn beschikbaar als tabellen in een Dataverse-omgeving. U kunt de gegevens voor elke andere toepassing gebruiken op basis van Dataverse-tabellen. Deze tabellen maken scenario's zoals geautomatiseerde werkstromen via Power Automate of het bouwen van apps met Power Apps mogelijk.
 
-Verbinding maken met uw Dataverse-omgeving stelt u ook in staat om [gegevens op te nemen uit on-premises gegevensbronnen met behulp van Power Platform-gegevensstromen en -gateways](data-sources.md#add-data-from-on-premises-data-sources).
+Verbinding maken met uw Dataverse-omgeving stelt u ook in staat om [gegevens op te nemen uit on-premises gegevensbronnen met behulp van Power Platform-gegevensstromen en -gateways](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Vereisten
 

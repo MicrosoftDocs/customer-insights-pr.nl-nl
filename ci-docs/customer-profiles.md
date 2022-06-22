@@ -1,7 +1,7 @@
 ---
 title: Klantprofielen weergeven
 description: Krijg een gecombineerd overzicht van uw geharmoniseerde klantgegevens.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755776"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947040"
 ---
 # <a name="customer-profiles"></a>Klantprofielen
 
@@ -55,9 +55,9 @@ U kunt klanten filteren op velden van de entiteit *Klant*. Net als bij zoeken, m
 
 Selecteer een van de klanttegels om de **Detailpagina van klant** te openen. Deze weergave bevat geharmoniseerde informatie voor de geselecteerde klant. Klantgegevens omvatten de volgende inhoud:
 
-**Tegel Klantprofiel**: deze tegel toont de verschillende waarden van de geharmoniseerde entiteit *Klant*. Als een veld geen waarde heeft voor het geselecteerde klantprofiel, wordt het niet weergegeven. De tegel is gestructureerd in secties:
+**Tegel Klantprofiel**: deze tegel toont de verschillende waarden van de geharmoniseerde entiteit *Klant*. Als een veld geen waarde heeft voor het geselecteerde klantprofiel, wordt het niet weergegeven. Dit geldt niet voor het adresveld. De tegel is gestructureerd in secties:
 
-- De eerste sectie toont een vooraf gedefinieerde set velden, gevolgd door alle velden die deel uitmaken van de zoek- en filterindex. Alle adresgerelateerde velden worden gecombineerd in één regel als het profiel dergelijke velden bevat.
+- De eerste sectie toont een vooraf gedefinieerde set velden, gevolgd door alle velden die deel uitmaken van de zoek- en filterindex. Alle adresgerelateerde velden worden gecombineerd in één regel, die altijd wordt weergegeven, zelfs als het profiel geen adresgegevens bevat.
 - **Contactpersonen voor deze klant**: in omgevingen voor zakelijke accounts ziet u alle gerelateerde contactpersonen voor deze klant als het tweede gedeelte. Iedere contactpersoon wordt getoond met de eigen velden. Lege velden zijn verborgen.
 - **Extra velden** : toont de overige velden van de geselecteerde klant, behalve id's.
 - **ID's**: geeft alle id's weer onder de bijbehorende entiteitsnaam. Velden worden geïdentificeerd als ID door hun semantiek, waardoor ze als zodanig worden gecategoriseerd.

@@ -1,7 +1,7 @@
 ---
 title: Gegevens opnemen uit Azure Synapse Analytics
 description: Gebruik een database in Azure Synapse als een gegevensbron in Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7c758dccf7ea34dd7b8f80d05eff1ed12030526f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646174"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011421"
 ---
-# <a name="connect-an-azure-synapse-data-source-preview"></a>Een Azure Synapse-gegevensbron verbinden (preview)
+# <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Een Azure Synapse Analytics-gegevensbron verbinden (preview)
 
 Azure Synapse Analytics is een enterprise analytics-service die sneller inzichten verkrijgt in datawarehouses en big data-systemen. Azure Synapse Analytics combineert het beste van SQL-technologieën die worden gebruikt in enterprise datawarehousing, Spark-technologieën die worden gebruikt voor big data, Data Explorer voor log- en tijdreeksanalyses, Pipelines voor gegevensintegratie en ETL/ELT, en diepe integratie met andere Azure-services zoals Power BI, Cosmos DB en AzureML.
 
@@ -24,16 +24,14 @@ Zie voor meer informatie [Azure Synapse-overzicht](/azure/synapse-analytics/over
 
 ## <a name="prerequisites"></a>Vereisten
 
-Er moet aan de volgende vereisten worden voldaan om de verbinding van Dynamics 365 Customer Insights naar Azure Synapse te configureren.
-
 > [!IMPORTANT]
 > Zorg ervoor dat u alle **roltoewijzingen** instelt zoals beschreven.  
 
-## <a name="prerequisites-in-customer-insights"></a>Vereisten in Customer Insights
+**In Customer Insights**:
 
 * U hebt de rol van **Beheerder** in Customer Insights. Meer informatie over [gebruikersmachtigingen in Customer Insights](permissions.md#assign-roles-and-permissions).
 
-In Azure: 
+**In Azure**:
 
 - Een actief Azure-abonnement.
 
@@ -47,7 +45,7 @@ In Azure:
 
 - In de Azure Synapse workspace moet aan de *service-principal voor Customer Insights* de rol van **Synapse-beheerder** worden toegewezen. Zie voor meer informatie [Toegangsbeheer instellen voor uw Synapse-werkruimte](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="connect-to-data-lake-databases-in-azure-synapse-analytics"></a>Verbinding maken met data lake-databases in Azure Synapse Analytics
+## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Verbinding maken met de data lake-database in Azure Synapse Analytics
 
 1. Ga naar **Gegevens** > **Gegevensbronnen**.
 
@@ -55,14 +53,16 @@ In Azure:
 
 1. Kies de **Azure Synapse Analytics (preview)**-methode.
 
-1. Geef een **Naam** op voor de gegevensbron en selecteer **Volgende** om de gegevensbron te maken. 
+   :::image type="content" source="media/data_sources_synapse.png" alt-text="Dialoogvenster om verbinding te maken met Synapse Analytics-gegevens":::
+  
+1. Voer een **Naam** voor de gegevensbron en een optionele **Beschrijving** in.
 
 1. Kies een [beschikbare verbinding](connections.md) met Azure Synapse Analytics of maak een nieuwe.
 
-1. Kies een **Lake-database** vanuit de werkruimte die is verbonden in de geselecteerde Azure Synapse Analytics-verbinding en selecteer **Volgende**.
+1. Kies een **Database** vanuit de werkruimte die is verbonden in de geselecteerde Azure Synapse Analytics-verbinding en selecteer **Volgende**.
 
-1. Selecteer de entiteiten die u wilt opnemen uit de verbonden database. 
+1. Selecteer de entiteiten die u wilt opnemen uit de verbonden database en selecteer **Volgende**.
 
-1. Kies optioneel de gegevensentiteiten waarvoor gegevensprofilering is toegestaan. 
+1. Kies optioneel de gegevensentiteiten waarvoor gegevensprofilering is toegestaan.
 
-1. Selecteer **Opslaan** om uw selectie toe te passen en de opname te starten van de gegevens van uw nieuw gemaakte gegevensbron gekoppeld aan de Lake-databasetabellen in Azure Synapse Analytics.
+1. Selecteer **Opslaan** om uw selectie toe te passen en de opname te starten van de gegevens van uw nieuw gemaakte gegevensbron gekoppeld aan de Lake-databasetabellen in Azure Synapse Analytics. De pagina **Gegevensbronnen** wordt geopend met de nieuwe gegevensbron met de status **Vernieuwen**.

@@ -1,19 +1,19 @@
 ---
 title: Customer Insights-gegevens exporteren naar Snapchat
 description: Leer hoe u de verbinding configureert en exporteert naar Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646311"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947270"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Segmenten exporteren naar Snapchat (preview)
 
@@ -21,7 +21,8 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Snapchat en gebruik 
 
 ## <a name="prerequisites-for-a-connection"></a>Vereisten voor een verbinding
 
--   Je hebt een [zakelijk Snapchat-account](https://business.snapchat.com/), een [Snapchat Ads-account](https://ads.snapchat.com/) en de bijbehorende beheerdersreferenties.
+-   Je hebt een [zakelijk Snapchat-account](https://business.snapchat.com/), een [Snapchat Ads-account](https://ads.snapchat.com/) en de bijbehorende beheerdersreferenties. U moet minimaal lid zijn van een organisatieaccount en gegevensbeheerder van een specifiek advertentieaccount. 
+-   U hebt ten minste één doelgroep in Snapchat Audience Manager van het type SAM (Snap Audience Match). 
 -   U hebt [segmenten geconfigureerd](segments.md) in Customer Insights.
 -   Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten een veld voor e-mailadres.
 
@@ -60,7 +61,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Snapchat. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
 
-1. Voer de [**Snapchat-doelgroep-id**](https://businesshelp.snapchat.com/s/article/custom-audiences) in.
+1. Voer de [**Snapchat-segment/doelgroep-id**](https://businesshelp.snapchat.com/s/article/custom-audiences) in. De id van de doelgroep is te vinden in de URL nadat u de doelgroep in Snapchat Audience Manager hebt geselecteerd. 
 
 1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. Deze is vereist voor het exporteren van segmenten naar Snapchat.
 

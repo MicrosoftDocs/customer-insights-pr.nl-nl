@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833533"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011973"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Aan de slag met Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ Configureer instellingen wanneer u zich voor het eerst aanmeldt bij Customer Ins
 
 Geharmoniseerde profielen vormen de basis om meer inzicht te krijgen en met de gegevens te werken. Haal gegevens op uit verschillende bronnen en voer het proces van gegevensharmonisatie uit om geharmoniseerde profielen te combineren. Geef relaties op tussen de opgenomen entiteiten en gebruik verrijkingsfuncties om informatie aan de profielen toe te voegen.
 
-1. Neem gegevens op door gegevensbronnen te maken op basis van meerdere opties. Kies tussen [Power Query-connectoren](connect-power-query.md), een [Common Data Mode-map](connect-common-data-model.md) of [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Neem gegevens op door gegevensbronnen te maken op basis van meerdere opties. Kies tussen connectors voor [Azure Data Lake Storage, inclusief Common Data Mode-map](connect-common-data-model.md), [Azure Synapse Analytics](connect-synapse.md), [Microsoft Dataverse](connect-dataverse-managed-lake.md) of [Power Query.](connect-power-query.md)
 
 1. Voer het [gegevensharmonisatieproces](data-unification.md) uit door het identificeren van de [bronvelden](map-entities.md), het verwijderen van [duplicaten](remove-duplicates.md), [overeenkomstvoorwaarden](match-entities.md) en [harmonisatievelden](merge-entities.md).
 

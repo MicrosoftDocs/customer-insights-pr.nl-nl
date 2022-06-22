@@ -1,19 +1,19 @@
 ---
-title: Nieuwe en komende functies
+title: Nieuwe en bijgewerkt functies
 description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833624"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843341"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nieuwe functies in Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Updates voor mei 2022
+
+De updates in mei 2022 omvatten nieuwe functies, prestatie-upgrades en bugfixes.
+
+### <a name="updated-data-unification-experience"></a>Bijgewerkte ervaring voor gegevensharmonisatie
+
+ Met gegevensharmonisatie kunt u gegevensbronnen die ooit ongelijksoortig waren, samenbrengen in één hoofdgegevensset die een geharmoniseerde weergave van die gegevens biedt. Gegevens kunnen worden geharmoniseerd in een enkele entiteit of in meerdere entiteiten. Eerst [selecteert u entiteiten en bronvelden](map-entities.md), [verwijdert u dubbele records](remove-duplicates.md), geeft u regels op voor [overeenkomende voorwaarden](match-entities.md) en definieert u welke [velden moeten worden opgenomen in de geharmoniseerde klantprofielen](merge-entities.md).
+
+Ga voor meer informatie naar [Overzicht van gegevensharmonisatie](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Vernieuwde startpagina in Customer Insights
+
+De **startpagina** begeleidt u door het configuratieproces voor de belangrijkste functies en biedt een overzicht van segmenten, metingen en verrijkingsgegevens. We hebben de ervaring vernieuwd om in één oogopslag meer relevante informatie te bieden.
+
+Zie [Customer Insights ontdekken](home.md) voor meer informatie.
+
+### <a name="track-usage-of-a-segment"></a>Gebruik van een segment bijhouden
+
+U kunt nu [het gebruik van een segment bijhouden](segments.md#track-usage-of-a-segment) in apps, die zijn gebaseerd op de Dataverse-organisatie die is verbonden met Customer Insights. Voor [Customer Insights-segmenten die worden gebruikt in klantreizen van Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), informeert het systeem u over het gebruik van dat segment.
+
+### <a name="export-to-criteo"></a>Exporteren naar Criteo
+
+Criteo is een online platform dat gebruikers helpt bij het beheren van digitale advertenties. U kunt nu segmenten van geharmoniseerde klantprofielen exporteren om campagnes te genereren, e-mailmarketing te bieden en specifieke klantgroepen te gebruiken met Criteo.
+
+Zie [Segmenten exporteren naar Criteo (preview)](export-criteo.md) voor meer informatie.
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Verfijnde documentatiestructuur voor het maken van een omgeving
+
+We hebben de Help-documenten met betrekking tot het maken en beheren van omgevingen in Customer Insights opnieuw bekeken. De artikelen zijn nu gegroepeerd onder het knooppunt Omgevingen in de inhoudsopgave. De geherstructureerde artikelen geven meer houvast voor de verschillende manieren om omgevingen in te richten en hebben een duidelijkere structuur. Als u feedback wilt geven, laat het ons dan weten via de knoppen aan het einde van de Help-artikelen.
+
+Zie [Procedure: Een nieuwe omgeving maken](create-environment.md) voor meer informatie.
 
 ## <a name="april-2022-updates"></a>Updates van april 2022
 

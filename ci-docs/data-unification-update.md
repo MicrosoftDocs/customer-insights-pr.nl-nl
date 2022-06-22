@@ -1,7 +1,7 @@
 ---
 title: De harmonisatie-instellingen bijwerken
 description: Werk dubbele regels, overeenkomstregels of geharmoniseerde velden bij in de harmonisatie-instellingen.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755584"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844034"
 ---
 # <a name="update-the-unification-settings"></a>De harmonisatie-instellingen bijwerken
 
@@ -43,8 +43,9 @@ Voer de volgende stappen uit om harmonisatie-instellingen te bekijken of te wijz
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Schermopname van de pagina Gegevens harmoniseren met de harmonisatie-opties gemarkeerd.":::
 
-   - Zie [Updates uitvoeren op het klantprofiel](#run-updates-to-the-unified-customer-profile) om het geharmoniseerde klantprofiel bij te werken (met of zonder afhankelijkheden).
-   - Zie [Overeenkomstvoorwaarden uitvoeren](#run-matching-conditions) om de kwaliteit van uw overeenkomstvoorwaarden te evalueren zonder het geharmoniseerde profiel bij te werken. De optie **Alleen overeenkomstvoorwaarden uitvoeren** wordt niet weergegeven voor één entiteit.
+   - [Voer overeenkomstvoorwaarden uit](#run-matching-conditions) om de kwaliteit van uw overeenkomstvoorwaarden (regels voor ontdubbeling en overeenkomsten) snel te evalueren zonder het geharmoniseerde profiel bij te werken. De optie **Alleen overeenkomstvoorwaarden uitvoeren** wordt niet weergegeven voor één entiteit.
+   - [Klantprofielen harmoniseren](#run-updates-to-the-unified-customer-profile) om overeenkomende voorwaarden uit te voeren en de entiteit unified customer profile bij te werken zonder afhankelijkheden (zoals verrijkingen, segmenten of metingen) te beïnvloeden. Afhankelijke processen worden niet uitgevoerd, maar worden vernieuwd zoals [gedefinieerd in het vernieuwingsschema](system.md#schedule-tab).
+   - [Klantprofielen en afhankelijkheden harmoniseren](#run-updates-to-the-unified-customer-profile) om overeenkomende voorwaarden uit te voeren en de entiteit unified customer profile bij te werken en alle afhankelijkheden (zoals verrijkingen, segmenten of metingen) te beïnvloeden. Alle processen worden automatisch opnieuw uitgevoerd.
 
 ## <a name="edit-source-fields"></a>Bronvelden bewerken
 
@@ -135,11 +136,13 @@ U kunt de meeste vergelijkingsparameters opnieuw configureren en verfijnen. U ku
 
 ## <a name="run-matching-conditions"></a>Overeenkomstvoorwaarden uitvoeren
 
+Met overeenkomende voorwaarden uitvoeren worden alleen ontdubbelings- en overeenkomstregels uitgevoerd en worden de entiteiten *Ontdubbeling* en *ConflationMatchPair* bijgewerkt.
+
 1. Op de pagina **Gegevens** > **Harmoniseren** selecteert u **Alleen overeenkomstvoorwaarden uitvoeren**.
 
-   De tegels **Dubbele records** en **Overeenkomstvoorwaarden** tonen **In wachtrij** of **Vernieuwen**.
+   De tegels **Dubbele records** en **Overeenkomstvoorwaarden** tonen de status **In wachtrij** of **Vernieuwen**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Wanneer het matchingproces is voltooid, selecteert u **Bewerken** op de tegel **Overeenkomstvoorwaarden**.
 
@@ -153,10 +156,12 @@ U kunt de meeste vergelijkingsparameters opnieuw configureren en verfijnen. U ku
 
 1. Selecteer op de pagina **Gegevens** > **Harmoniseren**:
 
-   - **Klantprofielen harmoniseren**: werkt de geharmoniseerde-klantprofielentiteit bij zonder afhankelijkheden (zoals verrijkingen, segmenten of metingen) te beïnvloeden. Afhankelijke processen worden niet uitgevoerd, maar worden vernieuwd zoals [gedefinieerd in het vernieuwingsschema](system.md#schedule-tab).
+   - **Klantprofielen harmoniseren**: voert overeenkomende voorwaarden uit en werkt de entiteit unified customer profile bij zonder afhankelijkheden (zoals verrijkingen, segmenten of metingen) te beïnvloeden. Afhankelijke processen worden niet uitgevoerd, maar worden vernieuwd zoals [gedefinieerd in het vernieuwingsschema](system.md#schedule-tab).
 
-   - **Klantprofielen en afhankelijkheden harmoniseren**: werkt het geharmoniseerde profiel en alle afhankelijkheden bij. Alle processen worden automatisch opnieuw uitgevoerd. Nadat alle downstreamprocessen zijn voltooid, weerspiegelt het klantprofiel de bijgewerkte gegevens.
+   - **Klantprofielen en afhankelijkheden harmoniseren**: voert overeenkomende voorwaarden uit en werkt het geharmoniseerde profiel en alle afhankelijkheden bij. Alle processen worden automatisch opnieuw uitgevoerd. Nadat alle downstreamprocessen zijn voltooid, weerspiegelt het klantprofiel de bijgewerkte gegevens.
 
-   De tegels **Dubbele records** en **Overeenkomstvoorwaarden** en **Geharmoniseerde klantvelden** tonen **In wachtrij** of **Vernieuwen**.
+   De tegels **Dubbele records**, **Overeenkomstvoorwaarden** en **Geharmoniseerde klantvelden** tonen de status **In wachtrij** of **Vernieuwen**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+De resultaten van een succesvolle uitvoering worden weergegeven op de pagina **Harmoniseren** met het aantal geharmoniseerde klantprofielen.

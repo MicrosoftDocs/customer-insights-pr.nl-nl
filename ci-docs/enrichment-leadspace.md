@@ -1,19 +1,19 @@
 ---
 title: Verrijking van bedrijfsprofielen met de verrijking door derden van Leadspace
 description: Algemene informatie over de verrijking door derden van Leadspace.
-ms.date: 09/30/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 08a4c56eb1c387015fd9e985a0c9484a13236fcf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646244"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954173"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Verrijking van bedrijfsprofielen met Leadspace (preview)
 
@@ -21,29 +21,50 @@ Leadspace is een data science-bedrijf dat B2B-platform voor klantgegevens biedt.
 
 ## <a name="prerequisites"></a>Vereisten
 
-Als u Leadspace wilt configureren, moet aan de volgende vereisten worden voldaan:
+- Een actieve Leadspace-licentie.
+- [Geharmoniseerde klantprofielen](customer-profiles.md) gebaseerd op accounts.
+- Een Leadspace-[verbinding](connections.md) wordt [geconfigureerd](#configure-the-connection-for-leadspace) door een beheerder. Neem rechtstreeks contact op met [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) voor details over hun product.
 
-- U hebt een actieve Leadspace-licentie.
-- U hebt [geharmoniseerde klantprofielen](customer-profiles.md) op basis van accounts.
-- Een Leadspace-verbinding is al geconfigureerd door een beheerder of u hebt [beheerdersmachtigingen](permissions.md#admin) en de "eeuwigdurende sleutel" (waarnaar wordt verwezen als **Leadspace-token**). Neem rechtstreeks contact op met [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) voor details over hun product.
+## <a name="configure-the-connection-for-leadspace"></a>De verbinding configureren voor Leadspace
+
+U moet een [beheerder](permissions.md#admin) in Customer Insights zijn en de 'permanente sleutel' hebben (aangeduid als **Leadspace-token**).
+
+1. Selecteer **Verbinding toevoegen** bij het configureren van een verrijking of ga naar **Beheer** > **Verbindingen** en selecteer **Instellen** op de Leadspace-tegel.
+
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Configuratiepagina voor Leadspace-verbinding.":::
+
+1. Voer een naam in voor de verbinding en een geldig Leadspace-token.
+
+1. Bekijk en geef uw toestemming voor [Gegevensprivacy en naleving](#data-privacy-and-compliance) door **Ik ga akkoord** te selecteren.
+
+1. Selecteer **Verifiëren** om de configuratie te valideren en selecteer **Opslaan**.
+
+### <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
+
+Wanneer u Dynamics 365 Customer Insights instelt om gegevens naar Leadspace te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens op uw instructie overdragen, maar u bent ervoor verantwoordelijk dat Leadspace voldoet aan uw privacy- of beveiligingsverplichtingen. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
+Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
 
 ## <a name="configure-the-enrichment"></a>De verrijking configureren
 
-1. Ga naar **Gegevens** > **Verrijking**.
+1. Ga naar **Gegevens** > **Verrijking** en selecteer het tabblad **Detecteren**.
 
-1. Selecteer **Mijn gegevens verrijken** op de tegel van Leadspace en selecteer vervolgens **Aan de slag**.
+1. Selecteer **Mijn gegevens verrijken** op de tegel **Bedrijfsgegevens** van Leadspace.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Schermopname van de Leadspace-tegel.":::
 
-1. Selecteer een [verbinding](connections.md) in de vervolgkeuzelijst. Neem contact op met een beheerder als er geen verbinding beschikbaar is. Als u een beheerder bent, kunt u een verbinding maken door **Verbinding toevoegen** te selecteren en **Leadspace** te kiezen. 
+1. Bekijk het overzicht en selecteer **Volgende**.
 
-1. Selecteer **Verbinding maken met Leadspace** om de verbinding te bevestigen.
+1. Selecteer de verbinding. Neem contact op met een beheerder als er geen verbinding beschikbaar is.
 
-1. Selecteer **Volgende** en kies de **klantgegevensset** die u wilt verrijken met bedrijfsgegevens van Leadspace. U kunt de entiteit **Klant** selecteren om al uw klantprofielen te verrijken of een segmententiteit selecteren om alleen klantprofielen in dat segment te verrijken.
+1. Selecteer **Volgende**.
+
+1. Selecteer de **Klantgegevensset** en kies het profiel of segment dat u wilt verrijken met bedrijfsgegevens van Leadspace. De entiteit *Klant* verrijkt al uw klantprofielen, terwijl een segment alleen klantprofielen in dat segment verrijkt.
 
     :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Schermopname bij het kiezen van de klantgegevensset.":::
 
-1. Selecteer **Volgende** en bepaal welk type velden uit uw geharmoniseerde profielen worden gebruikt om overeenkomende bedrijfsgegevens van Leadspace te zoeken. Het veld **Naam van bedrijf** is verplicht. Voor een hogere matchnauwkeurigheid kunt u maximaal twee andere velden, **Bedrijfswebsite** en **Bedrijfslocatie** toevoegen.
+1. Definieer welk type velden uit uw geharmoniseerde profielen u wilt gebruiken voor het matchen: het primaire en/of secundaire adres. U kunt voor beide adressen een veldtoewijzing specificeren en de profielen voor beide adressen afzonderlijk verrijken. Bijvoorbeeld voor een woonadres en een zakelijk adres. Selecteer **Volgende**.
+
+1. Wijs uw velden toe aan de bedrijfsgegevens van Leadspace. Het veld **Naam van bedrijf** is verplicht. Voor een hogere matchnauwkeurigheid kunt u maximaal twee andere velden, **Bedrijfswebsite** en **Bedrijfslocatie** toevoegen.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Deelvenster Leadspace-veldtoewijzing.":::
 
@@ -52,45 +73,23 @@ Als u Leadspace wilt configureren, moet aan de volgende vereisten worden voldaan
 1. Vink het selectievakje aan als u *Contactprofielen* hebt die u zou willen verrijken. Customer Insights koppelt automatisch de vereiste velden.
 
    :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Verrijking van Leadspace-contactpersoonrecords.":::
- 
-1. Geef een naam op voor de verrijking en selecteer **Verrijking opslaan** na het bekijken van uw keuzes.
 
+1. Selecteer **Volgende**.
 
-## <a name="configure-the-connection-for-leadspace"></a>De verbinding configureren voor Leadspace 
+1. Geef een **Naam** op voor de verrijking en de **Naam van uitvoerentiteit**.
 
-U moet een beheerder zijn om verbindingen te kunnen configureren. Selecteer **Verbinding toevoegen** bij het configureren van een verrijking *of* ga naar **Beheerder** > **Verbindingen** en selecteer **Instellen** op de Leadspace-tegel.
+1. Selecteer **Verrijking opslaan** na het bekijken van uw keuzes.
 
-1. Selecteer **Aan de slag**. 
-
-1. Voer een naam in voor de verbinding in het vak **Weergavenaam**.
-
-1. Geef een geldig Leadspace-token op.
-
-1. Bekijk en geef uw toestemming voor **Gegevensprivacy en naleving** door **Ik ga akkoord** te selecteren.
-
-1. Selecteer **Verifiëren** om de configuratie te valideren.
-
-1. Voltooi de verificatie en selecteer **Opslaan**.
-   
-   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Configuratiepagina voor Leadspace-verbinding.":::
+1. Selecteer **Uitvoeren** om het verrijkingsproces te starten of sluit om terug te keren naar de pagina **Verrijkingen**.
 
 ## <a name="enrichment-results"></a>Verrijkingsresultaten
 
-Nadat u de verrijking hebt vernieuwd, kunt u de nieuw verrijkte bedrijfsgegevens bekijken onder [Mijn verrijkingen](enrichment-hub.md). U kunt het tijdstip van de laatste update en het aantal verrijkte profielen terugvinden.
-
-U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrijkte gegevens weergeven** te selecteren.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 Zie [De API's van Leadspace](https://support.leadspace.com/hc/en-us/sections/201997649-API) voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
-
-Wanneer u Dynamics 365 Customer Insights instelt om gegevens naar Leadspace te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens op uw instructie overdragen, maar u bent ervoor verantwoordelijk dat Leadspace voldoet aan uw privacy- of beveiligingsverplichtingen. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
-Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

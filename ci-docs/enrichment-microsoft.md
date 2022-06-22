@@ -1,5 +1,5 @@
 ---
-title: Klantprofielen verrijken met gegevens van Microsoft
+title: Klantprofielen verrijken met merk- en interessegegevens van Microsoft
 description: Eigendomsgegevens van Microsoft gebruiken om uw klantgegevens te verrijken met affiniteiten en share of voice (aandeel in reclametijd).
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,25 +12,16 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c016a394fdf485057a190d03bfed9ce5481f435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646144"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953759"
 ---
 # <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Klantprofielen verrijken met affiniteiten en share of voice (preview)
 
 Eigendomsgegevens van Microsoft gebruiken om uw klantgegevens te verrijken met merkaffiniteiten, interesseaffiniteiten en share of voice (SoV). Deze affiniteiten en SoV zijn gebaseerd op gegevens van mensen met een vergelijkbare demografie als uw klanten. Deze informatie helpt u om uw klanten beter te begrijpen en in te delen op basis van hun affiniteiten of SoV met specifieke merken en interesses.
-
-Ga naar **Gegevens** > **Verrijking** om [verrijkingen te configureren en te bekijken](enrichment-hub.md).
-
-Om verrijking van merkaffiniteiten en SoV te configureren, gaat u naar het tabblad **Ontdekken** en selecteert u **Verrijk mijn gegevens** op de tegel **Merken**.
-
-Om verrijking van interesse-affiniteiten en SoV te configureren, gaat u naar het tabblad **Ontdekken** en selecteert u **Verrijk mijn gegevens** op de tegel **Interesses**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Tegels Merken en Interesses.](media/BrandsInterest-tile-Hub.png "Tegels Merken en Interesses")
 
 ## <a name="how-we-determine-affinities-and-sov"></a>Hoe worden affiniteiten en SoV bepaald
 
@@ -45,7 +36,6 @@ We gebruiken de online zoekgegevens van Microsoft om affiniteiten en SoV te vind
 Op elk verrijkt klantprofiel geven we twee gerelateerde waarden: affiniteitsniveau en affiniteitsscore. Deze waarden helpen u te bepalen hoe sterk de affiniteit is voor het demografische segment van dat profiel, voor een merk of interesse, in vergelijking met andere demografische segmenten.
 
 *Affiniteitsniveau* bestaat uit vier niveaus en *Affiniteitsscore* wordt berekend op een schaal van 100 punten die overeenkomt met de affiniteitsniveaus.
-
 
 |Affiniteitsniveau |Affiniteitsscore  |
 |---------|---------|
@@ -64,78 +54,65 @@ We berekenen SoV op een schaal van 100 punten. De totale SoV voor alle merken of
 
 We ondersteunen momenteel de volgende opties voor landen/regio's: Australië, Canada (Engels), Frankrijk, Duitsland, Verenigd Koninkrijk of Verenigde Staten (Engels).
 
-Als u een land of regio wilt selecteren, opent u **Verrijking met merken** of **Verrijking met interesses** en selecteert u **Wijzigen** naast **Land/Regio**. Kies in het deelvenster **Land-/regio-instellingen** een optie en selecteer **Toepassen**.
+## <a name="configure-the-enrichment"></a>De verrijking configureren
 
-### <a name="implications-related-to-country-selection"></a>Implicaties met betrekking tot landselectie
+1. Ga naar **Gegevens** > **Verrijking** en selecteer het tabblad **Detecteren**.
 
-- Wanneer u [uw eigen merken kiest](#define-your-brands-or-interests), geeft het systeem suggesties op basis van het geselecteerde land of de geselecteerde regio.
+   - Om verrijking van merkaffiniteiten en SoV te configureren, selecteert u **Mijn gegevens verrijken** op de tegel **Merken**.
 
-- Wanneer u [een branche kiest](#define-your-brands-or-interests), krijgt u de meest relevante merken of interesses op basis van het geselecteerde land of de geselecteerde regio.
+   - Om verrijking van interesse-affiniteiten en SoV te configureren, selecteert u **Mijn gegevens verrijken** op de tegel **Interesses**.
 
-- Bij het [verrijken van profielen](#refresh-enrichment), verrijken we alle klantprofielen waarvoor we gegevens krijgen voor de geselecteerde merken en interesses, inclusief profielen die zich niet in het geselecteerde land of de geselecteerde regio bevinden. Als u bijvoorbeeld Duitsland hebt geselecteerd, verrijken we profielen in de Verenigde Staten als we gegevens beschikbaar hebben voor de geselecteerde merken en interesses in de Verenigde Staten.
+   > [!div class="mx-imgBorder"]
+   > ![Tegels Merken en Interesses.](media/BrandsInterest-tile-Hub.png "Tegels Merken en Interesses")
 
-## <a name="configure-enrichment"></a>Verrijking configureren
+1. Bekijk het overzicht en selecteer **Volgende**.
 
-Een begeleide ervaring helpt u bij het configureren van de verrijkingen. 
+1. Als u uw land of regio wilt wijzigen, selecteert u **Wijzigen** naast **Land/regio**. Kies in het deelvenster **Land-/regio-instellingen** een [ondersteund land of een ondersteunde regio](#supported-countriesregions) en selecteert u **Toepassen**.
 
-### <a name="define-your-brands-or-interests"></a>Uw merken of interesses definiëren
+   > [!NOTE]
+   > Wanneer u uw eigen merken kiest, geeft het systeem suggesties op basis van het geselecteerde land of de geselecteerde regio. Wanneer u een branche kiest, krijgt u de meest relevante merken of interesses op basis van het geselecteerde land of de geselecteerde regio.
 
-Kies maximaal vijf merken of interesses met behulp van een of beide van deze opties:
+1. Kies maximaal vijf merken of interesses met behulp van een of beide van deze opties:
 
-- **Branche**: selecteer uw branche in de vervolgkeuzelijst en kies vervolgens uit de topmerken of interesses voor die branche.
-- **Uw eigen keuze maken**: voer een merk of interesse in die relevant is voor uw organisatie en kies vervolgens uit de bijpassende suggesties. Als we geen merk of interesse vermelden waarnaar u op zoek bent, stuur ons dan feedback via de koppeling **Dit voorstellen**.
+   - **Branche**: selecteer uw branche in de vervolgkeuzelijst en kies vervolgens uit de topmerken of interesses voor die branche.
+   - **Uw eigen keuze maken**: voer een merk of interesse in die relevant is voor uw organisatie en kies vervolgens uit de bijpassende suggesties. Als we geen merk of interesse vermelden waarnaar u op zoek bent, stuur ons dan feedback via de koppeling **Dit voorstellen**.
 
-### <a name="review-enrichment-preferences"></a>Verrijkingsvoorkeuren beoordelen
+1. Selecteer **Volgende** en bekijk uw standaardverrijkingsvoorkeuren en werk deze indien nodig bij.
 
-Beoordeel uw standaardverrijkingsvoorkeuren en werk deze indien nodig bij.
+   :::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Schermopname van het venster Verrijkingsvoorkeuren.":::
 
-:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Schermopname van het venster Verrijkingsvoorkeuren.":::
+1. Selecteer **Volgende**.
 
-### <a name="select-entity-to-enrich"></a>Te verrijken entiteit selecteren
+1. Selecteer de **Klantgegevensset** en kies het profiel of segment dat u wilt verrijken met gegevens van Microsoft. De entiteit *Klant* verrijkt al uw klantprofielen, terwijl een segment alleen klantprofielen in dat segment verrijkt.
 
-Selecteer **Verrijkte entiteit** en kies de gegevensset die u wilt verrijken met gegevens van Microsoft. U kunt de entiteit Klant selecteren om al uw klantprofielen te verrijken of een segmententiteit selecteren om alleen klantprofielen in dat segment te verrijken.
+1. Selecteer **Volgende**.
 
-### <a name="map-your-fields"></a>Uw velden toewijzen
+1. Wijs uw velden van uw geharmoniseerde klantentiteit toe aan de Microsoft-gegevens.
 
-Wijs velden van uw geharmoniseerde klantentiteit toe om het demografische segment te definiëren dat u door het systeem wilt laten gebruiken om uw klantgegevens te verrijken. Wijs land/regio toe en ten minste geboortedatum of genderkenmerken. Bovendien moet u ten minste een plaats (en staat/provincie) of postcode toewijzen. Selecteer **Bewerken** om de toewijzing van de velden te definiëren en selecteer **Toepassen** wanneer u klaar bent. Selecteer **Opslaan** om de veldtoewijzing te voltooien.
+   > [!NOTE]
+   > Er zijn ten minste kenmerken voor de geboortedatum of het geslacht vereist. Land/regio en minimaal plaats (en staat/provincie) of postcode zijn vereist. We raden aan de geboortedatum te converteren naar het type DateTime tijdens het opnemen van gegevens. Als alternatief kan het een tekenreeks zijn in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)-indeling 'jjjj-MM-dd' of 'jjjj-MM-ddTHH:mm:ss'.
 
-De volgende indelingen en waarden worden ondersteund (waarden zijn niet hoofdlettergevoelig):
+1. Selecteer **Volgende** om de veldtoewijzing te voltooien.
 
-- **Geboortedatum**: we raden aan om de geboortedatum te converteren naar het type DateTime tijdens het opnemen van gegevens. Als alternatief kan het een tekenreeks zijn in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)-indeling 'jjjj-MM-dd' of 'jjjj-MM-ddTHH:mm:ss'.
-- **Geslacht**: Man, Vrouw, Onbekend.
-- **Postcode**: vijfcijferige postcodes voor Verenigde Staten, standaard postcode overal elders.
-- **Plaats**: plaatsnaam in het Engels.
-- **Staat/provincie**: afkorting van twee letters voor de VS en Canada. Afkorting van twee of drie letters voor Australië. Niet van toepassing op Frankrijk, Duitsland of het VK.
-- **Land/regio**:
+1. Geef een naam op voor de verrijking. De **Naam van uitvoerentiteit** wordt automatisch geselecteerd.
 
-  - VS: Verenigde Staten van Amerika, Verenigde Staten, VS, VS, Amerika
-  - CA: Canada, CA
-  - GB: Verenigd Koninkrijk, VK, Groot-Brittannië, GB, Verenigd Koninkrijk van Groot-Brittannië en Noord-Ierland, Verenigd Koninkrijk van Groot-Brittannië
-  - AU: Australië, AU, Gemenebest van Australië
-  - FR: Frankrijk, FR, Franse Republiek
-  - DE: Duitsland, Duits, Deutschland, Allemagne, DE, Federale Republiek Duitsland, Republiek Duitsland
+   :::image type="content" source="media/enrichment-interests-summary.png" alt-text="Pagina voor beoordeling van interesses en naamgeving.":::
 
-## <a name="review-and-name-the-enrichment"></a>De verrijking bekijken en een naam geven
+1. Selecteer **Verrijking opslaan** na het bekijken van uw keuzes.
 
-Tot slot gaat u de informatie bekijken en een naam voor de verrijking opgeven.
+1. Selecteer **Uitvoeren** om het verrijkingsproces te starten of sluit om terug te keren naar de pagina **Verrijkingen**.
 
-:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Pagina voor beoordeling van interesses en naamgeving.":::
-
-## <a name="refresh-enrichment"></a>Verrijking vernieuwen
-
-Voer de verrijking uit na het configureren van merken, interesses en de veldtoewijzing voor demografische gegevens. Start het proces door **Uitvoeren** te selecteren op de configuratiepagina voor merken of interesses. Bovendien kunt u het systeem de verrijking automatisch laten uitvoeren als onderdeel van een geplande vernieuwing.
-
-Afhankelijk van de omvang van uw klantgegevens kan het enkele minuten duren voordat een verrijking is voltooid.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+   Bij het verrijken van profielen, verrijken we alle klantprofielen waarvoor we gegevens krijgen voor de geselecteerde merken en interesses, inclusief profielen die zich niet in het geselecteerde land of de geselecteerde regio bevinden. Als u bijvoorbeeld Duitsland hebt geselecteerd, verrijken we profielen in de Verenigde Staten als we gegevens beschikbaar hebben voor de geselecteerde merken en interesses in de Verenigde Staten.
 
 ## <a name="enrichment-results"></a>Verrijkingsresultaten
 
-Na het uitvoeren van het verrijkingsproces gaat u naar **Mijn verrijkingen** om het totale aantal verrijkte klanten en een uitsplitsing van merken of interesses in de verrijkte klantprofielen te bekijken.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Voorbeeldweergave van resultaten na het uitvoeren van het verrijkingsproces.":::
 
-U vindt een grafiek met het aantal verrijkte klantprofielen in de loop van de tijd en voorbeelden van de verrijkte entiteiten. Bekijk de verrijkte gegevens door **Bekijk meer** in de grafieken **Affiniteitsniveau** of **Share of Voice** te selecteren. Verrijkte data voor merken gaat naar de entiteiten **MerkAffiniteitVanMicrosoft** en **MerkShareOfVoiceVanMicrosoft**. Gegevens voor interesses staan in de entiteiten **InteresseAffiniteitVanMicrosoft** en **InteresseShareOfVoiceVanMicrosoft**. U vindt deze entiteiten ook in de groep **Verrijking** in **Gegevens** > **Entiteiten**.
+De resultaten omvatten **Affiniteitsniveau** of **Share of Voice**-grafieken.
+
+De entiteiten die zijn gemaakt op basis van de verrijkingen, staan vermeld onder de groep **Verrijking** in **Gegevens** > **Entiteiten**. Verrijkte data voor merken gaat naar de entiteiten **MerkAffiniteitVanMicrosoft** en **MerkShareOfVoiceVanMicrosoft**. Gegevens voor interesses staan in de entiteiten **InteresseAffiniteitVanMicrosoft** en **InteresseShareOfVoiceVanMicrosoft**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Zie verrijkingsgegevens op de klantenkaart
 

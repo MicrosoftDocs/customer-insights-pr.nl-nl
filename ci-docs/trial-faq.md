@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833762"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011881"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Veelgestelde vragen over de proefversie van Dynamics 365 Customer Insights
 
@@ -68,7 +68,7 @@ Nadat u voor de eerste keer bent ingelogd op uw betaalde exemplaar van Customer 
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Wat zijn de limieten en targets voor de proefversie?
 
-- U kunt uw eigen Azure Data Lake Storage-account niet gebruiken om uitvoergegevens op te slaan tijdens de proef van Customer Insights. U kunt echter gegevens van een Data Lake-opslagaccount opnemen.
+- U kunt uw eigen Azure Data Lake Storage-account niet gebruiken om uitvoergegevens op te slaan tijdens de proef van Customer Insights. U kunt echter gegevens van een Data Lake Storage-account opnemen.
 - U kunt maximaal 3 GB aan gegevens opslaan in de Dataverse-omgeving die automatisch wordt ingericht wanneer u een proefversie van Customer Insights start.
 
 ## <a name="customer-insights-specific-questions"></a>Specifieke vragen over Customer Insights

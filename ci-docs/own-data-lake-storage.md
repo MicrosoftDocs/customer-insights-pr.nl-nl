@@ -3,17 +3,17 @@ title: Uw eigen Azure Data Lake Storage Gen2-account gebruiken
 author: mukeshpo
 description: Meer informatie over de vereisten om uw eigen Azure Data Lake Storage-account te gebruiken voor het opslaan van Customer Insights-gegevens.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833918"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011927"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Uw eigen Azure Data Lake Storage Gen2-account gebruiken
 
@@ -37,6 +37,7 @@ Wanneer u een nieuwe omgeving maakt, moet u ervoor zorgen dat het Data Lake Stor
 1. Kies hoe u **uw opslag wilt verbinden**. U kunt kiezen tussen een op resources gebaseerde optie en een op abonnementen gebaseerde optie voor verificatie. Zie [Verbinding met een Azure Data Lake Storage-account maken via een Azure-service-principal](connect-service-principal.md) voor meer informatie.
    - Bij **Azure-abonnement** kiest u de waarden voor **Abonnement**, **Resourcegroep** en **Opslagaccount** die de `customerinsights`-container bevatten.
    - Geef voor **Accountsleutel** de **accountnaam** en **accountsleutel** voor het Data Lake Storage-account op. Het gebruik van deze verificatiemethode houdt in dat u wordt geïnformeerd als uw organisatie de sleutels rouleert. U moet [de omgevingsconfiguratie bijwerken](manage-environments.md#edit-an-existing-environment) met de nieuwe sleutel wanneer deze wordt gerouleerd.
+1. Kies of u Azure Private Link wilt gebruiken om verbinding te maken met het opslagaccount en [maak de verbinding met Private Link](security-overview.md#private-links-tab) in twee stappen.
 
 Wanneer systeemprocessen zoals gegevensopname zijn voltooid, maakt het systeem overeenkomstige mappen in het opslagaccount. Gegevensbestanden en *model.json*-bestanden worden gemaakt en toegevoegd aan mappen op basis van de procesnaam.
 

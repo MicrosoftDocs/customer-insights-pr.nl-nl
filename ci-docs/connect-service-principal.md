@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833379"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011835"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Verbinding met een Azure Data Lake Storage-account maken met behulp van een Azure-service-principal
 
@@ -51,7 +51,13 @@ Voordat u een nieuwe service-principal voor Customer Insights maakt, moet u cont
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Machtigingen verlenen aan de service principal om toegang te krijgen tot het opslagaccount
 
-Ga naar de Azure-portal om machtigingen te verlenen aan de service-principal voor het opslagaccount dat u wilt gebruiken in Customer Insights.
+Ga naar de Azure-portal om machtigingen te verlenen aan de service-principal voor het opslagaccount dat u wilt gebruiken in Customer Insights. Een van de volgende rollen moet worden toegewezen aan het opslagaccount of de container:
+
+|Referentie|Vereisten|
+|----------|------------|
+|Momenteel aangemelde gebruiker|**Rol**: Storage Blob-gegevenslezer, Storage Blob-inzender of Storage Blob-eigenaar.<br>**Niveau**: machtigingen kunnen worden verleend voor het opslagaccount of de container.</br>|
+|Customer Insights Service Principal -<br>Azure Data Lake Storage als gegevensbron gebruiken</br>|Optie 1<ul><li>**Rol**: Storage Blob-gegevenslezer, Storage Blob-gegevensinzender of Storage Blob-gegevenseigenaar.</li><li>**Niveau**: machtigingen moeten worden verleend voor het opslagaccount.</li></ul>Optie 2 *(zonder Service Principal-toegang tot het opslagaccount te delen)*<ul><li>**Rol 1**: Storage Blob-gegevenslezer, Storage Blob-gegevensinzender of Storage Blob-gegevenseigenaar.</li><li>**Niveau**: machtigingen moeten worden verleend voor de container.</li><li>**Rol 2**: Storage Blob-gegevensdelegeerder.</li><li>**Niveau**: machtigingen moeten worden verleend voor het opslagaccount.</li></ul>|
+|Customer Insights Service Principal - <br>Azure Data Lake Storage gebruiken als een uitvoer of een doel</br>|Optie 1<ul><li>**Rol**: Storage Blob-gegevensinzender of Storage Blob-eigenaar.</li><li>**Niveau**: machtigingen moeten worden verleend voor het opslagaccount.</li></ul>Optie 2 *(zonder Service Principal-toegang tot het opslagaccount te delen)*<ul><li>**Rol**: Storage Blob-gegevensinzender of Storage Blob-eigenaar.</li><li>**Niveau**: machtigingen moeten worden verleend voor de container.</li><li>**Rol 2**: Storage Blob-delegeerder.</li><li>**Niveau**: machtigingen moeten worden verleend voor het opslagaccount.</li></ul>|
 
 1. Ga naar de [Azure-beheerportal](https://portal.azure.com) en meld u aan bij uw organisatie.
 
@@ -62,7 +68,7 @@ Ga naar de Azure-portal om machtigingen te verlenen aan de service-principal voo
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Schermopname die de Azure Portal weergeeft tijdens het toevoegen van een roltoewijzing.":::
 
 1. Stel in het deelvenster **Roltoewijzing toevoegen** de volgende eigenschappen in:
-   - Rol: **Inzender van opslagblob-gegevens**
+   - Rol: Storage Blob-gegevenslezer, Storage Blob-inzender of Storage Blob-gegevenseigenaar, gebaseerd op de bovengenoemde referenties.
    - Wijs toegang toe aan: **Gebruiker, groep of service principal**
    - Selecteer leden: **Dynamics 365 AI voor Customer Insights** (de [service-principal](#create-a-new-service-principal) die u eerder in deze procedure hebt opgezocht)
 

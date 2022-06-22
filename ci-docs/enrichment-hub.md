@@ -1,7 +1,7 @@
 ---
 title: Geharmoniseerde klantprofielen verrijken
 description: Gebruik mogelijkheden om uw klantgegevens te verrijken.
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800599"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954035"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Verrijking voor klantprofielen (preview)
 
@@ -35,29 +35,29 @@ Op het tabblad **Ontdekken** vindt u alle ondersteunde verrijkingsopties.
 
 # <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
 
+- [AbiliTec-identiteit](enrichment-liveramp.md) aangeboden door LiveRamp AbiliTec
 - [Merken](enrichment-microsoft.md) die worden geleverd door Microsoft
-- [Interesses](enrichment-microsoft.md) die worden geleverd door Microsoft
-- [Uitgebreide adressen](enrichment-enhanced-addresses.md) geleverd door Microsoft 
 - [Demografische gegevens](enrichment-experian.md) geleverd door Experian
-- [Aangepaste gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) geleverd door Microsoft
-- [Locatiegegevens](enrichment-here.md) worden geleverd door HERE Technologies 
-- [Identiteit](enrichment-liveramp.md) aangeboden door LiveRamp AbiliTec
+- [Uitgebreide adressen](enrichment-enhanced-addresses.md) geleverd door Microsoft
+- [Interesses](enrichment-microsoft.md) die worden geleverd door Microsoft
+- [Locatiegegevens](enrichment-azure-maps.md) geleverd door Microsoft Azure Maps
+- [Locatiegegevens](enrichment-here.md) worden geleverd door HERE Technologies
+- [Aangepaste SFTP-gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
 
-- [Bedrijfsgegevens](enrichment-leadspace.md) worden verstrekt door Leadspace
-- [Uitgebreide adressen](enrichment-enhanced-addresses.md) geleverd door Microsoft 
-- [Verbeterde bedrijfsgegevens](enrichment-enhanced-company-data.md) door Microsoft
-- [Locatiegegevens](enrichment-here.md) worden geleverd door HERE Technologies 
-- [Aangepaste gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) geleverd door Microsoft
-- [Bedrijfsgegevens](enrichment-dnb.md) geleverd door Dun & Bradstreet
 - [Gegevens over accountbetrokkenheid](enrichment-office.md) geleverd door Microsoft
+- [Bedrijfsgegevens](enrichment-dnb.md) geleverd door Dun & Bradstreet
+- [Bedrijfsgegevens](enrichment-leadspace.md) worden verstrekt door Leadspace
+- [Uitgebreide adressen](enrichment-enhanced-addresses.md) geleverd door Microsoft
+- [Verbeterde bedrijfsgegevens](enrichment-enhanced-company-data.md) door Microsoft
+- [Locatiegegevens](enrichment-azure-maps.md) geleverd door Microsoft Azure Maps
+- [Locatiegegevens](enrichment-here.md) worden geleverd door HERE Technologies
+- [Aangepaste SFTP-gegevens](enrichment-SFTP-custom-import.md) via Secure File Transfer Protocol (SFTP)
 
 ---
 
-Op het tabblad **Mijn verrijkingen** kunt u de verrijkingen zien die u hebt geconfigureerd en hun eigenschappen bewerken.
+Op het tabblad **Mijn verrijkingen** kunt u de verrijkingen zien die u hebt geconfigureerd en hun eigenschappen bewerken. U kunt ook [segmenten](segments.md) of [metingen](measures.md) maken van verrijkingen.
 
 ## <a name="manage-existing-enrichments"></a>Bestaande verrijkingen beheren
 
@@ -81,36 +81,45 @@ Verrijkingen van derden worden geconfigureerd met [verbindingen](connections.md)
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Meerdere verrijkingen van hetzelfde type
 
-De entiteit die moet worden verrijkt, wordt gespecificeerd tijdens de verrijkingsconfiguratie, waardoor u de mogelijkheid hebt om slechts een subset van uw profielen te verrijken. Verrijk bijvoorbeeld alleen gegevens voor een specifiek segment. U kunt meerdere verrijkingen van hetzelfde type configureren en dezelfde verbinding opnieuw gebruiken. Sommige verrijkingen hebben limieten voor het aantal verrijkingen van hetzelfde type dat kan worden gemaakt. De limieten en het huidige gebruik zijn te zien op de pagina **Verrijking**.
+De entiteit die moet worden verrijkt, wordt gespecificeerd tijdens de verrijkingsconfiguratie, waardoor u de mogelijkheid hebt om slechts een subset van uw profielen te verrijken. Verrijk bijvoorbeeld alleen gegevens voor een specifiek segment. U kunt meerdere verrijkingen van hetzelfde type configureren en dezelfde verbinding opnieuw gebruiken. Sommige verrijkingen hebben limieten voor het aantal verrijkingen van hetzelfde type dat kan worden gemaakt. De limieten en het huidige gebruik zijn te zien op elke tegel op het tabblad **Ontdekken** van de pagina **Verrijking**.
 
 ## <a name="enrich-data-sources-before-unification"></a>Gegevensbronnen verrijken vóór harmonisatie
 
 U kunt uw klantgegevens verrijken vóór gegevensharmonisatie om de kwaliteit van een gegevensmatch te helpen verbeteren. Zie [Verrijking voor gegevensbronnen](data-sources-enrichment.md) voor meer informatie.
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>De voortgang van het verrijkingsproces bekijken
+## <a name="run-or-refresh-enrichments"></a>Verrijkingen uitvoeren of vernieuwen
+
+1. Selecteer **Uitvoeren** om het verrijkingsproces te starten. U kunt de verrijking ook automatisch laten uitvoeren als onderdeel van een [geplande vernieuwing](system.md#schedule-tab). De verwerkingstijd is afhankelijk van de grootte van uw klantgegevens.
+
+1. Optioneel kunt u [de voortgang van het verrijkingsproces zien](#see-the-progress-of-the-enrichment-process).
+
+1. Nadat het verrijkingsproces is voltooid, gaat u naar **Mijn verrijkingen** om de zojuist verrijkte klantprofielgegevens, het tijdstip van de laatste update en het aantal verrijkte profielen te bekijken.
+
+1. Selecteer de verrijking om [verrijkingsresultaten](#enrichment-results) te zien.
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>De voortgang van het verrijkingsproces bekijken
 
 U kunt details over de verwerking van een verrijking vinden, inclusief de bijbehorende status en mogelijke problemen, tijdens het vernieuwen of nadat een vernieuwing is voltooid. Krijg inzicht in de processen die betrokken zijn om een verrijking te vernieuwen en hoe lang het duurde om de processen uit te voeren. De verrijkingsstatus wordt ondersteund voor Experian, Leadspace, HERE Technologies, SFTP Import en Azure Maps.
 
-De status van een verrijking weergeven
-
-1. Ga naar **Gegevens** > **Verrijking**. 
-1. Selecteer op het tabblad **Mijn verrijkingen** de status van een verrijking om een zijvenster te openen. 
-1. Vouw in het deelvenster **Voortgangsdetails** de sectie **Verrijkingen** uit. 
-1. Selecteer onder de verrijking waarvan u de voortgang wilt bekijken de optie **Details weergeven**. 
-1. Selecteer in het deelvenster **Taakdetails** de optie **Details weergeven** om de processen te bekijken die betrokken zijn bij het bijwerken van de verrijking en hun status. 
+1. Ga naar **Gegevens** > **Verrijking**.
+1. Selecteer op het tabblad **Mijn verrijkingen** de status van de verrijking om een zijvenster te openen.
+1. Vouw in het deelvenster **Voortgangsdetails** de sectie **Verrijkingen** uit.
+1. Selecteer onder de verrijking waarvan u de voortgang wilt bekijken de optie **Details weergeven**.
+1. Selecteer in het deelvenster **Taakdetails** de optie **Details weergeven** om de processen te bekijken die betrokken zijn bij het bijwerken van de verrijking en hun status.
 
 ## <a name="enrichment-results"></a>Verrijkingsresultaten
 
-Na een voltooide verrijkingsuitvoering kunt u de verrijkingsresultaten bekijken.
+Na een voltooide verrijkingsuitvoering bekijkt u de verrijkingsresultaten.
 
-1. Ga naar **Gegevens** > **Verrijking**. 
-1. Selecteer de verrijking waarover u informatie wilt.
+1. Ga naar **Gegevens** > **Verrijking**.
+1. Selecteer op het tabblad **Mijn verrijkingen** de verrijking waarover u informatie wilt.
 
-Alle verrijkingen tonen basisinformatie zoals het aantal verrijkte profielen, een voorbeeld van de gegenereerde verrijkingsentiteit en het aantal verrijkte profielen in de loop van de tijd. Indien beschikbaar, biedt **Aantal klanten dat wordt verrijkt per veld** een gedetailleerde beschrijving van de dekking van elk verrijkt veld.
+Alle verrijkingen tonen basisinformatie zoals het aantal verrijkte profielen en het aantal verrijkte profielen in de loop van de tijd. Op de tegel **Preview van verrijkte klanten** ziet u een voorbeeld van de gegenereerde verrijkingsentiteit. Als u een gedetailleerde weergave wilt zien, selecteert u **Meer weergeven** en daarna het tabblad **Gegevens**.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Pagina met verrijkingsresultaten.":::
 
-Sommige verrijkingen tonen ook informatie die specifiek is voor het type verrijking. Raadpleeg de documentatie bij de desbetreffende verrijking voor meer informatie.
+Indien beschikbaar, biedt **Aantal klanten dat wordt verrijkt per veld** een gedetailleerde beschrijving van de dekking van elk verrijkt veld.
 
+Sommige verrijkingen tonen ook informatie die specifiek is voor het type verrijking. Zie de bijbehorende documentatie voor meer informatie.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

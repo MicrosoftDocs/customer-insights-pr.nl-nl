@@ -1,19 +1,19 @@
 ---
 title: Customer Insights-gegevens naar een Azure Blob Storage exporteren
 description: Leer hoe u de verbinding configureert en exporteert naar Blob-opslag.
-ms.date: 10/06/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757380"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947132"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmentlijst en andere gegevens exporteren naar Azure Blob Storage (preview)
 
@@ -58,16 +58,19 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 
-De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab).     
+De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab).
 
-U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
+U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand).
 
 Geëxporteerde gegevens worden opgeslagen in de Blob Storage-container die u hebt geconfigureerd. De volgende mappaden worden automatisch in uw container gemaakt:
 
 - Voor bronentiteiten en entiteiten die door het systeem zijn gegenereerd:  
   `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Voorbeeld: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
+  
+  > [!TIP]
+  > Export van entiteiten die een grote hoeveelheid gegevens bevatten, kan leiden tot meerdere CSV-bestanden in dezelfde map voor elke export. Het splitsen van exports gebeurt om prestatieredenen om de tijd die nodig is om een export te voltooien tot een minimum te beperken.
+
 - Het model.json voor de geëxporteerde entiteiten bevindt zich op het %ExportDestinationName%-niveau.  
   - Voorbeeld: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 

@@ -1,19 +1,19 @@
 ---
 title: Verrijking met aangepaste SFTP-import
 description: Algemene informatie over de aangepaste SFTP-importverrijking.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f52d24cbe793bee7948ad2af31059cd3edf40f94
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645997"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953713"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Klantprofielen verrijken met aangepaste gegevens (preview)
 
@@ -21,54 +21,13 @@ Dankzij de aangepaste import van Secure File Transfer Protocol (SFTP) kunt u geg
 
 ## <a name="prerequisites"></a>Vereisten
 
-Om aangepaste SFTP-import te configureren, moet aan de volgende voorwaarden worden voldaan:
+- Bestandsnaam en locatie (pad) van het te importeren bestand op de SFTP-host is bekend.
 
-- U hebt de bestandsnaam en locatie (pad) van het bestand dat moet worden geïmporteerd op de SFTP-host.
-- Er is een bestand *model.json* dat [het Common Data Model-schema](/common-data-model/) specificeert voor de te importeren gegevens. Dit bestand moet in dezelfde map staan als het te importeren bestand.
-- Er is al een SFTP-verbinding geconfigureerd door een beheerder *of* u hebt [beheerdersmachtigingen](permissions.md#admin). U hebt de gebruikersgegevens, de URL en het poortnummer nodig voor de SFTP-locatie waaruit u gegevens wilt importeren.
+- Een *model.json*-bestand dat het Common Data Model-schema specificeert voor de te importeren gegevens is beschikbaar. Dit bestand moet in dezelfde map staan als het te importeren bestand.
 
+- Een SFTP-[verbinding](connections.md) is [geconfigureerd](#configure-the-connection-for-sftp-custom-import).
 
-## <a name="configure-the-import"></a>De import configureren
-
-1. Ga naar **Gegevens** > **Verrijking** en selecteer het tabblad **Detecteren**.
-
-1. Selecteer op de tegel **Aangepaste SFTP-import** de optie **Mijn gegevens verrijken** en selecteer vervolgens **Aan de slag**.
-
-   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Tegel Aangepaste SFTP-import.":::
-
-1. Selecteer een [verbinding](connections.md) in de vervolgkeuzelijst. Neem contact op met een beheerder als er geen verbinding beschikbaar is. Als u een beheerder bent, kunt u een verbinding maken door **Verbinding toevoegen** te selecteren en **Aangepaste SFTP-import** te kiezen in de vervolgkeuzelijst.
-
-1. Selecteer **Verbinding maken met aangepaste import** om de geselecteerde verbinding te bevestigen.
-
-1.  Selecteer **Volgende** en voer het **Pad** en de **Bestandsnaam** in van het gegevensbestand dat u wilt importeren.
-
-    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Schermopname bij invoeren van gegevenslocatie.":::
-
-1. Selecteer **Volgende** en kies de klantgegevensset. Dit kunnen alle klantprofielen zijn of een segment.
-
-1. Selecteer **Volgende** en geef een naam op voor de verrijking en een naam voor de uitvoerentiteit. 
-
-1. Selecteer **Verrijking opslaan** na het bekijken van uw keuzes.
-
-## <a name="configure-the-connection-for-sftp-custom-import"></a>De verbinding voor aangepaste SFTP-import configureren 
-
-U moet een beheerder zijn om verbindingen te kunnen configureren. Selecteer **Verbinding toevoegen** bij het configureren van een verrijking *of* ga naar **Beheerder** > **Verbindingen** en selecteer **Instellen** op de tegel Aangepaste import.
-
-1. Voer een naam in voor de verbinding in het vak **Weergavenaam**.
-
-1. Voer een geldige gebruikersnaam, wachtwoord en host-URL in voor de SFTP-server waarop de te importeren gegevens zich bevinden.
-
-1. Bekijk en geef toestemming voor **Gegevensprivacy en naleving** door het selectievakje **Ik ga akkoord** in te schakelen.
-
-1. Selecteer **Verifiëren** om de configuratie te valideren.
-
-1. Nadat de verificatie is voltooid, kan de verbinding worden opgeslagen door **Opslaan** te selecteren.
-
-   > [!div class="mx-imgBorder"]
-   > ![Experian-verbindingsconfiguratiepagina.](media/enrichment-SFTP-connection.png "Experian-verbindingsconfiguratiepagina")
-
-
-## <a name="defining-field-mappings"></a>Veldtoewijzingen definiëren 
+## <a name="file-schema-example"></a>Voorbeeld van bestandsschema
 
 De directory die het bestand bevat dat op de SFTP-server moet worden geïmporteerd, moet ook een *model.json*-bestand bevatten. Dit bestand definieert het schema dat moet worden gebruikt voor het importeren van de gegevens. Het schema moet [Common Data Model](/common-data-model/) gebruiken om de veldtoewijzing te specificeren. Een eenvoudig voorbeeld van een model.json-bestand ziet er als volgt uit:
 
@@ -82,12 +41,12 @@ De directory die het bestand bevat dat op de SFTP-server moet worden geïmportee
             "attributes": [
                 {
                     "name": "CustomerId",
-                    "friendlyName": "Client id",
+                    "friendlyName": "Client ID",
                     "dataType": "string"
                 },
                 {
                     "name": "PreferredCity",
-                    "friendlyName": "Preferred City for vacation",
+                    "friendlyName": "Preferred city for vacation",
                     "dataType": "string"
                 },
                 {
@@ -114,13 +73,56 @@ De directory die het bestand bevat dat op de SFTP-server moet worden geïmportee
 }
 ```
 
+## <a name="configure-the-connection-for-sftp-custom-import"></a>De verbinding voor aangepaste SFTP-import configureren
+
+U moet een [beheerder](permissions.md#admin) in Customer Insights zijn en de gebruikersreferenties, URL en poortnummer hebben voor de SFTP-locatie waarvandaan u gegevens wilt importeren.
+
+1. Selecteer **Verbinding toevoegen** bij het configureren van een verrijking of ga naar **Beheer** > **Verbindingen** en selecteer **Instellen** op de tegel Aangepaste import.
+
+   :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Configuratiepagina voor aangepaste importverbinding.":::
+
+1. Geef een naam op voor de verbinding.
+
+1. Voer een geldige gebruikersnaam, wachtwoord en host-URL in voor de SFTP-server waarop de te importeren gegevens zich bevinden.
+
+1. Bekijk en geef uw toestemming voor [Gegevensprivacy en naleving](#data-privacy-and-compliance) door **Ik ga akkoord** te selecteren.
+
+1. Selecteer **Verifiëren** om de configuratie te valideren en selecteer **Opslaan**.
+
+### <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
+
+Wanneer u Dynamics 365 Customer Insights instelt om gegevens met Aangepaste import te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens in uw opdracht overdragen, maar het is uw verantwoordelijkheid ervoor te zorgen dat de gegevens voldoen aan eventuele privacy- of beveiligingsverplichtingen die u hebt. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
+Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
+
+## <a name="configure-the-import"></a>De import configureren
+
+1. Ga naar **Gegevens** > **Verrijking** en selecteer het tabblad **Detecteren**.
+
+1. Selecteer **Mijn gegevens verrijken** op de tegel **Aangepaste import via SFTP**.
+
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Tegel Aangepaste SFTP-import.":::
+
+1. Bekijk het overzicht en selecteer **Volgende**.
+
+1. Selecteer de verbinding. Neem contact op met een beheerder als er geen verbinding beschikbaar is.
+
+1. Selecteer de **Klantgegevensset** en kies het profiel of segment dat u wilt verrijken. De entiteit *Klant* verrijkt al uw klantprofielen, terwijl een segment alleen klantprofielen in dat segment verrijkt.
+
+1. Selecteer **Volgende**.
+
+1. Voer het **Pad** en de **Bestandsnaam** in van het gegevensbestand dat u wilt importeren.
+
+1. Selecteer **Volgende**.
+
+1. Geef een **Naam** op voor de verrijking en de **Naam van uitvoerentiteit**.
+
+1. Selecteer **Verrijking opslaan** na het bekijken van uw keuzes.
+
+1. Selecteer **Uitvoeren** om het verrijkingsproces te starten of sluit om terug te keren naar de pagina **Verrijkingen**.
+
 ## <a name="enrichment-results"></a>Verrijkingsresultaten
 
-Selecteer **Uitvoeren** vanaf de opdrachtbalk om het verrijkingsproces te starten. U kunt de verrijking ook automatisch laten uitvoeren als onderdeel van een [geplande vernieuwing](system.md#schedule-tab). De verwerkingstijd is afhankelijk van de grootte van de te importeren gegevens en de verbinding met de SFTP-server.
-
-Nadat het verrijkingsproces is voltooid, kunt u uw net geïmporteerde aangepaste verrijkingsgegevens bekijken onder **Mijn verrijkingen**. Ook vindt u daar het tijdstip van de laatste update en het aantal verrijkte profielen.
-
-U kunt een gedetailleerd overzicht van elk verrijkt profiel openen door **Verrijkte gegevens weergeven** te selecteren.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Volgende stappen
 

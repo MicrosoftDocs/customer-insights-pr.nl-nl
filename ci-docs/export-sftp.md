@@ -1,19 +1,19 @@
 ---
 title: Customer Insights-gegevens exporteren naar SFTP-hosts (met video)
 description: Leer hoe u de verbinding configureert en exporteert naar een SFTP-locatie.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646114"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947178"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Segmenten en andere gegevens exporteren naar SFTP (preview)
 
@@ -28,8 +28,8 @@ Gebruik uw klantgegevens in toepassIngen van derden door ze te exporteren naar e
 ## <a name="known-limitations"></a>Bekende beperkingen
 
 - SFTP-bestemmingen achter firewalls worden momenteel niet ondersteund. 
-- Hoe lang een export duurt, is afhankelijk van uw systeemprestaties. We raden twee CPU-cores en 1 Gb geheugen aan als minimale configuratie van uw server. 
-- Het exporteren van entiteiten met maximaal 100 miljoen klantprofielen kan 90 minuten duren bij gebruik van de aanbevolen minimale configuratie van twee CPU-cores en 1 Gb geheugen. 
+- Hoe lang een export duurt, is afhankelijk van uw systeemprestaties. We raden twee CPU-cores en 1 Gb geheugen aan als minimale configuratie van uw server.
+- Het exporteren van entiteiten met maximaal 100 miljoen klantprofielen kan 90 minuten duren bij gebruik van de aanbevolen minimale configuratie van twee CPU-cores en 1 Gb geheugen.
 
 ## <a name="set-up-connection-to-sftp"></a>Verbinding instellen MET SFTP
 
@@ -64,13 +64,17 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 1. Selecteer de entiteiten, bijvoorbeeld segmenten, die u wilt exporteren.
 
    > [!NOTE]
-   > Elke geselecteerde entiteit wordt bij het exporteren opgesplitst in maximaal vijf uitvoerbestanden. 
+   > Elke geselecteerde entiteit wordt bij het exporteren opgesplitst in maximaal vijf uitvoerbestanden.
 
 1. Selecteer **Opslaan**.
 
 Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 
-De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
+De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab).
+U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> Export van entiteiten die een grote hoeveelheid gegevens bevatten, kan leiden tot meerdere CSV-bestanden in dezelfde map voor elke export. Het splitsen van exports gebeurt om prestatieredenen om de tijd die nodig is om een export te voltooien tot een minimum te beperken.
 
 ## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
 
