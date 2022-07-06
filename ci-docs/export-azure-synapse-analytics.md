@@ -1,19 +1,19 @@
 ---
-title: Gegevens uit Customer Insights exporteren naar Azure Synapse Analytics
+title: Gegevens exporteren naar Azure Synapse Analytics (preview)
 description: Ontdek hoe u de verbinding met Azure Synapse Analytics configureert.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741497"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081144"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Gegevens exporteren naar Azure Synapse Analytics (preview)
 
@@ -72,13 +72,13 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie **Azure Synapse Analytics**. Als u deze sectienaam niet ziet, zijn er geen [verbindingen](connections.md) van dit type voor u beschikbaar.
 
-1. Zorg voor een herkenbare **weergavenaam** voor uw export en een **databasenaam**.
+1. Zorg voor een herkenbare **weergavenaam** voor uw export en een **databasenaam**. De export maakt een nieuwe [Azure Synapse-lake-database](/azure/synapse-analytics/database-designer/concepts-lake-database) in de werkruimte die is gedefinieerd in de verbinding.
 
 1. Selecteer naar welke entiteiten u wilt exporteren naar Azure Synapse Analytics.
    > [!NOTE]
    > Gegevensbronnen die zijn gebaseerd op een [Common Data Model-map](connect-common-data-model.md), worden niet ondersteund.
 
-2. Selecteer **Opslaan**.
+1. Selecteer **Opslaan**.
 
 Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
 

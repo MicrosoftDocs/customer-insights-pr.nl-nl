@@ -1,5 +1,5 @@
 ---
-title: Klantprofielen verrijken met locatiegegevens van Azure Maps
+title: Klantprofielen verrijken met locatiegegevens uit Azure Maps (preview)
 description: Algemene informatie over de eigen verrijking van Azure Maps.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953622"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052601"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Verrijking van klantprofielen met Azure Maps (preview)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Klantprofielen verrijken met locatiegegevens uit Azure Maps (preview)
 
 Azure Maps biedt locatiegerichte gegevens en services om ervaringen te leveren op basis van georuimtelijke gegevens met ingebouwde locatie-intelligentie. Met de services voor gegevensverrijking van Azure Maps wordt de nauwkeurigheid van locatiegegevens over uw klanten verbeterd. Met de services zijn bijvoorbeeld adresnormalisatie en breedte- en lengtegraadextractie naar Dynamics 365 Customer Insights mogelijk.
 
@@ -82,7 +82,7 @@ Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment ve
 
 1. Selecteer **Uitvoeren** om het verrijkingsproces te starten of sluit om terug te keren naar de pagina **Verrijkingen**.
 
-## <a name="enrichment-results"></a>Verrijkingsresultaten
+## <a name="view-enrichment-results"></a>Verrijkingsresultaten bekijken
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

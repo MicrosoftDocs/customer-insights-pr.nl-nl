@@ -1,5 +1,5 @@
 ---
-title: Gegevens opnemen uit Azure Synapse Analytics
+title: Een Azure Synapse-gegevensbron verbinden (preview)
 description: Gebruik een database in Azure Synapse als een gegevensbron in Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011421"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052693"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Een Azure Synapse Analytics-gegevensbron verbinden (preview)
 
@@ -59,7 +59,7 @@ Zie voor meer informatie [Azure Synapse-overzicht](/azure/synapse-analytics/over
 
 1. Kies een [beschikbare verbinding](connections.md) met Azure Synapse Analytics of maak een nieuwe.
 
-1. Kies een **Database** vanuit de werkruimte die is verbonden in de geselecteerde Azure Synapse Analytics-verbinding en selecteer **Volgende**.
+1. Kies een **Database** vanuit de werkruimte die is verbonden in de geselecteerde Azure Synapse Analytics-verbinding en selecteer **Volgende**. Momenteel ondersteunen we alleen het databasetype *Lake-database*.
 
 1. Selecteer de entiteiten die u wilt opnemen uit de verbonden database en selecteer **Volgende**.
 

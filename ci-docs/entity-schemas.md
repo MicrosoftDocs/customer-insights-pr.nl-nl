@@ -1,5 +1,5 @@
 ---
-title: Schema's voor Customer Insights-entiteiten in Common Data Model
+title: Entiteitsschema's in Common Data Model
 description: Werken met entiteiten in Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757426"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054748"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Entiteitsschema's in Common Data Model
-
-
 
 [Common Data Model](/common-data-model/) is een declaratieve specificatie en een definitie van standaardentiteiten waarmee veelgebruikte concepten en activiteiten voor verschillende zakelijke en productiviteitstoepassingen worden aangeduid. Dit model wordt ook uitgebreid voor observatie- en analytische gegevens. Common Data Model biedt goed gedefinieerde, modulaire en uitbreidbare zakelijke entiteiten, zoals Account, Business unit, Aanvraag, Contactpersoon, Potentiële klant, Verkoopkans en Product, en interacties met leveranciers, medewerkers en klanten, zoals activiteiten en serviceovereenkomsten. Iedereen kan Common Data Model-definities bouwen en uitbreiden om aanvullende bedrijfsspecifieke ideeën vast te leggen.
 

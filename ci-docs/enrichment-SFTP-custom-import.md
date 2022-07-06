@@ -1,5 +1,5 @@
 ---
-title: Verrijking met aangepaste SFTP-import
+title: Klantprofielen verrijken met aangepast importeren via SFTP (preview)
 description: Algemene informatie over de aangepaste SFTP-importverrijking.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953713"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081028"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Klantprofielen verrijken met aangepaste gegevens (preview)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Klantprofielen verrijken met aangepast importeren via SFTP (preview)
 
 Dankzij de aangepaste import van Secure File Transfer Protocol (SFTP) kunt u gegevens importeren die niet door het proces van gegevensharmonisatie hoeven te gaan. Het is een flexibele, veilige en gemakkelijke manier om uw gegevens binnen te halen. Aangepaste SFTP-import kan worden gebruikt in combinatie met [SFTP-export](export-sftp.md), waarmee u de klantprofielgegevens kunt exporteren die nodig zijn voor verrijking. De gegevens kunnen vervolgens worden verwerkt en verrijkt en aangepast importeren via SFTP kan worden gebruikt om de verrijkte gegevens terug te brengen naar Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment ve
 
 1. Selecteer **Uitvoeren** om het verrijkingsproces te starten of sluit om terug te keren naar de pagina **Verrijkingen**.
 
-## <a name="enrichment-results"></a>Verrijkingsresultaten
+## <a name="view-enrichment-results"></a>Verrijkingsresultaten bekijken
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

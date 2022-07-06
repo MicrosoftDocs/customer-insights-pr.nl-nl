@@ -1,5 +1,5 @@
 ---
-title: Klantprofielen verrijken met merk- en interessegegevens van Microsoft
+title: Klantprofielen verrijken met merk- en interessegegevens van Microsoft (preview)
 description: Eigendomsgegevens van Microsoft gebruiken om uw klantgegevens te verrijken met affiniteiten en share of voice (aandeel in reclametijd).
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953759"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081112"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Klantprofielen verrijken met affiniteiten en share of voice (preview)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Klantprofielen verrijken met merk- en interessegegevens van Microsoft (preview)
 
 Eigendomsgegevens van Microsoft gebruiken om uw klantgegevens te verrijken met merkaffiniteiten, interesseaffiniteiten en share of voice (SoV). Deze affiniteiten en SoV zijn gebaseerd op gegevens van mensen met een vergelijkbare demografie als uw klanten. Deze informatie helpt u om uw klanten beter te begrijpen en in te delen op basis van hun affiniteiten of SoV met specifieke merken en interesses.
 
@@ -104,7 +104,7 @@ We ondersteunen momenteel de volgende opties voor landen/regio's: Australië, Ca
 
    Bij het verrijken van profielen, verrijken we alle klantprofielen waarvoor we gegevens krijgen voor de geselecteerde merken en interesses, inclusief profielen die zich niet in het geselecteerde land of de geselecteerde regio bevinden. Als u bijvoorbeeld Duitsland hebt geselecteerd, verrijken we profielen in de Verenigde Staten als we gegevens beschikbaar hebben voor de geselecteerde merken en interesses in de Verenigde Staten.
 
-## <a name="enrichment-results"></a>Verrijkingsresultaten
+## <a name="view-enrichment-results"></a>Verrijkingsresultaten bekijken
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

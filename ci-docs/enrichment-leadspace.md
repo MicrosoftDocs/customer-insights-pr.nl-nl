@@ -1,5 +1,5 @@
 ---
-title: Verrijking van bedrijfsprofielen met de verrijking door derden van Leadspace
+title: Bedrijfsprofielen verrijken met Leadspace (preview)
 description: Algemene informatie over de verrijking door derden van Leadspace.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954173"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081038"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Verrijking van bedrijfsprofielen met Leadspace (preview)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Bedrijfsprofielen verrijken met Leadspace (preview)
 
 Leadspace is een data science-bedrijf dat B2B-platform voor klantgegevens biedt. Het stelt omgevingen met geharmoniseerde klantprofielen op basis van accounts in staat om hun gegevens te verrijken. Verrijk *Klantprofielen* met kenmerken zoals bedrijfsgrootte, locatie of branche. Verrijk *Contactprofielen* met kenmerken zoals functie, persona of e-mailverificatie.
 
@@ -82,7 +82,7 @@ Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment ve
 
 1. Selecteer **Uitvoeren** om het verrijkingsproces te starten of sluit om terug te keren naar de pagina **Verrijkingen**.
 
-## <a name="enrichment-results"></a>Verrijkingsresultaten
+## <a name="view-enrichment-results"></a>Verrijkingsresultaten bekijken
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

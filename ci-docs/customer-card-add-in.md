@@ -1,5 +1,5 @@
 ---
-title: Invoegtoepassing Klantkaart voor Dynamics 365-app (met video)
+title: Invoegtoepassing Klantkaart voor Dynamics 365-app (preview) (met video)
 description: Toon klantprofielgegevens uit Customer Insights in Dynamics 365-apps met deze invoegtoepassing.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755630"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080985"
 ---
-# <a name="customer-card-add-in-preview"></a>Invoegtoepassing Klantkaart (preview)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Invoegtoepassing Klantkaart voor Dynamics 365-app (preview)
 
 Krijg een compleet overzicht van uw klanten rechtstreeks in Dynamics 365-apps. Als de invoegtoepassing Klantkaart is geïnstalleerd in een ondersteunde Dynamics 365-app, kunt u ervoor kiezen om klantprofielvelden, inzichten en activiteitentijdlijn weer te geven. Met de invoegtoepassing worden gegevens opgehaald uit Customer Insights zonder dat dit invloed heeft op de gegevens in de verbonden Dynamics 365-app.
 

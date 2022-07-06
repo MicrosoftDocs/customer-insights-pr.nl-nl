@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646057"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051677"
 ---
-# <a name="use-a-template-to-build-a-measure"></a>Een sjabloon gebruiken om een meetcriterium op te stellen
+# <a name="create-measures-from-templates"></a>Metingen maken op basis van sjablonen
 
 U kunt vooraf gedefinieerde sjablonen van veelgebruikte [metingen](measures.md) gebruiken om deze te maken. Gedetailleerde beschrijvingen van de sjablonen en een begeleide ervaring helpen u bij het efficiënt maken van meetcriteria. Sjablonen bouwen voort op toegewezen gegevens uit de entiteit *Unified Activity*. Zorg er dus voor dat u [klantactiviteiten](activities.md) hebt geconfigureerd voordat u een meetcriterium maakt op basis van een sjabloon.
 

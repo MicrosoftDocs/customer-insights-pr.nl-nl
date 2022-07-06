@@ -1,5 +1,5 @@
 ---
-title: Dynamics 365 Customer Insights controleren met Azure Monitor
+title: Logboeken doorsturen in Dynamics 365 Customer Insights met Azure Monitor (preview)
 description: Leer hoe u logboeken naar Microsoft Azure Monitor kunt verzenden.
 ms.date: 12/14/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
-ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
+ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "8807575"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052647"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Logboeken doorsturen in Dynamics 365 Customer Insights met Azure Monitor (preview)
 

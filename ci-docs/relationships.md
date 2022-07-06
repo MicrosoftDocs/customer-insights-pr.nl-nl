@@ -21,14 +21,14 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: a7b10d985d5cba64b25595a3d7c101d6cb5c62a5
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646391"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081088"
 ---
-# <a name="relationships-between-entities"></a>Relaties tussen entiteiten
+# <a name="relationships-between-entities-and-entity-paths"></a>Relaties tussen entiteiten en entiteitspaden
 
 Relaties verbinden entiteiten en definiëren een grafiek van uw gegevens wanneer entiteiten een gemeenschappelijke id, een refererende sleutel, delen. Er kan vanuit de ene entiteit naar de andere worden verwezen met deze refererende sleutel. Verbonden entiteiten maken het definiëren van segmenten en meetcriteria mogelijk op basis van meerdere gegevensbronnen.
 

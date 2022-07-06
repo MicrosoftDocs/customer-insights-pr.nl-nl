@@ -1,5 +1,5 @@
 ---
-title: Verrijking met de verrijking van derden van HERE Technologies
+title: Klantprofielen verrijken met HERE Technologies (preview)
 description: Algemene informatie over de verrijking door derden van HERE Technologies.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953667"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052045"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Verrijking van klantprofielen met HERE Technologies (preview)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Klantprofielen verrijken met HERE Technologies (preview)
 
 HERE Technologies is een locatieplatformbedrijf dat locatiegerichte gegevens en services levert. De gegevensverrijkingsservices van HERE Technologies verbeteren de nauwkeurigheid van locatie-informatie over uw klanten. Het biedt adresnormalisatie, breedte- en lengtegraadextractie en meer.
 
@@ -72,7 +72,7 @@ Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment ve
 
 1. Selecteer **Uitvoeren** om het verrijkingsproces te starten of sluit om terug te keren naar de pagina **Verrijkingen**.
 
-## <a name="enrichment-results"></a>Verrijkingsresultaten
+## <a name="view-enrichment-results"></a>Verrijkingsresultaten bekijken
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

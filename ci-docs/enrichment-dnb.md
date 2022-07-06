@@ -1,5 +1,5 @@
 ---
-title: Verrijking van bedrijfsprofielen met Dun & Bradstreet
+title: Bedrijfsprofielen verrijken met Dun & Bradstreet (preview)
 description: Algemene informatie over de verrijking door derden met Dun & Bradstreet.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953885"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081085"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Verrijking van bedrijfsprofielen met Dun & Bradstreet (preview)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Bedrijfsprofielen verrijken met Dun & Bradstreet (preview)
 
 Dun & Bradstreet biedt commerciële gegevens, analyses en inzichten voor bedrijven. Het stelt klanten met geharmoniseerde klantprofielen voor bedrijven in staat hun gegevens te verrijken. Verrijkingen omvatten kenmerken, waaronder DUNS-nummer, bedrijfsgrootte, locatie, branche en meer.
 
@@ -102,7 +102,7 @@ We ondersteunen momenteel de volgende land-/regio-opties: Canada (Engels) of Ver
 
 1. Selecteer **Uitvoeren** om het verrijkingsproces te starten of sluit om terug te keren naar de pagina **Verrijkingen**.
 
-## <a name="enrichment-results"></a>Verrijkingsresultaten
+## <a name="view-enrichment-results"></a>Verrijkingsresultaten bekijken
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

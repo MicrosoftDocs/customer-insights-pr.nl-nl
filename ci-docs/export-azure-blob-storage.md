@@ -1,5 +1,5 @@
 ---
-title: Customer Insights-gegevens naar een Azure Blob Storage exporteren
+title: Gegevens exporteren naar een Azure Blob Storage (preview)
 description: Leer hoe u de verbinding configureert en exporteert naar Blob-opslag.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947132"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055484"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmentlijst en andere gegevens exporteren naar Azure Blob Storage (preview)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Gegevens exporteren naar een Azure Blob Storage (preview)
 
 Sla uw Customer Insights-gegevens op in een Blob-opslag of gebruik deze om uw gegevens over te brengen naar andere toepassingen.
 
