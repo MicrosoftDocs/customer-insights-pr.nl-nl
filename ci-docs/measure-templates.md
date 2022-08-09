@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051677"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170767"
 ---
 # <a name="create-measures-from-templates"></a>Metingen maken op basis van sjablonen
 
-U kunt vooraf gedefinieerde sjablonen van veelgebruikte [metingen](measures.md) gebruiken om deze te maken. Gedetailleerde beschrijvingen van de sjablonen en een begeleide ervaring helpen u bij het efficiënt maken van meetcriteria. Sjablonen bouwen voort op toegewezen gegevens uit de entiteit *Unified Activity*. Zorg er dus voor dat u [klantactiviteiten](activities.md) hebt geconfigureerd voordat u een meetcriterium maakt op basis van een sjabloon.
+Gebruik vooraf gedefinieerde sjablonen van veelgebruikte [metingen](measures.md) om deze te maken. Sjablonen bouwen voort op toegewezen gegevens uit de entiteit *Unified Activity*. Zorg er dus voor dat u [klantactiviteiten](activities.md) hebt geconfigureerd voordat u een meetcriterium maakt op basis van een sjabloon.
 
-Zie [Gebruik de metingenbouwer om helemaal vanaf de grond metingen te maken](measure-builder.md) om aangepaste metingen te maken.
+Metingsjablonen worden alleen ondersteund in omgevingen voor **individuele klanten**. Zie [Metingbouwer gebruiken](measure-builder.md) om aangepaste metingen te maken of om metingen voor B2B te maken.
 
-# <a name="individual-consumers-b-to-c"></a>[Individuele consumenten (B-to-C)](#tab/b2c)
-
-Beschikbare sjablonen voor meetcriteria: 
+Beschikbare sjablonen voor meetcriteria:
 - Gemiddelde transactiewaarde (ATV)
 - Totale transactiewaarde
 - Gemiddelde dagelijkse omzet
+- Gemiddelde maandomzet
 - Gemiddelde jaaromzet
 - Aantal transacties
 - Verdiende loyaliteitspunten
@@ -57,21 +56,22 @@ Beschikbare sjablonen voor meetcriteria:
 
 1. Selecteer **Gereed**.
 
-1. Definieer in de sectie **Tijdsperiode instellen** het tijdsbestek van de te gebruiken gegevens. Kies of u wilt dat het nieuwe meetcriterium de hele gegevensset omvat door **Altijd** te selecteren of dat u wilt dat het meetcriterium zich concentreert op een **Specifieke tijdsperiode**.
+1. Definieer in de sectie **Tijdsperiode instellen** het tijdsbestek van de gegevens. Kies of u wilt dat het nieuwe meetcriterium de hele gegevensset omvat door **Altijd** te selecteren of dat u wilt dat het meetcriterium zich concentreert op een **Specifieke tijdsperiode**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Schermopname die de tijdsperiode laat zien bij het configureren van een meetcriterium vanuit een sjabloon.":::
 
 1. Selecteer in de volgende sectie de optie **Gegevens toevoegen** om de activiteiten te kiezen en de bijbehorende gegevens toe te wijzen vanuit uw entiteit *Unified Activity*.
 
-    1. Stap 1 van 2: kies onder **Type activiteit** het type entiteit dat u wilt gebruiken. Selecteer voor **Activiteiten** de entiteiten die u wilt toewijzen.
-    1. Stap 2 van 2: kies het kenmerk van de entiteit *Unified Activity* voor het onderdeel dat is vereist door de formule. Voor Gemiddelde transactiewaarde is dit bijvoorbeeld het kenmerk dat de transactiewaarde vertegenwoordigt. Kies voor **Tijdstempel van activiteit** het kenmerk van de entiteit Unified Activity dat de datum en tijd van de activiteit vertegenwoordigt.
-   
-1. Zodra de gegevenstoewijzing is geslaagd, ziet u de status als **Voltooid** en de naam van de toegewezen activiteiten en kenmerken.
+    1. Stap 1 van 2: kies onder **Type activiteit** het type entiteit dat u wilt gebruiken. Selecteer voor **Activiteiten** de entiteiten die u wilt toewijzen en selecteer vervolgens **Volgende**.
+    1. Stap 2 van 2: kies het kenmerk van de entiteit *Unified Activity* voor het onderdeel dat is vereist door de formule. Voor Gemiddelde transactiewaarde is dit bijvoorbeeld het kenmerk dat de transactiewaarde vertegenwoordigt. Kies voor **Tijdstempel van activiteit** het kenmerk van de entiteit *Geharmoniseerde activiteit* waarmee de datum en tijd van de activiteit wordt vertegenwoordigd.
+    1. Selecteer **Save**.
 
-1. U kunt nu **Uitvoeren** selecteren om de resultaten van het meetcriterium te berekenen. Selecteer **Concept opslaan** om het later te verfijnen.
+    Als de gegevenstoewijzing is geslaagd, ziet u als status **Voltooid** en wordt de naam van de toegewezen activiteiten en kenmerken weergegeven.
 
-# <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
+1. Selecteer **Uitvoeren** om de resultaten van de meting te berekenen. Selecteer **Concept opslaan** als u de huidige configuratie wilt behouden en de meting later wilt uitvoeren. De pagina **Metingen** wordt weergegeven.
 
-Deze functie is alleen beschikbaar voor metingen die zijn gemaakt in omgevingen met individuele klanten als primaire doelgroep.
+## <a name="next-step"></a>Volgende stap
 
----
+Gebruik bestaande metingen om [een klantsegment](segments.md) te maken.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

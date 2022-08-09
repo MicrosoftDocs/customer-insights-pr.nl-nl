@@ -1,7 +1,7 @@
 ---
 title: Verbinding maken met een Common Data Model-map via een Azure Data Lake-account
 description: Werken met Common Data Model-gegevens met Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081015"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206993"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Verbinding maken met gegevens in Azure Data Lake Storage
 
@@ -82,7 +82,7 @@ Gegevens opnemen in Dynamics 365 Customer Insights via uw Azure Data Lake Storag
    :::image type="content" source="media/ADLS_required.png" alt-text="Dialoogvenster met Vereist voor primaire sleutel":::
 
    > [!TIP]
-   > Als u de entiteiten in een JSON-bewerkingsinterface wilt bewerken, selecteert u **Meer weergeven** > **Schemabestand bewerken**. Breng uw wijzigingen aan selecteer **Opslaan**.
+   > Als u een entiteit in een JSON-bewerkingsinterface wilt bewerken, selecteert u de entiteit en vervolgens **Schemabestand bewerken**. Breng uw wijzigingen aan selecteer **Opslaan**.
 
 1. Voor geselecteerde entiteiten die incrementele opname vereisen, wordt **Vereist** weergegeven onder **Incrementeel vernieuwen**. Voor elk van deze entiteiten, zie [Een incrementele vernieuwing configureren voor Azure Data Lake-gegevensbronnen](incremental-refresh-data-sources.md).
 
@@ -101,6 +101,10 @@ Gegevens opnemen in Dynamics 365 Customer Insights via uw Azure Data Lake Storag
    1. Selecteer **Gereed**.
 
 1. Selecteer **Save**. De pagina **Gegevensbronnen** wordt geopend met de nieuwe gegevensbron met de status **Vernieuwen**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Het laden van gegevens kan enige tijd vergen. Na een succesvolle vernieuwing kunnen de opgenomen gegevens worden bekeken vanaf de pagina [**Entiteiten**](entities.md).
 
 ### <a name="create-a-new-schema-file"></a>Een nieuw schemabestand maken
 
@@ -148,6 +152,9 @@ Gegevens opnemen in Dynamics 365 Customer Insights via uw Azure Data Lake Storag
 
 1. Selecteer **Save**. De pagina **Gegevensbronnen** wordt geopend met de nieuwe gegevensbron met de status **Vernieuwen**.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Het laden van gegevens kan enige tijd vergen. Na een succesvolle vernieuwing kunnen de opgenomen gegevens worden bekeken vanaf de pagina [**Entiteiten**](entities.md).
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Een Azure Data Lake Storage-gegevensbron bewerken
 
@@ -179,8 +186,16 @@ U kunt de optie *Verbinding maken met een opslagaccount met* bijwerken. Zie voor
       > [!IMPORTANT]
       > Als er afhankelijkheden zijn in het bestaande model.json- of manifest.json-bestand en de set entiteiten, ziet u een foutbericht en kunt u geen ander model.json- of manifest.json-bestand selecteren. Verwijder die afhankelijkheden voordat u het model.json- of manifest.json-bestand wijzigt, of maak een nieuw gegevensbron met model.json of manifest.json dat u wilt gebruiken om te voorkomen dat u de afhankelijkheden verwijdert.
    - Als u de locatie van het gegevensbestand of de primaire sleutel wilt wijzigen, selecteert u **Bewerken**.
-   - Zie [Een incrementele vernieuwing configureren voor Azure Data Lake-gegevensbronnen](incremental-refresh-data-sources.md) als u de incrementele opnamegegevens wilt wijzigen
+   - Zie [Een incrementele vernieuwing configureren voor Azure Data Lake-gegevensbronnen](incremental-refresh-data-sources.md) als u de incrementele opnamegegevens wilt wijzigen.
+   - Wijzig alleen de entiteitsnaam zodat deze overeenkomt met de entiteitsnaam in het .json-bestand.
+
+     > [!NOTE]
+     > Houd de entiteitsnaam in Customer Insights altijd hetzelfde als de entiteitsnaam in het model.json- of manifest.json-bestand na opname. Customer Insights valideert alle entiteitsnamen met model.json of manifest.json tijdens elke systeemvernieuwing. Als een entiteitsnaam binnen of buiten Customer Insights wordt gewijzigd, treedt er een fout op omdat Customer Insights de nieuwe entiteitsnaam niet kan vinden in het .json-bestand. Als een opgenomen entiteitsnaam per ongeluk is gewijzigd, bewerkt u de entiteitsnaam in Customer Insights zodat deze overeenkomt met de naam in het .json-bestand.
 
 1. Selecteer **Kenmerken** om kenmerken toe te voegen of te wijzigen, of om gegevensprofilering in te schakelen. Selecteer **Gereed**.
 
 1. Klik op **Opslaan** om uw wijzigingen toe te passen en terug te keren naar de pagina **Gegevensbronnen**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

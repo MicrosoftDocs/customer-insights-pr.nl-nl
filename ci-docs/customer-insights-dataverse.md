@@ -1,7 +1,7 @@
 ---
 title: Werken met Customer Insights-gegevens in Microsoft Dataverse
 description: Leer hoe u Customer Insights en Microsoft Dataverse verbindt en krijg inzicht in de uitvoerentiteiten die worden geëxporteerd naar Dataverse.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011514"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153398"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Werken met Customer Insights-gegevens in Microsoft Dataverse
 
@@ -31,13 +31,25 @@ Verbinding maken met uw Dataverse-omgeving stelt u ook in staat om [gegevens op 
 - Er is nog geen andere Customer Insights-omgeving aan de Dataverse-omgeving gekoppeld waarmee u verbinding wilt maken. Leren hoe u [een bestaande verbinding met een Dataverse omgeving kunt verwijderen](#remove-an-existing-connection-to-a-dataverse-environment).
 - Een Microsoft Dataverse-omgeving kan alleen verbinding maken met één opslagaccount. Het is alleen van toepassing als u de omgeving configureert om [gebruik te maken van uw Azure Data Lake Storage](own-data-lake-storage.md).
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse-opslagcapaciteitsrecht
+
+Een Customer Insights-abonnement geeft u recht op extra capaciteit voor de bestaande [Dataverse-opslagcapaciteit ](/power-platform/admin/capacity-storage) van uw organisatie. De toegevoegde capaciteit is afhankelijk van het aantal profielen dat uw abonnement gebruikt.
+
+**Voorbeeld:**
+
+Ervan uitgaande dat u 15 GB databaseopslag en 20 GB bestandsopslag krijgt per 100.000 klantprofielen. Als uw abonnement 300.000 klantprofielen omvat, is uw totale opslagcapaciteit 45 GB (3 x 15 GB) databaseopslag en 60 GB bestandsopslag (3 x 20 GB). Evenzo: als u een B2B-abonnement hebt met 30K-accounts, is uw totale opslagcapaciteit 45 GB (3 x 15 GB) databaseopslag en 60 GB bestandsopslag (3 x 20 GB).
+
+Logboekcapaciteit is niet incrementeel en vast voor uw organisatie.
+
+Zie de [Licentiehandleiding voor Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544) voor meer informatie over de gedetailleerde capaciteitsrechten.
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Een Dataverse-omgeving verbinden met Customer Insights
 
 Via de **Microsoft Dataverse**-stap kunt u Customer Insights verbinden met uw Dataverse-omgeving terwijl [u een Customer Insights-omgeving maakt](create-environment.md).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="gegevens delen met Microsoft Dataverse automatisch ingeschakeld voor netto nieuwe omgevingen.":::
 
-Beheerders kunnen Customer Insights configureren om een bestaande Dataverse-omgeving te verbinden. Door de URL te verstrekken aan de Dataverse-omgeving, wordt het gekoppeld aan hun nieuwe Customer Insights-omgeving.
+Beheerders kunnen Customer Insights configureren om een bestaande Dataverse-omgeving te verbinden. Door de URL te verstrekken aan de Dataverse-omgeving, wordt het verbonden met hun nieuwe Customer Insights-omgeving. Na het tot stand brengen van de verbinding tussen Customer Insights en Dataverse, moet u de naam van de organisatie voor de Dataverse-omgeving niet veranderen. De naam van de organisatie wordt gebruikt in de Dataverse-URL en een gewijzigde naam verbreekt de verbinding met Customer Insights.
 
 Als u geen gebruik wilt maken van een bestaande Dataverse-omgeving, maakt het systeem een nieuwe omgeving voor de Customer Insights-gegevens in uw tenant. [Power Platform-beheerders kunnen bepalen wie omgevingen kan maken](/power-platform/admin/control-environment-creation). Wanneer u een nieuwe Customer Insights-omgeving instelt en de beheerder het maken van Dataverse-omgevingen heeft uitgeschakeld voor iedereen behalve beheerders, kunt u mogelijk geen nieuwe omgeving maken.
 
@@ -84,7 +96,7 @@ Als u de PowerShell-scripts wilt uitvoeren, moet u eerst PowerShell hiervoor ins
 
     2. `ByolSetup.ps1`
         - U hebt machtigingen *Eigenaar van Storage Blob-gegevens* op opslagaccount-/containerniveau nodig om dit script te kunnen uitvoeren, anders maakt dit script er een voor u. Uw roltoewijzing kan handmatig worden verwijderd nadat het script met succes is uitgevoerd.
-        - Dit PowerShell-script voegt de vereiste op rollen gebaseerd toegangsbeheer (RBAC) toe voor de Microsoft Dataverse-service en eventuele op Dataverse gebaseerde bedrijfstoepassingen. Het werkt ook de Access Control List (ACL) in de CustomerInsights-container bij voor de beveiligingsgroepen die zijn gemaakt met het script `CreateSecurityGroups.ps1`. De groep Inzender zal *rwx*-machtiging hebben en de groep Lezer zal alleen *rx*-machtiging hebben.
+        - Dit PowerShell-script voegt het vereiste rolgebaseerde toegangsbeheer toe voor de Microsoft Dataverse-service en alle op Dataverse gebaseerde bedrijfstoepassingen. Het werkt ook de Access Control List (ACL) in de CustomerInsights-container bij voor de beveiligingsgroepen die zijn gemaakt met het script `CreateSecurityGroups.ps1`. De groep Inzender zal *rwx*-machtiging hebben en de groep Lezer zal alleen *rx*-machtiging hebben.
         - Voer dit PowerShell-script uit in Windows PowerShell door de Azure-abonnements-id op te geven met uw Azure Data Lake Storage, opslagaccountnaam, resourcegroepnaam en de waarden voor de beveiligingsgroep-id voor Lezer en Inzender. Open het PowerShell-script in een editor om aanvullende informatie en de geïmplementeerde logica te bekijken.
         - Kopieer de uitvoertekenreeks nadat het script is uitgevoerd. De uitvoertekenreeks ziet er als volgt uit: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 

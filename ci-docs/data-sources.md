@@ -1,7 +1,7 @@
 ---
 title: Overzicht van gegevensbronnen
 description: Informatie over hoe u gegevens uit verschillende bronnen kunt importeren of opnemen.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051447"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207085"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
 Dynamics 365 Customer Insights biedt verbindingen om gegevens uit een uitgebreide set reeks bronnen aan te leveren. Verbinden met een gegevensbron wordt vaak *gegevensopname* genoemd. Na het opnemen van de gegevens, kunt u [harmoniseren](data-unification.md), inzichten genereren en de gegevens activeren voor het bouwen van gepersonaliseerde ervaringen.
 
-## <a name="add-data-sources"></a>Gegevensbronnen toevoegen
+## <a name="add-or-edit-data-sources"></a>Gegevensbronnen toevoegen of bewerken
 
-U kunt gegevensbronnen bijvoegen of importeren in Customer Insights. De onderstaande links bevatten instructies voor het toevoegen van gegevensbronnen.
+U kunt gegevensbronnen bijvoegen of importeren in Customer Insights. De onderstaande koppelingen bevatten instructies voor het toevoegen en bewerken van gegevensbronnen.
 
 **Een gegevensbron bijvoegen**
 
@@ -50,13 +50,18 @@ Als uw omgeving is geconfigureerd om Customer Insights-opslag te gebruiken en u 
 
 Als uw omgeving geen gebruik maakt van Power Platform-gegevensstromen, bevat de pagina **Gegevensbronnen** bevat alleen een lijst met alle gegevensbronnen. Er worden geen secties weergegeven.
 
-Ga naar **Gegevens** > **Gegevensbronnen** om de naam van elke opgenomen gegevensbron, de bijbehorende status en de laatste keer dat de gegevens voor die bron zijn vernieuwd te bekijken. U kunt de lijst met gegevensbronnen op elke kolom sorteren.
+## <a name="manage-existing-data-sources"></a>Bestaande gegevensbronnen beheren
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Gegevensbron toegevoegd.":::
+Ga naar **Gegevens** > **Gegevensbronnen** om de naam van elke opgenomen gegevensbron, de bijbehorende status en de laatste keer dat de gegevens voor die bron zijn vernieuwd te bekijken. U kunt de lijst met gegevensbronnen sorteren op elke kolom of het zoekvak gebruiken om de gegevensbron te vinden die u wilt beheren.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Selecteer een gegevensbron om beschikbare acties te bekijken.
 
-Het laden van gegevens kan enige tijd vergen. Na een succesvolle vernieuwing kunnen de opgenomen gegevens worden bekeken vanaf de pagina **Entiteiten**. Zie [Entiteiten](entities.md) voor meer informatie.
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Gegevensbron toegevoegd.":::
+
+- [**Bewerk**](#add-or-edit-data-sources) de gegevensbron om de eigenschappen ervan te wijzigen.
+- [**Vernieuw**](#refresh-data-sources) de gegevensbron om de nieuwste gegevens op te nemen.
+- [**Verrijk**](data-sources-enrichment.md) de gegevensbron vóór harmonisatie.
+- **Verwijder** de gegevensbron. Een gegevensbron kan alleen worden verwijderd als de gegevens niet worden gebruikt voor verwerking zoals harmonisatie, inzichten, activeringen of exportbewerkingen.
 
 ## <a name="refresh-data-sources"></a>Gegevensbronnen vernieuwen
 
@@ -64,23 +69,12 @@ Gegevensbronnen kunnen automatisch worden vernieuwd of op aanvraag handmatig wor
 
 Ga naar **Beheer** > **Systeem** > [**Plannen**](system.md#schedule-tab) om door het systeem geplande vernieuwingen van uw opgenomen gegevensbronnen te configureren.
 
-Volg deze stappen om een gegevensbron op aanvraag te vernieuwen:
+Een gegevensbron op aanvraag vernieuwen:
 
 1. Ga naar **Gegevens** > **Gegevensbronnen**.
 
-1. Selecteer het verticale weglatingsteken (&vellip;) naast de gegevensbron die u wilt vernieuwen en selecteer **Vernieuwen** uit de vervolgkeuzelijst. De gegevensbron wordt nu geactiveerd voor een handmatige vernieuwing. Als u een gegevensbron vernieuwt, worden zowel het entiteitsschema als de gegevens bijgewerkt voor alle entiteiten die zijn opgegeven in de gegevensbron.
+1. Selecteer de gegevensbron die u wilt vernieuwen en selecteer **Vernieuwen**. De gegevensbron wordt nu geactiveerd voor een handmatige vernieuwing. Als u een gegevensbron vernieuwt, worden zowel het entiteitsschema als de gegevens bijgewerkt voor alle entiteiten die zijn opgegeven in de gegevensbron.
 
-1. Selecteer **Vernieuwen stoppen** als u een bestaande vernieuwing wilt annuleren, waarna de gegevensbron terugkeert naar de laatste vernieuwingsstatus.
-
-## <a name="delete-a-data-source"></a>Een gegevensbron verwijderen
-
-Een gegevensbron kan alleen worden verwijderd als de gegevens niet worden gebruikt voor verwerking zoals harmonisatie, inzichten, activeringen of exportbewerkingen.
-
-1. Ga naar **Gegevens** > **Gegevensbronnen**.
-
-2. Selecteer het verticale weglatingsteken (&vellip;) naast de gegevensbron die u wilt verwijderen en selecteer **Verwijderen** uit het vervolgkeuzemenu.
-
-3. Bevestig de verwijdering.
-
+1. Selecteer de status om het deelvenster **Details van voortgang** te openen en de voortgang te bekijken. Als u de taak wilt annuleren, selecteert u **Taak annuleren** onder aan het deelvenster.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

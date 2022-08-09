@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080978"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207177"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Verrijking voor gegevensbronnen (preview)
 
@@ -21,9 +21,9 @@ Gebruik gegevens uit bronnen zoals Microsoft en andere partners om uw klantgegev
 
 ## <a name="enrich-a-data-source"></a>Een gegevensbron verrijken
 
-U moet de inzenders- of beheerdersrechten hebben om verrijkingen te kunnen maken of bewerken. Zie [Machtigingen](permissions.md) voor meer informatie.  
+U moet over de inzenders- of beheerders[machtigingen](permissions.md) beschikken om verrijkingen te kunnen maken of bewerken.  
 
-1. Ga naar **Gegevens** > **Harmoniseren**. Selecteer de entiteit die u wilt verrijken en selecteer één kenmerk als primaire sleutel voor de entiteit. Zie [Primaire sleutel selecteren](map-entities.md#select-primary-key-and-semantic-type-for-attributes) voor meer informatie.
+1. Ga naar **Gegevens** > **Harmoniseren**. Selecteer de entiteit die u wilt verrijken en selecteer één kenmerk als [primaire sleutel](map-entities.md#select-primary-key-and-semantic-type-for-attributes) voor de entiteit.
 
 1. Ga naar **Gegevens** > **Gegevensbronnen**.
 
@@ -47,8 +47,8 @@ De volgende verrijkingen zijn momenteel beschikbaar voor gegevensbronnen. Bekijk
 
 ## <a name="manage-existing-data-source-enrichments"></a>Bestaande gegevensbronverrijkingen beheren
 
-Ga naar het tabblad **Mijn verrijkingen** om alle geconfigureerde verrijkingen te zien.
+Ga naar **Gegevens** > **Verrijking**. Bekijk op het tabblad **Mijn verrijkingen** de geconfigureerde verrijkingen, hun status, het aantal verrijkte klanten en de laatste keer dat de gegevens zijn vernieuwd. U kunt de lijst met verrijkingen sorteren op elke kolom of het zoekvak gebruiken om de verrijking te vinden die u wilt beheren.
 
-Selecteer de verrijking om de beschikbare opties te zien. U kunt ook het verticale weglatingsteken (&vellip;) selecteren op een lijstitem om de opties te zien. Als u verschillende verrijkingen hebt geconfigureerd, kunt u het zoekvak gebruiken om ze snel te vinden.
+Selecteer de verrijking om de beschikbare opties te zien. U kunt ook het verticale weglatingsteken (&vellip;) selecteren op een lijstitem om de opties te zien.
 
-U kunt een gegevensbronverrijking bekijken, bewerken, uitvoeren of verwijderen. Zie [Bestaande verrijkingen beheren](enrichment-hub.md) voor meer informatie.
+U kunt een gegevensbronverrijking bekijken, bewerken, uitvoeren of verwijderen. Zie [Bestaande verrijkingen beheren](enrichment-hub.md#manage-existing-enrichments) voor meer informatie.

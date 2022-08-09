@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 62969527ceed906ff06fb9be90b972496323ce0a
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
+ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052739"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9142813"
 ---
 # <a name="how-to-create-a-new-environment"></a>Procedure: Een nieuwe omgeving maken
 
@@ -67,7 +67,6 @@ U kunt uit twee opties kiezen:
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>Stap 3: verbinden met Microsoft Dataverse
 
 In de stap **Microsoft Dataverse** kunt u Customer Insights verbinden met uw Dataverse-omgeving. Deel gegevens met Dataverse om deze te gebruiken met zakelijke toepassingen op basis van Dataverse, zoals Dynamics 365 Marketing of modelgestuurde toepassingen in Power Apps.
-
 
 Laat dit veld leeg als u geen eigen Dataverse-omgeving hebt. Wij maken deze dan voor u.
 

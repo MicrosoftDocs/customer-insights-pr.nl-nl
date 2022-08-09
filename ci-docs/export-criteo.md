@@ -1,50 +1,52 @@
 ---
 title: Segmenten exporteren naar Criteo (preview)
 description: Ontdek hoe u de verbinding met Criteo configureert en exporteert.
-ms.date: 05/27/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ace9056d200a3179e442132004324a01f0d247b6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081128"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195330"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Segmenten exporteren naar Criteo (preview)
 
 Exporteer segmenten van unified customer profiles om campagnes te genereren, bied e-mailmarketing en gebruik specifieke groepen met klanten met Criteo.
 
-## <a name="prerequisites-for-connection"></a>Vereisten voor verbinding
+## <a name="prerequisites"></a>Vereisten
 
--   U beschikt over een [Criteo Dynamics Retargeting-account](https://www.criteo.com/login/) en bijbehorende beheerdersreferenties.
--   U hebt [geconfigureerde segmenten](segments.md).
--   Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten een veld voor e-mailadres.
+- Een [Criteo Dynamics Retargeting-account](https://www.criteo.com/login/) en bijbehorende beheerdersreferenties.
+- [Geconfigureerde segmenten](segments.md).
+- Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten een veld voor e-mailadres.
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Tot 1 miljoen klantprofielen per export naar Criteo.
-- Exporteren naar Criteo is beperkt tot segmenten.
-- Het exporteren van segmenten met in totaal 1 miljoen klantprofielen kan tot 30 minuten duren. 
-- Het aantal klantprofielen dat u kunt exporteren naar Criteo, is afhankelijk van en wordt beperkt door uw contract met Criteo.
+- Maximaal 1 miljoen klantprofielen per export naar Criteo en dit kan tot 30 minuten duren. Het aantal klantprofielen dat u kunt exporteren naar Criteo, is afhankelijk van uw contract met Criteo.
+- Alleen segmenten.
 
 ## <a name="set-up-connection-to-criteo"></a>Verbinding met Criteo instellen
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Ga naar **Beheerder** > **Verbindingen**.
 
-1. Selecteer **Verbinding toevoegen** en kies **Criteo** om de verbinding te configureren.
+1. Selecteer **Verbinding toevoegen** en kies **Criteo**.
 
 1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
 
-1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
+1. Kies wie deze verbinding kan gebruiken. Standaard zijn dit alleen beheerders. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
-1. Selecteer **Ik ga akkoord** om de **Gegevensprivacy en naleving** te bevestigen en selecteer **Verbinden** om de verbinding met Criteo te initialiseren.
+1. Bekijk [Gegevensprivacy en naleving](connections.md#data-privacy-and-compliance) en selecteer **Ik ga akkoord**.
 
-1. Selecteer **Verifiëren met Criteo** en geef uw beheerdersgebruikersnaam en referenties voor Criteo op. 
+1. Selecteer **Verbinden** om de verbinding te initialiseren.
+
+1. Selecteer **Verifiëren met Criteo** en geef uw beheerdersgebruikersnaam en referenties voor Criteo op.
 
 1. Selecteer **Uzelf toevoegen als exportgebruiker** en geef uw Customer Insights-referenties op.
 
@@ -52,30 +54,24 @@ Exporteer segmenten van unified customer profiles om campagnes te genereren, bie
 
 ## <a name="configure-an-export"></a>Een export configureren
 
-U kunt deze export configureren als u toegang hebt tot een verbinding van dit type. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Ga naar **Gegevens** > **Exports**.
 
-1. Selecteer **Bestemming toevoegen** om een nieuwe export te maken.
+1. Selecteer **Export toevoegen**.
 
-1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Criteo. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar. 
+1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Criteo. Neem contact op met een beheerder als er geen verbinding beschikbaar is.
 
-1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. 
+1. Voer de naam in voor de export.
 
-1. Optioneel kunt u **Id van adverteerder** en **Naam** exporeteren
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt.
 
-1. Selecteer de segmenten die u wilt exporteren. 
+1. Optioneel kunt u **Id van adverteerder** en **Naam** exporteren.
+
+1. Selecteer de segmenten die u wilt exporteren.
 
 1. Selecteer **Save**.
 
-Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
-
-Wanneer u Dynamics 365 Customer Insights instelt om gegevens naar Criteo te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens in uw opdracht overdragen, maar het is uw verantwoordelijkheid ervoor te zorgen dat Criteo voldoet aan eventuele privacy- of beveiligingsverplichtingen die u hebt. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
-Uw Dynamics 365 Customer Insights-beheerder kan deze exportbestemming op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
-
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[!INCLUDE [footer-include](includes/footer-banner.md)]

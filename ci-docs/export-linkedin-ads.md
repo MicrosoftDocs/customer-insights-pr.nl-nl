@@ -1,19 +1,19 @@
 ---
 title: Segmenten exporteren naar LinkedIn Ads (preview)
 description: Procedure voor het configureren van de verbinding en voor het exporteren naar LinkedIn Ads.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e6ad3901f7b8dc1ae8edc54c0b09a99b01be34cd
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050850"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196802"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmenten exporteren naar LinkedIn Ads (preview)
 
@@ -21,32 +21,33 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar LinkedIn Ads om matc
 
 ## <a name="prerequisites"></a>Vereisten
 
--   U hebt een [LinkedIn Campaign Manager-account](https://business.linkedin.com/marketing-solutions/ads) en bijbehorende beheerdersreferenties.
--   U hebt [segmenten geconfigureerd](segments.md) in Customer Insights.
--   Klantprofielen in de geëxporteerde segmenten bevatten een veld met een e-mailadres.
+- Een [LinkedIn Campaign Manager-account](https://business.linkedin.com/marketing-solutions/ads) en bijbehorende beheerdersreferenties.
+- Een [account-id van LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270).
+- [Segmenten geconfigureerd](segments.md) in Customer Insights.
+- Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten een veld voor e-mailadres.
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Uw segment in Customer Insights moet minimaal 300 unieke profielen bevatten. 
-- U kunt tot 100.000 klantprofielen per export exporteren naar LinkedIn Ads.
-- Exporteren naar LinkedIn Ads is beperkt tot segmenten.
-- Het exporteren van tot 100.000 klantprofielen naar LinkedIn Ads kan tot 10 minuten duren. 
+- Maximaal 100.000 klantprofielen per export naar LinkedIn Ads en dit kan tot 10 minuten duren.
+- Alleen segmenten. Een segment moet minimaal 300 unieke profielen bevatten.
 
-## <a name="set-up-the-connection-to-linkedin-ads"></a>De verbinding instellen met LinkedIn Ads
+## <a name="set-up-connection-to-linkedin-ads"></a>De verbinding instellen met LinkedIn Ads
+
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Ga naar **Beheerder** > **Verbindingen**.
 
-1. Selecteer **Verbinding toevoegen** en kies **LinkedIn Ads** om de verbinding te configureren.
+1. Selecteer **Verbinding toevoegen** en kies **LinkedIn Ads**.
 
 1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
 
-1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt beheerders gebruikt als standaardoptie. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
+1. Kies wie deze verbinding kan gebruiken. Standaard zijn dit alleen beheerders. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
-1. Geef uw [LinkedIn Campaign Manager-account-id](https://www.linkedin.com/help/lms/answer/a424270) op.
+1. Geef uw account-id van LinkedIn Campaign Manager op.
 
-1. Selecteer **Ik ga akkoord** om **Gegevensprivacy en naleving** te bevestigen.
+1. Bekijk [Gegevensprivacy en naleving](connections.md#data-privacy-and-compliance) en selecteer **Ik ga akkoord**.
 
-1. Selecteer **Verbinden** om de verbinding met Campaign Monitor te initialiseren.
+1. Selecteer **Verbinden** om de verbinding te initialiseren.
 
 1. Selecteer **Verifiëren met LinkedIn** en geef uw beheerdersreferenties voor LinkedIn Campaign Manager op.
 
@@ -56,29 +57,26 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar LinkedIn Ads om matc
 
 ## <a name="configure-an-export"></a>Een export configureren
 
-U kunt een export configureren als u toegang hebt tot een verbinding van dit type. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Ga naar **Gegevens** > **Exports**.
 
-1. Selecteer **Bestemming toevoegen** om een nieuwe export te maken.
+1. Selecteer **Export toevoegen**.
 
-1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie LinkedIn Ads. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
+1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie LinkedIn Ads. Neem contact op met een beheerder als er geen verbinding beschikbaar is.
 
-1. Kies of u gegevens wilt exporteren om [targeting van contactpersonen](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) of [targeting van bedrijve](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) uit te voeren op LinkedIn. 
+1. Voer de naam in voor de export.
 
-1. In de sectie **Gegevensvergelijking** selecteert u voor targeting van contactpersonen ten minste één veld met het e-mailadres, de Apple Ad ID, de Google Ad ID, de Google-gebruikers-id of voor- en achternaam van de klant. Als u kiest voor bedrijfstargeting, selecteert u ten minste één veld met een bedrijfsnaam, e-maildomein, LinkedIn-pagina-URL, Ticker-symbool of website. Extra velden kunnen worden geselecteerd om uw export verder te definiëren. 
+1. Kies of u gegevens wilt exporteren om [targeting van contactpersonen](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) of [targeting van bedrijve](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) uit te voeren op LinkedIn.
 
-1. Selecteer de segmenten die u wilt exporteren. De matched audiences in LinkedIn Campaign Manager worden automatisch gemaakt met de naam van de segmenten die u hebt geselecteerd om te exporteren. Elk segment resulteert in een aparte matched audience. 
+1. In de sectie **Gegevensvergelijking** selecteert u voor targeting van contactpersonen ten minste één veld met het e-mailadres, de Apple Ad ID, de Google Ad ID, de Google-gebruikers-id of voor- en achternaam van de klant. Als u kiest voor bedrijfstargeting, selecteert u ten minste één veld met een bedrijfsnaam, e-maildomein, LinkedIn-pagina-URL, Ticker-symbool of website.
 
-1. Selecteer **Opslaan**.
+1. Voeg desgewenst velden toe om uw export verder te definiëren. Selecteer **Kenmerk toevoegen** om deze velden toe te wijzen.
 
-Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
+1. Selecteer de segmenten die u wilt exporteren. De matched audiences in LinkedIn Campaign Manager worden automatisch gemaakt met de naam van de segmenten die u hebt geselecteerd om te exporteren. Elk segment resulteert in een aparte matched audience.
 
-De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
+1. Selecteer **Save**.
 
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
-
-Wanneer u Dynamics 365 Customer Insights inschakelt om gegevens naar LinkedIn Ads te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, inclusief mogelijk gevoelige gegevens zoals persoonsgegevens. Microsoft zal dergelijke gegevens op uw instructie overdragen, maar u bent er verantwoordelijk voor dat LinkedIn Ads voldoet aan mogelijke privacy- of beveiligingsverplichtingen. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
-
-Uw Dynamics 365 Customer Insights-beheerder kan deze exportbestemming op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

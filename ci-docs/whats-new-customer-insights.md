@@ -1,28 +1,56 @@
 ---
 title: Nieuwe functies in Dynamics 365 Customer Insights
 description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054012"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114240"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nieuwe functies in Dynamics 365 Customer Insights
 
 We kondigen vol trots onze meest recente updates aan. Dit artikel geeft een overzicht van openbare preview-functies, verbeteringen in de algemene beschikbaarheid en functie-updates. Als u de langetermijnplannen voor functies wilt zien, bekijkt u de [releaseplannen voor Dynamics 365 en Power Platform](/dynamics365/release-plans/).
 
-We implementeren updates per regio. In sommige regio's komen functies dus mogelijk eerder beschikbaar dan in andere. Tenzij anders gespecificeerd, hoeft u geen actie te ondernemen en updaten we de app automatisch zonder downtime.
+We implementeren updates per regio. In sommige regio's komen functies dus mogelijk eerder beschikbaar dan in andere. Tenzij anders gespecificeerd, hoeft u geen actie te ondernemen en werken we de app automatisch bij zonder downtime.
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>Updates juni 2022
+
+De updates in juni 2022 omvatten nieuwe functies, prestatie-upgrades en bugfixes.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Bijgewerkte gebruikerservaring voor gegevensbronnen en gegevensopname
+
+Het importeren van gegevens uit een breed scala van gegevensbronnen vormt de basis voor het consolideren van uw klantgegevens in Dynamics 365 Customer Insights. We hebben de gebruikerservaring voor het importeren en koppelen van gegevensbronnen opnieuw bekeken. Deze update is bedoeld om het voor u gemakkelijker te maken om gegevens in Customer Insights op te nemen.
+
+Zie [Overzicht gegevensbronnen](data-sources.md) voor meer informatie.
+
+### <a name="export-to-inmobi"></a>Exporteren naar InMobi
+
+InMobi helpt merken om consumenten te begrijpen, te identificeren, contact te maken en te werven. U kunt segmenten en andere gegevens exporteren naar de InMobi-service exporteren via Azure Blob Storage-accounts.
+
+Zie [Exporteren naar InMobi (preview)](export-inmobi.md) voor meer informatie.
+
+### <a name="lockbox-support-in-customer-insights"></a>Lockbox-ondersteuning in Customer Insights
+
+Klanten-Lockbox biedt een interface om verzoeken om gegevenstoegang te beoordelen en goed te keuren (of af te wijzen). Deze verzoeken doen zich voor wanneer gegevenstoegang tot klantgegevens nodig is om een ondersteuningscase op te lossen.
+
+Zie [Veilig toegang krijgen tot klantgegevens met Klanten-Lockbox (preview)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview) voor meer informatie.
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Verbinding maken met uw gegevens met behulp van Azure Private Link
+
+Met Azure Private Link maakt Customer Insights verbinding met uw Azure Data Lake Storage-account via een privé-eindpunt in uw virtuele netwerk. Voor gegevens in een opslagaccount, dat niet is blootgesteld aan het openbare internet, maakt Private Link de verbinding met dat beperkte netwerk mogelijk.
+
+Zie [Private Link in Customer Insights gebruiken](security-overview.md#private-links-tab) voor meer informatie.
 
 ## <a name="may-2022-updates"></a>Updates voor mei 2022
 

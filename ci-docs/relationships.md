@@ -21,21 +21,21 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e622e5fa0b5738e31db1c668d95312adbc4f7d36
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081088"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183547"
 ---
 # <a name="relationships-between-entities-and-entity-paths"></a>Relaties tussen entiteiten en entiteitspaden
 
 Relaties verbinden entiteiten en definiëren een grafiek van uw gegevens wanneer entiteiten een gemeenschappelijke id, een refererende sleutel, delen. Er kan vanuit de ene entiteit naar de andere worden verwezen met deze refererende sleutel. Verbonden entiteiten maken het definiëren van segmenten en meetcriteria mogelijk op basis van meerdere gegevensbronnen.
 
 Er zijn drie typen relaties: 
-- Niet-bewerkbaar systeemrelaties, die door het systeem worden gemaakt als onderdeel van het gegevensharmonisatieproces
-- Niet-bewerkbare overgenomen relaties, die automatisch worden gemaakt op basis van het opnemen van gegevensbronnen 
-- Bewerkbare aangepaste relaties, die worden gemaakt en geconfigureerd door gebruikers
+- Niet-bewerkbaar systeemrelaties worden door het systeem gemaakt als onderdeel van het gegevensharmonisatieproces
+- Niet-bewerkbare overgenomen relaties worden automatisch gemaakt op basis van het opnemen van gegevensbronnen
+- Bewerkbare aangepaste relaties worden gemaakt en geconfigureerd door gebruikers
 
 ## <a name="non-editable-system-relationships"></a>Niet-bewerkbare systeemrelaties
 
@@ -67,69 +67,66 @@ Relatie bestaat uit een *bronentiteit* met de refererende sleutel en een *doelen
    - **Beschrijving**: de beschrijving van de relatie.
    - **Bronentiteit**: entiteit die wordt gebruikt als bron in de relatie. Voorbeeld: SupportCase.
    - **Doelentiteit**: entiteit die wordt gebruikt als doel in de relatie. Voorbeeld: Customer.
-   - **Bronkardinaliteit**: geef de kardinaliteit van de bronentiteit op. Kardinaliteit beschrijft het aantal mogelijke elementen in een set. Het heeft altijd betrekking op de doelkardinaliteit. U kunt kiezen tussen **Een** en **Veel**. Alleen veel-op-één- en één-op-één-relaties worden ondersteund.  
+   - **Bronkardinaliteit**: kardinaliteit van de bronentiteit. Kardinaliteit beschrijft het aantal mogelijke elementen in een set. Het heeft altijd betrekking op de doelkardinaliteit. U kunt kiezen tussen **Een** en **Veel**. Alleen veel-op-één- en één-op-één-relaties worden ondersteund.  
      - Veel-op-één: meerdere bronrecords kunnen betrekking hebben op één doelrecord. Voorbeeld: meerdere ondersteuningsaanvragen van een enkele klant.
      - Eén-op-één: een enkele bronrecord heeft betrekking op één doelrecord. Voorbeeld: één loyaliteits-id voor een enkele klant.
 
      > [!NOTE]
      > Veel-op-veel-relaties kunnen worden gemaakt met behulp van twee veel-op-één-relaties en een koppelingsentiteit, die de bronentiteit en de doelentiteit verbindt.
 
-   - **Doelkardinaliteit**: selecteer de kardinaliteit van de doelentiteitsrecords. 
-   - **Bronsleutelveld**: het veld voor de refererende sleutel in de bronentiteit. Voorbeeld: SupportCase kan CaseID gebruiken als veld voor refererende sleutel.
-   - **Doelsleutelveld**: het sleutelveld van de doelentiteit. Voorbeeld: Customer zou het sleutelveld **CustomerID** kunnen gebruiken.
+   - **Doelkardinaliteit**: kardinaliteit van de doelentiteitsrecords.
+   - **Bronsleutelveld**: het veld voor de refererende sleutel in de bronentiteit. Voorbeeld: SupportCase gebruikt **CaseID** als veld voor refererende sleutel.
+   - **Doelsleutelveld**: sleutelveld van de doelentiteit. Voorbeeld: klant gebruikt **CustomerID** als sleutelveld.
 
 4. Selecteer **Opslaan** om de aangepaste relatie te maken.
 
 ## <a name="set-up-account-hierarchies"></a>Accounthiërarchieën instellen
 
-Omgevingen die zijn geconfigureerd om zakelijke accounts als primaire doelgroep te gebruiken, kunnen accounthiërarchieën configureren voor gerelateerde zakelijke accounts. Bijvoorbeeld een bedrijf met aparte business units. 
+Omgevingen die zijn geconfigureerd om zakelijke accounts als de primaire doelgroep te gebruiken, kunnen accounthiërarchieën configureren voor gerelateerde zakelijke accounts. Bijvoorbeeld een bedrijf met aparte business units.
 
 Organisaties maken accounthiërarchieën om accounts en hun relaties beter met elkaar te kunnen beheren. Customer Insights ondersteunt hiërarchieën van bovenliggende en onderliggende accounts die al bestaan in opgenomen klantgegevens. Bijvoorbeeld accounts uit Dynamics 365 Sales. Deze hiërarchieën kunnen worden geconfigureerd op de pagina **Relaties**.
 
 1. Ga naar **Gegevens** > **Relaties**.
 1. Selecteer het tabblad **Accounthiërarchie**.
-1. Selecteer **Nieuwe accounthiërarchie**. 
-1. Geef in het deelvenster **Accounthiërarchie** een naam op voor de hiërarchie. Het systeem maakt een naam voor de uitvoerentiteit. U kunt de naam van de uitvoerentiteit wijzigen.
+1. Selecteer **Nieuwe accounthiërarchie**.
+1. Geef in het deelvenster **Accounthiërarchie** een naam op voor de hiërarchie. Er wordt een naam voor de uitvoerentiteit gemaakt, maar u kunt deze wijzigen.
 1. Selecteer de entiteit die uw accounthiërarchie bevat. Het bevindt zich meestal in dezelfde entiteit die de accounts bevat.
-1. Selecteer de **Account-id** en **Bovenliggende account-id** van de geselecteerde entiteit 
-1. Selecteer **Opslaan** om de instellingen toe te passen en de accounthiërarchie te voltooien.
+1. Selecteer de **Account-UID** en **Bovenliggende UID** van de geselecteerde entiteit.
+1. Selecteer **Opslaan** om de accounthiërarchie te voltooien.
 
-## <a name="view-relationships"></a>Relaties weergeven
+## <a name="manage-existing-relationships"></a>Bestaande relaties beheren
 
-Op de pagina Relaties worden alle relaties vermeld die zijn gemaakt. Elke rij vertegenwoordigt een relatie, die ook details bevat over de bronentiteit, de doelentiteit en de kardinaliteit. 
+Ga naar de pagina **Relaties** om alle relaties te bekijken die zijn gemaakt, de bronentiteit, de doelentiteit en de kardinaliteit ervan.
 
 :::image type="content" source="media/relationships-list.png" alt-text="Lijst met relaties en opties in de actiebalk van de pagina Relaties.":::
 
-Deze pagina biedt een reeks opties voor bestaande en nieuwe relaties: 
-- **Nieuwe relatie:** [maak een aangepaste relatie](#create-a-custom-relationship).
-- **Visualizer**: [verken de relatievisualizer](#explore-the-relationship-visualizer) om een netwerkdiagram te zien van de bestaande relaties en hun kardinaliteit.
-- **Filteren op**: kies het type relaties om in de lijst weer te geven.
-- **Relaties zoeken**: gebruik een op tekst gebaseerde zoekopdracht op eigenschappen van de relaties.
+Gebruik de opties **Filteren op** of **Relaties zoeken** om een bepaalde relatie te vinden. Selecteer [**Visualizer**](#explore-the-relationship-visualizer) om een netwerkdiagram te zien van de bestaande relaties en de kardinaliteit ervan.
+
+Selecteer een relatie om beschikbare acties te bekijken:
+- **Bewerken**: werk eigenschappen van aangepaste relaties bij in het bewerkingsvenster en sla de wijzigingen op.
+- **Verwijderen**: aangepaste relaties verwijderen.
+- **Weergeven**: door het systeem gemaakte en overgenomen relaties bekijken.
 
 ### <a name="explore-the-relationship-visualizer"></a>De relatievisualizer verkennen
 
 De relatievisualizer geeft een netwerkdiagram van de bestaande relaties tussen verbonden entiteiten en hun kardinaliteit weer. Het visualiseert ook het relatiepad.
 
-Om de weergave aan te passen, kunt u de positie van de vakken wijzigen door ze op het canvas te slepen.
-
 :::image type="content" source="media/relationship-visualizer.png" alt-text="Schermopname van het netwerkdiagram van de relatievisualizer met verbindingen tussen gerelateerde entiteiten.":::
 
-Beschikbare opties: 
+Om de weergave aan te passen, kunt u de positie van de vakken wijzigen door ze op het canvas te slepen. Andere opties zijn onder meer: 
 - **Exporteren als afbeelding**: sla de huidige weergave op als een afbeeldingsbestand.
 - **Wijzigen naar horizontale/verticale indeling**: wijzig de uitlijning van de entiteiten en relaties.
 - **Bewerken**: werk eigenschappen van aangepaste relaties bij in het bewerkingsvenster en sla de wijzigingen op.
 
 ## <a name="relationship-paths"></a>Relatiepaden
 
-Een relatiepad beschrijft de entiteiten die zijn verbonden met relaties tussen een bron- en een doelentiteit. Het wordt gebruikt bij het maken van een segment of een meting die andere entiteiten dan de geharmoniseerde profielentiteit omvat en er zijn meerdere opties om de geharmoniseerde profielentiteit te bereiken. 
-
-Een relatiepad informeert het systeem over welke relaties toegang moeten krijgen tot de uniforme profielentiteit. Verschillende relatiepaden kunnen verschillende resultaten opleveren.
+Een relatiepad beschrijft de entiteiten die zijn verbonden met relaties tussen een bron- en een doelentiteit. Het wordt gebruikt bij het maken van een segment of een meting die andere entiteiten dan de geharmoniseerde profielentiteit omvat en er zijn meerdere opties om de geharmoniseerde profielentiteit te bereiken. Verschillende relatiepaden kunnen verschillende resultaten opleveren.
 
 Zo heeft de entiteit *eCommerce_eCommercePurchases* bijvoorbeeld de volgende relaties met de geharmoniseerde profielentiteit *Klant*:
 
 - eCommerce_eCommercePurchases > Klant
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klant
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klant 
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klant
 
 Een relatiepad bepaalt welke entiteiten u kunt gebruiken bij het maken van regels voor metingen of segmenten. Het kiezen van de optie met het langste relatiepad zal waarschijnlijk minder resultaten opleveren omdat de overeenkomende records deel moeten uitmaken van alle entiteiten. In dit voorbeeld moet een klant goederen hebben gekocht via e-commerce (eCommerce_eCommercePurchases) bij een verkooppunt (POS_posPurchases) en deelnemen aan ons loyaliteitsprogramma (loyaltyScheme_loyCustomers). Als u de eerste optie kiest, krijgt u waarschijnlijk meer resultaten omdat klanten maar in één extra entiteit hoeven te bestaan.
 
@@ -155,7 +152,7 @@ Een relatie wordt geclassificeerd als een **indirecte relatie** wanneer een bron
 
 #### <a name="multi-hop-relationship"></a>Relatie met meerdere hops
 
-Een *relatie met meerdere hops* is een *indirecte relatie* waarmee u een bronentiteit kunt verbinden met een doelentiteit via een of meer andere intermediaire entiteiten.
+Een **relatie met meerdere hops** is een *indirecte relatie* waarmee u een bronentiteit kunt verbinden met een doelentiteit via een of meer andere intermediaire entiteiten.
 
 Als bijvoorbeeld een activiteitsentiteit genaamd *eCommerce_eCommercePurchasesWest* verbinding maakt met een tussenliggende entiteit genaamd *eCommerce_eCommercePurchasesEast* en vervolgens verbinding maakt met een doelentiteit genaamd *eCommerce_eCommerceContacts*, is het een relatie met meerdere hops.
 
@@ -168,16 +165,6 @@ Relaties met meerdere hops en meerdere paden kunnen samen worden gebruikt om **r
 Als bijvoorbeeld een activiteitsentiteit genaamd *eCommerce_eCommercePurchasesWest* verbinding maakt met een tussenliggende entiteit genaamd *eCommerce_eCommercePurchasesEast* en vervolgens verbinding maakt met twee doelentiteiten genaamd *eCommerce_eCommerceContacts* en *loyaltyScheme_loyCustomers* is het een relatie met meerdere hops en meerdere paden.
 
 :::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Bronentiteit maakt rechtstreeks verbinding met de één doelentiteit en maakt verbinding met een andere doelentiteit via een tussenliggende entiteit.":::
-
-## <a name="manage-existing-relationships"></a>Bestaande relaties beheren 
-
-Op de pagina Relaties wordt elke relatie weergegeven door een rij. 
-
-Selecteer een relatie en kies een van de volgende opties: 
- 
-- **Bewerken**: werk eigenschappen van aangepaste relaties bij in het bewerkingsvenster en sla de wijzigingen op.
-- **Verwijderen**: aangepaste relaties verwijderen.
-- **Weergeven**: door het systeem gemaakte en overgenomen relaties bekijken. 
 
 ## <a name="next-step"></a>Volgende stap
 

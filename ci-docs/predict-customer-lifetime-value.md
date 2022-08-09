@@ -1,7 +1,7 @@
 ---
 title: Voorspelling van de levensduurwaarde van klanten
 description: Voorspel het inkomstenpotentieel voor actieve klanten in de toekomst.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055208"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186434"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Voorspelling van de levensduurwaarde van klanten
 
 Voorspel potentiële waarde (inkomsten) die individuele actieve klanten voor uw bedrijf zullen binnenhalen gedurende een bepaalde toekomstige periode. Deze functie kan u helpen verschillende doelen te bereiken:
+
 - Klanten met hoge waarde identificeren en dit inzicht verwerken
 - Maak strategische klantsegmenten op basis van hun potentiële waarde om gepersonaliseerde campagnes uit te voeren met gerichte verkoop-, marketing- en ondersteuningsinspanningen
 - Leid productontwikkeling door te focussen op functies die de klantwaarde verhogen
 - Optimaliseer de verkoop- of marketingstrategie en wijs het budget nauwkeuriger toe voor klantenbereik
-- Erken en beloon klanten met een hoge waarde via loyaliteits- of beloningsprogramma's 
+- Erken en beloon klanten met een hoge waarde via loyaliteits- of beloningsprogramma's
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -35,7 +36,7 @@ Bedenk voordat u begint wat levensduurwaarde van klanten voor uw bedrijf beteken
 
 Aangezien het configureren en uitvoeren van een model voor levensduurwaarde van klanten niet veel tijd kost, kunt u overwegen om verschillende modellen met verschillende invoervoorkeuren te maken en modelresultaten te vergelijken om te zien welk modelscenario het best bij uw bedrijfsbehoeften past.
 
-###  <a name="data-requirements"></a>Gegevensvereisten
+### <a name="data-requirements"></a>Gegevensvereisten
 
 De volgende gegevens zijn vereist en worden, indien gemarkeerd als optioneel, aanbevolen voor betere modelprestaties. Hoe meer gegevens het model kan verwerken, hoe nauwkeuriger de voorspelling zal zijn. Daarom raden we u aan meer gegevens over klantactiviteit op te nemen, indien beschikbaar.
 
@@ -52,11 +53,12 @@ De volgende gegevens zijn vereist en worden, indien gemarkeerd als optioneel, aa
     - Webactiviteiten: geschiedenis van websitebezoek, e-mailgeschiedenis
     - Loyaliteitsactiviteiten: opbouw van loyaliteitsbeloningspunten en inwisselgeschiedenis
     - Klantenservicelogboek, serviceoproep, klacht of retourgeschiedenis
+    - Klantprofielgegevens
 - Gegevens over klantactiviteiten (optioneel):
     - Activiteits-id's om activiteiten van hetzelfde type te onderscheiden
     - Klant-id's om activiteiten te koppelen aan uw klanten
     - Activiteitsinformatie met de naam en datum van de activiteit
-    - Het semantische gegevensschema voor activiteiten omvat: 
+    - Het semantische gegevensschema voor activiteiten omvat:
         - **Primaire sleutel:** een unieke id voor een activiteit.
         - **Tijdstempel:** de datum en tijd van de gebeurtenis die wordt geïdentificeerd door de primaire sleutel.
         - **Gebeurtenis (activiteitnaam)**: de naam van de gebeurtenis die u wilt gebruiken
@@ -66,7 +68,7 @@ De volgende gegevens zijn vereist en worden, indien gemarkeerd als optioneel, aa
     - Voldoende historische gegevens: transactiegegevens van minimaal één jaar. Bij voorkeur twee tot drie jaar transactiegegevens om CLV voor één jaar te voorspellen.
     - Meerdere aankopen per klant: idealiter ten minste twee tot drie transacties per klant-id, bij voorkeur op meerdere datums.
     - Aantal klanten: minimaal 100 unieke klanten, bij voorkeur meer dan 10.000 klanten. Het model mislukt bij minder dan 100 klanten en onvoldoende historische gegevens
-    - Compleetheid van gegevens: minder dan 20% ontbrekende waarden in verplichte velden in de invoergegevens   
+    - Compleetheid van gegevens: minder dan 20% ontbrekende waarden in verplichte velden in de invoergegevens
 
 > [!NOTE]
 > - Het model vereist de transactiegeschiedenis van uw klanten. Er kan momenteel slechts één transactiehistorie-entiteit worden geconfigureerd. Als er meerdere aankoop-/transactie-entiteiten zijn, kunt u deze samenvoegen in Power Query vóór de gegevensopname.
@@ -122,11 +124,11 @@ De volgende gegevens zijn vereist en worden, indien gemarkeerd als optioneel, aa
 
 1. Selecteer **Volgende**.
 
-### <a name="add-optional-data"></a>Optionele gegevens toevoegen
+### <a name="add-optional-activity-data"></a>Optionele activiteitsgegevens toevoegen
 
-Gegevens die belangrijke klantinteracties weerspiegelen (zoals web, klantenservice en gebeurtenislogboeken) voegen context toe aan transactierecords. Meer patronen die in de gegevens van uw klantactiviteit worden gevonden, kunnen de nauwkeurigheid van de voorspellingen verbeteren. 
+Gegevens die belangrijke klantinteracties weerspiegelen (zoals web, klantenservice en gebeurtenislogboeken) voegen context toe aan transactierecords. Meer patronen die in de gegevens van uw klantactiviteit worden gevonden, kunnen de nauwkeurigheid van de voorspellingen verbeteren.
 
-1. Selecteer in de stap **Aanvullende gegevens (optioneel)** de optie **Gegevens toevoegen**​. Kies de entiteit voor klantactiviteit die de informatie over de klantactiviteit verstrekt, zoals beschreven in de [vereisten](#prerequisites).
+1. Selecteer in de stap **Aanvullende gegevens (optioneel)** **Gegevens toevoegen** onder **Modelinzichten verbeteren met aanvullende activiteitsgegevens**. Kies de entiteit voor klantactiviteit die de informatie over de klantactiviteit verstrekt, zoals beschreven in de [vereisten](#prerequisites).
 
 1. Wijs de semantische velden toe aan kenmerken binnen de entiteit Klantactiviteiten en selecteer **Volgende**.
 
@@ -135,15 +137,34 @@ Gegevens die belangrijke klantinteracties weerspiegelen (zoals web, klantenservi
 1. Selecteer een activiteitstype dat overeenkomt met het type klantactiviteit dat u toevoegt. Kies uit bestaande activiteitstypen of voeg een nieuw activiteitstype toe.
 
 1. Configureer de relatie van uw klantactiviteitentiteit met de entiteit *Klant*.
-    
+
     1. Selecteer het veld dat de klant identificeert in de tabel Klantactiviteiten. Het kan rechtstreeks verband houden met de primaire klant-id van de entiteit *Klant*.
     1. Selecteer de entiteit *Klant* die overeenkomt met uw primaire entiteit *Klant*.
     1. Voer een naam in waarmee de relatie wordt omschreven.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Afbeelding van de stap in de configuratiestroom om extra gegevens toe te voegen en de activiteit te configureren met ingevulde voorbeelden.":::
 
-1. Selecteer **Opslaan**.    
+1. Selecteer **Opslaan**.
     Voeg meer gegevens toe als er andere klantactiviteiten zijn die u wilt opnemen.
+
+1. Voeg optionele klantgegevens toe of selecteer **Volgende**.
+
+### <a name="add-optional-customer-data"></a>Optionele klantgegevens toevoegen
+
+Kies uit 18 veelgebruikte klantprofielkenmerken om als invoer voor het model op te nemen. Deze kenmerken kunnen leiden tot meer gepersonaliseerde, relevante en bruikbare modelresultaten voor uw zakelijke gebruiksscenario's.
+
+Bijvoorbeeld: Contoso Coffee wil de levensduurwaarde van de klant voorspellen om klanten met een hoge waarde te benaderen met een gepersonaliseerd aanbod met betrekking tot de lancering van hun nieuwe espressomachine. Contoso gebruikt het CLV-model en voegt alle 18 kenmerken van klantprofielen toe om te zien welke factoren van invloed zijn op hun klanten met de hoogste waarde. Ze vinden dat de locatie van de klant de meest invloedrijke factor is voor deze klanten.
+Met deze informatie organiseren ze een lokaal evenement voor de lancering van de espressomachine en werken ze samen met lokale verkopers voor gepersonaliseerde aanbiedingen en een speciale ervaring tijdens het evenement. Zonder deze informatie zou Contoso mogelijk alleen generieke marketing-e-mails hebben verzonden en zo de kans gemist hebben om te personaliseren voor dit lokale segment van hun klanten met een hoge waarde.
+
+1. Selecteer in de stap **Aanvullende gegevens (optioneel)** **Gegevens toevoegen** onder **Modelinzichten nog verder verbeteren met aanvullende klantsgegevens**.
+
+1. Kies voor **Entiteit** **Klant: CustomerInsights** om de tabel met geharmoniseerde klantprofielen te selecteren die is toegewezen aan klantkenmerkgegevens. Kies voor **Klant-id** **System.Customer.CustomerId**.
+
+1. Wijs meer velden toe als de gegevens beschikbaar zijn in uw geharmoniseerde klantprofielen.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Voorbeeld van toegewezen velden voor klantprofielgegevens.":::
+
+1. Selecteer **Opslaan** na het toewijzen van de kenmerken die het model moet gebruiken om de waarde van de levensduur van de klant te helpen voorspellen.
 
 1. Selecteer **Volgende**.
 

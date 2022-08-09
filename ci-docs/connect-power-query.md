@@ -1,7 +1,7 @@
 ---
 title: Verbinding maken met een Power Query-gegevensbron (met video)
 description: Neem gegevens op via een Power Query-connector (met video).
-ms.date: 06/13/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080995"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207039"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinding maken met een Power Query-gegevensbron
 
@@ -41,22 +41,29 @@ Bij het toevoegen van gegevensbronnen op basis van Power Query-connectors worden
 
 1. Voer de vereiste gegevens in voor de **Verbindingsinstellingen** voor de geselecteerde connector en selecteer **Volgende** om een voorbeeld van de gegevens te zien.
 
-1. Selecteer **Gegevens transformeren**. In deze stap voegt u entiteiten toe aan uw gegevensbron. Entiteiten zijn gegevenssets. Als u een database hebt die meerdere gegevenssets bevat, is elke gegevensset zijn eigen entiteit.
+1. Selecteer **Gegevens transformeren**.
 
 1. Met het dialoogvenster **Power Query - Query's bewerken** kunt u de gegevens bekijken en verfijnen. De entiteiten die de systemen in uw geselecteerde gegevensbron hebben geïdentificeerd, verschijnen in het linkerdeelvenster.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Dialoogvenster Query's bewerken":::
 
-1. U kunt uw gegevens ook transformeren. Selecteer een entiteit om te bewerken of transformeren. Gebruik de opties in het Power Query-venster om transformaties toe te passen. Elke transformatie wordt vermeld onder **Toegepaste stappen**. Power Query biedt tal van vooraf gebouwde transformatieopties. Voor meer informatie raadpleegt u [Power Query-transformaties](/power-query/power-query-what-is-power-query#transformations).
+1. U kunt uw gegevens ook transformeren. Selecteer een entiteit om te bewerken of transformeren. Gebruik de opties in het Power Query-venster om transformaties toe te passen. Elke transformatie wordt vermeld onder **Toegepaste stappen**. Power Query biedt tal van [vooraf gebouwde transformatie](/power-query/power-query-what-is-power-query#transformations)opties.
 
    We raden u aan de volgende transformaties te gebruiken:
 
    - Als u gegevens opneemt uit een CSV-bestand, bevat de eerste rij vaak kopteksten. Ga naar **Transformeren** en selecteer **De eerste rij als veldnamen gebruiken**.
    - Zorg ervoor dat het gegevenstype correct is ingesteld. Selecteer bijvoorbeeld een datumtype voor datumvelden.
 
-1. Als u extra entiteiten wilt toe te voegen aan uw gegevensbron in het dialoogvenster **Query's bewerken**, ga naar **Start** en selecteer **Gegevens ophalen**. Herhaal stap 6-10 totdat u alle entiteiten voor deze gegevensbron hebt toegevoegd.
+1. Als u extra entiteiten wilt toe te voegen aan uw gegevensbron in het dialoogvenster **Query's bewerken**, ga naar **Start** en selecteer **Gegevens ophalen**. Herhaal stap 5-10 totdat u alle entiteiten voor deze gegevensbron hebt toegevoegd. Als u een database hebt die meerdere gegevenssets bevat, is elke gegevensset zijn eigen entiteit.
 
 1. Selecteer **Save**. De pagina **Gegevensbronnen** wordt geopend met de nieuwe gegevensbron met de status **Vernieuwen**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Het laden van gegevens kan enige tijd vergen. Na een succesvolle vernieuwing kunnen de opgenomen gegevens worden bekeken vanaf de pagina [**Entiteiten**](entities.md).
+
+> [!CAUTION]
+> Met een op basis van Power Query wordt een [gegevensstroom in Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) gemaakt. Wijzig de naam van een gegevensstroom niet in het Power Platform-beheercentrum dat wordt gebruikt in Customer Insights. Het hernoemen van een gegevensstroom veroorzaakt problemen met de verwijzingen tussen de Customer Insights-gegevensbron en de Dataverse-gegevensstroom.
 
 ### <a name="available-power-query-data-sources"></a>Beschikbare Power Query-gegevensbronnen
 
@@ -74,11 +81,13 @@ Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving worden zicht
 
 > [!IMPORTANT]
 > Zorg ervoor dat uw gateways zijn bijgewerkt naar de nieuwste versie. U kunt een update installeren en een gateway opnieuw configureren vanaf een prompt die direct op het gatewayscherm wordt weergegeven of [de meest recente versie downloaden](https://powerapps.microsoft.com/downloads/). Als u niet de nieuwste gatewayversie gebruikt, mislukt het vernieuwen van de gegevensstroom met foutmeldingen zoals **Het trefwoord wordt niet ondersteund: configuratie-eigenschappen. Parameternaam: trefwoord**.
+>
+> Fouten met on-premises-gegevensgateways in Customer Insights worden vaak veroorzaakt door configuratieproblemen. Zie [Problemen met de on-premises gegevensgateway oplossen](/data-integration/gateway/service-gateway-tshoot) voor meer informatie over het oplossen van problemen met gegevensgateways.
 
 ## <a name="edit-power-query-data-sources"></a>Power Query-gegevensbronnen bewerken
 
 > [!NOTE]
-> Het is misschien niet mogelijk om wijzigingen aan te brengen in gegevensbronnen die momenteel worden gebruikt in een van de processen van de app (bijvoorbeeld *segmentatie*, *afstemming* of *samenvoeging*).
+> Het is misschien niet mogelijk om wijzigingen aan te brengen in gegevensbronnen die momenteel worden gebruikt in een van de processen van de app (bijvoorbeeld segmentatie of gegevensharmonisatie).
 >
 > Op de pagina **Instellingen** kunt u de voortgang van elk van de actieve processen volgen. Wanneer een proces is voltooid, kunt u terugkeren naar de pagina **Gegevensbronnen** en uw wijzigingen aanbrengen.
 
@@ -86,8 +95,10 @@ Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving worden zicht
 
 1. Selecteer **Bewerken** naast de gegevensbron die u wilt bijwerken.
 
-   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
 1. Pas uw wijzigingen en transformaties toe in het dialoogvenster **Power Query - Query's bewerken** zoals beschreven in de sectie [Een nieuwe gegevensbron maken](#create-a-new-data-source).
 
-1. Selecteer **Opslaan** in Power Query na het voltooien van uw bewerkingen om uw wijzigingen op te slaan.
+1. Selecteer **Opslaan** om uw wijzigingen toe te passen en terug te keren naar de pagina **Gegevensbronnen**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

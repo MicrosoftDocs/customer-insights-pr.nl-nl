@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080985"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194917"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Invoegtoepassing Klantkaart voor Dynamics 365-app (preview)
 
@@ -28,21 +28,25 @@ Krijg een compleet overzicht van uw klanten rechtstreeks in Dynamics 365-apps. A
 
 ## <a name="prerequisites"></a>Vereisten
 
-- De invoegtoepassing werkt alleen met modelgestuurde Dynamics 365-apps, zoals Sales of Customer Service, versie 9.0 en hoger.
-- Voor toewijzing van uw Dynamics 365-gegevens aan Customer Insights raden we aan ze [op te nemen vanuit de Dynamics 365-app met behulp van de Microsoft Dataverse-connector](connect-power-query.md). Als u een andere methode gebruikt om Dynamics 365-contactpersonen (of -accounts) op te nemen, moet u ervoor zorgen dat het veld `contactid` (of `accountid`) is ingesteld als de [primaire sleutel voor die gegevensbron in de kaartstap van het gegevensharmonisatieproces](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Modelgestuurde Dynamics 365-apps, zoals Sales of Customer Service, versie 9.0 en hoger.
+- Voor toewijzing van uw Dynamics 365-gegevens aan Customer Insights raden we aan ze [op te nemen vanuit de Dynamics 365-app met behulp van de Microsoft Dataverse-connector](connect-power-query.md). Als u een andere methode gebruikt om Dynamics 365-contactpersonen (of -accounts) op te nemen, moet u ervoor zorgen dat het veld `contactid` (of `accountid`) is ingesteld als de [primaire sleutel voor die gegevensbron gedurende het gegevensharmonisatieproces](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Alle Dynamics 365-gebruikers van de Customer Card-invoegtoepassing moeten worden [toegevoegd als gebruikers](permissions.md) in Customer Insights om de gegevens te bekijken.
-- [Geconfigureerde zoek- en filtermogelijkheden](search-filter-index.md) in Customer Insights zijn vereist om het opzoeken van gegevens te laten werken.
+- [Geconfigureerde zoek- en filtermogelijkheden](search-filter-index.md) in Customer Insights.
 - Elk besturingselement van de invoegtoepassing is afhankelijk van specifieke gegevens in Customer Insights. Sommige gegevens en besturingselementen zijn alleen beschikbaar in omgevingen van specifieke typen. De configuratie van de invoegtoepassing zal u informeren als een besturingselement niet beschikbaar is vanwege het geselecteerde omgevingstype. Meer informatie over [gebruiksscenario's en omgevingen](work-with-business-accounts.md).
-  - **Metingcontrole**: hiervoor zijn [geconfigureerde metingen](measures.md) van het type klantkenmerken vereist.
-  - **Informatiebeheer**: vereist gegevens die zijn gegenereerd met [voorspellingen of aangepaste modellen](predictions-overview.md).
-  - **Controle klantgegevens**: alle velden uit het profiel zijn beschikbaar in het geharmoniseerde klantprofiel.
-  - **Besturingselement voor verrijking**: vereist dat actieve [verrijkingen](enrichment-hub.md) worden toegepast op klantprofielen. De kaart invoegtoepassing ondersteunt deze verrijkingen: [Merken](enrichment-microsoft.md) geleverd door Microsoft, [Interesses](enrichment-microsoft.md) geleverd door Microsoft en [Betrokkenheidsgegevens kantoor](enrichment-office.md) geleverd door Microsoft.
-  - **Controle contactpersonen**: hiervoor is de definitie van de semantische entiteit van het type contactpersonen vereist.
-  - **Tijdlijncontrole**: vereist [geconfigureerde activiteiten](activities.md).
+  - Voor **Besturingselement voor meting** zijn [geconfigureerde metingen van het type klantkenmerken](measures.md) vereist.
+  - Voor **Besturingselement voor intelligentie** zijn gegevens vereist die zijn gegenereerd met [voorspellingen of aangepaste modellen](predictions-overview.md).
+  - **Besturingselement voor klantdetails** bevat alle velden uit het profiel die beschikbaar zijn in het geharmoniseerde klantprofiel.
+  - Voor **Besturingselement voor verrijking** zijn actieve [verrijkingen](enrichment-hub.md) vereist die worden toegepast op klantprofielen. De kaart invoegtoepassing ondersteunt deze verrijkingen: [Merken](enrichment-microsoft.md) geleverd door Microsoft, [Interesses](enrichment-microsoft.md) geleverd door Microsoft en [Betrokkenheidsgegevens kantoor](enrichment-office.md) geleverd door Microsoft.
+  - Voor **Besturingselement voor contactpersonen** is een semantisch entiteitstype voor contactpersonen vereist.
+  - Voor **Besturingselement voor tijdlijn** zijn [geconfigureerde activiteiten](activities.md) vereist.
 
 ## <a name="install-the-customer-card-add-in"></a>De invoegtoepassing Klantkaart installeren
 
-De invoegtoepassing Klantkaart is een oplossing voor apps voor klantbetrokkenheid in Dynamics 365. Als u de oplossing wilt installeren, gaat u naar AppSource en zoekt u naar **Dynamics-klantkaart**. Selecteer de [invoegtoepassing Klantkaart in AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) en selecteer **Nu downloaden**.
+De invoegtoepassing Klantkaart is een oplossing voor apps voor klantbetrokkenheid in Dynamics 365. De oplossing installeren:
+
+1. Ga naar AppSource en zoek naar **Dynamics Customer Card**.
+
+1. Selecteer de [invoegtoepassing Klantkaart in AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) en selecteer **Nu downloaden**.
 
 Mogelijk moet u zich aanmelden met uw beheerdersreferenties voor de Dynamics 365-app om de oplossing te kunnen installeren. Het kan enige tijd duren voordat de oplossing in uw omgeving is geïnstalleerd.
 

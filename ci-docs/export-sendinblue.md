@@ -1,51 +1,54 @@
 ---
 title: Segmenten exporteren naar Sendinblue (preview)
 description: Leer hoe u de verbinding configureert en exporteert naar Sendinblue.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9f6550b5c57866702631b4c294bb059279461bd6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081194"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196940"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Segmenten exporteren naar Sendinblue (preview)
 
 Exporteer de segmenten van geharmoniseerde klantprofielen om campagnes te genereren, e-mailmarketing te bieden en specifieke groepen met klanten te gebruiken met Sendinblue.
 
-## <a name="prerequisites-for-connection"></a>Vereisten voor verbinding
+## <a name="prerequisites"></a>Vereisten
 
--   U hebt een [Sendinblue-account](https://www.sendinblue.com/) en bijbehorende beheerdersreferenties.
--   Er zijn bestaande lijsten in Sendinblue en de bijbehorende id's.
--   U hebt [geconfigureerde segmenten](segments.md).
--   Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten een veld voor e-mailadres.
+- Een [Sendinblue-account](https://www.sendinblue.com/) en bijbehorende beheerdersreferenties.
+- Een [API-sleutel van Sendinblue](https://developers.sendinblue.com/docs/getting-started#:~:text=Get%20your%20API%20key&text=You%20can%20create%20one%20from,your%20settings%20This%20API%20key).
+- Bestaande lijsten in Sendinblue en de bijbehorende id's.
+- [Geconfigureerde segmenten](segments.md).
+- Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten een veld voor e-mailadres.
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Tot 1 miljoen klantprofielen per export naar Sendinblue.
-- Het exporteren naar Sendinblue is beperkt tot segmenten.
-- Het exporteren van segmenten met in totaal 1 miljoen klantprofielen kan tot 90 minuten duren. 
-- Het aantal klantprofielen dat u kunt exporteren naar Sendinblue, is afhankelijk van en wordt beperkt door uw contract met Sendinblue.
+- Maximaal 1 miljoen klantprofielen per export naar Sendinblue en dit kan tot 90 minuten duren. Het aantal klantprofielen dat u kunt exporteren naar Sendinblue, is afhankelijk van uw contract met Sendinblue.
+- Alleen segmenten.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Verbinding instellen met Sendinblue
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Ga naar **Beheerder** > **Verbindingen**.
 
-1. Selecteer **Verbinding toevoegen** en kies **Sendinblue** om de verbinding te configureren.
+1. Selecteer **Verbinding toevoegen** en kies **Sendinblue**.
 
 1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
 
 1. Kies wie deze verbinding kan gebruiken. Standaard zijn dit alleen beheerders. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
-1. Voer uw **[SendinBlue API-sleutel](https://developers.sendinblue.com/docs/getting-started#:~:text=Get%20your%20API%20key&text=You%20can%20create%20one%20from,your%20settings%20This%20API%20key)** in.
+1. Voer uw **API-sleutel voor Sendinblue** in.
 
-1. Selecteer **Ik ga akkoord** om **Gegevensprivacy en naleving** te bevestigen en selecteer **Verbinden** om de verbinding met Sendinblue te initialiseren.
+1. Bekijk [Gegevensprivacy en naleving](connections.md#data-privacy-and-compliance) en selecteer **Ik ga akkoord**.
+
+1. Selecteer **Verbinden** om de verbinding te initialiseren.
 
 1. Selecteer **Uzelf toevoegen als exportgebruiker** en geef uw Customer Insights-referenties op.
 
@@ -53,33 +56,26 @@ Exporteer de segmenten van geharmoniseerde klantprofielen om campagnes te genere
 
 ## <a name="configure-an-export"></a>Een export configureren
 
-U kunt deze export configureren als u toegang hebt tot een verbinding van dit type. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Ga naar **Gegevens** > **Exports**.
 
-1. Selecteer **Bestemming toevoegen** om een nieuwe export te maken.
+1. Selecteer **Export toevoegen**.
 
-1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Sendinblue. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
+1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Sendinblue. Neem contact op met een beheerder als er geen verbinding beschikbaar is.
 
-1. Voer uw **Sendinblue-lijst-id** in 
+1. Voer de naam in voor de export.
 
-1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt. 
+1. Voer uw **Lijst-id voor Sendinblue** in.
+
+1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt.
 
 1. Optioneel kunt u **Voornaam**, **Achternaam** en **Telefoon** exporteren om meer gepersonaliseerde e-mails te maken. Selecteer **Kenmerk toevoegen** om deze velden toe te wijzen.
 
-1. Selecteer de segmenten die u wilt exporteren. 
+1. Selecteer de segmenten die u wilt exporteren.
 
-1. Selecteer **Opslaan**.
+1. Selecteer **Save**.
 
-Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd.
-
-De export wordt uitgevoerd met elke [geplande vernieuwing](system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
-
-Wanneer u Dynamics 365 Customer Insights inschakelt om gegevens te verzenden naar Sendinblue, staat u de overdracht van gegevens buiten de nalevingsgrens toe voor Dynamics 365 Customer Insights, inclusief mogelijk gevoelige gegevens zoals persoonsgegevens. Microsoft zal dergelijke gegevens in uw opdracht overdragen, maar u bent er zelf verantwoordelijk voor dat Sendinblue voldoet aan alle privacy- of beveiligingsverplichtingen die u hebt. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
-Uw Dynamics 365 Customer Insights-beheerder kan deze exportbestemming op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

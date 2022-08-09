@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081221"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195652"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Realtime gegevensopname (preview)
 
@@ -28,7 +28,7 @@ De realtime functionaliteit levert gegevens onmiddellijk op voor verbruik, totda
 
 Realtime updates hebben een vervaltijd waarna ze de waarde in de gegevensbron niet langer overschrijven:
 
-- Profielupdates worden 4 uur bewaard
+- Profielupdates worden vier uur bewaard
 - Activiteiten worden 30 dagen bewaard
 
 Deze waarden zijn API-aanroepparameters die u kunt wijzigen. Zij hebben tot doel ervoor te zorgen dat uw brongegevens uw bron van waarheid blijven. Als u wilt dat realtime updates langer worden opgenomen, moet u ze toevoegen aan een gegevensbron, zodat ze worden opgehaald tijdens de volgende geplande vernieuwing.

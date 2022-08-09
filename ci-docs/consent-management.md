@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947495"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188041"
 ---
 # <a name="use-customer-consent"></a>Toestemming van klant gebruiken
 
@@ -50,13 +50,13 @@ Voorbeeldtabel van een eenvoudige toestemmingsdatabase met meerdere toestemmings
 
 ## <a name="import-and-unify-consent-data"></a>Toestemmingsgegevens importeren en harmoniseren
 
-U kunt toestemmingsgegevens op dezelfde manier importeren als andere gegevensbronnen naar Customer Insights. Zie [Overzicht gegevensbronnen](data-sources.md) voor meer informatie over ondersteunde gegevensbronnen en hoe u deze kunt importeren.
+Importeer toestemmingsgegevens op dezelfde manier als andere gegevensbronnen naar Customer Insights. Zie [Overzicht gegevensbronnen](data-sources.md) voor meer informatie over ondersteunde gegevensbronnen en hoe u deze kunt importeren.
 
 Zie [Overzicht van gegevensharmonisatie](data-unification.md) voor meer informatie over het harmoniseren van uw gegevensbronnen.
 
 ## <a name="use-consent-data"></a>Toestemmingsgegevens gebruiken
 
-Zodra uw toestemmingsgegevens deel uitmaken van uw uniforme klantprofielen, kunt u deze gebruiken in Customer Insights. Maak bijvoorbeeld een segment met een regel die ervoor zorgt dat u de privacy- en gegevensbeschermingsvoorkeuren van uw klanten respecteert. Regels die toestemmingsvoorkeuren ondersteunen, worden gebruikt om gebruikers uit te sluiten van een segment op basis van profielkenmerken. Een regel toevoegen aan een segment dat klantprofielen uitsluit die geen toestemming hebben gegeven om met hen contact op te nemen.
+Zodra uw toestemmingsgegevens deel uitmaken van uw uniforme klantprofielen, kunt u deze gebruiken in Customer Insights. Maak bijvoorbeeld een segment met een regel die ervoor zorgt dat u de privacy- en gegevensbeschermingsvoorkeuren van uw klanten respecteert. Regels die toestemmingsvoorkeuren ondersteunen, worden gebruikt om gebruikers uit te sluiten van een segment op basis van profielkenmerken. Voeg een regel aan een segment toe dat klantprofielen uitsluit die geen toestemming hebben gegeven om met hen contact op te nemen.
 
 Verwijzend naar de voorbeeldtabel hierboven, zou een segment deze regel kunnen bevatten: `Consent option=Newsletter & Consent value=True`. Deze configuratie resulteert in een segment dat contactvoorkeuren respecteert om een nieuwsbrief te verzenden.
 
@@ -71,3 +71,5 @@ Het is belangrijk om de toestemmingsstatus voor uw klanten up-to-date te houden.
 Met andere woorden, zorg ervoor dat de brongegevens die in Customer Insights worden geïmporteerd, altijd over de nieuwste informatie beschikken.
 
 Zie [Segmenten handmatig vernieuwen](segments.md#refresh-segments) of [een geplande vernieuwing configureren](system.md#schedule-tab) voor meer informatie.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,31 +1,31 @@
 ---
 title: Customer Insights-segmenten exporteren naar Adobe Campaign Standard (preview)
 description: Meer informatie over hoe u Customer Insights-segmenten kunt gebruiken in Adobe Campaign Standard.
-ms.date: 03/29/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 834880cac9c5023157983081ff2513d9b051491f
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081035"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195514"
 ---
 # <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Customer Insights-segmenten exporteren naar Adobe Campaign Standard (preview)
 
-Als gebruiker van Dynamics 365 Customer Insights hebt u mogelijk segmenten gemaakt om uw marketingcampagnes efficiënter te maken door relevante doelgroepen te targeten. Een segment uit Customer Insights gebruiken in Adobe Experience Platform en toepassingen zoals Adobe Campaign Standard, moet u een paar stappen volgen die in dit artikel worden beschreven.
+Exporteer segmenten die gericht zijn op relevante doelgroepen naar Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Procesdiagram van de stappen die in dit artikel worden beschreven.":::
 
 ## <a name="prerequisites"></a>Vereisten
 
-- Dynamics 365 Customer Insights-licentie
-- Licentie voor Adobe Campaign Standard
-- Azure Blob Storage-account
+- Een licentie voor Adobe Campaign Standard.
+- Een naam en accountsleutel voor een [Azure Blob Storage-account](/azure/storage/blobs/create-data-lake-storage-account). Zie [Instellingen van opslagaccount in de Azure-portal beheren](/azure/storage/common/storage-account-manage) als u de naam en de sleutel wilt vinden.
+- Een [Azure Blob Storage-container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 ## <a name="campaign-overview"></a>Campagne-overzicht
 
@@ -37,7 +37,7 @@ In dit voorbeeld willen we de promotionele e-mailcampagne één keer uitvoeren. 
 
 ## <a name="identify-your-target-audience"></a>Uw doelgroep identificeren
 
-In ons scenario gaan we ervan uit dat de e-mailadressen van de klanten beschikbaar zijn en dat hun promotievoorkeuren zijn geanalyseerd om leden van het segment te identificeren.
+In ons scenario gaan we ervan uit dat de e-mailadressen van de klanten beschikbaar zijn in Customer Insights en dat hun promotievoorkeuren zijn geanalyseerd om leden van het segment te identificeren.
 
 Het [segment dat u hebt gedefinieerd in Customer Insights](segments.md) heet **ChurnProneCustomers** en u bent van plan deze klanten de e-mailpromotie te sturen.
 
@@ -47,39 +47,37 @@ De aanbiedings-e-mail die u wilt verzenden, bevat de voornaam, achternaam en ein
 
 ## <a name="export-your-target-audience"></a>Uw doelgroep exporteren
 
-### <a name="configure-a-connection"></a>Een verbinding configureren
+### <a name="set-up-connection-to-adobe-campaign"></a>Verbinding instellen met Adobe Campaign
 
-Nu we weten wie onze doelgroep is, kunnen we de export van Customer Insights naar een Azure Blob Storage-account configureren.
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
-1. Ga in Customer Insights naar **Beheerder** > **Verbindingen**.
+1. Ga naar **Beheerder** > **Verbindingen**.
 
-1. Selecteer **Verbinding toevoegen** en kies **Adobe Campaign** om de verbinding te configureren of selecteer **Instellen** op de tegel **Adobe Campaign**.
-
-   :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Configuratietegel voor Adobe Campaign Standard.":::
+1. Selecteer **Verbinding toevoegen** en kies **Adobe Campaign**.
 
 1. Geef uw verbinding een herkenbare naam in het veld **Weergavenaam**. De naam en het type verbinding beschrijven deze verbinding. We raden u aan een naam te kiezen die het doel en het doel van de verbinding uitlegt.
 
-1. Kies wie deze verbinding kan gebruiken. Als u geen actie onderneemt, wordt Beheerders gebruikt als standaardinstelling. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+1. Kies wie deze verbinding kan gebruiken. Standaard zijn dit alleen beheerders. Zie [Inzenders toestaan om een verbinding te gebruiken voor exports](connections.md#allow-contributors-to-use-a-connection-for-exports) voor meer informatie.
 
-1. Voer een waarde in de velden **Accountnaam**, **Accountsleutel** en **Container** in van het Azure Blob Storage-account waarnaar u het segment wilt exporteren.  
-      
-   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Schermopname van de opslagaccountconfiguratie."::: 
+1. Voer **Gebruikersnaam**, **Accountsleutel** en **Container** in voor uw Blob Storage-account.  
 
-   - Zie [Opslagaccountinstellingen beheren in de Azure-portal](/azure/storage/common/storage-account-manage) voor meer informatie over het vinden van de Azure Blob Storage-accountnaam en -accountsleutel.
+   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Schermopname van de opslagaccountconfiguratie.":::
 
-   - Zie voor meer informatie over het maken van een container [Een container maken](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+1. Bekijk [Gegevensprivacy en naleving](connections.md#data-privacy-and-compliance) en selecteer **Ik ga akkoord**.
 
 1. Selecteer **Opslaan** om de verbinding te voltooien.
 
 ### <a name="configure-an-export"></a>Een export configureren
 
-U kunt deze export configureren als u toegang hebt tot een verbinding van dit type. Zie [Machtigingen die nodig zijn om een export te configureren](export-destinations.md#set-up-a-new-export) voor meer informatie.
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Ga naar **Gegevens** > **Exports**.
 
-1. Selecteer **Export toevoegen** om een nieuwe export te maken.
+1. Selecteer **Export toevoegen**.
 
-1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Adobe Campaign. Als u deze sectienaam niet ziet, zijn er geen verbindingen van dit type voor u beschikbaar.
+1. Kies in het veld **Verbinding voor export** een verbinding uit de sectie Adobe Campaign. Neem contact op met een beheerder als er geen verbinding beschikbaar is.
+
+1. Voer de naam in voor de export.
 
 1. Sluit het segment dat u u wilt exporteren. In dit voorbeeld is het **ChurnProneCustomers**​.
 
@@ -87,7 +85,7 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Selecteer **Volgende**.
 
-1. Nu wijzen we de **Bron**-velden van het Customer Insights-segment toe aan de **Doel**-veldnamen in het Adobe Campaign Standard-profielschema.
+1. Wijs de **Bron**-velden van het Customer Insights-segment toe aan de **Doel**-veldnamen in het Adobe Campaign Standard-profielschema.
 
    :::image type="content" source="media/ACS-field-mapping.png" alt-text="Veldtoewijzing voor de Adobe Campaign Standard-connector.":::
 
@@ -98,34 +96,28 @@ U kunt deze export configureren als u toegang hebt tot een verbinding van dit ty
 
 1. Selecteer **Save**.
 
-Nadat u de exportbestemming hebt opgeslagen, vindt u deze onder **Gegevens** > **Exports**.
-
-U kunt [het segment nu op aanvraag exporteren](export-destinations.md#run-exports-on-demand)​. De export wordt ook uitgevoerd bij elke [geplande vernieuwing](system.md).
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 > [!NOTE]
 > Zorg ervoor dat het aantal records in het geëxporteerde segment binnen de toegestane limiet van uw Adobe Campaign Standard-licentie.
 
-Geëxporteerde gegevens worden opgeslagen in de Azure Blob Storage-container die u eerder hebt geconfigureerd. Het volgende mappad wordt automatisch gemaakt in uw container:
-
-*%ContainerName%/CustomerInsights_%instanceID%/% exportdestination-name%_%segmentname%_%timestamp%.csv*
+Geëxporteerde gegevens worden opgeslagen in de Azure Blob Storage-container die u eerder hebt geconfigureerd. Het volgende mappad wordt automatisch gemaakt in uw container: *%ContainerName%/CustomerInsights_%instanceID%/% exportdestination-name%_%segmentname%_%timestamp%.csv*
 
 Voorbeeld: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo_ChurnProneCustomers_1613059542.csv
 
 ## <a name="configure-adobe-campaign-standard"></a>Adobe Campaign Standard configureren
 
-Geëxporteerde segmenten bevatten de kolommen die u hebt geselecteerd tijdens het definiëren van de exportbestemming in de vorige stap. Deze gegevens kunnen worden gebruikt om [profielen in Adobe Campaign Standard te maken](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
+Geëxporteerde segmenten bevatten de kolommen die u hebt geselecteerd tijdens het configureren van de export. Deze gegevens kunnen worden gebruikt om [profielen in Adobe Campaign Standard te maken](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
 
-Als u het segment in Adobe Campaign Standard wilt gebruiken, moeten we het profielschema uitbreiden in Adobe Campaign Standard om twee extra velden op te nemen. Leer hoe u [de profielbron kunt uitbreiden](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) met nieuwe velden in Adobe Campaign Standard.
+Als u het segment in Adobe Campaign Standard wilt gebruiken, moeten we het [profielschema uitbreiden](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) in Adobe Campaign Standard om twee extra velden op te nemen.
 
-In ons voorbeeld zijn dit de velden *Segmentnaam en Segmentdatum (optioneel)*.
+In ons voorbeeld zijn dit de velden Segmentnaam en Segmentdatum. We zullen deze velden gebruiken om de profielen in Adobe Campaign Standard te identificeren waarop we ons willen richten voor deze campagne.
 
-We zullen deze velden gebruiken om de profielen in Adobe Campaign Standard te identificeren waarop we ons willen richten voor deze campagne.
-
-Als er geen andere records zijn in Adobe Campaign Standard, behalve wat u gaat importeren, kunt u deze stap overslaan.
+Als er geen andere records zijn in Adobe Campaign Standard, behalve wat u gaat importeren, slaat u deze stap over.
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Gegevens importeren in Adobe Campaign Standard
 
-Nu alles aanwezig is, moeten we de voorbereide doelgroepgegevens uit Customer Insights importeren in Adobe Campaign Standard om profielen te maken. Leer [profielen importeren in Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) met behulp van een werkstroom.
+Importeer de voorbereide doelgroepgegevens uit Customer Insights importeren naar Adobe Campaign Standard om [profielen te maken met een werkstroom](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences).
 
 De importwerkstroom in de onderstaande afbeelding is geconfigureerd om elke acht uur te worden uitgevoerd en te zoeken naar geëxporteerde Customer Insights-segmenten (.csv-bestand in Azure Blob Storage). De werkstroom extraheert de inhoud van het CSV-bestand in een opgegeven kolomvolgorde. Deze werkstroom is gebouwd om elementaire foutafhandeling uit te voeren en ervoor te zorgen dat elke record een e-mailadres heeft voordat de gegevens worden overgebracht naar Adobe Campaign Standard. De werkstroom extraheert ook de segmentnaam uit de bestandsnaam voordat deze wordt toegevoegd aan Adobe Campaign Standard-profielgegevens.
 
@@ -133,10 +125,12 @@ De importwerkstroom in de onderstaande afbeelding is geconfigureerd om elke acht
 
 ## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>De doelgroep ophalen in Adobe Campaign Standard
 
-Zodra de gegevens zijn geïmporteerd in Adobe Campaign Standard, kunt u [een werkstroom maken](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) en [query's uitvoeren](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) voor de klanten op basis van *Segmentnaam* en *Segmentdatum* om profielen te selecteren die zijn geïdentificeerd voor onze voorbeeldcampagne.
+Zodra de gegevens zijn geïmporteerd in Adobe Campaign Standard, kunt u [een werkstroom maken](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) en [query's uitvoeren](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) voor de klanten op basis van Segmentnaam en Segmentdatum om profielen te selecteren die zijn geïdentificeerd voor onze voorbeeldcampagne.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>De e-mail maken en verzenden met Adobe Campaign Standard
 
 Maak de e-mailinhoud en [test en verzend](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) vervolgens uw e-mail.
 
 :::image type="content" source="media/contoso-sample-email.jpg" alt-text="Voorbeelde-mail met verlengingsaanbieding van Adobe Campaign Standard.":::
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

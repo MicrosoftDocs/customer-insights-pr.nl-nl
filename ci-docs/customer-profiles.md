@@ -1,5 +1,5 @@
 ---
-title: Klantprofielen
+title: Klantprofielen weergeven
 description: Uw geharmoniseerde klantgegevens bekijken, waaronder het gebruik van zoek- en filterfuncties
 ms.date: 06/08/2022
 ms.reviewer: mhart
@@ -14,63 +14,83 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 279c8e1291c6449005d593244f1979e871610a77
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052183"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188087"
 ---
-# <a name="customer-profiles"></a>Klantprofielen
+# <a name="view-customer-profiles"></a>Klantprofielen weergeven
 
-Op de pagina **Klanten** wordt een gecombineerde weergave getoond van uw geharmoniseerde klantprofielen. De klantprofielen zijn beschikbaar zodra u [de geharmoniseerde klantentiteit heeft gemaakt](data-unification.md). Op de pagina kunt u naar klanten zoeken en de index voor die zoekopdracht definiëren.
+Klantprofielen zijn beschikbaar zodra u de [geharmoniseerde entiteit *Klant* maakt](data-unification.md). Op de pagina **Klanten** wordt de gecombineerde weergave van uw geharmoniseerde klantprofielen weergegeven. Klanten kunnen individuen of organisaties zijn.
 
-Klanten kunnen individuen of organisaties zijn. Elk klantprofiel wordt weergegeven door een tegel. Gebruik de pagineringsknoppen om meer records te krijgen. De kaart geeft velden weer van de entiteit *Klant* zoals gedefinieerd in de **Zoek- en filterindex**. De volgorde van de velden binnen elke kaart wordt door het systeem gekozen.
-
-Selecteer een tegel om gegevens voor de geselecteerde klant te zien op een speciale pagina met de naam [Klantdetails](customer-profiles.md#customer-details-page).
-
-> [!div class="mx-imgBorder"]
-> ![Klantenpagina met resultaattegels](media/customers-page-result-tiles-B2C.png "Klantenpagina met resultaattegels")
+Ga naar de pagina **Klanten** om uw klanten en hun profielen te bekijken. Elk klantprofiel wordt weergegeven door een tegel. Gebruik de pagineringsknoppen om meer records te krijgen. De kaart geeft velden weer van de entiteit *Klant* zoals gedefinieerd in de **Zoek- en filterindex**. De volgorde van de velden binnen elke kaart wordt door het systeem gekozen.
 
 > [!NOTE]
-> Als u de tegels niet kunt zien wanneer u **Klanten** selecteert in de navigatie, moet de beheerder [minimaal één doorzoekbaar kenmerk definiëren](search-filter-index.md) in de **Zoek- en filterindex**.
+> Als u de tegels niet kunt zien wanneer u **Klanten** selecteert in de navigatie, moet uw beheerder [minimaal één doorzoekbaar kenmerk definiëren](search-filter-index.md) in de **Zoek- en filterindex**.
+
+:::image type="content" source="media/customers-page-result-tiles-B2C.png" alt-text="Pagina Klanten met resultaattegels.":::
+
+Selecteer een van de volgende acties:
+- [Klantdetails weergeven](#view-customer-details)
+- [De zoek- en filterindex beheren](search-filter-index.md) (alleen beheerders)
+- [Klanten filteren](#filter-customers)
+- Selecteer **Kaarten uitvouwen** of **Kaarten samenvouwen** om de informatie op de klanttegel uit te vouwen of samen te vouwen
+- **Sorteren op** een bepaald kenmerk
+- [Zoeken naar klanten](#search-for-customers)
+
+  > [!NOTE]
+  > Als u zoeken en filteren wilt gebruiken, moet een beheerder de doorzoekbare kenmerken configureren en de filterbare velden definiëren met behulp van de zoek- en filterindex.
 
 ## <a name="search-for-customers"></a>Zoeken naar klanten
 
-Zoek naar klanten door een naam of een ander kenmerk in het zoekvak in te voeren. De zoekopdracht werkt alleen binnen de entiteit *Klant* die is gemaakt tijdens het proces van gegevensharmonisering.
+Zoek naar klanten door een naam of een ander kenmerk in **Klanten zoeken** in te voeren. De doorzoekbare kenmerken worden gedefinieerd door de beheerder en komen uit de geharmoniseerde entiteit *Klant*.
 
-Als beheerder kunt u de doorzoekbare kenmerken configureren met via de pagina **Index voor zoeken en filteren**. Ga voor meer informatie naar [Zoek- en filterindex beheren](search-filter-index.md).
+> [!NOTE]
+> **Tekenreeks** is het enige gegevenstype dat is opgenomen in de zoekopdracht. Gebruik het in het veld **Klanten zoeken** op de pagina Klanten om naar klanten te zoeken.
 
 ## <a name="filter-customers"></a>Klanten filteren
 
-U kunt klanten filteren op velden van de entiteit *Klant*. Net als bij zoeken, moet uw beheerder eerst de velden definiëren als filterbaar met behulp van de pagina **Index voor zoeken en filteren**.
+Filter klanten filteren op de velden van de entiteit *Klant*. Filterbare velden worden gedefinieerd door de beheerder.
 
-1. Selecteer **Filters weergeven** op de pagina **Klanten**.
+1. Selecteer **Filters weergeven** op de pagina **Klanten**. Het deelvenster Filter wordt weergegeven.
 
 1. Schakel de selectievakjes in naast de kenmerken waarop u klanten wilt filteren.
 
-1. Verwijder uw filters door **Filters wissen** op de pagina **Klanten** te selecteren.
+1. Verwijder alle filters door **Filters wissen** te verwijderen of schakel een selectievakje naast een geselecteerd kenmerk uit.
 
-## <a name="customer-details-page"></a>Detailpagina van klant
+1. Selecteer **Filters verbergen** om het filtervenster te sluiten.
 
-Selecteer een van de klanttegels om de **Detailpagina van klant** te openen. Deze weergave bevat geharmoniseerde informatie voor de geselecteerde klant. Klantgegevens omvatten de volgende inhoud:
+1. Als u de filterresultaten wilt opslaan als een [segment](segments.md), selecteert u **Filters opslaan als segment**.
+   1. Voer een naam in voor het segment.
+   1. Als u het segment wilt opslaan, selecteert u **Opslaan**.
+   1. Kies of u het segment nu wilt uitvoeren door **Activeren** te selecteren of voer het **Later** uit.
+
+## <a name="view-customer-details"></a>Klantdetails weergeven
+
+Selecteer op de pagina **Klanten** een klanttegel om details voor de geselecteerde klant te bekijken.
+
+:::image type="content" source="media/customers-details-B2C.png" alt-text="Pagina Klantdetails.":::
+
+Klantdetails zijn onder meer:
 
 **Tegel Klantprofiel**: deze tegel toont de verschillende waarden van de geharmoniseerde entiteit *Klant*. Als een veld geen waarde heeft voor het geselecteerde klantprofiel, wordt het niet weergegeven. Dit geldt niet voor het adresveld. De tegel is gestructureerd in secties:
 
 - De eerste sectie toont een vooraf gedefinieerde set velden, gevolgd door alle velden die deel uitmaken van de zoek- en filterindex. Alle adresgerelateerde velden worden gecombineerd in één regel, die altijd wordt weergegeven, zelfs als het profiel geen adresgegevens bevat.
-- **Contactpersonen voor deze klant**: in omgevingen voor zakelijke accounts ziet u alle gerelateerde contactpersonen voor deze klant als het tweede gedeelte. Iedere contactpersoon wordt getoond met de eigen velden. Lege velden zijn verborgen.
-- **Extra velden** : toont de overige velden van de geselecteerde klant, behalve id's.
-- **ID's**: geeft alle id's weer onder de bijbehorende entiteitsnaam. Velden worden geïdentificeerd als ID door hun semantiek, waardoor ze als zodanig worden gecategoriseerd.
+- **Contactpersonen voor deze klant** worden in omgevingen voor zakelijke accounts weergegeven. Iedere contactpersoon wordt getoond met de eigen velden. Lege velden zijn verborgen.
+- **Extra velden**: toont de overige velden van de geselecteerde klant, behalve id's.
+- **Id's**: geeft alle id's weer onder de bijbehorende entiteitsnaam. Velden worden op basis van de semantiek ervan geïdentificeerd als id's.
 
-**Activiteitentijdlijn**: toont gegevens als u activiteiten heeft geconfigureerd. De tijdlijnweergave bevat chronologisch gesorteerde activiteiten van de geselecteerde klant, te beginnen met de meest recente activiteit. Ga voor meer informatie naar [Klantactiviteiten](activities.md).
+**Activiteitentijdlijn**: toont gegevens als u [activiteiten](activities.md) hebt geconfigureerd. De tijdlijnweergave bevat chronologisch gesorteerde activiteiten van de geselecteerde klant, te beginnen met de meest recente activiteit.
 
 **Inzichten**:
 
-- **Meetcriteria**: Geeft aan of u een of meer meetcriteria heeft geconfigureerd voor klantkenmerken. Ze omvatten berekende KPI's rond uw klanten op individueel klantniveau. Ga voor meer informatie naar [Meetcriteria definiëren en beheren](measures.md).
+- **Metingen** geven aan of u [metingen van het type klantkenmerk](measures.md) hebt geconfigureerd. Ze omvatten berekende KPI's rond uw klanten op individueel klantniveau.
 
-- **Potentiële interesses, potentiële merken**: geeft aan of u een verrijking voor een merk- of interesseaffiniteit heeft geconfigureerd. Dit vertegenwoordigt potentiële interesses en affiniteiten voor merken op basis van andere klanten van wie het profiel vergelijkbaar is met het geselecteerde klantprofiel. Ga voor meer informatie naar [Klantprofielen verrijken met merk- en interesse-affiniteiten](enrichment-microsoft.md).
+- **Potentiële interesses, potentiële merken** geven aan of u een [verrijking voor een merk- of interesseaffiniteit](enrichment-microsoft.md) hebt geconfigureerd. Dit vertegenwoordigt potentiële interesses en affiniteiten voor merken op basis van andere klanten van wie het profiel vergelijkbaar is met het geselecteerde klantprofiel.
 
-Om terug te keren naar de klantzoekpagina, selecteert u **Terug naar Klanten**.
+Selecteer **Terug naar Klanten** om terug te gaan naar de pagina **Klanten**.
 
 ## <a name="next-steps"></a>Volgende stappen
 

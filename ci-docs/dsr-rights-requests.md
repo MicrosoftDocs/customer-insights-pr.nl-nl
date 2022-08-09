@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947362"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146689"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Rechten van betrokkenen (DSR) onder AVG
 
@@ -31,18 +31,22 @@ Het 'recht op verwijdering' van persoonsgegevens uit de klantgegevens van een or
 
 Customer Insights biedt de volgende mogelijkheden binnen het product om persoonlijke gegevens voor een specifieke klant of gebruiker te verwijderen:
 
-- **Verwijderingsverzoeken voor klantgegevens beheren**: klantgegevens in Customer Insights worden opgenomen vanuit originele gegevensbronnen buiten Customer Insights. Alle verwijderingsverzoeken in het kader van de AVG moeten worden uitgevoerd in de originele gegevensbron.
+- **Verwijderingsverzoeken voor klantgegevens beheren**: klantgegevens in Customer Insights worden opgenomen vanuit originele gegevensbronnen buiten Customer Insights. Verwijderingsverzoeken in het kader van de AVG moeten eerst worden uitgevoerd in de originele gegevensbron.
 - **Beheer verwijderingsverzoeken voor gebruikersgegevens van Customer Insights**: gegevens voor gebruikers worden gemaakt door Customer Insights. Alle verwijderingsverzoeken in het kader van de AVG moeten worden uitgevoerd in Customer Insights.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Verzoeken voor het verwijderen van klantgegevens beheren
 
-Een Customer Insights-beheerder kan deze stappen volgen om klantgegevens te verwijderen die in de gegevensbron zijn verwijderd:
+Een Customer Insights-beheerder kan deze stappen volgen om klantgegevens te verwijderen die in de gegevensbron zijn verwijderd. Zorg ervoor dat het verwijderingsverzoek is uitgevoerd in uw gegevensbron voordat u doorgaat met de onderstaande stappen. 
 
 1. Aanmelden bij Dynamics 365 Customer Insights.
-2. Ga naar **Gegevens** > **Gegevensbronnen**
-3. Voor elke gegevensbron in de lijst met verwijderde klantgegevens:
+1. Ga naar **Gegevens** > **Gegevensbronnen**
+1. Voor elke gegevensbron in de lijst met verwijderde klantgegevens:
    1. Selecteer het verticale weglatingsteken (&vellip;) en selecteer vervolgens **Vernieuwen**.
-   2. Controleer de status van de gegevensbron onder **Status**. Een vinkje betekent dat de vernieuwing is geslaagd. Een gevarendriehoek betekent dat er iets mis is gegaan. Neem bij een gevarendriehoek contact op met D365CI@microsoft.com.
+   1. Controleer de status van de gegevensbron onder **Status**. Een vinkje betekent dat de vernieuwing is geslaagd. Een gevarendriehoek betekent dat er iets mis is gegaan. Neem bij een gevarendriehoek contact op met D365CI@microsoft.com.
+1. Voer na een succesvolle vernieuwing van de gegevensbronnen ook de downstream-vernieuwingen uit. Vooral als u geen terugkerende volledige vernieuwing van Customer Insights heeft gepland. 
+
+> [!IMPORTANT]
+> Statische segmenten worden niet opgenomen in een volledige vernieuwing of stroomafwaartse vernieuwingen na een verwijderingsverzoek. Om ervoor te zorgen dat klantgegevens ook uit statische segmenten worden verwijderd, maakt u de statische segmenten opnieuw met de vernieuwde brongegevens.
 
 > [!div class="mx-imgBorder"]
 > ![Verwijderingsverzoeken voor klantgegevens in het kader van de AVG afhandelen.](media/gdpr-data-sources.png "Verwijderingsverzoeken voor klantgegevens in het kader van de AVG afhandelen")
@@ -77,5 +81,10 @@ Een tenantbeheerder kan deze stappen volgen om gegevens te exporteren:
 1. Verzend een e-mail naar D365CI@microsoft.com met het e-mailadres van de gebruiker in de aanvraag. Het Customer Insights-team verzendt een e-mail naar het geregistreerde e-mailadres van de tenantbeheerder waarin wordt gevraagd om bevestiging voor het exporteren van gegevens.
 2. Erken de bevestiging om de gegevens voor de gevraagde gebruiker te exporteren.
 3. Ontvang de geëxporteerde gegevens via het e-mailadres van de tenantbeheerder.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Afhandeling van gegevensverwijdering in Dynamics 365 Customer Insights
+
+1. Gegevens worden verwijderd (gegevenspartities en gegevenssnapshots) als de gegevenspartities en gegevenssnapshots meer dan 30 dagen inactief zijn, wat betekent dat ze zijn vervangen door een nieuwe gegevenspartitie en snapshot via een vernieuwing van gegevensbronnen.
+2. Niet alle gegevens en snapshots worden verwijderd. De meest recente gegevenspartitie en gegevensmomentopname zijn per definitie actief omdat ze worden gebruikt in Customer Insights. Voor de meest recente gegevens maakt het niet uit of de gegevensbronnen in de afgelopen 30 dagen niet zijn vernieuwd.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

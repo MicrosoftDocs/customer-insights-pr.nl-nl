@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646474"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171089"
 ---
 # <a name="transaction-churn-prediction"></a>Voorspelling van transactieverloop
 
@@ -240,7 +240,7 @@ Voeg een lijst toe met uw zakelijke klanten en accounts die u als benchmarks wil
    - **Naam voorspelling**: naam van de voorspelling die bij het maken is opgegeven.
    - **Type voorspelling**: type model dat is gebruikt voor de voorspelling
    - **Uitvoerentiteit**: naam van de entiteit om de uitvoer van de voorspelling op te slaan. U kunt een entiteit met deze naam vinden onder **Gegevens** > **Entiteiten**.
-     In de uitvoerentiteit is *ChurnScore* de voorspelde waarschijnlijkheid van verloop en *IsChurn* een binair label gebaseerd op *ChurnScore* met een drempel van 0,5. De standaarddrempel werkt mogelijk niet voor uw scenario. [Maak een nieuw segment](segments.md#create-a-new-segment) met uw gewenste drempel.
+     In de uitvoerentiteit is *ChurnScore* de voorspelde waarschijnlijkheid van verloop en *IsChurn* een binair label gebaseerd op *ChurnScore* met een drempel van 0,5. De standaarddrempel werkt mogelijk niet voor uw scenario. [Maak een nieuw segment](segments.md#create-a-segment) met uw gewenste drempel.
      Niet alle klanten hoeven actieve klanten te zijn. Sommigen van hen hebben misschien al een lange tijd geen activiteit gehad en worden al als verlopen beschouwd, op basis van uw verloopdefinitie. Het voorspellen van het verlooprisico voor klanten die al verloop vertonen, is niet nuttig omdat ze geen doelgroep van belang zijn.
    - **Veld Voorspeld**: dit veld wordt alleen ingevuld voor bepaalde soorten voorspellingen en wordt niet gebruikt bij verloopvoorspelling.
    - **Status**: de status of the voorspellingsuitvoering.

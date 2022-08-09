@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012019"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207131"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Incrementeel vernieuwen voor Power Query en Azure Data Lake-gegevensbronnen
 
-In dit artikel wordt beschreven hoe u incrementele vernieuwing voor gegevensbronnen configureert op basis van Power Query of Azure Data Lake.
-
-Incrementeel vernieuwen voor gegevensbronnen biedt de volgende voordelen:
+Incrementeel vernieuwen voor gegevensbronnen op basis van Power Query of Azure Data Lake biedt de volgende voordelen:
 
 - **Sneller vernieuwingen**: alleen gewijzigde gegevens worden vernieuwd. U kunt bijvoorbeeld alleen de gegevens van de afgelopen vijf dagen van een historische gegevensset vernieuwen.
 - **Verhoogde betrouwbaarheid**: met kleinere vernieuwingen hoeft u niet zo lang verbindingen met vluchtige bronsystemen te onderhouden, waardoor het risico op verbindingsproblemen afneemt.
@@ -73,6 +71,7 @@ Customer Insights maakt incrementele vernieuwing mogelijk voor gegevensbronnen d
 
    1. Blader naar de hoofdmap die de .csv- of .parquet-bestanden bevat voor volledige gegevens, incrementele gegevensupserts en incrementele gegevensverwijderingen.
    1. Voer de extensie in voor de volledige gegevens en beide incrementele bestanden (\.csv of \.parquet).
+   1. Voor .csv-bestanden selecteert u het kolomscheidingsteken en als u de eerste rij van het bestand als kolomkop wilt.
    1. Selecteer **Save**.
 
 1. Selecteer het datum-tijdstempelkenmerk bij **Laatst bijgewerkt**.

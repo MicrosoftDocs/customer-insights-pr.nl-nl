@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080975"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195168"
 ---
 # <a name="connections-preview-overview"></a>Overzicht van Verbindingen (preview)
 
@@ -27,6 +27,12 @@ Ga naar **Beheerder** > **Verbindingen** om verbindingen te maken en te bekijken
 Het tabblad **Verbindingen** laat u alle actieve verbindingen zien. De lijst toont een rij voor elke verbinding.
 
 Krijg een snel overzicht met beschrijving en ontdek wat u kunt doen met elke uitbreidingsoptie op het tabblad **Ontdekken**.
+
+## <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
+
+Wanneer u Dynamics 365 Customer Insights inschakelt om gegevens naar derden of andere Microsoft-producten te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, inclusief mogelijk gevoelige gegevens zoals persoonsgegevens. Microsoft zal dergelijke gegevens in uw opdracht overdragen, maar u bent ervoor verantwoordelijk dat de derde partij voldoet aan uw privacy- of beveiligingsverplichtingen. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
+
+Uw Dynamics 365 Customer Insights-beheerder kan de verbinding op elk moment verwijderen om het gebruik van de functionaliteit te stoppen.
 
 ## <a name="exports"></a>Exports
 
@@ -41,8 +47,6 @@ Alleen beheerders kunnen nieuwe verbindingen configureren, maar de gemaakte verb
 Als u verbindingen wilt toevoegen, moet u over [beheerdersmachtigingen](permissions.md) beschikken. Als u verbinding maakt met andere Microsoft-services, gaan we ervan uit dat beide services zich in dezelfde organisatie bevinden.
 
 1. Ga naar **Beheerder** > **Verbindingen (preview)**.
-
-1. Ga naar het tabblad **Verbindingen**.
 
 1. Selecteer **Verbinding toevoegen** om een nieuwe verbinding te maken. Kies in het vervolgkeuzemenu welk type verbinding u wilt maken.
 
@@ -99,3 +103,5 @@ Losgekoppelde verrijkingen en exports worden inactief. U activeert deze opnieuw 
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Verbindingen instellen met geheimen die worden beheerd door uw eigen Key Vault
 
 Sommige verbindingen hebben geheimen nodig, zoals API-sleutels of wachtwoorden. Sommige verbindingen ondersteunen geheimen die zijn opgeslagen in uw eigen Key Vault. Meer informatie over ondersteunde verbindingen en hoe u uw [eigen Key Vault kunt instellen voor Customer Insights](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

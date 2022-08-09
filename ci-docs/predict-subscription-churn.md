@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646394"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171043"
 ---
 # <a name="subscription-churn-prediction"></a>Voorspelling voor abonnementsverloop
 
@@ -121,7 +121,7 @@ Voorspelling voor abonnementsverloop helpt voorspellen of het risico bestaat dat
    - **Voorspellingsnaam:** de naam van de voorspelling die is opgegeven bij het maken ervan.
    - **Voorspellingstype:** het type model dat voor de voorspelling is gebruikt
    - **Uitvoerentiteit:** naam van de entiteit om de uitvoer van de voorspelling op te slaan. U kunt een entiteit met deze naam vinden onder **Gegevens** > **Entiteiten**.    
-     In de uitvoerentiteit is *ChurnScore* de voorspelde waarschijnlijkheid van verloop en *IsChurn* een binair label gebaseerd op *ChurnScore* met een drempel van 0,5. De standaarddrempel werkt mogelijk niet voor uw scenario. [Maak een nieuw segment](segments.md#create-a-new-segment) met uw gewenste drempel.
+     In de uitvoerentiteit is *ChurnScore* de voorspelde waarschijnlijkheid van verloop en *IsChurn* een binair label gebaseerd op *ChurnScore* met een drempel van 0,5. De standaarddrempel werkt mogelijk niet voor uw scenario. [Maak een nieuw segment](segments.md#create-a-segment) met uw gewenste drempel.
    - **Voorspeld veld:** dit veld wordt alleen ingevuld voor sommige typen voorspellingen en wordt niet gebruikt in de voorspelling voor abonnementsverloop.
    - **Status:** de huidige status van de uitvoering van de voorspelling.
         - **In wachtrij:** de voorspelling wacht momenteel op het uitvoeren van andere processen.

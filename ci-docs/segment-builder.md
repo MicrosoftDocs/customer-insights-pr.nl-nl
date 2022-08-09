@@ -1,6 +1,6 @@
 ---
-title: Segmenten maken
-description: Maak segmenten van klanten om ze te groeperen op basis van verschillende kenmerken met behulp van de opbouwfunctie voor segmenten of snelle segmenten.
+title: Complexe segmenten maken met de opbouwfunctie voor segmenten
+description: Gebruik de opbouwfunctie voor segmenten om complexe segmenten te maken van klanten door ze te groeperen op basis van verschillende kenmerken.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,20 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: b99d9575d3b6af91758d80eb04170773b08cc9ab
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053966"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170629"
 ---
-# <a name="create-segments"></a>Segmenten maken
+# <a name="create-complex-segments-with-segment-builder"></a>Complexe segmenten maken met de opbouwfunctie voor segmenten
 
-Definieer complexe filters rond de uniforme klantentiteit en de bijhorende gerelateerde entiteiten. Elk segment maakt na verwerking een set klantrecords die u kunt exporteren en waarop u actie kunt ondernemen. Segmenten worden beheerd op de pagina **Segmenten**. U kunt [nieuwe segmenten maken](#create-a-new-segment) met de opbouwfunctie voor segmenten of [snel segmenten maken](#quick-segments) vanuit andere delen van de app.
+Definieer complexe filters rond de uniforme klantentiteit en de bijhorende gerelateerde entiteiten. Elk segment maakt na verwerking een set klantrecords die u kunt exporteren en waarop u actie kunt ondernemen.
 
 > [!TIP]
-> - Snelle segmenten worden alleen ondersteund in omgevingen voor **individuele klanten**.
-> - Segmenten op basis van **individuele klanten** nemen automatisch beschikbare contactgegevens voor segmentleden op. In omgevingen voor **zakelijke accounts** zijn segmenten gebaseerd op accounts (bedrijven of dochterondernemingen). Om contactgegevens in een segment op te nemen, gebruikt u de functionaliteit **Projectkenmerken** in de segmentbouwer. Zorg ervoor dat de contactgegevensbronnen [semantisch zijn toegewezen aan de entiteit ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> Segmenten op basis van **individuele klanten** nemen automatisch beschikbare contactgegevens voor segmentleden op. In omgevingen voor **zakelijke accounts** zijn segmenten gebaseerd op accounts (bedrijven of dochterondernemingen). Om contactgegevens in een segment op te nemen, gebruikt u de functionaliteit **Projectkenmerken** in de segmentbouwer. Zorg ervoor dat de contactgegevensbronnen [semantisch zijn toegewezen aan de entiteit ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Opbouwfunctie voor segmenten
 
@@ -34,7 +33,7 @@ In de volgende afbeelding worden de verschillende aspecten van de opbouwfunctie 
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="Elementen van de segmentbouwer." lightbox="media/segment-builder-overview.png":::
 
-1. Organiseer uw segment met regels en subregels. Elke regel of subregel bestaat uit voorwaarden. Combineer de voorwaarden met logische operators
+1. Organiseer uw segment met regels en subregels. Elke regel of subregel bestaat uit voorwaarden. Combineer de voorwaarden met logische operators.
 
 1. Kies het [relatiepad](relationships.md) tussen entiteiten die van toepassing zijn op een regel. Het relatiepad bepaalt welke kenmerken in een voorwaarde kunnen worden gebruikt.
 
@@ -52,17 +51,15 @@ In de volgende afbeelding worden de verschillende aspecten van de opbouwfunctie 
 
 Het bovenstaande voorbeeld illustreert de segmentatiemogelijkheid. We hebben een segment gedefinieerd voor klanten die ten minste voor $ 500 aan goederen online hebben gekocht *en* interesse hebben in softwareontwikkeling.
 
-## <a name="create-a-new-segment"></a>Een nieuw segment maken
+## <a name="create-a-new-segment-with-segment-builder"></a>Een nieuw segment maken met behulp van de opbouwfunctie voor segmenten
 
-Er zijn meerdere manieren om een nieuw segment te maken. In dit gedeelte wordt beschreven hoe u uw eigen segment helemaal opnieuw kunt opbouwen. U kunt ook een *snel segment* maken op basis van bestaande entiteiten of gebruikmaken van Machine Learning-modellen om *voorgestelde segmenten* te krijgen. Ga voor meer informatie naar [Overzicht van segmenten](segments.md).
+1. Ga naar **Segmenten**.
 
-Terwijl u een segment maakt, kunt u een concept opslaan. In de conceptfase wordt een segment opgeslagen als inactief segment. Wanneer u de segmentconfiguratie hebt voltooid, voert u deze uit om het segment te activeren. U kunt een segment ook **activeren** via de pagina **Alle segmenten**.
+1. Selecteer **Nieuw** > **Bouw uw eigen segment**. Op de pagina voor het samenstellen van segmenten definieert of stelt u regels op. Een regel bestaat uit een of meer voorwaarden die een set klanten definiëren.
 
-1. Ga naar de pagina **Segmenten**.
+1. Selecteer **Details bewerken** naast het segment Naamloos. Geef een naam op voor uw segment en werk de voorgestelde **Naam van uitvoerentiteit** voor het segment bij. Voeg optioneel een beschrijving en [tags](work-with-tags-columns.md#manage-tags) toe aan het segment.
 
-1. Selecteer **Nieuw** > **Bouw uw eigen segment**.
-
-1. Op de pagina voor het samenstellen van segmenten definieert of stelt u regels op. Een regel bestaat uit een of meer voorwaarden die een set klanten definiëren.
+   :::image type="content" source="media/segments_edit_details.png" alt-text="Dialoogvenster Details bewerken.":::
 
 1. Kies in de sectie **Rule1** een kenmerk van een entiteit waarop u klanten wilt filteren. U kunt op twee manieren kenmerken kiezen:
    - Bekijk de lijst met beschikbare entiteiten en kenmerken in het deelvenster **Toevoegen aan regel** en selecteer het pictogram **+** naast het kenmerk dat u wilt toevoegen. Kies of u het kenmerk aan een bestaande regel wilt toevoegen of het wilt gebruiken om een nieuwe regel te maken.
@@ -72,38 +69,33 @@ Terwijl u een segment maakt, kunt u een concept opslaan. In de conceptfase wordt
 
 1. Selecteer **Voorwaarde toevoegen** om meer voorwaarden aan een regel toe te voegen. Als u een regel onder de huidige regel wilt maken, selecteert u **Subregel toevoegen**.
 
-1. Als een regel andere entiteiten gebruikt dan de entiteit *Klant*, moet u het relatiepad instellen. Het relatiepad is vereist om het systeem te informeren via welke relaties u toegang wilt hebben tot de geharmoniseerde klantentiteit. Selecteer **Relatiepad instellen** om de geselecteerde entiteit toe te wijzen aan de geharmoniseerde klantentiteit. Als er maar één mogelijk relatiepad is, selecteert het systeem automatisch dit pad. Verschillende relatiepaden kunnen verschillende resultaten opleveren. Elke regel kan zijn eigen relatiepad hebben.
+1. Als een regel andere entiteiten gebruikt dan de entiteit *Klant*, selecteert u **Relatiepad instellen** om de geselecteerde entiteit toe te wijzen aan de geharmoniseerde klantentiteit. Als er maar één mogelijk relatiepad is, selecteert het systeem automatisch dit pad. Verschillende [relatiepaden](relationships.md#relationship-paths) kunnen verschillende resultaten opleveren. Elke regel kan zijn eigen relatiepad hebben.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Potentieel relatiepad bij het maken van een regel op basis van een entiteit die is toegewezen aan de geharmoniseerde klantentiteit.":::
 
-   Zo heeft de entiteit *eCommerce_eCommercePurchases* in de schermopname bijvoorbeeld vier opties om de entiteit *Klant* toe te wijzen:
-   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Klant
-   - eCommerce_eCommercePurchases > Klant
-   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klant
-   - eCommerce_eCommerceAankopen > eCommerce_eCommerceContacten > POS_posPurchases > loyaltyScheme_loyCustomers > Klant Bij het kiezen van de laatste optie kunnen we kenmerken van alle vermelde entiteiten opnemen in de regelvoorwaarden. We krijgen waarschijnlijk minder resultaten omdat de overeenkomende klantrecords deel moeten uitmaken van alle entiteiten. In dit voorbeeld hebben ze goederen gekocht via e-commerce (*eCommerce_eCommercePurchases*) bij een verkooppunt (*POS_posPurchases*) en nemen ze deel aan ons loyaliteitsprogramma (*loyaltyScheme_loyCustomers*). Bij het kiezen van de tweede optie kunnen we alleen kenmerken kiezen uit de *eCommerce_eCommercePurchases* en de entiteit *Klant*. Dit resulteert waarschijnlijk in meer klantprofielen.
-
-1. Als u meerdere voorwaarden in een regel hebt opgenomen, kunt u kiezen welke logische operator ze verbindt.  
-   - **EN**-operator: er moet aan alle voorwaarden worden voldaan om een record in het segment op te nemen. Deze optie is vooral handig wanneer u voorwaarden definieert voor verschillende entiteiten.
-   - **OF**-operator: er moet aan een van de voorwaarden worden voldaan om een record in het segment op te nemen. Deze optie is vooral handig wanneer u meerdere voorwaarden definieert voor dezelfde entiteit.
+1. Als u meerdere voorwaarden in een regel hebt opgenomen, kiest u welke logische operator ze verbindt.  
+   - **EN**-operator: er moet aan alle voorwaarden worden voldaan om een record in het segment op te nemen. Gebruik deze optie wanneer u voorwaarden definieert voor verschillende entiteiten.
+   - **OF**-operator: er moet aan een van de voorwaarden worden voldaan om een record in het segment op te nemen. Gebruik deze optie wanneer u meerdere voorwaarden definieert voor dezelfde entiteit.
 
    :::image type="content" source="media/segmentation-either-condition.png" alt-text="Regel met twee EN-voorwaarden.":::
 
    Bij gebruik van de OF-operator moeten alle voorwaarden zijn gebaseerd op entiteiten die in het relatiepad zijn opgenomen.
 
-   - U kunt meerdere regels maken om verschillende sets klantrecords te maken. U kunt groepen combineren om de klanten op te nemen die nodig zijn voor uw businesscase. Selecteer **Regel toevoegen** om een nieuwe regel te maken. Als u een entiteit niet in een regel kunt opnemen vanwege het opgegeven relatiepad, moet u met name een nieuwe regel maken om er kenmerken uit te kiezen.
+1. U kunt meerdere regels maken om verschillende sets klantrecords te maken. Combineer groepen om de klanten op te nemen die nodig zijn voor uw bedrijfsscenario. Als u een entiteit niet in een regel kunt opnemen vanwege het opgegeven relatiepad, maakt u speciaal een nieuwe regel maken om er kenmerken uit te kiezen.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Voeg een nieuwe regel toe aan een segment en kies de set-operator.":::
 
-   - Selecteer een van de set-operators: **Samenvoegen**, **Doorsnede** of **Uitsluiten**.
+   1. Selecteer **Regel toevoegen**.
+   1. Selecteer een van de set-operators: **Samenvoegen**, **Doorsnede** of **Uitsluiten**.
 
       - **Verbinding** verbindt de twee groepen.
       - **Overlappen** overlapt de twee groepen. Alleen gegevens die *voorkomen* in beide groepen blijven in de verenigde groep.
       - **Behalve** combineert de twee groepen. Alleen gegevens in groep A die *niet voorkomen* in groep B worden bewaard.
 
-1. Segmenten genereren standaard de entiteit voor uitvoer die alle kenmerken bevat van klantprofielen die overeenkomen met de gedefinieerde filters. Als een segment is gebaseerd op andere entiteiten dan de entiteit *Klant*, kunt u meer attributen van deze entiteiten aan de uitvoerentiteit toevoegen. Selecteer **Projectkernmerken** om de kenmerken te kiezen die aan de uitvoerentiteit worden toegevoegd.
+1. De uitvoerentiteit bevat standaard automatisch alle kenmerken van klantprofielen die overeenkomen met de gedefinieerde filters. Als een segment is gebaseerd op andere entiteiten dan de entiteit *Klant*, selecteert u **Projectkenmerken** om meer attributen van deze entiteiten aan de uitvoerentiteit toe te voegen.
 
    > [!IMPORTANT]
-   > Voor segmenten die zijn gebaseerd op zakelijke accounts, moeten details van een of meer contacten van elke account uit de entiteit *ContactProfile* worden opgenomen in het segment om toe te staan dat het segment kan worden geactiveerd of geëxporteerd naar bestemmingen waarvoor contactgegevens nodig zijn. Zie voor meer informatie over de entiteit *ContactProfile* het onderwerp [Semantische toewijzingen](semantic-mappings.md).
+   > Voor segmenten die zijn gebaseerd op zakelijke accounts, moeten details van een of meer contactpersonen van elke account uit de entiteit *ContactProfile* worden opgenomen in het segment om toe te staan dat het segment kan worden geactiveerd of geëxporteerd naar bestemmingen waarvoor contactgegevens nodig zijn. Zie voor meer informatie over de entiteit *ContactProfile* het onderwerp [Semantische toewijzingen](semantic-mappings.md).
    > Een voorbeelduitvoer voor een segment op basis van zakelijke accounts met geprojecteerde kenmerken van contactpersonen kan er als volgt uitzien:
    >
    > |Id  |Accountnaam  |Omzet  |Naam van contactpersoon  | Rol van contactpersoon|
@@ -120,48 +112,18 @@ Terwijl u een segment maakt, kunt u een concept opslaan. In de conceptfase wordt
    > - Als het kenmerk dat u wilt projecteren slechts één stap verwijderd is van de entiteit *Klant*, hoeft dat kenmerk niet aanwezig te zijn in elke regel van de segmentquery die u maakt.
    > - Bij het gebruik van set-operators wordt rekening gehouden met **geprojecteerde kenmerken**.
 
-1. Selecteer **Details bewerken** naast het segment Naamloos. Geef een naam op voor uw segment en werk de voorgestelde **Naam van uitvoerentiteit** voor het segment bij. Voeg optioneel een beschrijving en [tags](work-with-tags-columns.md#manage-tags) toe aan het segment.
+1. Selecteer **Uitvoeren** om het segment te maken. Selecteer **Opslaan** als u de huidige configuratie wilt behouden en het segment later wilt uitvoeren. De pagina **Segmenten** wordt weergegeven.
 
-   :::image type="content" source="media/segments_edit_details.png" alt-text="Dialoogvenster Details bewerken.":::
+### <a name="segment-builder-tips"></a>Tips voor de opbouwfunctie voor segmenten
 
-1. Selecteer **Uitvoeren** om het segment op te slaan, activeer het en begin met het verwerken van uw segment op basis van alle regels en voorwaarden. Anders wordt het opgeslagen als een inactief segment.
+Houd bij het maken van een segment met de opbouwfunctie voor segmenten rekening met de volgende tips:
 
-1. Selecteer **Terug naar segmenten** om terug te gaan naar de pagina **Segmenten**.
-
-1. Standaard wordt het segment gemaakt als een dynamisch segment. Dit betekent dat het segment wordt vernieuwd tijdens systeemvernieuwingen. Als u de [automatische vernieuwing wilt beëindigen](segments.md#manage-existing-segments), selecteert u het segment en kiest u de optie **Statisch maken**. Statische segmenten kunnen op elk moment [handmatig worden vernieuwd](segments.md#refresh-segments).
-
-> [!TIP]
-> - De opbouwfunctie voor segmenten stelt geen geldige waarden van entiteiten voor bij het instellen van de operators voor de voorwaarden. U kunt naar **Gegevens** > **Entiteiten** gaan en de entiteitsgegevens downloaden om te zien welke waarden er beschikbaar zijn.
-> - Met voorwaarden op basis van de datums kunt u schakelen tussen vaste datums en een zwevend datumbereik.
-> - Als u meerdere regels voor uw segment heeft, heeft de regel die u aan het bewerken bent, een verticale blauwe lijn ernaast.
-> - U kunt regels en voorwaarden naar andere plaatsen in de segmentdefinitie verplaatsen. Selecteer het verticale weglatingsteken (&vellip;) naast een regel of voorwaarde en kies hoe en waar u deze wilt verplaatsen.
-> - Met de opties **Ongedaan maken** en **Opnieuw** in de opdrachtbalk kunt u wijzigingen ongedaan maken.
-> - Nadat u een segment hebt gemaakt, kunt u met sommige segmenten [het gebruik van het segment bijhouden](segments.md#track-usage-of-a-segment).
-
-## <a name="quick-segments"></a>Snelle segmenten
-
-Met snelle segmenten kunt u snel eenvoudige segmenten bouwen met één operator voor snellere inzichten.
-
-1. Selecteer op de pagina **Segmenten** de optie **Nieuw** > **Maken van**.
-   - Selecteer de optie **Profielen** om een segment te bouwen dat is gebaseerd op de entiteit *geharmoniseerde klant*.
-   - Selecteer de optie **Meetcriteria** om een segment te bouwen rond meetcriteria die u eerder hebt gemaakt.
-   - Selecteer de optie **Intelligentie** om een segment op te bouwen rond een van de uitvoerentiteiten die u hebt gegenereerd met behulp van de mogelijkheden **Voorspellingen** of **Aangepaste modellen**.
-
-2. Selecteer in het dialoogvenster **Nieuw snel segment** een kenmerk uit de vervolgkeuzelijst **Veld**.
-
-3. Het systeem biedt meer inzichten die u helpen om betere segmenten van uw klanten te maken.
-   - Voor categorievelden geven we tien topposities van klanten weer. Kies een **Waarde** en selecteer **Evalueren**.
-   - Voor een numeriek kenmerk laat het systeem zien welke kenmerkwaarde onder het percentiel van elke klant valt. Kies een **Operator** en een **Waarde** en selecteer vervolgens **Evalueren**.
-
-4. Het systeem zal u van een **Geschatte segmentgrootte** voorzien. U kunt kiezen of u het door u gedefinieerde segment wilt genereren of het eerst opnieuw wilt bezoeken om een andere segmentgrootte te krijgen.
-
-   :::image type="content" source="media/quick-segment-name.png" alt-text="Naam en schatting voor een snel segment.":::
-
-5. Geef een waarde voor **Naam** en **Naam van uitvoerentiteit** op voor uw segment. Voeg optioneel [tags](work-with-tags-columns.md#manage-tags) toe.
-
-6. Selecteer **Opslaan** om uw segment te maken.
-
-7. Nadat de verwerking van segment is voltooid, kunt u het bekijken zoals elk ander segment dat u hebt gemaakt.
+- De opbouwfunctie voor segmenten stelt geen geldige waarden van entiteiten voor bij het instellen van de operators voor de voorwaarden. U kunt naar **Gegevens** > **Entiteiten** gaan en de entiteitsgegevens downloaden om te zien welke waarden er beschikbaar zijn.
+- Met voorwaarden op basis van datums kunt u schakelen tussen vaste datums en een zwevend datumbereik.
+- Als u meerdere regels voor uw segment heeft, heeft de regel die u aan het bewerken bent, een verticale blauwe lijn ernaast.
+- U kunt regels en voorwaarden naar andere plaatsen in de segmentdefinitie verplaatsen. Selecteer het verticale weglatingsteken (&vellip;) naast een regel of voorwaarde en kies hoe en waar u deze wilt verplaatsen.
+- Met de opties **Ongedaan maken** en **Opnieuw** in de opdrachtbalk kunt u wijzigingen ongedaan maken.
+- Nadat u een segment hebt gemaakt, kunt u met sommige segmenten [het gebruik van het segment bijhouden](segments.md#track-usage-of-a-segment).
 
 ## <a name="next-steps"></a>Volgende stappen
 
