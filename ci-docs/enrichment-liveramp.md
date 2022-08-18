@@ -1,19 +1,19 @@
 ---
 title: Klantprofielen verrijken met identiteitsgegevens uit LiveRamp (preview)
 description: Verrijk klantprofielen met LiveRamp-gegevens.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196342"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237806"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Klantprofielen verrijken met identiteitsgegevens uit LiveRamp (preview)
 
@@ -41,13 +41,9 @@ Je moet een [beheerder](permissions.md#admin) in Customer Insights zijn en een a
 
 1. Voer een naam in voor de verbinding en een geldige LiveRamp-client-id en een geheim.
 
-1. Bekijk en geef uw toestemming voor [Gegevensprivacy en naleving](#data-privacy-and-compliance) door **Ik ga akkoord** te selecteren.
+1. Bekijk [Gegevensprivacy en naleving](connections.md#data-privacy-and-compliance) en selecteer **Ik ga akkoord**.
 
 1. Selecteer **Verifiëren** om de configuratie te valideren en selecteer **Opslaan**.
-
-### <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
-
-Wanneer u Dynamics 365 Customer Insights instelt om gegevens naar LiveRamp te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens in uw opdracht overdragen, maar het is uw verantwoordelijkheid ervoor te zorgen dat LiveRamp voldoet aan eventuele privacy- of beveiligingsverplichtingen die u hebt. Neem de [privacyverklaring van Microsoft](https://go.microsoft.com/fwlink/?linkid=396732) door voor meer informatie. Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
 
 ## <a name="configure-the-enrichment"></a>De verrijking configureren
 

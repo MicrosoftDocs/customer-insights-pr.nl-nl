@@ -1,7 +1,7 @@
 ---
-title: Logboeken doorsturen in Dynamics 365 Customer Insights met Azure Monitor (preview)
+title: Diagnostische logboeken exporteren (preview)
 description: Leer hoe u logboeken naar Microsoft Azure Monitor kunt verzenden.
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,87 +11,56 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052647"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245919"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Logboeken doorsturen in Dynamics 365 Customer Insights met Azure Monitor (preview)
+# <a name="export-diagnostic-logs-preview"></a>Diagnostische logboeken exporteren (preview)
 
-Dynamics 365 Customer Insights biedt een directe integratie met Azure Monitor. Met Azure Monitor-resourcelogboeken kunt u logboeken bewaken en naar [Azure-opslag](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) verzenden of deze naar [Azure-gebeurtenishubs](https://azure.microsoft.com/services/event-hubs/) streamen.
+Stuur logboeken door vanuit Customer Insights met Azure Monitor. Met Azure Monitor-resourcelogboeken kunt u logboeken bewaken en naar [Azure-opslag](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) verzenden of deze naar [Azure-gebeurtenishubs](https://azure.microsoft.com/services/event-hubs/) streamen.
 
-Customer Insights stuurt de volgende gebeurtenislogboeken:
+Customer Insights verzendt de volgende gebeurtenislogboeken:
 
 - **Controlegebeurtenissen**
   - **APIEvent** - maakt het bijhouden van wijzigingen via de gebruikersinterface van Dynamics 365 Customer Insights mogelijk.
 - **Operationele gebeurtenissen**
-  - **WorkflowEvent** - De workflow maakt het u mogelijk om [Gegevensbronnen](data-sources.md) in te stellen en gegevens te [harmoniseren](data-unification.md), te [verrijken](enrichment-hub.md) en tot slot te [exporteren](export-destinations.md) naar andere systemen. Al die stappen kunnen afzonderlijk worden uitgevoerd (bijvoorbeeld een enkele export activeren). Ze kunnen ook georkestreerd worden uitgevoerd (bijvoorbeeld gegevensvernieuwing van gegevensbronnen die het harmonisatieproces in gang zetten, waardoor verrijkingen worden binnengehaald en als dit klaar is, worden de gegevens naar een ander systeem geëxporteerd). Voor meer informatie raadpleegt u het [WorkflowEvent-schema](#workflow-event-schema).
-  - **APIEvent** - alle API-aanroepen van het klantexemplaar van Dynamics 365 Customer Insights. Voor meer informatie raadpleegt u het [APIEvent-schema](#api-event-schema).
+  - **WorkflowEvent** - biedt u de mogelijkheid om [gegevensbronnen](data-sources.md) in te stellen en gegevens te [harmoniseren](data-unification.md), [verrijken](enrichment-hub.md) en [exporteren](export-destinations.md) naar andere systemen. Deze stappen kunnen afzonderlijk worden uitgevoerd (bijvoorbeeld een enkele export activeren). Ze kunnen ook georkestreerd worden uitgevoerd (bijvoorbeeld gegevensvernieuwing van gegevensbronnen die het harmonisatieproces in gang zetten, waardoor verrijkingen worden binnengehaald en de gegevens naar een ander systeem worden geëxporteerd). Voor meer informatie raadpleegt u het [WorkflowEvent-schema](#workflow-event-schema).
+  - **APIEvent** - verzendt alle API-aanroepen van het klantexemplaar naar Dynamics 365 Customer Insights. Voor meer informatie raadpleegt u het [APIEvent-schema](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>De diagnose-instellingen uitvoeren
 
 ### <a name="prerequisites"></a>Vereisten
 
-Als u diagnoses wilt configureren in Customer Insights, moet aan de volgende vereisten worden voldaan:
-
-- U hebt een actief [Azure-abonnement](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- U hebt machtigingen voor [beheerders](permissions.md#admin) in Customer Insights.
-- U hebt de rol van **inzender** en **beheerder voor gebruikerstoegang** voor de doelresource in Azure. De resource kan een Azure Data Lake Storage-account, een Azure-gebeurtenishub of een Azure Log Analytics-werkruimte zijn. Zie [Azure-roltoewijzingen toevoegen of verwijderen met behulp van de Azure-portal](/azure/role-based-access-control/role-assignments-portal) voor meer informatie. Deze machtiging is nodig tijdens het configureren van diagnostische instellingen in Customer Insights. De machtiging kan worden gewijzigd na een succesvolle installatie.
-- [Bestemmingsvereisten](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) voor Azure Storage, Azure-gebeurtenishub of Azure Log Analytics met.
-- U hebt in ieder geval de rol **Lezer** in de resourcegroep waartoe de resource behoort.
+- Een actief [Azure-abonnement](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
+- Machtigingen voor [beheerders](permissions.md#admin) in Customer Insights.
+- De [rol van inzender en beheerder voor gebruikerstoegang](/azure/role-based-access-control/role-assignments-portal) voor de doelresource in Azure. De resource kan een Azure Data Lake Storage-account, een Azure-gebeurtenishub of een Azure Log Analytics-werkruimte zijn. Deze machtiging is nodig tijdens het configureren van diagnostische instellingen in Customer Insights, maar kan worden gewijzigd na een succesvolle installatie.
+- Er wordt aan de [bestemmingsvereisten](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) voor Azure Storage, Azure-gebeurtenishub of Azure Log Analytics voldaan.
+- In ieder geval de rol **Lezer** in de resourcegroep waartoe de resource behoort.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Diagnoses instellen met Azure Monitor
 
-1. Selecteer in Customer Insights de optie **Systeem** > **Diagnose** om de diagnostische bestemmingen te zien die voor dit exemplaar zijn geconfigureerd.
+1. Ga in Customer Insights naar **Beheer** > **Systeem** en selecteer het tabblad **Diagnostiek**.
 
 1. Selecteer **Bestemming toevoegen**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Diagnoseverbinding](media/diagnostics-pane.png "Diagnoseverbinding")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="Diagnoseverbinding.":::
 
 1. Geef een naam op in het veld **Naam van bestemming van diagnostische gegevens**.
 
-1. Kies de **tenant** van het Azure-abonnement met de doelresources bron en selecteer **Aanmelden**.
+1. Selecteer het **resourcetype** (Opslagaccount, Event Hub of Log Analytics).
 
-1. Selecteer het **resourcetype** (opslagaccount, Event Hub of logboekanalyse).
+1. Selecteer het **abonnement**, de **resourcegroep** en de **resource** voor de doelresource. Zie [Configuratie op de doelresource](#configuration-on-the-destination-resource) voor toestemmings- en logboekinformatie.
 
-1. Selecteer het **abonnement** voor de doelresource.
-
-1. Selecteer de **resourcegroep** voor de doelresource.
-
-1. Selecteer de **resource**.
-
-1. Bevestig de verklaring **Gegevensprivacy en naleving**.
+1. Bekijk [Gegevensprivacy en naleving](connections.md#data-privacy-and-compliance) en selecteer **Ik ga akkoord**.
 
 1. Selecteer **Verbinden met systeem** om verbinding te maken met de doelresource. De logboeken verschijnen na 15 minuten op de bestemming, als de API in gebruik is en gebeurtenissen genereert.
 
-### <a name="remove-a-destination"></a>Een bestemming verwijderen
-
-1. Ga naar **Systeem** > **Diagnose**.
-
-1. Selecteer de diagnosebestemming in de lijst.
-
-1. Selecteer in de kolom **Acties** het picotgram **Verwijderen**.
-
-1. Bevestig de verwijdering om het doorsturen van het logboek te stoppen. De resource in het Azure-abonnement wordt niet verwijderd. U kunt de koppeling in de kolom **Acties** selecteren om de Azure-portal te openen voor de geselecteerde resource en deze daar te verwijderen.
-
-## <a name="log-categories-and-event-schemas"></a>Logboekcategorieën en gebeurtenisschema's
-
-Momenteel worden [API-gebeurtenissen](apis.md) en werkstroomgebeurtenissen ondersteund en zijn de volgende categorieën en schema's van toepassing.
-Het logboekschema volgt het [algemene schema van Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
-
-### <a name="categories"></a>Categorieën
-
-Customer Insights biedt twee categorieën:
-
-- **Controlegebeurtenissen**: [API-gebeurtenissen](#api-event-schema) om de configuratiewijzigingen voor de service bij te houden. `POST|PUT|DELETE|PATCH`-bewerkingen vallen in deze categorie.
-- **Operationele gebeurtenissen**: [API-gebeurtenissen](#api-event-schema) of [werkstroomgebeurtenissen](#workflow-event-schema) die worden gegenereerd tijdens het gebruik van de service.  Bijvoorbeeld, `GET`-aanvragen of de uitvoeringsgebeurtenissen van een werkstroom.
-
 ## <a name="configuration-on-the-destination-resource"></a>Configuratie op de doelresource
 
-Op basis van uw keuze van het resourcetype worden automatisch de volgende stappen toegepast:
+Op basis van uw keuze van resourcetype vinden automatisch de volgende wijzigingen plaats:
 
 ### <a name="storage-account"></a>Storage account
 
@@ -116,9 +85,34 @@ Customer Insights-service-principal krijgt de machtiging **Inzender van Log Anal
 
 Vouw onder het venster **Query's** de oplossing **Controleren** uit en zoek de voorbeeldquery's op door te zoeken naar `CIEvents`.
 
+## <a name="remove-a-diagnostics-destination"></a>Een bestemming van diagnostische gegevens verwijderen
+
+1. Ga naar **Beheer** > **Systeem** en selecteer het tabblad **Diagnostiek**.
+
+1. Selecteer de diagnosebestemming in de lijst.
+
+   > [!TIP]
+   > Als u de bestemming verwijdert, wordt het doorsturen van logboeken gestopt, maar wordt de resource in het Azure-abonnement niet verwijderd. Als u de resource wilt verwijderen in Azure, selecteert u de koppeling in de kolom **Acties** om de Azure-portal te openen voor de geselecteerde resource en verwijdert u deze daar. Verwijder vervolgens de diagnosebestemming.
+
+1. Selecteer in de kolom **Acties** het picotgram **Verwijderen**.
+
+1. Bevestig de verwijdering om de bestemming te verwijderen en het doorsturen van het logboek te stoppen.
+
+## <a name="log-categories-and-event-schemas"></a>Logboekcategorieën en gebeurtenisschema's
+
+Momenteel worden [API-gebeurtenissen](apis.md) en werkstroomgebeurtenissen ondersteund en zijn de volgende categorieën en schema's van toepassing.
+Het logboekschema volgt het [algemene schema van Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
+
+### <a name="categories"></a>Categorieën
+
+Customer Insights biedt twee categorieën:
+
+- **Controlegebeurtenissen**: [API-gebeurtenissen](#api-event-schema) om de configuratiewijzigingen voor de service bij te houden. `POST|PUT|DELETE|PATCH`-bewerkingen vallen in deze categorie.
+- **Operationele gebeurtenissen**: [API-gebeurtenissen](#api-event-schema) of [werkstroomgebeurtenissen](#workflow-event-schema) die worden gegenereerd tijdens het gebruik van de service.  Bijvoorbeeld, `GET`-aanvragen of de uitvoeringsgebeurtenissen van een werkstroom.
+
 ## <a name="event-schemas"></a>Gebeurtenisschema's
 
-API-gebeurtenissen en werkstroomgebeurtenissen hebben een gemeenschappelijke structuur en verschillen op detailniveau, zie [API-gebeurtenisschema](#api-event-schema) of [werkstroomgebeurtenisschema](#workflow-event-schema).
+API-gebeurtenissen en werkstroomgebeurtenissen hebben een gemeenschappelijke structuur, maar met enkele verschillen. Zie [API-gebeurtenisschema](#api-event-schema) of [werkstroomgebeurtenisschema](#workflow-event-schema) voor meer informatie.
 
 ### <a name="api-event-schema"></a>API-gebeurtenisschema
 
@@ -220,7 +214,6 @@ De werkstroom bevat meerdere stappen. [Gegevensbronnen opnemen](data-sources.md)
 | `durationMs`    | Lang      | Optioneel          | Duur van de bewerking in milliseconden.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Optioneel          | JSON-object met meer eigenschappen voor de specifieke categorie gebeurtenissen.                                                                                        | Zie subsectie [Werkstroomeigenschappen](#workflow-properties-schema)                                                                                                       |
 | `level`         | String    | Vereist          | Ernstniveau van de gebeurtenis.                                                                                                                                  | `Informational`, `Warning` of `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>Schema van werkstroomeigenschappen
 
@@ -247,3 +240,5 @@ Werkstroomgebeurtenissen hebben de volgende eigenschappen.
 | `properties.additionalInfo.AffectedEntities` | No       | Ja  | Optioneel. Alleen voor OperationType `Export`. Bevat een lijst met geconfigureerde entiteiten in de export.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Ja  | Optioneel. Alleen voor OperationType `Export`. Gedetailleerd bericht voor de export.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Ja  | Optioneel. Alleen voor OperationType `Segmentation`. Geeft het totale aantal leden aan dat het segment heeft.                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

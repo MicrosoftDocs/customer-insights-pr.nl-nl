@@ -1,19 +1,19 @@
 ---
 title: Klantprofielen verrijken met aangepast importeren via SFTP (preview)
 description: Algemene informatie over de aangepaste SFTP-importverrijking.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 831d1d3d3045379bbc5bcdcd4b05b8a147221f31
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195790"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237760"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Klantprofielen verrijken met aangepast importeren via SFTP (preview)
 
@@ -85,14 +85,9 @@ U moet een [beheerder](permissions.md#admin) in Customer Insights zijn en de geb
 
 1. Voer een geldige gebruikersnaam, wachtwoord en host-URL in voor de SFTP-server waarop de te importeren gegevens zich bevinden.
 
-1. Bekijk en geef uw toestemming voor [Gegevensprivacy en naleving](#data-privacy-and-compliance) door **Ik ga akkoord** te selecteren.
+1. Bekijk [Gegevensprivacy en naleving](connections.md#data-privacy-and-compliance) en selecteer **Ik ga akkoord**.
 
 1. Selecteer **Verifiëren** om de configuratie te valideren en selecteer **Opslaan**.
-
-### <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
-
-Wanneer u Dynamics 365 Customer Insights instelt om gegevens met Aangepaste import te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens in uw opdracht overdragen, maar het is uw verantwoordelijkheid ervoor te zorgen dat de gegevens voldoen aan eventuele privacy- of beveiligingsverplichtingen die u hebt. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
-Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
 
 ## <a name="configure-the-import"></a>De import configureren
 

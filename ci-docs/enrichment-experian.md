@@ -1,19 +1,19 @@
 ---
 title: Klantprofielen verrijken met demografische gegevens van Experian (preview)
 description: Algemene informatie over de verrijking van derden Experian.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fccb37cde3f05a70009c18b6c52db01a5ede094d
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195930"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237990"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Klantprofielen verrijken met demografische gegevens van Experian (preview)
 
@@ -41,13 +41,9 @@ Je moet een [beheerder](permissions.md#admin) in Customer Insights zijn en een E
 
 1. Voer een naam in voor de verbinding en een geldige gebruikers-id, partij-id en modelnummer voor uw Experian Secure Transport-account.
 
-1. Bekijk en geef uw toestemming voor [Gegevensprivacy en naleving](#data-privacy-and-compliance) door **Ik ga akkoord** te selecteren.
+1. Bekijk [Gegevensprivacy en naleving](connections.md#data-privacy-and-compliance) en selecteer **Ik ga akkoord**.
 
 1. Selecteer **Verifiëren** om de configuratie te valideren en selecteer **Opslaan**.
-
-### <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
-
-Wanneer u Dynamics 365 Customer Insights inschakelt om gegevens te verzenden naar Experian, staat u de overdracht van gegevens buiten de nalevingsgrens toe voor Dynamics 365 Customer Insights, inclusief mogelijk gevoelige gegevens zoals persoonsgegevens. Microsoft zal dergelijke gegevens in uw opdracht overdragen, maar u bent er zelf verantwoordelijk voor dat Experian voldoet aan alle privacy- of beveiligingsverplichtingen die u hebt. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie. Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
 
 ## <a name="configure-the-enrichment"></a>De verrijking configureren
 

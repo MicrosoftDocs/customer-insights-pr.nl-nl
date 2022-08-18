@@ -2,7 +2,7 @@
 title: Duplicaten verwijderen voordat u gegevens harmoniseert
 description: De tweede stap in het harmonisatieproces is het selecteren van de record die moet worden bewaard als er duplicaten worden gevonden.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139423"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213621"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Duplicaten verwijderen voordat u gegevens harmoniseert
 
-Desgewenst kunt u met deze stap in de harmonisatie regels instellen voor het afhandelen van dubbele records binnen een entiteit. *Ontdubbeling* identificeert dubbele records en voegt ze samen tot één record. Bronrecords worden met alternatieve id's aan de samengevoegde record gekoppeld. Als er geen regels zijn geconfigureerd, worden door het systeem gedefinieerde regels toegepast.
+Met deze optionele stap bij de harmonisatie kunt u regels instellen voor het afhandelen van dubbele records **binnen** een entiteit. Bij deduplicatie worden meerdere records voor een klant geïdentificeerd en de beste record om te bewaren geselecteerd (op basis van basisvoorkeuren voor samenvoegen) of de records samengevoegd tot één record (op basis van geavanceerde samenvoegvoorkeuren). Bronrecords worden met alternatieve id's aan de samengevoegde record gekoppeld. Als er geen regels zijn geconfigureerd, worden door het systeem gedefinieerde regels toegepast.
+
+## <a name="default-deduplication"></a>Standaarddeduplicatie
+
+De door het systeem gedefinieerde regels zijn van toepassing als geen deduplicatieregels worden toegevoegd.
+
+- De primaire sleutel wordt gededupliceerd.
+  Van alle records met dezelfde primaire sleutel, heeft de record **Meest gevuld** (de record met de minste nulwaarden) prioriteit.
+- Eventuele afstemmingsregels tussen entiteiten worden toegepast op de entiteit.
+  In de afstemmingsstap geldt bijvoorbeeld dat, als entiteit A wordt vergeleken met entiteit B op *FullName* en *DateofBirth*, entiteit A ook wordt gededupliceerd door *FullName* en *DateofBirth*. Omdat *FullName* en *DateofBirth* geldige sleutels zijn voor het identificeren van een klant in entiteit A, zijn deze sleutels ook geldig voor het identificeren van dubbele klanten in entiteit A.
 
 ## <a name="include-enriched-entities-preview"></a>Verrijkte entiteiten opnemen (preview)
 

@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173790"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224289"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Uw ervaringen personaliseren met gegevens over bekende en onbekende gebruikers
 
-Het beheren van klantgegevens is geen nieuwe uitdaging, maar het wordt steeds moeilijker naarmate gebruikers navigeren door de verschillende digitale kanalen die merken bieden. Een gebruiker die bekend (geverifieerd) is in het ene kanaal, wordt onbekend (niet-geverifieerd) in een ander kanaal als hij/zij niet is aangemeld. Het probleem is vaak dat niet-geverifieerde (onbekende) gebruikers geen algemene id hebben. De id kan worden gebruikt om betekenisvolle profielkenmerken te koppelen en geharmoniseerde klantprofielen te genereren. Customer Insights helpt dit probleem op te lossen door gegevens van bijhoudmethoden in uw bronsystemen op te nemen. Geconsolideerde onbekende en bekende profielen bieden organisaties een compleet overzicht van up-to-date profielen en de historische transacties, gedragingen en demografische gegevens ervan. Het gaat zelfs nog een stap verder door identiteitsresolutie te bieden waarmee u klantactiviteiten via meerdere kanalen kunt harmoniseren, waaronder uw website, aankopen in de winkel, loyaliteitsprogramma's, enzovoort.
+Het beheren van klantgegevens is geen nieuwe uitdaging, maar het wordt steeds moeilijker naarmate gebruikers navigeren door de verschillende digitale kanalen die merken bieden. Een gebruiker die bekend (geverifieerd) is in het ene kanaal, wordt onbekend (niet-geverifieerd) in een ander kanaal als hij/zij niet is aangemeld. Het probleem is vaak dat niet-geverifieerde (onbekende) gebruikers geen algemene id hebben. De id kan worden gebruikt om betekenisvolle profielkenmerken te koppelen en geharmoniseerde klantprofielen te genereren. Customer Insights helpt dit probleem op te lossen door gegevens van bijhoudmethoden in uw bronsystemen op te nemen. Consolideer onbekende en bekende profielen om organisaties een compleet overzicht te bieden van actuele profielen en hun historische transacties, gedragingen en demografische gegevens. Het gaat zelfs nog een stap verder door identiteitsresolutie te bieden waarmee u klantactiviteiten via meerdere kanalen kunt harmoniseren, waaronder uw website, aankopen in de winkel, loyaliteitsprogramma's, enzovoort.
 
 ## <a name="sample-scenario"></a>Voorbeeldscenario
 

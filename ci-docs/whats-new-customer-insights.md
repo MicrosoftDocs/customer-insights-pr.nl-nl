@@ -1,19 +1,19 @@
 ---
 title: Nieuwe functies in Dynamics 365 Customer Insights
 description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114240"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246005"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nieuwe functies in Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>Updates juli 2022
+
+De updates in juli 2022 omvatten nieuwe functies, prestatie-upgrades en bugfixes.
+
+### <a name="export-to-moengage"></a>Exporteren naar MoEngage
+
+Exporteer segmenten van geharmoniseerde klantprofielen naar MoEngage en gebruik ze voor e-mailmarketing in MoEngage.
+
+Zie [Segmenten exporteren naar MoEngage](export-moengage.md) voor meer informatie.
+
+### <a name="ssh-support-for-sftp-based-exports"></a>SSH-ondersteuning voor op SFTP gebaseerde exports
+
+Kies of u wilt verifiëren via SSH of gebruikersnaam/wachtwoord voor verbindingen met SFTP-exportbestemmingen.
+
+Zie [Gegevens exporteren naar SFTP-hosts](export-sftp.md) voor meer informatie.
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Ervaringen personaliseren met gegevens over bekende en onbekende gebruikers
+
+Het beheren van klantgegevens is geen nieuwe uitdaging, maar het wordt steeds moeilijker naarmate gebruikers navigeren door de verschillende digitale kanalen die merken bieden. Een gebruiker die bekend (geverifieerd) is in het ene kanaal, wordt onbekend (niet-geverifieerd) in een ander kanaal als hij/zij niet is aangemeld. Het probleem is vaak dat niet-geverifieerde (onbekende) gebruikers geen algemene id hebben. De id kan worden gebruikt om betekenisvolle profielkenmerken te koppelen en geharmoniseerde klantprofielen te genereren. Customer Insights helpt dit probleem op te lossen door gegevens van bijhoudmethoden in uw bronsystemen op te nemen.
+
+Zie [Uw ervaringen personaliseren met gegevens over bekende en onbekende gebruikers](unknown-to-known.md) voor meer informatie.
 
 ## <a name="june-2022-updates"></a>Updates juni 2022
 
@@ -50,7 +72,7 @@ Zie [Veilig toegang krijgen tot klantgegevens met Klanten-Lockbox (preview)](sec
 
 Met Azure Private Link maakt Customer Insights verbinding met uw Azure Data Lake Storage-account via een privé-eindpunt in uw virtuele netwerk. Voor gegevens in een opslagaccount, dat niet is blootgesteld aan het openbare internet, maakt Private Link de verbinding met dat beperkte netwerk mogelijk.
 
-Zie [Private Link in Customer Insights gebruiken](security-overview.md#private-links-tab) voor meer informatie.
+Zie [Private Link in Customer Insights gebruiken](security-overview.md#set-up-an-azure-private-link) voor meer informatie.
 
 ## <a name="may-2022-updates"></a>Updates voor mei 2022
 

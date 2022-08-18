@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053858"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245873"
 ---
 # <a name="data-enrichment-preview-overview"></a>Overzicht van gegevensverrijking (preview)
 
@@ -76,7 +76,7 @@ Selecteer de verrijking om beschikbare acties te bekijken.
 - **Bekijk** verrijkingsdetails met het aantal verrijkte klantprofielen.
 - **Bewerk** de verrijkingsconfiguratie.
 - [**Voer**](#run-or-refresh-enrichments) de verrijking uit om klantprofielen bij te werken met de laatste gegevens. Voer meerdere verrijkingen tegelijk uit door ze in de lijst te selecteren.
-- **Activeer** of **Deactiveer** een verrijking. Inactieve verrijkingen worden niet vernieuwd gedurende een [geplande vernieuwing](system.md#schedule-tab).
+- **Activeer** of **Deactiveer** een verrijking. Inactieve verrijkingen worden niet vernieuwd gedurende een [geplande vernieuwing](schedule-refresh.md).
 - De verrijking **Verwijderen**.
 
 U kunt ook [segmenten](segments.md) of [metingen](measures.md) maken van verrijkingen.
@@ -85,7 +85,7 @@ U kunt ook [segmenten](segments.md) of [metingen](measures.md) maken van verrijk
 
 Eenmaal uitgevoerd, kunnen verrijkingen worden vernieuwd volgens een automatische planning of handmatig op aanvraag.
 
-1. Om een of meer verrijkingen handmatig te vernieuwen, selecteert u ze en kiest u **Uitvoeren**. Om [een automatische vernieuwing te plannen](system.md#schedule-tab), gaat u naar **Beheerder** > **Systeem** > **Planning**. De verwerkingstijd is afhankelijk van de grootte van uw klantgegevens.
+1. Om een of meer verrijkingen handmatig te vernieuwen, selecteert u ze en kiest u **Uitvoeren**. Om [een automatische vernieuwing te plannen](schedule-refresh.md), gaat u naar **Beheerder** > **Systeem** > **Planning**. De verwerkingstijd is afhankelijk van de grootte van uw klantgegevens.
 
 1. Optioneel kunt u [de voortgang van het verrijkingsproces zien](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ U kunt details over de verwerking van een verrijking vinden, inclusief de bijbeh
 1. Vouw in het deelvenster **Voortgangsdetails** de sectie **Verrijkingen** uit.
 1. Selecteer onder de verrijking waarvan u de voortgang wilt bekijken de optie **Details weergeven**.
 1. Selecteer in het deelvenster **Taakdetails** de optie **Details weergeven** om de processen te bekijken die betrokken zijn bij het bijwerken van de verrijking en hun status.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Verrijkingsresultaten bekijken
 

@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170814"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245367"
 ---
 # <a name="measures-overview"></a>Overzicht van metingen
 
@@ -53,7 +53,7 @@ Selecteer de meting om beschikbare acties te bekijken. Selecteer de naam van de 
 - **Bewerk** de meting om de eigenschappen te wijzigen.
 - **Vernieuw** de meting om de nieuwste gegevens op te nemen.
 - **Hernoem** het meetcriterium.
-- **Activeer** of **deactiveer** de meting. Inactieve metingen worden niet vernieuwd gedurende een [geplande vernieuwing](system.md#schedule-tab) en hebben de **Status** **Overgeslagen**, wat aangeeft dat er niet eens is geprobeerd te vernieuwen.
+- **Activeer** of **deactiveer** de meting. Inactieve metingen worden niet vernieuwd gedurende een [geplande vernieuwing](schedule-refresh.md) en hebben de **Status** **Overgeslagen**, wat aangeeft dat er niet eens is geprobeerd te vernieuwen.
 - **Tag** om [tags te beheren](work-with-tags-columns.md#manage-tags) voor de meting.
 - **Verwijder** het meetcriterium.
 - **Kolommen** om de [kolommen aan te passen](work-with-tags-columns.md#customize-columns) die worden weergegeven.
@@ -62,7 +62,7 @@ Selecteer de meting om beschikbare acties te bekijken. Selecteer de naam van de 
 
 ## <a name="refresh-measures"></a>Metingen vernieuwen
 
-Metingen kunnen volgens een automatische planning worden vernieuwd of kunnen op aanvraag handmatig worden vernieuwd. Als u een of meer metingen handmatig wilt vernieuwen, selecteert u ze en kiest u **Vernieuwen**. Om [een automatische vernieuwing te plannen](system.md#schedule-tab), gaat u naar **Beheerder** > **Systeem** > **Planning**.
+Metingen kunnen volgens een automatische planning worden vernieuwd of kunnen op aanvraag handmatig worden vernieuwd. Als u een of meer metingen handmatig wilt vernieuwen, selecteert u ze en kiest u **Vernieuwen**. Om [een automatische vernieuwing te plannen](schedule-refresh.md), gaat u naar **Beheerder** > **Systeem** > **Planning**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

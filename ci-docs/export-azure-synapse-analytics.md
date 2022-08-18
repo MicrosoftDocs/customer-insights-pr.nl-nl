@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196388"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259838"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Gegevens exporteren naar Azure Synapse Analytics (preview)
 
@@ -24,7 +24,7 @@ Azure Synapse is een analyseservice waarmee de tijd tot inzicht in datawarehouse
 > [!NOTE]
 > Zorg ervoor dat u alle **roltoewijzingen** instelt zoals beschreven.
 
-- Uw Azure Active Directory-gebruikersaccount (AD) moet de rol van [Beheerder](permissions.md#assign-roles-and-permissions) hebben in Customer Insights.
+- Uw Azure Active Directory-gebruikersaccount (AD) moet de rol van [Beheerder](permissions.md#add-users) hebben in Customer Insights.
 
 In Azure:
 
@@ -39,6 +39,8 @@ In Azure:
 - De in de *[Azure Synapse workspace beheerde identiteit](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* heeft machtigingen van **Inzender van opslagblobgegevens** in de Azure Data Lake Storage Gen2-account waarin de gegevens zich bevinden en is gekoppeld aan de Azure Synapse workspace. Meer informatie over [het gebruik van de Azure-portal om een Azure-rol toe te wijzen voor toegang tot blob- en wachtrijgegevens](/azure/storage/common/storage-auth-aad-rbac-portal) en [machtigingen van Bijdrager van opslagblobgegevens](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - In de Azure Synapse workspace is de *service-principal voor Customer Insights* [toegewezen aan de rol](/azure/synapse-analytics/security/how-to-set-up-access-control) van **Synapse-beheerder**.
+
+- Als uw Customer Insights-omgeving gegevens opslaat in uw [eigen Azure Data Lake Storage](own-data-lake-storage.md), heeft de gebruiker die de verbinding instelt op Azure Synapse Analytics minimaal de ingebouwde rol **Lezer** nodig voor het Data Lake Storage-account. Zie voor meer informatie [Azure-rollen toewijzen met behulp van de Azure-portal](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Verbinding instellen Azure Synapse
 
@@ -60,7 +62,7 @@ In Azure:
 
 ## <a name="configure-an-export"></a>Een export configureren
 
-[!INCLUDE [export-permission-include](includes/export-permission.md)]Om de export met een gedeelde verbinding te configureren, hebt u minimaal **Inzender**-machtigingen in Customer Insights nodig.
+[!INCLUDE [export-permission-include](includes/export-permission.md)] Om de export met een gedeelde verbinding te configureren, hebt u minimaal **Inzender**-machtigingen in Customer Insights nodig.
 
 1. Ga naar **Gegevens** > **Exports**.
 

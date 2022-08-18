@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 81a1c1118736dbd73890e1773aee1f0020c036c3
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 717a0ed5bcc55a17aca81c1bd2a0a6f34bf75c55
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9199078"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245229"
 ---
-Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd. De export wordt uitgevoerd met elke [geplande vernieuwing](../system.md#schedule-tab). U kunt ook [gegevens op aanvraag exporteren](../export-destinations.md#run-exports-on-demand).
+Als u een export opslaat, wordt de export niet onmiddellijk uitgevoerd. De export wordt uitgevoerd met elke [geplande vernieuwing](../schedule-refresh.md). U kunt ook [gegevens op aanvraag exporteren](../export-destinations.md#run-exports-on-demand).

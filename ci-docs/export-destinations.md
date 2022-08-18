@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194962"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245321"
 ---
 # <a name="exports-preview-overview"></a>Overzicht van Exports (preview)
 
@@ -79,7 +79,7 @@ Selecteer een export om beschikbare acties te bekijken.
 
 ## <a name="schedule-and-run-exports"></a>Exports plannen en uitvoeren
 
-Elke export die u configureert, heeft een vernieuwingsschema. Tijdens een vernieuwing zoekt het systeem naar nieuwe of bijgewerkte gegevens om in een export op te nemen. Standaard worden exports uitgevoerd als onderdeel van elke [geplande systeemvernieuwing](system.md#schedule-tab). U kunt het vernieuwingsschema aanpassen of uitschakelen om exports handmatig uit te voeren.
+Elke export die u configureert, heeft een vernieuwingsschema. Tijdens een vernieuwing zoekt het systeem naar nieuwe of bijgewerkte gegevens om in een export op te nemen. Standaard worden exports uitgevoerd als onderdeel van elke [geplande systeemvernieuwing](schedule-refresh.md). U kunt het vernieuwingsschema aanpassen of uitschakelen om exports handmatig uit te voeren.
 
 Exportschema's zijn afhankelijk van de status van uw omgeving. Als er updates worden uitgevoerd op [afhankelijkheden](system.md#refresh-processes), voltooit het systeem bij het starten van een geplande eerst de updates en voert vervolgens de export uit. In de kolom **Vernieuwd** wordt aangegeven wanneer een export voor het laatst is vernieuwd.
 

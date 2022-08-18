@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142813"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245551"
 ---
 # <a name="how-to-create-a-new-environment"></a>Procedure: Een nieuwe omgeving maken
 
@@ -48,7 +48,7 @@ In de stap **Basisgegevens** kiest u of u een geheel nieuwe omgeving wilt maken 
 
 Geef de volgende details op:
 
-- **Naam**: de naam voor deze omgeving. Dit veld is al ingevuld als u hebt gekopieerd vanuit een bestaande omgeving, maar u kunt dit wijzigen.
+- **Naam**: de naam voor deze omgeving. Dit veld is al ingevuld als u hebt gekopieerd vanuit een bestaande omgeving, maar u kunt dit wijzigen. Als u meer dan één werkomgeving hebt, geeft u ze allemaal een gemakkelijk identificeerbare naam.
 - **Uw bedrijf kiezen**: kies de primaire doelgroep voor de nieuwe omgeving. Je kunt werken met individuele consumenten (B2C) of [zakelijke accounts](work-with-business-accounts.md) (B2B). Als uw organisatie voornamelijk zaken doet met individuen, zoals een retailer of een coffeeshop, kies dan voor individuele consumenten. Als uw belangrijkste doelgroep uit andere bedrijven bestaat, zoals een auto- of papierfabriek, kiest u zakelijke accounts.
 - **Type**: selecteer of u een productie- of sandbox-omgeving wilt maken. Sandbox-omgevingen staan geen geplande gegevensvernieuwing toe en zijn bedoeld voor pre-implementatie en testen. Sandbox-omgevingen gebruiken dezelfde primaire doelgroep als de productieomgeving die momenteel is geselecteerd.
 - **Regio**: de regio waarin de service wordt geïmplementeerd en gehost. Als u [uw eigen Azure Data Lake Storage-account wilt gebruiken](own-data-lake-storage.md) of [verbinding wilt maken met een bestaande Microsoft Dataverse-organisatie](customer-insights-dataverse.md), moet de Customer Insights-omgeving zich in dezelfde regio bevinden.

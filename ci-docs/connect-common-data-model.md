@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206993"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245781"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Verbinding maken met gegevens in Azure Data Lake Storage
 
@@ -56,8 +56,8 @@ Gegevens opnemen in Dynamics 365 Customer Insights via uw Azure Data Lake Storag
 
 1. Kies een van de volgende opties voor **Uw opslag verbinden met**. Zie voor meer informatie [Customer Insights verbinden met een Azure Data Lake Storage Gen2-account maken met een Azure-service-principal](connect-service-principal.md).
 
-   - **Azure-resource**: voer de **Resource-id** in. Optioneel, als u gegevens van een opslagaccount wilt opnemen via een Azure Private Link, selecteert u **Private Link inschakelen**. Zie voor meer informatie [Privékoppelingen](security-overview.md#private-links-tab).
-   - **Azure-abonnement**: selecteer het **Abonnement** en dan de **Resourcegroep** en het **Opslagaccount**. Optioneel, als u gegevens van een opslagaccount wilt opnemen via een Azure Private Link, selecteert u **Private Link inschakelen**. Zie voor meer informatie [Privékoppelingen](security-overview.md#private-links-tab).
+   - **Azure-resource**: voer de **Resource-id** in. Optioneel, als u gegevens van een opslagaccount wilt opnemen via een Azure Private Link, selecteert u **Private Link inschakelen**. Zie voor meer informatie [Privékoppelingen](security-overview.md#set-up-an-azure-private-link).
+   - **Azure-abonnement**: selecteer het **Abonnement** en dan de **Resourcegroep** en het **Opslagaccount**. Optioneel, als u gegevens van een opslagaccount wilt opnemen via een Azure Private Link, selecteert u **Private Link inschakelen**. Zie voor meer informatie [Privékoppelingen](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > U hebt een van de volgende rollen nodig voor de container of het opslagaccount om de gegevensbron te maken:
@@ -176,7 +176,7 @@ U kunt de optie *Verbinding maken met een opslagaccount met* bijwerken. Zie voor
         > - Opslag-blobgegevens eigenaar
         > - Inzender van opslag-blobgegevens
 
-   - **Private Link inschakelen** als u gegevens van een opslagaccount wilt opnemen via een Azure Private Link. Zie voor meer informatie [Privékoppelingen](security-overview.md#private-links-tab).
+   - **Private Link inschakelen** als u gegevens van een opslagaccount wilt opnemen via een Azure Private Link. Zie voor meer informatie [Privékoppelingen](security-overview.md#set-up-an-azure-private-link).
 
 1. Selecteer **Volgende**.
 1. Wijzig (een van) de volgende:

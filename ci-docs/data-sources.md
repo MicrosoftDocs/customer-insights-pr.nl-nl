@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207085"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245643"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
@@ -67,7 +67,7 @@ Selecteer een gegevensbron om beschikbare acties te bekijken.
 
 Gegevensbronnen kunnen automatisch worden vernieuwd of op aanvraag handmatig worden vernieuwd. [On-premises gegevensbronnen](connect-power-query.md#add-data-from-on-premises-data-sources) vernieuwen volgens eigen planning, ingesteld tijdens gegevensopname. Voor gekoppelde gegevensbronnen verbruikt gegevensopname de nieuwste gegevens die beschikbaar zijn van die gegevensbron.
 
-Ga naar **Beheer** > **Systeem** > [**Plannen**](system.md#schedule-tab) om door het systeem geplande vernieuwingen van uw opgenomen gegevensbronnen te configureren.
+Ga naar **Beheer** > **Systeem** > [**Plannen**](schedule-refresh.md) om door het systeem geplande vernieuwingen van uw opgenomen gegevensbronnen te configureren.
 
 Een gegevensbron op aanvraag vernieuwen:
 

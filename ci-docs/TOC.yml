@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Beheer
   items:
-    - name: De systeemconfiguratie instellen
-      href: system.md
-    - name: Beveiligingsinstellingen configureren
-      href: security-overview.md
     - name: Gebruikersmachtigingen toewijzen
       href: permissions.md
     - name: Bring your own Key Vault
       href: use-azure-key-vault.md
+    - name: Beveiligingsinstellingen configureren
+      href: security-overview.md
     - name: Diagnostische logboeken exporteren
       href: diagnostics.md
-    - name: Overzicht van verbindingen
+    - name: Verbindingen beheren
       href: connections.md
+    - name: Systeemvernieuwing plannen
+      href: schedule-refresh.md
+    - name: Systeemconfiguratie weergeven
+      href: system.md
 - name: API's
   items:
     - name: Werken met API's

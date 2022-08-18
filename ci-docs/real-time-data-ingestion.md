@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195652"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246102"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Realtime gegevensopname (preview)
 
 Dankzij de bijna-realtime functionaliteit kunt u binnen enkele seconden de meest recente interacties zien die uw klanten hebben gehad met uw producten of services.
 
-[Geplande vernieuwingen](system.md#schedule-tab) omvatten grote aantallen records en verschillende complexe bewerkingen. Eerst worden gegevens opgehaald uit de gegevensbron. Vervolgens worden de gegevens geharmoniseerd en vervolgens verrijkt met aanvullende informatie. Elke uitvoering van dit proces kan minuten tot uren duren.
+[Geplande vernieuwingen](schedule-refresh.md) omvatten grote aantallen records en verschillende complexe bewerkingen. Eerst worden gegevens opgehaald uit de gegevensbron. Vervolgens worden de gegevens geharmoniseerd en vervolgens verrijkt met aanvullende informatie. Elke uitvoering van dit proces kan minuten tot uren duren.
 
 De realtime functionaliteit levert gegevens onmiddellijk op voor verbruik, totdat de volgende geplande vernieuwing deze gegevens uit de gegevensbron haalt.
 
@@ -85,7 +85,7 @@ Details van deze API, inclusief parameters en reacties, zijn te vinden in de sec
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Inzicht in uw realtime gebruik krijgen met telemetrie
 
-Krijg een overzicht van het aantal aanvragen aan bij realtime API en informatie over problemen die het systeem kan tegenkomen. U kunt [toegang krijgen tot de realtime telemetrie](system.md#api-usage-tab). 
+Krijg een overzicht van het aantal aanvragen aan bij realtime API en informatie over problemen die het systeem kan tegenkomen. U kunt [toegang krijgen tot de realtime telemetrie](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

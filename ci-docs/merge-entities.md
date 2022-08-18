@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139651"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213576"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Klantvelden harmoniseren voor gegevensharmonisatie
 
@@ -58,6 +58,9 @@ In deze stap van het harmonisatieproces kiest u kenmerken en sluit u kenmerken u
 
 1. Geef op hoe u de velden wilt combineren of samenvoegen door een van de drie opties te kiezen:
     - **Belang**: geeft de winnende waarde aan op basis van de mate van belang die voor de deelnemende velden is opgegeven. Dit is de standaard samenvoegingsoptie. Selecteer **Omhoog/omlaag verplaatsen** om de rangorde van belang in te stellen.
+
+      > [!NOTE]
+      > Customer Insights gebruikt de eerste niet-null-waarde. Als bijvoorbeeld gegeven entiteiten A, B en C in die volgorde zijn gerangschikt, en A.Name en B.Name null zijn, wordt de waarde van C.Name gebruikt.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="De optie Belang in het dialoogvenster voor het samenvoegen van velden.":::
 

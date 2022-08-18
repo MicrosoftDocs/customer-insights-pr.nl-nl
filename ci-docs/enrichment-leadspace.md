@@ -1,19 +1,19 @@
 ---
 title: Bedrijfsprofielen verrijken met Leadspace (preview)
 description: Algemene informatie over de verrijking door derden van Leadspace.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: f45fabc036775e11fc439f69513678d0607729d0
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196204"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237944"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Bedrijfsprofielen verrijken met Leadspace (preview)
 
@@ -35,14 +35,9 @@ U moet een [beheerder](permissions.md#admin) in Customer Insights zijn en de 'pe
 
 1. Voer een naam in voor de verbinding en een geldig Leadspace-token.
 
-1. Bekijk en geef uw toestemming voor [Gegevensprivacy en naleving](#data-privacy-and-compliance) door **Ik ga akkoord** te selecteren.
+1. Bekijk [Gegevensprivacy en naleving](connections.md#data-privacy-and-compliance) en selecteer **Ik ga akkoord**.
 
 1. Selecteer **Verifiëren** om de configuratie te valideren en selecteer **Opslaan**.
-
-### <a name="data-privacy-and-compliance"></a>Gegevensprivacy en naleving
-
-Wanneer u Dynamics 365 Customer Insights instelt om gegevens naar Leadspace te verzenden, staat u overdracht van gegevens toe buiten de nalevingsgrens voor Dynamics 365 Customer Insights, waaronder mogelijk gevoelige gegevens, zoals persoonsgegevens. Microsoft zal dergelijke gegevens op uw instructie overdragen, maar u bent ervoor verantwoordelijk dat Leadspace voldoet aan uw privacy- of beveiligingsverplichtingen. Zie [Microsoft Dynamics CRM Privacyverklaring](https://go.microsoft.com/fwlink/?linkid=396732) voor meer informatie.
-Uw Dynamics 365 Customer Insights-beheerder kan deze verrijking op elk moment verwijderen om het gebruik van deze functionaliteit te stoppen.
 
 ## <a name="configure-the-enrichment"></a>De verrijking configureren
 

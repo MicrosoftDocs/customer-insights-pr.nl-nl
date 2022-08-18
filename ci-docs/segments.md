@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170675"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246287"
 ---
 # <a name="segments-overview"></a>Overzicht van segmenten
 
@@ -58,7 +58,7 @@ Selecteer een segment om beschikbare acties te bekijken.
 - **Bewerk** het segment om de eigenschappen te wijzigen.
 - **Maak een duplicaat** van een segment. U kunt ervoor kiezen om de eigenschappen meteen te bewerken of het duplicaat op te slaan.
 - [**Vernieuw**](#refresh-segments) het segment om de nieuwste gegevens op te nemen.
-- **Activeer** of **Deactiveer** het segment. Inactieve segmenten worden niet vernieuwd gedurende een [geplande vernieuwing](system.md#schedule-tab) en hebben de **Status** **Overgeslagen**, wat aangeeft dat er niet eens is geprobeerd te vernieuwen. Actieve segmenten worden vernieuwd op basis van hun type: statisch of dynamisch.
+- **Activeer** of **Deactiveer** het segment. Inactieve segmenten worden niet vernieuwd gedurende een [geplande vernieuwing](schedule-refresh.md) en hebben de **Status** **Overgeslagen**, wat aangeeft dat er niet eens is geprobeerd te vernieuwen. Actieve segmenten worden vernieuwd op basis van hun type: statisch of dynamisch.
 - Selecteer **Statisch maken** of **Dynamisch maken** voor het segmenttype. Statische segmenten moeten handmatig worden vernieuwd. Dynamische segmenten worden automatisch vernieuwd tijdens systeemvernieuwingen.
 - [**Zoek vergelijkbare klanten**](find-similar-customer-segments.md) uit het segment.
 - **Wijzig de naam** van het segment.
@@ -88,7 +88,7 @@ Het onderste gedeelte bevat een lijst met de segmentleden.
 
 Segmenten kunnen volgens een automatische planning worden vernieuwd of kunnen op aanvraag handmatig worden vernieuwd. Als u een of meer segmenten handmatig wilt vernieuwen, selecteert u ze en kiest u **Vernieuwen**.
 
-Om [een automatische vernieuwing te plannen](system.md#schedule-tab), gaat u naar **Beheerder** > **Systeem** > **Planning**. De volgende regels zijn van toepassing:
+Om [een automatische vernieuwing te plannen](schedule-refresh.md), gaat u naar **Beheerder** > **Systeem** > **Planning**. De volgende regels zijn van toepassing:
 
 - Alle segmenten met het type **Dynamisch** of **Uitbreiding** worden automatisch vernieuwd in het ingestelde tempo. Nadat de vernieuwing is voltooid, geeft **Status** aan of er problemen waren bij het vernieuwen van het segment. **Laatst vernieuwd** toont een tijdstempel van de meest recente succesvolle vernieuwing. Als er een fout optreedt, selecteert u de fout om details te bekijken van wat er is gebeurd.
 - Segmenten met het type **Statisch** worden *niet* automatisch vernieuwd. **Laatst vernieuwd** toont een tijdstempel van de laatste keer dat het statische segment handmatig is uitgevoerd of vernieuwd.
