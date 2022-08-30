@@ -1,7 +1,7 @@
 ---
 title: Overzicht van segmenten
 description: Overzicht van segmenten en hoe u segmenten kunt maken en beheren.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246287"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304789"
 ---
 # <a name="segments-overview"></a>Overzicht van segmenten
 
 Met segmenten kunt u uw klanten groeperen op basis van demografische, transactionele of gedragskenmerken. U kunt segmenten gebruiken om promotiecampagnes, verkoopactiviteiten en acties voor klantenondersteuning te targeten om uw zakelijke doelstellingen te bereiken.
 
-Klantprofielen die overeenkomen met de filters van een segmentdefinitie worden aangeduid als *leden* van een segment. Er zijn enkele [servicelimieten](/dynamics365/customer-insights/service-limits) van toepassing.
+Klant- of contactpersoonprofielen die overeenkomen met de filters van een segmentdefinitie worden aangeduid als *leden* van een segment. Er zijn enkele [servicelimieten](/dynamics365/customer-insights/service-limits) van toepassing.
 
 ## <a name="create-a-segment"></a>Een segment maken
 
@@ -41,13 +41,19 @@ Kies hoe u een segment maakt op basis van uw doelgroep.
 
 # <a name="business-accounts-b-to-b"></a>[Zakelijke accounts (B-to-B)](#tab/b2b)
 
-- Eenvoudige of complexe segmenten met segmentbouwer: [Uw eigen segmenten bouwen](segment-builder.md)
+Segment van accounts of segment van contactpersonen (preview) met segmentbuilder: [Bouw uw eigen](segment-builder.md)
+
+> [!NOTE]
+> De meeste exportbestemmingen vereisen contactpersoongegevens voor marketingdoeleinden. Maak daarom segmenten van contactpersonen die u voor die exports kunt gebruiken.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Bestaande segmenten beheren
 
-Ga naar de pagina **Segmenten** om de door u gemaakte segmenten te bekijken, de status en toestand ervan, het aantal leden en de laatste keer dat de gegevens zijn vernieuwd. U kunt de lijst met segmenten sorteren op elke kolom of het zoekvak gebruiken om het segment te vinden dat u wilt beheren.
+Ga naar de pagina **Segmenten** om de segmenten te bekijken die u hebt gemaakt, hun status en toestand, en de laatste keer dat de gegevens zijn vernieuwd. U kunt de lijst met segmenten sorteren op elke kolom of het zoekvak gebruiken om het segment te vinden dat u wilt beheren.
+
+> [!TIP]
+> In B2B-omgevingen geeft de kolom **Doelgroeptype** aan of een segment is gebaseerd op accounts of contactpersonen.
 
 Selecteer een segment om beschikbare acties te bekijken.
 
@@ -82,7 +88,7 @@ Het onderste gedeelte bevat een lijst met de segmentleden.
 > [!NOTE]
 > Velden die in deze lijst worden weergegeven, zijn gebaseerd op de kenmerken van de entiteiten van uw segment.
 >
->De lijst is een voorbeeld van de overeenkomende segmentleden en toont de eerste 100 records van uw segment, zodat u het snel kunt evalueren en indien nodig de definities kunt bekijken. Als u alle overeenkomende records wilt bekijken, moet u [het segment exporteren](export-destinations.md).
+> De lijst is een voorbeeld van de overeenkomende segmentleden en toont de eerste 100 records van uw segment, zodat u het snel kunt evalueren en indien nodig de definities kunt bekijken. Als u alle overeenkomende records wilt zien, selecteert u **Meer bekijken**, waarmee de pagina [**Entiteiten**](entities.md) wort geopend of [het segment geëxporteerd](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Segmenten vernieuwen
 

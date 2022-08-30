@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213621"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304467"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Duplicaten verwijderen voordat u gegevens harmoniseert
 
@@ -47,7 +47,7 @@ Als u entiteiten op het gegevensbron-niveau hebt verrijkt om uw harmonisatieresu
 
 1. Selecteer op de pagina **Dubbele records** een entiteit en selecteer **Regel toevoegen** om de ontdubbelingsregels te definiëren.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Schermopname van pagina's met dubbele records met Meer weergeven gemarkeerd":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Schermopname van de pagina Dubbele records met de entiteit gemarkeerd en Regel toevoegen weergegeven"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. Vul in het deelvenster **Regel toevoegen** de volgende gegevens in:
       - **Veld selecteren**: maak uw keuze in de lijst met beschikbare velden van de entiteit die u op duplicaten wilt controleren. Kies velden die waarschijnlijk uniek zijn voor elke afzonderlijke klant, bijvoorbeeld een e-mailadres of de combinatie van naam, plaats en telefoonnummer.
@@ -80,9 +80,9 @@ Als u entiteiten op het gegevensbron-niveau hebt verrijkt om uw harmonisatieresu
       - **Meest gevuld**: identificeert de record met de meeste gevulde kenmerkvelden als de winnende record. Dit is de standaard samenvoegingsoptie.
       - **Meest recent**: identificeert het winnende record op basis van recentheid. Vereist een datum of een numeriek veld om de recentheid te definiëren.
       - **Minst recent**: identificeert het winnende record op basis van minst recent zijn. Vereist een datum of een numeriek veld om de recentheid te definiëren.
-      
+
       In het geval van een gelijke stand is de winnende record degene met de MAX(PK) of de grotere primaire-sleutelwaarde.
-      
+
    1. Selecteer desgewenst, om samenvoegvoorkeuren te definiëren voor individuele kenmerken van een entiteit, **Geavanceerd** onder aan het deelvenster. U kunt er bijvoorbeeld voor kiezen om de meest recente e-mail EN het meest volledige adres uit verschillende records te bewaren. Vouw de entiteit uit om alle kenmerken te bekijken en definieer welke optie moet worden gebruikt voor afzonderlijke kenmerken. Als u een op recentheid gebaseerde optie kiest, moet u ook een datum-/tijdveld opgeven dat de recentheid definieert.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Deelvenster met geavanceerde samenvoegvoorkeuren met recente e-mail en volledig adres":::
@@ -96,18 +96,5 @@ Als u entiteiten op het gegevensbron-niveau hebt verrijkt om uw harmonisatieresu
 
 > [!div class="nextstepaction"]
 > [Volgende stap voor meerdere entiteiten: Overeenkomende voorwaarden](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Uitvoer van ontdubbeling als een entiteit
-
-Het ontdubbelingsproces creëert een nieuwe ontdubbelde entiteit voor elk van de bronentiteiten. Deze entiteiten zijn te vinden samen met de **ConflationMatchPairs:CustomerInsights** in de sectie **Systeem** op de pagina **Entiteiten**, met de naam **Deduplication_DataSource_Entity**.
-
-Een entiteit voor ontdubbelingsuitvoer bevat de volgende informatie:
-
-- Id's/sleutels
-  - Velden Primaire sleutel en Alternatieve id. Het veld Alternatieve id bestaat uit alle alternatieve id's die voor een record zijn geïdentificeerd.
-  - Het veld Deduplication_GroupId toont de groep of cluster die is geïdentificeerd binnen een entiteit die alle vergelijkbare records groepeert op basis van de opgegeven ontdubbelingsvelden. Dit wordt gebruikt voor systeemverwerkingsdoeleinden. Als er geen handmatige ontdubbelingsregels zijn opgegeven en door het systeem gedefinieerde ontdubbelingsregels van toepassing zijn, is het mogelijk dat u dit veld niet in de uitvoerentiteit voor ontdubbeling vindt.
-  - Deduplication_WinnerId: dit veld bevat de winnende id van de geïdentificeerde groepen of clusters. Als de Deduplication_WinnerId hetzelfde is als de primaire sleutelwaarde voor een record, betekent dit dat de record de winnende record is.
-- Velden die worden gebruikt om de ontdubbelingsregels te definiëren.
-- Regel- en scorevelden om aan te geven welke van de ontdubbelingsregels zijn toegepast en welke score is geretourneerd door het matching-algoritme.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Overzicht van Exports (preview)
 description: Beheer exports om gegevens te delen.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245321"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304053"
 ---
 # <a name="exports-preview-overview"></a>Overzicht van Exports (preview)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245321"
 
 Er zijn twee hoofdtypen exports:  
 
-- **Gegevens uit-export**: hiermee kunt u elk type entiteit exporteren dat beschikbaar is in Customer Insights. De entiteiten die u selecteert voor export, worden geëxporteerd met alle gegevensvelden, metagegevens, schema's en toewijzingsdetails.
-- **Segmentexport**: hiermee kunt u segmententiteiten exporteren uit Customer Insights. Segmenten vertegenwoordigen een lijst met klantprofielen. Bij het configureren van de export selecteert u de opgenomen gegevensvelden, afhankelijk van het doelsysteem waarnaar u gegevens exporteert.
+- **Gegevens uit-export** hiermee kunt u elk type entiteit exporteren dat beschikbaar is in Customer Insights. De entiteiten die u selecteert voor export, worden geëxporteerd met alle gegevensvelden, metagegevens, schema's en toewijzingsdetails.
+- **Segmentexport** hiermee kunt u segmententiteiten exporteren uit Customer Insights. Voor individuele consumenten (B2C) vertegenwoordigen segmenten een lijst met klantprofielen. Voor bedrijven (B2B) [kunnen segmenten een lijst met accounts of contactpersonen vertegenwoordigen](segment-builder.md#create-a-new-segment-with-segment-builder). Bij het configureren van de export selecteert u de opgenomen gegevensvelden, afhankelijk van het doelsysteem waarnaar u gegevens exporteert.
 
 ### <a name="export-segments"></a>Segmenten exporteren
 
@@ -39,13 +39,14 @@ De meeste exportopties ondersteunen beide typen omgevingen. Het exporteren van s
 - Segmenten in de context van omgevingen voor individuele klanten zijn gebouwd op de entiteit *geharmoniseerd klantprofiel*. Elk segment dat voldoet aan de eisen van de doelsystemen (bijvoorbeeld een e-mailadres), kan worden geëxporteerd.
 
 **Segmentexport in omgevingen voor zakelijke accounts (B2B)**  
-- Segmenten in de context van omgevingen voor zakelijke accounts zijn gebouwd op de entiteit *account*. Om accountsegmenten ongewijzigd te exporteren, moet het doelsysteem pure accountsegmenten ondersteunen. Dit is het geval voor [LinkedIn](export-linkedin-ads.md) wanneer u kiest voor de optie **bedrijf** bij het definiëren van de export.
-- Voor alle andere doelsystemen zijn velden van de contactentiteit vereist Om ervoor te zorgen dat accountsegmenten gegevens kunnen ophalen van gerelateerde contactpersonen, moet uw segmentdefinitie kenmerken van de contactentiteit projecteren. Meer informatie over het [configureren van segmenten en projectkenmerken](segment-builder.md).
+- Segmenten in de context van omgevingen voor zakelijke accounts zijn gebouwd op de entiteit *account* of de entiteit *contactpersoon*. Om accountsegmenten ongewijzigd te exporteren, moet het doelsysteem pure accountsegmenten ondersteunen. Dit is het geval voor [LinkedIn](export-linkedin-ads.md) wanneer u kiest voor de optie **bedrijf** bij het definiëren van de export.
+- Voor alle andere doelsystemen zijn velden van de contactentiteit vereist
+- Met twee segmenttypen (contactpersonen en accounts) identificeert Customer Insights automatisch welk type segmenten in aanmerking komen voor export op basis van het doelsysteem. Voor een op contactpersonen gericht doelsysteem zoals Mailchimp kunt u met Customer Insights bijvoorbeeld alleen contactpersoonsegmenten kiezen om te exporteren.
 
 **Limieten voor segmentexport**  
 - Doelsystemen van derden kunnen het aantal klantprofielen dat u kunt exporteren, beperken. 
 - Voor individuele klanten ziet u het werkelijke aantal segmentleden wanneer u een segment selecteert om te exporteren. Er verschijnt een waarschuwing als een segment te groot is. 
-- Voor zakelijke accounts ziet u het aantal accounts in een segment; het aantal contacten dat mogelijk wordt geprojecteerd, wordt echter niet weergegeven. In sommige gevallen kan dit ertoe leiden dat het geëxporteerde segment daadwerkelijk meer klantprofielen bevat dan het doelsysteem accepteert. Als de limieten van het doelsysteem worden overschreden, wordt de export overgeslagen.
+- Voor zakelijke accounts ziet u het aantal accounts of contactpersonen, afhankelijk van het segment. Er verschijnt een waarschuwing als het segment te groot is. Als de limieten van de doelsystemen worden overschreden, wordt de export overgeslagen.
 
 ## <a name="set-up-a-new-export"></a>Een nieuwe export instellen
 
@@ -110,6 +111,20 @@ Als u gegevens wilt exporteren zonder te wachten op een geplande vernieuwing, ga
 
 - Als u alle exports wilt uitvoeren, selecteert u **Alles uitvoeren** op de opdrachtbalk. Alleen exports met een actieve planning worden uitgevoerd. Als u een export wilt uitvoeren die niet actief is, voert u één export uit.
 - U kunt een enkele export uitvoeren door deze te selecteren in de lijst en vervolgens **Uitvoeren** te selecteren op de opdrachtbalk.
+
+## <a name="troubleshooting"></a>Probleemoplossing
+
+### <a name="segment-not-eligible-for-export"></a>Segment komt niet in aanmerking voor export
+
+**Probleem** Binnen een omgeving van zakelijke accounts mislukt uw export met de foutmelding: "Het volgende segment komt niet in aanmerking voor deze exportbestemming: '{naam van segment}'. Kies alleen segmenten van het type ContactProfile en probeer het opnieuw."
+
+**Oplossing** Customer Insights-omgevingen voor zakelijke accounts zijn bijgewerkt om naast accountsegmenten ook contactpersoonsegmenten te ondersteunen. Door die wijziging werken exports waarvoor contactpersoongegevens nodig zijn, alleen met segmenten op basis van contactpersonen.
+
+1. [Maak een segment op basis van contactpersonen](segment-builder.md) dat overeenkomt met uw eerder gebruikte segment.
+
+1. Zodra dat contactpersoonsegment is uitgevoerd, bewerkt u de respectievelijke export en selecteert u het nieuwe segment.
+
+1. Selecteer **Opslaan** om de configuratie op te slaan of **Opslaan en uitvoeren** om deze export meteen te testen.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

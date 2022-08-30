@@ -76,7 +76,9 @@
       href: merge-entities.md
     - name: Gegevensharmonisatie bekijken
       href: review-unification.md
-    - name: De harmonisatie-instellingen bijwerken
+    - name: Een geharmoniseerd contactpersoonprofiel maken
+      href: data-unification-contacts.md
+    - name: Harmonisatie-instellingen bijwerken
       href: data-unification-update.md
 - name: Gegevensverrijking
   items:

@@ -4,21 +4,21 @@ description: Aan de slag met zakelijke accounts als primaire doelgroep in Dynami
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.custom: intro-internal
 ms.author: wimohabb
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: abb77a720ab737520a905b0c93b65573e669109f
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053107"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303910"
 ---
 # <a name="work-with-business-accounts"></a>Werken met zakelijke accounts
 
@@ -30,7 +30,7 @@ Beheerders kunnen [een omgeving maken in een bestaande organisatie](create-envir
 
 U kunt vervolgens [gegevens opnemen](data-sources.md) voor zakelijke accounts en gerelateerde contactpersonen als gegevensbronnen uit alle ondersteunde bronnen.
 
-Na het harmoniseren van de gegevens gaat u [accounthiërarchieën opgeven](relationships.md#set-up-account-hierarchies) als onderdeel van de relatieconfiguratie. U kunt ook [semantische toewijzingen configureren](semantic-mappings.md) om contactpersoon- en accountentiteiten te verbinden. 
+ [Harmoniseer](data-unification.md) uw accountgegevens gevolgd door uw contactpersoongegevens om contactpersoon- en accountentiteiten met elkaar te verbinden.
 
 ## <a name="switch-between-primary-target-audience"></a>Schakelen tussen primaire doelgroepen
 
@@ -43,11 +43,12 @@ Als uw organisatie omgevingen onderhoudt voor individuele klanten en zakelijke a
 - [Activiteiten](activities.md): ondersteuning voor accounts en gerelateerde contactpersonen om activiteiten te maken en weer te geven in een tijdlijn.
 - [Relaties](relationships.md): de activiteitenwizard helpt bij het maken van relaties tussen de entiteiten zodat in de accountweergave alle activiteiten van contactpersonen kunnen worden weergegeven. Contactpersonen kunnen inzoomen om de contactweergave te bekijken en hiërarchieën kunnen worden gebruikt voor aggregaties van accountactiviteiten.
 - [Metingen](measures.md): ondersteunt metingen die worden gemaakt met de opbouwfunctie voor metingen op basis van één berekening. Er is een optionele instelling voor het totaliseren van subaccounts bij het maken van metingen.
-- [Segmenten](segments.md): ondersteunt segmenten die helemaal opnieuw zijn gemaakt met de segmentbouwer. Nieuwe operators maken het mogelijk om de rekeninghiërarchie te gebruiken bij het bouwen van segmenten.
+- [Segmenten](segments.md): ondersteunt segmenten die helemaal opnieuw zijn gemaakt met de segmentbouwer. Segmenten kunnen zijn gebaseerd op accounts of contactpersonen.
 - [Gegevensopname](data-sources.md): alle functies in dit gebied zijn gelijk voor zakelijke accounts en individuele klanten.
-- [Gegevensharmonisering](data-unification.md): alle functies in dit gebied zijn gelijk voor zakelijke accounts en individuele klanten.
+- B2B-gegevensharmonisatie lijkt sterk op B2C-gegevensharmonisatie, maar heeft een extra stap om contactpersonen te harmoniseren na accountharmonisatie. Zie [Zakelijke accounts (B2B)](data-unification.md).
 - [Verrijking](enrichment-hub.md): sommige verrijkingstypes zijn alleen beschikbaar voor scenario's met individuele klanten, terwijl andere alleen beschikbaar zijn voor zakelijke accounts.
 - [Voorspellingen en kant-en-klare modellen](predictions-overview.md): voorspelling van transactieverloop bevat aanvullende stappen voor zakelijke accounts. Andere voorspellingen zijn alleen beschikbaar voor individuele klanten.
 - [Activering en export](export-destinations.md): export is beschikbaar voor zakelijke accounts en individuele klanten. Voor sommige exports is extra configuratie vereist en moeten contactgegevens in de onderliggende segmenten worden geprojecteerd om geldig te zijn voor zakelijke accounts.
 - [Systeeminstellingen](system.md) en [gebruikersbeheer](permissions.md): alle functies in dit gebied zijn gelijk voor zakelijke accounts en individuele klanten.
 
+[!INCLUDE [footer-include](includes/footer-banner.md)]

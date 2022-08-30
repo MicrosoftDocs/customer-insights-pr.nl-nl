@@ -1,11 +1,11 @@
 ---
-title: De harmonisatie-instellingen bijwerken
-description: Werk dubbele regels, overeenkomstregels of geharmoniseerde velden bij in de harmonisatie-instellingen.
-ms.date: 06/01/2022
+title: Instellingen voor klant-, account- of contactpersoonharmonisatie bijwerken
+description: Werk dubbele regels, overeenkomstregels of geharmoniseerde velden bij in de harmonisatie-instellingen voor contactpersonen of accounts.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: v-wendysmith
-ms.author: mukeshpo
+author: Scott-Stabbert
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
@@ -13,20 +13,26 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245588"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304329"
 ---
-# <a name="update-the-unification-settings"></a>De harmonisatie-instellingen bijwerken
+# <a name="update-unification-settings"></a>Harmonisatie-instellingen bijwerken
 
 Voer de volgende stappen uit om harmonisatie-instellingen te bekijken of te wijzigen nadat een geharmoniseerd profiel is gemaakt.
 
 1. Ga naar **Gegevens** > **Harmoniseren**.
 
-   :::image type="content" source="media/m3_unified.png" alt-text="Schermopname van de pagina Gegevens harmoniseren nadat de gegevens zijn geharmoniseerd.":::
+   Voor individuele klanten (B2C) wordt op de pagina **Harmoniseren** het aantal geharmoniseerde klantprofielen en tegels voor elk van de harmonisatiestappen weergegeven.
+
+   :::image type="content" source="media/m3_unified.png" alt-text="Schermopname van de pagina Gegevens harmoniseren nadat de gegevens zijn geharmoniseerd." lightbox="media/m3_unified.png":::
+
+   Voor zakelijke accounts (B2B) wordt op de pagina **Harmoniseren** het aantal geharmoniseerde accountprofielen en tegels voor elk van de harmonisatiestappen weergegeven. Als contactpersonen geharmoniseerd waren, wordt het aantal geharmoniseerde contactpersoonprofielen en tegels voor elk van de stappen voor harmonisatgie van contactpersonen weergegeven. Kies de juiste tegel onder **Accounts samenvoegen** of **Contactpersonen samenvoegen (preview)**, afhankelijk van wat u wilt bijwerken.
+
+   :::image type="content" source="media/b2b_unified.png" alt-text="Schermopname van de pagina Gegevens harmoniseren nadat account- en contactpersoongegevens zijn geharmoniseerd." lightbox="media/b2b_unified.png":::
 
    > [!TIP]
    > De tegel **Overeenkomende voorwaarden** wordt alleen weergegeven als er meerdere entiteiten zijn geselecteerd.
@@ -36,14 +42,14 @@ Voer de volgende stappen uit om harmonisatie-instellingen te bekijken of te wijz
    - [Dubbele records](#manage-deduplication-rules) om ontdubbelingsregels of samenvoegvoorkeuren te beheren.
    - [Overeenkomstvoorwaarden](#manage-match-rules) om overeenkomstregels voor twee of meer entiteiten bij te werken.
    - [Geharmoniseerde klantvelden](#manage-unified-fields) om velden te combineren of uit te sluiten. U kunt gerelateerde profielen ook in clusters groeperen.
+   - [Semantische velden](#manage-semantic-fields-for-unified-contacts) om semantische typen te beheren voor geharmoniseerde contactpersoonvelden.
+   - [Relaties](#manage-contact-and-account-relationships) om de relatie tussen contactpersonen en accounts te beheren.
 
 1. Nadat u uw wijzigingen hebt aangebracht, kiest u uw volgende optie:
 
-   :::image type="content" source="media/m3_run_match_merge.png" alt-text="Schermopname van de pagina Gegevens harmoniseren met de harmonisatie-opties gemarkeerd.":::
-
    - [Voer overeenkomstvoorwaarden uit](#run-matching-conditions) om de kwaliteit van uw overeenkomstvoorwaarden (regels voor ontdubbeling en overeenkomsten) snel te evalueren zonder het geharmoniseerde profiel bij te werken. De optie **Alleen overeenkomstvoorwaarden uitvoeren** wordt niet weergegeven voor één entiteit.
-   - [Klantprofielen harmoniseren](#run-updates-to-the-unified-customer-profile) om overeenkomende voorwaarden uit te voeren en de entiteit unified customer profile bij te werken zonder afhankelijkheden (zoals verrijkingen, segmenten of metingen) te beïnvloeden. Afhankelijke processen worden niet uitgevoerd, maar worden vernieuwd zoals [gedefinieerd in het vernieuwingsschema](schedule-refresh.md).
-   - [Klantprofielen en afhankelijkheden harmoniseren](#run-updates-to-the-unified-customer-profile) om overeenkomende voorwaarden uit te voeren en de entiteit unified customer profile bij te werken en alle afhankelijkheden (zoals verrijkingen, segmenten of metingen) te beïnvloeden. Alle processen worden automatisch opnieuw uitgevoerd.
+   - [Profielen verenigen](#run-updates-to-the-unified-profile) om overeenkomende voorwaarden uit te voeren en de entiteit geharmoniseerd klantprofiel bij te werken zonder afhankelijkheden (zoals verrijkingen, segmenten of meetcriteria) te beïnvloeden. Afhankelijke processen worden niet uitgevoerd, maar worden vernieuwd zoals [gedefinieerd in het vernieuwingsschema](schedule-refresh.md).
+   - [Profielen en afhankelijkheden verenigen](#run-updates-to-the-unified-profile) om overeenkomende voorwaarden uit te voeren en de entiteit geharmoniseerd profiel en alle afhankelijkheden (zoals verrijkingen, segmenten of meetcriteria ) bij te werken. Alle processen worden automatisch opnieuw uitgevoerd. In B2B wordt harmonisatie uitgevoerd op zowel de account- als contactpersoonentiteit, waarbij de geharmoniseerde profielen worden bijgewerkt.
 
 ## <a name="edit-source-fields"></a>Bronvelden bewerken
 
@@ -55,11 +61,11 @@ U kunt een kenmerk of een entiteit niet verwijderen als deze al zijn geharmonise
 
    Het aantal toegewezen en niet-toegewezen velden wordt weergegeven.
 
-1. Selecteer **Entiteiten en velden selecteren** om andere kenmerken of entiteiten toe te voegen. Gebruik de zoekopdracht of schuif om de kenmerken en entiteiten waarin u bent interessante te zoeken en te selecteren. Selecteer **Toepassen**.
+1. Selecteer **Entiteiten en velden selecteren** om andere kenmerken of entiteiten toe te voegen.
 
-1. Optioneel kunt u de primaire sleutel voor een entiteit, de kenmerktypen wijzigen en **Intelligente toewijzing** aan- of uitzetten. Zie [Primaire sleutel en semantisch type voor kenmerken selecteren](map-entities.md#select-primary-key-and-semantic-type-for-attributes) voor meer informatie.
+1. Optioneel kunt u de primaire sleutel voor een entiteit, de kenmerktypen wijzigen en **Intelligente toewijzing** aan- of uitzetten. Zie [Bronvelden selecteren](map-entities.md) voor meer informatie.
 
-1. Selecteer **Volgende** om wijzigingen aan te brengen in ontdubbelingsregels of selecteer **Opslaan en sluiten** en keer terug naar [De harmonisatie-instellingen bijwerken](#update-the-unification-settings).
+1. Selecteer **Volgende** om wijzigingen aan te brengen in ontdubbelingsregels of selecteer **Opslaan en sluiten** en keer terug naar [Harmonisatie-instellingen bijwerken](#update-unification-settings).
 
 ## <a name="manage-deduplication-rules"></a>Ontdubbelingsregels beheren
 
@@ -69,7 +75,7 @@ U kunt een kenmerk of een entiteit niet verwijderen als deze al zijn geharmonise
 
    Het aantal gevonden dubbele records wordt weergegeven onder **Duplicaten**. De kolom **Records ontdubbeld** toont welke entiteiten dubbele records hadden en het percentage dubbele records.
 
-1. Als u een verrijkte entiteit hebt toegevoegd, selecteert u **Verrijkte entiteiten gebruiken**. Zie [Verrijking voor gegevensbronnen](data-sources-enrichment.md) voor meer informatie.
+1. Als u een verrijkte entiteit wilt gebruiken, selecteert u **Verrijkte entiteiten gebruiken**. Zie [Verrijking voor gegevensbronnen](data-sources-enrichment.md) voor meer informatie.
 
 1. Kies een van de volgende opties om ontdubbelingsregels te beheren:
    - **Een nieuwe regel maken** : selecteer **Regel toevoegen** onder de betreffende entiteit. Zie [Ontdubbelingsregels definiëren](remove-duplicates.md#define-deduplication-rules) voor meer informatie.
@@ -83,11 +89,9 @@ U kunt een kenmerk of een entiteit niet verwijderen als deze al zijn geharmonise
    1. Selecteer **Samenvoegvoorkeuren bewerken** en wijzig de optie **Te bewaren record**.
    1. Om samenvoegvoorkeuren voor individuele kenmerken van een entiteit te wijzigen, selecteert u **Geavanceerd** en breng de nodige wijzigingen aan.
 
-      :::image type="content" source="media/m3_adv_merge.png" alt-text="Schermopname van geavanceerde samenvoegvoorkeuren met e-mail en volledig adres die het meest recent zijn":::
-
    1. Selecteer **Gereed**.
 
-1. Selecteer **Volgende** om wijzigingen aan te brengen in overeenkomstvoorwaarden of selecteer **Opslaan en sluiten** en keer terug naar [De harmonisatie-instellingen bijwerken](#update-the-unification-settings).
+1. Selecteer **Volgende** om wijzigingen aan te brengen in overeenkomstvoorwaarden of selecteer **Opslaan en sluiten** en keer terug naar [Harmonisatie-instellingen bijwerken](#update-unification-settings).
 
 ## <a name="manage-match-rules"></a>Overeenkomstregels beheren
 
@@ -98,7 +102,7 @@ U kunt de meeste vergelijkingsparameters opnieuw configureren en verfijnen. U ku
    :::image type="content" source="media/m3_match_edit.png" alt-text="Schermopname van de pagina met overeenkomstregels en -voorwaarden met statistieken." lightbox="media/m3_match_edit.png":::
 
    De pagina toont de afstemmingsvolgorde en gedefinieerde regels en de volgende statistieken:
-   - **Unieke bronrecords** toont het aantal individuele bronrecords dat is verwerkt tijdens de laatste vergelijkingsuitvoering.
+   - **Unieke bronrecords** bevat het aantal individuele bronrecords dat is verwerkt tijdens de laatste vergelijkingsuitvoering.
    - **Overeenkomende en niet-overeenkomende records** geeft aan hoeveel unieke records er overblijven na verwerking van de overeenkomstregels.
    - **Alleen overeenkomende records** toont het aantal overeenkomsten voor al uw vergelijkingsparen.
 
@@ -120,7 +124,7 @@ U kunt de meeste vergelijkingsparameters opnieuw configureren en verfijnen. U ku
    - **Een regel dupliceren**: selecteer de regel en vervolgens **Dupliceren** om een soortgelijke regel met aanpassingen te maken.
    - **Een regel verwijderen**: selecteer de regel en vervolgens **Verwijderen**.
 
-1. Selecteer **Volgende** om wijzigingen aan te brengen in geharmoniseerde velden of selecteer **Opslaan en sluiten** en keer terug naar [De harmonisatie-instellingen bijwerken](#update-the-unification-settings).
+1. Selecteer **Volgende** om wijzigingen aan te brengen in geharmoniseerde velden of selecteer **Opslaan en sluiten** en keer terug naar [Harmonisatie-instellingen bijwerken](#update-unification-settings).
 
 ## <a name="manage-unified-fields"></a>Geharmoniseerde velden beheren
 
@@ -130,11 +134,32 @@ U kunt de meeste vergelijkingsparameters opnieuw configureren en verfijnen. U ku
 
 1. Bekijk de gecombineerde en uitgesloten velden en breng zo nodig wijzigingen aan. Voeg de CustomerID-sleutel of groepsprofielen toe of bewerk deze in clusters. Zie [Klantvelden harmoniseren](merge-entities.md) voor meer informatie.
 
-1. Selecteer **Volgende** om de harmonisatie-instellingen te bekijken en [het geharmoniseerde profiel en de afhankelijkheden bij te werken](#run-updates-to-the-unified-customer-profile) of selecteer **Opslaan en sluiten** en keer terug naar [De harmonisatie-instellingen bijwerken](#update-the-unification-settings) om meer wijzigingen aan te brengen.
+1. Selecteer **Volgende** voor klanten of accounts om [het geharmoniseerde profiel en de afhankelijkheden](#run-updates-to-the-unified-profile) te beoordelen en bij te werken. Of selecteer **Opslaan en sluiten** en keer terug naar [Harmonisatie-instellingen bijwerken](#update-unification-settings) om meer wijzigingen aan te brengen.
+
+   Selecteer **Volgende** voor contactpersonen om semantische velden te beheren. Of selecteer **Opslaan en sluiten** en keer terug naar [Harmonisatie-instellingen bijwerken](#update-unification-settings) om meer wijzigingen aan te brengen.
+
+## <a name="manage-semantic-fields-for-unified-contacts"></a>Semantische velden voor geharmoniseerde contactpersonen beheren
+
+1. Selecteer **Bewerken** in de tegel **Semantische velden**.
+
+1. Selecteer een nieuw type om het semantische type voor een geharmoniseerd veld te wijzigen. Zie [De semantische velden voor samengevoegde contactpersonen definiëren](data-unification-contacts.md#define-the-semantic-fields-for-unified-contacts) voor meer informatie.
+
+1. Selecteer **Volgende** om de account- en contactpersoonrelatie te beheren of selecteer **Opslaan en sluiten** en keer terug naar [Harmonisatie-instellingen bijwerken](#update-unification-settings) om meer wijzigingen aan te brengen.
+
+## <a name="manage-contact-and-account-relationships"></a>Contactpersoon- en accountrelaties beheren
+
+1. Selecteer **Bewerken** in de tegel **Relaties**.
+
+1. Als u de relatie tussen contactpersoon en account wilt wijzigen, wijzigt u een van de volgende gegevens:
+
+   - **Refererende sleutel van contactpersoonentiteit**: kies het kenmerk van uw bronentiteit dat uw contactpersoonentiteit verbindt met het account.
+   - **Naar accountentiteit**: kies de accountentiteit die aan de contactpersoon is gekoppeld.
+
+1. Selecteer **Volgende** om de harmonisatie-instellingen te bekijken en [het geharmoniseerde profiel en de afhankelijkheden bij te werken](#run-updates-to-the-unified-profile) of selecteer **Opslaan en sluiten** en keer terug naar [Harmonisatie-instellingen bijwerken](#update-unification-settings) om meer wijzigingen aan te brengen.
 
 ## <a name="run-matching-conditions"></a>Overeenkomstvoorwaarden uitvoeren
 
-Met overeenkomende voorwaarden uitvoeren worden alleen ontdubbelings- en overeenkomstregels uitgevoerd en worden de entiteiten *Ontdubbeling* en *ConflationMatchPair* bijgewerkt.
+Met overeenkomende voorwaarden uitvoeren worden alleen ontdubbelings- en overeenkomstregels uitgevoerd en worden de entiteiten *Deduplication_* en *ConflationMatchPair* bijgewerkt.
 
 1. Op de pagina **Gegevens** > **Harmoniseren** selecteert u **Alleen overeenkomstvoorwaarden uitvoeren**.
 
@@ -148,18 +173,15 @@ Met overeenkomende voorwaarden uitvoeren worden alleen ontdubbelings- en overeen
 
 1. Zie [Ontdubbelingsregels beheren](#manage-deduplication-rules) of [Overeenkomstregels beheren](#manage-match-rules) om wijzigingen aan te brengen.
 
-1. Voer het matchingproces opnieuw uit of [voer updates uit op het klantprofiel](#run-updates-to-the-unified-customer-profile).
+1. Voer het vergelijkingsproces opnieuw uit of [voer updates uit op het profiel](#run-updates-to-the-unified-profile).
 
-## <a name="run-updates-to-the-unified-customer-profile"></a>Updates uit op het geharmoniseerde klantprofiel
+## <a name="run-updates-to-the-unified-profile"></a>Updates uitvoeren op het geharmoniseerde profiel
 
-1. Selecteer op de pagina **Gegevens** > **Harmoniseren**:
+- Als u overeenkomstvoorwaarden wilt uitvoeren en de entiteit geharmoniseerd profiel wilt bijwerken *zonder* afhankelijkheden (zoals verrijkingen, segmenten of meetcriteria) te beïnvloeden, selecteert u **Klantprofielen harmoniseren**. Selecteer voor accounts de optie **Accounts samenvoegen** > **Profielen verenigen**. Selecteer voor contactpersonen de optie **Contactpersonen samenvoegen (preview)** > **Profielen verenigen**. Afhankelijke processen worden niet uitgevoerd, maar worden vernieuwd zoals [gedefinieerd in het vernieuwingsschema](schedule-refresh.md).
+- Als u overeenkomstvoorwaarden wilt uitvoeren, het geharmoniseerde profiel wilt bijwerken en alle afhankelijkheden wilt uitvoeren, selecteert u **Klantprofielen en afhankelijkheden harmoniseren**. Alle processen worden automatisch opnieuw uitgevoerd. Selecteer voor accounts en contactpersonen de optie **Accounts samenvoegen** > **Profielen en afhankelijkheden verenigen**. Er worden overeenkomstvoorwaarden uitgevoerd voor zowel accounts als contactpersonen die beide geharmoniseerde profielen bijwerken en alle andere afhankelijkheden worden uitgevoerd.
 
-   - **Klantprofielen harmoniseren**: voert overeenkomende voorwaarden uit en werkt de entiteit unified customer profile bij zonder afhankelijkheden (zoals verrijkingen, segmenten of metingen) te beïnvloeden. Afhankelijke processen worden niet uitgevoerd, maar worden vernieuwd zoals [gedefinieerd in het vernieuwingsschema](schedule-refresh.md).
+Alle tegels behalve **Bronvelden** tonen de status **In wachtrij geplaatst** of **Vernieuwen**.
 
-   - **Klantprofielen en afhankelijkheden harmoniseren**: voert overeenkomende voorwaarden uit en werkt het geharmoniseerde profiel en alle afhankelijkheden bij. Alle processen worden automatisch opnieuw uitgevoerd. Nadat alle downstreamprocessen zijn voltooid, weerspiegelt het klantprofiel de bijgewerkte gegevens.
+[!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-   De tegels **Dubbele records**, **Overeenkomstvoorwaarden** en **Geharmoniseerde klantvelden** tonen de status **In wachtrij** of **Vernieuwen**.
-
-   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
-
-De resultaten van een succesvolle uitvoering worden weergegeven op de pagina **Harmoniseren** met het aantal geharmoniseerde klantprofielen.
+De resultaten van een succesvolle uitvoering worden weergegeven op de pagina **Harmoniseren** met het aantal geharmoniseerde profielen.

@@ -3,31 +3,31 @@ title: Uw eigen Azure Data Lake Storage Gen2-account gebruiken
 author: mukeshpo
 description: Meer informatie over de vereisten om uw eigen Azure Data Lake Storage-account te gebruiken voor het opslaan van Customer Insights-gegevens.
 ms.author: mukeshpo
-ms.date: 06/08/2022
+ms.date: 08/15/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: d2ff49c324c5c5c28213f362ff330d441fcb6052
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 5e4b9348f06d4e5e10b4499ad86b38c9d52da1f5
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246195"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304375"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Uw eigen Azure Data Lake Storage Gen2-account gebruiken
 
-Dynamics 365 Customer Insights geeft u de mogelijkheid om al uw gegevens op te slaan in [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction).
-
-Door gegevens op te slaan in Data Lake Storage, gaat u ermee akkoord dat gegevens worden overgedragen naar en opgeslagen op de juiste geografische locatie voor die Azure-opslagaccount. Zie [Microsoft Vertrouwenscentrum](https://www.microsoft.com/trust-center) voor meer informatie.
+Dynamics 365 Customer Insights geeft u de mogelijkheid om al uw gegevens op te slaan in [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction). Door gegevens op te slaan in Data Lake Storage, gaat u ermee akkoord dat gegevens worden overgedragen naar en opgeslagen op de juiste geografische locatie voor die Azure-opslagaccount. Zie [Microsoft Vertrouwenscentrum](https://www.microsoft.com/trust-center) voor meer informatie.
 
 Beheerders in Customer Insights kunnen [omgevingen maken](create-environment.md) en [de optie voor gegevensopslag opgeven](create-environment.md#step-2-configure-data-storage) in het proces.
 
-## <a name="prerequisites-to-use-your-storage-account"></a>Vereisten voor het gebruik van uw opslagaccount
+## <a name="prerequisites"></a>Vereisten
 
-- Azure Data Lake Storage-accounts moeten zich in dezelfde Azure-regio bevinden die u hebt geselecteerd bij het maken van de Customer Insights-omgeving. U kunt de regio van de Customer Insights-omgeving controleren onder **Beheer** > **Systeem** > **Info**.
-- Data Lake Storage moet Gen2 zijn en [hiërarchische naamruimte hebben ingeschakeld](/azure/storage/blobs/create-data-lake-storage-account). Gen1-opslagaccounts worden niet ondersteund.
-- Een container met de naam `customerinsights` moet aanwezig zijn in het opslagaccount. U moet deze maken voordat u uw eigen Data Lake Storage in Customer Insights gebruikt. De beheerder die de Customer Insights-omgeving instelt, heeft de rol Bijdrager van Storage Blob-gegevens of Eigenaar van Storage Blob-gegevens nodig voor het opslagaccount of de `customerinsights`-container. Zie [Een opslagaccount maken](/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal) voor meer informatie over het toewijzen van machtiging in een opslagaccount.
+- Azure Data Lake Storage-accounts moeten zich in dezelfde Azure-regio bevinden die u hebt geselecteerd bij het maken van de Customer Insights-omgeving. Als u de regio van de omgeving wilt weten, gaat u naar **Beheerder** > **Systeem** > **Over** in Customer Insights.
+- Het Data Lake Storage-account moet Gen2 zijn. Azure Data Lake Gen1-opslagaccounts worden niet ondersteund.
+- Voor het Data Lake Storage-account moet [hiërarchische naamruimte zijn ingeschakeld](/azure/storage/blobs/data-lake-storage-namespace).
+- Een container met de naam `customerinsights` moet aanwezig zijn in het opslagaccount. Maak deze voordat u uw eigen Data Lake Storage in Customer Insights gebruikt.
+- De beheerder die de Customer Insights-omgeving instelt, heeft de rol Bijdrager van Storage Blob-gegevens of Eigenaar van Storage Blob-gegevens nodig voor het opslagaccount of de `customerinsights`-container. Zie [Een opslagaccount maken](/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal) voor meer informatie over het toewijzen van machtiging in een opslagaccount.
 
 ## <a name="connect-customer-insights-with-your-storage-account"></a>Customer Insights verbinden met uw opslagaccount
 
@@ -37,8 +37,8 @@ Wanneer u een nieuwe omgeving maakt, moet u ervoor zorgen dat het Data Lake Stor
 1. Kies hoe u **uw opslag wilt verbinden**. U kunt kiezen tussen een op resources gebaseerde optie en een op abonnementen gebaseerde optie voor verificatie. Zie [Verbinding met een Azure Data Lake Storage-account maken via een Azure-service-principal](connect-service-principal.md) voor meer informatie.
    - Bij **Azure-abonnement** kiest u de waarden voor **Abonnement**, **Resourcegroep** en **Opslagaccount** die de `customerinsights`-container bevatten.
    - Geef voor **Accountsleutel** de **accountnaam** en **accountsleutel** voor het Data Lake Storage-account op. Het gebruik van deze verificatiemethode houdt in dat u wordt geïnformeerd als uw organisatie de sleutels rouleert. U moet [de omgevingsconfiguratie bijwerken](manage-environments.md#edit-an-existing-environment) met de nieuwe sleutel wanneer deze wordt gerouleerd.
-1. Kies of u Azure Private Link wilt gebruiken om verbinding te maken met het opslagaccount en [maak de verbinding met Private Link](security-overview.md#set-up-an-azure-private-link) in twee stappen.
+1. Kies of u Azure Private Link wilt gebruiken om verbinding te maken met het opslagaccount en [maak de verbinding met Private Link](security-overview.md#set-up-an-azure-private-link).
 
-Wanneer systeemprocessen zoals gegevensopname zijn voltooid, maakt het systeem overeenkomstige mappen in het opslagaccount. Gegevensbestanden en *model.json*-bestanden worden gemaakt en toegevoegd aan mappen op basis van de procesnaam.
+Wanneer systeemprocessen zoals gegevensopname zijn voltooid, maakt het systeem overeenkomstige mappen in het opslagaccount. Gegevensbestanden en model.json-bestanden worden gemaakt en toegevoegd aan mappen op basis van de procesnaam.
 
 Als u meerdere omgevingen van Customer Insights maakt en ervoor kiest om de uitvoerentiteiten van die omgevingen op te slaan in uw opslagaccount, maakt Customer Insights afzonderlijke mappen voor elke omgeving met `ci_environmentID` in de container.

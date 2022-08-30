@@ -2,7 +2,7 @@
 title: Klantvelden harmoniseren voor gegevensharmonisatie
 description: Voeg entiteiten samen om geharmoniseerde klantprofielen te maken.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213576"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304007"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Klantvelden harmoniseren voor gegevensharmonisatie
+# <a name="unify-customer-fields"></a>Klantvelden harmoniseren
 
-In deze stap van het harmonisatieproces kiest u kenmerken en sluit u kenmerken uit om samen te voegen binnen uw geharmoniseerde-profielentiteit. Als drie entiteiten bijvoorbeeld e-mailgegevens bevatten, wilt u misschien alle drie de afzonderlijke e-mailvelden behouden of ze samenvoegen tot één e-mailveld voor het geharmoniseerde profiel. Sommige kenmerken worden automatisch door het systeem gecombineerd. U kunt stabiele en unieke klant-id's maken en gerelateerde profielen groeperen in een cluster.
+In deze stap van het harmonisatieproces kiest u kenmerken en sluit u kenmerken uit om samen te voegen binnen uw geharmoniseerde-profielentiteit. Als drie entiteiten bijvoorbeeld e-mailgegevens bevatten, wilt u misschien alle drie de afzonderlijke e-mailvelden behouden of ze samenvoegen tot één e-mailveld voor het geharmoniseerde profiel. Sommige kenmerken worden automatisch door het systeem gecombineerd. U kunt stabiele en unieke klant-id's maken. Voor individuele klanten kunt u gerelateerde profielen in een cluster groeperen.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Samenvoegpagina in het gegevensharmonisatieproces waarop een tabel wordt weergegeven met samengevoegde velden die het uniforme klantprofiel definiëren.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Pagina Klantvelden harmoniseren in het gegevensharmonisatieproces waarbij een tabel wordt weergegeven met samengevoegde velden die het geharmoniseerde klantprofiel definiëren.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Velden voor klantprofiel bekijken en bewerken
 
@@ -47,7 +47,7 @@ In deze stap van het harmonisatieproces kiest u kenmerken en sluit u kenmerken u
 
 1. Desgewenst [het genereren van de klant-id configureren](#configure-customer-id-generation).
 
-1. Desgewenst [profielen groeperen in huishoudens of clusters](#group-profiles-into-households-or-clusters).
+1. Desgewenst kunt u voor B2C [profielen groeperen in huishoudens of clusters](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Volgende stap: Harmonisatie bekijken](review-unification.md)
@@ -161,7 +161,7 @@ Door een stabiele klant-id te configureren, kunt u dat gedrag vermijden.
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Groepeer profielen in huishoudens of clusters
 
-U kunt regels definiëren om gerelateerde profielen in een cluster te groeperen. Er zijn momenteel twee soorten clusters beschikbaar: huishoudelijke en aangepaste clusters. Het systeem kiest automatisch een huishouden met vooraf gedefinieerde regels als de entiteit *Klant* de semantische velden *Person.LastName* en *Location.Address* bevat. U kunt ook een cluster maken met uw eigen regels en voorwaarden, vergelijkbaar met [afstemmingsregels](match-entities.md#define-rules-for-match-pairs).
+Voor individuele klanten kunt u regels definiëren om gerelateerde profielen in een cluster te groeperen. Er zijn momenteel twee soorten clusters beschikbaar: huishoudelijke en aangepaste clusters. Het systeem kiest automatisch een huishouden met vooraf gedefinieerde regels als de entiteit *Klant* de semantische velden *Person.LastName* en *Location.Address* bevat. U kunt ook een cluster maken met uw eigen regels en voorwaarden, vergelijkbaar met [afstemmingsregels](match-entities.md#define-rules-for-match-pairs).
 
 1. Selecteer **Geavanceerd** > **Cluster maken**.
 

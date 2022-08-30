@@ -1,19 +1,19 @@
 ---
 title: Segmenten exporteren naar LinkedIn Ads (preview)
 description: Procedure voor het configureren van de verbinding en voor het exporteren naar LinkedIn Ads.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196802"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304697"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmenten exporteren naar LinkedIn Ads (preview)
 
@@ -24,7 +24,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar LinkedIn Ads om matc
 - Een [LinkedIn Campaign Manager-account](https://business.linkedin.com/marketing-solutions/ads) en bijbehorende beheerdersreferenties.
 - Een [account-id van LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270).
 - [Segmenten geconfigureerd](segments.md) in Customer Insights.
-- Geharmoniseerde klantprofielen in de geëxporteerde segmenten bevatten een veld voor e-mailadres.
+- De geëxporteerde segmenten hebben ten minste één specifiek veld nodig, afhankelijk van of u [targeting van contactpersonen](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) of [targeting van bedrijven](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) kiest in LinkedIn. De mogelijke velden staan vermeld in de stap **Gegevensvergelijking** bij het [configureren van de export](#configure-an-export).
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 

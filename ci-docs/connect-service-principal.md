@@ -1,7 +1,7 @@
 ---
 title: Verbinding met een Azure Data Lake Storage-account maken met behulp van een Azure-service-principal
 description: Gebruik een Azure-service-principal om verbinding te maken met uw eigen data lake.
-ms.date: 05/31/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,27 +11,28 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 949caa73578dbe0a511726ec045c0fd5f4621de4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: eba10068c48db5c147100c25a397bcc13b014784
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081008"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304191"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Verbinding met een Azure Data Lake Storage-account maken met behulp van een Azure-service-principal
 
-In dit artikel wordt beschreven hoe u verbinding kunt maken tussen Dynamics 365 Customer Insights en een Azure Data Lake Storage-account met behulp van een Azure-service-principal in plaats van opslagaccountsleutels.
+Dynamics 365 Customer Insights biedt een optie voor verbinding met een Azure Data Lake Storage-account via een Azure-service-principal in plaats van opslagaccountsleutels.
 
-Geautomatiseerde hulpmiddelen die Azure-services gebruiken, moeten altijd beperkte machtigingen hebben. In plaats van toepassingen zich te laten aanmelden als een gebruiker met volledige rechten, biedt Azure Service Principals. U kunt service-principals gebruiken om veilig [een Common Data Model-map toe te voegen of te bewerken als een gegevensbron](connect-common-data-model.md) of [een omgeving te maken of bij te werken](create-environment.md).
+Geautomatiseerde hulpmiddelen die Azure-services gebruiken, moeten beperkte machtigingen hebben. In plaats van toepassingen zich te laten aanmelden als een gebruiker met volledige rechten, biedt Azure Service Principals. Gebruik service-principals om veilig [een Common Data Model-map toe te voegen of te bewerken als een gegevensbron](connect-common-data-model.md) of [een omgeving te maken of bij te werken](create-environment.md).
 
-> [!IMPORTANT]
->
-> - Het Data Lake Storage-account dat de service-principal gaat gebruiken, moet Gen2 zijn en moet [hiërarchische naamruimte hebben ingeschakeld](/azure/storage/blobs/data-lake-storage-namespace). Azure Data Lake Gen1-opslagaccounts worden niet ondersteund.
-> - U hebt beheerdersmachtigingen nodig voor uw Azure-tenant om een service-principal te maken.
+## <a name="prerequisites"></a>Vereisten
+
+- Het Data Lake Storage-account dat de service-principal gaat gebruiken, moet Gen2 zijn. Azure Data Lake Gen1-opslagaccounts worden niet ondersteund.
+- Voor de Azure Data Lake Storage-account is [hiërarchische naamruimte ingeschakeld](/azure/storage/blobs/data-lake-storage-namespace).
+- U hebt beheerdersmachtigingen nodig voor uw Azure-tenant als u een nieuwe service-principal moet maken.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Een Azure-service-principal maken voor Customer Insights
 
-Voordat u een nieuwe service-principal voor Customer Insights maakt, moet u controleren of deze al in uw organisatie bestaat.
+Voordat u een nieuwe service-principal voor Customer Insights maakt, moet u controleren of deze al in uw organisatie bestaat. In de meeste gevallen bestaat deze al.
 
 ### <a name="look-for-an-existing-service-principal"></a>Een bestaande Service Principal zoeken
 
@@ -43,70 +44,11 @@ Voordat u een nieuwe service-principal voor Customer Insights maakt, moet u cont
 
 4. Voeg een filter toe voor **Toepassings-id begint met** `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` of zoek op de naam `Dynamics 365 AI for Customer Insights`.
 
-5. Als u een overeenkomende record vindt, betekent dit dat de service-principal al bestaat.
+5. Als u een overeenkomende record vindt, betekent dit dat de service-principal al bestaat. [Verleen machtigingen](#grant-permissions-to-the-service-principal-to-access-the-storage-account) voor de service-principal om toegang te krijgen tot het opslagaccount.
 
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Schermopname van een bestaande service-principal.":::
 
-6. Als er geen resultaten worden geretourneerd, kunt u [een nieuwe service-principal maken](#create-a-new-service-principal). In de meeste gevallen bestaat deze al en hoeft u alleen machtigingen te verlenen aan de service-principal om toegang te krijgen tot het opslagaccount.
-
-## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Machtigingen verlenen aan de service principal om toegang te krijgen tot het opslagaccount
-
-Ga naar de Azure-portal om machtigingen te verlenen aan de service-principal voor het opslagaccount dat u wilt gebruiken in Customer Insights. Een van de volgende rollen moet worden toegewezen aan het opslagaccount of de container:
-
-|Referentie|Vereisten|
-|----------|------------|
-|Momenteel aangemelde gebruiker|**Rol**: Storage Blob-gegevenslezer, Storage Blob-inzender of Storage Blob-eigenaar.<br>**Niveau**: machtigingen kunnen worden verleend voor het opslagaccount of de container.</br>|
-|Customer Insights Service Principal -<br>Azure Data Lake Storage als gegevensbron gebruiken</br>|Optie 1<ul><li>**Rol**: Storage Blob-gegevenslezer, Storage Blob-gegevensinzender of Storage Blob-gegevenseigenaar.</li><li>**Niveau**: machtigingen moeten worden verleend voor het opslagaccount.</li></ul>Optie 2 *(zonder Service Principal-toegang tot het opslagaccount te delen)*<ul><li>**Rol 1**: Storage Blob-gegevenslezer, Storage Blob-gegevensinzender of Storage Blob-gegevenseigenaar.</li><li>**Niveau**: machtigingen moeten worden verleend voor de container.</li><li>**Rol 2**: Storage Blob-gegevensdelegeerder.</li><li>**Niveau**: machtigingen moeten worden verleend voor het opslagaccount.</li></ul>|
-|Customer Insights Service Principal - <br>Azure Data Lake Storage gebruiken als een uitvoer of een doel</br>|Optie 1<ul><li>**Rol**: Storage Blob-gegevensinzender of Storage Blob-eigenaar.</li><li>**Niveau**: machtigingen moeten worden verleend voor het opslagaccount.</li></ul>Optie 2 *(zonder Service Principal-toegang tot het opslagaccount te delen)*<ul><li>**Rol**: Storage Blob-gegevensinzender of Storage Blob-eigenaar.</li><li>**Niveau**: machtigingen moeten worden verleend voor de container.</li><li>**Rol 2**: Storage Blob-delegeerder.</li><li>**Niveau**: machtigingen moeten worden verleend voor het opslagaccount.</li></ul>|
-
-1. Ga naar de [Azure-beheerportal](https://portal.azure.com) en meld u aan bij uw organisatie.
-
-1. Open het opslagaccount waartoe u de service-principal voor Customer Insights toegang wilt geven.
-
-1. Selecteer in het linkerdeelvenster **Toegangscontrole (IAM)** en selecteer vervolgens **Toevoegen** > **Roltoewijzing toevoegen**.
-
-   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Schermopname die de Azure Portal weergeeft tijdens het toevoegen van een roltoewijzing.":::
-
-1. Stel in het deelvenster **Roltoewijzing toevoegen** de volgende eigenschappen in:
-   - Rol: Storage Blob-gegevenslezer, Storage Blob-inzender of Storage Blob-gegevenseigenaar, gebaseerd op de bovengenoemde referenties.
-   - Wijs toegang toe aan: **Gebruiker, groep of service principal**
-   - Selecteer leden: **Dynamics 365 AI voor Customer Insights** (de [service-principal](#create-a-new-service-principal) die u eerder in deze procedure hebt opgezocht)
-
-1. Selecteer **Controleren + toewijzen**.
-
-Het kan tot 15 minuten duren om de wijzigingen door te geven.
-
-## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-customer-insights"></a>Voer de Azure-resource-id of de details van het Azure-abonnement in de bijlage van het opslagaccount in bij Customer Insights
-
-U kunt een Data Lake Storage-account in Customer Insights koppelen om [uitvoergegevens op te slaan](manage-environments.md) of [het te gebruiken als een gegevensbron](connect-dataverse-managed-lake.md). Met deze optie kunt u kiezen tussen een op resources gebaseerde of een op abonnementen gebaseerde benadering. Afhankelijk van de aanpak die u kiest, volgt u de procedure in een van de volgende secties.
-
-### <a name="resource-based-storage-account-connection"></a>Verbinding voor resource-opslagaccount
-
-1. Ga naar de [Azure-beheerportal](https://portal.azure.com), meld u aan bij uw abonnement en open het opslagaccount.
-
-1. Ga in het linkerdeelvenster naar **Instellingen** > **Eindpunten**.
-
-1. Kopieer de waarde voor de resource-id van het opslagaccount.
-
-   :::image type="content" source="media/ADLS-SP-ResourceId.png" alt-text="Kopieer de resource-id van het opslagaccount.":::
-
-1. Voeg in Customer Insights de resource-id in het resourceveld in dat wordt weergegeven op het verbindingsscherm van het opslagaccount.
-
-   :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Voer de informatie voor de resource-id van het opslagaccount in.":::   
-
-1. Ga verder met de resterende stappen in Customer Insights om het opslagaccount te koppelen.
-
-### <a name="subscription-based-storage-account-connection"></a>Verbinding voor abonnement-opslagaccount
-
-1. Ga naar de [Azure-beheerportal](https://portal.azure.com), meld u aan bij uw abonnement en open het opslagaccount.
-
-1. Ga in het linkerdeelvenster naar **Instellingen** > **Eigenschappen**.
-
-1. Bekijk **Abonnement**, **Resourcegroep** en **Naam** van het opslagaccount om ervoor te zorgen dat u de juiste waarden selecteert in Customer Insights.
-
-1. Kies in Customer Insights de waarden voor de bijbehorende velden wanneer u het opslagaccount koppelt.
-
-1. Ga verder met de resterende stappen in Customer Insights om het opslagaccount te koppelen.
+6. Als er geen resultaten worden geretourneerd, [maakt u een nieuwe service-principal](#create-a-new-service-principal).
 
 ### <a name="create-a-new-service-principal"></a>Een nieuwe service principal maken
 
@@ -121,5 +63,64 @@ U kunt een Data Lake Storage-account in Customer Insights koppelen om [uitvoerge
    1. Voer `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure` in het PowerShell-venster in. Vervang *[uw directory-id]* met de daadwerkelijke directory-id van uw Azure-abonnement waar u de service-principal wilt maken. De omgevingsnaamparameter, `AzureEnvironmentName`, is optioneel.
   
    1. Voer `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"` in. Met deze opdracht wordt de service-principal voor Customer Insights gemaakt voor het geselecteerde Azure-abonnement.
+
+## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Machtigingen verlenen aan de service principal om toegang te krijgen tot het opslagaccount
+
+Als u machtigingen wilt verlenen aan de service-principal voor het opslagaccount dat u wilt gebruiken in Customer Insights, moet een van de volgende rollen worden toegewezen aan het opslagaccount of de container:
+
+|Referentie|Vereisten|
+|----------|------------|
+|Momenteel aangemelde gebruiker|**Rol**: Storage Blob-gegevenslezer, Storage Blob-inzender of Storage Blob-eigenaar.<br>**Niveau**: er worden machtigingen verleend voor het opslagaccount of de container.</br>|
+|Customer Insights Service Principal -<br>Azure Data Lake Storage als gegevensbron gebruiken</br>|Optie 1<ul><li>**Rol**: Storage Blob-gegevenslezer, Storage Blob-gegevensinzender of Storage Blob-gegevenseigenaar.</li><li>**Niveau**: er worden machtigingen verleend voor het opslagaccount.</li></ul>Optie 2 *(zonder Service Principal-toegang tot het opslagaccount te delen)*<ul><li>**Rol 1**: Storage Blob-gegevenslezer, Storage Blob-gegevensinzender of Storage Blob-gegevenseigenaar.</li><li>**Niveau**: er worden machtigingen verleend voor de container.</li><li>**Rol 2**: Storage Blob-gegevensdelegeerder.</li><li>**Niveau**: er worden machtigingen verleend voor het opslagaccount.</li></ul>|
+|Customer Insights Service Principal - <br>Azure Data Lake Storage gebruiken als een uitvoer of een doel</br>|Optie 1<ul><li>**Rol**: Storage Blob-gegevensinzender of Storage Blob-eigenaar.</li><li>**Niveau**: er worden machtigingen verleend voor het opslagaccount.</li></ul>Optie 2 *(zonder Service Principal-toegang tot het opslagaccount te delen)*<ul><li>**Rol**: Storage Blob-gegevensinzender of Storage Blob-eigenaar.</li><li>**Niveau**: er worden machtigingen verleend voor de container.</li><li>**Rol 2**: Storage Blob-delegeerder.</li><li>**Niveau**: er worden machtigingen verleend voor het opslagaccount.</li></ul>|
+
+1. Ga naar de [Azure-beheerportal](https://portal.azure.com) en meld u aan bij uw organisatie.
+
+1. Open het opslagaccount waartoe u de service-principal voor Customer Insights toegang wilt geven.
+
+1. Selecteer in het linkerdeelvenster **Toegangscontrole (IAM)** en selecteer vervolgens **Toevoegen** > **Roltoewijzing toevoegen**.
+
+   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Schermopname die de Azure Portal weergeeft tijdens het toevoegen van een roltoewijzing.":::
+
+1. Stel in het deelvenster **Roltoewijzing toevoegen** de volgende eigenschappen in:
+   - **Rol**: Storage Blob-gegevenslezer, Storage Blob-inzender of Storage Blob-eigenaar, gebaseerd op de bovengenoemde referenties.
+   - **Toegang toewijzen aan**: **Gebruiker, groep of service-principal**
+   - **Leden selecteren**: **Dynamics 365 AI voor Customer Insights** (de [service-principal](#create-a-new-service-principal) die u eerder in deze procedure hebt opgezocht)
+
+1. Selecteer **Controleren + toewijzen**.
+
+Het kan tot 15 minuten duren om de wijzigingen door te geven.
+
+## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-customer-insights"></a>Voer de Azure-resource-id of de details van het Azure-abonnement in de bijlage van het opslagaccount in bij Customer Insights
+
+Koppel een Data Lake Storage-account in Customer Insights om [uitvoergegevens op te slaan](manage-environments.md) of [gebruik het als een gegevensbron](connect-dataverse-managed-lake.md). Maak een keuze tussen een [op resources gebaseerde](#resource-based-storage-account-connection) of een [op abonnementen gebaseerde](#subscription-based-storage-account-connection) benadering en volg die stappen.
+
+### <a name="resource-based-storage-account-connection"></a>Verbinding voor resource-opslagaccount
+
+1. Ga naar de [Azure-beheerportal](https://portal.azure.com), meld u aan bij uw abonnement en open het opslagaccount.
+
+1. Ga in het linkerdeelvenster naar **Instellingen** > **Eindpunten**.
+
+1. Kopieer de waarde voor de resource-id van het opslagaccount.
+
+   :::image type="content" source="media/ADLS-SP-ResourceId.png" alt-text="Kopieer de resource-id van het opslagaccount.":::
+
+1. Voeg in Customer Insights de resource-id in het resourceveld in dat wordt weergegeven op het verbindingsscherm van het opslagaccount.
+
+   :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Voer de informatie voor de resource-id van het opslagaccount in.":::
+
+1. Ga verder met de resterende stappen in Customer Insights om het opslagaccount te koppelen.
+
+### <a name="subscription-based-storage-account-connection"></a>Verbinding voor abonnement-opslagaccount
+
+1. Ga naar de [Azure-beheerportal](https://portal.azure.com), meld u aan bij uw abonnement en open het opslagaccount.
+
+1. Ga in het linkerdeelvenster naar **Instellingen** > **Eigenschappen**.
+
+1. Bekijk **Abonnement**, **Resourcegroep** en **Naam** van het opslagaccount om ervoor te zorgen dat u de juiste waarden selecteert in Customer Insights.
+
+1. Kies in Customer Insights de waarden voor de bijbehorende velden wanneer u het opslagaccount koppelt.
+
+1. Ga verder met de resterende stappen in Customer Insights om het opslagaccount te koppelen.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188087"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303777"
 ---
 # <a name="view-customer-profiles"></a>Klantprofielen weergeven
 
@@ -78,7 +78,7 @@ Klantdetails zijn onder meer:
 **Tegel Klantprofiel**: deze tegel toont de verschillende waarden van de geharmoniseerde entiteit *Klant*. Als een veld geen waarde heeft voor het geselecteerde klantprofiel, wordt het niet weergegeven. Dit geldt niet voor het adresveld. De tegel is gestructureerd in secties:
 
 - De eerste sectie toont een vooraf gedefinieerde set velden, gevolgd door alle velden die deel uitmaken van de zoek- en filterindex. Alle adresgerelateerde velden worden gecombineerd in één regel, die altijd wordt weergegeven, zelfs als het profiel geen adresgegevens bevat.
-- **Contactpersonen voor deze klant** worden in omgevingen voor zakelijke accounts weergegeven. Iedere contactpersoon wordt getoond met de eigen velden. Lege velden zijn verborgen.
+- **Contactpersonen voor deze klant** worden weergegeven in omgevingen voor zakelijke accounts (B2B). Iedere contactpersoon wordt getoond met de eigen velden. Lege velden zijn verborgen.
 - **Extra velden**: toont de overige velden van de geselecteerde klant, behalve id's.
 - **Id's**: geeft alle id's weer onder de bijbehorende entiteitsnaam. Velden worden op basis van de semantiek ervan geïdentificeerd als id's.
 
