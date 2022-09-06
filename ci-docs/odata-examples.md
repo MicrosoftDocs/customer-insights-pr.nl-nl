@@ -1,27 +1,27 @@
 ---
 title: Voorbeelden van OData-query's voor Customer Insights-API's
 description: Veelgebruikte voorbeelden van voor het Open Data Protocol (OData) om een query uit te voeren op de Customer Insights-API's om gegevens te beoordelen.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121556"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387196"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Voorbeelden van OData-query's voor Customer Insights-API's
 
 Het Open Data Protocol (OData) is een gegevenstoegangsprotocol dat is gebaseerd op kernprotocollen zoals HTTP. Het maakt gebruik van algemeen aanvaarde methodologieën zoals REST voor het web. Er zijn verschillende soorten bibliotheken en hulpprogramma's die kunnen worden gebruikt om OData-services te gebruiken.
 
-Dit artikel bevat enkele veelgevraagde voorbeeldquery's om u te helpen bij het bouwen van uw eigen implementaties op basis van de [Customer Insights-API's](apis.md).
+Lees enkele veelgevraagde voorbeeldquery's om u te helpen bij het bouwen van uw eigen implementaties op basis van de [Customer Insights-API's](apis.md).
 
-U moet de queryvoorbeelden wijzigen om ze te laten werken in de doelomgevingen: 
+Wijzig de queryvoorbeelden om ze te laten werken in de doelomgevingen:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` waar {instanceId} is de GUID van de Customer Insights-omgeving waarop u een query wilt uitvoeren. De [ListAllInstances-bewerking](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) laat u de {InstanceId} vinden waartoe u toegang hebt.
 - {CID}: GUID van een geharmoniseerde klantenrecord. Voorbeeld: `ce759201f786d590bf2134bff576c369`.
@@ -31,7 +31,7 @@ U moet de queryvoorbeelden wijzigen om ze te laten werken in de doelomgevingen:
 
 ## <a name="customer"></a>klant
 
-De volgende tabel bevat een set voorbeeldquery's voor de entiteit *Customer*.
+Voorbeeldvragen voor de entiteit *Klant*.
 
 |Querytype |Voorbeeld  | Notitie  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ De volgende tabel bevat een set voorbeeldquery's voor de entiteit *Customer*.
 
 ## <a name="unified-activity"></a>Geharmoniseerde activiteit
 
-De volgende tabel bevat een set voorbeeldquery's voor de entiteit *UnifiedActivity*.
+Voorbeeldvragen voor de entiteit *UnifiedActivity*.
 
 |Querytype |Voorbeeld  | Notitie  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ De volgende tabel bevat een set voorbeeldquery's voor de entiteit *UnifiedActivi
 
 ## <a name="other-examples"></a>Andere voorbeelden
 
-De volgende tabel bevat een set voorbeeldquery's voor andere entiteiten.
+Voorbeeldquery's voor andere entiteiten.
 
 |Querytype |Voorbeeld  | Notitie  |
 |---------|---------|---------|

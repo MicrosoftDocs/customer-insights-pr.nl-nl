@@ -1,19 +1,19 @@
 ---
 title: Nieuwe functies in Dynamics 365 Customer Insights
 description: Informatie over nieuwe functies, verbeteringen en bugfixes.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246005"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387288"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nieuwe functies in Dynamics 365 Customer Insights
 
@@ -23,6 +23,24 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>Updates augustus 2022
+
+De updates in augustus 2022 omvatten nieuwe functies, prestatie-upgrades en bugfixes.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Harmonisatie van contactpersonen in B-to-B-omgevingen
+
+B-to-B-omgevingen in Customer Insights ondersteunen nu een verbeterde ervaring voor gegevensharmonisatie.
+
+U kunt nu naast accounts ook contacten samenvoegen om een volledig overzicht van uw zakelijke contacten te krijgen. Geharmoniseerde contacten zijn gekoppeld aan geharmoniseerde accounts en worden nu vermeld op de klantenkaarten. 
+
+Zie [Een geharmoniseerd contactprofiel maken](data-unification-contacts.md) voor meer informatie.
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Segmenten maken en exporteren op basis van geharmoniseerde contacten
+
+Dankzij de nieuwe harmonisatie van contacten kunt u segmenten van contacten maken met behulp van criteria van contacten, accounts of beide. Deze segmenten kunnen worden geëxporteerd voor activering in andere services.
+
+Zie [Overzicht van exports](export-destinations.md) voor meer informatie.
 
 ## <a name="july-2022-updates"></a>Updates juli 2022
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245919"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352795"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Diagnostische logboeken exporteren (preview)
 
@@ -36,8 +36,8 @@ Customer Insights verzendt de volgende gebeurtenislogboeken:
 
 - Een actief [Azure-abonnement](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Machtigingen voor [beheerders](permissions.md#admin) in Customer Insights.
+- Een geldige resource op Azure die volgt op de [bestemmingsvereisten](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) voor Azure Storage, Azure-gebeurtenishub of Azure Log Analytics.
 - De [rol van inzender en beheerder voor gebruikerstoegang](/azure/role-based-access-control/role-assignments-portal) voor de doelresource in Azure. De resource kan een Azure Data Lake Storage-account, een Azure-gebeurtenishub of een Azure Log Analytics-werkruimte zijn. Deze machtiging is nodig tijdens het configureren van diagnostische instellingen in Customer Insights, maar kan worden gewijzigd na een succesvolle installatie.
-- Er wordt aan de [bestemmingsvereisten](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) voor Azure Storage, Azure-gebeurtenishub of Azure Log Analytics voldaan.
 - In ieder geval de rol **Lezer** in de resourcegroep waartoe de resource behoort.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Diagnoses instellen met Azure Monitor

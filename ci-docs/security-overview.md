@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d20d57e9b7724e9921f9341eeaa39141b4555ff1
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246056"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387243"
 ---
 # <a name="configure-security-settings"></a>Beveiligingsinstellingen configureren
 
@@ -23,7 +23,7 @@ Beheer API-sleutels, krijg toegang tot klantgegevens en stel een Azure Private L
 
 Bekijk en beheer de sleutels om de [Customer Insights-API's](apis.md) te gebruiken met de gegevens in uw omgeving.
 
-1. Ga naar **Systeem** > **Beveiliging** en selecteer het tabblad **API's**.
+1. Ga naar **Beheer** > **Beveiliging** en selecteer het tabblad **API′s**.
 
 1. Als er geen API-toegang tot de omgeving is ingesteld, selecteert u **Inschakelen**. Of blokkeer de API-toegang tot de omgeving door **Uitschakelen** te selecteren en te bevestigen.
 
