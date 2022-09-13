@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246241"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395995"
 ---
 # <a name="view-system-configuration"></a>Systeemconfiguratie weergeven
 
@@ -38,12 +38,6 @@ Bekijk details over het realtime API-gebruik en ga na welke gebeurtenissen hebbe
    - **API-aanroepen**: een grafiek die het geaggregeerde aantal aanroepen naar de API in het geselecteerde tijdsbestek visualiseert.
    - **Gegevensoverdracht**: - een grafiek die de hoeveelheid gegevens toont die via de API zijn overgedragen in het geselecteerde tijdsbestek.
    - **Bewerkingen**: een tabel met rijen voor elke beschikbare API-bewerking en details over het gebruik van de bewerkingen. Selecteer een bewerkingsnaam om naar [de API-verwijzing](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) te gaan.
-
-   Bewerkingen die gebruikmaken van [realtime gegevensopname](real-time-data-ingestion.md) bevatten een verrekijkersymbool voor het bekijken van het realtime API-gebruik.
-
-   1. Selecteer de verrekijker om het deelvenster **Realtime API-gebruik** te openen met gebruiksdetails voor de bewerking.
-   1. **Selecteer een tijdsbestek** om te bekijken.
-   1. Gebruik het vak **Groeperen op** om te kiezen hoe u uw realtime interacties het best kunt presenteren. Groepeer de gegevens op **API-methode**, **Gekwalificeerde naam van entiteit** (opgenomen entiteit), **Gemaakt door** (bron van de gebeurtenis), **Resultaat** (succes of mislukking) of **Foutcodes**. De gegevens zijn beschikbaar als geschiedenisdiagram en als tabel.
 
 ## <a name="view-system-information"></a>Systeemgegevens weergeven
 

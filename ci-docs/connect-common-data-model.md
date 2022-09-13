@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245781"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396040"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Verbinding maken met gegevens in Azure Data Lake Storage
 
@@ -39,6 +39,8 @@ Gegevens opnemen in Dynamics 365 Customer Insights via uw Azure Data Lake Storag
   - Opslag-blobgegevens lezer
   - Opslag-blobgegevens eigenaar
   - Inzender van opslag-blobgegevens
+
+- De gebruiker die de verbinding met de gegevensbron instelt, heeft minimaal machtigingen van de rol Inzender van opslag-blobgegevens nodig voor het opslagaccount.
 
 - Gegevens in uw Data Lake Storage moeten de Common Data Model-standaard volgen voor de opslag van uw gegevens en het gemeenschappelijke gegevensmodelmanifest hebben om het schema van de gegevensbestanden (*.csv of *.parquet) weer te geven. Het manifest moet de details van de entiteiten bevatten, zoals entiteitskolommen en gegevenstypen, evenals de locatie van het gegevensbestand en het bestandstype. Zie voor meer informatie [Het Common Data Model-manifest](/common-data-model/sdk/manifest). Als het manifest niet aanwezig is, kunnen beheerders met Storage Blob Data eigenaar- of Storage Blob Data inzender-toegang het schema definiëren bij het opnemen van de gegevens.
 
@@ -62,7 +64,7 @@ Gegevens opnemen in Dynamics 365 Customer Insights via uw Azure Data Lake Storag
    > [!NOTE]
    > U hebt een van de volgende rollen nodig voor de container of het opslagaccount om de gegevensbron te maken:
    >
-   >  - Storage Blob-gegevenslezer is voldoende om van een opslagaccount te lezen en de gegevens op te nemen in Customer Insights. 
+   >  - Storage Blob-gegevenslezer is voldoende om van een opslagaccount te lezen en de gegevens op te nemen in Customer Insights.
    >  - Bijdrager van Storage Blob-gegevens of Eigenaar van Storage Blob-gegevens is vereist als u de manifestbestanden rechtstreeks in Customer Insights wilt bewerken.  
   
 1. Kies de naam van de **Container** die de gegevens en het schema bevat (model.json- of manifest.json-bestand) om gegevens uit te importeren, en selecteer **Volgende**.

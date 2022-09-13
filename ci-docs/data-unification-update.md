@@ -1,7 +1,7 @@
 ---
 title: Instellingen voor klant-, account- of contactpersoonharmonisatie bijwerken
 description: Werk dubbele regels, overeenkomstregels of geharmoniseerde velden bij in de harmonisatie-instellingen voor contactpersonen of accounts.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304329"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392465"
 ---
 # <a name="update-unification-settings"></a>Harmonisatie-instellingen bijwerken
 
@@ -38,7 +38,7 @@ Voer de volgende stappen uit om harmonisatie-instellingen te bekijken of te wijz
    > De tegel **Overeenkomende voorwaarden** wordt alleen weergegeven als er meerdere entiteiten zijn geselecteerd.
 
 1. Kies wat u wilt bijwerken:
-   - [Bronvelden](#edit-source-fields) om entiteiten of kenmerken toe te voegen of kenmerktypen te wijzigen.
+   - [Bronvelden](#edit-source-fields) om kenmerken of entiteiten toe te voegen of kenmerktypen te wijzigen. Zie [Een geharmoniseerd veld verwijderen](#remove-a-unified-field) als u een kenmerk wilt verwijderen. Zie [Een geharmoniseerde entiteit verwijderen](#remove-a-unified-entity) als u een entiteit wilt verwijderen.
    - [Dubbele records](#manage-deduplication-rules) om ontdubbelingsregels of samenvoegvoorkeuren te beheren.
    - [Overeenkomstvoorwaarden](#manage-match-rules) om overeenkomstregels voor twee of meer entiteiten bij te werken.
    - [Geharmoniseerde klantvelden](#manage-unified-fields) om velden te combineren of uit te sluiten. U kunt gerelateerde profielen ook in clusters groeperen.
@@ -53,8 +53,6 @@ Voer de volgende stappen uit om harmonisatie-instellingen te bekijken of te wijz
 
 ## <a name="edit-source-fields"></a>Bronvelden bewerken
 
-U kunt een kenmerk of een entiteit niet verwijderen als deze al zijn geharmoniseerd.
-
 1. Selecteer **Bewerken** in de tegel **Bronvelden**.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Schermopname van de pagina Bronvelden met het aantal primaire sleutels, toegewezen en niet-toegewezen velden":::
@@ -66,6 +64,80 @@ U kunt een kenmerk of een entiteit niet verwijderen als deze al zijn geharmonise
 1. Optioneel kunt u de primaire sleutel voor een entiteit, de kenmerktypen wijzigen en **Intelligente toewijzing** aan- of uitzetten. Zie [Bronvelden selecteren](map-entities.md) voor meer informatie.
 
 1. Selecteer **Volgende** om wijzigingen aan te brengen in ontdubbelingsregels of selecteer **Opslaan en sluiten** en keer terug naar [Harmonisatie-instellingen bijwerken](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Een geharmoniseerd veld verwijderen
+
+Als u een veld wilt verwijderen dat is geharmoniseerd, moet het veld worden verwijderd uit alle afhankelijkheden, zoals segmenten, metingen, verrijkingen of relaties.
+
+1. Zodra alle afhankelijkheden voor het veld zijn verwijderd, gaat u naar **Gegevens** > **Harmoniseren**.
+
+1. Selecteer **Bewerken** in de tegel **Geharmoniseerde klantvelden**.
+
+1. Selecteer alle exemplaren van het veld en selecteer vervolgens **Uitsluiten**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Schermopname van de pagina Geharmoniseerde velden en knop Uitsluiten":::
+
+1. Selecteer **Gereed** om te bevestigen en selecteer vervolgens **Opslaan en sluiten**.
+
+   > [!TIP]
+   > Als u het bericht 'Kan samenvoegen niet opslaan. De opgegeven resource kan niet worden gewijzigd of verwijderd vanwege downstream afhankelijkheden' te zien krijgt, wordt het veld nog steeds gebruikt in een stroomafwaartse afhankelijkheid:
+
+1. Als het veld wordt gebruikt in een regel voor dubbele records of overeenkomstvoorwaarden, voert u de volgende stappen uit. Ga anders naar de volgende stap.
+   1. Selecteer **Bewerken** in de tegel **Ontdubbelingsregels**.
+   1. Verwijder het veld uit alle regels waarin het wordt gebruikt, indien van toepassing, en selecteer vervolgens **Volgende**.
+   1. Verwijder op de pagina **Overeenkomstvoorwaarden** het veld uit alle regels waarin het wordt gebruikt, indien van toepassing, en selecteer vervolgens **Opslaan en sluiten**.
+   1. Selecteer **Harmoniseren** > **Klantprofielen en afhankelijkheden verenigen**. Wacht tot de harmonisatie is voltooid voordat u naar de volgende stap gaat.
+
+1. Selecteer **Bewerken** in de tegel **Bronvelden**.
+
+1. Selecteer **Entiteiten en velden selecteren** en schakel het selectievakje naast elk exemplaar van het veld uit.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Schermopname van het dialoogvenster Entiteiten en velden selecteren met uitgeschakelde selectievakjes":::
+
+1. Selecteer **Toepassen**.
+
+1. Selecteer **Opslaan en sluiten**.
+
+1. Selecteer **Harmoniseren** > **Klantprofielen en afhankelijkheden harmoniseren** om het geharmoniseerde profiel bij te werken.
+
+### <a name="remove-a-unified-entity"></a>Een geharmoniseerde entiteit verwijderen
+
+Als u een entiteit wilt verwijderen die is geharmoniseerd, moet de entiteit worden verwijderd uit alle afhankelijkheden, zoals segmenten, metingen, verrijkingen of relaties.
+
+1. Zodra alle afhankelijkheden voor de entiteit zijn verwijderd, gaat u naar **Gegevens** > **Harmoniseren**.
+
+1. Selecteer **Bewerken** in de tegel **Geharmoniseerde klantvelden**.
+
+1. Selecteer alle velden voor de entiteit en vervolgens **Uitsluiten**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Schermopname van Geharmoniseerde velden met alle velden voor een entiteit geselecteerd en de knop Uitsluiten":::
+
+1. Selecteer **Gereed** om te bevestigen en selecteer vervolgens **Opslaan en sluiten**.
+
+   > [!TIP]
+   > Als u het bericht 'Kan samenvoegen niet opslaan. De opgegeven resource kan niet worden gewijzigd of verwijderd vanwege downstream afhankelijkheden' te zien krijgt, wordt de entiteit nog steeds gebruikt in een stroomafwaartse afhankelijkheid:
+
+1. Selecteer **Bewerken** in de tegel **Ontdubbelingsregels**.
+
+1. Verwijder alle regels uit de entiteit, indien van toepassing, en selecteer vervolgens **Volgende**.
+
+1. Op de pagina **Overeenkomstvoorwaarden** selecteert u de entiteit en vervolgens **Verwijderen**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Schermopname van Overeenkomstvoorwaarden met geselecteerde entiteit en knop Verwijderen":::
+
+1. Selecteer **Opslaan en sluiten**.
+
+1. Selecteer **Bewerken** in de tegel **Bronvelden**.
+
+1. Selecteer **Entiteiten en velden selecteren** en schakel het selectievakje naast de entiteit uit.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Schermopname van het dialoogvenster Entiteiten en velden selecteren met uitgeschakeld selectievakje voor entiteit":::
+
+1. Selecteer **Toepassen**.
+
+1. Selecteer **Opslaan en sluiten**.
+
+1. Selecteer **Harmoniseren** > **Klantprofielen en afhankelijkheden harmoniseren** om het geharmoniseerde profiel bij te werken.
 
 ## <a name="manage-deduplication-rules"></a>Ontdubbelingsregels beheren
 

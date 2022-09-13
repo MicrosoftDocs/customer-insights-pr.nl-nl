@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081201"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411825"
 ---
 # <a name="predictions-overview"></a>Overzicht van voorspellingen
 
@@ -39,14 +39,11 @@ De eenvoudigste manier om te beginnen met het voorspellen van gegevens zijn voor
 
 > [!TIP]
 > We raden u aan om kant-en-klare modellen regelmatig te vernieuwen met bijgewerkte gegevens om ervoor te zorgen dat ze uw zakelijke gebruiksscenario nauwkeurig van informatie voorzien. Gegevens worden ad hoc vernieuwd wanneer het systeem nieuwe of bijgewerkte gegevensbronnen opneemt. Modellen zullen echter alleen in dit geval opnieuw een score bepalen en de bestaande trainingsgegevens blijven gebruiken.
-> 
+>
 > U kunt een **updateschema** configureren door het schema voor hertraining voor het model in te stellen in de configuratie-ervaring. Het model wordt opnieuw getraind en bepaalt opnieuw een score volgens dit schema, dat u op elk moment kunt wijzigen.
-
 
 ## <a name="azure-machine-learning-integration"></a>Azure Machine Learning-integratie
 
 Als een organisatie al gebruikmaakt van Machine Learning-scenario's op basis van Azure Machine Learning-experimenten, helpt de functie voor aangepaste modellen in Customer Insights om de stippen met elkaar te verbinden. Maak werkstromen die u helpen bij het kiezen van de gegevens waaruit u inzichten wilt genereren en koppel de resultaten aan uw geharmoniseerde klantprofielen. Zie [Aangepaste Machine Learning-modellen](custom-models.md) voor meer informatie.
 
-## <a name="ai-builder-prediction"></a>AI Builder-voorspelling
-
-Soms zijn gegevenssets onvolledig en ontbreken er enkele waarden. Customer Insights kan helpen om ontbrekende waarden voor de klantentiteit en -segmenten te voorspellen. Zie [Uw gedeeltelijke gegevens aanvullen met voorspellingen](predictions.md) voor meer informatie.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

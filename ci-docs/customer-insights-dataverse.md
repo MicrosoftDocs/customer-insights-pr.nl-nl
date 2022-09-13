@@ -1,7 +1,7 @@
 ---
 title: Werken met Customer Insights-gegevens in Microsoft Dataverse
 description: Leer hoe u Customer Insights en Microsoft Dataverse verbindt en krijg inzicht in de uitvoerentiteiten die worden geëxporteerd naar Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303823"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424303"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Werken met Customer Insights-gegevens in Microsoft Dataverse
 
@@ -136,6 +136,7 @@ Als het verwijderen van de verbinding mislukt vanwege afhankelijkheden, moet u o
 Sommige uitvoerentiteiten van Customer Insights zijn beschikbaar als tabellen in Dataverse. In de onderstaande secties wordt het verwachte schema van deze tabellen beschreven.
 
 - [CustomerProfile](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,21 +146,46 @@ Sommige uitvoerentiteiten van Customer Insights zijn beschikbaar als tabellen in
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Deze tabel bevat het geharmoniseerde klantprofiel van Customer Insights. Het schema voor een geharmoniseerd klantprofiel is afhankelijk van de entiteiten en kenmerken die in het gegevensharmonisatieproces worden gebruikt. Een klantprofielschema bevat meestal een subset van de kenmerken uit de [Common Data Model-definitie van CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Deze tabel bevat het geharmoniseerde klantprofiel van Customer Insights. Het schema voor een geharmoniseerd klantprofiel is afhankelijk van de entiteiten en kenmerken die in het gegevensharmonisatieproces worden gebruikt. Een klantprofielschema bevat meestal een subset van de kenmerken uit de [Common Data Model-definitie van CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Voor het B-to-B-scenario bevat het klantprofiel geharmoniseerde accounts en bevat het schema meestal een subset van de kenmerken van de [Common Data Model-definitie van een account ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+
+### <a name="contactprofile"></a>ContactProfile
+
+Een ContactProfile bevat geharmoniseerde informatie over een contactpersoon. Contactpersonen zijn [individuen die zijn toegewezen aan een account](data-unification-contacts.md) in een B-to-B-scenario.
+
+| Column                       | Type                | Omschrijving     |
+| ---------------------------- | ------------------- | --------------- |
+|  BirthDate            | Datum en tijd       |  Geboortedatum van de contactpersoon               |
+|  City                 | Sms verzenden |  Plaats van het het adres van de contactpersoon               |
+|  ContactId            | Sms verzenden |  Id van het contactpersoonsprofiel               |
+|  ContactProfileId     | Unieke id   |  GUID voor de contactpersoon               |
+|  CountryOrRegion      | Sms verzenden |  Land/regio van het adres van de contactpersoon               |
+|  CustomerId           | Sms verzenden |  Id van de account waaraan de contactpersoon is toegewezen               |
+|  EntityName           | Sms verzenden |  Entiteit waar gegevens vandaan komen                |
+|  FirstName            | Sms verzenden |  De voornaam van de contactpersoon               |
+|  Geslacht               | Sms verzenden |  Het geslacht van de contactpersoon               |
+|  ID                   | Sms verzenden |  Deterministische GUID gebaseerd op `Identifier`               |
+|  Identificatie           | Sms verzenden |  Interne id van het contactpersoonsprofiel: `ContactProfile|CustomerId|ContactId`               |
+|  Functietitel             | Sms verzenden |  Functie van de contactpersoon               |
+|  LastName             | Sms verzenden |  De achternaam van de contactpersoon               |
+|  PostalCode           | Sms verzenden |  Postcode van het adres van de contactpersoon               |
+|  PrimaryEmail         | Sms verzenden |  E-mailadres van de contactpersoon               |
+|  PrimaryPhone         | Sms verzenden |  Telefoonnummer van de contactpersoon               |
+|  Staat of provincie      | Sms verzenden |  De staat of provincie van het adres van de contactpersoon               |
+|  StreetAddress        | Sms verzenden |  De straat van het adres van de contactpersoon               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 De tabel AlternateKey bevat sleutels van de entiteiten die hebben deelgenomen aan het harmonisatieproces.
 
-|Column  |Type  |Beschrijving  |
+|Column  |Type  |Omschrijving  |
 |---------|---------|---------|
-|DataSourceName    |String         | Naam van de gegevensbron. Bijvoorbeeld: `datasource5`        |
-|EntityName        | String        | Naam van de entiteit in Customer Insights. Bijvoorbeeld: `contact1`        |
-|AlternateValue    |String         |Alternatieve id die is toegewezen aan de klant-id. Voorbeeld: `cntid_1078`         |
-|KeyRing           | Tekst met meerdere regels        | JSON-waarde  </br> Voorbeeld: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | String        | Id van het geharmoniseerd klantprofiel.         |
-|AlternateKeyId     | GUID         |  Deterministische GUID voor AlternateKey gebaseerd op msdynci_identifier       |
-|msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Voorbeeld: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |Sms verzenden         | Naam van de gegevensbron. Bijvoorbeeld: `datasource5`        |
+|EntityName        | Sms verzenden        | Naam van de entiteit in Customer Insights. Bijvoorbeeld: `contact1`        |
+|AlternateValue    |Sms verzenden         |Alternatieve id die is toegewezen aan de klant-id. Voorbeeld: `cntid_1078`         |
+|KeyRing           | Sms verzenden        | JSON-waarde  </br> Voorbeeld: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | Sms verzenden        | Id van het geharmoniseerd klantprofiel.         |
+|AlternateKeyId     | Unieke id        |  Deterministische GUID voor AlternateKey op basis van `Identifier`      |
+|Identificatie |   Sms verzenden      |   `DataSourceName|EntityName|AlternateValue`  </br> Voorbeeld: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ Deze tabel bevat activiteiten van gebruikers die beschikbaar zijn in Customer In
 
 | Column            | Type        | Omschrijving                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | String      | Klantprofiel-id                                                                      |
-| ActivityId        | String      | Interne id van de klantactiviteit (primaire sleutel)                                       |
-| SourceEntityName  | String      | Naam van de bronentiteit                                                                |
-| SourceActivityId  | String      | Primaire sleutel van de bronentiteit                                                       |
-| ActivityType      | String      | Semantisch activiteitstype of naam van aangepaste activiteit                                        |
-| ActivityTimeStamp | DATETIME    | Tijdstempel voor activiteit                                                                      |
-| Title             | String      | Titel of naam van de activiteit                                                               |
-| Omschrijving       | String      | Beschrijving van activiteit                                                                     |
-| URL               | String      | Koppeling naar een externe URL die specifiek is voor de activiteit                                         |
-| SemanticData      | JSON-tekenreeks | Bevat een lijst met sleutelwaardeparen voor semantische toewijzingsvelden die specifiek zijn voor het type activiteit |
-| RangeIndex        | String      | Unix-timestamp die wordt gebruikt voor het sorteren van de tijdlijn van activiteiten en effectieve bereikquery's |
-| mydynci_unifiedactivityid   | GUID | Interne id van de klantactiviteit (ActivityId) |
+| CustomerId        | Sms verzenden      | Klantprofiel-id                                                                      |
+| ActivityId        | Sms verzenden      | Interne id van de klantactiviteit (primaire sleutel)                                       |
+| SourceEntityName  | Sms verzenden      | Naam van de bronentiteit                                                                |
+| SourceActivityId  | Sms verzenden      | Primaire sleutel van de bronentiteit                                                       |
+| ActivityType      | Sms verzenden      | Semantisch activiteitstype of naam van aangepaste activiteit                                        |
+| ActivityTimeStamp | Datum en tijd    | Tijdstempel voor activiteit                                                                      |
+| Title             | Sms verzenden      | Titel of naam van de activiteit                                                               |
+| Omschrijving       | Sms verzenden      | Beschrijving van activiteit                                                                     |
+| URL               | Sms verzenden      | Koppeling naar een externe URL die specifiek is voor de activiteit                                         |
+| SemanticData      | Sms verzenden | Bevat een lijst met sleutelwaardeparen voor semantische toewijzingsvelden die specifiek zijn voor het type activiteit |
+| RangeIndex        | Sms verzenden      | Unix-timestamp die wordt gebruikt voor het sorteren van de tijdlijn van activiteiten en effectieve bereikquery's |
+| UnifiedActivityId   | Unieke id | Interne id van de klantactiviteit (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 Deze tabel bevat de uitvoergegevens van op klantkenmerken gebaseerde meetcriteria.
 
-| Column             | Type             | Beschrijving                 |
+| Column             | Type             | Omschrijving                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | String           | Klantprofiel-id        |
-| Meetcriteria           | JSON-tekenreeks      | Bevat een lijst met sleutelwaardeparen voor de naam van de meetcriteria en waarden voor de gegeven klant | 
-| msdynci_identifier | String           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | Klantprofiel-id |
-
+| CustomerId         | Sms verzenden           | Klantprofiel-id        |
+| Meetcriteria           | Sms verzenden      | Bevat een lijst met sleutelwaardeparen voor de naam van de meetcriteria en waarden voor de gegeven klant |
+| Identificatie | Sms verzenden           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Unieke id     | Klantprofiel-id |
 
 ### <a name="enrichment"></a>Enrichment
 
 Deze tabel bevat de uitvoer van het verrijkingsproces.
 
-| Column               | Type             |  Beschrijving                                          |
+| Column               | Type             |  Omschrijving                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | String           | Klantprofiel-id                                 |
-| EnrichmentProvider   | String           | Naam van de provider van de verrijking                                  |
-| EnrichmentType       | String           | Type verrijking                                      |
-| Waarden               | JSON-tekenreeks      | Lijst met kenmerken die wordt geproduceerd door het verrijkingsproces |
-| msdynci_enrichmentid | GUID             | Deterministische GUID die wordt gegenereerd op basis van msdynci_identifier |
-| msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | Sms verzenden           | Klantprofiel-id                                 |
+| EnrichmentProvider   | Sms verzenden           | Naam van de provider van de verrijking                                  |
+| EnrichmentType       | Sms verzenden           | Type verrijking                                      |
+| Waarden               | Sms verzenden      | Lijst met kenmerken die wordt geproduceerd door het verrijkingsproces |
+| EnrichmentId | Unieke id            | Deterministische GUID gegenereerd uit `Identifier` |
+| Identificatie   | Sms verzenden           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Prediction
 
@@ -211,25 +236,24 @@ Deze tabel bevat de uitvoer van de modelvoorspellingen.
 
 | Column               | Type        | Omschrijving                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | String      | Klantprofiel-id                                  |
-| ModelProvider        | String      | Naam van de provider van het model                                      |
-| Model                | String      | Modelnaam                                                |
-| Waarden               | JSON-tekenreeks | Lijst met kenmerken die wordt geproduceerd door het model |
-| msdynci_predictionid | GUID        | Deterministische GUID die wordt gegenereerd op basis van msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | Sms verzenden      | Klantprofiel-id                                  |
+| ModelProvider        | Sms verzenden      | Naam van de provider van het model                                      |
+| Model                | Sms verzenden      | Modelnaam                                                |
+| Waarden               | Sms verzenden | Lijst met kenmerken die wordt geproduceerd door het model |
+| PredictionId | Unieke id       | Deterministische GUID gegenereerd uit `Identifier` |
+| Identificatie   | Sms verzenden      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Segmentlidmaatschap
 
 Deze tabel bevat informatie over het segmentlidmaatschap van de klantprofielen.
 
-| Column        | Type | Description                        |
+| Column        | Type | Omschrijving                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Klantprofiel-id        |
-| SegmentProvider      | String       | App die de segmenten publiceert.      |
-| SegmentMembershipType | String       | Type klant voor deze segmentlidmaatschapsrecord. Ondersteunt meerdere typen, zoals Klant, Contactpersoon of Account. Standaardinstelling: Klant  |
-| Segmenten       | JSON-tekenreeks  | Lijst met unieke segmenten waarvan het klantprofiel lid is      |
-| msdynci_identifier  | String   | De unieke id van de segmentlidmaatschapsrecord. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministische GUID gegenereerd uit `msdynci_identifier`          |
-
+| CustomerId        | Sms verzenden       | Klantprofiel-id        |
+| SegmentProvider      | Sms verzenden       | App die de segmenten publiceert.      |
+| SegmentMembershipType | Sms verzenden       | Type klant voor deze segmentlidmaatschapsrecord. Ondersteunt meerdere typen, zoals Klant, Contactpersoon of Account. Standaardinstelling: Klant  |
+| Segments       | Sms verzenden  | Lijst met unieke segmenten waarvan het klantprofiel lid is      |
+| Identificatie  | Sms verzenden   | De unieke id van de segmentlidmaatschapsrecord. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Unieke id      | Deterministische GUID gegenereerd uit `Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

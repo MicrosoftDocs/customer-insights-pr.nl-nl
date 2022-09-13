@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387288"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409351"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nieuwe functies in Dynamics 365 Customer Insights
 
@@ -41,6 +41,14 @@ Zie [Een geharmoniseerd contactprofiel maken](data-unification-contacts.md) voor
 Dankzij de nieuwe harmonisatie van contacten kunt u segmenten van contacten maken met behulp van criteria van contacten, accounts of beide. Deze segmenten kunnen worden geëxporteerd voor activering in andere services.
 
 Zie [Overzicht van exports](export-destinations.md) voor meer informatie.
+
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Implementatieregio's afgestemd op Microsoft Dataverse
+
+Bij het maken van een nieuwe Customer Insights-omgeving kunt u de regio selecteren waar u de service wilt implementeren en hosten. We hebben de regioselectie bijgewerkt om deze af te stemmen met Microsoft Dataverse en het Power Platform.
+
+U kunt nu eenvoudig dezelfde regio selecteren als uw bestaande Microsoft Dataverse-omgeving of uw Azure Data Lake Storage-account (als u die optie kiest), afhankelijk van de beschikbaarheid van Customer Insights in die regio.
+
+Zie voor meer informatie [Een nieuwe omgeving maken](create-environment.md) en [Productbeschikbaarheid per geografische regio](https://dynamics.microsoft.com/availability-reports/).
 
 ## <a name="july-2022-updates"></a>Updates juli 2022
 
