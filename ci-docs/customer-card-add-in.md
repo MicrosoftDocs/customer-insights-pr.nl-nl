@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194917"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473636"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Invoegtoepassing Klantkaart voor Dynamics 365-app (preview)
 
@@ -32,7 +32,8 @@ Krijg een compleet overzicht van uw klanten rechtstreeks in Dynamics 365-apps. A
 - Voor toewijzing van uw Dynamics 365-gegevens aan Customer Insights raden we aan ze [op te nemen vanuit de Dynamics 365-app met behulp van de Microsoft Dataverse-connector](connect-power-query.md). Als u een andere methode gebruikt om Dynamics 365-contactpersonen (of -accounts) op te nemen, moet u ervoor zorgen dat het veld `contactid` (of `accountid`) is ingesteld als de [primaire sleutel voor die gegevensbron gedurende het gegevensharmonisatieproces](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Alle Dynamics 365-gebruikers van de Customer Card-invoegtoepassing moeten worden [toegevoegd als gebruikers](permissions.md) in Customer Insights om de gegevens te bekijken.
 - [Geconfigureerde zoek- en filtermogelijkheden](search-filter-index.md) in Customer Insights.
-- Elk besturingselement van de invoegtoepassing is afhankelijk van specifieke gegevens in Customer Insights. Sommige gegevens en besturingselementen zijn alleen beschikbaar in omgevingen van specifieke typen. De configuratie van de invoegtoepassing zal u informeren als een besturingselement niet beschikbaar is vanwege het geselecteerde omgevingstype. Meer informatie over [gebruiksscenario's en omgevingen](work-with-business-accounts.md).
+- Sommige gegevens en besturingselementen zijn alleen beschikbaar in omgevingen van specifieke typen. De configuratie van de invoegtoepassing zal u informeren als een besturingselement niet beschikbaar is vanwege het geselecteerde omgevingstype. Deze fout wordt bij het renderen van het besturingselement weergegeven. Meer informatie over [gebruiksscenario's en omgevingen](work-with-business-accounts.md).
+- Elk besturingselement van de invoegtoepassing is afhankelijk van specifieke gegevens in Customer Insights.
   - Voor **Besturingselement voor meting** zijn [geconfigureerde metingen van het type klantkenmerken](measures.md) vereist.
   - Voor **Besturingselement voor intelligentie** zijn gegevens vereist die zijn gegenereerd met [voorspellingen of aangepaste modellen](predictions-overview.md).
   - **Besturingselement voor klantdetails** bevat alle velden uit het profiel die beschikbaar zijn in het geharmoniseerde klantprofiel.

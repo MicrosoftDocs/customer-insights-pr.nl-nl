@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207039"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463259"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinding maken met een Power Query-gegevensbron
 
@@ -63,7 +63,9 @@ Bij het toevoegen van gegevensbronnen op basis van Power Query-connectors worden
 Het laden van gegevens kan enige tijd vergen. Na een succesvolle vernieuwing kunnen de opgenomen gegevens worden bekeken vanaf de pagina [**Entiteiten**](entities.md).
 
 > [!CAUTION]
-> Met een op basis van Power Query wordt een [gegevensstroom in Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) gemaakt. Wijzig de naam van een gegevensstroom niet in het Power Platform-beheercentrum dat wordt gebruikt in Customer Insights. Het hernoemen van een gegevensstroom veroorzaakt problemen met de verwijzingen tussen de Customer Insights-gegevensbron en de Dataverse-gegevensstroom.
+>
+> - Met een op basis van Power Query wordt een [gegevensstroom in Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) gemaakt. Wijzig de naam van een gegevensstroom niet in het Power Platform-beheercentrum dat wordt gebruikt in Customer Insights. Het hernoemen van een gegevensstroom veroorzaakt problemen met de verwijzingen tussen de Customer Insights-gegevensbron en de Dataverse-gegevensstroom.
+> - Gelijktijdige evaluaties voor Power Query-gegevensbronnen in Customer Insights hebben dezelfde [vernieuwingslimieten als gegevensstromen in PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Als een gegevensvernieuwing mislukt omdat deze de evaluatielimiet heeft bereikt, raden we u aan het vernieuwingsschema voor elke gegevensstroom aan te passen om ervoor te zorgen dat de gegevensbronnen niet tegelijkertijd worden verwerkt.
 
 ### <a name="available-power-query-data-sources"></a>Beschikbare Power Query-gegevensbronnen
 
@@ -77,7 +79,7 @@ Het opnemen van gegevens uit on-premises gegevensbronnen wordt ondersteund op ba
 
 Gegevensbronnen die zijn gemaakt na het koppelen van een Dataverse-omgeving met Customer Insights maken standaard gebruik van [Power Platform-gegevensstromen](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Gegevensstromen ondersteunen on-premises connectiviteit met behulp van de gegevensgateway. U kunt gegevensbronnen verwijderen en opnieuw maken die bestonden voordat een Dataverse-omgeving werd gekoppeld [met behulp van on-premises gegevensgateways](/data-integration/gateway/service-gateway-app).
 
-Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving worden zichtbaar en u kunt deze opnieuw gebruiken in Customer Insights. De pagina met gegevensbronnen toont koppelingen om naar de Microsoft Power Platform-omgeving te gaan waar u on-premises gegevensgateways kunt bekijken en configureren.
+Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving zijn zichtbaar en u kunt ze opnieuw gebruiken in Customer Insights als de gegevensgateway en de Customer Insights-omgeving zich in dezelfde Azure-regio bevinden. De pagina met gegevensbronnen toont koppelingen om naar de Microsoft Power Platform-omgeving te gaan waar u on-premises gegevensgateways kunt bekijken en configureren.
 
 > [!IMPORTANT]
 > Zorg ervoor dat uw gateways zijn bijgewerkt naar de nieuwste versie. U kunt een update installeren en een gateway opnieuw configureren vanaf een prompt die direct op het gatewayscherm wordt weergegeven of [de meest recente versie downloaden](https://powerapps.microsoft.com/downloads/). Als u niet de nieuwste gatewayversie gebruikt, mislukt het vernieuwen van de gegevensstroom met foutmeldingen zoals **Het trefwoord wordt niet ondersteund: configuratie-eigenschappen. Parameternaam: trefwoord**.

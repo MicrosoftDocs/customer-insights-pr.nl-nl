@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304053"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460184"
 ---
 # <a name="exports-preview-overview"></a>Overzicht van Exports (preview)
 
@@ -81,6 +81,11 @@ Selecteer een export om beschikbare acties te bekijken.
 ## <a name="schedule-and-run-exports"></a>Exports plannen en uitvoeren
 
 Elke export die u configureert, heeft een vernieuwingsschema. Tijdens een vernieuwing zoekt het systeem naar nieuwe of bijgewerkte gegevens om in een export op te nemen. Standaard worden exports uitgevoerd als onderdeel van elke [geplande systeemvernieuwing](schedule-refresh.md). U kunt het vernieuwingsschema aanpassen of uitschakelen om exports handmatig uit te voeren.
+
+> [!TIP]
+> Minimaliseer de verwerkingstijd van segmentexporten met de volgende best practices:
+> - Verdeel segmententiteiten over meerdere exporten.
+> - Voorkom dat u alle exporten tegelijkertijd plant. Laat 30 minuten of een uur tussen de geplande tijd van elke export.
 
 Exportschema's zijn afhankelijk van de status van uw omgeving. Als er updates worden uitgevoerd op [afhankelijkheden](system.md#refresh-processes), voltooit het systeem bij het starten van een geplande eerst de updates en voert vervolgens de export uit. In de kolom **Vernieuwd** wordt aangegeven wanneer een export voor het laatst is vernieuwd.
 
