@@ -7,21 +7,21 @@
 - name: Trainingscatalogus
   items:
     - name: Certificeren als Microsoft Customer Data Platform Specialist
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Aan de slag met Customer Insights
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: Gegevens opnemen
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: Een geharmoniseerd klantprofiel maken
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Werken met Customer Insights
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: Gegevens verrijken en voorspellingen doen
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: Externe verbindingen beheren
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Customer Insights beheren
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: Gratis proefversie
   items:
     - name: Registreren voor een gratis proefversie
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: Webgegevens gebruiken voor personalisatie
       href: unknown-to-known.md
+    - name: Onbekende klantprofielen beheren
+      href: manage-unknown-profiles.md
 - name: Segments
   items:
     - name: Overzicht van segmenten
