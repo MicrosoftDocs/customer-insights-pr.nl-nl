@@ -1,7 +1,7 @@
 ---
 title: Entiteiten in Customer Insights
 description: Gegevens weergeven op de pagina Entiteiten.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183539"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610092"
 ---
 # <a name="entities-in-customer-insights"></a>Entiteiten in Customer Insights
 
@@ -61,27 +61,5 @@ Ga naar **Gegevens** > **Entiteiten** om een lijst met entiteiten te bekijken. D
   - **Gemaakt**: datum en tijdstip waarop de entiteit is gemaakt.
   - **Bewerkt door**: naam van de gebruiker die de entiteit heeft gewijzigd.
   - **Bewerkt**: datum en tijdstip waarop de entiteit is gewijzigd.
-
-## <a name="entity-specific-information"></a>Entiteitsspecifieke informatie
-
-De volgende sectie bevat informatie over enkele door het systeem gemaakte entiteiten.
-
-### <a name="corrupted-data-sources"></a>Beschadigde gegevensbronnen
-
-Velden van een opgenomen gegevensbron kunnen beschadigde gegevens bevatten. Records met beschadigde velden worden weergegeven in door het systeem gemaakte entiteiten. Als u weet dat er beschadigde records zijn, kunt u bepalen welke gegevens u op het bronsysteem moet bekijken en bijwerken. Na de volgende vernieuwing van de gegevensbron worden de gecorrigeerde records opgenomen in Customer Insights en doorgegeven aan downstream processen. 
-
-In een kolom 'verjaardag' bijvoorbeeld is het gegevenstype ingesteld op 'datum'. Voor een klantrecord is de verjaardag ingevoerd als '01/01/19777'. Het systeem markeert dit record als beschadigd. Iemand kan nu in het bronsysteem de geboortedatum wijzigen in '1977'. Na een automatische vernieuwing van gegevensbronnen heeft het veld nu een geldige indeling en wordt het record verwijderd uit de beschadigde entiteit.
-
-Ga naar **Gegevens** > **Entiteiten** en zoek naar de beschadigde entiteiten in de sectie **Systeem**. Naamgevingsschema van beschadigde entiteiten: 'DataSourceName_EntityName_corrupt'. Selecteer een beschadigde entiteit om de beschadigde velden en de reden op individueel recordniveau te identificeren.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Reden van beschadiging.":::
-
-Customer Insights verwerkt nog steeds beschadigde records. Zij kunnen echter problemen veroorzaken wanneer met de uniforme gegevens wordt gewerkt.
-
-De volgende controles worden uitgevoerd op de opgenomen gegevens om beschadigde records te onthullen:
-
-- De waarde van een veld komt niet overeen met het gegevenstype van de kolom.
-- Velden bevatten tekens waardoor de kolommen niet overeenkomen met het verwachte schema. Bijvoorbeeld: onjuist opgemaakte aanhalingstekens, aanhalingstekens zonder escape of tekens voor nieuwe regels.
-- Als er kolommen voor datetime/date/datetimeoffset zijn, moet hun indeling in het model worden gespecificeerd als niet de standaard ISO-indeling wordt gevolgd.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

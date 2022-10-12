@@ -1,7 +1,7 @@
 ---
 title: Overzicht van gegevensbronnen
 description: Informatie over hoe u gegevens uit verschillende bronnen kunt importeren of opnemen.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245643"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610046"
 ---
 # <a name="data-sources-overview"></a>Overzicht van gegevensbronnen
 
@@ -65,7 +65,9 @@ Selecteer een gegevensbron om beschikbare acties te bekijken.
 
 ## <a name="refresh-data-sources"></a>Gegevensbronnen vernieuwen
 
-Gegevensbronnen kunnen automatisch worden vernieuwd of op aanvraag handmatig worden vernieuwd. [On-premises gegevensbronnen](connect-power-query.md#add-data-from-on-premises-data-sources) vernieuwen volgens eigen planning, ingesteld tijdens gegevensopname. Voor gekoppelde gegevensbronnen verbruikt gegevensopname de nieuwste gegevens die beschikbaar zijn van die gegevensbron.
+Gegevensbronnen kunnen automatisch worden vernieuwd of op aanvraag handmatig worden vernieuwd. [On-premises gegevensbronnen](connect-power-query.md#add-data-from-on-premises-data-sources) vernieuwen volgens eigen planning, ingesteld tijdens gegevensopname. Voor tips voor het oplossen van problemen, zie [Vernieuwingsproblemen met op PPDF Power Query gebaseerde gegevensbron oplossen](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
+
+Voor gekoppelde gegevensbronnen verbruikt gegevensopname de nieuwste gegevens die beschikbaar zijn van die gegevensbron.
 
 Ga naar **Beheer** > **Systeem** > [**Plannen**](schedule-refresh.md) om door het systeem geplande vernieuwingen van uw opgenomen gegevensbronnen te configureren.
 
@@ -76,5 +78,37 @@ Een gegevensbron op aanvraag vernieuwen:
 1. Selecteer de gegevensbron die u wilt vernieuwen en selecteer **Vernieuwen**. De gegevensbron wordt nu geactiveerd voor een handmatige vernieuwing. Als u een gegevensbron vernieuwt, worden zowel het entiteitsschema als de gegevens bijgewerkt voor alle entiteiten die zijn opgegeven in de gegevensbron.
 
 1. Selecteer de status om het deelvenster **Details van voortgang** te openen en de voortgang te bekijken. Als u de taak wilt annuleren, selecteert u **Taak annuleren** onder aan het deelvenster.
+
+## <a name="corrupt-data-sources"></a>Beschadigde gegevensbronnen
+
+Gegevens die worden opgenomen, kunnen beschadigde records bevatten waardoor het gegevensopnameproces kan worden voltooid met fouten of waarschuwingen.
+
+> [!NOTE]
+> Als de gegevensopname wordt voltooid met fouten, wordt de daaropvolgende verwerking (zoals harmonisatie of het maken van activiteiten) die gebruikmaakt van deze gegevensbron overgeslagen. Als de opname is voltooid met waarschuwingen, gaat de daaropvolgende verwerking door, maar worden sommige records mogelijk niet opgenomen.
+
+Deze fouten zijn te zien in de taakdetails.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Taakdetail met fout door beschadigde gegevens.":::
+
+Beschadigde records worden weergegeven in door het systeem gemaakte entiteiten.
+
+### <a name="fix-corrupt-data"></a>Beschadigde gegevens herstellen
+
+1. U kunt de beschadigde gegevens weergeven door naar **Gegevens** > **Entiteiten** te gaan en naar de beschadigde entiteiten te zoeken in de sectie **Systeem**. Het naamgevingsschema van beschadigde entiteiten: 'DataSourceName_EntityName_corrupt'.
+
+1. Selecteer het beschadigde entiteit en vervolgens het tabblad **Gegevens**.
+
+1. Identificeer de beschadigde velden in een record en de reden.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Reden van beschadiging." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Gegevens** > **Entiteiten** laat slechts een deel van de beschadigde records zien. Als u alle beschadigde records wilt bekijken, exporteert u de bestanden naar een container in het opslagaccount met behulp van het [exportproces van Customer Insights](export-destinations.md). Als u uw eigen opslagaccount hebt gebruikt, kunt u ook de map Customer Insights in uw opslagaccount bekijken.
+
+1. Herstel de beschadigde gegevens. Voor Azure Data Lake-gegevensbronnen kunt u bijvoorbeeld [de gegevens in de Data Lake Storage herstellen of de gegevenstypen in het bestand manifest/model.json bijwerken](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data). Voor Power Query-gegevensbronnen herstelt u de gegevens in het bronbestand en [corrigeert u het gegevenstype in de transformatiestap](connect-power-query.md#data-type-does-not-match-data) op de pagina **Power Query - Query's bewerken**.
+
+Na de volgende vernieuwing van de gegevensbron worden de gecorrigeerde records opgenomen in Customer Insights en doorgegeven aan downstream processen.
+
+In een kolom 'verjaardag' bijvoorbeeld is het gegevenstype ingesteld op 'datum'. Voor een klantrecord is de verjaardag ingevoerd als '01/01/19777'. Het systeem markeert deze record als beschadigd. WIjzig in het bronsysteem de geboortedatum in '1977'. Na een automatische vernieuwing van gegevensbronnen heeft het veld nu een geldige indeling en wordt de record uit de beschadigde entiteit verwijderd.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Aangepaste modellen uit Azure Machine Learning gebruiken
           href: custom-models.md
+        - name: Segmenten maken op basis van voorspellingen
+          href: prediction-based-segment.md
     - name: Voorbeeldgidsen
       items:
         - name: Voorbeeldgids voor CLV-voorspelling
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Experimenten met Azure Machine learning
           href: azure-machine-learning-experiments.md
-    - name: Voorspellingen beheren
-      href: manage-predictions.md
-    - name: Segmenten maken op basis van voorspellingen
-      href: prediction-based-segment.md
 - name: Opties voor exporteren
   items:
     - name: Exports

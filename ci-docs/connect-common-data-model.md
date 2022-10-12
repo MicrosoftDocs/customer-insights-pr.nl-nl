@@ -1,7 +1,7 @@
 ---
 title: Verbinding maken met een Common Data Model-map via een Azure Data Lake-account
 description: Werken met Common Data Model-gegevens met Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396040"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609936"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Verbinding maken met gegevens in Azure Data Lake Storage
 
@@ -43,6 +43,10 @@ Gegevens opnemen in Dynamics 365 Customer Insights via uw Azure Data Lake Storag
 - De gebruiker die de verbinding met de gegevensbron instelt, heeft minimaal machtigingen van de rol Inzender van opslag-blobgegevens nodig voor het opslagaccount.
 
 - Gegevens in uw Data Lake Storage moeten de Common Data Model-standaard volgen voor de opslag van uw gegevens en het gemeenschappelijke gegevensmodelmanifest hebben om het schema van de gegevensbestanden (*.csv of *.parquet) weer te geven. Het manifest moet de details van de entiteiten bevatten, zoals entiteitskolommen en gegevenstypen, evenals de locatie van het gegevensbestand en het bestandstype. Zie voor meer informatie [Het Common Data Model-manifest](/common-data-model/sdk/manifest). Als het manifest niet aanwezig is, kunnen beheerders met Storage Blob Data eigenaar- of Storage Blob Data inzender-toegang het schema definiëren bij het opnemen van de gegevens.
+
+## <a name="recommendations"></a>Aanbevelingen
+
+Voor optimale prestaties adviseert Customer Insights een partitiegrootte van 1 GB of minder en een aantal van niet meer dan 1000 partitiebestanden in een map.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Verbinding maken met Azure Data Lake Storage
 
@@ -199,5 +203,101 @@ U kunt de optie *Verbinding maken met een opslagaccount met* bijwerken. Zie voor
 1. Klik op **Opslaan** om uw wijzigingen toe te passen en terug te keren naar de pagina **Gegevensbronnen**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Veelvoorkomende redenen voor opnamefouten of beschadigde gegevens
+
+Tijdens gegevensopname zijn enkele van de meest voorkomende redenen waarom een record als beschadigd kan worden beschouwd:
+
+- De gegevenstypen en veldwaarden komen niet overeen tussen het bronbestand en het schema
+- Het aantal kolommen in het bronbestand komt niet overeen met het schema
+- Velden bevatten tekens waardoor de kolommen niet overeenkomen met het verwachte schema. Bijvoorbeeld: onjuist opgemaakte aanhalingstekens, aanhalingstekens zonder escape, tekens voor nieuwe regels of tabtekens.
+- Partitiebestanden ontbreken
+- Als er kolommen voor datetime/date/datetimeoffset zijn, moet hun indeling in het schema worden gespecificeerd als niet de standaardindeling wordt gevolgd.
+
+### <a name="schema-or-data-type-mismatch"></a>Schema of gegevenstype komt niet overeen
+
+Als de gegevens niet voldoen aan het schema, wordt het opnameproces voltooid met fouten. Corrigeer de brongegevens of het schema en neem de gegevens opnieuw op.
+
+### <a name="partition-files-are-missing"></a>Partitiebestanden ontbreken
+
+- Als de opname is geslaagd zonder beschadigde records, maar u geen gegevens kunt zien, bewerkt u uw bestand model.json of manifest.json om te controleren of dat partities zijn opgegeven. Vervolgens [vernieuwt u de gegevensbron](data-sources.md#refresh-data-sources).
+
+- Als gegevensopname plaatsvindt op hetzelfde moment dat gegevensbronnen worden vernieuwd tijdens een automatische geplande vernieuwing, zijn de partitiebestanden mogelijk leeg of niet beschikbaar voor verwerking door Customer Insights. U kunt afstemmen op het upstream-vernieuwingsschema door het [schema voor systeemvernieuwing](schedule-refresh.md) of het vernieuwingsschema voor de gegevensbron te wijzigen. Stem de timing af zodat vernieuwingen niet allemaal tegelijk plaatsvinden en de meest recente gegevens worden weergegeven die in Customer Insights moeten worden verwerkt.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Datum- en tijdvelden hebben een onjuiste indeling
+
+De datum- en tijdvelden in de entiteit hebben geen ISO 8601- of en-US-indeling. De standaardindeling voor datum/tijd in Customer Insights is de en-US-indeling. Alle datum- en tijdvelden in een entiteit moeten dezelfde indeling hebben. Customer Insights ondersteunt andere indelingen, op voorwaarde dat annotaties of kenmerken worden gemaakt op bron- of entiteitsniveau in het model of manifest.json. Bijvoorbeeld: 
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  In een manifest.json kan de datum-/tijdindeling worden opgegeven op entiteitsniveau of op kenmerkniveau. Gebruik op entiteitsniveau 'exhibitsTraits' in de entiteit in de *.manifest.cdm.json om de datum-/tijdindeling te definiëren. Gebruik op kenmerkniveau 'appliedTraits' in het kenmerk in entityname.cdm.json.
+
+**Manifest.json op entiteitsniveau**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json op kenmerkniveau**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

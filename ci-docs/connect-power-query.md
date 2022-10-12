@@ -1,7 +1,7 @@
 ---
 title: Verbinding maken met een Power Query-gegevensbron (met video)
 description: Neem gegevens op via een Power Query-connector (met video).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463259"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609870"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Verbinding maken met een Power Query-gegevensbron
 
@@ -43,16 +43,17 @@ Bij het toevoegen van gegevensbronnen op basis van Power Query-connectors worden
 
 1. Selecteer **Gegevens transformeren**.
 
-1. Met het dialoogvenster **Power Query - Query's bewerken** kunt u de gegevens bekijken en verfijnen. De entiteiten die de systemen in uw geselecteerde gegevensbron hebben geïdentificeerd, verschijnen in het linkerdeelvenster.
+1. Controleer en verfijn uw gegevens op de pagina **Power Query - Query's bewerken**. De entiteiten die de systemen in uw geselecteerde gegevensbron hebben geïdentificeerd, verschijnen in het linkerdeelvenster.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Dialoogvenster Query's bewerken":::
 
-1. U kunt uw gegevens ook transformeren. Selecteer een entiteit om te bewerken of transformeren. Gebruik de opties in het Power Query-venster om transformaties toe te passen. Elke transformatie wordt vermeld onder **Toegepaste stappen**. Power Query biedt tal van [vooraf gebouwde transformatie](/power-query/power-query-what-is-power-query#transformations)opties.
+1. Transformeer uw gegevens. Selecteer een entiteit om te bewerken of transformeren. Gebruik de opties in het Power Query-venster om transformaties toe te passen. Elke transformatie wordt vermeld onder **Toegepaste stappen**. Power Query biedt tal van [vooraf gebouwde transformatie](/power-query/power-query-what-is-power-query#transformations)opties.
 
-   We raden u aan de volgende transformaties te gebruiken:
-
-   - Als u gegevens opneemt uit een CSV-bestand, bevat de eerste rij vaak kopteksten. Ga naar **Transformeren** en selecteer **De eerste rij als veldnamen gebruiken**.
-   - Zorg ervoor dat het gegevenstype correct is ingesteld. Selecteer bijvoorbeeld een datumtype voor datumvelden.
+   > [!IMPORTANT]
+   > We raden u aan de volgende transformaties te gebruiken:
+   >
+   > - Als u gegevens opneemt uit een CSV-bestand, bevat de eerste rij vaak kopteksten. Ga naar **Transformeren** en selecteer **De eerste rij als veldnamen gebruiken**.
+   > - Zorg ervoor dat het gegevenstype correct is ingesteld en overeenkomt met de gegevens. Selecteer bijvoorbeeld een datumtype voor datumvelden.
 
 1. Als u extra entiteiten wilt toe te voegen aan uw gegevensbron in het dialoogvenster **Query's bewerken**, ga naar **Start** en selecteer **Gegevens ophalen**. Herhaal stap 5-10 totdat u alle entiteiten voor deze gegevensbron hebt toegevoegd. Als u een database hebt die meerdere gegevenssets bevat, is elke gegevensset zijn eigen entiteit.
 
@@ -102,5 +103,51 @@ Gegevensgateways van een bestaande Power BI- of Power Apps-omgeving zijn zichtba
 1. Selecteer **Opslaan** om uw wijzigingen toe te passen en terug te keren naar de pagina **Gegevensbronnen**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Veelvoorkomende redenen voor opnamefouten of beschadigde gegevens
+
+### <a name="data-type-does-not-match-data"></a>Gegevenstype komt niet overeen met gegevens
+
+De meest voorkomende mismatch van het gegevenstype doet zich voor wanneer een datumveld niet is ingesteld op de juiste datumnotatie.
+
+De gegevens kunnen bij de bron worden hersteld en opnieuw worden opgenomen. Of de transformatie kan worden uitgevoerd binnen Customer Insights. De transformatie uitvoeren:
+
+1. Ga naar **Gegevens** > **Gegevensbronnen**.
+
+1. Selecteer **Bewerken** naast de gegevensbron met de beschadigde gegevens.
+
+1. Selecteer **Volgende**.
+
+1. Selecteer elk van de query's en zoek naar transformaties die zijn toegepast in "Toegepaste stappen" die onjuist zijn, of datumkolommen die niet zijn getransformeerd met een datumnotatie.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query - Bewerken met onjuiste datumnotatie":::
+
+1. Wijzig het gegevenstype zodat dit overeenkomt met de gegevens.
+
+1. Selecteer **Save**. Die gegevensbron wordt vernieuwd.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Vernieuwingsproblemen met op PPDF Power Query gebaseerde gegevensbron oplossen
+
+Als de gegevens verouderd zijn of als u fouten ontvangt na een vernieuwing van de gegevensbron, voert u de volgende stappen uit:
+
+1. Navigeer naar [Power Platform](https://make.powerapps.com).
+
+1. Selecteer de **omgeving** voor uw Customer Insights-exemplaar.
+
+1. Navigeer naar **Gegevensstromen**.
+
+1. Selecteer voor de gegevensstroom die overeenkomt met de gegevensbron in Customer Insights het verticale weglatingsteken (&vellip;) en selecteer vervolgens **Vernieuwingsgeschiedenis weergeven**.
+
+1. Als de gegevensstroom **Geslaagd** als **status** heeft, is mogelijk het eigendom van de op Power Query gebaseerde gegevensbron gewijzigd:
+
+   1. Bekijk het vernieuwingsschema vanuit de vernieuwingsgeschiedenis.
+   1. Stel het schema van de nieuwe eigenaar in en sla de instellingen op.
+
+1. Als de gegevensstroom een **status** van **Mislukt** heeft:
+
+   1. Download het bestand met de vernieuwingsgeschiedenis.
+   1. Bekijk het gedownloade bestand voor de reden voor de fout.
+   1. Als de fout niet kan worden opgelost, selecteert u **?** om een ondersteuningsticket te openen. Neem het gedownloade bestand met de vernieuwingsgeschiedenis op.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

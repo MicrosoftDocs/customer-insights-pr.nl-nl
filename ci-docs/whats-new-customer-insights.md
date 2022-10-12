@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409351"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609586"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nieuwe functies in Dynamics 365 Customer Insights
 
@@ -228,9 +228,9 @@ Zie [De eigenaar van een omgeving wijzigen](manage-environments.md#change-the-ow
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Gegevensvoorbereidingsproces geeft een beschadigingsreden voor beschadigde records
 
-Gegevensvoorbereiding toont nu de reden voor beschadiging voor alle velden met beschadigde gegevens. De informatie wordt verstrekt op individueel recordniveau voor gemakkelijke identificatie. 
+Gegevensvoorbereiding toont nu de reden voor beschadiging voor alle velden met beschadigde gegevens. De informatie wordt verstrekt op individueel recordniveau voor gemakkelijke identificatie.
 
-Zie [Beschadigde gegevensbronnen](entities.md#corrupted-data-sources) voor meer informatie.
+Zie [Beschadigde gegevensbronnen](data-sources.md#corrupt-data-sources) voor meer informatie.
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Einde van preview voor rapportagefuncties in de mogelijkheid voor betrokkenheidsinzichten
 
