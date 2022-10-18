@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609586"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638345"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nieuwe functies in Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ We implementeren updates per regio. In sommige regio's komen functies dus mogeli
 
 > [!TIP]
 > Voor het indienen en beoordelen van functieverzoeken en productsuggesties gaat u naar de [Dynamics 365 Application Ideas-portal](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2022-updates"></a>Updates van september 2022
+
+De updates in september 2022 omvatten nieuwe functies, prestatie-upgrades en bugfixes.
+
+### <a name="export-data-to-hubspot"></a>Gegevens exporteren naar HubSpot
+
+Exporteer segmenten van geharmoniseerde klantprofielen naar HubSpoten gebruik deze voor e-marketing.
+
+Zie [Segmenten exporteren naar HubSpot](export-hubspot.md) voor meer informatie.
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Geharmoniseerde velden of entiteiten verwijderen uit gegevensharmonisatie
+
+U kunt velden en entiteiten uit het gegevensharmonsatieproces verwijderen.
+
+Zie [Een geharmoniseerd veld verwijderen](data-unification-update.md#remove-a-unified-field) voor meer informatie.
+
+### <a name="manage-unknown-customer-profiles"></a>Onbekende klantprofielen beheren
+
+Goede personalisatie hangt af van de uitgebreidheid en volledigheid van uw klantgegevens en met Customer Insights kunt u deze doelen bereiken. U kunt klantprofielen beheren voor gebruikers waarvoor u geen andere informatie heeft dan een id.
+
+Zie [Onbekende profielen beheren met Customer Insights](manage-unknown-profiles.md) voor meer informatie.
 
 ## <a name="august-2022-updates"></a>Updates augustus 2022
 
