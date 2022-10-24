@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424303"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671245"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Werken met Customer Insights-gegevens in Microsoft Dataverse
 
@@ -63,6 +63,9 @@ Via de **Microsoft Dataverse**-stap kunt u Customer Insights verbinden met uw Da
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Het delen van gegevens met Dataverse inschakelen vanuit uw eigen Azure Data Lake Storage (preview)
 
 Controleer in [uw eigen Azure Data Lake Storage-account](own-data-lake-storage.md) of de gebruiker die de Customer Insights-omgeving instelt minimaal machtigingen **Storage Blob-gegevenslezer** heeft voor de `customerinsights`-container in het opslagaccount.
+
+> [!NOTE]
+> Het delen van gegevens is alleen van toepassing als u uw eigen Azure Data Lake Storage-account gebruikt. Deze instelling is niet beschikbaar als de Customer Insights-omgeving de standaard Dataverse-opslag gebruikt.
 
 ### <a name="limitations"></a>Beperkingen
 
