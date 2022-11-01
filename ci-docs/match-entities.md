@@ -2,7 +2,7 @@
 title: Overeenkomstvoorwaarden voor gegevensharmonisatie
 description: Match entiteiten om geharmoniseerde klantprofielen te maken.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304651"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721515"
 ---
 # <a name="match-conditions-for-data-unification"></a>Overeenkomstvoorwaarden voor gegevensharmonisatie
 
@@ -130,12 +130,12 @@ Als uw overeenkomstregel bijvoorbeeld achternaam, stad en geboortedatum combinee
 
 ### <a name="specify-custom-match-conditions"></a>Aangepaste overeenkomstvoorwaarden opgeven
 
-U kunt voorwaarden opgeven die de standaardovereenkomstlogica overschrijven. Er zijn vier opties beschikbaar:
+Geef voorwaarden op die de standaardovereenkomstlogica overschrijven. Er zijn vier opties beschikbaar:
 
-|Optie  |Description |Voorbeeld  |
+|Optie  |Omschrijving |Voorbeeld  |
 |---------|---------|---------|
-|Altijd overeenkomen     | Definieert waarden die altijd overeenkomen.         |  *Mike* en *MikeR* komen altijd overeen.       |
-|Nooit overeenkomen     | Definieert waarden die nooit overeenkomen.        | *John* en *Jonathan* komen nooit overeen.        |
+|Altijd overeenkomen     | Definieert waarden voor de primaire sleutels die altijd overeenkomen.         |  Stem altijd de rij met de primaire sleutel *12345* af met de rij met primaire sleutel *54321*.       |
+|Nooit overeenkomen     | Definieert waarden voor de primaire sleutels die nooit overeenkomen.        | Stem nooit de rij met de primaire sleutel *12345* af met de rij met primaire sleutel *54321*.        |
 |Omleiding            | Definieert waarden die het systeem altijd moet negeren in de overeenkomstfase. |  Negeer de waarden *11111* en *Onbekend* tijdens de overeenkomstfase.        |
 |Aliastoewijzing    | Waarden definiëren die het systeem als dezelfde waarde moet beschouwen.         | Overweeg of *Joe* gelijk is aan *Joseph*.        |
 
@@ -143,17 +143,18 @@ U kunt voorwaarden opgeven die de standaardovereenkomstlogica overschrijven. Er 
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Aangepaste knop":::
 
-1. Kies **Aangepast type** en selecteer **Sjabloon downloaden**. Voor elke overeenkomstoptie hebt u een aparte sjabloon nodig.
+1. Kies **Aangepast type** en selecteer **Sjabloon downloaden**. Hernoem de sjabloon zonder spaties te gebruiken. Gebruik voor elke overeenkomstoptie een aparte sjabloon.
 
-1. Open het gedownloade sjabloonbestand en vul de details in. De sjabloon bevat velden om de entiteit en de primaire sleutelwaarden van de entiteit op te geven die in de aangepaste overeenkomst moeten worden gebruikt. Als u bijvoorbeeld wilt dat de primaire sleutel *12345* uit de entiteit *Verkoop* altijd wordt afgestemd met de primaire sleutel *34567* van de entiteit *Contactpersoon*, vult u de sjabloon in:
-    - Entiteit1: Verkoop
-    - Entity1Key: 12345
-    - Entiteit2: Contactpersoon
-    - Entity2Key: 34567
+1. Open het gedownloade sjabloonbestand en vul de details in. De sjabloon bevat velden om de entiteit en de primaire sleutelwaarden van de entiteit op te geven die in de aangepaste overeenkomst moeten worden gebruikt. Entiteitsnamen zijn hoofdlettergevoelig. Als u bijvoorbeeld wilt dat de primaire sleutel *12345* uit de entiteit *Verkoop* altijd wordt afgestemd met de primaire sleutel *34567* van de entiteit *Contactpersoon*, vult u de sjabloon in:
+   - Entiteit1: Verkoop
+   - Entity1Key: 12345
+   - Entiteit2: Contactpersoon
+   - Entity2Key: 34567
 
    Hetzelfde sjabloonbestand kan aangepaste afstemmingsrecords van meerdere entiteiten specificeren.
 
-   Als u aangepaste overeenkomsten voor ontdubbeling op een entiteit wilt opgeven, geeft u dezelfde entiteit op als Entity1 en Entity2 en stelt u de verschillende primaire sleutelwaarden in.
+   > [!NOTE]
+   > Als u aangepaste overeenkomsten voor ontdubbeling op een entiteit wilt opgeven, geeft u dezelfde entiteit op als Entity1 en Entity2 en stelt u de verschillende primaire sleutelwaarden in. U moet ten minste één ontdubbelingsregel voor de entiteit definiëren om aangepaste overeenkomsten te gebruiken.
 
 1. Sla het sjabloonbestand op nadat u alle overschrijvingen hebt toegevoegd.
 
@@ -169,6 +170,8 @@ U kunt voorwaarden opgeven die de standaardovereenkomstlogica overschrijven. Er 
    - Selecteer voor **Omleiding** of **Aliastoewijzing** de optie **Bewerken** op een bestaande overeenkomstregel of maak een nieuwe regel. Kies in de vervolgkeuzelijst Normalisaties de optie **Aangepaste omleiding** of **Aliastoewijzing** en selecteer **Gereed**.
 
 1. Selecteer **Gereed** in het deelvenster **Aangepast** om de aangepaste overeenkomstconfiguratie toe te passen.
+
+   Elk opgenomen sjabloonbestand is zijn eigen gegevensbron. Als er records worden ontdekt die een speciale afstemmingsbehandeling nodig hebben, werkt u de juiste gegevensbron bij. De update zal worden gebruikt tijdens het volgende harmonisatieproces. U identificeert bijvoorbeeld een tweeling met bijna dezelfde naam die op hetzelfde adres woont en als één persoon is samengevoegd. Werk de gegevensbron bij om de tweeling te identificeren als afzonderlijke, unieke records.
 
 > [!div class="nextstepaction"]
 > [Volgende stap: Velden harmoniseren](merge-entities.md)
