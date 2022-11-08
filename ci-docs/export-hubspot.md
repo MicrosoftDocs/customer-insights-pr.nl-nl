@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0281be288b2c4d9e5da7ad8e2ed25f7b51b8498e
-ms.sourcegitcommit: f959c85871777e5f4eab289e91b2fd114cd72153
+ms.openlocfilehash: b34f1d54fa499f6c6b80fa547a8aaf61af3b35a1
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "9588902"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725348"
 ---
 # <a name="export-segments-to-hubspot-preview"></a>Segmenten exporteren naar HubSpot (preview)
 
@@ -27,6 +27,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar HubSpoten gebruik de
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- Privékoppeling in combinatie met Bring your own storage (BYOS) wordt niet ondersteund.
 - Tot 100.000 klantprofielen per export naar HubSpot, wat tot 15 minuten kan duren. Het aantal klantprofielen dat u kunt exporteren naar HubSpot, is afhankelijk van en wordt beperkt door uw contract met HubSpot.
 - Alleen segmenten.
 

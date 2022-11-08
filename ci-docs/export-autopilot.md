@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 449d2c5e32697e4a5d2c9dff4a5a1cbdb26aeb4d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: b4b14ba9de2c7e20175fac664a705f2212a411fd
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195054"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724751"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Segmenten exporteren naar Autopilot (preview)
 
@@ -28,6 +28,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Autopilot en gebruik
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- Privékoppeling in combinatie met Bring your own storage (BYOS) wordt niet ondersteund.
 - Maximaal 100.000 klantprofielen per export naar Autopilot en dit kan tot een paar uur duren. Het aantal klantprofielen dat u kunt exporteren naar Autopilot, is afhankelijk van uw contract met Autopilot.
 - Alleen segmenten.
 

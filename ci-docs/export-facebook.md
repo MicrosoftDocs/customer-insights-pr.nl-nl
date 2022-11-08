@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195008"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724582"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Segmenten exporteren naar Facebook Ads Manager (preview)
 
@@ -25,11 +25,13 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Facebook Ads Manager
 
 - Een [account voor Facebook Ads](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) dat een [zakelijk Facebook-account](https://business.facebook.com/) bevat.
 - Beheerdersbevoegdheden voor het account voor [Facebook Ads](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Aangepaste publieksvoorwaarden moeten worden geaccepteerd door de gebruiker die de verbinding instelt in Customer Insights.
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
 - Maximaal 10 miljoen klantprofielen per export naar Facebook Ads Manager en dit kan tot 90 minuten duren.
 - Alleen segmenten.
+- Facebook Ads-integratie ondersteunt geen gebruikers met meer dan 25 advertentieaccounts.
 - Alleen type Facebook-*klantenlijst* in [aangepaste doelgroepen](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
   > [!NOTE]
   > In sommige gevallen ziet u mogelijk aangepaste doelgroepen van verschillende typen in de vervolgkeuzelijst. Als u een ander type dan *klantenlijst* selecteert, mislukt de export.

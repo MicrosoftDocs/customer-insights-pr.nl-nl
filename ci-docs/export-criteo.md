@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195330"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724783"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Segmenten exporteren naar Criteo (preview)
 
@@ -27,6 +27,7 @@ Exporteer segmenten van unified customer profiles om campagnes te genereren, bie
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- Privékoppeling in combinatie met Bring your own storage (BYOS) wordt niet ondersteund.
 - Maximaal 1 miljoen klantprofielen per export naar Criteo en dit kan tot 30 minuten duren. Het aantal klantprofielen dat u kunt exporteren naar Criteo, is afhankelijk van uw contract met Criteo.
 - Alleen segmenten.
 
@@ -65,8 +66,6 @@ Exporteer segmenten van unified customer profiles om campagnes te genereren, bie
 1. Voer de naam in voor de export.
 
 1. In de sectie **Gegevensvergelijking** selecteert u in het veld **E-mail** het veld dat het e-mailadres van een klant vertegenwoordigt.
-
-1. Optioneel kunt u **Id van adverteerder** en **Naam** exporteren.
 
 1. Selecteer de segmenten die u wilt exporteren.
 

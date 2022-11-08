@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304697"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725302"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmenten exporteren naar LinkedIn Ads (preview)
 
@@ -28,6 +28,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar LinkedIn Ads om matc
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- Privékoppeling in combinatie met Bring your own storage (BYOS) wordt niet ondersteund.
 - Maximaal 100.000 klantprofielen per export naar LinkedIn Ads en dit kan tot 10 minuten duren.
 - Alleen segmenten. Een segment moet minimaal 300 unieke profielen bevatten.
 

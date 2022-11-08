@@ -1,12 +1,12 @@
 ---
 title: Activiteiten voor klanten of zakelijke contactpersonen
 description: Definieer activiteiten van klanten of zakelijke contactpersonen en geef ze weer in een tijdlijn in klantprofielen.
-ms.date: 08/12/2022
+ms.date: 10/26/2022
 ms.subservice: audience-insights
 ms.reviewer: v-wendysmith
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: srivas15
+ms.author: shsri
 manager: shellyha
 searchScope:
 - ci-entities
@@ -17,12 +17,12 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: d8caa477278f04c3a0a95ced15f4bea2a22aa8cd
+ms.sourcegitcommit: da6a2d189edacc8f2c0f2abedcb28245f26fe74c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304099"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9723775"
 ---
 # <a name="customer-or-business-contact-activities"></a>Activiteiten voor klanten of zakelijke contactpersonen
 
@@ -41,6 +41,9 @@ Een entiteit moet ten minste één kenmerk van het type **Datum** hebben om te w
    - **Activiteitsnaam**: selecteer een naam voor uw activiteit.
    - **Activiteitsentiteit**: selecteer een entiteit die transactie- of activiteitsgegevens bevat.
    - **Primaire sleutel**: selecteer het veld waarmee een record eenduidig wordt geïdentificeerd. Het mag geen dubbele waarden, lege waarden of ontbrekende waarden bevatten.
+
+     > [!NOTE]
+     > De primaire sleutel voor elke rij moet consistent blijven tijdens gegevensbronvernieuwingen. Als de primaire sleutel voor een rij wordt bijgewerkt in een gegevensbronvernieuwing, worden er duplicaten gemaakt in de uitvoerentiteit Activiteit. 
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Stel de activiteitsgegevens in met naam, entiteit en primaire sleutel.":::
 
@@ -132,7 +135,15 @@ Gebruik voor zakelijke accounts (B2B) een entiteit *ContactProfile* om activitei
 
 1. Selecteer **Activiteit toevoegen**.
 
-1. Geef de activiteit een naam, selecteer de bronactiviteitsentiteit en selecteer de primaire sleutel van de activiteitsentiteit.
+1. Voer in de stap **Activiteitsgegevens** de volgende gegevens in:
+
+   - **Activiteitsnaam**: selecteer een naam voor uw activiteit.
+   - **Activiteitsentiteit**: selecteer een entiteit die transactie- of activiteitsgegevens bevat.
+   - **Primaire sleutel**: selecteer het veld waarmee een record eenduidig wordt geïdentificeerd. Het mag geen dubbele waarden, lege waarden of ontbrekende waarden bevatten.
+
+     > [!NOTE]
+     > De primaire sleutel voor elke rij moet consistent blijven tijdens gegevensbronvernieuwingen. Als de primaire sleutel voor een rij wordt bijgewerkt in een gegevensbronvernieuwing, worden er duplicaten gemaakt in de uitvoerentiteit Activiteit. 
+
 
 1. Maak in de stap **Relaties** een indirecte relatie tussen uw activiteitsbrongegevens en accounts, waarbij u uw contactgegevens als tussenpersoon gebruikt. Zie [directe en indirecte relatiepaden](relationships.md#relationship-paths) voor meer informatie.
    - Voorbeeldrelatie voor een activiteit met de naam *Aankopen*:

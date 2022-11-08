@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655270"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725210"
 ---
 # <a name="export-segments-to-braze-preview"></a>Segmenten exporteren naar Braze (preview)
 
@@ -29,6 +29,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Braze en gebruik dez
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- Privékoppeling in combinatie met Bring your own storage (BYOS) wordt niet ondersteund.
 - Maximaal 1 miljoen klantprofielen,per export naar Braze en dit kan wel 40 minuten kan duren. Het aantal klantprofielen dat u kunt exporteren naar Braze, is afhankelijk van uw contract met Braze.
 - Alleen segmenten.
 - Azure Private Link wordt niet ondersteund voor de Braze-export.

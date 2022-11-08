@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 69e2bd207c98fc2530620018bf95dd869d1798f6
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195423"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724476"
 ---
 # <a name="export-segments-to-iterable-preview"></a>Segmenten exporteren naar Iterable (preview)
 
@@ -28,6 +28,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar Iterable en gebruik 
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- Privékoppeling in combinatie met Bring your own storage (BYOS) wordt niet ondersteund.
 - Maximaal 1 miljoen klantprofielen per export naar Iterable en dit kan tot 30 minuten duren. Het aantal klantprofielen dat u kunt exporteren naar Iterable, is afhankelijk van uw contract met Iterable.
 - Alleen segmenten.
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f57cdfbb24df8a8ffa1670b426d50dbba2c5f40f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: cba40b74b86a40fc41db856760c9361b755a8864
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195238"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724934"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmenten exporteren naar Marketo (preview)
 
@@ -29,6 +29,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen om campagnes te genereren
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- Privékoppeling in combinatie met Bring your own storage (BYOS) wordt niet ondersteund.
 - Maximaal 1 miljoen klantprofielen per export naar Marketo en dit kan tot 3 uur duren. Het aantal klantprofielen dat u kunt exporteren naar Marketo, is afhankelijk van uw contract met Marketo.
 - Alleen segmenten.
 

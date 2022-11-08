@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195744"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724672"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Segmenten exporteren naar AdRoll (preview)
 
@@ -28,6 +28,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar AdRoll en gebruik ze
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- Privékoppeling in combinatie met Bring your own storage (BYOS) wordt niet ondersteund.
 - Maximaal 250.000 klantprofielen per export naar AdRoll en dit kan tot 10 minuten duren. Het aantal klantprofielen dat u kunt exporteren naar AdRoll, is afhankelijk van uw contract met AdRoll.
 - Alleen segmenten. Een segment moet minimaal 100 klantprofielen bevatten.
 

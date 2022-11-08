@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8f3e3378dce9177c6645b91140884ae135540243
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196066"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724980"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Segmenten exporteren naar DotDigital (preview)
 
@@ -28,6 +28,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar DotDigital-adresboek
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- Privékoppeling in combinatie met Bring your own storage (BYOS) wordt niet ondersteund.
 - Maximaal 1 miljoen klantprofielen per export naar DotDigital en dit kan tot drie uur duren vanwege beperkingen aan de kant van de provider. Het aantal klantprofielen dat u kunt exporteren naar DotDigital, is afhankelijk van uw contract met DotDigital.
 - Alleen segmenten.
 

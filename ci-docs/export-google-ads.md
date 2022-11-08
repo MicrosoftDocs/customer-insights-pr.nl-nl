@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196572"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725072"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmenten exporteren naar Google Ads (preview)
 
@@ -30,6 +30,7 @@ Exporteer segmenten van geharmoniseerde klantprofielen naar een Google Ads-doelg
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
+- Privékoppeling in combinatie met Bring your own storage (BYOS) wordt niet ondersteund.
 - Maximaal 1 miljoen klantprofielen per export naar Google Ads en dit kan tot 30 minuten duren vanwege beperkingen aan de kant van de provider.
 - Alleen segmenten.
 - Het matchen in Google Ads kan tot 48 uur duren.
