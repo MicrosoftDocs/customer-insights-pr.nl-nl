@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
-ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
+ms.openlocfilehash: 675fd03c44a7a7a492b111895d79c2e77f93a5b5
+ms.sourcegitcommit: 4ba74816ebfa46412c64c40a61e1f31c4ccc40f2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "9259792"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "9738150"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Een Azure Synapse Analytics-gegevensbron verbinden (preview)
 
@@ -45,7 +45,7 @@ Zie voor meer informatie [Azure Synapse-overzicht](/azure/synapse-analytics/over
 
 - Voor de in de *[Azure Synapse workspace beheerde identiteit](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* zijn machtigingen van **Bijdrager van opslagblobgegevens** in de Azure Data Lake Storage Gen2-account vereist waarin de gegevens zich bevinden en zijn gekoppeld aan de Azure Synapse-werkruimte. Meer informatie over [het gebruik van de Azure-portal om een Azure-rol toe te wijzen voor toegang tot blob- en wachtrijgegevens](/azure/storage/common/storage-auth-aad-rbac-portal) en [machtigingen van Bijdrager van opslagblobgegevens](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- In de Azure Synapse workspace moet aan de *service-principal voor Customer Insights*, "Dynamics 365 AI voor Customer Insights", de rol van **Synapse-beheerder** worden toegewezen. Zie voor meer informatie [Toegangsbeheer instellen voor uw Synapse-werkruimte](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- In de Azure Synapse workspace moet aan de *service-principal voor Customer Insights*, "Dynamics 365 AI voor Customer Insights", de rol van **Synapse-beheerder** worden toegewezen. De **gebruiker** heeft ten minste een rol **Synapse-inzender** nodig die voor de werkruimte is toegewezen. Zie voor meer informatie [Toegangsbeheer instellen voor uw Synapse-werkruimte](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 - Als uw Customer Insights-omgeving gegevens opslaat in uw [eigen Azure Data Lake Storage](own-data-lake-storage.md), heeft de gebruiker die de verbinding instelt op Azure Synapse Analytics minimaal de ingebouwde rol **Lezer** nodig voor het Data Lake Storage-account. Zie voor meer informatie [Azure-rollen toewijzen met behulp van de Azure-portal](/azure/role-based-access-control/role-assignments-portal).
 
