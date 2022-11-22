@@ -8,22 +8,22 @@ ms.topic: conceptual
 author: andtapia
 ms.author: andreatapia
 manager: shellyha
-ms.openlocfilehash: d7e5050ee5832df5ecf40a352f7ea8d42830fa45
-ms.sourcegitcommit: f6b6a4c4ce9cf12e449488b24aab80a2cbfe0c47
+ms.openlocfilehash: 0e12f64a22b93d117009fb8aee76d02a7583e699
+ms.sourcegitcommit: 24627d53dcdf607baaab1cc3c299a3584c386173
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "9556390"
+ms.lasthandoff: 11/15/2022
+ms.locfileid: "9776815"
 ---
 # <a name="manage-unknown-profiles-with-customer-insights"></a>Onbekende profielen beheren met Customer Insights
 
-Internetgebruikers zijn vaak ongeïdentificeerd en anoniem online. Als ze niet zijn aangemeld omdat ze verschillende apparaten of kanalen gebruiken, geldt dit zelfs voor de meest loyale klanten. Omdat cookies van derden binnenkort waarschijnlijk verdwijnen, is het beheren van first party-gegevens cruciaal om gedifferentieerde gepersonaliseerde ervaringen te bereiken. Voor veel merken zijn bekende of geverifieerde gebruikers de minderheid, ondanks de groeiende verwachtingen van klanten ten aanzien van personalisatie. Het is geweldig voor bedrijven om te weten wie hun klanten zijn, op basis van betrouwbare, gedetailleerde en samengevoegde gegevens.
+Internetgebruikers zijn vaak ongeïdentificeerd of anoniem online. Zelfs de meest loyale klanten kunnen "onbekend" lijken als ze niet op verschillende apparaten zijn aangemeld. Voor veel merken zijn bekende of geverifieerde gebruikers de minderheid, ondanks de groeiende verwachtingen van klanten ten aanzien van personalisatie. Omdat de toekomst van cookies van derden ter discussie staat, is het beheren van first party-gegevens cruciaal om gedifferentieerde gepersonaliseerde ervaringen te bereiken.
 
-Goede personalisatie hangt af van de uitgebreidheid en volledigheid van uw klantgegevens en met Customer Insights kunt u deze doelen bereiken. U hoeft het gebruik van gegevens die aan het begin van de klantreis zijn verzameld, niet te beperken of te stoppen. Met Customer Insights kunt u uw eigen gegevens gebruiken om een klantprofiel te maken voor onbekende gebruikers. U kunt dat profiel vervolgens gebruiken voor verdere acties, ondanks ontbrekende contactgegevens. Importeer first party-gegevens uit bronnen zoals web-, mobiele of CRM-systemen in Customer Insights om klantprofielen continu te verrijken. Naarmate u meer interacties samenvoegt, [maakt u van de *onbekende* klant een *bekende* klant](unknown-to-known.md).
+Memorabele personalisatie hangt af van hoe goed u uw klant kent en Customer Insights helpt u daarbij door al uw klanten te volgen.  U hoeft het gebruik van gegevens die aan het begin van de klantreis zijn verzameld, niet te beperken of te stoppen. Met Customer Insights kunt u uw eigen gegevens gebruiken om een klantprofiel te maken voor onbekende gebruikers. U kunt dat profiel vervolgens gebruiken voor verdere acties, ondanks ontbrekende contactgegevens. Importeer first party-gegevens uit bronnen zoals web-, mobiele of CRM-systemen in Customer Insights om klantprofielen continu te verrijken. Naarmate u meer interacties samenvoegt, [maakt u van de *onbekende* klant een *bekende* klant](unknown-to-known.md).
 
 ## <a name="sample-scenario"></a>Voorbeeldscenario
 
-E-commerce is het snelst groeiende kanaal van de afgelopen tien jaar. Stel dat een gebruiker zijn mobiele apparaat gebruikt om door uw e-commercesite te bladeren. De website geeft de bezoeker de naam mobile_guest123 als een unieke id en u begint gedragsactiviteiten te verzamelen op basis van zijn/haar online activiteit. Hierbij gaat het bijvoorbeeld om welke pagina's ze hebben bezocht, hoeveel tijd ze op die pagina's hebben doorgebracht of op welke koppelingen ze hebben geklikt. U kent hun naam of e-mailadres niet, maar deze gegevens kunnen merken zinvolle inzichten geven over deze specifieke gebruiker. Op uw beurt kunt u die inzichten gebruiken wanneer die gebruiker de site weer bezoekt. Zoek in Customer Insights naar mobile_guest123 om de lijst met segmenten van de gebruiker, met bijvoorbeeld 'organisch', 'mobiele klanten vooraf bestellen' of 'hoogwaardige klanten' op te halen. Of haal het profiel op om gepersonaliseerde webervaringen te maken. U kunt de gegevens ook exporteren naar een activeringssysteem om hetzelfde te doen.
+Stel dat een gebruiker zijn mobiele apparaat gebruikt om door uw e-commercesite te bladeren. De website geeft de bezoeker de naam mobile_guest123 als een unieke id en u begint gedragsactiviteiten te verzamelen op basis van zijn/haar online activiteit. Hierbij gaat het bijvoorbeeld om welke pagina's ze hebben bezocht, hoeveel tijd ze op die pagina's hebben doorgebracht of op welke koppelingen ze hebben geklikt. U kent hun naam of e-mailadres niet, maar deze gegevens kunnen merken zinvolle inzichten geven over deze specifieke gebruiker. Op uw beurt kunt u die inzichten gebruiken wanneer die gebruiker de site weer bezoekt. Zoek in Customer Insights naar mobile_guest123 om de lijst met segmenten van de gebruiker, met bijvoorbeeld 'organisch', 'mobiele klanten vooraf bestellen' of 'hoogwaardige klanten' op te halen. Of haal het profiel op om gepersonaliseerde webervaringen te maken. U kunt de gegevens ook exporteren naar een activeringssysteem om hetzelfde te doen.
 
 ## <a name="prerequisites"></a>Vereisten
 

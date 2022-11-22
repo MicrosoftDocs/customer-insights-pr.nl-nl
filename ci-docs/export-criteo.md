@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
-ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
+ms.openlocfilehash: 811752da943cd5e40608d48644a1744c7971d3c8
+ms.sourcegitcommit: 40ae3322ac95913e485607494754dd03814e42bb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "9724783"
+ms.lasthandoff: 11/11/2022
+ms.locfileid: "9760020"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Segmenten exporteren naar Criteo (preview)
 
@@ -27,7 +27,6 @@ Exporteer segmenten van unified customer profiles om campagnes te genereren, bie
 
 ## <a name="known-limitations"></a>Bekende beperkingen
 
-- Privékoppeling in combinatie met Bring your own storage (BYOS) wordt niet ondersteund.
 - Maximaal 1 miljoen klantprofielen per export naar Criteo en dit kan tot 30 minuten duren. Het aantal klantprofielen dat u kunt exporteren naar Criteo, is afhankelijk van uw contract met Criteo.
 - Alleen segmenten.
 
